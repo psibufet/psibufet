@@ -472,6 +472,14 @@ require get_template_directory() . '/inc/classes/class-sydney-svg-icons.php';
  */
 require_once dirname( __FILE__ ) . '/plugins/class-tgm-plugin-activation.php';
 
+
+/* Custom scripts */
+function custom_scripts(){ 
+	wp_enqueue_style( 'customsass', get_template_directory_uri() . '/css/customsass.css' );
+}
+add_action('wp_enqueue_scripts', 'custom_scripts');
+
+
 add_action( 'tgmpa_register', 'sydney_recommend_plugin' );
 function sydney_recommend_plugin() {
 

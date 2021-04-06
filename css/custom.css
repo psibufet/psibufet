@@ -53,7 +53,7 @@ body.promocode .site-header #promocode_delivery {
         top: 60px !important;
     }
 }
-#mainnav ul li.current-menu-item a {
+/* #mainnav ul li.current-menu-item a {
     color: #f15748;
 }
 #mainnav ul li.login {
@@ -124,7 +124,7 @@ body.promocode .site-header #promocode_delivery {
     #mainnav ul li.disable-desktop {
         display: none;
     }
-}
+} */
 a.check {
     display: block;
     color: #fff;
@@ -218,7 +218,7 @@ a.header_arrow img {
     max-width: 10px;
     margin: 0 auto;
 }
-#promocode {
+/* #promocode {
     display: none;
     height: 50px;
     background-color: #f15748;
@@ -505,7 +505,7 @@ a.header_arrow img {
     a.check:hover:after {
         right: 58px;
     }
-}
+} */
 #front_page .front_header {
     background-position: center;
     background-repeat: no-repeat;

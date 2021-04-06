@@ -99,50 +99,31 @@
         <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'sydney' ); ?></a>
 
         <?php do_action('sydney_before_header'); //Hooked: sydney_header_clone() ?>
-        <header id="masthead" class="site-header" role="banner">
+        <header id="masthead" class="siteHeader" role="banner">
             <div id="promocode">
                 <p>Masz <span class="amount">wczytywanie</span><span class="type"></span> zniżki na <span class="na">swoje pierwsze zamówienie</span>.<font> Całość zostanie doliczona w koszyku.</font></p>
             </div>
-            <div class="header-wrap">
+            <div class="siteHeader__wrap">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-md-2 col-sm-8 col-xs-12 logo-wrap">
-                            <?php if ( get_theme_mod('site_logo') ) : ?>
-                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo('name'); ?>" class="dir"><img class="site-logo" src="<?php echo esc_url(get_theme_mod('site_logo')); ?>" alt="<?php bloginfo('name'); ?>" /></a>
-                            <?php if ( is_home() && !is_front_page() ) : ?>
-                            <h1 class="site-title screen-reader-text"><?php bloginfo( 'name' ); ?></h1>
-                            <?php endif; ?>
-                            <?php else : ?>
-                            <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-                            <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-                            <?php endif; ?>
-                        </div>
-                        <div class="col-md-10 col-sm-4 col-xs-12 menu-right">
-                            <div class="btn-menu"><i class="sydney-svg-icon"><?php sydney_get_svg_icon( 'icon-menu', true ); ?></i></div>
-                            <nav id="mainnav" class="mainnav" role="navigation">
-                                <?php wp_nav_menu( array( 'theme_location' => 'primary', 'fallback_cb' => 'sydney_menu_fallback' ) ); ?>
-                            </nav><!-- #site-navigation -->
-                        </div>
-                        <!-- <div class="order_btn_mobile" style="display: none;">
-                            <a href="https://zamowienie.psibufet.pl/">Zamów</a>
-                        </div> -->
+                    <div class="siteHeader__logo">
+                        <?php if ( get_theme_mod('site_logo') ) : ?>
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo('name'); ?>" class="dir"><img class="site-logo" src="<?php echo esc_url(get_theme_mod('site_logo')); ?>" alt="<?php bloginfo('name'); ?>" /></a>
+                        <?php if ( is_home() && !is_front_page() ) : ?>
+                        <h1 class="site-title screen-reader-text"><?php bloginfo( 'name' ); ?></h1>
+                        <?php endif; ?>
+                        <?php else : ?>
+                        <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                        <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+                        <?php endif; ?>
+                    </div>
+                    <div class="siteHeader__menu">
+                        <div class="btn-menu"><i class="sydney-svg-icon"><?php sydney_get_svg_icon( 'icon-menu', true ); ?></i></div>
+                        <nav id="mainnav" class="mainnav" role="navigation">
+                            <?php wp_nav_menu( array( 'theme_location' => 'primary', 'fallback_cb' => 'sydney_menu_fallback' ) ); ?>
+                        </nav><!-- #site-navigation -->
                     </div>
                 </div>
             </div>
         </header><!-- #masthead -->
-        <?php do_action('sydney_after_header'); ?>
-
-        <div class="sydney-hero-area">
-            <?php sydney_slider_template(); ?>
-            <div class="header-image">
-                <?php sydney_header_overlay(); ?>
-                <img class="header-inner" src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>">
-            </div>
-            <?php sydney_header_video(); ?>
-
-            <?php do_action('sydney_inside_hero'); ?>
-        </div>
-
-        <?php do_action('sydney_after_hero'); ?>
 
         <div id="content" class="page-wrap">

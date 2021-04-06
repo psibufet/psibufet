@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "AAAA;kBACkB;AAGlB;kBACkB;AAGlB;kBACkB",
+    "sources": [
+        "../sass/customsass.scss",
+        "../sass/variables/_variables.scss",
+        "../sass/partials/_header.scss"
+    ],
+    "names": [],
+    "file": "customsass.css"
+}
