@@ -1,7 +1,1438 @@
+/*  Fonts 
+--------------- */
+@font-face {
+  font-family: "Bebas Neue";
+  src: url(/wp-content/themes/psibufet/fonts/BebasNeue/BebasNeue-Regular.ttf) format("truetype");
+}
+
 /*  Variables 
 --------------- */
 /*  Partials 
 --------------- */
+#promocode {
+  display: none;
+}
+
+.siteHeader__wrap {
+  height: 67px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.siteHeader__wrap:before, .siteHeader__wrap:after {
+  display: none !important;
+}
+
+.siteHeader__logo {
+  max-width: 150px;
+}
+
+.siteHeader__logo a {
+  display: block;
+}
+
+.siteHeader__logo a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.siteHeader__menu .btn-menu {
+  display: none;
+}
+
+.siteHeader__menu .mainnav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.siteHeader__menu .mainnav ul li {
+  margin-right: 25px;
+}
+
+.siteHeader__menu .mainnav ul li:last-of-type {
+  margin-right: 0;
+}
+
+.siteHeader__menu .mainnav ul li.blog-link {
+  display: none;
+}
+
+.siteHeader__menu .mainnav ul li.disable-desktop {
+  display: none;
+}
+
+.siteHeader__menu .mainnav ul li.login {
+  position: relative;
+}
+
+.siteHeader__menu .mainnav ul li.login a {
+  padding-left: 30px;
+}
+
+.siteHeader__menu .mainnav ul li.login a:hover:before {
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+.siteHeader__menu .mainnav ul li.login a:before {
+  content: "";
+  background-image: url("/wp-content/themes/psibufet/images/menu_login_ico.svg");
+  background-repeat: no-repeat;
+  background-size: 41px;
+  width: 34px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  top: -6px;
+  left: -10px;
+  -webkit-transition: ease .3s;
+  transition: ease .3s;
+}
+
+.siteHeader__menu .mainnav ul li.order {
+  background-color: #f15748;
+  padding: 0;
+  margin-left: 10px;
+  position: relative;
+  -webkit-box-shadow: 4px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 4px rgba(0, 0, 0, 0.1);
+  -webkit-transition: ease .3s;
+  transition: ease .3s;
+}
+
+.siteHeader__menu .mainnav ul li.order a {
+  line-height: 33px;
+  padding: 5px 35px 5px 28px;
+  color: #fff !important;
+}
+
+.siteHeader__menu .mainnav ul li.order a:before {
+  content: '';
+  background-image: url("/wp-content/themes/psibufet/images/menu_order_ico.svg");
+  background-repeat: no-repeat;
+  background-size: 52px;
+  width: 48px;
+  height: 40px;
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: -24px;
+}
+
+.siteHeader__menu .mainnav ul li.order a:after {
+  content: '';
+  background-image: url("/wp-content/themes/psibufet/images/chevron_right_white.svg");
+  background-repeat: no-repeat;
+  background-size: 7px;
+  width: 9px;
+  height: 11px;
+  display: block;
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  -webkit-transition: ease .3s;
+  transition: ease .3s;
+}
+
+.siteHeader__menu .mainnav ul li.order a:hover:after {
+  right: 15px;
+}
+
+.siteHeader__menu .mainnav ul li a {
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 500;
+  color: #000;
+  padding: 7px 0;
+  -webkit-transition: ease .3s;
+  transition: ease .3s;
+}
+
+.siteHeader__menu .mainnav ul li a:hover {
+  color: #f15748;
+}
+
+@media (max-width: 991px) {
+  .siteHeader__menu .btn-menu {
+    display: block;
+    width: 22px;
+    height: 22px;
+  }
+  .siteHeader__menu .btn-menu i {
+    fill: #f15748 !important;
+  }
+  .siteHeader__menu .mainnav {
+    display: none;
+    position: absolute;
+    top: 67px;
+    right: 0;
+    -webkit-box-shadow: 1px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 1px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    background: #fff;
+    width: 325px;
+  }
+  .siteHeader__menu .mainnav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 10px 50px 25px;
+  }
+  .siteHeader__menu .mainnav ul li {
+    margin: 0;
+    line-height: 33px;
+    margin-bottom: 10px;
+  }
+  .siteHeader__menu .mainnav ul li a {
+    padding: 0;
+  }
+  .siteHeader__menu .mainnav ul li.blog-link, .siteHeader__menu .mainnav ul li.disable-desktop {
+    display: block;
+  }
+  .siteHeader__menu .mainnav ul li.login {
+    margin-bottom: 20px;
+  }
+  .siteHeader__menu .mainnav ul li.login a {
+    padding-left: 0;
+  }
+  .siteHeader__menu .mainnav ul li.login a:before {
+    top: 4px;
+    left: -40px;
+  }
+  .siteHeader__menu .mainnav ul li.order {
+    margin-left: 0;
+  }
+  .siteHeader__menu .mainnav ul li.order a:before {
+    left: -40px;
+  }
+  .siteHeader__menu .mainnav ul li.order a:after {
+    top: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .siteHeader__menu .mainnav {
+    width: 75%;
+  }
+}
+
 /*  Sections 
 --------------- */
+/*  Subpages 
+--------------- */
+.homeHeader {
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.homeHeader__wrap {
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.homeHeader__content h2 {
+  font-size: 60px;
+  line-height: 72px;
+  font-weight: 500;
+  font-family: "Bebas Neue", sans-serif;
+  color: #fff;
+  margin: 0 0 20px;
+  text-shadow: 3px 4px #00000024;
+  text-align: center;
+}
+
+.homeHeader__content .tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 0 50px;
+}
+
+.homeHeader__content .tags div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 25px;
+  line-height: 29px;
+  font-weight: 500;
+  color: #fff;
+  margin: 0;
+  padding: 0 20px;
+  text-shadow: 3px 4px #00000024;
+}
+
+.homeHeader__content .tags div:nth-child(2):before {
+  content: '|';
+  font-size: 25px;
+  color: #fff;
+  margin-right: 20px;
+}
+
+.homeHeader__content .tags div:nth-child(2):after {
+  content: '|';
+  font-size: 25px;
+  color: #fff;
+  margin-left: 20px;
+}
+
+.homeHeader__content .tags div:first-of-type {
+  padding-right: 5px;
+  padding-left: 0;
+}
+
+.homeHeader__content .tags div:last-of-type {
+  padding-left: 0;
+}
+
+.homeHeader__scroll {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.homeHeader__scroll p {
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  margin: 0 0 5px;
+}
+
+.homeHeader__scroll:after {
+  content: "";
+  background-image: url("/wp-content/themes/psibufet/images/chevron_down_white.svg");
+  background-repeat: no-repeat;
+  background-size: 15px;
+  height: 11px;
+  width: 15px;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -10px;
+  -webkit-animation-name: PulseDown;
+          animation-name: PulseDown;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@media (max-width: 1199px) {
+  .homeHeader {
+    height: 500px;
+  }
+}
+
+@media (max-width: 991px) {
+  .homeHeader {
+    height: 400px;
+  }
+  .homeHeader__content h2 {
+    font-size: 45px;
+    line-height: 54px;
+  }
+  .homeHeader__content .tags div {
+    font-size: 18px;
+    line-height: 24px;
+    padding: 0 10px;
+  }
+  .homeHeader__content .tags div:nth-child(2):before {
+    font-size: 18px;
+    line-height: 1;
+    position: relative;
+    top: 1px;
+    margin-right: 15px;
+  }
+  .homeHeader__content .tags div:nth-child(2):after {
+    font-size: 18px;
+    line-height: 1;
+    position: relative;
+    top: 1px;
+    margin-left: 15px;
+  }
+  .homeHeader__scroll:after {
+    background-size: 12px;
+    height: 9px;
+    width: 12px;
+    bottom: -12px;
+  }
+  .homeHeader__scroll p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .homeHeader {
+    background-image: url("/wp-content/themes/psibufet/images/header_img_mobile.png") !important;
+  }
+}
+
+.homeReviews {
+  padding: 30px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.homeReviews ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.homeReviews__logo {
+  max-width: 160px;
+  margin: 0 30px;
+}
+
+.homeReviews__logo:first-of-type {
+  margin-left: 0;
+}
+
+.homeReviews__logo:last-of-type {
+  margin-right: 0;
+}
+
+.homeReviews__logo .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 60px;
+  max-width: 130px;
+  margin: 0 auto 5px;
+}
+
+.homeReviews__logo .logo img {
+  max-height: 100%;
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.homeReviews__logo p {
+  font-size: 12px;
+  line-height: 14px;
+  color: #7f7f7f;
+  text-align: center;
+}
+
+.homeReviews__logo .stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 0 10px;
+}
+
+.homeReviews__logo .stars img {
+  max-width: 20px;
+  margin: 0 2px;
+}
+
+@media (max-width: 991px) {
+  .homeReviews__logo {
+    margin: 0 15px;
+  }
+}
+
+.homeMiska {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 550px;
+}
+
+.homeMiska__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+  height: inherit;
+  text-align: center;
+}
+
+.homeMiska__left h2 {
+  font-size: 41px;
+  line-height: 49px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 500;
+  color: #000;
+  margin: 0 0 25px;
+}
+
+.homeMiska__left .content {
+  max-width: 510px;
+  margin: 0 auto;
+}
+
+.homeMiska__left .content p {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  margin: 0 0 20px;
+  color: #4c4c4c;
+}
+
+.homeMiska__left .content p b {
+  font-weight: 700;
+}
+
+.homeMiska__left .info {
+  font-size: 10px;
+  margin: 0 0 40px;
+}
+
+.homeMiska__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  height: inherit;
+  position: relative;
+}
+
+.homeMiska__imageWrap {
+  width: 500px;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+  margin: 0 auto;
+}
+
+.homeMiska__imageWrap .ba_img {
+  display: block;
+  width: 500px;
+  max-width: 500px;
+  height: 500px;
+  position: absolute;
+  left: 0;
+}
+
+.homeMiska__imageWrap .ba_img.before {
+  background-image: url("/wp-content/themes/psibufet/images/miska_before.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 2;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.homeMiska__imageWrap .ba_img.before:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 5px;
+  right: 0;
+  top: 0;
+  background: #fff;
+}
+
+.homeMiska__imageWrap .ba_img.after {
+  background-image: url("/wp-content/themes/psibufet/images/miska_after.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.homeMiska__review {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  height: 46px;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 14px 12px;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
+.homeMiska__review .stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100px;
+}
+
+.homeMiska__review .stars img {
+  max-width: 16px;
+  margin: 0 2px;
+  -webkit-filter: invert(45%) sepia(36%) saturate(1344%) hue-rotate(321deg) brightness(95%) contrast(99%);
+          filter: invert(45%) sepia(36%) saturate(1344%) hue-rotate(321deg) brightness(95%) contrast(99%);
+}
+
+.homeMiska__review p {
+  font-size: 14px;
+  line-height: 16px;
+  color: #4c4c4c;
+  margin: 0 10px;
+}
+
+.homeMiska__review .logo {
+  width: 80px;
+}
+
+@media (max-width: 991px) {
+  .homeMiska {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    height: auto;
+    position: relative;
+  }
+  .homeMiska__left {
+    width: 100%;
+    padding-bottom: 70px;
+  }
+  .homeMiska__right {
+    width: 100%;
+    height: 450px;
+    position: unset;
+  }
+}
+
+@media (max-width: 767px) {
+  .homeMiska__left h2 {
+    font-size: 28px;
+    line-height: 34px;
+    margin: 0 0 20px;
+  }
+  .homeMiska__left .content p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .homeMiska__review .stars {
+    width: 76px;
+  }
+  .homeMiska__review .stars img {
+    max-width: 13px;
+    margin: 0 1px;
+  }
+  .homeMiska__review p {
+    font-size: 11px;
+    line-height: 14px;
+    margin: 0 8px;
+  }
+  .homeMiska__review .logo {
+    width: 60px;
+  }
+}
+
+.homeFoodinfo {
+  background-image: url("/wp-content/themes/psibufet/images/homefoodinfobg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 770px;
+  padding: 0 0 40px;
+}
+
+.homeFoodinfo__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: inherit;
+  position: relative;
+}
+
+.homeFoodinfo__wrap:before {
+  content: "";
+  background-image: url(/wp-content/themes/psibufet/images/foodinfo_dog.svg);
+  background-size: 150px;
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 220px;
+  position: absolute;
+  left: 0;
+  top: -120px;
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+}
+
+.homeFoodinfo__left {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.homeFoodinfo__left .slidesWrap {
+  display: block;
+  width: 100%;
+}
+
+.homeFoodinfo__left .slidesWrap .infoButtons {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin: 0 auto;
+}
+
+.homeFoodinfo__left .slidesWrap .infoButtons__button {
+  display: none;
+  font-size: 16px;
+  line-height: 19px;
+  color: #4c4c4c;
+  font-weight: 700;
+  margin: 0;
+  cursor: pointer;
+  -webkit-transition: ease .3s;
+  transition: ease .3s;
+}
+
+.homeFoodinfo__left .slidesWrap .infoButtons__button img {
+  width: 24px;
+  margin-right: 5px;
+  margin-top: -2px;
+}
+
+.homeFoodinfo__left .slidesWrap .infoButtons__button--active {
+  display: block;
+}
+
+.homeFoodinfo__left .slidesWrap .infoButtons__button:hover {
+  opacity: .7;
+}
+
+.homeFoodinfo__slides .slick-list {
+  overflow: visible;
+  margin: 0 30px;
+}
+
+.homeFoodinfo__slides .slick-arrow {
+  background-repeat: no-repeat;
+  background-size: 40px;
+  width: 40px;
+  height: 40px;
+  opacity: .8;
+  font-size: 0;
+  background-color: unset;
+  border: 0;
+  padding: 0;
+  -webkit-transition: ease .3s;
+  transition: ease .3s;
+  position: absolute;
+  top: 50%;
+  outline: none;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  z-index: 5;
+}
+
+.homeFoodinfo__slides .slick-arrow:hover {
+  opacity: 1;
+}
+
+.homeFoodinfo__slides .slick-arrow.slick-prev {
+  background-image: url("/wp-content/themes/psibufet/images/icons/slider_arrow_left.svg");
+  left: 150px;
+}
+
+.homeFoodinfo__slides .slick-arrow.slick-next {
+  background-image: url("/wp-content/themes/psibufet/images/icons/slider_arrow_right.svg");
+  right: 150px;
+}
+
+.homeFoodinfo__slides .slick-arrow.slick-disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.homeFoodinfo__slides .slick-dots {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: -120px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
+.homeFoodinfo__slides .slick-dots li {
+  margin: 0 3px;
+  line-height: 1;
+}
+
+.homeFoodinfo__slides .slick-dots li button {
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 0;
+  font-size: 0;
+  padding: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  cursor: pointer;
+  outline: none;
+}
+
+.homeFoodinfo__slides .slick-dots li.slick-active button {
+  background-color: #f15748;
+}
+
+.homeFoodinfo__info {
+  width: 220px;
+  outline: none;
+  margin: 0 -30px;
+  opacity: 0;
+  -webkit-transition: ease .5s;
+  transition: ease .5s;
+  position: relative;
+}
+
+.homeFoodinfo__info img {
+  -webkit-transition: ease .5s;
+  transition: ease .5s;
+}
+
+.homeFoodinfo__info.nextslide, .homeFoodinfo__info.prevslide {
+  opacity: .5;
+  z-index: 1;
+}
+
+.homeFoodinfo__info.slick-current {
+  opacity: 1;
+  z-index: 2;
+}
+
+.homeFoodinfo__info.slick-current img {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.homeFoodinfo__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+  text-align: center;
+}
+
+.homeFoodinfo__right h2 {
+  font-size: 41px;
+  line-height: 49px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 500;
+  color: #000;
+  margin: 0 0 25px;
+}
+
+.homeFoodinfo__right p {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  margin: 0;
+  color: #4c4c4c;
+  text-align: center;
+}
+
+.homeFoodinfo__right p b {
+  font-weight: 700;
+}
+
+.homeFoodinfo__right .info_boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 550px;
+  margin: 30px auto 5px;
+}
+
+.homeFoodinfo__right .info_boxes .box {
+  width: calc(100% / 3);
+  margin: 0 0 35px;
+}
+
+.homeFoodinfo__right .info_boxes .box p {
+  font-size: 14px;
+  line-height: 18px;
+  color: #4c4c4c;
+  max-width: 130px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.homeFoodinfo__right .expertInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  border: 1px solid #BCBCBB;
+  -webkit-box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  padding: 15px 28px;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.homeFoodinfo__right .expertInfo__image {
+  width: 120px;
+}
+
+.homeFoodinfo__right .expertInfo__image img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border: 2px solid #4EACB6;
+  border-radius: 100%;
+  padding: 2px;
+}
+
+.homeFoodinfo__right .expertInfo__content {
+  width: calc(100% - 120px);
+  padding-left: 25px;
+}
+
+.homeFoodinfo__right .expertInfo__content p {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #000;
+  text-align: left;
+  margin: 0 0 10px;
+}
+
+.homeFoodinfo__right .expertInfo__content p b {
+  font-weight: 700;
+}
+
+.homeFoodinfo__right .expertInfo__content h4 {
+  display: block;
+  font-size: 26px;
+  line-height: 1;
+  font-weight: 500;
+  font-family: "Bebas Neue", sans-serif;
+  color: #000;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: right;
+}
+
+.homeFoodinfo__right .expertInfo__content h4 span {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+@media (max-width: 1599px) {
+  .homeFoodinfo__left {
+    width: 45%;
+  }
+  .homeFoodinfo__slides .slick-arrow.slick-prev {
+    left: 60px;
+  }
+  .homeFoodinfo__slides .slick-arrow.slick-next {
+    right: 60px;
+  }
+  .homeFoodinfo__info {
+    width: 210px;
+  }
+  .homeFoodinfo__info.slick-current img {
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+  }
+  .homeFoodinfo__right {
+    width: 55%;
+  }
+}
+
+@media (max-width: 1199px) {
+  .homeFoodinfo__slides .slick-arrow {
+    background-size: 30px;
+    width: 30px;
+    height: 30px;
+  }
+  .homeFoodinfo__slides .slick-arrow.slick-prev {
+    left: 40px;
+  }
+  .homeFoodinfo__slides .slick-arrow.slick-next {
+    right: 40px;
+  }
+  .homeFoodinfo__info {
+    width: 180px;
+  }
+}
+
+@media (max-width: 991px) {
+  .homeFoodinfo__wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .homeFoodinfo__left {
+    width: 100%;
+    height: 500px;
+    padding-bottom: 50px;
+  }
+  .homeFoodinfo__left .slidesWrap .infoButtons {
+    bottom: 25px;
+  }
+  .homeFoodinfo__left .slidesWrap .infoButtons__button {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .homeFoodinfo__left .slidesWrap .infoButtons__button img {
+    width: 20px;
+  }
+  .homeFoodinfo__slides .slick-dots {
+    bottom: -85px;
+  }
+  .homeFoodinfo__right {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+  .homeFoodinfo__right .info_boxes {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    max-width: 495px;
+  }
+  .homeFoodinfo__right .info_boxes .box {
+    width: 150px;
+    padding: 13px 19px;
+    background-color: #fff;
+    border: 1px solid #BCBCBB;
+    -webkit-box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+            box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+    margin: 0 0 20px;
+  }
+  .homeFoodinfo__right .info_boxes .box img {
+    width: 60px;
+    height: 60px;
+  }
+  .homeFoodinfo__right .info_boxes .box p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .homeFoodinfo__right .expertInfo {
+    max-width: 320px;
+    width: 320px;
+    padding: 8px 20px;
+  }
+  .homeFoodinfo__right .expertInfo__image {
+    width: 105px;
+  }
+  .homeFoodinfo__right .expertInfo__content {
+    width: calc(100% - 105px);
+    padding-left: 16px;
+  }
+  .homeFoodinfo__right .expertInfo__content p {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .homeFoodinfo__right .expertInfo__content h4 {
+    font-size: 19px;
+  }
+  .homeFoodinfo__right .expertInfo__content h4 span {
+    font-size: 13px;
+    line-height: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .homeFoodinfo__wrap:before {
+    display: none;
+  }
+  .homeFoodinfo__left {
+    margin-top: 40px;
+  }
+  .homeFoodinfo__left .slidesWrap .infoButtons {
+    bottom: 5px;
+  }
+  .homeFoodinfo__slides .slick-list {
+    margin: 0;
+  }
+  .homeFoodinfo__slides .slick-dots {
+    bottom: -35px;
+  }
+  .homeFoodinfo__info {
+    margin: 0;
+    width: 280px;
+  }
+  .homeFoodinfo__info.prevslide, .homeFoodinfo__info.nextslide {
+    opacity: .3;
+  }
+  .homeFoodinfo__info.slick-current img {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  .homeFoodinfo__right {
+    padding: 35px 0 0;
+  }
+  .homeFoodinfo__right h2 {
+    font-size: 28px;
+    line-height: 34px;
+    margin: 0 0 20px;
+  }
+  .homeFoodinfo__right p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+@media (max-width: 575px) {
+  .homeFoodinfo__right .info_boxes {
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 500px) {
+  .homeFoodinfo__slides .slick-arrow.slick-prev {
+    left: 14px;
+  }
+  .homeFoodinfo__slides .slick-arrow.slick-next {
+    right: 14px;
+  }
+}
+
+.homeHowitworks {
+  padding: 30px 0 40px;
+}
+
+.homeHowitworks__wrap {
+  position: relative;
+}
+
+.homeHowitworks__wrap:before {
+  content: '';
+  background-image: url("/wp-content/themes/psibufet/images/howitworksdog.svg");
+  background-repeat: no-repeat;
+  background-size: 100px;
+  width: 100px;
+  height: 200px;
+  position: absolute;
+  left: 30%;
+  top: -140px;
+}
+
+.homeHowitworks__wrap > h2 {
+  font-size: 41px;
+  line-height: 49px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 500;
+  color: #000;
+  margin: 0 0 35px;
+  text-align: center;
+}
+
+.homeHowitworks__steps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1160px;
+  margin: 0 auto 40px;
+}
+
+.homeHowitworks__step {
+  width: 360px;
+  height: auto;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.homeHowitworks__step .image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 110px;
+  margin: 0 0 20px;
+}
+
+.homeHowitworks__step .content h3 {
+  font-size: 30px;
+  line-height: 36px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 500;
+  color: #000;
+  margin: 0 0 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.homeHowitworks__step .content p {
+  font-size: 16px;
+  line-height: 19px;
+  color: #4c4c4c;
+  margin: 0;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .homeHowitworks__wrap:before {
+    display: none;
+  }
+}
+
+/*  Global
+--------------- */
+body a {
+  -webkit-transition: ease .3s;
+  transition: ease .3s;
+}
+
+body a:hover {
+  text-decoration: none !important;
+}
+
+.preloader {
+  display: none !important;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  -webkit-transition: ease .3s;
+  transition: ease .3s;
+}
+
+.preloader img {
+  max-width: 250px;
+}
+
+.btn {
+  display: inline-block;
+  min-width: 265px;
+  height: 56px;
+  line-height: 56px;
+  background-color: #f15748;
+  text-align: center;
+  -webkit-box-shadow: 3px 3px #0000001a;
+          box-shadow: 3px 3px #0000001a;
+  -webkit-transition: ease .3s;
+  transition: ease .3s;
+}
+
+.btn--center {
+  display: block;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin: 0 auto;
+}
+
+.btn span {
+  font-size: 25px;
+  line-height: inherit;
+  font-weight: bold;
+  color: #fff;
+  position: relative;
+  padding-right: 10px;
+}
+
+.btn span:after {
+  content: "";
+  background-image: url(/wp-content/themes/psibufet/images/chevron_right_white.svg);
+  background-repeat: no-repeat;
+  background-size: 10px;
+  width: 10px;
+  height: 14px;
+  display: block;
+  position: absolute;
+  top: 55%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  right: -10px;
+  -webkit-transition: ease .3s;
+  transition: ease .3s;
+}
+
+.btn:hover {
+  background-color: #fb6659;
+}
+
+.btn:hover span:after {
+  right: -15px;
+}
+
+@media (max-width: 991px) {
+  .btn {
+    min-width: 235px;
+    height: 46px;
+    line-height: 46px;
+  }
+  .btn span {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 767px) {
+  .btn {
+    min-width: 175px;
+    height: 40px;
+    line-height: 40px;
+  }
+  .btn span {
+    font-size: 14px;
+  }
+  .btn span:after {
+    background-size: 8px;
+    width: 8px;
+    height: 12px;
+    right: -8px;
+  }
+}
+
+@keyframes PulseDown {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(0, 5px);
+            transform: translate(0, 5px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@-webkit-keyframes PulseDown {
+  0% {
+    -webkit-transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(0, 5px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+  }
+}
 /*# sourceMappingURL=customsass.css.map */

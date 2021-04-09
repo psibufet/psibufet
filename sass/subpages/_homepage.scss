@@ -1,0 +1,986 @@
+.homeHeader{
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    &__wrap{
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__content{
+        h2{
+            font-size: 60px;
+            line-height: 72px;
+            font-weight: 500;
+            font-family: $headingfont;
+            color: #fff;
+            margin: 0 0 20px;
+            text-shadow: 3px 4px #00000024;
+            text-align: center;
+        }
+        .tags{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 0 50px;
+
+            div{
+                display: flex;
+                font-size: 25px;
+                line-height: 29px;
+                font-weight: 500;
+                color: #fff;
+                margin: 0;
+                padding: 0 20px;
+                text-shadow: 3px 4px #00000024;
+
+                &:nth-child(2){
+                    &:before{
+                        content: '|';
+                        font-size: 25px;
+                        color: #fff;
+                        margin-right: 20px;
+                    }
+                    &:after{
+                        content: '|';
+                        font-size: 25px;
+                        color: #fff;
+                        margin-left: 20px;
+                    }
+                }
+                &:first-of-type{
+                    padding-right: 5px;
+                    padding-left: 0;
+                }
+                &:last-of-type{
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+    &__scroll{
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+
+        p{
+            color: #fff;
+            font-weight: 500;
+            text-align: center;
+            margin: 0 0 5px;
+        }
+
+        &:after{
+            content: "";
+            background-image: url('/wp-content/themes/psibufet/images/chevron_down_white.svg');
+            background-repeat: no-repeat;
+            background-size: 15px;
+            height: 11px;
+            width: 15px;
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            bottom: -10px;
+            animation-name: PulseDown;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+    }
+}
+@media (max-width: 1199px){
+    .homeHeader{
+        height: 500px;
+    }
+}
+@media (max-width: 991px){
+    .homeHeader{
+        height: 400px;
+
+        &__content{
+            h2{
+                font-size: 45px;
+                line-height: 54px;
+            }
+            .tags{
+                div{
+                    font-size: 18px;
+                    line-height: 24px;
+                    padding: 0 10px;
+
+                    &:nth-child(2){
+                        &:before{
+                            font-size: 18px;
+                            line-height: 1;
+                            position: relative;
+                            top: 1px;
+                            margin-right: 15px;
+                        }
+                        &:after{
+                            font-size: 18px;
+                            line-height: 1;
+                            position: relative;
+                            top: 1px;
+                            margin-left: 15px;
+                        }
+                    }
+                }
+            }
+        }
+        &__scroll{
+            &:after{
+                background-size: 12px;
+                height: 9px;
+                width: 12px;
+                bottom: -12px;
+            }
+            p{
+                font-size: 14px;
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .homeHeader{
+        background-image: url('/wp-content/themes/psibufet/images/header_img_mobile.png') !important;
+        
+    }
+}
+
+// Home reviews
+.homeReviews{
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    
+    ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+    &__logo{
+        max-width: 160px;
+        margin: 0 30px;
+
+        &:first-of-type{
+            margin-left: 0;
+        }
+        &:last-of-type{
+            margin-right: 0;
+        }
+
+        .logo{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60px;
+            max-width: 130px;
+            margin: 0 auto 5px;
+
+            img{
+                max-height: 100%;
+                max-width: 100%;
+                object-fit: contain;
+            }
+        }
+        p{
+            font-size: 12px;
+            line-height: 14px;
+            color: $primarycolorlight;
+            text-align: center;
+        }
+        .stars{
+            display: flex;
+            justify-content: center;
+            margin: 0 0 10px;
+
+            img{
+                max-width: 20px;
+                margin: 0 2px;
+            }
+        }
+    }
+}
+@media (max-width: 991px){
+    .homeReviews{
+        &__logo{
+            margin: 0 15px;
+        }
+    }
+}
+
+// Home miska
+.homeMiska{
+    display: flex;
+    height: 550px;
+    
+    &__left{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+        height: inherit;
+        text-align: center;
+
+        h2{
+            font-size: 41px;
+            line-height: 49px;
+            font-family: $headingfont;
+            font-weight: 500;
+            color: #000;
+            margin: 0 0 25px;
+        }
+        .content{
+            max-width: 510px;
+            margin: 0 auto;
+
+            p{
+                font-size: 16px;
+                line-height: 22px;
+                font-weight: 400;
+                margin: 0 0 20px;
+                color: $primarycolor;
+
+                b{
+                    font-weight: 700;
+                }
+            }
+        }
+        .info{
+            font-size: 10px;
+            margin: 0 0 40px;
+        }
+    }
+    &__right{
+        display: flex;
+        align-items: center;
+        width: 50%;
+        height: inherit;
+        position: relative;
+    }
+
+    $imageswidth: 650px;
+    @media (max-width: 1199px){
+        .homeMiska{
+            $imageswidth: 500px;
+        }
+    }
+
+    &__imageWrap{
+        width: $imageswidth;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        z-index: 3;
+        margin: 0 auto;
+
+        .ba_img{
+            display: block;
+            width: $imageswidth;
+            max-width: $imageswidth;
+            height: $imageswidth;
+            position: absolute;
+            left: 0;
+
+            &.before{
+                background-image: url('/wp-content/themes/psibufet/images/miska_before.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: $imageswidth;
+                height: $imageswidth;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                z-index: 2;
+                transform: translate(0, -50%);
+
+                &:after{
+                    content: "";
+                    position: absolute;
+                    height: 100%;
+                    width: 5px;
+                    right: 0;
+                    top: 0;
+                    background: #fff;
+                }
+            }
+            &.after{
+                background-image: url('/wp-content/themes/psibufet/images/miska_after.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: $imageswidth;
+                height: $imageswidth;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                z-index: 1;
+                transform: translate(0, -50%);
+            }
+        }
+    }
+    &__review{
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        height: 46px;
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        z-index: 4;
+        display: flex;
+        align-items: center;
+        padding: 14px 12px;
+        max-width: fit-content;
+
+        .stars{
+            display: flex;
+            width: 100px;
+
+            img{
+                max-width: 16px;
+                margin: 0 2px;
+                filter: invert(45%) sepia(36%) saturate(1344%) hue-rotate(321deg) brightness(95%) contrast(99%);
+            }
+        }
+        p{
+            font-size: 14px;
+            line-height: 16px;
+            color: $primarycolor;
+            margin: 0 10px;
+        }
+        .logo{
+            width: 80px;
+        }
+    }
+}
+@media (max-width: 991px){
+    .homeMiska{
+        flex-direction: column-reverse;
+        height: auto;
+        position: relative;
+
+        &__left{
+            width: 100%;
+            padding-bottom: 70px;
+        }
+        &__right{
+            width: 100%;
+            height: 450px;
+            position: unset;
+        }
+    }
+}
+@media (max-width: 767px){
+    .homeMiska{
+        &__left{
+            h2{
+                font-size: 28px;
+                line-height: 34px;
+                margin: 0 0 20px;
+            }
+            .content{
+                p{
+                    font-size: 12px;
+                    line-height: 16px;
+                }
+            }
+        }
+        &__review{
+            .stars{
+                width: 76px;
+
+                img{
+                    max-width: 13px;
+                    margin: 0 1px;
+                }
+            }
+            p{
+                font-size: 11px;
+                line-height: 14px;
+                margin: 0 8px;
+            }
+            .logo{
+                width: 60px;
+            }
+        }
+    }
+}
+
+// Home food info
+.homeFoodinfo{
+    background-image: url('/wp-content/themes/psibufet/images/homefoodinfobg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 770px;
+    padding: 0 0 40px;
+
+    &__wrap{
+        display: flex;
+        min-height: inherit;
+        position: relative;
+
+        &:before{
+            content: "";
+            background-image: url(/wp-content/themes/psibufet/images/foodinfo_dog.svg);
+            background-size: 150px;
+            background-repeat: no-repeat;
+            width: 150px;
+            height: 220px;
+            position: absolute;
+            left: 0;
+            top: -120px;
+            transform: scale(-1, 1);
+        }
+    }
+    &__left{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+
+        .slidesWrap{
+            display: block;
+            width: 100%;
+
+            .infoButtons{
+                position: absolute;
+                bottom: 60px;
+                left: 0;
+                right: 0;
+                max-width: fit-content;
+                margin: 0 auto;
+
+                &__button{
+                    display: none;
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: $primarycolor;
+                    font-weight: 700;
+                    margin: 0;
+                    cursor: pointer;
+                    transition: ease .3s;
+
+                    img{
+                        width: 24px;
+                        margin-right: 5px;
+                        margin-top: -2px;
+                    }
+
+                    &--active{
+                        display: block;
+                    }
+
+                    &:hover{
+                        opacity: .7;
+                    }
+                }
+            }
+        }
+    }
+    &__slides{
+        .slick-list{
+            overflow: visible;
+            margin: 0 30px;
+        }
+        .slick-arrow{
+            background-repeat: no-repeat;
+            background-size: 40px;
+            width: 40px;
+            height: 40px;
+            opacity: .8;
+            font-size: 0;
+            background-color: unset;
+            border: 0;
+            padding: 0;
+            transition: ease .3s;
+            position: absolute;
+            top: 50%;
+            outline: none;
+            transform: translate(0, -50%);
+            z-index: 5;
+
+            &:hover{
+                opacity: 1;
+            }
+            &.slick-prev{
+                background-image: url('/wp-content/themes/psibufet/images/icons/slider_arrow_left.svg');
+                left: 150px;
+            }
+            &.slick-next{
+                background-image: url('/wp-content/themes/psibufet/images/icons/slider_arrow_right.svg');
+                right: 150px;
+            }
+            &.slick-disabled{
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
+        .slick-dots{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            position: absolute;
+            bottom: -120px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            max-width: fit-content;
+
+            li{
+                margin: 0 3px;
+                line-height: 1;
+
+                button{
+                    background-color: rgba(0, 0, 0, 0.2);
+                    border: 0;
+                    font-size: 0;
+                    padding: 0;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 100%;
+                    cursor: pointer;
+                    outline: none;
+                }
+
+                &.slick-active{
+                    button{
+                        background-color: $redcolor;
+                    }
+                }
+            }
+        }
+    }
+    &__info{
+        width: 220px;
+        outline: none;
+        margin: 0 -30px;
+        opacity: 0;
+        transition: ease .5s;
+        position: relative;
+
+        img{
+            transition: ease .5s;
+        }
+
+        &.nextslide,
+        &.prevslide{
+            opacity: .5;
+            z-index: 1;
+        }
+        &.slick-current{
+            opacity: 1;
+            z-index: 2;
+
+            img{
+                transform: scale(1.5);
+            }
+        }
+    }
+    &__right{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+        text-align: center;
+
+        h2{
+            font-size: 41px;
+            line-height: 49px;
+            font-family: $headingfont;
+            font-weight: 500;
+            color: #000;
+            margin: 0 0 25px;
+        }
+        p{
+            font-size: 16px;
+            line-height: 22px;
+            font-weight: 400;
+            margin: 0;
+            color: $primarycolor;
+            text-align: center;
+            
+            b{
+                font-weight: 700;
+            }
+        }
+        .info_boxes{
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 550px;
+            margin: 30px auto 5px;
+
+            .box{
+                width: calc(100% / 3);
+                margin: 0 0 35px;
+
+                p{
+                    font-size: 14px;
+                    line-height: 18px;
+                    color: $primarycolor;
+                    max-width: 130px;
+                    margin: 0 auto;
+                    text-align: center;
+                }
+            }
+        }
+        .expertInfo{
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border: 1px solid #BCBCBB;
+            box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+            padding: 15px 28px;
+            max-width: 440px;
+            margin: 0 auto;
+
+            &__image{
+                width: 120px;
+
+                img{
+                    width: 100%;
+                    object-fit: contain;
+                    border: 2px solid #4EACB6;
+                    border-radius: 100%;
+                    padding: 2px;
+                }
+            }
+            &__content{
+                width: calc(100% - 120px);
+                padding-left: 25px;
+
+                p{
+                    font-size: 18px;
+                    line-height: 21px;
+                    font-weight: 400;
+                    color: #000;
+                    text-align: left;
+                    margin: 0 0 10px;
+
+                    b{
+                        font-weight: 700;
+                    }
+                }
+                h4{
+                    display: block;
+                    font-size: 26px;
+                    line-height: 1;
+                    font-weight: 500;
+                    font-family: $headingfont;
+                    color: #000;
+                    text-transform: uppercase;
+                    margin: 0;
+                    text-align: right;
+
+                    span{
+                        font-size: 18px;
+                        line-height: 23px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1599px){
+    .homeFoodinfo{
+        &__left{
+            width: 45%;
+        }
+        &__slides{
+            .slick-arrow{
+                &.slick-prev{
+                    left: 60px;
+                }
+                &.slick-next{
+                    right: 60px;
+                }
+            }
+        }
+        &__info{
+            width: 210px;
+
+            &.slick-current{
+                img{
+                    transform: scale(1.4);
+                }
+            }
+        }
+        &__right{
+            width: 55%;
+        }
+    }
+}
+@media (max-width: 1199px){
+    .homeFoodinfo{
+        &__slides{
+            .slick-arrow{
+                background-size: 30px;
+                width: 30px;
+                height: 30px;
+
+                &.slick-prev{
+                    left: 40px;
+                }
+                &.slick-next{
+                    right: 40px;
+                }
+            }
+        }
+        &__info{
+            width: 180px;
+        }
+    }
+}
+@media (max-width: 991px){
+    .homeFoodinfo{
+        &__wrap{
+            flex-direction: column;
+        }
+        &__left{
+            width: 100%;
+            height: 500px;
+            padding-bottom: 50px;
+
+            .slidesWrap{
+                .infoButtons{
+                    bottom: 25px;
+
+                    &__button{
+                        img{
+                            width: 20px;
+                        }
+                        font-size: 14px;
+                        line-height: 16px;
+                    }
+                }
+            }
+        }
+        &__slides{
+            .slick-dots{
+                bottom: -85px;
+            }
+        }
+        &__right{
+            width: 100%;
+            margin-bottom: 32px;
+
+            .info_boxes{
+                justify-content: space-between;
+                max-width: 495px;
+
+                .box{
+                    width: 150px;
+                    padding: 13px 19px;
+                    background-color: #fff;
+                    border: 1px solid #BCBCBB;
+                    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+                    margin: 0 0 20px;
+
+                    img{
+                        width: 60px;
+                        height: 60px;
+                    }
+                    p{
+                        font-size: 12px;
+                        line-height: 16px;
+                    }
+                }
+            }
+            .expertInfo{
+                max-width: 320px;
+                width: 320px;
+                padding: 8px 20px;
+
+                &__image{
+                    width: 105px
+                }
+                &__content{
+                    width: calc(100% - 105px);
+                    padding-left: 16px;
+
+                    p{
+                        font-size: 12px;
+                        line-height: 15px;
+                    }
+                    h4{
+                        font-size: 19px;
+
+                        span{
+                            font-size: 13px;
+                            line-height: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .homeFoodinfo{
+        &__wrap{
+            &:before{
+                display: none;
+            }
+        }
+        &__left{
+            margin-top: 40px;   
+
+            .slidesWrap{
+                .infoButtons{
+                    bottom: 5px;
+                }
+            }
+        }
+        &__slides{
+            .slick-list{
+                margin: 0;
+            }
+            .slick-dots{
+                bottom: -35px;
+            }
+        }
+        &__info{
+            margin: 0;
+            width: 280px;
+
+            &.prevslide,
+            &.nextslide{
+                opacity: .3;
+            }
+
+            &.slick-current{
+                img{
+                    transform: scale(1);
+                }
+            }
+        }
+        &__right{
+            padding: 35px 0 0;
+
+            h2{
+                font-size: 28px;
+                line-height: 34px;
+                margin: 0 0 20px;
+            }
+            p{
+                font-size: 12px;
+                line-height: 16px;
+            }
+        }
+    }
+}
+@media (max-width: 575px){
+    .homeFoodinfo{
+        &__right{
+            .info_boxes{
+                max-width: 320px;
+            }
+        }
+    }
+}
+@media (max-width: 500px){
+    .homeFoodinfo{
+        &__slides{
+            .slick-arrow{
+                &.slick-prev{
+                    left: 14px;
+                }
+                &.slick-next{
+                    right: 14px;
+                }
+            }
+        }
+    }
+}
+
+// Jak to działa
+.homeHowitworks{
+    padding: 30px 0 40px;
+
+    &__wrap{
+        position: relative;
+
+        &:before{
+            content: '';
+            background-image: url('/wp-content/themes/psibufet/images/howitworksdog.svg');
+            background-repeat: no-repeat;
+            background-size: 100px;
+            width: 100px;
+            height: 200px;
+            position: absolute;
+            left: 30%;
+            top: -140px;
+        }
+
+        &>h2{
+            font-size: 41px;
+            line-height: 49px;
+            font-family: $headingfont;
+            font-weight: 500;
+            color: #000;
+            margin: 0 0 35px; 
+            text-align: center;
+        }
+    }
+    &__steps{
+        display: flex;
+        justify-content: space-between;
+        max-width: 1160px;
+        margin: 0 auto 40px;
+    }
+    &__step{
+        width: 360px;
+        height: auto;
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+
+        .image{
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            height: 110px;
+            margin: 0 0 20px;
+        }
+        .content{
+            h3{
+                font-size: 30px;
+                line-height: 36px;
+                font-family: $headingfont;
+                font-weight: 500;
+                color: #000;
+                margin: 0 0 10px;
+                text-align: center;
+                text-transform: uppercase;
+            }
+            p{
+                font-size: 16px;
+                line-height: 19px;
+                color: $primarycolor;
+                margin: 0;
+                text-align: center;
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .homeHowitworks{
+        &__wrap{
+            &:before{
+                display: none;
+            }
+        }
+    }
+}

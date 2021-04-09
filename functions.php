@@ -570,3 +570,18 @@ function acf_orphans($value, $post_id, $field) {
 add_filter('acf/format_value/type=textarea', 'acf_orphans', 10, 3);
 add_filter('acf/format_value/type=text', 'acf_orphans', 10, 3);
 add_filter('acf/format_value/type=wysiwyg', 'acf_orphans', 10, 3);
+
+
+/* ACF local JSON */
+add_filter('acf/settings/save_json', 'my_acf_json_save_point');
+function my_acf_json_save_point( $path ) {
+    $path = get_stylesheet_directory() . '/acf-json';
+    return $path;
+}
+
+add_filter('acf/settings/load_json', 'my_acf_json_load_point');
+function my_acf_json_load_point( $paths ) {
+    unset($paths[0]);
+    $paths[] = get_stylesheet_directory() . '/acf-json';
+    return $paths;
+}

@@ -3,8 +3,8 @@
 
 $(window).on('scroll', function () {
     var scrollTop     = $(window).scrollTop()
-    if ($('.front_uknow').length) {
-        var elementOffset = $('.front_uknow').offset().top
+    if ($('.homeMiska').length) {
+        var elementOffset = $('.homeMiska').offset().top
     }
     var distance      = (elementOffset - scrollTop);
     

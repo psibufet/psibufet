@@ -16,7 +16,7 @@
     <meta name="description" content="Catering dla psa - zbilansowana, pełnoporcjowa karma, przygotowana ze świeżych, naturalnych składników. Dieta wysyłana prosto pod Twoje drzwi!">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-    <link rel="stylesheet" href="/wp-content/themes/psibufet/css/custom.min.css?ver=1.1.5" />
+    <link rel="stylesheet" href="/wp-content/themes/psibufet/css/custom.css?ver=1.1.5" />
     <link rel="stylesheet" href="/wp-content/themes/psibufet/flexslider/flexslider.css" type="text/css">
     <link rel="stylesheet" href="/wp-content/themes/psibufet/slick/slick.css" type="text/css">
     <script src="https://kit.fontawesome.com/a1019066cc.js" crossorigin="anonymous"></script>
@@ -78,50 +78,46 @@
         });
     </script>
     
-    <!-- Google Tag Manager -->
+    <!-- Google Tag Manager 
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-WWJGQMC');</script>
-    <!-- End Google Tag Manager -->
+    End Google Tag Manager -->
 </head>
 
 <body <?php body_class(); ?>>
-    <!-- Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) 
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WWJGQMC"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) --> 
+    End Google Tag Manager (noscript) --> 
 
     <?php do_action('sydney_before_site'); //Hooked: sydney_preloader() ?>
 
     <div id="page" class="hfeed site">
-        <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'sydney' ); ?></a>
-
         <?php do_action('sydney_before_header'); //Hooked: sydney_header_clone() ?>
         <header id="masthead" class="siteHeader" role="banner">
             <div id="promocode">
                 <p>Masz <span class="amount">wczytywanie</span><span class="type"></span> zniżki na <span class="na">swoje pierwsze zamówienie</span>.<font> Całość zostanie doliczona w koszyku.</font></p>
             </div>
-            <div class="siteHeader__wrap">
-                <div class="container">
-                    <div class="siteHeader__logo">
-                        <?php if ( get_theme_mod('site_logo') ) : ?>
-                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo('name'); ?>" class="dir"><img class="site-logo" src="<?php echo esc_url(get_theme_mod('site_logo')); ?>" alt="<?php bloginfo('name'); ?>" /></a>
-                        <?php if ( is_home() && !is_front_page() ) : ?>
-                        <h1 class="site-title screen-reader-text"><?php bloginfo( 'name' ); ?></h1>
-                        <?php endif; ?>
-                        <?php else : ?>
-                        <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-                        <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-                        <?php endif; ?>
-                    </div>
-                    <div class="siteHeader__menu">
-                        <div class="btn-menu"><i class="sydney-svg-icon"><?php sydney_get_svg_icon( 'icon-menu', true ); ?></i></div>
-                        <nav id="mainnav" class="mainnav" role="navigation">
-                            <?php wp_nav_menu( array( 'theme_location' => 'primary', 'fallback_cb' => 'sydney_menu_fallback' ) ); ?>
-                        </nav><!-- #site-navigation -->
-                    </div>
+            <div class="siteHeader__wrap container">
+                <div class="siteHeader__logo">
+                    <?php if ( get_theme_mod('site_logo') ) : ?>
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo('name'); ?>" class="dir"><img class="site-logo" src="<?php echo esc_url(get_theme_mod('site_logo')); ?>" alt="<?php bloginfo('name'); ?>" /></a>
+                    <?php if ( is_home() && !is_front_page() ) : ?>
+                    <h1 class="site-title screen-reader-text"><?php bloginfo( 'name' ); ?></h1>
+                    <?php endif; ?>
+                    <?php else : ?>
+                    <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                    <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+                    <?php endif; ?>
+                </div>
+                <div class="siteHeader__menu">
+                    <div class="btn-menu"><i class="sydney-svg-icon"><?php sydney_get_svg_icon( 'icon-menu', true ); ?></i></div>
+                    <nav id="mainnav" class="mainnav" role="navigation">
+                        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'fallback_cb' => 'sydney_menu_fallback' ) ); ?>
+                    </nav><!-- #site-navigation -->
                 </div>
             </div>
         </header><!-- #masthead -->

@@ -1,4 +1,3 @@
-
 /*********** MENU MOBILE *************/
 
 $(document).mouseup(function(e){
@@ -11,13 +10,8 @@ $(document).mouseup(function(e){
 /************ SLIDERS START **************/
 
 $(window).load(function () {
-    if ($(window).width() < 769) {
-        $('.front_reviews .slideul').addClass('slides');
-    } else {
-        $('.front_reviews .slideul').removeClass('slides');
-    }
-    $(function () {
-        $('.front_reviews .slides').slick({
+    if ($(window).width() < 900) {
+        $('.homeReviews .slideul').slick({
             infinite: true,
             speed: 300,
             slidesToShow: 1,
@@ -27,37 +21,34 @@ $(window).load(function () {
             autoplay: true,
             autoplaySpeed: 3000,
         });
-    });
+    }
 });
 $(document).ready(function () {
-    $('.foodinfo_slides').slick({
+    $('#foodinfo_carousel').slick({
         centerMode: true,
-        centerPadding: '0',
         slidesToShow: 3,
         slidesToScroll: 1,
-        variableWidth: false,
-        prevArrow: $('.foodinfo_prev'),
-        nextArrow: $('.foodinfo_next'),
+        variableWidth: true,
+        swipe: false,
+        infinite: false,
         dots: true,
-        responsive: [{
-                breakpoint: 768,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 3
-                }
-                    },
-            {
-                breakpoint: 480,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 1
-                }
-                    }
-                ]
+    });
+
+    $('#foodinfo_carousel').find('.slick-current').prev().addClass('prevslide');
+    $('#foodinfo_carousel').find('.slick-current').next().addClass('nextslide');
+
+    var slideData = $('#foodinfo_carousel').find('.slick-current').attr('data');
+    $('.infoButtons__button[data="' + slideData + '"]').addClass('infoButtons__button--active');
+
+    $('.homeFoodinfo__slides .slick-arrow').on('click', function(){
+        var currentSlide = $('#foodinfo_carousel').find('.slick-current').attr('data');
+
+        $('.infoButtons__button').removeClass('infoButtons__button--active');
+        $('.infoButtons__button[data="' + currentSlide + '"]').addClass('infoButtons__button--active');
+
+        $('#foodinfo_carousel').find('.homeFoodinfo__info').removeClass('prevslide').removeClass('nextslide')
+        $('#foodinfo_carousel').find(".homeFoodinfo__info.slick-current").prev().addClass('prevslide');
+        $('#foodinfo_carousel').find(".homeFoodinfo__info.slick-current").next().addClass('nextslide');
     });
 });
 $(document).ready(function () {
