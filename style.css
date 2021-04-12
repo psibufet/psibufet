@@ -3022,28 +3022,11 @@ SVGs
 		.social-menu-widget a:before {
 			font-size: 42px;
 		}
-		.btn-menu {
-			float: none;
-			margin: 15px auto 0;
-		}
-		.header-wrap {
-			text-align: center;
-		}
-		#mainnav-mobi {
-			top: auto;
-		}
-		.site-header.float-header {
-			padding-top: 17px;
-			padding-bottom: 17px;
-		}
 
         .text-slider-section {
 			min-height: 0;
 			top: auto;
 			bottom: 0;
-		}
-		.site-title {
-			font-size: 22px !important;
 		}
 		.fluid-width-video-wrapper + #wp-custom-header-video-button {
 			display: none;

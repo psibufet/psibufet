@@ -51,44 +51,104 @@ $(document).ready(function () {
         $('#foodinfo_carousel').find(".homeFoodinfo__info.slick-current").next().addClass('nextslide');
     });
 });
-$(document).ready(function () {
-    $('.testi_slides').slick({
+$(window).load(function(){
+    $('.homeBenefits__slider').slick({
+        slidesToScroll: 1,
+        slidesToShow: 1,
+        infinite: false,
+        fade: true,
+        asNavFor: '.homeBenefits__content',
+        responsive: [{
+            breakpoint: 991,
+            settings: {
+                arrows: false,
+            }
+        }]
+    })
+    $('.homeBenefits__content').slick({
+        slidesToScroll: 1,
+        slidesToShow: 1,
+        infinite: false,
+        arrows: false,
+        adaptiveHeight: true,
+        responsive: [{
+            breakpoint: 991,
+            settings: {
+                arrows: true,
+                dots: true,
+                asNavFor: '.homeBenefits__slider',
+            }
+        }]
+    })
+});
+$(window).load(function () {
+    $('.homeTestimonials__slider').slick({
         centerMode: true,
-        centerPadding: '0',
         slidesToShow: 3,
         slidesToScroll: 1,
         variableWidth: true,
-        prevArrow: $('.testi-prev'),
-        nextArrow: $('.testi-next'),
         dots: true,
         infinite: false,
-        responsive: [{
-                breakpoint: 768,
-                settings: {
-                    centerMode: true,
-                    slidesToShow: 1,
-                    variableWidth: false,
-                }
-                    }
-                ]
+        swipe: false,
     });
-    $('.testi_slides li.slick-current').next().addClass('slide-ready');
-    $('.testi_slides li.slick-current').prev().addClass('slide-ready');
+    $('.homeTestimonials__slider').find('.slick-current').prev().addClass('ready');
+    $('.homeTestimonials__slider').find('.slick-current').next().addClass('ready');
+    $('.homeTestimonials__slider .slick-arrow').on('click', function(){
+        $('.homeTestimonials__slider').find('.slide').removeClass('ready')
+        $('.homeTestimonials__slider').find(".slide.slick-current").prev().addClass('ready');
+        $('.homeTestimonials__slider').find(".slide.slick-current").next().addClass('ready');
+    });
 });
-$(document).on("click", ".testi-next", function () {
-    $('.testi_slides li').removeClass('slide-ready');
-    $('.testi_slides li.slick-current').next().addClass('slide-ready');
-    $('.testi_slides li.slick-current').prev().addClass('slide-ready');
+$(window).load(function(){
+    $('.homeInstagram__posts').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: true,
+        infinite: true,
+        variableWidth: true,
+        responsive: [{
+            breakpoint: 992,
+            settings: {
+                swipe: true,
+                centerMode: true,
+            }
+        }]
+    });
 });
-$(document).on("click", ".testi-prev", function () {
-    $('.testi_slides li').removeClass('slide-ready');
-    $('.testi_slides li.slick-current').next().addClass('slide-ready');
-    $('.testi_slides li.slick-current').prev().addClass('slide-ready');
+
+$(document).ready(function(){
+    var question = $('.homeFaq__list').find('.question');
+
+    question.on('click', function(){
+        $('.homeFaq__list').find('.question').not(this).removeClass('question--open').addClass('question--close');
+        $('.homeFaq__list').find('.question').not(this).find('.question__answer').slideUp();
+        $(this).toggleClass('question--close question--open');
+        $(this).find('.question__answer').slideToggle();
+    });
 });
-$(document).on("click", ".slick-dots li", function () {
-    $('.testi_slides li').removeClass('slide-ready');
-    $('.testi_slides li.slick-current').next().addClass('slide-ready');
-    $('.testi_slides li.slick-current').prev().addClass('slide-ready');
+
+$(document).ready(function(){
+    var defaultType = $('.pricingContent__options').attr('type');
+    var pricezl = $('.pricingContent__option[type="' + defaultType + '"]').attr('pricezl');
+    var pricegr = $('.pricingContent__option[type="' + defaultType + '"]').attr('pricegr');
+    var portion = $('.pricingContent__option[type="' + defaultType + '"]').attr('portion');
+
+    $('.pricingContent__info').find('span.value').html(pricezl + '<span>' + pricegr + '</span> zł');
+    $('.pricingContent__info').find('.portion').find('.value').text(portion + 'g');
+
+    $('.pricingContent__option').on('click', function(){
+        var type = $(this).attr('type');
+        var pricezl = $(this).attr('pricezl');
+        var pricegr = $(this).attr('pricegr');
+        var portion = $(this).attr('portion');
+        
+        $(this).parent().attr('type', type);
+        $(this).parent().parent().find('.pricingContent__info').attr('type', type);
+
+        $('.pricingContent__info').find('span.value').html(pricezl + '<span>' + pricegr + '</span> zł');
+        $('.pricingContent__info').find('.portion').find('.value').text(portion + 'g');
+    });
 });
 
 $(document).ready(function () {

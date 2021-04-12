@@ -476,6 +476,7 @@ require_once dirname( __FILE__ ) . '/plugins/class-tgm-plugin-activation.php';
 /* Custom scripts */
 function custom_scripts(){ 
 	wp_enqueue_style( 'customsass', get_template_directory_uri() . '/css/customsass.css' );
+	// wp_enqueue_script( 'visible-js', get_template_directory_uri() . '/plugins/visible/jquery.visible.min.js', array(), '1.0.0', true );
 }
 add_action('wp_enqueue_scripts', 'custom_scripts');
 

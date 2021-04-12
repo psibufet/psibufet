@@ -37,6 +37,7 @@
     <script type="text/javascript" src="/wp-content/themes/psibufet/js/referralCode.js"></script>
     <script src="/wp-content/themes/psibufet/flexslider/jquery.flexslider.js"></script>
     <script src="/wp-content/themes/psibufet/slick/slick.min.js"></script>
+    <script src="/wp-content/themes/psibufet/plugins/visible/jquery.visible.min.js" type="text/javascript"></script>
     <script src="/wp-content/themes/psibufet/js/custom.js" type="text/javascript"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
@@ -114,6 +115,7 @@
                     <?php endif; ?>
                 </div>
                 <div class="siteHeader__menu">
+                    <a href="https://zamowienie.psibufet.pl/" class="btn dir"><span>Zamów</span></a>
                     <div class="btn-menu"><i class="sydney-svg-icon"><?php sydney_get_svg_icon( 'icon-menu', true ); ?></i></div>
                     <nav id="mainnav" class="mainnav" role="navigation">
                         <?php wp_nav_menu( array( 'theme_location' => 'primary', 'fallback_cb' => 'sydney_menu_fallback' ) ); ?>

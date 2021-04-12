@@ -29,6 +29,9 @@
         }
     }
     &__menu{
+        .btn{
+            display: none;
+        }
         .btn-menu{
             display: none;
         }
@@ -145,6 +148,20 @@
 @media (max-width: 991px){
     .siteHeader{
         &__menu{
+            display: flex;
+            align-items: center;
+
+            .btn{
+                display: block;
+                min-width: 104px;
+                height: 34px;
+                line-height: 34px;
+                margin-right: 20px;
+
+                span{
+                    font-size: 15px;
+                }
+            }
             .btn-menu{
                 display: block;
                 width: 22px;
@@ -152,6 +169,8 @@
 
                 i{
                     fill: $redcolor !important;
+                    position: relative;
+                    top: -6px;
                 }
             }
             .mainnav{
@@ -217,6 +236,13 @@
             .mainnav{
                 width: 75%;
             }
+        }
+    }
+}
+@media (max-width: 400px){
+    .siteHeader{
+        &__logo{
+            max-width: 120px;
         }
     }
 }

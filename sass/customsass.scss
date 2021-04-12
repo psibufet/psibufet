@@ -9,6 +9,7 @@
 /*  Partials 
 --------------- */
 @import 'partials/header';
+@import 'partials/footer';
 
 /*  Sections 
 --------------- */
@@ -26,6 +27,43 @@ body{
 
         &:hover{
             text-decoration: none !important;
+        }
+    }
+}
+
+// Marker H2
+.getMarker{
+    &.init{
+        .marker{
+            &:after{
+                width: 103%;
+            }
+        }
+    }
+    .marker{
+        position: relative;
+        z-index: 2;
+
+        &:after{
+            content: '';
+            width: 0;
+            height: 10px;
+            position: absolute;
+            background-color: $redcolor;
+            bottom: 8px;
+            z-index: -1;
+            left: -1.5%;
+            transition: ease 1s;
+        }
+    }
+}
+@media (max-width: 767px){
+    .getMarker{
+        .marker{
+            &:after{
+                height: 7px;
+                bottom: 5px;
+            }
         }
     }
 }
