@@ -3,8 +3,8 @@
 
 $(window).on('scroll', function () {
     var scrollTop     = $(window).scrollTop()
-    if ($('.front_uknow').length) {
-        var elementOffset = $('.front_uknow').offset().top
+    if ($('.homeMiska').length) {
+        var elementOffset = $('.homeMiska').offset().top
     }
     var distance      = (elementOffset - scrollTop);
     
@@ -55,39 +55,72 @@ var Utils = new Utils();
 
 /********** PODKREŚLENIA FRONT PAGE **********/
 
-$(window).on('scroll', function () {
-    var markeredfont = $('#front_page .front_uknow .left_content h2 font');
-    var isElementInView = Utils.isElementInView(markeredfont, false);
-
-    if (isElementInView) {
-        window.setTimeout(function(){
-            markeredfont.addClass('marker');
-        }, 200);
+function getVisible(element){
+    if(element.visible(true)){
+        return $(this).parent().prop('className');
     }
-});
-$(window).on('scroll', function () {
-    var markeredfont = $('#front_page .front_price .left_content h2 span');
-    var isElementInView = Utils.isElementInView(markeredfont, false);
+}
 
-    if (isElementInView) {
-        window.setTimeout(function(){
-            markeredfont.addClass('marker');
-        }, 200);
+$(window).on('scroll', function () {
+
+    var homeMiska = $('.homeMiska').find('.getMarker');
+    var homeFoodinfo = $('.homeFoodinfo').find('.getMarker');
+    var homeHowitworks = $('.homeHowitworks').find('.getMarker');
+    var homeBenefits = $('.homeBenefits').find('.getMarker');
+    var homePricing = $('.homePricing').find('.getMarker');
+    var homeStart = $('.homeStart').find('.getMarker');
+
+    if($(homeMiska).visible(true)){
+        setTimeout(function(){
+            homeMiska.addClass('init');
+        }, 500)
+    }
+    if($(homeFoodinfo).visible(true)){
+        setTimeout(function(){
+            homeFoodinfo.addClass('init');
+        }, 500)
+    }
+    if($(homeHowitworks).visible(true)){
+        setTimeout(function(){
+            homeHowitworks.addClass('init');
+        }, 500)
+    }
+    if($(homeBenefits).visible(true)){
+        setTimeout(function(){
+            homeBenefits.addClass('init');
+        }, 500)
+    }
+    if($(homePricing).visible(true)){
+        setTimeout(function(){
+            homePricing.addClass('init');
+        }, 500)
+    }
+    if($(homeStart).visible(true)){
+        setTimeout(function(){
+            homeStart.addClass('init');
+        }, 500)
     }
 });
 
 /********** PODKREŚLENIA NASZE PRZEPISY **********/
 
-$(window).on('scroll', function () {
-    var markeredfont = $('#recipe_page .recipe_price .left_content h2 span');
-    var isElementInView = Utils.isElementInView(markeredfont, false);
+// $(window).on('scroll', function () {
+//     var markeredfont = $('.getMarker');
+//     var isElementInView = Utils.isElementInView(markeredfont, false);
 
-    if (isElementInView) {
-        window.setTimeout(function(){
-            markeredfont.addClass('marker');
-        }, 200);
-    }
-});
+//     if (isElementInView) {
+//         parents = markeredfont.parent().parent();
+//         parents.each(function(){
+//             var parentClass = $(this).prop('className');
+//             var parent = $('.' + parentClass);
+//             if(parent.visible(true)){
+//                 console.log($(this).prop('className') + ' true');
+//             }else{
+//                 console.log($(this).prop('className') + ' false');
+//             }
+//         })
+//     }
+// });
 $(window).on('scroll', function () {
     var markeredfont = $('#recipe_page .recipe_package .right_content .inner .content h2 span');
     var isElementInView = Utils.isElementInView(markeredfont, false);

@@ -476,6 +476,7 @@ require_once dirname( __FILE__ ) . '/plugins/class-tgm-plugin-activation.php';
 /* Custom scripts */
 function custom_scripts(){ 
 	wp_enqueue_style( 'customsass', get_template_directory_uri() . '/css/customsass.css' );
+	// wp_enqueue_script( 'visible-js', get_template_directory_uri() . '/plugins/visible/jquery.visible.min.js', array(), '1.0.0', true );
 }
 add_action('wp_enqueue_scripts', 'custom_scripts');
 
@@ -570,3 +571,18 @@ function acf_orphans($value, $post_id, $field) {
 add_filter('acf/format_value/type=textarea', 'acf_orphans', 10, 3);
 add_filter('acf/format_value/type=text', 'acf_orphans', 10, 3);
 add_filter('acf/format_value/type=wysiwyg', 'acf_orphans', 10, 3);
+
+
+/* ACF local JSON */
+add_filter('acf/settings/save_json', 'my_acf_json_save_point');
+function my_acf_json_save_point( $path ) {
+    $path = get_stylesheet_directory() . '/acf-json';
+    return $path;
+}
+
+add_filter('acf/settings/load_json', 'my_acf_json_load_point');
+function my_acf_json_load_point( $paths ) {
+    unset($paths[0]);
+    $paths[] = get_stylesheet_directory() . '/acf-json';
+    return $paths;
+}

@@ -1,4 +1,3 @@
-
 /*********** MENU MOBILE *************/
 
 $(document).mouseup(function(e){
@@ -11,13 +10,8 @@ $(document).mouseup(function(e){
 /************ SLIDERS START **************/
 
 $(window).load(function () {
-    if ($(window).width() < 769) {
-        $('.front_reviews .slideul').addClass('slides');
-    } else {
-        $('.front_reviews .slideul').removeClass('slides');
-    }
-    $(function () {
-        $('.front_reviews .slides').slick({
+    if ($(window).width() < 900) {
+        $('.homeReviews .slideul').slick({
             infinite: true,
             speed: 300,
             slidesToShow: 1,
@@ -26,80 +20,191 @@ $(window).load(function () {
             arrows: false,
             autoplay: true,
             autoplaySpeed: 3000,
+            initialSlide: 2,
         });
-    });
+    }
 });
 $(document).ready(function () {
-    $('.foodinfo_slides').slick({
+    $('#foodinfo_carousel').slick({
         centerMode: true,
-        centerPadding: '0',
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        variableWidth: false,
-        prevArrow: $('.foodinfo_prev'),
-        nextArrow: $('.foodinfo_next'),
-        dots: true,
-        responsive: [{
-                breakpoint: 768,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 3
-                }
-                    },
-            {
-                breakpoint: 480,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 1
-                }
-                    }
-                ]
-    });
-});
-$(document).ready(function () {
-    $('.testi_slides').slick({
-        centerMode: true,
-        centerPadding: '0',
         slidesToShow: 3,
         slidesToScroll: 1,
         variableWidth: true,
-        prevArrow: $('.testi-prev'),
-        nextArrow: $('.testi-next'),
+        swipe: false,
+        infinite: false,
+        dots: true,
+        initialSlide: 1,
+        responsive: [{
+            breakpoint: 767,
+            settings: {
+                infinite: true,
+            }
+        }]
+    });
+
+    $('#foodinfo_carousel').find('.slick-current').prev().addClass('prevslide');
+    $('#foodinfo_carousel').find('.slick-current').next().addClass('nextslide');
+
+    var slideData = $('#foodinfo_carousel').find('.slick-current').attr('data');
+    $('.infoButtons__button[data="' + slideData + '"]').addClass('infoButtons__button--active');
+
+    $('.homeFoodinfo__slides .slick-arrow').on('click', function(){
+        var currentSlide = $('#foodinfo_carousel').find('.slick-current').attr('data');
+
+        $('.infoButtons__button').removeClass('infoButtons__button--active');
+        $('.infoButtons__button[data="' + currentSlide + '"]').addClass('infoButtons__button--active');
+
+        $('#foodinfo_carousel').find('.homeFoodinfo__info').removeClass('prevslide').removeClass('nextslide')
+        $('#foodinfo_carousel').find(".homeFoodinfo__info.slick-current").prev().addClass('prevslide');
+        $('#foodinfo_carousel').find(".homeFoodinfo__info.slick-current").next().addClass('nextslide');
+    });
+});
+$(window).load(function(){
+    $('.homeBenefits__slider').slick({
+        slidesToScroll: 1,
+        slidesToShow: 1,
+        infinite: false,
+        fade: true,
+        asNavFor: '.homeBenefits__content',
+        dots: true,
+        responsive: [{
+            breakpoint: 991,
+            settings: {
+                arrows: false,
+                dots: false,
+            }
+        }]
+    })
+    $('.homeBenefits__content').slick({
+        slidesToScroll: 1,
+        slidesToShow: 1,
+        infinite: false,
+        arrows: false,
+        adaptiveHeight: true,
+        responsive: [{
+            breakpoint: 991,
+            settings: {
+                arrows: true,
+                dots: true,
+                asNavFor: '.homeBenefits__slider',
+            }
+        }]
+    })
+});
+$(window).load(function () {
+    $('.homeTestimonials__slider').slick({
+        centerMode: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        variableWidth: true,
         dots: true,
         infinite: false,
-        responsive: [{
-                breakpoint: 768,
-                settings: {
-                    centerMode: true,
-                    slidesToShow: 1,
-                    variableWidth: false,
-                }
-                    }
-                ]
+        swipe: false,
     });
-    $('.testi_slides li.slick-current').next().addClass('slide-ready');
-    $('.testi_slides li.slick-current').prev().addClass('slide-ready');
+    $('.homeTestimonials__slider').find('.slick-current').prev().addClass('ready');
+    $('.homeTestimonials__slider').find('.slick-current').next().addClass('ready');
+    $('.homeTestimonials__slider .slick-arrow').on('click', function(){
+        $('.homeTestimonials__slider').find('.slide').removeClass('ready')
+        $('.homeTestimonials__slider').find(".slide.slick-current").prev().addClass('ready');
+        $('.homeTestimonials__slider').find(".slide.slick-current").next().addClass('ready');
+    });
 });
-$(document).on("click", ".testi-next", function () {
-    $('.testi_slides li').removeClass('slide-ready');
-    $('.testi_slides li.slick-current').next().addClass('slide-ready');
-    $('.testi_slides li.slick-current').prev().addClass('slide-ready');
-});
-$(document).on("click", ".testi-prev", function () {
-    $('.testi_slides li').removeClass('slide-ready');
-    $('.testi_slides li.slick-current').next().addClass('slide-ready');
-    $('.testi_slides li.slick-current').prev().addClass('slide-ready');
-});
-$(document).on("click", ".slick-dots li", function () {
-    $('.testi_slides li').removeClass('slide-ready');
-    $('.testi_slides li.slick-current').next().addClass('slide-ready');
-    $('.testi_slides li.slick-current').prev().addClass('slide-ready');
+$(window).load(function(){
+    $('.homeInstagram__posts').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: true,
+        infinite: true,
+        variableWidth: true,
+        responsive: [{
+            breakpoint: 992,
+            settings: {
+                swipe: true,
+                centerMode: true,
+            }
+        }]
+    });
 });
 
+$(document).ready(function(){
+    var question = $('.homeFaq__list').find('.question');
+
+    question.on('click', function(){
+        $('.homeFaq__list').find('.question').not(this).removeClass('question--open').addClass('question--close');
+        $('.homeFaq__list').find('.question').not(this).find('.question__answer').slideUp();
+        $(this).toggleClass('question--close question--open');
+        $(this).find('.question__answer').slideToggle();
+    });
+});
+
+$(document).ready(function(){
+    var defaultType = $('.pricingContent__options').attr('type');
+    var pricezl = $('.pricingContent__option[type="' + defaultType + '"]').attr('pricezl');
+    var pricegr = $('.pricingContent__option[type="' + defaultType + '"]').attr('pricegr');
+    var portion = $('.pricingContent__option[type="' + defaultType + '"]').attr('portion');
+
+    $('.pricingContent__info').find('span.value').html(pricezl + '<span>' + pricegr + '</span> zł');
+    $('.pricingContent__info').find('.portion').find('.value').text(portion + 'g');
+
+    $('.pricingContent__option').on('click', function(){
+        var type = $(this).attr('type');
+        var pricezl = $(this).attr('pricezl');
+        var pricegr = $(this).attr('pricegr');
+        var portion = $(this).attr('portion');
+        
+        $(this).parent().attr('type', type);
+        $(this).parent().parent().find('.pricingContent__info').attr('type', type);
+
+        $('.pricingContent__info').find('span.value').html(pricezl + '<span>' + pricegr + '</span> zł');
+        $('.pricingContent__info').find('.portion').find('.value').text(portion + 'g');
+    });
+});
+
+// Menu bar options
+$(document).ready(function(){
+    var siteHeader = $('.siteHeader');
+    $('.header-clone').css('height', siteHeader.height());
+
+    var didScroll;
+    var lastScrollTop = 0;
+    var delta = 50;
+    var navbarHeight = siteHeader.outerHeight();
+
+    $(window).scroll(function(event){
+        if($(document).scrollTop() > 67){
+            siteHeader.addClass('siteHeader--shadow');
+        }else{
+            siteHeader.removeClass('siteHeader--shadow');
+        }
+        didScroll = true;
+    });
+
+    setInterval(function() {
+        if (didScroll) {
+            hasScrolled();
+            didScroll = false;
+        }
+    }, 250);
+
+    function hasScrolled() {
+        var st = $(this).scrollTop();
+        
+        if(Math.abs(lastScrollTop - st) <= delta)
+            return;
+        
+        if (st > lastScrollTop && st > navbarHeight){
+            siteHeader.addClass('siteHeader--scrolled');
+        } else {
+            if(st + $(window).height() < $(document).height()) {
+                siteHeader.removeClass('siteHeader--scrolled');
+            }
+        }
+        lastScrollTop = st;
+    }
+});
+
+/* OLD */
 $(document).ready(function () {
     $('.flexslider .gang_posts').slick({
         dots: true,
@@ -150,7 +255,12 @@ $(document).ready(function () {
 /****** MENU JQ ******/
 $(document).ready(function () {
     $('.btn-menu').click(function(){
-        if($(this).hasClass('active')){
+        var btn = $(this);
+        btn.css('pointer-events', 'none');
+        setTimeout(function(){
+            btn.css('pointer-events', 'all');
+        }, 500);
+        if(btn.hasClass('active')){
             $('body').removeClass('popupactive');
         }else{
             $('body').addClass('popupactive');
