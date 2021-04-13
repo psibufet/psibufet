@@ -116,7 +116,9 @@
                 </div>
                 <div class="siteHeader__menu">
                     <a href="https://zamowienie.psibufet.pl/" class="btn dir"><span>Zamów</span></a>
-                    <div class="btn-menu"><i class="sydney-svg-icon"><?php sydney_get_svg_icon( 'icon-menu', true ); ?></i></div>
+                    <div class="btn-menu">
+                        <img src="<?php echo get_template_directory_uri() . '/images/icons/hamburger_ico.svg'; ?>"/>
+                    </div>
                     <nav id="mainnav" class="mainnav" role="navigation">
                         <?php wp_nav_menu( array( 'theme_location' => 'primary', 'fallback_cb' => 'sydney_menu_fallback' ) ); ?>
                     </nav><!-- #site-navigation -->

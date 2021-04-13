@@ -12,6 +12,8 @@
         justify-content: center;
     }
     &__content{
+        margin-bottom: 60px;
+
         h2{
             font-size: 60px;
             line-height: 72px;
@@ -105,11 +107,15 @@
         height: 400px;
 
         &__content{
+            margin-bottom: 20px;
+
             h2{
                 font-size: 45px;
                 line-height: 54px;
             }
             .tags{
+                margin: 0 0 20px;
+
                 div{
                     font-size: 18px;
                     line-height: 24px;
@@ -226,8 +232,9 @@
             margin: 0 auto 5px;
 
             img{
-                max-height: 100%;
+                max-height: 80%;
                 max-width: 100%;
+                min-width: calc(100% - 30px);
                 object-fit: contain;
             }
         }
@@ -336,6 +343,7 @@
                 left: 0;
                 z-index: 2;
                 transform: translate(0, -50%);
+                transition: ease .5s;
 
                 &:after{
                     content: "";
@@ -717,6 +725,11 @@
                 width: calc(100% / 3);
                 margin: 0 0 35px;
 
+                img{
+                    margin: 0 0 10px;
+                    min-width: 70px;
+                }
+
                 p{
                     font-size: 14px;
                     line-height: 18px;
@@ -945,6 +958,7 @@
         &__info{
             margin: 0;
             width: 280px;
+            opacity: .3;
 
             &.prevslide,
             &.nextslide{
@@ -964,6 +978,12 @@
                 font-size: 28px;
                 line-height: 34px;
                 margin: 0 0 20px;
+
+                span{
+                    display: block;
+                    max-width: fit-content;
+                    margin: 0 auto;
+                }
             }
             p{
                 font-size: 12px;
@@ -1100,10 +1120,8 @@
 @media (max-width: 991px){
     .homeHowitworks{
         &__wrap{
-            &>h2{
-                font-size: 28px;
-                line-height: 34px;
-                margin: 0 0 25px; 
+            &:before{
+                left: 10%;
             }
         }
         &__step{
@@ -1138,6 +1156,11 @@
         &__wrap{
             &:before{
                 display: none;
+            }
+            &>h2{
+                font-size: 28px;
+                line-height: 34px;
+                margin: 0 0 25px; 
             }
         }
         &__steps{
@@ -1179,7 +1202,7 @@
 
 // Home benefits
 .homeBenefits{
-    min-height: 700px;
+    min-height: 725px;
     background-color: #ffcf4b;
 
     &__wrap{
@@ -1203,7 +1226,7 @@
     }
     &__boxes{
         position: absolute;
-        bottom: 50px;
+        bottom: 10px;
         left: 150px;
         z-index: 2;
     }
@@ -1233,6 +1256,39 @@
                 right: 50px;
             }
         }
+        .slick-dots{
+            display: flex !important;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            justify-content: center;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            li{
+                margin: 0 3px;
+
+                button{
+                    width: 8px;
+                    height: 8px;
+                    background-color: rgba(0, 0, 0, 0.2);
+                    border: 0;
+                    border-radius: 100%;
+                    padding: 0;
+                    outline: none;
+                    font-size: 0;
+                    transition: ease .3s;
+                }
+
+                &.slick-active{
+                    button{
+                        background-color: $redcolor;
+                    }
+                }
+            }
+        }
 
         .benefitSlide{
             min-height: inherit;
@@ -1245,8 +1301,23 @@
                 margin: 0 auto;
                 position: relative;
                 left: -50px;
+                background-color: #ffcf4b;
 
-                img{
+                .dog{
+                    position: relative;
+                    z-index: 2;
+                }
+                .shadow{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    mix-blend-mode: multiply;
+                    z-index: 1;
+                }
+                .dog,
+                .shadow{
                     margin: 0 auto;
                 }
             }
@@ -1254,6 +1325,7 @@
     }
     &__content{
         width: 450px;
+        max-height: 424px;
         background-color: #fff;
         border: 1px solid rgba(0, 0, 0, 0.2);
         box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
@@ -1315,19 +1387,37 @@
             .author{
                 font-size: 18px;
                 line-height: 26px;
-                font-weight: 700;
+                font-weight: 500;
                 color: #000;
                 margin: 0 0 35px;
             }
             .info{
                 font-size: 18px;
                 line-height: 23px;
-                font-weight: 700;
+                font-weight: 500;
                 color: #000;
                 margin: 0 0 30px;
 
                 span{
                     display: block;
+
+                    &:first-of-type{
+                        position: relative;
+                        max-width: fit-content;
+                        margin: 0 auto;
+
+                        &:before{
+                            content: '';
+                            background-image: url('/wp-content/themes/psibufet/images/icons/homeBenefits_lapa.svg');
+                            background-repeat: no-repeat;
+                            background-size: 28px;
+                            width: 28px;
+                            height: 26px;
+                            position: absolute;
+                            left: -32px;
+                            top: -2px;
+                        }
+                    }
                 }
             }
         }
@@ -1687,7 +1777,7 @@
         .pricingContent{
             width: 525px;
             background-color: #E8E8E8;
-            border: 1px dashed rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.1);
             box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
             padding: 40px;
             position: relative;
@@ -1751,7 +1841,7 @@
                 width: 100%;
                 padding: 32px;
                 background-color: #fff;
-                border: 1px dashed rgba(0, 0, 0, 0.2);
+                border: 1px solid rgba(0, 0, 0, 0.2);
                 box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
                 margin-top: 30px;
                 position: relative;
@@ -1761,8 +1851,8 @@
                     width: 20px;
                     height: 20px;
                     position: absolute;
-                    border-left: 1px dashed rgba(0, 0, 0, 0.2);
-                    border-top: 1px dashed rgba(0, 0, 0, 0.2);
+                    border-left: 1px solid rgba(0, 0, 0, 0.2);
+                    border-top: 1px solid rgba(0, 0, 0, 0.2);
                     background-color: #fff;
                     transform: rotate(45deg);
                     top: -10px;
@@ -2335,12 +2425,7 @@
             box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
             outline: none;
             margin: 0 10px;
-            opacity: 0;
             transition: ease .3s;
-
-            &.slick-active{
-                opacity: 1;
-            }
 
             .thumb{
                 width: 100%;
@@ -2637,7 +2722,7 @@
         .question{
             width: 100%;
             background-color: #fff;
-            border: 1px dashed rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(0, 0, 0, 0.2);
             box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
             margin: 0 0 10px;
 

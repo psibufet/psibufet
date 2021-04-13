@@ -1,7 +1,30 @@
 #promocode{
     display: none;
 }
+body.admin-bar{
+    .siteHeader{
+        top: 32px;
+    }
+    @media (max-width: 782px){
+        .siteHeader{
+            top: 46px;
+        }
+    }
+}
 .siteHeader{
+    background-color: #fff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    transition: ease .5s;
+
+    &--scrolled{
+        top: -67px !important;
+    }
+    &--shadow{
+        box-shadow: 0 0 20px #0000005e;
+    }
 
     &__wrap{
         height: 67px;
@@ -129,7 +152,7 @@
                         }
                     }
                     a{
-                        font-size: 14px;
+                        font-size: 15px !important;
                         line-height: 1;
                         font-weight: 500;
                         color: #000;
@@ -167,8 +190,8 @@
                 width: 22px;
                 height: 22px;
 
-                i{
-                    fill: $redcolor !important;
+                img{
+                    width: 100%;
                     position: relative;
                     top: -6px;
                 }

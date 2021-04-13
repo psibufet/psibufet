@@ -20,6 +20,7 @@ $(window).load(function () {
             arrows: false,
             autoplay: true,
             autoplaySpeed: 3000,
+            initialSlide: 2,
         });
     }
 });
@@ -32,6 +33,13 @@ $(document).ready(function () {
         swipe: false,
         infinite: false,
         dots: true,
+        initialSlide: 1,
+        responsive: [{
+            breakpoint: 767,
+            settings: {
+                infinite: true,
+            }
+        }]
     });
 
     $('#foodinfo_carousel').find('.slick-current').prev().addClass('prevslide');
@@ -58,10 +66,12 @@ $(window).load(function(){
         infinite: false,
         fade: true,
         asNavFor: '.homeBenefits__content',
+        dots: true,
         responsive: [{
             breakpoint: 991,
             settings: {
                 arrows: false,
+                dots: false,
             }
         }]
     })
@@ -151,6 +161,50 @@ $(document).ready(function(){
     });
 });
 
+// Menu bar options
+$(document).ready(function(){
+    var siteHeader = $('.siteHeader');
+    $('.header-clone').css('height', siteHeader.height());
+
+    var didScroll;
+    var lastScrollTop = 0;
+    var delta = 50;
+    var navbarHeight = siteHeader.outerHeight();
+
+    $(window).scroll(function(event){
+        if($(document).scrollTop() > 67){
+            siteHeader.addClass('siteHeader--shadow');
+        }else{
+            siteHeader.removeClass('siteHeader--shadow');
+        }
+        didScroll = true;
+    });
+
+    setInterval(function() {
+        if (didScroll) {
+            hasScrolled();
+            didScroll = false;
+        }
+    }, 250);
+
+    function hasScrolled() {
+        var st = $(this).scrollTop();
+        
+        if(Math.abs(lastScrollTop - st) <= delta)
+            return;
+        
+        if (st > lastScrollTop && st > navbarHeight){
+            siteHeader.addClass('siteHeader--scrolled');
+        } else {
+            if(st + $(window).height() < $(document).height()) {
+                siteHeader.removeClass('siteHeader--scrolled');
+            }
+        }
+        lastScrollTop = st;
+    }
+});
+
+/* OLD */
 $(document).ready(function () {
     $('.flexslider .gang_posts').slick({
         dots: true,
@@ -201,7 +255,12 @@ $(document).ready(function () {
 /****** MENU JQ ******/
 $(document).ready(function () {
     $('.btn-menu').click(function(){
-        if($(this).hasClass('active')){
+        var btn = $(this);
+        btn.css('pointer-events', 'none');
+        setTimeout(function(){
+            btn.css('pointer-events', 'all');
+        }, 500);
+        if(btn.hasClass('active')){
             $('body').removeClass('popupactive');
         }else{
             $('body').addClass('popupactive');

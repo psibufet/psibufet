@@ -6,7 +6,7 @@ Template Name: Front Page
 get_header(); ?>
 
 <main class="pbpage pbpage--frontpage">
-    <section class="homeHeader" style="background-image: url('/wp-content/themes/psibufet/images/header_img.png');">
+    <section class="homeHeader" style="background-image: url('/wp-content/themes/psibufet/images/homepage_img.webp');">
         <div class="homeHeader__wrap">
             <div class="homeHeader__content">
                 <h2>Świeże spojrzenie na psie jedzenie</h2>
@@ -15,7 +15,7 @@ get_header(); ?>
                     <div><p>Idealna porcja</p></div>
                     <div><p>Dostawa pod drzwi</p></div>
                 </div>
-                <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir"><span><?php the_field('front_header_cta') ?></span></a>
+                <a href="https://zamowienie.psibufet.pl/" class="btn btn--big btn--center dir"><span><?php the_field('front_header_cta') ?></span></a>
             </div>
         </div>
         <a href="#page-continue" class="homeHeader__scroll">
@@ -109,7 +109,7 @@ get_header(); ?>
                 <div class="info_boxes">
                     <div class="box">
                         <img src="/wp-content/themes/psibufet/images/info_boxes/jagnie_z_gor.svg"/>
-                        <p>Świeże, naturalne składniki</p>
+                        <p>Jakość<br/>Human-Grade</p>
                     </div>
                     <div class="box">
                         <img src="/wp-content/themes/psibufet/images/info_boxes/ikonki_zbilansowane.svg"/>
@@ -117,19 +117,19 @@ get_header(); ?>
                     </div>
                     <div class="box">
                         <img src="/wp-content/themes/psibufet/images/info_boxes/kurczak_classic.svg"/>
-                        <p>Zero konserwantów i dodatków</p>
+                        <p>Zero ulepszaczy</p>
                     </div>
                     <div class="box">
                         <img src="/wp-content/themes/psibufet/images/info_boxes/wpolsce.svg"/>
-                        <p>Bezzbożowe</p>
+                        <p>Bezzbożowe, monobiałkowe</p>
                     </div>
                     <div class="box">
-                        <img src="/wp-content/themes/psibufet/images/info_boxes/indyczy_kasek.svg"/>
-                        <p>Idealna porcja</p>
+                        <img src="/wp-content/themes/psibufet/images/info_boxes/dopasowanaporcja.svg"/>
+                        <p>Idealnie dopasowana porcja</p>
                     </div>
                     <div class="box">
-                        <img src="/wp-content/themes/psibufet/images/info_boxes/wolowe_love.svg"/>
-                        <p>Ugotowane w Polsce</p>
+                        <img src="/wp-content/themes/psibufet/images/info_boxes/testowanenaludziach.svg"/>
+                        <p>Testowane<br/>na ludziach</p>
                     </div>
                 </div>
                 <div class="expertInfo">
@@ -180,10 +180,12 @@ get_header(); ?>
             <div class="homeBenefits__slider">
                 <?php while(have_rows('homeBenefits')): the_row();
                     $dog = get_sub_field('homeBenefits_dog');
+                    $shadow = get_sub_field('homeBenefits_shadow');
                 ?>
                 <div class="benefitSlide">
                     <div class="benefitSlide__dog">
-                        <img src="<?php echo $dog; ?>"/>
+                        <img class="dog" src="<?php echo $dog; ?>"/>
+                        <img class="shadow" src="<?php echo $shadow; ?>"/>
                     </div>
                 </div>
                 <?php endwhile; ?>
@@ -200,7 +202,7 @@ get_header(); ?>
                     <h2><?php echo $title; ?></h2>
                     <p class="quote"><?php echo $quote; ?></p>
                     <p class="author">- <?php echo $author; ?></p>
-                    <p class="info"><?php echo $doginfo; ?><span>w #PsiBufetGang od: <?php echo $psibufet; ?> r.</span></p>
+                    <p class="info"><span><?php echo $doginfo; ?></span><span>w #PsiBufetGang od: <?php echo $psibufet; ?> r.</span></p>
                 </div>
                 <?php endwhile; ?>
             </div>
