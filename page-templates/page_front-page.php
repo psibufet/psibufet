@@ -95,9 +95,7 @@ get_header(); ?>
                         <?php endwhile; ?>
                     </div>
                     <div class="infoButtons">
-                        <?php while( have_rows('slider_z_karmami') ): the_row(); 
-                            $image = get_sub_field('karma_img');
-                        ?>
+                        <?php while( have_rows('slider_z_karmami') ): the_row(); ?>
                         <p class="infoButtons__button" data="data_0<?php echo get_row_index(); ?>"><img src="<?php echo get_template_directory_uri() . '/images/icons/info_icon_black.svg'; ?>"/>Zobacz skład</p>
                         <?php endwhile; ?>
                     </div>
@@ -144,6 +142,82 @@ get_header(); ?>
             </div>
         </div>
         <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir"><span><?php the_field('front_foodinfo_cta') ?></span></a>
+        <div class="foodModal">
+            <div class="foodModal__wrap">
+                <?php while( have_rows('slider_z_karmami') ): the_row();
+                    $images = get_sub_field('karma_gallery');
+                    $name = get_sub_field('karma_name');
+                    $icon = get_sub_field('karma_ico');
+                    $color = get_sub_field('karma_color');
+                    $desc = get_sub_field('karma_desc');
+                    $sklad = get_sub_field('karma_sklad');
+                    $analityczny = get_sub_field('karma_skladanalityczny');
+                    $dodatki = get_sub_field('karma_dodatki');
+                ?>
+                <div class="foodModal__content" data="data_0<?php echo get_row_index(); ?>">
+                    <div class="gallery">
+                        <?php foreach( $images as $image ): ?>
+                            <div class="gallery__image">
+                                <img class="no-lazyload" src="<?php echo $image; ?>"/>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                    <div class="title" style="background-color: <?php echo $color; ?>"><p><?php echo $name; ?><img class="no-lazyload" src="<?php echo $icon; ?>"/></p></div>
+                    <div class="desc">
+                        <p><?php echo $desc; ?></p>
+                    </div>
+                    <div class="usp">
+                        <div class="usp__pos">
+                            <img src="<?php echo get_template_directory_uri() . '/images/info_boxes/jagnie_z_gor.svg'; ?>"/>
+                            <p>Świeże, naturalne składniki</p>
+                        </div>
+                        <div class="usp__pos">
+                            <img src="<?php echo get_template_directory_uri() . '/images/info_boxes/ikonki_zbilansowane.svg'; ?>"/>
+                            <p>Zbilansowany, pełnoporcjowy skład</p>
+                        </div>
+                        <div class="usp__pos">
+                            <img src="<?php echo get_template_directory_uri() . '/images/info_boxes/kurczak_classic.svg'; ?>"/>
+                            <p>Zero ulepszaczy</p>
+                        </div>
+                        <div class="usp__pos">
+                            <img src="<?php echo get_template_directory_uri() . '/images/info_boxes/wpolsce.svg'; ?>"/>
+                            <p>Bezzbożowe, monobiałkowe</p>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <div class="accordion__element accordion__element--close">
+                            <div class="heading">
+                                <p>Skład</p>
+                                <img class="no-lazyload" src="<?php echo get_template_directory_uri() . '/images/icons/arrow_down_red_ico.svg'; ?>"/>
+                            </div>
+                            <div class="content">
+                                <p><?php echo $sklad; ?></p>
+                            </div>
+                        </div>
+                        <div class="accordion__element accordion__element--close">
+                            <div class="heading">
+                                <p>Skład analityczny</p>
+                                <img src="<?php echo get_template_directory_uri() . '/images/icons/arrow_down_red_ico.svg'; ?>"/>
+                            </div>
+                            <div class="content">
+                                <p><?php echo $analityczny; ?></p>
+                            </div>
+                        </div>
+                        <div class="accordion__element accordion__element--close">
+                            <div class="heading">
+                                <p>Dodatki</p>
+                                <img src="<?php echo get_template_directory_uri() . '/images/icons/arrow_down_red_ico.svg'; ?>"/>
+                            </div>
+                            <div class="content">
+                                <p><?php echo $dodatki; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="btn btn--center btn--back closeFoodModal"><span>Powrót</span></p>
+                </div>
+                <?php endwhile; ?>
+            </div>
+        </div>
     </section>
 
     <?php if(get_field('howitworks_step')): ?>

@@ -58,6 +58,63 @@ $(document).ready(function () {
         $('#foodinfo_carousel').find(".homeFoodinfo__info.slick-current").prev().addClass('prevslide');
         $('#foodinfo_carousel').find(".homeFoodinfo__info.slick-current").next().addClass('nextslide');
     });
+
+    var modal = $('.foodModal');
+    var closeBtn = $('.foodModal').find('.closeFoodModal');
+    var openstatus;
+    $('.infoButtons__button').on('click', function(){
+        var dataid = $(this).attr('data');
+
+        $('body').addClass('noscroll');
+        modal.find('.foodModal__content[data="' + dataid + '"]').addClass('foodModal__content--active');
+        modal.addClass('foodModal--ready');
+        setTimeout(function(){
+            modal.addClass('foodModal--active');
+            openstatus = true;
+        }, 300);
+
+        setTimeout(function(){
+            $(document).mouseup(function(e){
+                var modalWrap = modal.find('.foodModal__wrap');
+                if (!modalWrap.is(e.target) && modalWrap.has(e.target).length === 0 && openstatus == true){
+                    $('body').removeClass('noscroll');
+                    modal.removeClass('foodModal--active');
+                    setTimeout(function(){
+                        modal.removeClass('foodModal--ready');
+                        modal.find('.foodModal__content[data="' + dataid + '"]').removeClass('foodModal__content--active');
+                        openstatus = false;
+                    }, 300);
+                }
+            });
+        }, 1000);
+    });
+    $(closeBtn).on('click', function(){
+        $('body').removeClass('noscroll');
+        modal.removeClass('foodModal--active');
+        setTimeout(function(){
+            modal.removeClass('foodModal--ready');
+            modal.find('.foodModal__content[data="' + dataid + '"]').removeClass('foodModal__content--active');
+            openstatus = false;
+        }, 300);
+    })
+
+    $('.foodModal__content .gallery').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: true,
+        adaptiveHeight: true,
+        variableWidth: true,
+        infinite: false,
+    });
+
+    var accordionpos = $('.foodModal__content').find('.accordion__element');
+    accordionpos.on('click', function(){
+        $('.foodModal__content').find('.accordion__element').not(this).removeClass('accordion__element--open').addClass('accordion__element--close');
+        $('.foodModal__content').find('.accordion__element').not(this).find('.content').slideUp();
+        $(this).toggleClass('accordion__element--close accordion__element--open');
+        $(this).find('.content').slideToggle();
+    });
 });
 $(window).load(function(){
     $('.homeBenefits__slider').slick({

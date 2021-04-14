@@ -1034,6 +1034,421 @@
     }
 }
 
+body.admin-bar{
+    .foodModal__wrap{
+        top: 32px;
+        height: calc(100vh - 32px);
+    }
+}
+.foodModal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0, .5);
+    opacity: 0;
+    pointer-events: none;
+    transition: ease .3s;
+
+    &--ready{
+        opacity: 1;
+        pointer-events: all;
+    }
+    &--active{
+        .foodModal__wrap{
+            right: 0;
+        }
+    }
+    &__wrap{
+        width: 645px;
+        height: 100vh;
+        background-color: #fff;
+        position: relative;
+        right: -100%;
+        overflow: scroll;
+        transition: ease 1s;
+    }
+    &__content{
+        display: none;
+
+        &--active{
+            display: block;
+        }
+
+        .gallery{
+            height: 380px;
+            width: 645px;
+            margin: 0;
+
+            &__image{
+                height: 380px;
+                width: 645px;
+                overflow: hidden;
+                outline: none;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .slick-arrow{
+                background-repeat: no-repeat;
+                background-size: 40px;
+                width: 40px;
+                height: 40px;
+                opacity: .8;
+                font-size: 0;
+                background-color: unset;
+                border: 0;
+                padding: 0;
+                transition: ease .3s;
+                position: absolute;
+                top: 50%;
+                outline: none;
+                transform: translate(0, -50%);
+                z-index: 5;
+    
+                &:hover{
+                    opacity: 1;
+                }
+                &.slick-prev{
+                    background-image: url('/wp-content/themes/psibufet/images/icons/slider_arrow_left.svg');
+                    left: 40px;
+                }
+                &.slick-next{
+                    background-image: url('/wp-content/themes/psibufet/images/icons/slider_arrow_right.svg');
+                    right: 40px;
+                }
+                &.slick-disabled{
+                    opacity: 0;
+                    pointer-events: none;
+                }
+            }
+            .slick-dots{
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                position: absolute;
+                bottom: 15px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                max-width: fit-content;
+    
+                li{
+                    margin: 0 3px;
+                    line-height: 1;
+    
+                    button{
+                        background-color: rgba(0, 0, 0, 0.5);
+                        border: 0;
+                        font-size: 0;
+                        padding: 0;
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 100%;
+                        cursor: pointer;
+                        outline: none;
+                    }
+    
+                    &.slick-active{
+                        button{
+                            background-color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+        .title{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 68px;
+
+            p{
+                font-size: 50px;
+                line-height: 1;
+                font-family: $headingfont;
+                color: #fff;
+                text-transform: uppercase;
+                margin: 0;
+                position: relative;
+
+                img{
+                    position: absolute;
+                    top: -18px;
+                    height: 85px;
+                    max-width: 135px;
+                }
+            }
+        }
+        .desc{
+            padding: 32px;
+            border-bottom: 1px dashed $primarycolor;
+            max-width: calc(100% - 84px);
+            margin: 0 auto;
+
+            p{
+                font-size: 28px;
+                line-height: 33px;
+                font-weight: 700;
+                color: $primarycolor;
+                text-align: center;
+                margin: 0;
+            }
+        }
+        .usp{
+            padding: 25px 40px;
+
+            &__pos{
+                display: flex;
+                align-items: center;
+                width: 100%;
+                margin-bottom: 15px;
+
+                &:last-of-type{
+                    margin: 0;
+                }
+
+                img{
+                    width: 88px;
+                    height: 88px;
+                    margin-right: 30px;
+                }
+                p{
+                    font-size: 28px;
+                    line-height: 33px;
+                    color: $primarycolor;
+                    margin: 0;
+                }
+            }
+        }
+        .accordion{
+            border-top: 1px dashed $primarycolor;
+            max-width: calc(100% - 84px);
+            margin: 0 auto 42px;
+
+            &__element{
+                border-bottom: 1px dashed $primarycolor;
+
+                &--open{
+                    .heading{
+                        img{
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+                .heading{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    height: 58px;
+                    cursor: pointer;
+
+                    p{
+                        font-size: 28px;
+                        line-height: 33px;
+                        color: $primarycolor;
+                        margin: 0;
+                    }
+                    img{
+                        width: 16px;
+                        transition: ease .3s;
+                    }
+                }
+                .content{
+                    display: none;
+
+                    p{
+                        font-size: 21px;
+                        line-height: 28px;
+                        color: $primarycolor;
+                        margin: 0 0 20px;
+                    }
+                }
+            }
+        }
+        .btn{
+            margin-bottom: 42px;
+            cursor: pointer;
+        }
+    }
+}
+@media (max-width: 991px){
+    .foodModal{
+        &__wrap{
+            width: 545px;
+        }
+        &__content{
+            .gallery{
+                width: 545px;
+                height: 300px;
+
+                &__image{
+                    width: 545px;
+                    height: 300px;
+                }
+            }
+            .title{
+                height: 60px;
+
+                p{
+                    font-size: 42px;
+
+                    img{
+                        height: 75px;
+                        max-width: 125px;
+                    }
+                }
+            }
+            .desc{
+                max-width: calc(100% - 64px);
+
+                p{
+                    font-size: 24px;
+                    line-height: 28px;
+                }
+            }
+            .usp{
+                &__pos{
+                    img{
+                        width: 80px;
+                        height: 80px;
+                        margin-right: 20px;
+                    }
+                    p{
+                        font-size: 22px;
+                        line-height: 26px;
+                    }
+                }
+            }
+            .accordion{
+                margin: 0 auto 32px;
+
+                &__element{
+                    .heading{
+                        height: 52px;
+
+                        p{
+                            font-size: 24px;
+                            line-height: 28px;
+                        }
+                    }
+                    .content{
+                        p{
+                            font-size: 18px;
+                            line-height: 24px;
+                        }
+                    }
+                }
+            }
+            .btn{
+                margin-bottom: 32px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px){
+    .foodModal{
+        &__wrap{
+            width: 360px;
+        }
+        &__content{
+            .gallery{
+                width: 360px;
+                height: 215px;
+
+                &__image{
+                    width: 360px;
+                    height: 215px;
+                }
+
+                .slick-arrow{
+                    background-size: 24px;
+                    width: 24px;
+                    height: 24px;
+
+                    &.slick-prev{
+                        left: 20px;
+                    }
+                    &.slick-next{
+                        right: 20px;
+                    }
+                }
+            }
+            .title{
+                height: 38px;
+
+                p{
+                    font-size: 28px;
+
+                    img{
+                        height: 48px;
+                        max-width: 100px;
+                    }
+                }
+            }
+            .desc{
+                max-width: calc(100% - 42px);
+                padding: 16px;
+
+                p{
+                    font-size: 16px;
+                    line-height: 19px;
+                }
+            }
+            .usp{
+                padding: 12px 22px;
+
+                &__pos{
+                    img{
+                        width: 50px;
+                        height: 50px;
+                        margin-right: 16px;
+                    }
+                    p{
+                        font-size: 16px;
+                        line-height: 19px;
+                    }
+                }
+            }
+            .accordion{
+                max-width: calc(100% - 42px);
+                margin: 0 auto 20px;
+                
+                &__element{
+                    .heading{
+                        height: 32px;
+
+                        p{
+                            font-size: 16px;
+                            line-height: 19px;
+                        }
+                    }
+                    .content{
+                        p{
+                            font-size: 14px;
+                            line-height: 18px;
+                        }
+                    }
+                }
+            }
+            .btn{
+                min-width: calc(100% - 40px);
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
 // Jak to działa
 .homeHowitworks{
     padding: 30px 0 40px;

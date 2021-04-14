@@ -22,6 +22,9 @@
 --------------- */
 
 body{
+    &.noscroll{
+        overflow: hidden;
+    }
     a{
         transition: ease .3s;
 
@@ -91,8 +94,8 @@ body{
 .btn{
     display: inline-block;
     min-width: 225px;
-    height: 56px;
-    line-height: 56px;
+    height: 52px;
+    line-height: 52px;
     background-color: $redcolor;
     text-align: center;
     box-shadow: 3px 3px #0000001a;
@@ -129,11 +132,32 @@ body{
     }
     &--big{
         min-width: 265px;
-        line-height: 56p;
+        height: 56px;
+        line-height: 56px;
 
         span{
             font-size: 25px;
             line-height: inherit;
+        }
+    }
+    &--back{
+        span{
+            padding-right: 0;
+            padding-left: 10px;
+
+            &:after{
+                top: 50%;
+                right: auto;
+                left: -10px;
+                transform: translate(0, -50%) rotate(-180deg);
+            }
+        }
+        &:hover{
+            span{
+                &:after{
+                    left: -15px;
+                }
+            }
         }
     }
     &:hover{
