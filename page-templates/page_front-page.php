@@ -144,6 +144,7 @@ get_header(); ?>
         <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir"><span><?php the_field('front_foodinfo_cta') ?></span></a>
         <div class="foodModal">
             <div class="foodModal__wrap">
+                <img class="closeFoodModal closeImg no-lazyload" src="<?php echo get_template_directory_uri() . '/images/icons/closeModal_ico.svg'; ?>"/>
                 <?php while( have_rows('slider_z_karmami') ): the_row();
                     $images = get_sub_field('karma_gallery');
                     $name = get_sub_field('karma_name');
@@ -182,6 +183,14 @@ get_header(); ?>
                         <div class="usp__pos">
                             <img src="<?php echo get_template_directory_uri() . '/images/info_boxes/wpolsce.svg'; ?>"/>
                             <p>Bezzbożowe, monobiałkowe</p>
+                        </div>
+                        <div class="usp__pos">
+                            <img src="<?php echo get_template_directory_uri() . '/images/info_boxes/dopasowanaporcja.svg'; ?>"/>
+                            <p>Idealnie dopasowana porcja</p>
+                        </div>
+                        <div class="usp__pos">
+                            <img src="<?php echo get_template_directory_uri() . '/images/info_boxes/testowanenaludziach.svg'; ?>"/>
+                            <p>Testowane na ludziach</p>
                         </div>
                     </div>
                     <div class="accordion">
@@ -250,6 +259,10 @@ get_header(); ?>
     <section class="homeBenefits">
         <div class="homeBenefits__wrap container">
             <h2 class="getMarker">Co <span class="marker">zyska</span> Twój pies?</h2>
+            <!-- <div class="homeBenefits__boxes">
+                <img src="<?php echo get_template_directory_uri() . '/images/homebenefits_boxes.png'; ?>" class="boxes"/>
+                <img src="<?php echo get_template_directory_uri() . '/images/homebenefits_boxes_shadow.png'; ?>" class="shadow"/>
+            </div> -->
             <img src="<?php echo get_template_directory_uri() . '/images/homebenefits_boxes.png'; ?>" class="homeBenefits__boxes"/>
             <div class="homeBenefits__slider">
                 <?php while(have_rows('homeBenefits')): the_row();

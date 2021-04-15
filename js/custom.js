@@ -38,6 +38,7 @@ $(document).ready(function () {
             breakpoint: 767,
             settings: {
                 infinite: true,
+                swipe: true,
             }
         }]
     });
@@ -58,6 +59,16 @@ $(document).ready(function () {
         $('#foodinfo_carousel').find(".homeFoodinfo__info.slick-current").prev().addClass('prevslide');
         $('#foodinfo_carousel').find(".homeFoodinfo__info.slick-current").next().addClass('nextslide');
     });
+    $('#foodinfo_carousel').on('beforeChange', function(){
+        var currentSlide = $('#foodinfo_carousel').find('.slick-current').attr('data');
+
+        $('.infoButtons__button').removeClass('infoButtons__button--active');
+        $('.infoButtons__button[data="' + currentSlide + '"]').addClass('infoButtons__button--active');
+
+        $('#foodinfo_carousel').find('.homeFoodinfo__info').removeClass('prevslide').removeClass('nextslide')
+        $('#foodinfo_carousel').find(".homeFoodinfo__info.slick-current").prev().addClass('prevslide');
+        $('#foodinfo_carousel').find(".homeFoodinfo__info.slick-current").next().addClass('nextslide');
+    })
 
     var modal = $('.foodModal');
     var closeBtn = $('.foodModal').find('.closeFoodModal');
@@ -105,7 +116,7 @@ $(document).ready(function () {
         dots: true,
         adaptiveHeight: true,
         variableWidth: true,
-        infinite: false,
+        infinite: true,
     });
 
     var accordionpos = $('.foodModal__content').find('.accordion__element');
@@ -120,7 +131,7 @@ $(window).load(function(){
     $('.homeBenefits__slider').slick({
         slidesToScroll: 1,
         slidesToShow: 1,
-        infinite: false,
+        infinite: true,
         fade: true,
         asNavFor: '.homeBenefits__content',
         dots: true,
@@ -135,7 +146,7 @@ $(window).load(function(){
     $('.homeBenefits__content').slick({
         slidesToScroll: 1,
         slidesToShow: 1,
-        infinite: false,
+        infinite: true,
         arrows: false,
         adaptiveHeight: true,
         responsive: [{
