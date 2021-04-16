@@ -248,6 +248,7 @@
             display: flex;
             justify-content: center;
             margin: 0 0 10px;
+            max-height: 20px;
 
             img{
                 max-width: 20px;
@@ -474,6 +475,7 @@
                 font-size: 11px;
                 line-height: 14px;
                 margin: 0 8px;
+                white-space: nowrap;
             }
             .logo{
                 width: 60px;
@@ -724,9 +726,19 @@
                 width: calc(100% / 3);
                 margin: 0 0 35px;
 
-                img{
+                &__thumb{
+                    height: 80px;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     margin: 0 0 10px;
-                    min-width: 70px;
+
+                    img{
+                        width: 70px;
+                        max-height: 80px;
+                        object-fit: contain;
+                    }
                 }
 
                 p{
@@ -891,9 +903,11 @@
                     box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
                     margin: 0 0 20px;
 
-                    img{
-                        width: 60px;
-                        height: 60px;
+                    &__thumb{
+                        img{
+                            width: 60px;
+                            max-height: 70px;
+                        }
                     }
                     p{
                         font-size: 12px;
@@ -1068,8 +1082,13 @@ body.admin-bar{
         background-color: #fff;
         position: relative;
         right: -100%;
-        overflow: scroll;
+        overflow-y: scroll;
+        overflow-x: hidden;
         transition: ease 1s;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
 
         .closeImg{
             width: 40px;
@@ -1228,10 +1247,28 @@ body.admin-bar{
                 text-align: center;
                 margin-bottom: 30px;
 
-                img{
-                    width: 70px;
-                    height: 70px;
-                    margin-bottom: 15px;
+                &:first-of-type{
+                    p{
+                        max-width: 90px;
+                        margin: 0 auto;
+                    }
+                }
+
+                .thumb{
+                    width: 100%;
+                    height: 80px;
+                    margin: 0 0 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img{
+                        max-width: 70px;
+                        max-height: 80px;
+                        object-fit: contain;
+                        height: 100%;
+                        width: 100%;
+                    }
                 }
                 p{
                     font-size: 14px;
@@ -1329,14 +1366,17 @@ body.admin-bar{
             }
             .usp{
                 &__pos{
-                    img{
-                        width: 80px;
-                        height: 80px;
-                        margin-right: 20px;
+                    .thumb{
+                        height: 90px;
+
+                        img{
+                            max-width: 80px;
+                            max-height: 90px;
+                        }
                     }
                     p{
-                        font-size: 22px;
-                        line-height: 26px;
+                        font-size: 18px;
+                        line-height: 21px;
                     }
                 }
             }
@@ -1371,6 +1411,10 @@ body.admin-bar{
     .foodModal{
         &__wrap{
             width: 360px;
+
+            .closeImg{
+                width: 24px;
+            }
         }
         &__content{
             .gallery{
@@ -1417,17 +1461,34 @@ body.admin-bar{
                 }
             }
             .usp{
-                padding: 12px 22px;
+                padding: 12px 16px;
 
                 &__pos{
-                    img{
+                    display: flex;
+                    align-items: center;
+                    flex-direction: row;
+                    width: 100%;
+                    margin: 0 0 8px;
+
+                    &:nth-last-child(-n+2){
+                        display: none;
+                    }
+                    .thumb{
+                        height: 60px;
                         width: 50px;
-                        height: 50px;
-                        margin-right: 16px;
+                        margin: 0 8px 0 0;
+
+                        // img{
+                        //     width: 50px;
+                        //     height: 50px;
+                        // }
                     }
                     p{
+                        max-width: none !important;
                         font-size: 16px;
                         line-height: 19px;
+                        text-align: left;
+                        margin: 0 !important;
                     }
                 }
             }
@@ -1701,7 +1762,7 @@ body.admin-bar{
                 right: 50px;
             }
             &.slick-disabled{
-                opacity: 0;
+                opacity: .2;
                 pointer-events: none;
             }
         }
@@ -1783,12 +1844,18 @@ body.admin-bar{
         top: 50%;
         transform: translate(0, -50%);
         padding: 35px;
+        transition: transform 500ms ease-in-out;
+        transition-delay: 300ms;
 
         .benefitContent{
             text-align: center;
             outline: none;
+            opacity: 0;
+            transition: linear .5s;
 
             &.slick-current{
+                opacity: 1;
+
                 h2{
                     span{
                         &:after{
@@ -2113,6 +2180,18 @@ body.admin-bar{
                     font-size: 10px;
                     line-height: 14px;
                     margin: 0 0 25px;
+
+                    span{
+                        &:first-of-type{
+                            &:before{
+                                background-size: 20px;
+                                width: 20px;
+                                height: 20px;
+                                left: -23px;
+                                top: -4px;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -3051,9 +3130,13 @@ body.admin-bar{
                 margin: 0 auto 40px;
                 transition: ease .3s;
 
+                &:-webkit-autofill{
+                    display: none;
+                }
+
                 &:focus{
                     outline: none;
-                    border-color: $redcolor;
+                    border-color: #000;
                 }
             }
             button{
@@ -3103,6 +3186,7 @@ body.admin-bar{
         &__content{
             width: 100%;
             padding: 32px;
+            margin: 40px auto 0;
 
             h2{
                 font-size: 28px;

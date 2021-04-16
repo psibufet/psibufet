@@ -116,12 +116,22 @@
                 </div>
                 <div class="siteHeader__menu">
                     <a href="https://zamowienie.psibufet.pl/" class="btn dir"><span>Zamów</span></a>
-                    <div class="btn-menu">
-                        <img src="<?php echo get_template_directory_uri() . '/images/icons/hamburger_ico.svg'; ?>"/>
+                    <div class="btnMenu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
                     <nav id="mainnav" class="mainnav" role="navigation">
                         <?php wp_nav_menu( array( 'theme_location' => 'primary', 'fallback_cb' => 'sydney_menu_fallback' ) ); ?>
                     </nav><!-- #site-navigation -->
+                </div>
+            </div>
+            <div class="mobileNav">
+                <div class="mobileNav__logo">
+                    <img src="<?php echo esc_url(get_theme_mod('site_logo')); ?>"/>
+                </div>
+                <div class="mobileNav__menu">
+                    <?php wp_nav_menu( array( 'theme_location' => 'mobile' ) ); ?>
                 </div>
             </div>
         </header><!-- #masthead -->

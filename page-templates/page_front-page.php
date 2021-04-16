@@ -106,27 +106,39 @@ get_header(); ?>
                 <p><b>55% mięsa oraz 45% warzyw i owoców, pełna suplementacja mineralno-witaminowa.</b><br/>Całość delikatnie gotowana na parze i pakowana próżniowo.</p>
                 <div class="info_boxes">
                     <div class="box">
-                        <img src="/wp-content/themes/psibufet/images/info_boxes/jagnie_z_gor.svg"/>
+                        <div class="box__thumb">
+                            <img src="/wp-content/themes/psibufet/images/info_boxes/jagnie_z_gor.svg"/>
+                        </div>
                         <p>Jakość<br/>Human-Grade</p>
                     </div>
                     <div class="box">
-                        <img src="/wp-content/themes/psibufet/images/info_boxes/ikonki_zbilansowane.svg"/>
+                        <div class="box__thumb">
+                            <img src="/wp-content/themes/psibufet/images/info_boxes/ikonki_zbilansowane.svg"/>
+                        </div>
                         <p>Zbilansowany, pełnoporcjowy skład</p>
                     </div>
                     <div class="box">
-                        <img src="/wp-content/themes/psibufet/images/info_boxes/kurczak_classic.svg"/>
+                        <div class="box__thumb">
+                            <img src="/wp-content/themes/psibufet/images/info_boxes/kurczak_classic.svg"/>
+                        </div>
                         <p>Zero ulepszaczy</p>
                     </div>
                     <div class="box">
-                        <img src="/wp-content/themes/psibufet/images/info_boxes/wpolsce.svg"/>
+                        <div class="box__thumb">
+                            <img src="/wp-content/themes/psibufet/images/info_boxes/wpolsce.svg"/>
+                        </div>
                         <p>Bezzbożowe, monobiałkowe</p>
                     </div>
                     <div class="box">
-                        <img src="/wp-content/themes/psibufet/images/info_boxes/dopasowanaporcja.svg"/>
+                        <div class="box__thumb">
+                            <img src="/wp-content/themes/psibufet/images/info_boxes/dopasowanaporcja.svg"/>
+                        </div>
                         <p>Idealnie dopasowana porcja</p>
                     </div>
                     <div class="box">
-                        <img src="/wp-content/themes/psibufet/images/info_boxes/testowanenaludziach.svg"/>
+                        <div class="box__thumb">
+                            <img src="/wp-content/themes/psibufet/images/info_boxes/testowanenaludziach.svg"/>
+                        </div>
                         <p>Testowane<br/>na ludziach</p>
                     </div>
                 </div>
@@ -169,27 +181,39 @@ get_header(); ?>
                     </div>
                     <div class="usp">
                         <div class="usp__pos">
-                            <img src="<?php echo get_template_directory_uri() . '/images/info_boxes/jagnie_z_gor.svg'; ?>"/>
-                            <p>Świeże, naturalne składniki</p>
+                            <div class="thumb">
+                                <img src="<?php echo get_template_directory_uri() . '/images/info_boxes/jagnie_z_gor.svg'; ?>"/>
+                            </div>
+                            <p>Jakość Human-Grade</p>
                         </div>
                         <div class="usp__pos">
-                            <img src="<?php echo get_template_directory_uri() . '/images/info_boxes/ikonki_zbilansowane.svg'; ?>"/>
+                            <div class="thumb">
+                                <img src="<?php echo get_template_directory_uri() . '/images/info_boxes/ikonki_zbilansowane.svg'; ?>"/>
+                            </div>
                             <p>Zbilansowany, pełnoporcjowy skład</p>
                         </div>
                         <div class="usp__pos">
-                            <img src="<?php echo get_template_directory_uri() . '/images/info_boxes/kurczak_classic.svg'; ?>"/>
+                            <div class="thumb">
+                                <img src="<?php echo get_template_directory_uri() . '/images/info_boxes/kurczak_classic.svg'; ?>"/>
+                            </div>
                             <p>Zero ulepszaczy</p>
                         </div>
                         <div class="usp__pos">
-                            <img src="<?php echo get_template_directory_uri() . '/images/info_boxes/wpolsce.svg'; ?>"/>
+                            <div class="thumb">
+                                <img src="<?php echo get_template_directory_uri() . '/images/info_boxes/wpolsce.svg'; ?>"/>
+                            </div>
                             <p>Bezzbożowe, monobiałkowe</p>
                         </div>
                         <div class="usp__pos">
-                            <img src="<?php echo get_template_directory_uri() . '/images/info_boxes/dopasowanaporcja.svg'; ?>"/>
+                            <div class="thumb">
+                                <img src="<?php echo get_template_directory_uri() . '/images/info_boxes/dopasowanaporcja.svg'; ?>"/>
+                            </div>
                             <p>Idealnie dopasowana porcja</p>
                         </div>
                         <div class="usp__pos">
-                            <img src="<?php echo get_template_directory_uri() . '/images/info_boxes/testowanenaludziach.svg'; ?>"/>
+                            <div class="thumb">
+                                <img src="<?php echo get_template_directory_uri() . '/images/info_boxes/testowanenaludziach.svg'; ?>"/>
+                            </div>
                             <p>Testowane na ludziach</p>
                         </div>
                     </div>
@@ -426,8 +450,8 @@ get_header(); ?>
         <div class="homeStart__wrap container">
             <div class="homeStart__content">
                 <h2 class="getMarker">Podaj imię swojego psa i rozpocznij <span class="marker">Zdrową dietę</span> już teraz!</h2>
-                <form name="userStart" method="POST">
-                    <input type="text" name="dogName" placeholder="Imię psa"/>
+                <form name="userStart" action="https://zamowienie.psibufet.pl/" autocomplete="off">
+                    <input type="text" name="dogName" placeholder="Imię psa" autocomplete="off"/>
                     <button type="submit" value="Stwórz dietę" class="btn btn--center"><span>Stwórz dietę</span></button>
                 </form>
             </div>

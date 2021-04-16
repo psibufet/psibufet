@@ -59,7 +59,7 @@ $(document).ready(function () {
         $('#foodinfo_carousel').find(".homeFoodinfo__info.slick-current").prev().addClass('prevslide');
         $('#foodinfo_carousel').find(".homeFoodinfo__info.slick-current").next().addClass('nextslide');
     });
-    $('#foodinfo_carousel').on('beforeChange', function(){
+    $('#foodinfo_carousel').on('swipe', function(){
         var currentSlide = $('#foodinfo_carousel').find('.slick-current').attr('data');
 
         $('.infoButtons__button').removeClass('infoButtons__button--active');
@@ -70,6 +70,8 @@ $(document).ready(function () {
         $('#foodinfo_carousel').find(".homeFoodinfo__info.slick-current").next().addClass('nextslide');
     })
 
+    /* Food Modal */
+    
     var modal = $('.foodModal');
     var closeBtn = $('.foodModal').find('.closeFoodModal');
     var openstatus;
@@ -131,7 +133,7 @@ $(window).load(function(){
     $('.homeBenefits__slider').slick({
         slidesToScroll: 1,
         slidesToShow: 1,
-        infinite: true,
+        infinite: false,
         fade: true,
         asNavFor: '.homeBenefits__content',
         dots: true,
@@ -146,9 +148,11 @@ $(window).load(function(){
     $('.homeBenefits__content').slick({
         slidesToScroll: 1,
         slidesToShow: 1,
-        infinite: true,
+        infinite: false,
         arrows: false,
         adaptiveHeight: true,
+        swipe: false,
+        speed: 800,
         responsive: [{
             breakpoint: 991,
             settings: {
@@ -157,7 +161,7 @@ $(window).load(function(){
                 asNavFor: '.homeBenefits__slider',
             }
         }]
-    })
+    });
 });
 $(window).load(function () {
     $('.homeTestimonials__slider').slick({
@@ -192,6 +196,20 @@ $(window).load(function(){
                 centerMode: true,
             }
         }]
+    });
+});
+
+$(document).ready(function(){
+    var form = $('form[name="userStart"]');
+    var nameinput = form.find('input[type="text"]');
+    $(nameinput).on('change paste keyup', function(){
+        var value = $(this).val();
+        if(value){
+            form.attr('action', 'https://zamowienie.psibufet.pl/?dogName=' + value);
+        }else{
+            form.attr('action', 'https://zamowienie.psibufet.pl/');
+        }
+
     });
 });
 
@@ -233,6 +251,20 @@ $(document).ready(function(){
 $(document).ready(function(){
     var siteHeader = $('.siteHeader');
     $('.header-clone').css('height', siteHeader.height());
+    setTimeout(function(){
+        if($(window).width() < 991){
+            $('.mainnav').css('padding-top', siteHeader.height());
+        }
+    }, 100);
+
+    $('.btnMenu').on('click', function(){
+        $(this).toggleClass('active');
+        $('body').toggleClass('noscroll');
+        $('.siteHeader').toggleClass('mobileNav-active');
+        $('.mobileNav').toggleClass('mobileNav--toggle');
+
+        $('.mobileNav').find('li.menu-item').toggleClass('animate');
+    });
 
     var didScroll;
     var lastScrollTop = 0;
