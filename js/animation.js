@@ -69,6 +69,7 @@ $(window).on('scroll', function () {
     var homeBenefits = $('.homeBenefits').find('.getMarker');
     var homePricing = $('.homePricing').find('.getMarker');
     var homeStart = $('.homeStart').find('.getMarker');
+    var homeStartSection = $('.homeStart');
 
     if($(homeMiska).visible(true)){
         setTimeout(function(){
@@ -98,6 +99,11 @@ $(window).on('scroll', function () {
     if($(homeStart).visible(true)){
         setTimeout(function(){
             homeStart.addClass('init');
+        }, 500)
+    }
+    if($(homeStartSection).visible(true)){
+        setTimeout(function(){
+            homeStartSection.addClass('visible');
         }, 500)
     }
 });

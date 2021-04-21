@@ -100,16 +100,16 @@ $(document).ready(function () {
                 }
             });
         }, 1000);
+        $(closeBtn).on('click', function(){
+            $('body').removeClass('noscroll');
+            modal.removeClass('foodModal--active');
+            setTimeout(function(){
+                modal.removeClass('foodModal--ready');
+                modal.find('.foodModal__content[data="' + dataid + '"]').removeClass('foodModal__content--active');
+                openstatus = false;
+            }, 300);
+        });
     });
-    $(closeBtn).on('click', function(){
-        $('body').removeClass('noscroll');
-        modal.removeClass('foodModal--active');
-        setTimeout(function(){
-            modal.removeClass('foodModal--ready');
-            modal.find('.foodModal__content[data="' + dataid + '"]').removeClass('foodModal__content--active');
-            openstatus = false;
-        }, 300);
-    })
 
     $('.foodModal__content .gallery').slick({
         slidesToShow: 1,
@@ -231,7 +231,7 @@ $(document).ready(function(){
     var portion = $('.pricingContent__option[type="' + defaultType + '"]').attr('portion');
 
     $('.pricingContent__info').find('span.value').html(pricezl + '<span>' + pricegr + '</span> zł');
-    $('.pricingContent__info').find('.portion').find('.value').text(portion + 'g');
+    $('.pricingContent__info').find('.portion').find('.value').text(portion + ' g');
 
     $('.pricingContent__option').on('click', function(){
         var type = $(this).attr('type');
@@ -243,7 +243,7 @@ $(document).ready(function(){
         $(this).parent().parent().find('.pricingContent__info').attr('type', type);
 
         $('.pricingContent__info').find('span.value').html(pricezl + '<span>' + pricegr + '</span> zł');
-        $('.pricingContent__info').find('.portion').find('.value').text(portion + 'g');
+        $('.pricingContent__info').find('.portion').find('.value').text(portion + ' g');
     });
 });
 

@@ -3083,6 +3083,18 @@ body.admin-bar{
 .homeStart{
     background-color: #E8E8E8;
 
+    &.visible{
+        .homeStart__wrap{
+            &:after{
+                opacity: 1;
+                transform: translate(0, -50%);
+            }
+        }
+        .homeStart__content{
+            transform: scale(1);
+        }
+    }
+
     &__wrap{
         position: relative;
         padding-bottom: 40px;
@@ -3097,7 +3109,9 @@ body.admin-bar{
             position: absolute;
             right: 160px;
             top: 50%;
-            transform: translate(0, -50%);
+            transform: translate(-150%, -50%);
+            opacity: 0;
+            transition: .5s ease .3s;
         }
     }
     &__content{
@@ -3106,6 +3120,10 @@ body.admin-bar{
         background-color: #fff;
         margin: 40px auto;
         box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+        position: relative;
+        z-index: 2;
+        transform: scale(0);
+        transition: ease .5s;
 
         h2{
             font-size: 41px;
@@ -3125,7 +3143,8 @@ body.admin-bar{
                 color: $primarycolorlight;
                 text-align: center;
                 background-color: #fff;
-                border: 1px solid rgba(0, 0, 0, 0.2);
+                color: #000;
+                border: 1px solid rgba(0, 0, 0, 1);
                 box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
                 margin: 0 auto 40px;
                 transition: ease .3s;
@@ -3179,6 +3198,42 @@ body.admin-bar{
                 display: none;
             }
         }
+        &__content{
+            form{
+                position: relative;
+                max-width: 440px;
+                margin: 0 auto;
+
+                &:before{
+                    content: '';
+                    background-image: url("/wp-content/themes/psibufet/images/chevron_down.svg");
+                    background-repeat: no-repeat;
+                    background-size: 20px;
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    left: 0;
+                    top: 15px;
+                    animation-name: arrowLeftPulse;
+                    animation-duration: 1s;
+                    animation-iteration-count: infinite;
+                }
+                &:after{
+                    content: '';
+                    background-image: url("/wp-content/themes/psibufet/images/chevron_down.svg");
+                    background-repeat: no-repeat;
+                    background-size: 20px;
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    right: 0;
+                    top: 15px;
+                    animation-name: arrowRightPulse;
+                    animation-duration: 1s;
+                    animation-iteration-count: infinite;
+                }
+            }
+        }
     }
 }
 @media (max-width: 767px){
@@ -3195,10 +3250,42 @@ body.admin-bar{
                 max-width: 250px;
             }
             form{
+                max-width: 300px;
+
+                &:before{
+                    left: -35px;
+                }
+                &:after{
+                    right: -35px;
+                }
                 input[type="text"]{
                     margin: 0 auto 32px;
                     max-width: 360px;
                     width: 100%;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 420px){
+    .homeStart{
+        &__content{
+            form{
+                max-width: 220px;
+
+                &:before{
+                    background-size: 13px;
+                    width: 13px;
+                    height: 13px;
+                    top: 20px;
+                    left: -25px;
+                }
+                &:after{
+                    background-size: 13px;
+                    width: 13px;
+                    height: 13px;
+                    top: 20px;
+                    right: -25px;
                 }
             }
         }
