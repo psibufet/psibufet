@@ -3868,6 +3868,17 @@ body.admin-bar .foodModal__wrap {
   background-color: #E8E8E8;
 }
 
+.homeStart.visible .homeStart__wrap:after {
+  opacity: 1;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.homeStart.visible .homeStart__content {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
 .homeStart__wrap {
   position: relative;
   padding-bottom: 40px;
@@ -3883,8 +3894,11 @@ body.admin-bar .foodModal__wrap {
   position: absolute;
   right: 160px;
   top: 50%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  -webkit-transform: translate(-150%, -50%);
+          transform: translate(-150%, -50%);
+  opacity: 0;
+  -webkit-transition: .5s ease .3s;
+  transition: .5s ease .3s;
 }
 
 .homeStart__content {
@@ -3894,6 +3908,12 @@ body.admin-bar .foodModal__wrap {
   margin: 40px auto;
   -webkit-box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: ease .5s;
+  transition: ease .5s;
 }
 
 .homeStart__content h2 {
@@ -3913,7 +3933,8 @@ body.admin-bar .foodModal__wrap {
   color: #7f7f7f;
   text-align: center;
   background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: #000;
+  border: 1px solid black;
   -webkit-box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
   margin: 0 auto 40px;
@@ -3959,6 +3980,45 @@ body.admin-bar .foodModal__wrap {
   .homeStart__wrap:after {
     display: none;
   }
+  .homeStart__content form {
+    position: relative;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+  .homeStart__content form:before {
+    content: '';
+    background-image: url("/wp-content/themes/psibufet/images/chevron_down.svg");
+    background-repeat: no-repeat;
+    background-size: 20px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    top: 15px;
+    -webkit-animation-name: arrowLeftPulse;
+            animation-name: arrowLeftPulse;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+  }
+  .homeStart__content form:after {
+    content: '';
+    background-image: url("/wp-content/themes/psibufet/images/chevron_down.svg");
+    background-repeat: no-repeat;
+    background-size: 20px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    top: 15px;
+    -webkit-animation-name: arrowRightPulse;
+            animation-name: arrowRightPulse;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+  }
 }
 
 @media (max-width: 767px) {
@@ -3973,10 +4033,39 @@ body.admin-bar .foodModal__wrap {
     margin: 0 auto 25px;
     max-width: 250px;
   }
+  .homeStart__content form {
+    max-width: 300px;
+  }
+  .homeStart__content form:before {
+    left: -35px;
+  }
+  .homeStart__content form:after {
+    right: -35px;
+  }
   .homeStart__content form input[type="text"] {
     margin: 0 auto 32px;
     max-width: 360px;
     width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .homeStart__content form {
+    max-width: 220px;
+  }
+  .homeStart__content form:before {
+    background-size: 13px;
+    width: 13px;
+    height: 13px;
+    top: 20px;
+    left: -25px;
+  }
+  .homeStart__content form:after {
+    background-size: 13px;
+    width: 13px;
+    height: 13px;
+    top: 20px;
+    right: -25px;
   }
 }
 
@@ -4339,6 +4428,66 @@ body a:hover {
   }
   100% {
     -webkit-transform: translate(0, 0);
+  }
+}
+
+@-webkit-keyframes arrowLeftPulse {
+  0% {
+    -webkit-transform: translate(0, 0) rotate(-90deg);
+            transform: translate(0, 0) rotate(-90deg);
+  }
+  50% {
+    -webkit-transform: translate(10px, 0) rotate(-90deg);
+            transform: translate(10px, 0) rotate(-90deg);
+  }
+  100% {
+    -webkit-transform: translate(0, 0) rotate(-90deg);
+            transform: translate(0, 0) rotate(-90deg);
+  }
+}
+
+@keyframes arrowLeftPulse {
+  0% {
+    -webkit-transform: translate(0, 0) rotate(-90deg);
+            transform: translate(0, 0) rotate(-90deg);
+  }
+  50% {
+    -webkit-transform: translate(10px, 0) rotate(-90deg);
+            transform: translate(10px, 0) rotate(-90deg);
+  }
+  100% {
+    -webkit-transform: translate(0, 0) rotate(-90deg);
+            transform: translate(0, 0) rotate(-90deg);
+  }
+}
+
+@-webkit-keyframes arrowRightPulse {
+  0% {
+    -webkit-transform: translate(0, 0) rotate(90deg);
+            transform: translate(0, 0) rotate(90deg);
+  }
+  50% {
+    -webkit-transform: translate(-10px, 0) rotate(90deg);
+            transform: translate(-10px, 0) rotate(90deg);
+  }
+  100% {
+    -webkit-transform: translate(0, 0) rotate(90deg);
+            transform: translate(0, 0) rotate(90deg);
+  }
+}
+
+@keyframes arrowRightPulse {
+  0% {
+    -webkit-transform: translate(0, 0) rotate(90deg);
+            transform: translate(0, 0) rotate(90deg);
+  }
+  50% {
+    -webkit-transform: translate(-10px, 0) rotate(90deg);
+            transform: translate(-10px, 0) rotate(90deg);
+  }
+  100% {
+    -webkit-transform: translate(0, 0) rotate(90deg);
+            transform: translate(0, 0) rotate(90deg);
   }
 }
 /*# sourceMappingURL=customsass.css.map */

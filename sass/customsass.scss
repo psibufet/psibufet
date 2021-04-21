@@ -271,3 +271,27 @@ body{
         -ms-transform: translate(0, 0);
     }
 }
+
+// Name form
+@keyframes arrowLeftPulse {
+    0% {
+        transform: translate(0, 0) rotate(-90deg);
+    }
+    50% {
+        transform: translate(10px, 0) rotate(-90deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(-90deg);
+    }
+}
+@keyframes arrowRightPulse {
+    0% {
+        transform: translate(0, 0) rotate(90deg);
+    }
+    50% {
+        transform: translate(-10px, 0) rotate(90deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(90deg);
+    }
+}

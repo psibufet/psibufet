@@ -363,7 +363,7 @@ get_header(); ?>
                     </div>
                     <div class="pricingContent__info" type="<?php the_field('defaultPricingOption'); ?>">
                         <p class="price">od <span class="value">19<span>50</span> zł</span> / dzień</p>
-                        <p class="portion">dla porcji <span class="value">500g</span></p>
+                        <p class="portion">dla porcji <span class="value">500 g</span></p>
                     </div>
                 </div>
                 <div class="blockResponsive blockResponsive--hideDesktop">
