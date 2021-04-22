@@ -3147,6 +3147,12 @@ body.admin-bar{
         form{
             position: relative;
 
+            &.hasValue{
+                input{
+                    border-color: #000 !important;
+                }
+            }
+
             &:before{
                 content: '';
                 background-image: url("/wp-content/themes/psibufet/images/chevron_down.svg");
