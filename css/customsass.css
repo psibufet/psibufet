@@ -3832,6 +3832,9 @@ body.admin-bar .foodModal__wrap {
   .homeInstagram {
     overflow: hidden;
   }
+  .homeInstagram__posts {
+    margin: 0 auto 60px;
+  }
   .homeInstagram__posts .slick-list {
     overflow: visible;
   }
@@ -3845,6 +3848,9 @@ body.admin-bar .foodModal__wrap {
   }
   .homeInstagram__posts .slick-arrow.slick-next {
     right: -300px;
+  }
+  .homeInstagram__posts .slick-dots {
+    bottom: -35px;
   }
   .homeInstagram__posts .post {
     opacity: 1;
@@ -3866,6 +3872,11 @@ body.admin-bar .foodModal__wrap {
 
 .homeStart {
   background-color: #E8E8E8;
+}
+
+.homeStart.visible .homeStart__wrap:before {
+  opacity: 1;
+  top: -130px;
 }
 
 .homeStart.visible .homeStart__wrap:after {
@@ -3926,6 +3937,46 @@ body.admin-bar .foodModal__wrap {
   text-align: center;
 }
 
+.homeStart__content form {
+  position: relative;
+}
+
+.homeStart__content form:before {
+  content: '';
+  background-image: url("/wp-content/themes/psibufet/images/chevron_down.svg");
+  background-repeat: no-repeat;
+  background-size: 20px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  top: 15px;
+  -webkit-animation-name: arrowLeftPulse;
+          animation-name: arrowLeftPulse;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.homeStart__content form:after {
+  content: '';
+  background-image: url("/wp-content/themes/psibufet/images/chevron_down.svg");
+  background-repeat: no-repeat;
+  background-size: 20px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 0;
+  top: 15px;
+  -webkit-animation-name: arrowRightPulse;
+          animation-name: arrowRightPulse;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
 .homeStart__content form input[type="text"] {
   display: block;
   width: 360px;
@@ -3934,7 +3985,7 @@ body.admin-bar .foodModal__wrap {
   text-align: center;
   background-color: #fff;
   color: #000;
-  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
   margin: 0 auto 40px;
@@ -3977,47 +4028,35 @@ body.admin-bar .foodModal__wrap {
 }
 
 @media (max-width: 991px) {
+  .homeStart__wrap {
+    padding: 30px 0 40px;
+  }
+  .homeStart__wrap:before {
+    content: '';
+    background-image: url("/wp-content/themes/psibufet/images/homestart_corgiMobile.svg");
+    background-repeat: no-repeat;
+    background-size: 180px;
+    width: 180px;
+    height: 170px;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    opacity: 0;
+    z-index: 1;
+    -webkit-transition: .5s ease .3s;
+    transition: .5s ease .3s;
+  }
   .homeStart__wrap:after {
     display: none;
   }
-  .homeStart__content form {
-    position: relative;
-    max-width: 440px;
+  .homeStart__content {
     margin: 0 auto;
   }
-  .homeStart__content form:before {
-    content: '';
-    background-image: url("/wp-content/themes/psibufet/images/chevron_down.svg");
-    background-repeat: no-repeat;
-    background-size: 20px;
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    left: 0;
-    top: 15px;
-    -webkit-animation-name: arrowLeftPulse;
-            animation-name: arrowLeftPulse;
-    -webkit-animation-duration: 1s;
-            animation-duration: 1s;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-  }
-  .homeStart__content form:after {
-    content: '';
-    background-image: url("/wp-content/themes/psibufet/images/chevron_down.svg");
-    background-repeat: no-repeat;
-    background-size: 20px;
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    right: 0;
-    top: 15px;
-    -webkit-animation-name: arrowRightPulse;
-            animation-name: arrowRightPulse;
-    -webkit-animation-duration: 1s;
-            animation-duration: 1s;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
+  .homeStart__content form {
+    max-width: 440px;
+    margin: 0 auto;
   }
 }
 
@@ -4025,7 +4064,7 @@ body.admin-bar .foodModal__wrap {
   .homeStart__content {
     width: 100%;
     padding: 32px;
-    margin: 40px auto 0;
+    margin: 0 auto;
   }
   .homeStart__content h2 {
     font-size: 28px;
