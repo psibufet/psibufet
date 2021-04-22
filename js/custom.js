@@ -206,8 +206,10 @@ $(document).ready(function(){
         var value = $(this).val();
         if(value){
             form.attr('action', 'https://zamowienie.psibufet.pl/?dogName=' + value);
+            form.addClass('hasValue');
         }else{
             form.attr('action', 'https://zamowienie.psibufet.pl/');
+            form.removeClass('hasValue');
         }
 
     });

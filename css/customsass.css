@@ -3941,6 +3941,10 @@ body.admin-bar .foodModal__wrap {
   position: relative;
 }
 
+.homeStart__content form.hasValue input {
+  border-color: #000 !important;
+}
+
 .homeStart__content form:before {
   content: '';
   background-image: url("/wp-content/themes/psibufet/images/chevron_down.svg");
