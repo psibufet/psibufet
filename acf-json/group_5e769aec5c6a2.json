@@ -182,7 +182,7 @@
                     "label": "Galeria zdjęć",
                     "name": "karma_gallery",
                     "type": "gallery",
-                    "instructions": "",
+                    "instructions": "Minimalny rozmiar zdjęć to 550x320 (szer. x wys.)",
                     "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -1415,5 +1415,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1618357031
+    "modified": 1619117772
 }
