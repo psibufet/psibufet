@@ -64,18 +64,19 @@ $(document).ready(function(){
 		$.ajax({
 			url:'https://app.psibufet.pl/api/order/couponcode/' + sPageURL,
 			error: function(){
-				window.location.replace("https://psibufet.pl/");
+				window.location.replace("https://psibufet.codestick.pl/");
 				console.log('Error while code loading :(');
 			},
 			success: function(){
 				$.getJSON("https://app.psibufet.pl/api/order/couponcode/" + sPageURL, function (data) {
 					if (data.purpose == "CLIENT"){
-						window.location.replace("https://psibufet.pl/?code=" + sPageURL + '&utm_source=MGM&utm_medium=referral_link&utm_campaign=' + sPageURL + '&amount=' + data.amount + '&type=' + data.type);
+						window.location.replace("https://psibufet.codestick.pl/?code=" + sPageURL + '&utm_source=MGM&utm_medium=referral_link&utm_campaign=' + sPageURL + '&amount=' + data.amount + '&type=' + data.type);
 					}else if (data.purpose == "PARTNER"){
-						window.location.replace("https://psibufet.pl/?code=" + sPageURL + '&utm_source=partner&utm_medium=referral_link&utm_campaign=' + sPageURL + '&amount=' + data.amount + '&type=' + data.type);
-					}
-					else if (data.purpose == "MARKETING"){
-						window.location.replace("https://psibufet.pl/?code=" + sPageURL + '&amount=' + data.amount + '&type=' + data.type);
+						window.location.replace("https://psibufet.codestick.pl/?code=" + sPageURL + '&utm_source=partner&utm_medium=referral_link&utm_campaign=' + sPageURL + '&amount=' + data.amount + '&type=' + data.type);
+					}else if (data.purpose == "MARKETING"){
+						window.location.replace("https://psibufet.codestick.pl/?code=" + sPageURL + '&amount=' + data.amount + '&type=' + data.type);
+					}else if (data.purpose == "INFLUENCER"){
+						window.location.replace("https://psibufet.codestick.pl/?code=" + sPageURL + '&amount=' + data.amount + '&type=' + data.type);
 					}			
 				});
 				$(".dir").each(function () {

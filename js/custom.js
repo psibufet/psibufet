@@ -723,7 +723,6 @@ $(document).ready(function() {
         });
     }else{
         console.log('Code error');
-        window.location.replace('https://psibufet.pl/');
     }
 });
 
