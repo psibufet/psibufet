@@ -4,7 +4,7 @@
 body.popupactive {
     overflow: hidden;
 }
-body.promocode {
+/* body.promocode {
     position: relative;
 }
 body.promocode .site-header {
@@ -15,11 +15,11 @@ body.promocode .site-header #promocode {
 }
 body.promocode .site-header #promocode_delivery {
     margin-bottom: 17px;
-}
+} */
 .flexslider {
     box-shadow: none !important;
 }
-@media (min-width: 767px) {
+/* @media (min-width: 767px) {
     body.promocode #content {
         margin-top: 95px !important;
     }
@@ -48,7 +48,7 @@ body.promocode .site-header #promocode_delivery {
     body.promocode #masthead .menu-right .mainnav {
         top: 60px !important;
     }
-}
+} */
 
 a.check {
     display: block;

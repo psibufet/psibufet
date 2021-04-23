@@ -1,5 +1,75 @@
 #promocode{
     display: none;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    background-color: $redcolor;
+
+    &.active{
+        display: flex;
+    }
+
+    p{
+        font-family: $headingfont;
+        font-size: 21px;
+        color: #fff;
+        padding: 0 40px;
+        margin: 0 auto;
+        text-align: center;
+        max-width: fit-content;
+        position: relative;
+
+        &:before{
+            content: '';
+            background-image: url('/wp-content/themes/psibufet/images/promocode/miska.svg');
+            background-repeat: no-repeat;
+            background-size: 73px;
+            width: 73px;
+            height: 58px;
+            position: absolute;
+            left: -35px;
+            bottom: -15px;
+        }
+        &:after{
+            content: '';
+            background-image: url('/wp-content/themes/psibufet/images/promocode/present.svg');
+            background-repeat: no-repeat;
+            background-size: 50px;
+            width: 50px;
+            height: 51px;
+            position: absolute;
+            right: -10px;
+            bottom: -15px;
+        }
+    }
+}
+@media (max-width: 767px){
+    #promocode{
+        height: auto;
+        position: relative;
+
+        p{
+            position: unset;
+            font-size: 16px;
+            line-height: 19px;
+            padding: 10px 50px;
+
+            &:before{
+                background-size: 55px;
+                width: 55px;
+                height: 44px;
+                left: 0;
+                bottom: -8px;
+            }
+            &:after{
+                background-size: 40px;
+                width: 40px;
+                height: 41px;
+                right: 0;
+                bottom: -8px;
+            }
+        }
+    }
 }
 body.admin-bar{
     .siteHeader{
