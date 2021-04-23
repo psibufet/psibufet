@@ -1,62 +1,14 @@
-/************** PROMOCODE ***************/
-
-$(document).ready(function() {
-    function GetURLParameter(sParam){
-        var sPageURL = window.location.search.substring(1);
-        var sURLVariables = sPageURL.split('&');
-        for (var i = 0; i < sURLVariables.length; i++){
-            var sParameterName = sURLVariables[i].split('=');
-            if (sParameterName[0] == sParam){
-                return sParameterName[1];
-            }
-        }
-    }    
-    
-    var code = GetURLParameter('code');
-    var type = GetURLParameter('type');
-    var amount = GetURLParameter('amount');
-
-    var promoamount = $('#promocode p .amount');
-    var promotype = $('#promocode p .type');
-	var promona = $('#promocode p .na');
-    
-
-    if (typeof code === 'undefined'){
-        var firstletter = code;
-    }else{
-        var firstletter = code.charAt(0);
-    }
-
-    if(typeof code !== 'undefined'){
-        $('body').addClass('promocode');
-        $('.menu_dir a').addClass('dir');
-        $('#promocode').addClass('active');
-
-        promoamount.html(amount);
-
-        if(type == 'PERCENT'){
-            promotype.html('%');
-        }
-        if(type == 'AMOUNT'){
-            promotype.html('PLN');
-        }
-
-        if(firstletter == 2){
-            promona.html('dwie pierwsze dostawy');
-        }
-
-        $(".dir").each(function () {
-            var $this = $(this);
-            var _href = $this.attr("href");
-            if(typeof type !== 'undefined' && typeof amount !== 'undefined'){
-                $this.attr("href", _href + '?code=' + code + '&amount=' + amount + '&type=' + type);
-            }else{
-                $this.attr("href", _href + '?code=' + code);
-            }
-        });
-    }else{
-        console.log('Code error');
-    }
+$(document).ready(function(){
+	function GetURLParameter(sParam){
+		var sPageURL = window.location.search.substring(1);
+		var sURLVariables = sPageURL.split('&');
+		for (var i = 0; i < sURLVariables.length; i++){
+			var sParameterName = sURLVariables[i].split('=');
+			if (sParameterName[0] == sParam){
+				return sParameterName[1];
+			}
+		}
+	}  
    
 	var sPageURL = window.location.pathname.replace('/','');
 	var whitelist = ['', 'jak-to-dziala', 'nasze-przepisy', '?code=' + sPageURL, 'o-nas', 'pracuj-w-psibufet', 'kontakt', 'thank-you', 'regulamin', 'regulamin.pdf'];
@@ -122,9 +74,9 @@ $(document).ready(function() {
 					}else if (data.purpose == "PARTNER"){
 						window.location.replace("https://psibufet.pl/?code=" + sPageURL + '&utm_source=partner&utm_medium=referral_link&utm_campaign=' + sPageURL + '&amount=' + data.amount + '&type=' + data.type);
 					}
-					// else if (data.purpose == "MARKETING"){
-					// 	window.location.replace("https://psibufet.pl/?code=" + sPageURL + '&amount=' + data.amount + '&type=' + data.type);
-					// }			
+					else if (data.purpose == "MARKETING"){
+						window.location.replace("https://psibufet.pl/?code=" + sPageURL + '&amount=' + data.amount + '&type=' + data.type);
+					}			
 				});
 				$(".dir").each(function () {
 					var $this = $(this);
