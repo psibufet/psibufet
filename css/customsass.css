@@ -1909,13 +1909,31 @@ body.admin-bar .foodModal__wrap {
   position: absolute;
   top: 20px;
   right: 20px;
+  opacity: .7;
   z-index: 2;
   -webkit-transition: ease .3s;
   transition: ease .3s;
 }
 
 .foodModal__wrap .closeImg:hover {
-  opacity: .7;
+  opacity: 1;
+}
+
+.foodModal__close {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 25px 0;
+  background: #fff;
+  background: #ffffffad;
+  -webkit-box-shadow: 0 0 30px #00000021;
+          box-shadow: 0 0 30px #00000021;
+}
+
+.foodModal__close p {
+  cursor: pointer;
 }
 
 .foodModal__content {
@@ -2889,6 +2907,10 @@ body.admin-bar .foodModal__wrap {
   .homeBenefits__content .slick-arrow.slick-next {
     background-image: url("/wp-content/themes/psibufet/images/icons/slider_arrow_right_red.svg");
     right: -45px;
+  }
+  .homeBenefits__content .slick-arrow.slick-disabled {
+    opacity: .2;
+    pointer-events: none;
   }
   .homeBenefits__content .slick-dots {
     display: -webkit-box !important;

@@ -1096,12 +1096,27 @@ body.admin-bar{
             position: absolute;
             top: 20px;
             right: 20px;
+            opacity: .7;
             z-index: 2;
             transition: ease .3s;
 
             &:hover{
-                opacity: .7;
+                opacity: 1;
             }
+        }
+    }
+    &__close{
+        position: sticky;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 25px 0;
+        background: #fff;
+        background: #ffffffad;
+        box-shadow: 0 0 30px #00000021;
+
+        p{
+            cursor: pointer;
         }
     }
     &__content{
@@ -2094,6 +2109,10 @@ body.admin-bar{
                 &.slick-next{
                     background-image: url('/wp-content/themes/psibufet/images/icons/slider_arrow_right_red.svg');
                     right: -45px;
+                }
+                &.slick-disabled{
+                    opacity: .2;
+                    pointer-events: none;
                 }
             }
             .slick-dots{

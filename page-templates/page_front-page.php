@@ -246,9 +246,11 @@ get_header(); ?>
                             </div>
                         </div>
                     </div>
-                    <p class="btn btn--center btn--back closeFoodModal"><span>Powrót</span></p>
                 </div>
                 <?php endwhile; ?>
+                <div class="foodModal__close">
+                    <p class="btn btn--center btn--back closeFoodModal"><span>Powrót</span></p>
+                </div>
             </div>
         </div>
     </section>
