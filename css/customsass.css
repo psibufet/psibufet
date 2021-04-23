@@ -4089,6 +4089,7 @@ body.admin-bar .foodModal__wrap {
 @media (max-width: 767px) {
   .homeStart__content {
     width: 100%;
+    max-width: 420px;
     padding: 32px;
     margin: 0 auto;
   }
@@ -4114,7 +4115,10 @@ body.admin-bar .foodModal__wrap {
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 450px) {
+  .homeStart__content {
+    max-width: calc(100% - 30px);
+  }
   .homeStart__content form {
     max-width: 220px;
   }

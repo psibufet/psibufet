@@ -3295,6 +3295,7 @@ body.admin-bar{
     .homeStart{
         &__content{
             width: 100%;
+            max-width: 420px;
             padding: 32px;
             margin: 0 auto;
 
@@ -3322,9 +3323,11 @@ body.admin-bar{
         }
     }
 }
-@media (max-width: 420px){
+@media (max-width: 450px){
     .homeStart{
         &__content{
+            max-width: calc(100% - 30px);
+
             form{
                 max-width: 220px;
 
