@@ -81,6 +81,13 @@ body.admin-bar{
         }
     }
 }
+body.promocode{
+    .siteHeader{
+        &--scrolled{
+            top: -120px !important;
+        }
+    }
+}
 .siteHeader{
     background-color: #fff;
     width: 100%;
