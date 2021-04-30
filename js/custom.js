@@ -75,10 +75,22 @@ $(document).ready(function () {
     var modal = $('.foodModal');
     var closeBtn = $('.foodModal').find('.closeFoodModal');
     var openstatus;
+
+    var foodGallerySets = {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: true,
+        adaptiveHeight: true,
+        variableWidth: true,
+        infinite: true,
+    }
+
     $('.infoButtons__button').on('click', function(){
         var dataid = $(this).attr('data');
 
         $('body').addClass('noscroll');
+
         modal.find('.foodModal__content[data="' + dataid + '"]').addClass('foodModal__content--active');
         modal.addClass('foodModal--ready');
         setTimeout(function(){
@@ -100,6 +112,9 @@ $(document).ready(function () {
                 }
             });
         }, 1000);
+
+        $('.foodModal__content[data="' + dataid + '"] .gallery[data="' + dataid + '"]').slick({foodGallerySets});
+        
         $(closeBtn).on('click', function(){
             $('body').removeClass('noscroll');
             modal.removeClass('foodModal--active');
@@ -109,16 +124,6 @@ $(document).ready(function () {
                 openstatus = false;
             }, 300);
         });
-    });
-
-    $('.foodModal__content .gallery').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: true,
-        dots: true,
-        adaptiveHeight: true,
-        variableWidth: true,
-        infinite: true,
     });
 
     var accordionpos = $('.foodModal__content').find('.accordion__element');
@@ -159,6 +164,7 @@ $(window).load(function(){
                 arrows: true,
                 dots: true,
                 asNavFor: '.homeBenefits__slider',
+                swipe: true,
             }
         }]
     });
@@ -172,10 +178,23 @@ $(window).load(function () {
         dots: true,
         infinite: false,
         swipe: false,
+        responsive: [{
+            breakpoint: 767,
+            settings: {
+                swipe: true,
+            }
+        }]
     });
     $('.homeTestimonials__slider').find('.slick-current').prev().addClass('ready');
     $('.homeTestimonials__slider').find('.slick-current').next().addClass('ready');
+
     $('.homeTestimonials__slider .slick-arrow').on('click', function(){
+        $('.homeTestimonials__slider').find('.slide').removeClass('ready')
+        $('.homeTestimonials__slider').find(".slide.slick-current").prev().addClass('ready');
+        $('.homeTestimonials__slider').find(".slide.slick-current").next().addClass('ready');
+    });
+
+    $('.homeTestimonials__slider').on('swipe', function(){
         $('.homeTestimonials__slider').find('.slide').removeClass('ready')
         $('.homeTestimonials__slider').find(".slide.slick-current").prev().addClass('ready');
         $('.homeTestimonials__slider').find(".slide.slick-current").next().addClass('ready');

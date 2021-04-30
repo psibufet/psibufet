@@ -168,7 +168,7 @@ get_header(); ?>
                     $dodatki = get_sub_field('karma_dodatki');
                 ?>
                 <div class="foodModal__content" data="data_0<?php echo get_row_index(); ?>">
-                    <div class="gallery">
+                    <div class="gallery" data="data_0<?php echo get_row_index(); ?>">
                         <?php foreach( $images as $image ): ?>
                             <div class="gallery__image">
                                 <img class="no-lazyload" src="<?php echo $image; ?>"/>
