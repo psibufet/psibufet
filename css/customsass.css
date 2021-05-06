@@ -195,6 +195,10 @@ body.promocode .siteHeader--scrolled {
   display: none;
 }
 
+.siteHeader__menu .mainnav ul li.current-menu-item a {
+  color: #f15748 !important;
+}
+
 .siteHeader__menu .mainnav ul li.login {
   position: relative;
 }

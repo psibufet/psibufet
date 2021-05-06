@@ -155,6 +155,11 @@ body.promocode{
                     &.disable-desktop{
                         display: none;
                     }
+                    &.current-menu-item{
+                        a{
+                            color: $redcolor !important;
+                        }
+                    }
                     &.login{
                         position: relative;
 

@@ -47,7 +47,7 @@ $(function () {
 /********* SOCIAL MEDIA **********/
 
 $(function () {
-    $('.footer_right .links a.instagram-social').on('click', function () {
+    $('.siteFooter__menu .info a.social__ig').on('click', function () {
         var link = $(this).attr('href');
         dataLayer.push({
             'event': 'socialRedirect',
@@ -57,7 +57,7 @@ $(function () {
     });
 });
 $(function () {
-    $('.footer_right .links a.facebook-social').on('click', function () {
+    $('.siteFooter__menu .info a.social__fb').on('click', function () {
         var link = $(this).attr('href');
         dataLayer.push({
             'event': 'socialRedirect',

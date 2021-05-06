@@ -97,7 +97,7 @@
     <?php do_action('sydney_before_site'); //Hooked: sydney_preloader() ?>
 
     <div id="page" class="hfeed site">
-        <?php do_action('sydney_before_header'); //Hooked: sydney_header_clone() ?>
+        <div class="header-clone"></div>
         <header id="masthead" class="siteHeader" role="banner">
             <div id="promocode">
                 <p>Masz <span class="amount">wczytywanie</span><span class="type"></span> zniżki na <span class="na">swoje pierwsze zamówienie</span>.<font> Całość zostanie doliczona w koszyku.</font></p>
