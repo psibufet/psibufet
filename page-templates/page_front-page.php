@@ -434,9 +434,9 @@ get_header(); ?>
                     </div>
                     <div class="content">
                         <div class="actions">
-                            <img src="<?php echo get_template_directory_uri() . '/images/ig_like.svg'; ?>"/>
-                            <img src="<?php echo get_template_directory_uri() . '/images/ig_comment.svg'; ?>"/>
-                            <img src="<?php echo get_template_directory_uri() . '/images/ig_send.svg'; ?>"/>
+                            <img src="<?php echo get_template_directory_uri() . '/images/ig_like.svg'; ?>" class="no-lazyload"/>
+                            <img src="<?php echo get_template_directory_uri() . '/images/ig_comment.svg'; ?>" class="no-lazyload"/>
+                            <img src="<?php echo get_template_directory_uri() . '/images/ig_send.svg'; ?>" class="no-lazyload"/>
                         </div>
                         <p><b><?php the_field('user_name'); ?>:</b> <?php the_field('post_content'); ?></p>
                     </div>
