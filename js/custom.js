@@ -76,16 +76,6 @@ $(document).ready(function () {
     var closeBtn = $('.foodModal').find('.closeFoodModal');
     var openstatus;
 
-    var foodGallerySets = {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: true,
-        dots: true,
-        adaptiveHeight: true,
-        variableWidth: true,
-        infinite: true,
-    }
-
     $('.infoButtons__button').on('click', function(){
         var dataid = $(this).attr('data');
 
@@ -113,7 +103,15 @@ $(document).ready(function () {
             });
         }, 1000);
 
-        $('.foodModal__content[data="' + dataid + '"] .gallery[data="' + dataid + '"]').slick({foodGallerySets});
+        $('.foodModal__content[data="' + dataid + '"] .gallery[data="' + dataid + '"]').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: true,
+            adaptiveHeight: true,
+            variableWidth: true,
+            infinite: true,
+        });
         
         $(closeBtn).on('click', function(){
             $('body').removeClass('noscroll');

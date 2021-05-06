@@ -430,7 +430,7 @@ get_header(); ?>
             <?php foreach( $posts as $post ): setup_postdata( $post ); ?>
                 <div class="post">
                     <div class="thumb">
-                        <img src="<?php the_field('post_thumbnail'); ?>"/>
+                        <img src="<?php the_field('post_thumbnail'); ?>" class="no-lazyload"/>
                     </div>
                     <div class="content">
                         <div class="actions">
