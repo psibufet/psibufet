@@ -4435,7 +4435,7 @@ body a:hover {
   max-width: 250px;
 }
 
-.btn {
+.btn:not(span) {
   display: inline-block;
   min-width: 225px;
   height: 52px;
@@ -4448,7 +4448,7 @@ body a:hover {
   transition: ease .3s;
 }
 
-.btn--center {
+.btn:not(span)--center {
   display: block;
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
@@ -4456,7 +4456,7 @@ body a:hover {
   margin: 0 auto;
 }
 
-.btn span {
+.btn:not(span) span {
   font-size: 20px;
   line-height: inherit;
   font-weight: bold;
@@ -4465,7 +4465,7 @@ body a:hover {
   padding-right: 10px;
 }
 
-.btn span:after {
+.btn:not(span) span:after {
   content: "";
   background-image: url(/wp-content/themes/psibufet/images/chevron_right_white.svg);
   background-repeat: no-repeat;
@@ -4482,23 +4482,23 @@ body a:hover {
   transition: ease .3s;
 }
 
-.btn--big {
+.btn:not(span)--big {
   min-width: 265px;
   height: 56px;
   line-height: 56px;
 }
 
-.btn--big span {
+.btn:not(span)--big span {
   font-size: 25px;
   line-height: inherit;
 }
 
-.btn--back span {
+.btn:not(span)--back span {
   padding-right: 0;
   padding-left: 10px;
 }
 
-.btn--back span:after {
+.btn:not(span)--back span:after {
   top: 50%;
   right: auto;
   left: -10px;
@@ -4506,15 +4506,15 @@ body a:hover {
           transform: translate(0, -50%) rotate(-180deg);
 }
 
-.btn--back:hover span:after {
+.btn:not(span)--back:hover span:after {
   left: -15px;
 }
 
-.btn:hover {
+.btn:not(span):hover {
   background-color: #fb6659;
 }
 
-.btn:hover span:after {
+.btn:not(span):hover span:after {
   right: -15px;
 }
 
