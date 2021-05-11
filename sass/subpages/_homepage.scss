@@ -259,6 +259,8 @@
 }
 @media (max-width: 991px){
     .homeReviews{
+        overflow: hidden;
+        
         &__logo{
             margin: 0 15px;
         }

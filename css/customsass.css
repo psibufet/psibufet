@@ -368,7 +368,7 @@ body.promocode .siteHeader--scrolled {
     position: relative;
     z-index: 2;
   }
-  .siteHeader__menu .btnMenu span {
+  .siteHeader__menu .btnMenu .line {
     width: 100%;
     height: 2px;
     background-color: #f15748;
@@ -1132,6 +1132,9 @@ body.promocode .siteHeader--scrolled {
 }
 
 @media (max-width: 991px) {
+  .homeReviews {
+    overflow: hidden;
+  }
   .homeReviews__logo {
     margin: 0 15px;
   }
@@ -4410,7 +4413,6 @@ body a:hover {
 }
 
 .preloader {
-  display: none !important;
   width: 100%;
   height: 100%;
   display: -webkit-box;
