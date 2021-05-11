@@ -121,7 +121,7 @@
                         <div class="line" style="width:100%;height:2px;background-color:#f15748;"></div>
                         <div class="line" style="width:100%;height:2px;background-color:#f15748;"></div>
                     </div>
-                    <nav id="mainnav" class="mainnav" role="navigation" style="display: none !important;">
+                    <nav id="mainnav" class="mainnav" role="navigation">
                         <?php wp_nav_menu( array( 'theme_location' => 'primary', 'fallback_cb' => 'sydney_menu_fallback' ) ); ?>
                     </nav><!-- #site-navigation -->
                 </div>
