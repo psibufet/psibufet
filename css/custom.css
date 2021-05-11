@@ -7950,6 +7950,10 @@ body.page-template-page_naszeprzepisy #site_footer_new {
     top: 15px;
     right: 20px;
     line-height: 35px;
+    min-width: unset;
+    background: unset;
+    box-shadow: none;
+    height: fit-content;
     cursor: pointer;
     transition: ease 0.3s;
 }
