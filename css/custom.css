@@ -6990,6 +6990,7 @@ body.page-template-page_naszeprzepisy #site_footer_new {
     line-height: 21px;
     white-space: nowrap;
     margin: 0 auto;
+    min-width: 330px;
     background: #fff;
     padding: 6px 50px;
     box-shadow: 4px 4px rgba(0, 0, 0, 0.2);
@@ -7000,6 +7001,7 @@ body.page-template-page_naszeprzepisy #site_footer_new {
     margin: 0 auto;
     max-width: -moz-fit-content;
     max-width: fit-content;
+    text-align: center;
 }
 #about_page .about_steps .step_1 .right_content {
     display: table;
@@ -7079,6 +7081,7 @@ body.page-template-page_naszeprzepisy #site_footer_new {
         line-height: 16px;
         padding: 7px 20px 5px;
         white-space: nowrap;
+        min-width: 200px;
         left: 0;
         right: 0;
         margin: 0 auto;
@@ -7225,6 +7228,8 @@ body.page-template-page_naszeprzepisy #site_footer_new {
         line-height: 16px;
         white-space: nowrap;
         margin: 0;
+        min-width: 200px;
+        text-align: center;
         background: #fff;
         padding: 7px 20px 5px;
         box-shadow: 4px 4px rgba(0, 0, 0, 0.2);
@@ -7411,6 +7416,7 @@ body.page-template-page_naszeprzepisy #site_footer_new {
         font-size: 16px;
         line-height: 16px;
         padding: 7px 30px 4px;
+        min-width: 230px;
     }
 }
 @media (max-width: 768px) {
@@ -7619,6 +7625,7 @@ body.page-template-page_naszeprzepisy #site_footer_new {
         line-height: 16px;
         padding: 7px 20px 5px;
         white-space: nowrap;
+        min-width: 200px;
         left: 0;
         right: 0;
         margin: 0 auto;
