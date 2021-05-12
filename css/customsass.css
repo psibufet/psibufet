@@ -377,15 +377,15 @@ body.promocode .siteHeader--scrolled {
     -webkit-transition: ease .3s;
     transition: ease .3s;
   }
-  .siteHeader__menu .btnMenu.active span:nth-child(1) {
+  .siteHeader__menu .btnMenu.active .line:nth-child(1) {
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
     top: 6px;
   }
-  .siteHeader__menu .btnMenu.active span:nth-child(2) {
+  .siteHeader__menu .btnMenu.active .line:nth-child(2) {
     opacity: 0;
   }
-  .siteHeader__menu .btnMenu.active span:nth-child(3) {
+  .siteHeader__menu .btnMenu.active .line:nth-child(3) {
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
     top: -6px;
