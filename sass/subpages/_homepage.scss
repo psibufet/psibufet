@@ -465,11 +465,14 @@
             }
         }
         &__review{
+            max-width: none;
+            width: 280px;
+            
             .stars{
                 width: 76px;
 
                 img{
-                    max-width: 8px;
+                    max-width: 13px;
                     margin: 0 1px;
                 }
             }

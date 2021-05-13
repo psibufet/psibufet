@@ -1360,11 +1360,15 @@ body.promocode .siteHeader--scrolled {
     font-size: 12px;
     line-height: 16px;
   }
+  .homeMiska__review {
+    max-width: none;
+    width: 280px;
+  }
   .homeMiska__review .stars {
     width: 76px;
   }
   .homeMiska__review .stars img {
-    max-width: 8px;
+    max-width: 13px;
     margin: 0 1px;
   }
   .homeMiska__review p {
