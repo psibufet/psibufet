@@ -18,7 +18,7 @@ $(window).load(function () {
             centerMode: true,
             variableWidth: true,
             arrows: false,
-            autoplay: true,
+            autoplay: false,
             autoplaySpeed: 3000,
             initialSlide: 2,
         });
