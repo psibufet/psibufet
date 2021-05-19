@@ -789,8 +789,7 @@ body.promocode .siteHeader--scrolled {
 }
 
 .homeHeader__content .tags div:first-of-type {
-  padding-right: 5px;
-  padding-left: 0;
+  padding-right: 0;
 }
 
 .homeHeader__content .tags div:last-of-type {
