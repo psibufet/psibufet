@@ -1,4 +1,4 @@
-<article class="flavourTile">
+<article class="flavourTile" data-slug="<?php echo $post->post_name; ?>">
     <div class="flavourTile__thumb">
         <img src="<?php the_field('flavourThumb'); ?>"/>
     </div>
@@ -8,6 +8,6 @@
     </div>
     <div class="flavourTile__content">
         <p class="desc"><?php echo the_field('flavourDesc'); ?></p>
-        <a href="#" class="btn btn--center"><span>Sprawdź</span></a>
+        <a href="<?php echo home_url('/gs-') ?>" class="btn btn--center"><span>Sprawdź</span></a>
     </div>
 </article>

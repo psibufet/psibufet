@@ -907,4 +907,14 @@ $(document).ready(function(){
             }, 300);
         });
     });
+
+    /* Other flavours href */
+    var flavours = $('.gsKarmaList__list').find('.flavourTile');
+
+    $(flavours).each(function(){
+        var btn = $(this).find('.btn');
+        var href = btn.attr('href');
+        var slug = $(this).attr('data-slug');
+        btn.attr('href', href + slug);
+    });
 });

@@ -4740,7 +4740,7 @@ body a:hover {
 }
 
 .preloader img {
-  max-width: 250px;
+  max-width: 160px;
 }
 
 .btn {
@@ -4751,6 +4751,7 @@ body a:hover {
   background-color: #f15748;
   text-align: center;
   box-shadow: 3px 3px #0000001a;
+  user-select: none;
   transition: ease .3s;
 }
 
