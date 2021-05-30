@@ -11,7 +11,19 @@ $(document).ready(function(){
 	}  
    
 	var sPageURL = window.location.pathname.replace('/','');
-	var whitelist = ['', 'jak-to-dziala', 'nasze-przepisy', '?code=' + sPageURL, 'o-nas', 'pracuj-w-psibufet', 'kontakt', 'thank-you', 'regulamin', 'regulamin.pdf'];
+	var whitelist = [
+		'',
+		'jak-to-dziala',
+		'nasze-przepisy',
+		'?code=' + sPageURL,
+		'o-nas',
+		'pracuj-w-psibufet',
+		'kontakt',
+		'thank-you',
+		'regulamin',
+		'regulamin.pdf',
+		'gs-wolowelove',
+	];
 
     if (typeof sPageURL === 'undefined'){
         var firstletter = sPageURL;
