@@ -800,3 +800,111 @@ $(document).on("click", "#copybtn", function () {
 });
 
 
+/* Google Shopping pages */
+$(document).ready(function(){
+
+    /* Content gallery */
+    $('.gsKarmainfo__gallery .gallery').slick({
+        dots: false,
+        infinite: false,
+    });
+
+    /* Select dropdown */
+    $('.gsKarmainfo__content .select').on('click', function(){
+        var text = $(this).find('.select__selected').find('p').text();
+        $(this).toggleClass('active');
+        $(this).find('.select__selected').find('p').text(
+            text == "Zobacz oferowane porcje dzienne" ? "Oferowane porcje dzienne" : "Zobacz oferowane porcje dzienne"
+            );
+        $(this).find('.select__options').slideToggle();
+    });
+    $(document).mouseup(function(e){
+        var element = $('.select__options');
+        if (!element.is(e.target) && element.has(e.target).length === 0){
+            if(element.parent().hasClass('active')){
+                element.parent().find('.select__selected').find('p').text('Zobacz oferowane porcje dzienne');
+                element.slideUp();
+            }
+        }
+    });
+
+    /* Select default */
+    $('.select__option').each(function(){
+        if($(this).hasClass('select__option--default')){
+            var value = $(this).attr('data-value');
+            var price_zl = $(this).attr('data-price-zl');
+            var price_gr = $(this).attr('data-price-gr');
+
+            var contentPrice_zl = $('#flavourPrice').find('span.value');
+            contentPrice_zl.html(price_zl + '<small>' + price_gr + '</small>');
+
+            var contentValue = $('#flavourValue').find('span');
+            contentValue.text(value);
+        }
+    });
+
+    /* Select insert values */
+    $('.select__option').on('click', function(){
+        var value = $(this).attr('data-value');
+        var price_zl = $(this).attr('data-price-zl');
+        var price_gr = $(this).attr('data-price-gr');
+
+        var contentPrice_zl = $('#flavourPrice').find('span.value');
+        contentPrice_zl.html(price_zl + '<small>' + price_gr + '</small>');
+
+        var contentValue = $('#flavourValue').find('span');
+        contentValue.text(value);
+    });
+
+    /* Modal open */
+
+    var modal = $('.foodModal');
+    var closeBtn = $('.foodModal').find('.closeFoodModal');
+    var openstatus;
+
+    $('.infoButton').on('click', function(){
+        $('body').addClass('noscroll');
+
+        modal.find('.foodModal__content').addClass('foodModal__content--active');
+        modal.addClass('foodModal--ready');
+        setTimeout(function(){
+            modal.addClass('foodModal--active');
+            openstatus = true;
+        }, 300);
+
+        setTimeout(function(){
+            $(document).mouseup(function(e){
+                var modalWrap = modal.find('.foodModal__wrap');
+                if (!modalWrap.is(e.target) && modalWrap.has(e.target).length === 0 && openstatus == true){
+                    $('body').removeClass('noscroll');
+                    modal.removeClass('foodModal--active');
+                    setTimeout(function(){
+                        modal.removeClass('foodModal--ready');
+                        modal.find('.foodModal__content').removeClass('foodModal__content--active');
+                        openstatus = false;
+                    }, 300);
+                }
+            });
+        }, 1000);
+
+        $('.foodModal__content .gallery').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: true,
+            adaptiveHeight: true,
+            variableWidth: true,
+            infinite: true,
+        });
+        
+        $(closeBtn).on('click', function(){
+            $('body').removeClass('noscroll');
+            modal.removeClass('foodModal--active');
+            setTimeout(function(){
+                modal.removeClass('foodModal--ready');
+                modal.find('.foodModal__content').removeClass('foodModal__content--active');
+                openstatus = false;
+            }, 300);
+        });
+    });
+});

@@ -722,6 +722,120 @@ body.promocode .siteHeader--scrolled {
   }
 }
 
+.flavourTile {
+  max-width: 374px;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.flavourTile__thumb {
+  height: 234px;
+  width: 100%;
+}
+
+.flavourTile__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flavourTile__bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 46px;
+  position: relative;
+}
+
+.flavourTile__bar p {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 35px;
+  line-height: 42px;
+  font-weight: 400;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+  padding-top: 4px;
+}
+
+.flavourTile__bar img {
+  position: absolute;
+  right: 5px;
+  top: -5px;
+  height: 56px;
+  max-width: 87px;
+}
+
+.flavourTile__content {
+  padding: 25px 30px 40px;
+  border: 0 1px 1px 1px solid #4c4c4c;
+}
+
+.flavourTile__content .desc {
+  font-size: 18px;
+  line-height: 21px;
+  color: #7f7f7f;
+  text-align: center;
+  margin: 0 0 34px;
+}
+
+@media (max-width: 1200px) and (min-width: 992px) {
+  .flavourTile {
+    max-width: 300px;
+  }
+  .flavourTile__thumb {
+    height: 200px;
+  }
+  .flavourTile__bar {
+    height: 42px;
+  }
+  .flavourTile__bar p {
+    font-size: 30px;
+    line-height: 34px;
+  }
+  .flavourTile__bar img {
+    height: 46px;
+    max-width: 67px;
+  }
+  .flavourTile__content {
+    padding: 25px 25px 30px;
+  }
+  .flavourTile__content .desc {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+@media (max-width: 767px) {
+  .flavourTile {
+    max-width: 320px;
+  }
+  .flavourTile__thumb {
+    height: 200px;
+  }
+  .flavourTile__bar {
+    height: 35px;
+  }
+  .flavourTile__bar p {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .flavourTile__bar img {
+    height: 46px;
+    max-width: 67px;
+  }
+  .flavourTile__content {
+    padding: 20px 28px 32px;
+  }
+  .flavourTile__content .desc {
+    font-size: 12px;
+    line-height: 14px;
+    margin: 0 0 20px;
+  }
+}
+
 /*  Sections 
 --------------- */
 /*  Subpages 
@@ -3947,6 +4061,625 @@ body.admin-bar .foodModal__wrap {
   .homeFaq__list .question__heading p {
     font-size: 16px;
     line-height: 19px;
+  }
+}
+
+body.page-template-page_gskarmy .siteHeader {
+  box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.gsPage .homeHowitworks__wrap:before {
+  display: none;
+}
+
+.gsHeading {
+  padding: 60px 0 72px;
+}
+
+.gsHeading__wrap h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 60px;
+  line-height: 72px;
+  font-weight: 300;
+  color: #000;
+  margin: 0 0 15px;
+  text-align: center;
+}
+
+.gsHeading__wrap h1 .marker:after {
+  bottom: 13px;
+}
+
+.gsHeading__wrap p {
+  font-size: 25px;
+  line-height: 29px;
+  color: #000;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 545px;
+}
+
+@media (max-width: 767px) {
+  .gsHeading {
+    padding: 30px 20px 40px;
+  }
+  .gsHeading__wrap h1 {
+    font-size: 52px;
+    line-height: 62px;
+  }
+  .gsHeading__wrap p {
+    font-size: 20px;
+    line-height: 23px;
+  }
+}
+
+.gsKarmainfo {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
+
+.gsKarmainfo__wrap {
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.gsKarmainfo__gallery {
+  width: 50%;
+}
+
+.gsKarmainfo__gallery .gallery {
+  height: 535px;
+  margin-bottom: 0;
+}
+
+.gsKarmainfo__gallery .gallery__photo {
+  height: 535px;
+}
+
+.gsKarmainfo__gallery .gallery__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gsKarmainfo__gallery .gallery .slick-arrow {
+  background-repeat: no-repeat;
+  background-size: 40px;
+  width: 40px;
+  height: 40px;
+  opacity: .8;
+  font-size: 0;
+  background-color: unset;
+  border: 0;
+  padding: 0;
+  transition: ease .3s;
+  position: absolute;
+  top: 50%;
+  outline: none;
+  transform: translate(0, -50%);
+  z-index: 5;
+}
+
+.gsKarmainfo__gallery .gallery .slick-arrow.slick-prev {
+  background-image: url("/wp-content/themes/psibufet/images/icons/slider_arrow_left.svg");
+  left: 20px;
+}
+
+.gsKarmainfo__gallery .gallery .slick-arrow.slick-next {
+  background-image: url("/wp-content/themes/psibufet/images/icons/slider_arrow_right.svg");
+  right: 20px;
+}
+
+.gsKarmainfo__gallery .gallery .slick-arrow.slick-disabled {
+  opacity: .3;
+  pointer-events: none;
+}
+
+.gsKarmainfo__gallery .bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 78px;
+  position: relative;
+}
+
+.gsKarmainfo__gallery .bar p {
+  font-size: 60px;
+  line-height: 1;
+  font-family: "Bebas Neue", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.gsKarmainfo__gallery .bar img {
+  position: absolute;
+  top: -10px;
+  right: 15px;
+  height: 92px;
+  max-width: 125px;
+}
+
+.gsKarmainfo__contentWrap {
+  width: 100%;
+}
+
+.gsKarmainfo__content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gsKarmainfo__content .price {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 41px;
+  line-height: 50px;
+  font-weight: 300;
+  text-align: center;
+  color: #129D6F;
+  margin: 0;
+}
+
+.gsKarmainfo__content .price span {
+  font-size: 71px;
+  line-height: 85px;
+}
+
+.gsKarmainfo__content .price span.value {
+  position: relative;
+  padding-right: 35px;
+  margin-right: 10px;
+}
+
+.gsKarmainfo__content .price span.value small {
+  position: absolute;
+  font-size: 60%;
+  line-height: 1;
+  top: 11px;
+  right: 0;
+  color: #129D6F;
+}
+
+.gsKarmainfo__content .portion {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 300;
+  color: #000;
+  text-align: center;
+  margin: 0 0 32px;
+}
+
+.gsKarmainfo__content .select {
+  position: relative;
+  max-width: 445px;
+  margin: 0 auto 36px;
+  z-index: 10;
+}
+
+.gsKarmainfo__content .select.active .select__selected:after {
+  transform: rotate(-180deg);
+  top: 40%;
+}
+
+.gsKarmainfo__content .select__selected {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 48px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  position: relative;
+}
+
+.gsKarmainfo__content .select__selected:after {
+  content: '';
+  background-image: url("/wp-content/themes/psibufet/images/chevron_down.svg");
+  background-repeat: no-repeat;
+  background-size: 16px;
+  width: 16px;
+  height: 12px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translate(0, -50%);
+  transition: ease .3s;
+}
+
+.gsKarmainfo__content .select__selected p {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 25px;
+  line-height: 1;
+  font-weight: 300;
+  color: #000;
+  text-align: center;
+  margin: 0;
+  padding-top: 4px;
+}
+
+.gsKarmainfo__content .select__options {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: 0;
+  box-shadow: 4px 5px 0px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: calc(100% - 1px);
+  width: 100%;
+  padding-bottom: 12px;
+  display: none;
+}
+
+.gsKarmainfo__content .select__heading {
+  display: flex;
+  justify-content: space-around;
+  max-width: calc(100% - 42px);
+  margin: 0 auto;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 12px 0 6px;
+}
+
+.gsKarmainfo__content .select__heading p {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 21px;
+  line-height: 1;
+  font-weight: 300;
+  color: #000;
+  text-align: center;
+  margin: 0;
+}
+
+.gsKarmainfo__content .select__list {
+  max-width: calc(100% - 42px);
+  margin: 0 auto;
+  max-height: 125px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.gsKarmainfo__content .select__list::-webkit-scrollbar {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+  width: 4px;
+}
+
+.gsKarmainfo__content .select__list::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  width: 4px;
+}
+
+.gsKarmainfo__content .select__option {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 4px;
+  height: 25px;
+  cursor: pointer;
+  padding-top: 3px;
+  transition: ease .3s;
+}
+
+.gsKarmainfo__content .select__option:hover {
+  background-color: #f15748;
+}
+
+.gsKarmainfo__content .select__option:hover .portion,
+.gsKarmainfo__content .select__option:hover .value {
+  color: #fff;
+}
+
+.gsKarmainfo__content .select__option .portion,
+.gsKarmainfo__content .select__option .value {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 300;
+  text-align: center;
+  color: #000;
+  margin: 0;
+  transition: ease .3s;
+}
+
+.gsKarmainfo__content .select__option .portion span,
+.gsKarmainfo__content .select__option .value span {
+  position: relative;
+  padding-right: 10px;
+}
+
+.gsKarmainfo__content .select__option .portion span small,
+.gsKarmainfo__content .select__option .value span small {
+  font-size: 75%;
+  line-height: 1;
+  position: absolute;
+  top: 2px;
+  right: 0;
+}
+
+.gsKarmainfo__content .desc {
+  font-size: 21px;
+  line-height: 25px;
+  color: #4c4c4c;
+  max-width: 410px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.gsKarmainfo__content .infoButton {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  max-width: fit-content;
+  margin: 16px auto 40px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #4c4c4c;
+  cursor: pointer;
+  transition: ease .3s;
+}
+
+.gsKarmainfo__content .infoButton:hover {
+  opacity: .7;
+}
+
+.gsKarmainfo__content .infoButton img {
+  margin-right: 8px;
+}
+
+@media (max-width: 1240px) {
+  .gsKarmainfo {
+    max-width: 1160px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .gsKarmainfo {
+    max-width: 960px;
+  }
+  .gsKarmainfo__gallery .gallery {
+    height: 400px;
+  }
+  .gsKarmainfo__gallery .gallery__photo {
+    height: 400px;
+  }
+  .gsKarmainfo__gallery .bar {
+    height: 68px;
+  }
+  .gsKarmainfo__gallery .bar p {
+    font-size: 50px;
+  }
+  .gsKarmainfo__gallery .bar img {
+    right: 10px;
+    height: 82px;
+    max-width: 105px;
+  }
+  .gsKarmainfo__content .portion {
+    margin: 0 0 20px;
+  }
+  .gsKarmainfo__content .select {
+    margin: 0 auto 25px;
+  }
+  .gsKarmainfo__content .desc {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .gsKarmainfo__content .infoButton {
+    margin: 16px auto 30px;
+  }
+}
+
+@media (max-width: 991px) {
+  .gsKarmainfo {
+    max-width: 720px;
+  }
+  .gsKarmainfo__wrap {
+    flex-direction: column;
+  }
+  .gsKarmainfo__gallery {
+    width: 100%;
+  }
+  .gsKarmainfo__content {
+    width: 100%;
+    padding: 30px 0 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .gsKarmainfo {
+    max-width: calc(100% - 40px);
+  }
+}
+
+@media (max-width: 550px) {
+  .gsKarmainfo__gallery .gallery {
+    height: 290px;
+  }
+  .gsKarmainfo__gallery .gallery .slick-arrow {
+    background-size: 32px;
+    width: 32px;
+    height: 32px;
+  }
+  .gsKarmainfo__gallery .gallery__photo {
+    height: 290px;
+  }
+  .gsKarmainfo__gallery .bar {
+    height: 42px;
+  }
+  .gsKarmainfo__gallery .bar p {
+    font-size: 32px;
+    line-height: 38px;
+    padding-top: 3px;
+  }
+  .gsKarmainfo__gallery .bar img {
+    top: -3px;
+    right: 10px;
+    height: 48px;
+    max-width: 63px;
+  }
+  .gsKarmainfo__content {
+    padding: 23px 0 32px;
+  }
+  .gsKarmainfo__content .price {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .gsKarmainfo__content .price span {
+    font-size: 38px;
+    line-height: 46px;
+  }
+  .gsKarmainfo__content .price span.value {
+    padding-right: 20px;
+    margin-right: 5px;
+  }
+  .gsKarmainfo__content .price span.value small {
+    top: 5px;
+  }
+  .gsKarmainfo__content .portion {
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0 0 15px;
+  }
+  .gsKarmainfo__content .select {
+    max-width: 240px;
+    margin: 0 auto 20px;
+  }
+  .gsKarmainfo__content .select__selected {
+    height: 28px;
+  }
+  .gsKarmainfo__content .select__selected:after {
+    background-size: 9px;
+    width: 9px;
+    height: 7px;
+    right: 10px;
+  }
+  .gsKarmainfo__content .select__selected p {
+    font-size: 14px;
+    padding-top: 2px;
+  }
+  .gsKarmainfo__content .select__options {
+    padding-bottom: 8px;
+  }
+  .gsKarmainfo__content .select__heading {
+    padding: 7px 0 6px;
+    max-width: calc(100% - 18px);
+  }
+  .gsKarmainfo__content .select__heading p {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .gsKarmainfo__content .select__list {
+    max-width: calc(100% - 18px);
+    max-height: 85px;
+  }
+  .gsKarmainfo__content .select__option {
+    padding-top: 0;
+    height: 17px;
+  }
+  .gsKarmainfo__content .select__option .portion {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .gsKarmainfo__content .select__option .value {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .gsKarmainfo__content .select__option .value span {
+    padding-right: 7px;
+  }
+  .gsKarmainfo__content .select__option .value span small {
+    top: 1px;
+  }
+  .gsKarmainfo__content .desc {
+    max-width: 240px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .gsKarmainfo__content .infoButton {
+    font-size: 12px;
+    line-height: 14px;
+    margin: 16px auto 20px;
+  }
+  .gsKarmainfo__content .infoButton img {
+    margin-right: 5px;
+    max-width: 18px;
+  }
+  .gsKarmainfo__content .btn span {
+    position: relative;
+    top: -2px;
+  }
+  .gsKarmainfo__content .btn span:after {
+    top: 62%;
+  }
+}
+
+.gsKarmaList {
+  background-image: url("/wp-content/themes/psibufet/images/gspages/marmurbg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.gsKarmaList__wrap {
+  padding: 32px 0 40px;
+}
+
+.gsKarmaList__heading h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 41px;
+  line-height: 49px;
+  font-weight: 400;
+  margin: 0 0 30px;
+  text-align: center;
+  color: #000;
+}
+
+.gsKarmaList__list {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1240px) {
+  .gsKarmaList__list {
+    max-width: 1160px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .gsKarmaList__list {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 991px) {
+  .gsKarmaList__list {
+    max-width: 374px;
+    flex-direction: column;
+  }
+  .gsKarmaList__list .flavourTile {
+    margin-bottom: 25px;
+  }
+  .gsKarmaList__list .flavourTile:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .gsKarmaList__list {
+    max-width: 360px;
+    padding: 0 20px;
+  }
+  .gsKarmaList__wrap {
+    padding: 15px 0 20px;
+  }
+  .gsKarmaList__heading h2 {
+    font-size: 28px;
+    line-height: 34px;
+    margin: 0 0 15px;
   }
 }
 

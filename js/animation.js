@@ -108,6 +108,36 @@ $(window).on('scroll', function () {
     }
 });
 
+/********** Google Shopping pages **********/
+
+$(document).ready(function() {
+    var gsPageHeader = $('.gsHeading').find('.getMarker');
+    var gsKarmaList = $('.gsKarmaList__heading').find('.getMarker');
+
+    if($(gsPageHeader).visible(true)){
+        setTimeout(function(){
+            gsPageHeader.addClass('init');
+        }, 500)
+    }
+    if($(gsKarmaList).visible(true)){
+        setTimeout(function(){
+            gsKarmaList.addClass('init');
+        }, 500)
+    }
+    $(window).on('scroll', function(){
+        if($(gsPageHeader).visible(true)){
+            setTimeout(function(){
+                gsPageHeader.addClass('init');
+            }, 500)
+        }
+        if($(gsKarmaList).visible(true)){
+            setTimeout(function(){
+                gsKarmaList.addClass('init');
+            }, 500)
+        }
+    });
+});
+
 /********** PODKREŚLENIA NASZE PRZEPISY **********/
 
 // $(window).on('scroll', function () {

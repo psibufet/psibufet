@@ -34,13 +34,14 @@
             }); 
         });
     </script>
+    <script src="/wp-content/themes/psibufet/flexslider/jquery.flexslider.js"></script>
+    <script src="/wp-content/themes/psibufet/slick/slick.min.js"></script>
+    <!-- <script type="text/javascript" src="/wp-content/themes/psibufet/plugins/select-dropdown/select-dropdown.js"></script> -->
+    <script src="/wp-content/themes/psibufet/plugins/visible/jquery.visible.min.js" type="text/javascript"></script>
+    <script src="/wp-content/themes/psibufet/js/custom.js" type="text/javascript"></script>
     <script type="text/javascript" src="/wp-content/themes/psibufet/js/animation.js"></script>
     <script type="text/javascript" src="/wp-content/themes/psibufet/js/dataLayers.js"></script>
     <script type="text/javascript" src="/wp-content/themes/psibufet/js/referralCode.js"></script>
-    <script src="/wp-content/themes/psibufet/flexslider/jquery.flexslider.js"></script>
-    <script src="/wp-content/themes/psibufet/slick/slick.min.js"></script>
-    <script src="/wp-content/themes/psibufet/plugins/visible/jquery.visible.min.js" type="text/javascript"></script>
-    <script src="/wp-content/themes/psibufet/js/custom.js" type="text/javascript"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
