@@ -806,7 +806,7 @@ $(document).ready(function(){
     /* Content gallery */
     $('.gsKarmainfo__gallery .gallery').slick({
         dots: false,
-        infinite: false,
+        infinite: true,
     });
 
     /* Select dropdown */
@@ -822,6 +822,7 @@ $(document).ready(function(){
         var element = $('.select__options');
         if (!element.is(e.target) && element.has(e.target).length === 0){
             if(element.parent().hasClass('active')){
+                element.parent().removeClass('active');
                 element.parent().find('.select__selected').find('p').text('Zobacz oferowane porcje dzienne');
                 element.slideUp();
             }

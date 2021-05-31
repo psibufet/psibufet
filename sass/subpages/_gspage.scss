@@ -490,11 +490,11 @@ body{
                 margin: 0 0 15px;
             }
             .select{
-                max-width: 240px;
+                max-width: 280px;
                 margin: 0 auto 20px;
 
                 &__selected{
-                    height: 28px;
+                    height: 35px;
 
                     &:after{
                         background-size: 9px;
@@ -504,7 +504,7 @@ body{
                     }
 
                     p{
-                        font-size: 14px;
+                        font-size: 16px;
                         padding-top: 2px;
                     }
                 }
@@ -522,25 +522,25 @@ body{
                 }
                 &__list{
                     max-width: calc(100% - 18px);
-                    max-height: 85px;
+                    max-height: 100px;
                 }
                 &__option{
                     padding-top: 0;
-                    height: 17px;
+                    height: 20px;
 
                     .portion{
-                        font-size: 10px;
-                        line-height: 12px;
+                        font-size: 12px;
+                        line-height: 14px;
                     }
                     .value{
-                        font-size: 10px;
-                        line-height: 12px;
+                        font-size: 12px;
+                        line-height: 14px;
 
                         span{
-                            padding-right: 7px;
+                            padding-right: 8px;
 
                             small{
-                                top: 1px;
+                                top: 2px;
                             }
                         }
                     }

@@ -3116,6 +3116,7 @@ body.admin-bar{
             &:before{
                 opacity: 1;
                 top: -130px;
+                
             }
             &:after{
                 opacity: 1;
@@ -3279,6 +3280,7 @@ body.admin-bar{
                 margin: 0 auto;
                 opacity: 0;
                 z-index: 1;
+                pointer-events: none;
                 transition: .5s ease .3s;
             }
             &:after{

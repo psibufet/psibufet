@@ -21,7 +21,7 @@ get_header(); ?>
                     <?php foreach( $featuredFlavour as $post ): setup_postdata($post); ?>
                         <?php while(have_rows('gspageGallery')): the_row(); ?>
                         <div class="gallery__photo">
-                            <img src="<?php echo get_sub_field('gspageGallery_image'); ?>"/>
+                            <img src="<?php echo get_sub_field('gspageGallery_image'); ?>" class="no-lazyload"/>
                         </div>
                         <?php endwhile; ?>
                     <?php endforeach; ?>
@@ -60,7 +60,7 @@ get_header(); ?>
                     </div>
                     <p class="desc"><?php the_field('gspageDesc'); ?></p>
                     <div class="infoButton"><img src="<?php echo get_template_directory_uri() . '/images/icons/info_icon_black.svg'; ?>"/>Zobacz skład</div>
-                    <a href="#" class="btn btn--center"><span>Dobierz porcję</span></a>
+                    <a href="https://zamowienie.psibufet.pl/" class="btn btn--center"><span>Dobierz porcję</span></a>
                 </div>
             </div>
         </div>

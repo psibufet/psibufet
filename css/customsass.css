@@ -3866,6 +3866,7 @@ body.admin-bar .foodModal__wrap {
     margin: 0 auto;
     opacity: 0;
     z-index: 1;
+    pointer-events: none;
     transition: .5s ease .3s;
   }
   .homeStart__wrap:after {
@@ -4544,11 +4545,11 @@ body.page-template-page_gskarmy .siteHeader {
     margin: 0 0 15px;
   }
   .gsKarmainfo__content .select {
-    max-width: 240px;
+    max-width: 280px;
     margin: 0 auto 20px;
   }
   .gsKarmainfo__content .select__selected {
-    height: 28px;
+    height: 35px;
   }
   .gsKarmainfo__content .select__selected:after {
     background-size: 9px;
@@ -4557,7 +4558,7 @@ body.page-template-page_gskarmy .siteHeader {
     right: 10px;
   }
   .gsKarmainfo__content .select__selected p {
-    font-size: 14px;
+    font-size: 16px;
     padding-top: 2px;
   }
   .gsKarmainfo__content .select__options {
@@ -4573,25 +4574,25 @@ body.page-template-page_gskarmy .siteHeader {
   }
   .gsKarmainfo__content .select__list {
     max-width: calc(100% - 18px);
-    max-height: 85px;
+    max-height: 100px;
   }
   .gsKarmainfo__content .select__option {
     padding-top: 0;
-    height: 17px;
+    height: 20px;
   }
   .gsKarmainfo__content .select__option .portion {
-    font-size: 10px;
-    line-height: 12px;
+    font-size: 12px;
+    line-height: 14px;
   }
   .gsKarmainfo__content .select__option .value {
-    font-size: 10px;
-    line-height: 12px;
+    font-size: 12px;
+    line-height: 14px;
   }
   .gsKarmainfo__content .select__option .value span {
-    padding-right: 7px;
+    padding-right: 8px;
   }
   .gsKarmainfo__content .select__option .value span small {
-    top: 1px;
+    top: 2px;
   }
   .gsKarmainfo__content .desc {
     max-width: 240px;
