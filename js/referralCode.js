@@ -11,7 +11,7 @@ $(document).ready(function(){
 	}  
    
 	var sPageURL = window.location.pathname.replace('/','');
-	var whitelist = ['', 'jak-to-dziala', 'nasze-przepisy', '?code=' + sPageURL, 'o-nas', 'pracuj-w-psibufet', 'kontakt', 'thank-you', 'regulamin', 'regulamin.pdf', 'gs-wolowe-love', 'gs-jagnie-wcina', 'gs-kurcze-pieczone', 'gs-indyczy-kasek', 'regulamin_dla_hodowcow.pdf'];
+	var whitelist = ['', 'jak-to-dziala', 'nasze-przepisy', '?code=' + sPageURL, 'o-nas', 'pracuj-w-psibufet', 'kontakt', 'thank-you', 'regulamin', 'regulamin.pdf', 'wolowe-love', 'jagnie-wcina', 'kurcze-pieczone', 'indyczy-kasek', 'regulamin_dla_hodowcow.pdf'];
 
     if (typeof sPageURL === 'undefined'){
         var firstletter = sPageURL;
