@@ -810,21 +810,21 @@ $(document).ready(function(){
     });
 
     /* Select dropdown */
-    $('.gsKarmainfo__content .select').on('click', function(){
-        var text = $(this).find('.select__selected').find('p').text();
-        $(this).toggleClass('active');
-        $(this).find('.select__selected').find('p').text(
+    $('.gsKarmainfo__content .select__selected').on('click', function(){
+        var text = $(this).find('p').text();
+        $(this).parent().toggleClass('active');
+        $(this).find('p').text(
             text == "Zobacz oferowane porcje dzienne" ? "Oferowane porcje dzienne" : "Zobacz oferowane porcje dzienne"
             );
-        $(this).find('.select__options').slideToggle();
+        $(this).parent().find('.select__options').slideToggle();
     });
     $(document).mouseup(function(e){
-        var element = $('.select__options');
+        var element = $('.select');
         if (!element.is(e.target) && element.has(e.target).length === 0){
-            if(element.parent().hasClass('active')){
-                element.parent().removeClass('active');
-                element.parent().find('.select__selected').find('p').text('Zobacz oferowane porcje dzienne');
-                element.slideUp();
+            if(element.hasClass('active')){
+                element.removeClass('active');
+                element.find('.select__selected').find('p').text('Zobacz oferowane porcje dzienne');
+                element.find('.select__options').slideUp();
             }
         }
     });

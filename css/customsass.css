@@ -4088,7 +4088,7 @@ body.page-template-page_gskarmy .siteHeader {
 }
 
 .gsHeading__wrap h1 .marker:after {
-  bottom: 13px;
+  bottom: 16px;
 }
 
 .gsHeading__wrap p {
@@ -4337,7 +4337,7 @@ body.page-template-page_gskarmy .siteHeader {
 .gsKarmainfo__content .select__list {
   max-width: calc(100% - 42px);
   margin: 0 auto;
-  max-height: 125px;
+  max-height: 150px;
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -4359,7 +4359,7 @@ body.page-template-page_gskarmy .siteHeader {
   align-items: center;
   justify-content: space-around;
   margin-left: 4px;
-  height: 25px;
+  height: 30px;
   cursor: pointer;
   padding-top: 3px;
   transition: ease .3s;
@@ -4377,8 +4377,8 @@ body.page-template-page_gskarmy .siteHeader {
 .gsKarmainfo__content .select__option .portion,
 .gsKarmainfo__content .select__option .value {
   font-family: "Bebas Neue", sans-serif;
-  font-size: 16px;
-  line-height: 19px;
+  font-size: 21px;
+  line-height: 24px;
   font-weight: 300;
   text-align: center;
   color: #000;
@@ -4389,7 +4389,7 @@ body.page-template-page_gskarmy .siteHeader {
 .gsKarmainfo__content .select__option .portion span,
 .gsKarmainfo__content .select__option .value span {
   position: relative;
-  padding-right: 10px;
+  padding-right: 14px;
 }
 
 .gsKarmainfo__content .select__option .portion span small,
@@ -4397,7 +4397,7 @@ body.page-template-page_gskarmy .siteHeader {
   font-size: 75%;
   line-height: 1;
   position: absolute;
-  top: 2px;
+  top: 3px;
   right: 0;
 }
 
@@ -4549,16 +4549,16 @@ body.page-template-page_gskarmy .siteHeader {
     margin: 0 auto 20px;
   }
   .gsKarmainfo__content .select__selected {
-    height: 35px;
+    height: 40px;
   }
   .gsKarmainfo__content .select__selected:after {
-    background-size: 9px;
-    width: 9px;
-    height: 7px;
+    background-size: 11px;
+    width: 11px;
+    height: 8px;
     right: 10px;
   }
   .gsKarmainfo__content .select__selected p {
-    font-size: 16px;
+    font-size: 18px;
     padding-top: 2px;
   }
   .gsKarmainfo__content .select__options {
@@ -4569,27 +4569,27 @@ body.page-template-page_gskarmy .siteHeader {
     max-width: calc(100% - 18px);
   }
   .gsKarmainfo__content .select__heading p {
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 16px;
+    line-height: 18px;
   }
   .gsKarmainfo__content .select__list {
     max-width: calc(100% - 18px);
-    max-height: 100px;
+    max-height: 125px;
   }
   .gsKarmainfo__content .select__option {
     padding-top: 0;
-    height: 20px;
+    height: 25px;
   }
   .gsKarmainfo__content .select__option .portion {
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 16px;
+    line-height: 18px;
   }
   .gsKarmainfo__content .select__option .value {
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 16px;
+    line-height: 18px;
   }
   .gsKarmainfo__content .select__option .value span {
-    padding-right: 8px;
+    padding-right: 11px;
   }
   .gsKarmainfo__content .select__option .value span small {
     top: 2px;
