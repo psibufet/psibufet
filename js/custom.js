@@ -803,6 +803,16 @@ $(document).on("click", "#copybtn", function () {
 /* Google Shopping pages */
 $(document).ready(function(){
 
+    /* Close select dropdown function */
+    function closeSelectDropdown(){
+        var select = $('.gsKarmainfo__content .select__selected');
+        var text = select.find('p');
+
+        select.parent().removeClass('active');
+        text.text('Zobacz oferowane porcje dzienne');
+        select.parent().find('.select__options').slideUp();
+    }
+
     /* Content gallery */
     $('.gsKarmainfo__gallery .gallery').slick({
         dots: false,
@@ -855,6 +865,8 @@ $(document).ready(function(){
 
         var contentValue = $('#flavourValue').find('span');
         contentValue.text(value);
+
+        closeSelectDropdown();
     });
 
     /* Modal open */
