@@ -5215,7 +5215,7 @@ body.page-template-page_lpsale #siteFooter .siteFooter__wrap {
 }
 
 .saleMiska__miska {
-  width: 320px;
+  width: 650px;
   height: inherit;
   overflow: hidden;
   position: relative;
@@ -5225,9 +5225,9 @@ body.page-template-page_lpsale #siteFooter .siteFooter__wrap {
 
 .saleMiska__miska .ba_img {
   display: block;
-  width: 320px;
-  max-width: 320px;
-  height: 320px;
+  width: 650px;
+  max-width: 650px;
+  height: 650px;
   position: absolute;
   left: 0;
 }
@@ -5236,8 +5236,8 @@ body.page-template-page_lpsale #siteFooter .siteFooter__wrap {
   background-image: url("/wp-content/themes/psibufet/images/imageanimate/before_new.png");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 320px;
-  height: 320px;
+  width: 650px;
+  height: 650px;
   position: absolute;
   top: 50%;
   left: 0;
@@ -5259,8 +5259,8 @@ body.page-template-page_lpsale #siteFooter .siteFooter__wrap {
   background-image: url("/wp-content/themes/psibufet/images/miska_after.png");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 320px;
-  height: 320px;
+  width: 650px;
+  height: 650px;
   position: absolute;
   top: 50%;
   left: 0;
@@ -5342,7 +5342,21 @@ body.page-template-page_lpsale #siteFooter .siteFooter__wrap {
     height: 500px;
   }
   .saleMiska__miska {
+    width: 450px;
     height: 400px;
+  }
+  .saleMiska__miska .ba_img {
+    width: 450px;
+    max-width: 450px;
+    height: 450px;
+  }
+  .saleMiska__miska .ba_img.before {
+    width: 450px;
+    height: 450px;
+  }
+  .saleMiska__miska .ba_img.after {
+    width: 450px;
+    height: 450px;
   }
   .saleMiska__usp {
     max-width: 740px;
@@ -5368,7 +5382,21 @@ body.page-template-page_lpsale #siteFooter .siteFooter__wrap {
     height: auto;
   }
   .saleMiska__miska {
+    width: 320px;
     height: 300px;
+  }
+  .saleMiska__miska .ba_img {
+    width: 320px;
+    max-width: 320px;
+    height: 320px;
+  }
+  .saleMiska__miska .ba_img.before {
+    width: 320px;
+    height: 320px;
+  }
+  .saleMiska__miska .ba_img.after {
+    width: 320px;
+    height: 320px;
   }
   .saleMiska__usp {
     display: none;

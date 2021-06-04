@@ -435,13 +435,6 @@ body.page-template-page_lpsale{
 
     $imageswidth: 650px;
 
-    @media (max-width: 991px){
-        $imageswidth: 450px;
-    }
-    @media (max-width: 767px){
-        $imageswidth: 320px;
-    }
-
     &__miska{
         width: $imageswidth;
         height: inherit;
@@ -565,8 +558,26 @@ body.page-template-page_lpsale{
         &__wrap{
             height: 500px;
         }
+        $imageswidth: 450px;
+
         &__miska{
+            width: $imageswidth;
             height: 400px;
+
+            .ba_img{
+                width: $imageswidth;
+                max-width: $imageswidth;
+                height: $imageswidth;
+
+                &.before{
+                    width: $imageswidth;
+                    height: $imageswidth;
+                }
+                &.after{
+                    width: $imageswidth;
+                    height: $imageswidth;
+                }
+            }
         }
         &__usp{
             max-width: 740px;
@@ -594,8 +605,26 @@ body.page-template-page_lpsale{
         &__wrap{
             height: auto;
         }
+        $imageswidth: 320px;
+
         &__miska{
+            width: $imageswidth;
             height: 300px;
+
+            .ba_img{
+                width: $imageswidth;
+                max-width: $imageswidth;
+                height: $imageswidth;
+
+                &.before{
+                    width: $imageswidth;
+                    height: $imageswidth;
+                }
+                &.after{
+                    width: $imageswidth;
+                    height: $imageswidth;
+                }
+            }
         }
         &__usp{
             display: none;
