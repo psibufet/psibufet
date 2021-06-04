@@ -52,7 +52,7 @@ get_header(); ?>
         </ul>
         <?php endif; ?>
     </section>
-    <section class="homeMiska container">
+    <section class="homeMiska animateMiska container">
         <div class="homeMiska__left">
             <h2 class="getMarker"><span class="marker">Prawdziwe jedzenie</span> w psiej misce</h2>
             <div class="content">

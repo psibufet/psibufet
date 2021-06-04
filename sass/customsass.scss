@@ -19,6 +19,7 @@
 --------------- */
 @import 'subpages/homepage';
 @import 'subpages/gspage';
+@import 'subpages/lpsale';
 
 /*  Global
 --------------- */
@@ -170,6 +171,16 @@ body{
             }
         }
     }
+    &--header{
+        min-width: 125px;
+        height: 38px;
+        line-height: 38px;
+
+        span{
+            font-size: 17px;
+            font-weight: 500;
+        }
+    }
 }
 @media (max-width: 991px){
     .btn{
@@ -179,6 +190,15 @@ body{
 
         span{
             font-size: 21px;
+        }
+        &--header{
+            min-width: 104px;
+            height: 34px;
+            line-height: 34px;
+
+            span{
+                font-size: 15px;
+            }
         }
     }
 }
@@ -212,6 +232,15 @@ body{
                     width: 9px;
                     height: 12px;
                 }
+            }
+        }
+        &--header{
+            min-width: 104px;
+            height: 34px;
+            line-height: 34px;
+
+            span{
+                font-size: 15px;
             }
         }
     }

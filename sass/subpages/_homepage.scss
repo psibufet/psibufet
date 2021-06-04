@@ -157,6 +157,7 @@
         height: 600px;
         background-image: url('/wp-content/themes/psibufet/images/header_img_mobile.png') !important;
         background-size: auto 100%;
+        background-color: #ffbb32;
 
         &__content{
             .tags{
@@ -720,6 +721,33 @@
                 font-weight: 700;
             }
         }
+        .boxes{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            max-width: 80%;
+            width: 100%;
+            margin: 0 auto 36px;
+
+            &__box{
+                max-width: 245px;
+                width: 100%;
+                margin: 0 auto;
+
+                img{
+                    margin: 0 auto 25px;
+                }
+                h3{
+                    font-family: $headingfont;
+                    font-size: 30px;
+                    line-height: 36px;
+                    font-weight: 400;
+                    color: #000;
+                    text-align: center;
+                    margin: 0;
+                }
+            }
+        }
         .info_boxes{
             display: flex;
             flex-wrap: wrap;
@@ -763,7 +791,7 @@
             box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
             padding: 15px 28px;
             max-width: 440px;
-            margin: 0 auto;
+            margin: 0 auto 20px;
 
             &__image{
                 width: 120px;
@@ -808,6 +836,38 @@
                         line-height: 23px;
                     }
                 }
+            }
+        }
+        .reviewBar{
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            height: 46px;
+            margin: 0 auto;
+            z-index: 4;
+            display: flex;
+            align-items: center;
+            padding: 14px 12px;
+            max-width: fit-content;
+    
+            .stars{
+                display: flex;
+                width: 100px;
+    
+                img{
+                    max-width: 16px;
+                    margin: 0 2px;
+                    filter: invert(45%) sepia(36%) saturate(1344%) hue-rotate(321deg) brightness(95%) contrast(99%);
+                }
+            }
+            p{
+                font-size: 14px;
+                line-height: 16px;
+                color: $primarycolor;
+                margin: 0 10px;
+            }
+            .logo{
+                width: 80px;
             }
         }
     }
@@ -859,6 +919,20 @@
         }
         &__info{
             width: 180px;
+        }
+        &__right{
+            .boxes{
+                &__box{
+                    img{
+                        max-width: 170px;
+                        max-height: 115px;
+                    }
+                    h3{
+                        font-size: 24px;
+                        line-height: 28px;
+                    }
+                }
+            }
         }
     }
 }
@@ -1006,6 +1080,31 @@
                 font-size: 12px;
                 line-height: 16px;
             }
+            .boxes{
+                max-width: 400px;
+            }
+            .reviewBar{
+                max-width: none;
+                width: 280px;
+                
+                .stars{
+                    width: 76px;
+    
+                    img{
+                        max-width: 13px;
+                        margin: 0 1px;
+                    }
+                }
+                p{
+                    font-size: 11px;
+                    line-height: 14px;
+                    margin: 0 8px;
+                    white-space: nowrap;
+                }
+                .logo{
+                    width: 60px;
+                }
+            }
         }
     }
 }
@@ -1031,6 +1130,30 @@
                 .box{
                     max-width: calc(100% / 2 - 10px);
                     width: 100%;
+                }
+            }
+            .boxes{
+                flex-direction: column;
+
+                &__box{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    max-width: 320px;
+
+                    &:first-of-type{
+                        margin-bottom: 20px;
+                    }
+
+                    img{
+                        max-width: 127px;
+                        margin: 0 20px 0 0;
+                    }
+                    h3{
+                        font-size: 19px;
+                        line-height: 22px;
+                        text-align: left;
+                    }
                 }
             }
         }

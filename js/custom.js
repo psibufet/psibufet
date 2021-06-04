@@ -931,3 +931,69 @@ $(document).ready(function(){
         btn.attr('href', href + slug);
     });
 });
+
+/* LP Sale
+------------- */
+
+$(document).ready(function(){
+
+    /* Form */
+
+    $('input[name="rasa_psa"]').on('keyup paste', function(){
+        var inputVal = $(this).val().toLowerCase();
+        var header = $('.saleHeader');
+        var correctInfo = $(this).parent().find('.correct');
+
+        listras = ['owczarek niemiecki', 'pekińczyk', 'test'];
+
+        console.log(inputVal);
+        if(listras.indexOf(inputVal) !== -1){
+            correctInfo.slideDown();
+            setTimeout(function(){
+                correctInfo.find('.getMarker').addClass('init');
+            }, 500);
+            console.log('correct');
+            header.addClass('saleHeader--correct');
+        }else{
+            correctInfo.slideUp();
+            setTimeout(function(){
+                correctInfo.find('.getMarker').removeClass('init');
+            }, 500);
+            console.log('false');
+            header.removeClass('saleHeader--correct');
+        }
+    });
+
+    /* Videos */
+
+    $('.videoSlide').eq(0).addClass('videoSlide--ready videoSlide--toggle');
+    $('.saleVideo').eq(0).addClass('saleVideo--selected');
+
+    $('.saleVideo').on('click', function(){
+        var videoID = $(this).attr('data-video');
+
+        $('.saleVideo').removeClass('saleVideo--selected');
+        $(this).addClass('saleVideo--selected');
+
+        $('.videoSlide').removeClass('videoSlide--toggle');
+        setTimeout(function(){
+            $('.videoSlide').removeClass('videoSlide--ready');
+            $('.videoSlide[data-video="' + videoID + '"]').addClass('videoSlide--ready');
+        }, 500);
+        setTimeout(function(){
+            $('.videoSlide[data-video="' + videoID + '"]').addClass('videoSlide--toggle');
+        }, 600);
+    });
+
+    if($(window).width() < 991){
+        $('.saleVideos__mobile').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            variableWidth: true,
+            centerMode: true,
+            draggable: true,
+        });
+    }
+});

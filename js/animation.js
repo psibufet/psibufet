@@ -3,8 +3,8 @@
 
 $(window).on('scroll', function () {
     var scrollTop     = $(window).scrollTop()
-    if ($('.homeMiska').length) {
-        var elementOffset = $('.homeMiska').offset().top
+    if ($('.animateMiska').length) {
+        var elementOffset = $('.animateMiska').offset().top
     }
     var distance      = (elementOffset - scrollTop);
     
@@ -133,6 +133,47 @@ $(document).ready(function() {
         if($(gsKarmaList).visible(true)){
             setTimeout(function(){
                 gsKarmaList.addClass('init');
+            }, 500)
+        }
+    });
+});
+
+/********** Sale Landing Page **********/
+
+$(document).ready(function() {
+    var saleMiska = $('.saleMiska__heading').find('.getMarker');
+    var saleVideos = $('.saleVideos__heading').find('.getMarker');
+    var saleCompare = $('.saleCompare__heading').find('.getMarker');
+
+    if($(saleMiska).visible(true)){
+        setTimeout(function(){
+            saleMiska.addClass('init');
+        }, 500)
+    }
+    if($(saleVideos).visible(true)){
+        setTimeout(function(){
+            saleVideos.addClass('init');
+        }, 500)
+    }
+    if($(saleCompare).visible(true)){
+        setTimeout(function(){
+            saleCompare.addClass('init');
+        }, 500)
+    }
+    $(window).on('scroll', function(){
+        if($(saleMiska).visible(true)){
+            setTimeout(function(){
+                saleMiska.addClass('init');
+            }, 500)
+        }
+        if($(saleVideos).visible(true)){
+            setTimeout(function(){
+                saleVideos.addClass('init');
+            }, 500)
+        }
+        if($(saleCompare).visible(true)){
+            setTimeout(function(){
+                saleCompare.addClass('init');
             }, 500)
         }
     });
