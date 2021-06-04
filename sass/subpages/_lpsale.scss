@@ -9,6 +9,27 @@ body.page-template-page_lpsale{
     }
 }
 
+.lpSale{
+    .stickyBtn{
+        display: none;
+        background-color: #fff;
+        box-shadow: 0px -2px 0px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        z-index: 99;
+    }
+}
+@media (max-width: 767px){
+    .lpSale{
+        .stickyBtn{
+            display: block;
+        }
+    }
+}
+
 .saleMenu{
     height: 60px;
     width: 100%;

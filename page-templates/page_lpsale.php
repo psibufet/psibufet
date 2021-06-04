@@ -11,6 +11,9 @@ get_header(); ?>
             <a href="#" class="btn btn--header"><span>Zamów</span></a>
         </div>
     </header>
+    <div class="stickyBtn">
+        <a href="#" class="btn btn--center"><span>Odbierz zniżkę</span></a>
+    </div>
     <section class="salePromobar">
         <p><b>-50%</b> na dwa pierwsze zamówienia</p>
     </section>
