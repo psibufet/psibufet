@@ -177,6 +177,34 @@ $(document).ready(function() {
             }, 500)
         }
     });
+
+    /* Custom header animation */
+    var saleHeader = $('.saleHeader__content').find('.getMarker');
+    var tag_01 = $('.saleHeader__content').find('.tags').find('div').eq(0);
+    var tag_02 = $('.saleHeader__content').find('.tags').find('div').eq(1);
+    var tag_03 = $('.saleHeader__content').find('.tags').find('div').eq(2);
+
+    if($(saleHeader).visible(true)){
+        setTimeout(function(){
+            saleHeader.addClass('init');
+        }, 500)
+        setTimeout(function(){
+            tag_01.addClass('animate');
+        }, 1300);
+        setTimeout(function(){
+            tag_02.addClass('animate');
+        }, 1800);
+        setTimeout(function(){
+            tag_03.addClass('animate');
+        }, 2300);
+    }
+    $(window).on('scroll', function(){
+        if($(saleHeader).visible(true)){
+            setTimeout(function(){
+                saleHeader.addClass('init');
+            }, 500)
+        }
+    });
 });
 
 /********** PODKREŚLENIA NASZE PRZEPISY **********/

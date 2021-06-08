@@ -7,20 +7,25 @@ get_header(); ?>
 <main class="lpSale">
     <header class="saleMenu">
         <div class="saleMenu__wrap container">
-            <img src="<?php echo get_template_directory_uri() . '/images/psibufet_logo.svg'; ?>"/>
-            <a href="#" class="btn btn--header"><span>Zamów</span></a>
+            <img src="<?php echo get_template_directory_uri() . '/images/lpsale/psibufet_logo_lp.svg'; ?>"/>
+            <a href="https://zamowienie.psibufet.pl/" class="btn btn--header"><span>Zamów</span></a>
         </div>
+        <section class="salePromobar">
+            <p><b>-50%</b> na dwa pierwsze zamówienia</p>
+        </section>
     </header>
+    <div class="saleMenu--clone"></div>
     <div class="stickyBtn">
-        <a href="#" class="btn btn--center"><span>Odbierz zniżkę</span></a>
+        <a href="https://zamowienie.psibufet.pl/" class="btn btn--center"><span>Odbierz zniżkę</span></a>
     </div>
-    <section class="salePromobar">
-        <p><b>-50%</b> na dwa pierwsze zamówienia</p>
-    </section>
     <section class="saleHeader" style="background-image: url('/wp-content/themes/psibufet/images/lpsale/saleHeader.webp');">
+        <div class="saleHeader__mobilebg">
+            <img class="dog" src="<?php echo get_template_directory_uri() . '/images/lpsale/saleHeader_dog.png'; ?>"/>
+            <img class="hand" src="<?php echo get_template_directory_uri() . '/images/lpsale/saleHeader_hand.png'; ?>"/>
+        </div>
         <div class="saleHeader__wrap">
             <div class="saleHeader__content">
-                <h2>Świeże spojrzenie na psie jedzenie</h2>
+                <h2 class="getMarker"><span class="marker">Świeże</span> spojrzenie na psie jedzenie</h2>
                 <div class="tags">
                     <div><p>Naturalne składniki</p></div>
                     <div><p>Idealna porcja</p></div>
@@ -33,7 +38,7 @@ get_header(); ?>
                 <div class="correct">
                     <h3 class="getMarker"><span class="marker">Psiepięknie!</span></h3>
                     <p>Jesteś we właściwym miejscu!<br/>PsiBufet jest idealny dla Twojego psiaka.</p>
-                    <a href="#" class="btn"><span>Stwórz dietę</span></a>
+                    <a href="https://zamowienie.psibufet.pl/" class="btn"><span>Stwórz dietę</span></a>
                 </div>
             </div>
         </div>
@@ -110,7 +115,7 @@ get_header(); ?>
             </div>
         </div>
         <div class="saleMiska__cta">
-            <a href="#" class="btn"><span>Wypróbuj</span></a>
+            <a href="https://zamowienie.psibufet.pl/" class="btn"><span>Wypróbuj</span></a>
         </div>
     </section>
 
@@ -303,14 +308,38 @@ get_header(); ?>
         <div class="saleVideos__wrap container">
             <div class="saleVideos__main">
                 <?php while(have_rows('saleVideos')): the_row();
-                    $videoLink = get_sub_field('saleVideos_video');
                     $name = get_sub_field('saleVideos_name');
                     $dogname = get_sub_field('saleVideos_dogname');
                     $content = get_sub_field('saleVideos_content');
                 ?>
                 <div class="videoSlide" data-video="video_0<?php echo get_row_index(); ?>">
                     <div class="videoSlide__video">
-                        <?php echo $videoLink; ?>
+                        <?php 
+                            // Load value.
+                            $videoLink = get_sub_field('saleVideos_video');
+
+                            // Use preg_match to find iframe src.
+                            preg_match('/src="(.+?)"/', $videoLink, $matches);
+                            $src = $matches[1];
+
+                            // Add extra parameters to src and replcae HTML.
+                            $params = array(
+                                'controls'  => 1,
+                                'hd'        => 1,
+                                'autohide'  => 1,
+                                'rel'       => 0,
+                                'showinfo'  => 0,
+                            );
+                            $new_src = add_query_arg($params, $src);
+                            $videoLink = str_replace($src, $new_src, $videoLink);
+
+                            // Add extra attributes to iframe HTML.
+                            $attributes = 'frameborder="0"';
+                            $videoLink = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $videoLink);
+
+                            // Display customized HTML.
+                            echo $videoLink;
+                        ?>
                     </div>
                     <div class="videoSlide__content">
                         <div class="content">
@@ -338,21 +367,22 @@ get_header(); ?>
                 <div class="saleVideo" data-video="video_0<?php echo get_row_index(); ?>">
                     <div class="saleVideo__thumb">
                         <img src="https://img.youtube.com/vi/<?php echo $id; ?>/maxresdefault.jpg"/>
+                        <img class="play" src="<?php echo get_template_directory_uri() . '/images/icons/ytplay_ico.svg'; ?>"/>
                     </div>
                     <h3><?php echo $name . '<span>x</span>' . $dogname; ?></h3>
                 </div>
                 <?php endwhile; ?>
             </div>
-            <a href="#" class="btn btn--center"><span>Dołącz do nich</span></a>
+            <a href="https://zamowienie.psibufet.pl/" class="btn btn--center"><span>Dołącz do nich</span></a>
         </div>
         <div class="saleVideos__mobile">
             <?php while(have_rows('saleVideos')): the_row();
-                $video = get_sub_field('saleVideos__videoMobile');
+                $videoLink = get_sub_field('saleVideos__videoMobile');
                 $name = get_sub_field('saleVideos_name');
                 $dogname = get_sub_field('saleVideos_dogname');
                 $content = get_sub_field('saleVideos_content');
 
-                preg_match('/src="(.+?)"/', $video, $matches_url );
+                preg_match('/src="(.+?)"/', $videoLink, $matches_url );
                 $src = $matches_url[1];	
 
                 preg_match('/embed(.*?)?feature/', $src, $matches_id );
@@ -361,7 +391,35 @@ get_header(); ?>
             ?>
             <div class="saleVideo">
                 <div class="saleVideo__video">
-                    <?php echo $video; ?>
+                    <?php
+                        // Load value.
+                        $videoLink = get_sub_field('saleVideos__videoMobile');
+
+                        // Use preg_match to find iframe src.
+                        preg_match('/src="(.+?)"/', $videoLink, $matches);
+                        $src = $matches[1];
+
+                        // Add extra parameters to src and replcae HTML.
+                        $params = array(
+                            'controls'  => 1,
+                            'hd'        => 1,
+                            'autohide'  => 1,
+                            'rel'       => 0,
+                            'showinfo'  => 0,
+                            'byline'    => 0,
+                            'portrait'  => 0,
+                            'title'     => 0,
+                        );
+                        $new_src = add_query_arg($params, $src);
+                        $videoLink = str_replace($src, $new_src, $videoLink);
+
+                        // Add extra attributes to iframe HTML.
+                        $attributes = 'frameborder="0"';
+                        $videoLink = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $videoLink);
+
+                        // Display customized HTML.
+                        echo $videoLink;
+                    ?>
                 </div>
                 <div class="saleVideo__content">
                     <h3 class="getMarker"><?php echo $name . '<span class="divider">x</span><span class="marker">' . $dogname . '</span>'; ?></h3>
@@ -371,7 +429,7 @@ get_header(); ?>
             <?php endwhile; ?>
         </div>
         <div class="saleVideos__ctaMobile">
-            <a href="#" class="btn btn--center"><span>Dołącz do nich</span></a>
+            <a href="https://zamowienie.psibufet.pl/" class="btn btn--center"><span>Dołącz do nich</span></a>
         </div>
     </section>
 
@@ -409,12 +467,12 @@ get_header(); ?>
                 <?php endwhile; ?>
             </div>
         </div>
-        <a href="#" class="btn btn--center"><span>Stwórz dietę</span></a>
+        <a href="https://zamowienie.psibufet.pl/" class="btn btn--center"><span>Stwórz dietę</span></a>
     </section>
     <section class="saleFooter">
         <div class="saleFooter__wrap">
             <div class="saleFooter__logo">
-                <img src="<?php echo get_template_directory_uri() . '/images/psibufet_logo.svg'; ?>"/>
+                <img src="<?php echo get_template_directory_uri() . '/images/lpsale/psibufet_logo_lp.svg'; ?>"/>
             </div>
             <div class="saleFooter__contact">
                 <a href="mailto:kontakt@psibufet.pl">kontakt@psibufet.pl</a>
@@ -433,8 +491,6 @@ get_header(); ?>
             <div class="saleFooter__payment">
                 <p>Metody płatności:</p>
                 <div class="list">
-                    <div><img src="<?php echo get_template_directory_uri() . '/images/footer/blik.svg'; ?>"/></div>
-                    <div><img src="<?php echo get_template_directory_uri() . '/images/footer/przelewy24.svg'; ?>"/></div>
                     <div><img src="<?php echo get_template_directory_uri() . '/images/footer/mastercard.svg'; ?>"/></div>
                     <div><img src="<?php echo get_template_directory_uri() . '/images/footer/visa.svg'; ?>"/></div>
                 </div>
