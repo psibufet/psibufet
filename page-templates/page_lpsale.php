@@ -10,9 +10,9 @@ get_header(); ?>
             <img src="<?php echo get_template_directory_uri() . '/images/lpsale/psibufet_logo_lp.svg'; ?>"/>
             <a href="https://zamowienie.psibufet.pl/" class="btn btn--header"><span>Zamów</span></a>
         </div>
-        <section class="salePromobar">
+        <a href="https://zamowienie.psibufet.pl/" class="salePromobar">
             <p><b>-50%</b> na dwa pierwsze zamówienia</p>
-        </section>
+        </a>
     </header>
     <div class="saleMenu--clone"></div>
     <div class="stickyBtn">
@@ -25,7 +25,7 @@ get_header(); ?>
         </div>
         <div class="saleHeader__wrap">
             <div class="saleHeader__content">
-                <h2 class="getMarker"><span class="marker">Świeże</span> spojrzenie na psie jedzenie</h2>
+                <h2 class="getMarker init"><span class="marker">Świeże</span> spojrzenie na psie jedzenie</h2>
                 <div class="tags">
                     <div><p>Naturalne składniki</p></div>
                     <div><p>Idealna porcja</p></div>
@@ -33,7 +33,7 @@ get_header(); ?>
                 </div>
             </div>
             <div class="saleHeader__form">
-                <h2>Jaką rasę będziemy karmić?</h2>
+                <h2><?php the_field('headerForm_title'); ?></h2>
                 <input type="text" name="rasa_psa" placeholder="Wpisz rasę psa np. Owczarek niemiecki"/>
                 <div class="correct">
                     <h3 class="getMarker"><span class="marker">Psiepięknie!</span></h3>
@@ -367,7 +367,8 @@ get_header(); ?>
                 <div class="saleVideo" data-video="video_0<?php echo get_row_index(); ?>">
                     <div class="saleVideo__thumb">
                         <img src="https://img.youtube.com/vi/<?php echo $id; ?>/maxresdefault.jpg"/>
-                        <img class="play" src="<?php echo get_template_directory_uri() . '/images/icons/ytplay_ico.svg'; ?>"/>
+                        <img class="play play--off" src="<?php echo get_template_directory_uri() . '/images/icons/ytplaybtn_off_ico.png'; ?>"/>
+                        <img class="play play--on" src="<?php echo get_template_directory_uri() . '/images/icons/ytplaybtn_on_ico.png'; ?>"/>
                     </div>
                     <h3><?php echo $name . '<span>x</span>' . $dogname; ?></h3>
                 </div>
@@ -442,7 +443,7 @@ get_header(); ?>
                 <div class="compareTable__heading">
                     <div class="box"></div>
                     <div class="box">
-                        <img src="<?php echo get_template_directory_uri() . '/images/psibufet_logo.svg'; ?>"/>
+                        <img src="<?php echo get_template_directory_uri() . '/images/lpsale/psibufet_logo_lp.svg'; ?>"/>
                     </div>
                     <div class="box">
                         <h3>Zwykła karma</h3>

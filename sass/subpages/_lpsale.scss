@@ -7,6 +7,12 @@ body.page-template-page_lpsale{
             display: none !important;
         }
     }
+    iframe#_hjRemoteVarsFrame{
+        display: none !important;
+    }
+    .BeaconFabButtonFrame{
+        display: none !important;
+    }
 }
 
 .lpSale{
@@ -22,9 +28,6 @@ body.page-template-page_lpsale{
         width: 100%;
         padding: 20px;
         z-index: 99;
-    }
-    iframe#_hjRemoteVarsFrame{
-        display: none !important;
     }
 }
 @media (max-width: 767px){
@@ -246,7 +249,7 @@ body.admin-bar{
 
             span{
                 &:after{
-                    bottom: 10px;
+                    bottom: 11px !important;
                 }
             }
         }
@@ -943,7 +946,12 @@ body.page-template-page_lpsale{
             &:hover{
                 .saleVideo__thumb{
                     .play{
-                        opacity: .8;
+                        &--off{
+                            opacity: 0;
+                        }
+                        &--on{
+                            opacity: 1;
+                        }
                     }
                 }
             }
@@ -960,7 +968,7 @@ body.page-template-page_lpsale{
                 }
                 .play{
                     display: block;
-                    max-width: 90px;
+                    max-width: 68px;
                     width: 100%;
                     position: absolute;
                     top: 50%;
@@ -969,7 +977,14 @@ body.page-template-page_lpsale{
                     right: 0;
                     z-index: 3;
                     margin: 0 auto;
-                    transition: ease .3s;
+                    transition: ease .2s;
+
+                    &--off{
+                        opacity: .9;
+                    }
+                    &--on{
+                        opacity: 0;
+                    }
                 }
             }
             h3{
@@ -1344,7 +1359,8 @@ body.page-template-page_lpsale{
     .saleCompare{
         &__table{
             .compareTable{
-                max-width: 320px;
+                max-width: 400px;
+                padding: 0 10px;
 
                 &__heading{
                     .box{
@@ -1356,13 +1372,14 @@ body.page-template-page_lpsale{
                         }
                         h3{
                             font-size: 18px;
+                            padding-top: 3px;
                         }
                     }
                 }
                 &__row{
                     .box{
                         width: calc(100% / 3 - 6px);
-                        padding: 0 7px;
+                        padding: 0 5px;
 
                         p{
                             font-size: 9px;
@@ -1537,6 +1554,10 @@ body.page-template-page_lpsale{
 
             .list{
                 justify-content: center;
+
+                div{
+                    margin: 0 10px;
+                }
             }
         }
     }

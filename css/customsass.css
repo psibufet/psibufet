@@ -4809,6 +4809,14 @@ body.page-template-page_lpsale #siteFooter .siteFooter__wrap {
   display: none !important;
 }
 
+body.page-template-page_lpsale iframe#_hjRemoteVarsFrame {
+  display: none !important;
+}
+
+body.page-template-page_lpsale .BeaconFabButtonFrame {
+  display: none !important;
+}
+
 .lpSale {
   position: relative;
 }
@@ -4823,10 +4831,6 @@ body.page-template-page_lpsale #siteFooter .siteFooter__wrap {
   width: 100%;
   padding: 20px;
   z-index: 99;
-}
-
-.lpSale iframe#_hjRemoteVarsFrame {
-  display: none !important;
 }
 
 @media (max-width: 767px) {
@@ -5047,7 +5051,7 @@ body.admin-bar .saleMenu {
 }
 
 .saleHeader__content h2 span:after {
-  bottom: 10px;
+  bottom: 11px !important;
 }
 
 .saleHeader__content .tags {
@@ -5689,8 +5693,12 @@ body.page-template-page_lpsale .homeFoodinfo__right:after {
   display: none;
 }
 
-.saleVideos__list .saleVideo:hover .saleVideo__thumb .play {
-  opacity: .8;
+.saleVideos__list .saleVideo:hover .saleVideo__thumb .play--off {
+  opacity: 0;
+}
+
+.saleVideos__list .saleVideo:hover .saleVideo__thumb .play--on {
+  opacity: 1;
 }
 
 .saleVideos__list .saleVideo__thumb {
@@ -5708,7 +5716,7 @@ body.page-template-page_lpsale .homeFoodinfo__right:after {
 
 .saleVideos__list .saleVideo__thumb .play {
   display: block;
-  max-width: 90px;
+  max-width: 68px;
   width: 100%;
   position: absolute;
   top: 50%;
@@ -5717,7 +5725,15 @@ body.page-template-page_lpsale .homeFoodinfo__right:after {
   right: 0;
   z-index: 3;
   margin: 0 auto;
-  transition: ease .3s;
+  transition: ease .2s;
+}
+
+.saleVideos__list .saleVideo__thumb .play--off {
+  opacity: .9;
+}
+
+.saleVideos__list .saleVideo__thumb .play--on {
+  opacity: 0;
 }
 
 .saleVideos__list .saleVideo h3 {
@@ -6032,7 +6048,8 @@ body.page-template-page_lpsale .homeFoodinfo__right:after {
 
 @media (max-width: 575px) {
   .saleCompare__table .compareTable {
-    max-width: 320px;
+    max-width: 400px;
+    padding: 0 10px;
   }
   .saleCompare__table .compareTable__heading .box {
     width: calc(100% / 3 - 6px);
@@ -6043,10 +6060,11 @@ body.page-template-page_lpsale .homeFoodinfo__right:after {
   }
   .saleCompare__table .compareTable__heading .box h3 {
     font-size: 18px;
+    padding-top: 3px;
   }
   .saleCompare__table .compareTable__row .box {
     width: calc(100% / 3 - 6px);
-    padding: 0 7px;
+    padding: 0 5px;
   }
   .saleCompare__table .compareTable__row .box p {
     font-size: 9px;
@@ -6210,6 +6228,9 @@ body.page-template-page_lpsale .homeFoodinfo__right:after {
   }
   .saleFooter__payment .list {
     justify-content: center;
+  }
+  .saleFooter__payment .list div {
+    margin: 0 10px;
   }
 }
 

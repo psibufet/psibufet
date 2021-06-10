@@ -3,6 +3,41 @@
     "title": "LP Sale",
     "fields": [
         {
+            "key": "field_60c28cdfa3027",
+            "label": "Formularz - pies",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_60c28ceca3028",
+            "label": "Tytuł",
+            "name": "headerForm_title",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_60b92ecd2d471",
             "label": "Co o nas mówią?",
             "name": "",
@@ -240,5 +275,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1622762370
+    "modified": 1623362834
 }
