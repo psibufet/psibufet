@@ -41,7 +41,17 @@
     <script src="/wp-content/themes/psibufet/js/custom.js" type="text/javascript"></script>
     <script type="text/javascript" src="/wp-content/themes/psibufet/js/animation.js"></script>
     <script type="text/javascript" src="/wp-content/themes/psibufet/js/dataLayers.js"></script>
-    <script type="text/javascript" src="/wp-content/themes/psibufet/js/referralCode.js"></script>
+    <?php 
+        function startsWith( $haystack, $needle ) {
+            $length = strlen( $needle );
+            return substr( $haystack, 0, $length ) === $needle;
+       }
+        if (!startsWith ($_SERVER['REQUEST_URI'], '/lp')):
+    ?>
+        <script type="text/javascript" src="/wp-content/themes/psibufet/js/referralCode.js"></script>
+    <?php else: ?>
+        <script type="text/javascript" src="/wp-content/themes/psibufet/js/referralCode_lp.js"></script>
+    <?php endif; ?>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>

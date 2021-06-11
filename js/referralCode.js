@@ -32,7 +32,6 @@ $(document).ready(function(){
 			$.ajax({
 				url:'https://app.psibufet.pl/api/order/couponcode/' + code,
 				error: function(){
-					// window.location.replace("https://psibufet.pl/");
 					$('body').removeClass('promocode');
 					$('.menu_dir a').removeClass('dir');
 					$('#promocode').removeClass('active');

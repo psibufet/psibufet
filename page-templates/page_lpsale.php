@@ -8,15 +8,15 @@ get_header(); ?>
     <header class="saleMenu">
         <div class="saleMenu__wrap container">
             <img src="<?php echo get_template_directory_uri() . '/images/lpsale/psibufet_logo_lp.svg'; ?>"/>
-            <a href="https://zamowienie.psibufet.pl/" class="btn btn--header"><span>Zamów</span></a>
+            <a href="https://zamowienie.psibufet.pl/" class="btn btn--header dir"><span>Zamów</span></a>
         </div>
-        <a href="https://zamowienie.psibufet.pl/" class="salePromobar">
-            <p><b>-50%</b> na dwa pierwsze zamówienia</p>
+        <a href="https://zamowienie.psibufet.pl/" class="salePromobar dir">
+            <p></p>
         </a>
     </header>
     <div class="saleMenu--clone"></div>
     <div class="stickyBtn">
-        <a href="https://zamowienie.psibufet.pl/" class="btn btn--center"><span>Odbierz zniżkę</span></a>
+        <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir"><span>Odbierz zniżkę</span></a>
     </div>
     <section class="saleHeader" style="background-image: url('/wp-content/themes/psibufet/images/lpsale/saleHeader.webp');">
         <div class="saleHeader__mobilebg">
@@ -38,7 +38,7 @@ get_header(); ?>
                 <div class="correct">
                     <h3 class="getMarker"><span class="marker">Psiepięknie!</span></h3>
                     <p>Jesteś we właściwym miejscu!<br/>PsiBufet jest idealny dla Twojego psiaka.</p>
-                    <a href="https://zamowienie.psibufet.pl/" class="btn"><span>Stwórz dietę</span></a>
+                    <a href="https://zamowienie.psibufet.pl/" class="btn dir"><span>Stwórz dietę</span></a>
                 </div>
             </div>
         </div>
@@ -115,7 +115,7 @@ get_header(); ?>
             </div>
         </div>
         <div class="saleMiska__cta">
-            <a href="https://zamowienie.psibufet.pl/" class="btn"><span>Wypróbuj</span></a>
+            <a href="https://zamowienie.psibufet.pl/" class="btn dir"><span>Wypróbuj</span></a>
         </div>
     </section>
 
@@ -173,7 +173,7 @@ get_header(); ?>
                 </div>
             </div>
         </div>
-        <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir"><span><?php the_field('front_foodinfo_cta', 5) ?></span></a>
+        <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir dir"><span><?php the_field('front_foodinfo_cta', 5) ?></span></a>
         <div class="foodModal">
             <div class="foodModal__wrap">
                 <img class="closeFoodModal closeImg no-lazyload" src="<?php echo get_template_directory_uri() . '/images/icons/closeModal_ico.svg'; ?>"/>
@@ -374,7 +374,7 @@ get_header(); ?>
                 </div>
                 <?php endwhile; ?>
             </div>
-            <a href="https://zamowienie.psibufet.pl/" class="btn btn--center"><span>Dołącz do nich</span></a>
+            <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir"><span>Dołącz do nich</span></a>
         </div>
         <div class="saleVideos__mobile">
             <?php while(have_rows('saleVideos')): the_row();
@@ -430,7 +430,7 @@ get_header(); ?>
             <?php endwhile; ?>
         </div>
         <div class="saleVideos__ctaMobile">
-            <a href="https://zamowienie.psibufet.pl/" class="btn btn--center"><span>Dołącz do nich</span></a>
+            <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir"><span>Dołącz do nich</span></a>
         </div>
     </section>
 
@@ -468,7 +468,7 @@ get_header(); ?>
                 <?php endwhile; ?>
             </div>
         </div>
-        <a href="https://zamowienie.psibufet.pl/" class="btn btn--center"><span>Stwórz dietę</span></a>
+        <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir"><span>Stwórz dietę</span></a>
     </section>
     <section class="saleFooter">
         <div class="saleFooter__wrap">

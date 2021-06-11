@@ -4834,7 +4834,7 @@ body.page-template-page_lpsale .BeaconFabButtonFrame {
 }
 
 @media (max-width: 767px) {
-  .lpSale .stickyBtn {
+  .lpSale .stickyBtn--toggle {
     display: block;
   }
   .siteFooter {
@@ -4900,7 +4900,7 @@ body.admin-bar .saleMenu {
   width: 100%;
   height: 60px;
   background-color: #f15748;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
 }
@@ -4947,6 +4947,10 @@ body.admin-bar .saleMenu {
   line-height: 55px;
   font-weight: 400;
   margin-right: 10px;
+}
+
+.salePromobar--toggle {
+  display: flex;
 }
 
 @media (max-width: 767px) {

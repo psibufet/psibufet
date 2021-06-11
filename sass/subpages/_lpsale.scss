@@ -33,7 +33,9 @@ body.page-template-page_lpsale{
 @media (max-width: 767px){
     .lpSale{
         .stickyBtn{
-            display: block;
+            &--toggle{
+                display: block;
+            }
         }
     }
     .siteFooter{
@@ -98,7 +100,7 @@ body.admin-bar{
     width: 100%;
     height: 60px;
     background-color: $redcolor;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
 
@@ -143,6 +145,10 @@ body.admin-bar{
             font-weight: 400;
             margin-right: 10px;
         }
+    }
+
+    &--toggle{
+        display: flex;
     }
 }
 @media (max-width: 767px){
