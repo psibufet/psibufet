@@ -363,6 +363,31 @@ body.admin-bar{
                     border: 1px solid #000;
                     border-top: 0;
                     box-shadow: 4px 5px 0 #0000001a;
+
+                    li{
+                        padding: 5px 20px;
+                        transition: ease .3s;
+
+                        div{
+                            font-family: $headingfont;
+                            color: #000;
+                            font-size: 18px;
+                            transition: ease .3s;
+
+                            b{
+                                font-weight: 400 !important;
+                            }
+                        }   
+
+                        &.selected,
+                        &:hover{
+                            background-color: $redcolor;
+
+                            div{
+                                color: #fff;
+                            }
+                        }
+                    }
                 }
             }
         }

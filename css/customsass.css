@@ -5166,6 +5166,30 @@ body.admin-bar .saleMenu {
   box-shadow: 4px 5px 0 #0000001a;
 }
 
+.saleHeader__form .easy-autocomplete .easy-autocomplete-container ul li {
+  padding: 5px 20px;
+  transition: ease .3s;
+}
+
+.saleHeader__form .easy-autocomplete .easy-autocomplete-container ul li div {
+  font-family: "Bebas Neue", sans-serif;
+  color: #000;
+  font-size: 18px;
+  transition: ease .3s;
+}
+
+.saleHeader__form .easy-autocomplete .easy-autocomplete-container ul li div b {
+  font-weight: 400 !important;
+}
+
+.saleHeader__form .easy-autocomplete .easy-autocomplete-container ul li.selected, .saleHeader__form .easy-autocomplete .easy-autocomplete-container ul li:hover {
+  background-color: #f15748;
+}
+
+.saleHeader__form .easy-autocomplete .easy-autocomplete-container ul li.selected div, .saleHeader__form .easy-autocomplete .easy-autocomplete-container ul li:hover div {
+  color: #fff;
+}
+
 .saleHeader__form .correct {
   display: none;
   text-align: center;
