@@ -944,44 +944,6 @@ $(document).ready(function(){
         $('.saleMenu--clone').css('height', height);
     });
 
-    var saleHeader = $('.saleMenu');
-    var didScroll;
-    var lastScrollTop = 0;
-    var delta = 50;
-    var navbarHeight = saleHeader.outerHeight();
-
-    $(window).scroll(function(event){
-        if($(document).scrollTop() > 67){
-            saleHeader.addClass('saleMenu--shadow');
-        }else{
-            saleHeader.removeClass('saleMenu--shadow');
-        }
-        didScroll = true;
-    });
-
-    setInterval(function() {
-        if (didScroll) {
-            hasScrolled();
-            didScroll = false;
-        }
-    }, 250);
-
-    function hasScrolled() {
-        var st = $(this).scrollTop();
-        
-        if(Math.abs(lastScrollTop - st) <= delta)
-            return;
-        
-        if (st > lastScrollTop && st > navbarHeight){
-            saleHeader.addClass('saleMenu--scrolled');
-        } else {
-            if(st + $(window).height() < $(document).height()) {
-                saleHeader.removeClass('saleMenu--scrolled');
-            }
-        }
-        lastScrollTop = st;
-    }
-
     /* Form */
 
     $('input[name="rasa_psa"]').on('keyup paste', function(){
