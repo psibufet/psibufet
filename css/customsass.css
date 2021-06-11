@@ -4981,15 +4981,13 @@ body.admin-bar .saleMenu {
 
 @media (max-width: 460px) {
   .salePromobar {
-    padding: 0 15px;
-    justify-content: flex-end;
-    position: relative;
+    padding: 0;
   }
   .salePromobar p {
-    position: unset;
+    padding-left: 55px;
   }
   .salePromobar p:before {
-    left: 15px;
+    left: 0;
   }
   .salePromobar p:after {
     display: none;
@@ -5037,6 +5035,19 @@ body.admin-bar .saleMenu {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  position: relative;
+}
+
+.saleHeader__wrap:after {
+  content: '';
+  background-image: url("/wp-content/themes/psibufet/images/lpsale/headerBadge.svg");
+  background-repeat: no-repeat;
+  background-size: 150px;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  right: 14%;
+  bottom: 50px;
 }
 
 .saleHeader__content {
@@ -5127,6 +5138,7 @@ body.admin-bar .saleMenu {
   height: 52px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
   padding: 0 10px;
   text-align: center;
   font-size: 16px;
@@ -5142,6 +5154,16 @@ body.admin-bar .saleMenu {
 
 .saleHeader__form input::placeholder {
   color: #7f7f7f;
+}
+
+.saleHeader__form .easy-autocomplete .easy-autocomplete-container {
+  z-index: 5;
+}
+
+.saleHeader__form .easy-autocomplete .easy-autocomplete-container ul {
+  border: 1px solid #000;
+  border-top: 0;
+  box-shadow: 4px 5px 0 #0000001a;
 }
 
 .saleHeader__form .correct {
@@ -5172,15 +5194,29 @@ body.admin-bar .saleMenu {
   min-height: 747px;
 }
 
+@media (max-width: 1300px) {
+  .saleHeader__wrap:after {
+    right: 10%;
+  }
+}
+
 @media (max-width: 1199px) {
   .saleHeader {
     min-height: 500px;
+  }
+  .saleHeader__wrap:after {
+    background-size: 160px;
+    width: 160px;
+    height: 160px;
   }
 }
 
 @media (max-width: 991px) {
   .saleHeader {
     min-height: 450px;
+  }
+  .saleHeader__wrap:after {
+    right: 2%;
   }
   .saleHeader__content {
     margin-bottom: 20px;
@@ -5217,7 +5253,15 @@ body.admin-bar .saleMenu {
   .saleHeader {
     min-height: 620px;
     background-color: #ffbc32;
+    background-image: unset !important;
     position: relative;
+  }
+  .saleHeader__wrap:after {
+    background-size: 110px;
+    width: 110px;
+    height: 110px;
+    bottom: auto;
+    top: 22%;
   }
   .saleHeader__mobilebg {
     display: block;
@@ -5259,6 +5303,12 @@ body.admin-bar .saleMenu {
 }
 
 @media (max-width: 575px) {
+  .saleHeader__wrap:after {
+    background-size: 100px;
+    width: 100px;
+    height: 100px;
+    right: 20px;
+  }
   .saleHeader__content {
     max-width: 320px;
     margin-top: 50px;
@@ -5311,6 +5361,10 @@ body.admin-bar .saleMenu {
 }
 
 @media (max-width: 400px) {
+  .saleHeader__wrap:after {
+    right: 10px;
+    top: 19%;
+  }
   .saleHeader__mobilebg .hand {
     max-width: 210px;
   }

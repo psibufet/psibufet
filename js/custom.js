@@ -945,31 +945,54 @@ $(document).ready(function(){
     });
 
     /* Form */
+    
+    var header = $('.saleHeader');
+    var correctInfo = $('.saleHeader__form .correct');
+    var dataInsert = correctInfo.find('p');
+    var options = {
+        url: '/wp-content/themes/psibufet/rasy.json',
+    
+        getValue: "name",
+    
+        list: {
+            showAnimation: {
+                type: "slide",
+                time: 300,
+                callback: function() {}
+            },
+    
+            hideAnimation: {
+                type: "slide",
+                time: 300,
+                callback: function() {}
+            },
 
-    $('input[name="rasa_psa"]').on('keyup paste', function(){
-        var inputVal = $(this).val().toLowerCase();
-        var header = $('.saleHeader');
-        var correctInfo = $(this).parent().find('.correct');
+            maxNumberOfElements: 5,
+            match: {
+                enabled: true
+            },
 
-        listras = ['owczarek niemiecki', 'pekińczyk', 'test'];
-
-        console.log(inputVal);
-        if(listras.indexOf(inputVal) !== -1){
-            correctInfo.slideDown();
-            setTimeout(function(){
-                correctInfo.find('.getMarker').addClass('init');
-            }, 500);
-            console.log('correct');
-            header.addClass('saleHeader--correct');
-        }else{
-            correctInfo.slideUp();
-            setTimeout(function(){
-                correctInfo.find('.getMarker').removeClass('init');
-            }, 500);
-            console.log('false');
-            header.removeClass('saleHeader--correct');
+            onClickEvent: function() {
+                var id = $('input[name="rasa_psa"]').getSelectedItemData().id;
+                
+                $.getJSON('/wp-content/themes/psibufet/opisydoras.json', function(data){
+                    $.each(data, function(key, value) {
+                        if(value.id == id){
+                            dataInsert.text(value.desc);
+                            correctInfo.slideDown();
+                            setTimeout(function(){
+                                correctInfo.find('.getMarker').addClass('init');
+                            }, 500);
+                            header.addClass('saleHeader--correct');
+                        }
+                    });
+                }).fail(function(){
+                    console.log("An error has occurred.");
+                });
+            }	
         }
-    });
+    };
+    $('input[name="rasa_psa"]').easyAutocomplete(options);
 
     /* Videos */
 
