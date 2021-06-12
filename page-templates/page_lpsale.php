@@ -18,7 +18,7 @@ get_header(); ?>
     <div class="stickyBtn">
         <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir"><span>Odbierz zniżkę</span></a>
     </div>
-    <section class="saleHeader" style="background-image: url('/wp-content/themes/psibufet/images/lpsale/saleHeader.webp');">
+    <section class="saleHeader">
         <div class="saleHeader__mobilebg">
             <img class="dog" src="<?php echo get_template_directory_uri() . '/images/lpsale/saleHeader_dog.png'; ?>"/>
             <img class="hand" src="<?php echo get_template_directory_uri() . '/images/lpsale/saleHeader_hand.png'; ?>"/>

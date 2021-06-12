@@ -222,14 +222,38 @@ body.admin-bar{
 }
 .saleHeader{
     min-height: 600px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center -50px;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: center -50px;
+    background-color: #ffbc32;
     position: relative;
     transition: ease .5s;
 
     &__mobilebg{
-        display: none;
+        display: block;
+        position: absolute;
+        width: 100%;
+        min-height: inherit;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        overflow: hidden;
+        pointer-events: none;
+
+        .dog{
+            position: absolute;
+            left: 0;
+            top: 80px;
+            max-width: 450px;
+            width: 100%;
+        }
+        .hand{
+            position: absolute;
+            top: -130px;
+            right: -90px;
+            max-width: 600px;
+            width: 100%;
+        }
     }
     &__wrap{
         min-height: inherit;
@@ -238,6 +262,7 @@ body.admin-bar{
         justify-content: center;
         flex-direction: column;
         position: relative;
+        z-index: 3;
 
         &:after{
             content: '';
@@ -247,8 +272,9 @@ body.admin-bar{
             width: 150px;
             height: 150px;
             position: absolute;
-            right: 14%;
-            bottom: 50px;
+            right: 300px;
+            top: 400px;
+            z-index: 2;
         }
     }
     &__content{
@@ -422,9 +448,20 @@ body.admin-bar{
 }
 @media (max-width: 1300px){
     .saleHeader{
+        &__mobilebg{
+            .dog{
+                top: 100px;
+                max-width: 350px;
+            }
+            .hand{
+                top: -80px;
+                max-width: 500px;
+            }
+        }
         &__wrap{
             &:after{
-                right: 10%;
+                right: 210px;
+                top: 340px;
             }
         }
     }
@@ -433,11 +470,24 @@ body.admin-bar{
     .saleHeader{
         min-height: 500px;
         
+        &__mobilebg{
+            .dog{
+                top: 120px;
+                max-width: 260px;
+            }
+            .hand{
+                top: -70px;
+                right: -100px;
+                max-width: 400px;
+            }
+        }
         &__wrap{
             &:after{
-                background-size: 160px;
-                width: 160px;
-                height: 160px;
+                background-size: 130px;
+                width: 130px;
+                height: 130px;
+                right: 120px;
+                top: 260px;
             }
         }
     }
@@ -497,11 +547,12 @@ body.admin-bar{
 
         &__wrap{
             &:after{
-                background-size: 110px;
-                width: 110px;
-                height: 110px;
+                background-size: 100px;
+                width: 100px;
+                height: 100px;
                 bottom: auto;
-                top: 22%;
+                top: 150px;
+                right: 30px;
             }
         }
 
@@ -560,6 +611,7 @@ body.admin-bar{
                 width: 100px;
                 height: 100px;
                 right: 20px;
+                top: 140px;
             }
         }
         &__content{
@@ -597,6 +649,10 @@ body.admin-bar{
             h2{
                 font-size: 28px;
                 line-height: 34px;
+            }
+            .easy-autocomplete{
+                max-width: 380px;
+                width: 100% !important;
             }
             input{
                 height: 40px;
