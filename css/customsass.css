@@ -5239,7 +5239,7 @@ body.admin-bar .saleMenu {
 }
 
 .saleHeader--correct {
-  min-height: 747px;
+  min-height: 777px !important;
 }
 
 @media (max-width: 1300px) {
@@ -5404,6 +5404,7 @@ body.admin-bar .saleMenu {
   }
   .saleHeader__form {
     padding: 15px 20px 20px;
+    max-width: calc(100% - 30px);
   }
   .saleHeader__form h2 {
     font-size: 28px;
@@ -5428,6 +5429,7 @@ body.admin-bar .saleMenu {
   .saleHeader__form .correct p {
     font-size: 12px;
     line-height: 14px;
+    max-width: 300px;
   }
   .saleHeader__form .correct .btn span:after {
     top: 60%;

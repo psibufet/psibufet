@@ -443,7 +443,7 @@ body.admin-bar{
     }
 
     &--correct{
-        min-height: 747px;
+        min-height: 777px !important;
     }
 }
 @media (max-width: 1300px){
@@ -645,6 +645,7 @@ body.admin-bar{
         }
         &__form{
             padding: 15px 20px 20px;
+            max-width: calc(100% - 30px);
 
             h2{
                 font-size: 28px;
@@ -669,6 +670,7 @@ body.admin-bar{
                 p{
                     font-size: 12px;
                     line-height: 14px;
+                    max-width: 300px;
                 }
                 .btn{
                     span{
