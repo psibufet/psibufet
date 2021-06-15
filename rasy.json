@@ -1,4 +1,4 @@
-q[
+[
     {"name": "Affenpoo", "id": "12"},
     {"name": "Aidi", "id": "2"},
     {"name": "Airedale Terrier", "id": "3"},
@@ -70,9 +70,9 @@ q[
     {"name": "Bouvier des Flandres", "id": "1"},
     {"name": "Boxerdoodle ", "id": "12"},
     {"name": "Boykin Spaniel ", "id": "8"},
-    {"name": "Briard ", "id": "1"},
+    {"name": "Briard", "id": "1"},
     {"name": "Briquet Griffon Vendeen ", "id": "6"},
-    {"name": "Brittany ", "id": "11"},
+    {"name": "Brittany", "id": "11"},
     {"name": "Broodle Griffon ", "id": "12"},
     {"name": "Buhund norweski ", "id": "4"},
     {"name": "Buldog ", "id": "2"},
