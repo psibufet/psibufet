@@ -5429,7 +5429,8 @@ body.admin-bar .saleMenu {
   .saleHeader__form .correct p {
     font-size: 12px;
     line-height: 14px;
-    max-width: 300px;
+    max-width: 240px;
+    margin: 0 auto 20px;
   }
   .saleHeader__form .correct .btn span:after {
     top: 60%;
