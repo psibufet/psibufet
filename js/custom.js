@@ -946,9 +946,18 @@ $(document).ready(function(){
             $('.saleMenu--clone').css('height', height);
         });
     }
+    function mastheadClone(){
+        $('.siteHeader').each(function(){
+            var height = $(this).outerHeight();
+            $('.header-clone').css('height', height);
+        });
+    }
+
     saleMenuClone();
+    mastheadClone();
     $('body').on('promocode-active', function(){
         saleMenuClone();
+        mastheadClone();
     });
 
     /* Form */
