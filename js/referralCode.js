@@ -43,6 +43,7 @@ $(document).ready(function(){
 							$('body').addClass('promocode');
 							$('.menu_dir a').addClass('dir');
 							promocodeWrap.addClass('active');
+							$('body').trigger('promocode-active');
 
 							promocodeWrap.find('.amount').html(data.amount);
 							if(data.type == 'PERCENT'){

@@ -386,6 +386,7 @@
         align-items: center;
         padding: 14px 12px;
         max-width: fit-content;
+        max-width: -moz-fit-content;
 
         .stars{
             display: flex;

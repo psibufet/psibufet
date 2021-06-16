@@ -754,6 +754,7 @@ $(document).ready(function() {
         $('body').addClass('promocode');
         $('.menu_dir a').addClass('dir');
         $('#promocode').addClass('active');
+        $('body').trigger('promocode-active');
 
         promoamount.html(amount);
 

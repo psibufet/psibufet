@@ -1224,6 +1224,7 @@ body.promocode .siteHeader--scrolled {
   align-items: center;
   padding: 14px 12px;
   max-width: fit-content;
+  max-width: -moz-fit-content;
 }
 
 .homeMiska__review .stars {
@@ -5491,7 +5492,7 @@ body.admin-bar .saleMenu {
 }
 
 .saleMiska__miska .ba_img.before {
-  background-image: url("/wp-content/themes/psibufet/images/imageanimate/before_new.png");
+  background-image: url("/wp-content/themes/psibufet/images/miska_before_lp.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 650px;
@@ -5514,7 +5515,7 @@ body.admin-bar .saleMenu {
 }
 
 .saleMiska__miska .ba_img.after {
-  background-image: url("/wp-content/themes/psibufet/images/miska_after.png");
+  background-image: url("/wp-content/themes/psibufet/images/miska_after_lp.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 650px;
