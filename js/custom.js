@@ -939,9 +939,15 @@ $(document).ready(function(){
 
     /* Menu */
 
-    $('.saleMenu').each(function(){
-        var height = $(this).outerHeight();
-        $('.saleMenu--clone').css('height', height);
+    function saleMenuClone(){
+        $('.saleMenu').each(function(){
+            var height = $(this).outerHeight();
+            $('.saleMenu--clone').css('height', height);
+        });
+    }
+    saleMenuClone();
+    $('body').on('promocode-active', function(){
+        saleMenuClone();
     });
 
     /* Form */

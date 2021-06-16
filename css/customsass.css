@@ -127,6 +127,7 @@ body.promocode .siteHeader--scrolled {
 }
 
 .siteHeader__logo {
+  width: 100%;
   max-width: 150px;
 }
 
@@ -1388,6 +1389,7 @@ body.promocode .siteHeader--scrolled {
   left: 0;
   right: 0;
   max-width: fit-content;
+  max-width: -moz-fit-content;
   margin: 0 auto;
 }
 
@@ -1469,6 +1471,7 @@ body.promocode .siteHeader--scrolled {
   right: 0;
   margin: 0 auto;
   max-width: fit-content;
+  max-width: -moz-fit-content;
 }
 
 .homeFoodinfo__slides .slick-dots li {
@@ -6444,6 +6447,7 @@ body a:hover {
 .btn--center {
   display: block;
   max-width: fit-content;
+  max-width: -moz-fit-content;
   margin: 0 auto;
 }
 

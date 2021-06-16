@@ -565,6 +565,7 @@
                 left: 0;
                 right: 0;
                 max-width: fit-content;
+                max-width: -moz-fit-content;
                 margin: 0 auto;
 
                 &__button{
@@ -643,6 +644,7 @@
             right: 0;
             margin: 0 auto;
             max-width: fit-content;
+            max-width: -moz-fit-content;
 
             li{
                 margin: 0 3px;

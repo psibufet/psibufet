@@ -40,6 +40,7 @@ $(document).ready(function(){
                         }, 200);
 
                         $('.stickyBtn').addClass('stickyBtn--toggle');
+                        $('body').trigger('promocode-active');
                     });
                 });
             }

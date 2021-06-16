@@ -117,9 +117,9 @@
     <div id="page" class="hfeed site">
         <div class="header-clone"></div>
         <header id="masthead" class="siteHeader" role="banner">
-            <div id="promocode">
+            <a href="https://zamowienie.psibufet.pl/" id="promocode" class="dir">
                 <p>Masz <span class="amount">wczytywanie</span><span class="type"></span> zniżki na <span class="na">swoje pierwsze zamówienie</span>.<font> Całość zostanie doliczona w koszyku.</font></p>
-            </div>
+            </a>
             <div class="siteHeader__wrap container">
                 <div class="siteHeader__logo">
                     <?php if ( get_theme_mod('site_logo') ) : ?>
