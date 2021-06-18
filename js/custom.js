@@ -769,15 +769,17 @@ $(document).ready(function() {
             promona.html('dwie pierwsze dostawy');
         }
 
-        $(".dir").each(function () {
-            var $this = $(this);
-            var _href = $this.attr("href");
-            if(typeof type !== 'undefined' && typeof amount !== 'undefined'){
-                $this.attr("href", _href + '?code=' + code + '&amount=' + amount + '&type=' + type);
-            }else{
-                $this.attr("href", _href + '?code=' + code);
-            }
-        });
+        setTimeout(function(){
+            $(".dir").each(function () {
+                var $this = $(this);
+                var _href = $this.attr("href");
+                if(typeof type !== 'undefined' && typeof amount !== 'undefined'){
+                    $this.attr("href", _href + '?code=' + code + '&amount=' + amount + '&type=' + type);
+                }else{
+                    $this.attr("href", _href + '?code=' + code);
+                }
+            });
+        }, 50);
     }else{
         console.log('Code error');
     }

@@ -60,7 +60,7 @@ get_header(); ?>
                     </div>
                     <p class="desc"><?php the_field('gspageDesc'); ?></p>
                     <div class="infoButton"><img src="<?php echo get_template_directory_uri() . '/images/icons/info_icon_black.svg'; ?>"/>Zobacz skład</div>
-                    <a href="https://zamowienie.psibufet.pl/" class="btn btn--center"><span>Dobierz porcję</span></a>
+                    <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir"><span>Dobierz porcję</span></a>
                 </div>
             </div>
         </div>

@@ -8,6 +8,6 @@
     </div>
     <div class="flavourTile__content">
         <p class="desc"><?php echo the_field('flavourDesc'); ?></p>
-        <a href="<?php echo home_url('/'); ?>" class="btn btn--center"><span>Sprawdź</span></a>
+        <a href="<?php echo home_url('/'); ?>" class="btn btn--center dir"><span>Sprawdź</span></a>
     </div>
 </article>
