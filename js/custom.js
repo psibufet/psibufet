@@ -288,21 +288,47 @@ $(document).ready(function(){
     var pricegr = $('.pricingContent__option[type="' + defaultType + '"]').attr('pricegr');
     var portion = $('.pricingContent__option[type="' + defaultType + '"]').attr('portion');
 
-    $('.pricingContent__info').find('span.value').html(pricezl + '<span>' + pricegr + '</span> zł');
-    $('.pricingContent__info').find('.portion').find('.value').text(portion + ' g');
+    var pricezl_promo = $('.pricingContent__option[type="' + defaultType + '"]').attr('promotion_price_zl');
+    var pricegr_promo = $('.pricingContent__option[type="' + defaultType + '"]').attr('promotion_price_gr');
 
-    $('.pricingContent__option').on('click', function(){
-        var type = $(this).attr('type');
-        var pricezl = $(this).attr('pricezl');
-        var pricegr = $(this).attr('pricegr');
-        var portion = $(this).attr('portion');
-        
-        $(this).parent().attr('type', type);
-        $(this).parent().parent().find('.pricingContent__info').attr('type', type);
-
+    if(!$('.pricingContent').hasClass('pricingContent--promotion')){
         $('.pricingContent__info').find('span.value').html(pricezl + '<span>' + pricegr + '</span> zł');
         $('.pricingContent__info').find('.portion').find('.value').text(portion + ' g');
-    });
+
+        $('.pricingContent__option').on('click', function(){
+            var type = $(this).attr('type');
+            var pricezl = $(this).attr('pricezl');
+            var pricegr = $(this).attr('pricegr');
+            var portion = $(this).attr('portion');
+            
+            $(this).parent().attr('type', type);
+            $(this).parent().parent().find('.pricingContent__info').attr('type', type);
+
+            $('.pricingContent__info').find('span.value').html(pricezl + '<span>' + pricegr + '</span> zł');
+            $('.pricingContent__info').find('.portion').find('.value').text(portion + ' g');
+        });
+    }else{
+        $('.pricingContent__info').find('.drop').find('span.value').html(pricezl + '<span>' + pricegr + '</span> zł');
+        $('.pricingContent__info').find('.price').find('span.value').html(pricezl_promo + '<span>' + pricegr_promo + '</span> zł');
+        $('.pricingContent__info').find('.portion').find('.value').text(portion + ' g');
+
+        $('.pricingContent__option').on('click', function(){
+            var type = $(this).attr('type');
+            var pricezl = $(this).attr('pricezl');
+            var pricegr = $(this).attr('pricegr');
+            var portion = $(this).attr('portion');
+
+            var pricezl_promo = $(this).attr('promotion_price_zl');
+            var pricegr_promo = $(this).attr('promotion_price_gr');
+            
+            $(this).parent().attr('type', type);
+            $(this).parent().parent().find('.pricingContent__info').attr('type', type);
+
+            $('.pricingContent__info').find('.drop').find('span.value').html(pricezl + '<span>' + pricegr + '</span> zł');
+            $('.pricingContent__info').find('.price').find('span.value').html(pricezl_promo + '<span>' + pricegr_promo + '</span> zł');
+            $('.pricingContent__info').find('.portion').find('.value').text(portion + ' g');
+        });
+    }
 });
 
 // Menu bar options

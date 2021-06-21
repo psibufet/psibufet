@@ -6,7 +6,7 @@ Template Name: Front Page
 get_header(); ?>
 
 <main class="pbpage pbpage--frontpage">
-    <section class="homeHeader" style="background-image: url('/wp-content/themes/psibufet/images/homepage_img.webp');">
+    <section class="homeHeader" style="background-image: url('/wp-content/themes/psibufet/images/pricedrop/sgNewHeader-min.jpg');">
         <div class="homeHeader__wrap">
             <div class="homeHeader__content">
                 <h2>Świeże spojrzenie na psie jedzenie</h2>
@@ -58,7 +58,7 @@ get_header(); ?>
             <div class="content">
                 <p>Czy wiesz, że karma z kurczakiem*, którą kupujesz swojemu psu może zawierać tylko 4% mięsa?*</p>
                 <p><b>Uważamy, że psy zasługują na wiele więcej!</b> W trosce o zdrowie czworonogów, wspólnie z dietetykami zwierzęcymi stworzyliśmy <b>pełnoporcjowe karmy ze świeżych składników.</b></p>
-                <p><b>To wszystko już od 6,90 zł dziennie!</b></p>
+                <p><b>To wszystko już od 4,90 zł dziennie!</b></p>
             </div>
             <p class="info">*według Kodeksu Dobrej Praktyki Etykietowania FEDIAF</p>
             <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir"><span><?php the_field('front_uknow_cta') ?></span></a>
@@ -348,22 +348,49 @@ get_header(); ?>
                 </div>
             </div>
             <div class="homePricing__right">
-                <div class="pricingContent">
+                <div class="pricingContent<?php if(get_field('priceDrop_active') == 'true'): ?> pricingContent--promotion<?php endif; ?>">
                     <div class="pricingContent__options" type="<?php the_field('defaultPricingOption'); ?>">
-                        <div class="pricingContent__option" type="small" pricezl="<?php the_field('dogSmall_zl') ?>" pricegr="<?php the_field('dogSmall_gr') ?>" portion="<?php the_field('dogSmall_portion') ?>">
+                        <div class="pricingContent__option" type="small"
+                            pricezl="<?php the_field('dogSmall_zl') ?>"
+                            pricegr="<?php the_field('dogSmall_gr') ?>"
+                            portion="<?php the_field('dogSmall_portion') ?>"
+                            <?php if(get_field('priceDrop_active') == 'true'): ?>
+                            promotion_price_zl="<?php the_field('dogSmall_zl_promotion') ?>"
+                            promotion_price_gr="<?php the_field('dogSmall_gr_promotion') ?>"
+                            <?php endif; ?>
+                        >
                             <img src="<?php echo get_template_directory_uri() . '/images/icons/homepricing_dog_small.svg'; ?>"/>
                             <p>mały</p>
                         </div>
-                        <div class="pricingContent__option" type="middle" pricezl="<?php the_field('dogMiddle_zl') ?>" pricegr="<?php the_field('dogMiddle_gr') ?>" portion="<?php the_field('dogMiddle_portion') ?>">
+                        <div class="pricingContent__option" type="middle"
+                            pricezl="<?php the_field('dogMiddle_zl') ?>"
+                            pricegr="<?php the_field('dogMiddle_gr') ?>"
+                            portion="<?php the_field('dogMiddle_portion') ?>"
+                            <?php if(get_field('priceDrop_active') == 'true'): ?>
+                            promotion_price_zl="<?php the_field('dogMiddle_zl_promotion') ?>"
+                            promotion_price_gr="<?php the_field('dogMiddle_gr_promotion') ?>"
+                            <?php endif; ?>
+                        >
                             <img src="<?php echo get_template_directory_uri() . '/images/icons/homepricing_dog_medium.svg'; ?>"/>
                             <p>średni</p>
                         </div>
-                        <div class="pricingContent__option" type="big" pricezl="<?php the_field('dogBig_zl') ?>" pricegr="<?php the_field('dogBig_gr') ?>" portion="<?php the_field('dogBig_portion') ?>">
+                        <div class="pricingContent__option" type="big"
+                            pricezl="<?php the_field('dogBig_zl') ?>"
+                            pricegr="<?php the_field('dogBig_gr') ?>"
+                            portion="<?php the_field('dogBig_portion') ?>"
+                            <?php if(get_field('priceDrop_active') == 'true'): ?>
+                            promotion_price_zl="<?php the_field('dogBig_zl_promotion') ?>"
+                            promotion_price_gr="<?php the_field('dogBig_gr_promotion') ?>"
+                            <?php endif; ?>
+                        >
                             <img src="<?php echo get_template_directory_uri() . '/images/icons/homepricing_dog_large.svg'; ?>"/>
                             <p>duży</p>
                         </div>
                     </div>
                     <div class="pricingContent__info" type="<?php the_field('defaultPricingOption'); ?>">
+                        <?php if(get_field('priceDrop_active') == 'true'): ?>
+                            <p class="drop"><span class="value">19<span>50</span> zł</span> / dzień</p>
+                        <?php endif; ?>
                         <p class="price">od <span class="value">19<span>50</span> zł</span> / dzień</p>
                         <p class="portion">dla porcji <span class="value">500 g</span></p>
                     </div>

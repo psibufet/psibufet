@@ -155,7 +155,7 @@
 @media (max-width: 767px){
     .homeHeader{
         height: 600px;
-        background-image: url('/wp-content/themes/psibufet/images/header_img_mobile.png') !important;
+        background-image: url('/wp-content/themes/psibufet/images/pricedrop/sgHeader_drop_mobile.png') !important;
         background-size: auto 100%;
         background-color: #ffbb32;
 
@@ -358,7 +358,7 @@
                 }
             }
             &.after{
-                background-image: url('/wp-content/themes/psibufet/images/miska_after.png');
+                background-image: url('/wp-content/themes/psibufet/images/miska_after_lp.png');
                 background-repeat: no-repeat;
                 background-size: cover;
                 width: $imageswidth;
@@ -2582,6 +2582,49 @@ body.admin-bar{
                     color: #000;
                     text-align: center;
                     margin: 0;
+                }
+            }
+
+            &--promotion{
+                .pricingContent__info{
+                    .drop{
+                        font-size: 21px;
+                        line-height: 25px;
+                        color: #808080;
+                        font-family: $headingfont;
+                        font-weight: 500;
+                        margin: 0 auto;
+                        text-align: center;
+                        max-width: fit-content;
+                        max-width: -webkit-fit-content;
+                        max-width: -moz-fit-content;
+                        position: relative;
+                        padding: 0 5px;
+
+                        &:before{
+                            content: '';
+                            width: 100%;
+                            height: 2px;
+                            top: 50%;
+                            transform: translate(0, -50%);
+                            left: 0;
+                            background-color: $redcolor;
+                            position: absolute;
+                        }
+
+                        .value{
+                            font-size: 30px;
+                            line-height: 36px;
+
+                            span{
+                                font-size: 21px;
+                                line-height: 1;
+                                position: relative;
+                                top: -7px;
+                                left: 1px;
+                            }
+                        }
+                    }
                 }
             }
         }

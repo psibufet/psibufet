@@ -1,0 +1,77 @@
+.homeHeader{
+    &:after{
+        content: '';
+        background-image: url('/wp-content/themes/psibufet/images/pricedrop/sgHeader_drop.png');
+        background-repeat: no-repeat;
+        background-size: 500px;
+        width: 500px;
+        height: 630px;
+        position: absolute;
+        right: 0;
+        bottom: -70px;
+        pointer-events: none;
+    }
+}
+@media (max-width: 1400px){
+    .homeHeader{
+        &:after{
+            background-size: 400px;
+            width: 400px;
+            height: 500px;
+            right: 0;
+            bottom: -50px;
+        }
+    }
+}
+@media (max-width: 1199px){
+    .homeHeader{
+        &:after{
+            background-size: 300px;
+            width: 300px;
+            height: 400px;
+        }
+    }
+}
+@media (max-width: 767px){
+    .homeHeader{
+        &:after{
+            background-size: 250px;
+            width: 250px;
+            height: 315px;
+            bottom: auto;
+            top: -120px;
+        }
+    }
+}
+@media (max-width: 575px){
+    .homeHeader{
+        overflow: hidden;
+
+        &:after{
+            background-size: 200px;
+            width: 200px;
+            height: 250px;
+            top: -70px;
+            right: -20px;
+        }
+    }
+}
+
+
+.homePricing{
+    &__right{
+        .pricingContent{
+
+            &--promotion{
+                &:before{
+                    background-image: url('/wp-content/themes/psibufet/images/pricedrop/pricedrop_green.svg');
+                    background-size: 162px;
+                    width: 162px;
+                    height: 162px;
+                    left: -80px;
+                    top: -30px;
+                }
+            }
+        }
+    }
+}

@@ -1396,6 +1396,274 @@
             "layout": "vertical",
             "return_format": "value",
             "save_other_choice": 0
+        },
+        {
+            "key": "field_60d0503fa9a76",
+            "label": "Aktywacja promocji",
+            "name": "priceDrop_active",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Zaznacz jeśli chcesz aktywować promocję",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_60d05096a9a77",
+            "label": "Mały pies - PROMOCJA",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60d0503fa9a76",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "message": "Promocyjna cena i porcja dla małego psa",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_60d050a7a9a78",
+            "label": "Złotówki",
+            "name": "dogSmall_zl_promotion",
+            "type": "number",
+            "instructions": "Tylko złotówki!",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60d0503fa9a76",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "zł",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_60d050aca9a79",
+            "label": "Grosze",
+            "name": "dogSmall_gr_promotion",
+            "type": "number",
+            "instructions": "Tylko grosze!",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60d0503fa9a76",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "gr",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_60d050d0a9a7b",
+            "label": "Średni pies - PROMOCJA",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60d0503fa9a76",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "message": "Promocyjna cena i porcja dla średniego psa",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_60d050d5a9a7c",
+            "label": "Złotówki",
+            "name": "dogMiddle_zl_promotion",
+            "type": "number",
+            "instructions": "Tylko złotówki!",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60d0503fa9a76",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "zł",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_60d050dda9a7d",
+            "label": "Grosze",
+            "name": "dogMiddle_gr_promotion",
+            "type": "number",
+            "instructions": "Tylko grosze!",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60d0503fa9a76",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "gr",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_60d05108a9a7f",
+            "label": "Duży pies - PROMOCJA",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60d0503fa9a76",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "message": "Promocyjna cena i porcja dla dużego psa",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_60d0510ca9a80",
+            "label": "Złotówki",
+            "name": "dogBig_zl_promotion",
+            "type": "number",
+            "instructions": "Tylko złotówki!",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60d0503fa9a76",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "zł",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_60d05110a9a81",
+            "label": "Grosze",
+            "name": "dogBig_gr_promotion",
+            "type": "number",
+            "instructions": "Tylko grosze!",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60d0503fa9a76",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "gr",
+            "min": "",
+            "max": "",
+            "step": ""
         }
     ],
     "location": [
@@ -1415,5 +1683,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1619117772
+    "modified": 1624265225
 }

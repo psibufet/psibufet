@@ -997,7 +997,7 @@ body.promocode .siteHeader--scrolled {
 @media (max-width: 767px) {
   .homeHeader {
     height: 600px;
-    background-image: url("/wp-content/themes/psibufet/images/header_img_mobile.png") !important;
+    background-image: url("/wp-content/themes/psibufet/images/pricedrop/sgHeader_drop_mobile.png") !important;
     background-size: auto 100%;
     background-color: #ffbb32;
   }
@@ -1197,7 +1197,7 @@ body.promocode .siteHeader--scrolled {
 }
 
 .homeMiska__imageWrap .ba_img.after {
-  background-image: url("/wp-content/themes/psibufet/images/miska_after.png");
+  background-image: url("/wp-content/themes/psibufet/images/miska_after_lp.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 650px;
@@ -3237,6 +3237,44 @@ body.admin-bar .foodModal__wrap {
   color: #000;
   text-align: center;
   margin: 0;
+}
+
+.homePricing__right .pricingContent--promotion .pricingContent__info .drop {
+  font-size: 21px;
+  line-height: 25px;
+  color: #808080;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 500;
+  margin: 0 auto;
+  text-align: center;
+  max-width: fit-content;
+  max-width: -moz-fit-content;
+  position: relative;
+  padding: 0 5px;
+}
+
+.homePricing__right .pricingContent--promotion .pricingContent__info .drop:before {
+  content: '';
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 0;
+  background-color: #f15748;
+  position: absolute;
+}
+
+.homePricing__right .pricingContent--promotion .pricingContent__info .drop .value {
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.homePricing__right .pricingContent--promotion .pricingContent__info .drop .value span {
+  font-size: 21px;
+  line-height: 1;
+  position: relative;
+  top: -7px;
+  left: 1px;
 }
 
 @media (max-width: 1199px) {
@@ -6375,6 +6413,69 @@ body.page-template-page_lpsale .homeFoodinfo__right:after {
 
 /*  Global
 --------------- */
+.homeHeader:after {
+  content: '';
+  background-image: url("/wp-content/themes/psibufet/images/pricedrop/sgHeader_drop.png");
+  background-repeat: no-repeat;
+  background-size: 500px;
+  width: 500px;
+  height: 630px;
+  position: absolute;
+  right: 0;
+  bottom: -70px;
+  pointer-events: none;
+}
+
+@media (max-width: 1400px) {
+  .homeHeader:after {
+    background-size: 400px;
+    width: 400px;
+    height: 500px;
+    right: 0;
+    bottom: -50px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .homeHeader:after {
+    background-size: 300px;
+    width: 300px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 767px) {
+  .homeHeader:after {
+    background-size: 250px;
+    width: 250px;
+    height: 315px;
+    bottom: auto;
+    top: -120px;
+  }
+}
+
+@media (max-width: 575px) {
+  .homeHeader {
+    overflow: hidden;
+  }
+  .homeHeader:after {
+    background-size: 200px;
+    width: 200px;
+    height: 250px;
+    top: -70px;
+    right: -20px;
+  }
+}
+
+.homePricing__right .pricingContent--promotion:before {
+  background-image: url("/wp-content/themes/psibufet/images/pricedrop/pricedrop_green.svg");
+  background-size: 162px;
+  width: 162px;
+  height: 162px;
+  left: -80px;
+  top: -30px;
+}
+
 body.noscroll {
   overflow: hidden;
 }
