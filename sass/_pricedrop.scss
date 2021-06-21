@@ -71,6 +71,26 @@
                     left: -80px;
                     top: -30px;
                 }
+                @media (max-width: 1599px){
+                    &:before{
+                        left: -40px;
+                    }
+                }
+                @media (max-width: 991px){
+                    &:before{
+                        background-size: 120px;
+                        width: 120px;
+                        height: 120px;
+                    }
+                }
+                @media (max-width: 767px){
+                    &:before{
+                        background-size: 90px;
+                        width: 90px;
+                        height: 90px;
+                        left: -15px;
+                    }
+                }
             }
         }
     }
