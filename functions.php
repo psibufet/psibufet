@@ -605,10 +605,10 @@ function availableForm(){
 	
 	$to = 'piotrdevv@gmail.com';
 	$subject = '[PsiBufet] Zgłoszenie ambasadora';
-	$message = 'Typ: ' . $type . '\r\n';
-	$message .= 'Firma: ' . $company . '\r\n';
-	$message .= 'Mail: ' . $mail . '\r\n';
-	$message .= 'Phone: ' . $phone . '\r\n';
+	$message = 'Typ: ' . $type . '\r\n
+				Firma: ' . $company . '\r\n
+				Mail: ' . $mail . '\r\n
+				Phone: ' . $phone;
 	
 	$sent = wp_mail( $to, $subject, $message );
 
