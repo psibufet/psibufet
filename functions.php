@@ -587,3 +587,36 @@ function my_acf_json_load_point( $paths ) {
     $paths[] = get_stylesheet_directory() . '/acf-json';
     return $paths;
 }
+
+/* Partner ajax form send engine */
+
+wp_enqueue_script( 'partner-ajax', get_template_directory_uri() . '/js/partnerForm.js', array( 'jquery' ));
+wp_localize_script( 'partner-ajax', 'PBAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
+
+add_action('wp_ajax_availableForm', 'availableForm');
+add_action('wp_ajax_nopriv_availableForm', 'availableForm');
+
+function availableForm(){
+
+	$type = isset( $_POST['type'] ) ? $_POST['type'] : '';
+	$company = isset( $_POST['company'] ) ? $_POST['company'] : '';
+	$mail = isset( $_POST['mail'] ) ? $_POST['mail'] : '';
+	$phone = isset( $_POST['phone'] ) ? $_POST['phone'] : '';
+	
+	$to = 'piotrdevv@gmail.com';
+	$subject = '[PsiBufet] Zgłoszenie ambasadora';
+	$message = 'Typ: ' . $type . '<br/>';
+	$message = 'Firma: ' . $company . '<br/>';
+	$message = 'Mail: ' . $mail . '<br/>';
+	$message = 'Phone: ' . $phone . '<br/>';
+	
+	$sent = wp_mail( $to, $subject, $message );
+
+	if($sent){
+		echo 'done';
+	}else{
+		echo 'error';
+	}
+
+	exit();
+}
