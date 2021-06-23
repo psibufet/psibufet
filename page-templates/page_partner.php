@@ -54,7 +54,8 @@ get_header(); ?>
                     <h3>Dołącz do programu partnerskiego</h3>
                     <p>Uzupełnij formularz, skontaktujemy się z Tobą w celu weryfikacji oraz dodania do programu. Wszelkie pytania i wątpliwości możesz kierować na adres mailowy <a href="mailto:michalina@psibufet.pl">michalina@psibufet.pl</a>.</p>
                 </div>
-                <form class="form" method="POST" autocomplete="off">
+                <div class="feedback"><p></p></div>
+                <form class="form" method="POST" autocomplete="nope">
                     <div class="form__row form__row--dropdown">
                         <label>Rodzaj działalności</label>
                         <input type="text" class="form__input form__input--noaction" name="partnerType" autocomplete="off"/>
@@ -71,21 +72,20 @@ get_header(); ?>
                     </div>
                     <div class="form__row">
                         <label>Nazwa firmy</label>
-                        <input type="text" class="form__input" name="partnerCompany" autocomplete="off"/>
+                        <input type="text" class="form__input" name="partnerCompany" autocomplete="nope"/>
                     </div>
                     <div class="form__row">
                         <label>Adres e-mail</label>
-                        <input type="email" class="form__input" name="partnerEmail" autocomplete="off"/>
+                        <input type="email" class="form__input" name="partnerEmail" autocomplete="nope"/>
                     </div>
                     <div class="form__row">
                         <label>Numer telefonu</label>
-                        <input type="number" class="form__input" name="partnerPhone"/>
+                        <input type="number" class="form__input" name="partnerPhone" autocomplete="nope"/>
                     </div>
                     <div class="form__submit">
                         <button type="submit" class="btn btn--button btn--center"><span>Dołącz teraz</span></button>
                     </div>
                 </form>
-                <div class="feedback"></div>
             </div>
         </div>
     </section>

@@ -181,6 +181,21 @@
         background-color: #fff;
         border: 1px solid rgba(0, 0, 0, 0.2);
         box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+        position: relative;
+
+        &:before{
+            content: '';
+            background-image: url('/wp-content/themes/psibufet/images/partner/formPaws_vec.svg');
+            background-repeat: no-repeat;
+            background-size: 124px;
+            width: 124px;
+            height: 120px;
+            position: absolute;
+            top: -100px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
 
         .formHeading{
             margin: 0 0 40px;
@@ -202,10 +217,43 @@
                 margin: 0;
             }
         }
+        .feedback{
+            display: none;
+            max-width: 550px;
+            margin: 0 auto 10px;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
 
+            &--done{
+                display: block;
+                background-color: $greencolor;
+            }
+            &--error{
+                display: block;
+                background-color: $redcolor;
+            }
+
+            p{
+                font-size: 16px;
+                line-height: 19px;
+                color: #fff;
+                margin: 0;
+            }
+        }
         .form{
             max-width: 550px;
             margin: 0 auto;
+            transition: ease .3s;
+
+            &--loading{
+                opacity: .3;
+                cursor: progress;
+
+                .form__row{
+                    pointer-events: none;
+                }
+            }
 
             &__row{
                 width: 100%;
@@ -309,7 +357,7 @@
 
                 &[type="number"]{
                     -moz-appearance: textfield;
-                    
+
                     &::-webkit-inner-spin-button,
                     &::-webkit-outer-spin-button{
                         -webkit-appearance: none;

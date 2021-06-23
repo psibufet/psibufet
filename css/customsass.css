@@ -6596,6 +6596,21 @@ body.page-template-page_lpsale .homeFoodinfo__right:after {
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.partnerJoin__form:before {
+  content: '';
+  background-image: url("/wp-content/themes/psibufet/images/partner/formPaws_vec.svg");
+  background-repeat: no-repeat;
+  background-size: 124px;
+  width: 124px;
+  height: 120px;
+  position: absolute;
+  top: -100px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 
 .partnerJoin__form .formHeading {
@@ -6620,9 +6635,45 @@ body.page-template-page_lpsale .homeFoodinfo__right:after {
   margin: 0;
 }
 
+.partnerJoin__form .feedback {
+  display: none;
+  max-width: 550px;
+  margin: 0 auto 10px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.partnerJoin__form .feedback--done {
+  display: block;
+  background-color: #129D6F;
+}
+
+.partnerJoin__form .feedback--error {
+  display: block;
+  background-color: #f15748;
+}
+
+.partnerJoin__form .feedback p {
+  font-size: 16px;
+  line-height: 19px;
+  color: #fff;
+  margin: 0;
+}
+
 .partnerJoin__form .form {
   max-width: 550px;
   margin: 0 auto;
+  transition: ease .3s;
+}
+
+.partnerJoin__form .form--loading {
+  opacity: .3;
+  cursor: progress;
+}
+
+.partnerJoin__form .form--loading .form__row {
+  pointer-events: none;
 }
 
 .partnerJoin__form .form__row {

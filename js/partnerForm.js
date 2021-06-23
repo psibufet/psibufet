@@ -106,8 +106,10 @@ $(document).ready(function(){
         });
 
         if(errorCount == 0){
+            partnerForm.addClass('form--loading');
             ajaxSubmit();
         }
+
         function ajaxSubmit() {
             var type = partnerForm.find('input[name="partnerType"]').val();
             var company = partnerForm.find('input[name="partnerCompany"]').val();
@@ -124,8 +126,20 @@ $(document).ready(function(){
                     mail: mail,
                     phone: phone,
                 },
+
                 success: function(response) {
-                    console.log(response);
+                    if(response == 'done'){
+                        console.log('mail sent');
+                        partnerForm.removeClass('form--loading');
+                        $('.feedback').addClass('feedback--done');
+                        $('.feedback p').html('Formularz zgłoszeniowy został wysłany pomyślnie.');
+                        $('.form__submit').find('button').attr('disabled', true);
+                    }else{
+                        console.log('mail error');
+                        partnerForm.removeClass('form--loading');
+                        $('.feedback').addClass('feedback--error');
+                        $('.feedback p').html('Wystąpił błąd podczas wysyłania formularza.<br/>Spróbuj ponownie później.');
+                    }
                 }
             });
             return false;
