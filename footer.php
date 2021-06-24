@@ -25,6 +25,7 @@
                         <li><a href="https://zamowienie.psibufet.pl" class="dir order">Zamów</a></li>
                     </ul>
                     <ul class="links">
+                        <li><a href="/program-partnerski" class="dir">Program partnerski</a></li>
                         <li><a href="https://psibufet.pl/blog/" class="dir">Blog</a></li>
                         <li><a href="https://help.psibufet.pl" class="dir">FAQ</a></li>
                         <li><a href="/pracuj-w-psibufet" class="dir">Praca</a>

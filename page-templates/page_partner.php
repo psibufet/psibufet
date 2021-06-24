@@ -24,7 +24,7 @@ get_header(); ?>
             <div class="partnerInfo__content">
                 <h2 class="getMarker"><?php the_field('partnerInfo_title'); ?></h2>
                 <p><?php the_field('partnerInfo_content') ?></p>
-                <a href="#" class="btn btn--center dir"><span>Dołącz teraz</span></a>
+                <a href="#partnerJoin" class="btn btn--center dir"><span>Dołącz teraz</span></a>
             </div>
         </div>
     </section>
@@ -47,12 +47,12 @@ get_header(); ?>
             </div>
         </div>
     </section>
-    <section class="partnerJoin">
+    <section class="partnerJoin" id="partnerJoin">
         <div class="partnerJoin__wrap">
             <div class="partnerJoin__form" error-count="0">
                 <div class="formHeading">
-                    <h3>Dołącz do programu partnerskiego</h3>
-                    <p>Uzupełnij formularz, skontaktujemy się z Tobą w celu weryfikacji oraz dodania do programu. Wszelkie pytania i wątpliwości możesz kierować na adres mailowy <a href="mailto:michalina@psibufet.pl">michalina@psibufet.pl</a>.</p>
+                    <h3><?php the_field('partnerJoin_title'); ?></h3>
+                    <p><?php the_field('partnerJoin_content'); ?></p>
                 </div>
                 <div class="feedback"><p></p></div>
                 <form class="form" method="POST" autocomplete="nope">
