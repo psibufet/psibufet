@@ -619,6 +619,13 @@
                             top: -18px;
                         }
                     }
+                    &--error{
+                        &:after{
+                            font-size: 8px;
+                            bottom: 2px;
+                            left: 5px;
+                        }
+                    }
                 }
                 &__input{
                     height: 40px;

@@ -7000,6 +7000,11 @@ body.page-template-page_lpsale .homeFoodinfo__right:after {
   .partnerJoin__form .form__row--focused label {
     top: -18px;
   }
+  .partnerJoin__form .form__row--error:after {
+    font-size: 8px;
+    bottom: 2px;
+    left: 5px;
+  }
   .partnerJoin__form .form__input {
     height: 40px;
     font-size: 14px;
