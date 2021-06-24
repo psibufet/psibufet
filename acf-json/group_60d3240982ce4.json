@@ -1,6 +1,6 @@
 {
     "key": "group_60d3240982ce4",
-    "title": "Program ambasador",
+    "title": "Program partnerski",
     "fields": [
         {
             "key": "field_60d32418b73bc",
@@ -237,6 +237,60 @@
                     "new_lines": "br"
                 }
             ]
+        },
+        {
+            "key": "field_60d487419c933",
+            "label": "Formularz",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_60d487479c934",
+            "label": "Tytuł",
+            "name": "partnerJoin_title",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_60d487529c935",
+            "label": "Treść",
+            "name": "partnerJoin_content",
+            "type": "textarea",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         }
     ],
     "location": [
@@ -256,5 +310,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1624451333
+    "modified": 1624541059
 }

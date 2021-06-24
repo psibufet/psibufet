@@ -27,7 +27,7 @@ $(document).ready(function(){
 					'indyczy-kasek',
 					'regulamin_dla_hodowcow.pdf',
 					'lp',
-					'program-ambasador',
+					'program-partnerski',
 				];
 
     if (typeof sPageURL === 'undefined'){

@@ -6446,6 +6446,32 @@ body.page-template-page_lpsale .homeFoodinfo__right:after {
   margin: 0;
 }
 
+@media (max-width: 1199px) {
+  .partnerHeading {
+    background-position: -510px center;
+  }
+}
+
+@media (max-width: 767px) {
+  .partnerHeading {
+    min-height: 540px;
+    background-position: center center;
+    align-items: flex-start;
+  }
+  .partnerHeading__wrap {
+    max-width: 330px;
+    margin: 30px auto 0;
+  }
+  .partnerHeading__wrap h1 {
+    font-size: 48px;
+    line-height: 58px;
+  }
+  .partnerHeading__wrap p {
+    font-size: 19px;
+    line-height: 23px;
+  }
+}
+
 @media (min-width: 1200px) {
   .partnerInfo .partnerInfo__wrap {
     max-width: 1200px;
@@ -6505,6 +6531,37 @@ body.page-template-page_lpsale .homeFoodinfo__right:after {
   color: #000;
   text-align: center;
   margin: 0 0 35px;
+}
+
+@media (max-width: 1199px) {
+  .partnerInfo__wrap:before {
+    background-size: 160px;
+    width: 160px;
+    height: 300px;
+  }
+  .partnerInfo__wrap:after {
+    background-size: 190px;
+    width: 190px;
+    height: 290px;
+  }
+}
+
+@media (max-width: 991px) {
+  .partnerInfo__wrap:before, .partnerInfo__wrap:after {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .partnerInfo__content h2 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .partnerInfo__content p {
+    font-size: 12px;
+    line-height: 14px;
+    margin: 0 0 18px;
+  }
 }
 
 .partnerSteps {
@@ -6582,6 +6639,81 @@ body.page-template-page_lpsale .homeFoodinfo__right:after {
   color: #000;
   text-align: center;
   padding: 20px 16px;
+}
+
+@media (max-width: 1199px) {
+  .partnerSteps__step {
+    max-width: 220px;
+    height: 250px;
+  }
+  .partnerSteps__step .image {
+    height: 90px;
+  }
+  .partnerSteps__step .image img {
+    max-width: 100px;
+  }
+  .partnerSteps__step p {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+@media (max-width: 991px) {
+  .partnerSteps__steps {
+    flex-wrap: wrap;
+    max-width: 460px;
+  }
+  .partnerSteps__step {
+    margin: 0 0 20px;
+  }
+}
+
+@media (max-width: 550px) {
+  .partnerSteps__wrap {
+    padding-top: 27px;
+    padding-bottom: 32px;
+  }
+  .partnerSteps__wrap h2 {
+    font-size: 28px;
+    line-height: 34px;
+    margin: 0 0 18px;
+  }
+  .partnerSteps__steps {
+    max-width: 280px;
+  }
+  .partnerSteps__step {
+    max-width: 100%;
+    height: 100%;
+    min-height: 182px;
+  }
+  .partnerSteps__step:last-of-type {
+    margin: 0;
+  }
+  .partnerSteps__step:nth-child(1) .image {
+    height: 80px;
+    margin: 20px 0 10px;
+  }
+  .partnerSteps__step:nth-child(2) .image img {
+    max-width: 120px;
+  }
+  .partnerSteps__step .position {
+    position: absolute;
+    font-size: 21px;
+    width: 23px;
+    height: 28px;
+  }
+  .partnerSteps__step .image {
+    height: 70px;
+    margin: 20px 0 0;
+  }
+  .partnerSteps__step .image img {
+    max-width: 80px;
+  }
+  .partnerSteps__step p {
+    font-size: 12px;
+    line-height: 14px;
+    padding: 10px 16px 20px;
+  }
 }
 
 .partnerJoin {
@@ -6777,7 +6909,7 @@ body.page-template-page_lpsale .homeFoodinfo__right:after {
   padding: 5px 20px;
 }
 
-.partnerJoin__form .form__dropdown p:hover {
+.partnerJoin__form .form__dropdown p:hover, .partnerJoin__form .form__dropdown p.active {
   background-color: #f15748;
   color: #fff;
 }
@@ -6818,6 +6950,74 @@ body.page-template-page_lpsale .homeFoodinfo__right:after {
   border: 0;
   border-radius: 0;
   box-shadow: none;
+}
+
+@media (max-width: 767px) {
+  .partnerJoin {
+    padding: 44px 0 32px;
+  }
+  .partnerJoin__form {
+    max-width: 465px;
+    margin: 0 auto;
+  }
+  .partnerJoin__form:before {
+    background-size: 78px;
+    width: 78px;
+    height: 74px;
+    top: -60px;
+  }
+  .partnerJoin__form .formHeading {
+    margin: 0 0 20px;
+  }
+  .partnerJoin__form .formHeading h3 {
+    font-size: 28px;
+    line-height: 34px;
+    margin: 0 0 12px;
+  }
+  .partnerJoin__form .formHeading p {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .partnerJoin__form .form .feedback {
+    padding: 5px 10px;
+  }
+  .partnerJoin__form .form .feedback p {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .partnerJoin__form .form__row {
+    margin: 0 0 20px;
+  }
+  .partnerJoin__form .form__row label {
+    font-size: 14px;
+  }
+  .partnerJoin__form .form__row--dropdown:after {
+    background-size: 12px;
+    width: 12px;
+    height: 9px;
+    right: 15px;
+  }
+  .partnerJoin__form .form__row--focused label {
+    top: -18px;
+  }
+  .partnerJoin__form .form__input {
+    height: 40px;
+    font-size: 14px;
+  }
+  .partnerJoin__form .form__dropdown {
+    top: 39px;
+  }
+  .partnerJoin__form .form__dropdown p {
+    font-size: 14px;
+    padding: 2px 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .partnerJoin__form {
+    max-width: calc(100% - 40px);
+    padding: 20px;
+  }
 }
 
 /*  Global

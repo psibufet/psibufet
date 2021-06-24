@@ -207,6 +207,36 @@ $(document).ready(function() {
     });
 });
 
+/********** Partner page **********/
+
+$(document).ready(function() {
+    var partnerInfo = $('.partnerInfo').find('.getMarker');
+    var partnerSteps = $('.partnerSteps').find('.getMarker');
+
+    if($(partnerInfo).visible(true)){
+        setTimeout(function(){
+            partnerInfo.addClass('init');
+        }, 500)
+    }
+    if($(partnerSteps).visible(true)){
+        setTimeout(function(){
+            partnerSteps.addClass('init');
+        }, 500)
+    }
+    $(window).on('scroll', function(){
+        if($(partnerInfo).visible(true)){
+            setTimeout(function(){
+                partnerInfo.addClass('init');
+            }, 500)
+        }
+        if($(partnerSteps).visible(true)){
+            setTimeout(function(){
+                partnerSteps.addClass('init');
+            }, 500)
+        }
+    });
+});
+
 /********** PODKREŚLENIA NASZE PRZEPISY **********/
 
 // $(window).on('scroll', function () {

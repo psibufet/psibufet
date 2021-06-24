@@ -4,16 +4,19 @@ $(document).ready(function(){
     $('.form__row--dropdown').on('click', function(){
         $(this).toggleClass('form__row--active');
         $(this).find('.form__dropdown').slideToggle().toggleClass('active');
-    });
-    $(document).mouseup(function(e){
-        var dropdown = $('.form__dropdown');
-        if (!dropdown.is(e.target) && dropdown.has(e.target).length === 0){
-            if(dropdown.parent().hasClass('form__row--active')){
-                dropdown.parent().removeClass('form__row--active');
-                dropdown.removeClass('active');
-                dropdown.slideUp();
+
+        $(document).mouseup(function(e){
+            var dropdown = $('.form__dropdown');
+            if (!dropdown.is(e.target) && dropdown.has(e.target).length === 0){
+                if(!$(e.target).hasClass('form__row--dropdown')){
+                    if(dropdown.parent().hasClass('form__row--active')){
+                        dropdown.parent().removeClass('form__row--active');
+                        dropdown.removeClass('active');
+                        dropdown.slideUp();
+                    }
+                }
             }
-        }
+        });
     });
 
     $('.form__dropdown p').on('click', function(){
