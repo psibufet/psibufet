@@ -285,12 +285,31 @@
                 }
                 &--dropdown{
                     cursor: pointer;
+                    position: relative;
+
+                    &:after{
+                        content: '';
+                        background-image: url('/wp-content/themes/psibufet/images/chevron_down.svg');
+                        background-repeat: no-repeat;
+                        background-size: 15px;
+                        width: 15px;
+                        height: 11px;
+                        position: absolute;
+                        top: 50%;
+                        transform: translate(0, -50%);
+                        right: 20px;
+                        transition: ease .3s;
+                    }
 
                     .form__input{
                         pointer-events: none;
                     }
                 }
                 &--active{
+                    &:after{
+                        transform: rotate(-180deg);
+                        top: 40%;
+                    }
                     .form__input{
                         border-color: #000 !important;
                     }

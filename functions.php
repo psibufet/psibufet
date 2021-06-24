@@ -603,7 +603,7 @@ function availableForm(){
 	$mail = isset( $_POST['mail'] ) ? $_POST['mail'] : '';
 	$phone = isset( $_POST['phone'] ) ? $_POST['phone'] : '';
 	
-	$to = 'piotrdevv@gmail.com';
+	$to = 'filip@psibufet.pl';
 	$subject = '[PsiBufet] Zgłoszenie ambasadora';
 	$message = "Typ: " . $type . "\r\nFirma: " . $company . "\r\nMail: " . $mail . "\r\nPhone: " . $phone;
 	

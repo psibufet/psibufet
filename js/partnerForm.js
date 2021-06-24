@@ -8,9 +8,11 @@ $(document).ready(function(){
     $(document).mouseup(function(e){
         var dropdown = $('.form__dropdown');
         if (!dropdown.is(e.target) && dropdown.has(e.target).length === 0){
-            dropdown.parent().removeClass('form__row--active');
-            dropdown.removeClass('active');
-            dropdown.slideUp();
+            if(dropdown.parent().hasClass('form__row--active')){
+                dropdown.parent().removeClass('form__row--active');
+                dropdown.removeClass('active');
+                dropdown.slideUp();
+            }
         }
     });
 
