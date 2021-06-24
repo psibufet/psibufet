@@ -444,7 +444,7 @@
                     cursor: pointer;
                     position: relative;
 
-                    &:after{
+                    &:before{
                         content: '';
                         background-image: url('/wp-content/themes/psibufet/images/chevron_down.svg');
                         background-repeat: no-repeat;
@@ -607,7 +607,7 @@
                     }
 
                     &--dropdown{
-                        &:after{
+                        &:before{
                             background-size: 12px;
                             width: 12px;
                             height: 9px;

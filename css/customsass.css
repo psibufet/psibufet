@@ -6841,7 +6841,7 @@ body.page-template-page_lpsale .homeFoodinfo__right:after {
   position: relative;
 }
 
-.partnerJoin__form .form__row--dropdown:after {
+.partnerJoin__form .form__row--dropdown:before {
   content: '';
   background-image: url("/wp-content/themes/psibufet/images/chevron_down.svg");
   background-repeat: no-repeat;
@@ -6991,7 +6991,7 @@ body.page-template-page_lpsale .homeFoodinfo__right:after {
   .partnerJoin__form .form__row label {
     font-size: 14px;
   }
-  .partnerJoin__form .form__row--dropdown:after {
+  .partnerJoin__form .form__row--dropdown:before {
     background-size: 12px;
     width: 12px;
     height: 9px;
