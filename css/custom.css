@@ -8547,7 +8547,11 @@ body.page-template-page_naszeprzepisy #site_footer_new {
         padding-top: 0 !important;
     }
 }
-body.page-template-page_thank-you #masthead {
+
+body.page-template-page_thank-you #masthead,
+body.page-template-page_thank-you .header-clone,
+body.page-template-page_thank-you-failed #masthead,
+body.page-template-page_thank-you-failed .header-clone{
     display: none;
 }
 body.page-template-page_thank-you #content {
@@ -8611,7 +8615,10 @@ a.typ_button:hover span:after {
     position: relative;
     left: -10px;
 }
-#typ .typ_front:after {
+#typ.failed .typ_front{
+    height: auto;
+}
+#typ .typ_front:after{
     content: "";
     background-image: url(/wp-content/themes/psibufet/images/gang_corgi.svg);
     background-repeat: no-repeat;
@@ -8620,6 +8627,18 @@ a.typ_button:hover span:after {
     height: 287px;
     position: absolute;
     right: 18%;
+    top: 0;
+    transform: rotate(2deg);
+}
+#typ.failed .typ_front:after {
+    content: "";
+    background-image: url(/wp-content/themes/psibufet/images/paymentFailed_dog.svg);
+    background-repeat: no-repeat;
+    background-size: 157px;
+    width: 157px;
+    height: 305px;
+    position: absolute;
+    right: 20%;
     top: 0;
     transform: rotate(2deg);
 }
@@ -8670,12 +8689,36 @@ a.typ_button:hover span:after {
     text-align: center;
     position: relative;
 }
+#typ.failed .typ_front .content{
+    max-width: 600px;
+    padding: 0 20px;
+}
 #typ .typ_front .content p.lead {
     font-family: "Bebas Neue", sans-serif;
     font-size: 21px;
     line-height: 25px;
     font-weight: 400;
     color: #000;
+}
+#typ.failed .typ_front .content p.bold{
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+    margin: 0 0 20px;
+}
+#typ.failed .typ_front .content p.bold:last-of-type{
+    margin: 0 0 40px;
+}
+#typ.failed .typ_front .content .info{
+    margin: 30px 0 10px;
+}
+#typ.failed .typ_front .content .info p{
+    font-size: 14px;
+    line-height: 16px;
+    color: #000;
+    text-align: center;
 }
 @media (max-width: 1550px) {
     #typ .typ_front:after {
@@ -8684,6 +8727,12 @@ a.typ_button:hover span:after {
         height: 287px;
         right: 9%;
         top: 0;
+    }
+    #typ.failed .typ_front:after {
+        background-size: 140px;
+        width: 140px;
+        height: 270px;
+        right: 15%;
     }
 }
 @media (max-width: 1350px) {
@@ -8699,6 +8748,12 @@ a.typ_button:hover span:after {
         right: 5%;
         top: 0;
     }
+    #typ.failed .typ_front:after {
+        background-size: 140px;
+        width: 140px;
+        height: 270px;
+        right: 5%;
+    }
 }
 @media (max-width: 991px) {
     #typ .typ_front:after {
@@ -8708,6 +8763,24 @@ a.typ_button:hover span:after {
         right: 5%;
         top: auto;
         bottom: 0;
+    }
+    #typ.failed .typ_front:after {
+        display: none;
+    }
+    #typ.failed .typ_front .heading .text{
+        position: relative;
+    }
+    #typ.failed .typ_front .heading .text:after{
+        content: '';
+        background-image: url(/wp-content/themes/psibufet/images/paymentFailed_dog.svg);
+        background-repeat: no-repeat;
+        background-size: 51px;
+        width: 51px;
+        height: 100px;
+        position: absolute;
+        right: 20px;
+        bottom: -20px;
+        transform: rotate(2deg);
     }
 }
 @media (max-width: 768px) {
@@ -8744,10 +8817,27 @@ a.typ_button:hover span:after {
     #typ .typ_front .content {
         margin: 30px auto 0;
     }
+    #typ.failed .typ_front .content{
+        margin: 45px auto 0;
+    }
     #typ .typ_front .content p.lead {
         font-size: 20px;
         line-height: 24px;
         margin-bottom: 18px;
+    }
+    #typ.failed .typ_front .content p.bold{
+        font-size: 16px;
+        line-height: 19px;
+    }
+    #typ.failed .typ_front .content p.bold:last-of-type{
+        margin: 0 0 20px;
+    }
+    #typ.failed .typ_front .content .info{
+        margin: 20px 0 10px;
+    }
+    #typ.failed .typ_front .content .info p{
+        font-size: 12px;
+        line-height: 14px;
     }
     body.page-template-page_thank-you #site_footer_new {
         padding-top: 0;
@@ -8759,6 +8849,9 @@ a.typ_button:hover span:after {
 @media (max-width: 530px) {
     #typ .typ_front:after {
         display: none;
+    }
+    #typ.failed .typ_front .heading .text:after{
+        right: 10px;
     }
 }
 #typ .typ_welcome {
@@ -8990,6 +9083,8 @@ a.typ_button:hover span:after {
         left: -50px;
     }
 }
+
+
 a.karma_button {
     display: inline-block;
     min-width: 235px;

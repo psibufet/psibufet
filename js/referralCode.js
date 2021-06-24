@@ -19,6 +19,7 @@ $(document).ready(function(){
 					'pracuj-w-psibufet',
 					'kontakt',
 					'thank-you',
+					'failed-payment',
 					'regulamin',
 					'regulamin.pdf',
 					'wolowe-love',
