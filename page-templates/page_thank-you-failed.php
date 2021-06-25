@@ -20,7 +20,7 @@ get_header(); ?>
         <div class="content">
             <p class="bold">Podczas rejestracji wystąpił błąd uwierzytelniania po stronie banku.</p>
             <p class="bold">Przejdź do zakładki Dane i płatności i <a href="https://panel.psibufet.pl/">uzupełnij dane Twojej karty</a>, aby potwierdzić zamówienie.</p>
-            <a href="https://panel.psibufet.pl/" class="typ_button"><span>Zaloguj się</span></a>
+            <a href="https://panel.psibufet.pl/platnosci" class="typ_button"><span>Przejdź do panelu</span></a>
             <div class="info">
                 <p>W razie pytań lub wątpliwości<br/>
                     skontaktuj się z naszym działem obsługi klienta<br/>
