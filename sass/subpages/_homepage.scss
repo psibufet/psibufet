@@ -261,6 +261,7 @@
 @media (max-width: 991px){
     .homeReviews{
         overflow: hidden;
+        margin-bottom: 0;
         
         &__logo{
             margin: 0 15px;
@@ -1263,6 +1264,11 @@
             width: 70vw;
         }
         &__right{
+            h2{
+                span{
+                    display: inline-block;
+                }
+            }
             .info_boxes{
                 max-width: 320px;
 

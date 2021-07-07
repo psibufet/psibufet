@@ -1110,6 +1110,7 @@ body.promocode .siteHeader--scrolled {
 @media (max-width: 991px) {
   .homeReviews {
     overflow: hidden;
+    margin-bottom: 0;
   }
   .homeReviews__logo {
     margin: 0 15px;
@@ -2038,6 +2039,9 @@ body.promocode .siteHeader--scrolled {
   }
   .homeFoodinfo__info {
     width: 70vw;
+  }
+  .homeFoodinfo__right h2 span {
+    display: inline-block;
   }
   .homeFoodinfo__right .info_boxes {
     max-width: 320px;
