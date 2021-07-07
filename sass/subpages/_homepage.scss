@@ -202,7 +202,8 @@
 
 // Home reviews
 .homeReviews{
-    padding: 30px 0;
+    padding: 15px 0;
+    margin-bottom: 30px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     
     ul{
@@ -684,7 +685,7 @@
 
             .infoButtons{
                 position: absolute;
-                bottom: 30px;
+                bottom: 0;
                 left: 0;
                 right: 0;
                 max-width: fit-content;
@@ -763,7 +764,7 @@
             margin: 0;
             display: flex;
             position: absolute;
-            bottom: -165px;
+            bottom: -125px;
             left: 0;
             right: 0;
             margin: 0 auto;
@@ -1033,7 +1034,7 @@
         &__left{
             .slidesWrap{
                 .infoButtons{
-                    bottom: 90px;
+                    bottom: 60px;
                 }
             }
         }
@@ -1051,7 +1052,7 @@
                 }
             }
             .slick-dots{
-                bottom: -140px;
+                bottom: -95px;
             }
         }
         &__info{

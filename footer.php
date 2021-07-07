@@ -13,7 +13,7 @@
 	<footer id="siteFooter" class="siteFooter">
         <div class="siteFooter__wrap">
             <div class="siteFooter__logo">
-                <img src="<?php echo get_template_directory_uri() . '/images/psibufet_dog.svg' ?>"/>
+                <img src="<?php echo get_template_directory_uri() . '/images/lpsale/psibufet_logo_lp.svg'; ?>"/>
             </div>
             <div class="siteFooter__menu">
                 <div class="linksWrap">

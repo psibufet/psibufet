@@ -306,13 +306,16 @@ body{
                         color: #000;
                     }
                 }
-                &--default,
                 &--selected{
-                    background-color: $redcolor;
+                    background-color: $redcolor !important;
 
                     .portion,
                     .value{
                         color: #fff !important;
+                    }
+
+                    &:hover{
+                        opacity: .7;
                     }
                 }
 

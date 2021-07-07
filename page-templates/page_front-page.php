@@ -54,7 +54,7 @@ get_header(); ?>
     </section>
     <section class="homeMiska animateMiska container">
         <div class="homeMiska__left">
-            <h2 class="getMarker"><span class="marker">Prawdziwe jedzenie</span> w psiej misce</h2>
+            <h2 class="getMarker"><span class="marker">Prawdziwe</span> jedzenie w psiej misce</h2>
             <p class="subtitle"><b>Bo psy zasługują na to, co najlepsze.</b></p>
             <div class="info_boxes">
                 <div class="box">
@@ -123,7 +123,7 @@ get_header(); ?>
                 </div>
             </div>
             <div class="homeFoodinfo__right">
-                <h2 class="getMarker">Jedzenie, którego <span class="marker">pozazdrościsz swojemu psu</span></h2>
+                <h2 class="getMarker">Jedzenie, którego <span class="marker">pozazdrościsz</span> swojemu psu</h2>
                 <p><b>55% mięsa oraz 45% warzyw i owoców,<br/>pełna suplementacja mineralno-witaminowa.</b></p>
                 <div class="info_boxes">
                     <div class="box">
@@ -335,7 +335,7 @@ get_header(); ?>
     <section class="homePricing">
         <div class="homePricing__wrap container">
             <div class="homePricing__left">
-                <h2 class="getMarker">Dedykowany plan, <span class="marker">indywidualna dieta</span></h2>
+                <h2 class="getMarker">Dedykowany plan, <span class="marker">indywidualna</span> cena</h2>
                 <p>Swoją cenę PsiBufet sprawdzisz w czasie rejestracji, gdy już dobrze poznamy Twojego pupila.</p>
                 <div class="blockResponsive blockResponsive--hideMobile">
                     <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir"><span><?php the_field('front_price_cta') ?></span></a>

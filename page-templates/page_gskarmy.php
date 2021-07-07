@@ -50,7 +50,7 @@ get_header(); ?>
                                     $price = get_sub_field('flavourPricing_price');
                                     $default = get_sub_field('flavourPricing_default');
                                 ?>
-                                <div class="select__option<?php if($default == 1): ?> select__option--default<?php endif; ?>" data-value="<?php echo $value; ?>" data-price-zl="<?php echo $price['flavourPricing_price_pln']; ?>" data-price-gr="<?php echo $price['flavourPricing_price_grosz']; ?>">
+                                <div class="select__option<?php if($default == 1): ?> select__option--default select__option--selected<?php endif; ?>" data-value="<?php echo $value; ?>" data-price-zl="<?php echo $price['flavourPricing_price_pln']; ?>" data-price-gr="<?php echo $price['flavourPricing_price_grosz']; ?>">
                                     <div class="portion"><?php echo $value; ?> g / dzień</div>
                                     <div class="value"><span><?php echo $price['flavourPricing_price_pln']; ?><small><?php echo $price['flavourPricing_price_grosz']; ?></small></span> / dzień</div>
                                 </div>
