@@ -521,6 +521,10 @@ body.promocode .siteHeader--scrolled {
   width: 250px;
 }
 
+.siteFooter__menu .info .logo {
+  display: none;
+}
+
 .siteFooter__menu .info a {
   display: block;
   font-size: 14px;
@@ -675,6 +679,14 @@ body.promocode .siteHeader--scrolled {
     width: 100%;
     text-align: center;
     margin: 30px 0;
+  }
+  .siteFooter__menu .info .logo {
+    display: block;
+    margin-bottom: 15px;
+  }
+  .siteFooter__menu .info .logo img {
+    max-width: 122px;
+    width: 100%;
   }
   .siteFooter__menu .info .social {
     justify-content: center;
@@ -1125,26 +1137,50 @@ body.promocode .siteHeader--scrolled {
   margin: 0 0 25px;
 }
 
-.homeMiska__left .content {
-  max-width: 510px;
-  margin: 0 auto;
-}
-
-.homeMiska__left .content p {
-  font-size: 16px;
-  line-height: 22px;
+.homeMiska__left .subtitle {
+  font-size: 20px;
+  line-height: 26px;
   font-weight: 400;
-  margin: 0 0 20px;
+  margin: 0;
+  color: #000;
+  text-align: center;
+}
+
+.homeMiska__left .info_boxes {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 550px;
+  width: 100%;
+  margin: 30px auto 5px;
+}
+
+.homeMiska__left .info_boxes .box {
+  width: calc(100% / 4);
+  margin: 0 0 35px;
+}
+
+.homeMiska__left .info_boxes .box__thumb {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 10px;
+}
+
+.homeMiska__left .info_boxes .box__thumb img {
+  width: 70px;
+  max-height: 80px;
+  object-fit: contain;
+}
+
+.homeMiska__left .info_boxes .box p {
+  font-size: 14px;
+  line-height: 18px;
   color: #4c4c4c;
-}
-
-.homeMiska__left .content p b {
-  font-weight: 700;
-}
-
-.homeMiska__left .info {
-  font-size: 10px;
-  margin: 0 0 40px;
+  max-width: 130px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .homeMiska__right {
@@ -1153,6 +1189,33 @@ body.promocode .siteHeader--scrolled {
   width: 50%;
   height: inherit;
   position: relative;
+}
+
+.homeMiska__right:before {
+  content: '';
+  background-image: url("/wp-content/themes/psibufet/images/foodinfo_dog.svg");
+  background-size: 115px;
+  background-repeat: no-repeat;
+  width: 115px;
+  height: 170px;
+  position: absolute;
+  left: 60px;
+  bottom: -50px;
+  transform: scale(-1, 1);
+  z-index: 5;
+}
+
+.homeMiska__right:after {
+  content: '';
+  background-image: url("/wp-content/themes/psibufet/images/polski_produkt_logo.svg");
+  background-repeat: no-repeat;
+  background-size: 90px;
+  width: 90px;
+  height: 52px;
+  position: absolute;
+  right: 195px;
+  bottom: 50px;
+  z-index: 5;
 }
 
 .homeMiska__imageWrap {
@@ -1249,7 +1312,27 @@ body.promocode .siteHeader--scrolled {
   width: 80px;
 }
 
+@media (max-width: 1599px) {
+  .homeMiska__right:before {
+    left: -30px;
+  }
+  .homeMiska__right:after {
+    right: 55px;
+  }
+}
+
 @media (max-width: 1199px) {
+  .homeMiska__right:before {
+    background-size: 90px;
+    width: 90px;
+    height: 130px;
+    left: -50px;
+    bottom: -30px;
+  }
+  .homeMiska__right:after {
+    right: 50px;
+    bottom: 80px;
+  }
   .homeMiska__imageWrap {
     width: 500px;
   }
@@ -1278,10 +1361,37 @@ body.promocode .siteHeader--scrolled {
     width: 100%;
     padding-bottom: 70px;
   }
+  .homeMiska__left .info_boxes {
+    justify-content: space-between;
+    max-width: 320px;
+  }
+  .homeMiska__left .info_boxes .box {
+    width: 150px;
+    padding: 13px 19px;
+    background-color: #fff;
+    border: 1px solid #BCBCBB;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+    margin: 0 0 20px;
+  }
+  .homeMiska__left .info_boxes .box__thumb img {
+    width: 60px;
+    max-height: 70px;
+  }
+  .homeMiska__left .info_boxes .box p {
+    font-size: 12px;
+    line-height: 16px;
+  }
   .homeMiska__right {
     width: 100%;
     height: 450px;
     position: unset;
+  }
+  .homeMiska__right:before {
+    display: none;
+  }
+  .homeMiska__right:after {
+    right: 160px;
+    top: 360px;
   }
 }
 
@@ -1291,9 +1401,21 @@ body.promocode .siteHeader--scrolled {
     line-height: 34px;
     margin: 0 0 20px;
   }
-  .homeMiska__left .content p {
-    font-size: 12px;
-    line-height: 16px;
+  .homeMiska__left .subtitle {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .homeMiska__left .info_boxes {
+    margin: 20px auto 5px;
+  }
+  .homeMiska__right:after {
+    right: -240px;
+    top: 360px;
+    left: 0;
+    margin: 0 auto;
+    background-size: 62px;
+    width: 62px;
+    height: 36px;
   }
   .homeMiska__review {
     max-width: none;
@@ -1339,8 +1461,19 @@ body.promocode .siteHeader--scrolled {
     position: relative;
     z-index: 4;
   }
+  .homeMiska__left .info_boxes {
+    max-width: 320px;
+  }
+  .homeMiska__left .info_boxes .box {
+    max-width: calc(100% / 2 - 10px);
+    width: 100%;
+  }
   .homeMiska__right {
     height: 300px;
+  }
+  .homeMiska__right:after {
+    right: -190px;
+    top: 220px;
   }
 }
 
@@ -1348,7 +1481,7 @@ body.promocode .siteHeader--scrolled {
   background-image: url("/wp-content/themes/psibufet/images/homefoodinfobg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 770px;
+  min-height: 650px;
   padding: 0 0 40px;
 }
 
@@ -1356,19 +1489,7 @@ body.promocode .siteHeader--scrolled {
   display: flex;
   min-height: inherit;
   position: relative;
-}
-
-.homeFoodinfo__wrap:before {
-  content: "";
-  background-image: url(/wp-content/themes/psibufet/images/foodinfo_dog.svg);
-  background-size: 150px;
-  background-repeat: no-repeat;
-  width: 150px;
-  height: 220px;
-  position: absolute;
-  left: 0;
-  top: -120px;
-  transform: scale(-1, 1);
+  margin-bottom: 50px;
 }
 
 .homeFoodinfo__left {
@@ -1386,11 +1507,11 @@ body.promocode .siteHeader--scrolled {
 
 .homeFoodinfo__left .slidesWrap .infoButtons {
   position: absolute;
-  bottom: 60px;
+  bottom: 30px;
   left: 0;
   right: 0;
   max-width: fit-content;
-  max-width: -moz-fit-content;
+  max-width: -webkit-fit-content;
   margin: 0 auto;
 }
 
@@ -1467,7 +1588,7 @@ body.promocode .siteHeader--scrolled {
   margin: 0;
   display: flex;
   position: absolute;
-  bottom: -120px;
+  bottom: -165px;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -1545,7 +1666,7 @@ body.promocode .siteHeader--scrolled {
   line-height: 22px;
   font-weight: 400;
   margin: 0;
-  color: #4c4c4c;
+  color: #000;
   text-align: center;
 }
 
@@ -1586,11 +1707,12 @@ body.promocode .siteHeader--scrolled {
   display: flex;
   flex-wrap: wrap;
   max-width: 550px;
+  width: 100%;
   margin: 30px auto 5px;
 }
 
 .homeFoodinfo__right .info_boxes .box {
-  width: calc(100% / 3);
+  width: calc(100% / 4);
   margin: 0 0 35px;
 }
 
@@ -1733,6 +1855,9 @@ body.promocode .siteHeader--scrolled {
 }
 
 @media (max-width: 1199px) {
+  .homeFoodinfo__left .slidesWrap .infoButtons {
+    bottom: 90px;
+  }
   .homeFoodinfo__slides .slick-arrow {
     background-size: 30px;
     width: 30px;
@@ -1743,6 +1868,9 @@ body.promocode .siteHeader--scrolled {
   }
   .homeFoodinfo__slides .slick-arrow.slick-next {
     right: 40px;
+  }
+  .homeFoodinfo__slides .slick-dots {
+    bottom: -140px;
   }
   .homeFoodinfo__info {
     width: 180px;
@@ -1760,6 +1888,7 @@ body.promocode .siteHeader--scrolled {
 @media (max-width: 991px) {
   .homeFoodinfo__wrap {
     flex-direction: column;
+    margin-bottom: 20px;
   }
   .homeFoodinfo__left {
     width: 100%;
@@ -1781,11 +1910,11 @@ body.promocode .siteHeader--scrolled {
   }
   .homeFoodinfo__right {
     width: 100%;
-    margin-bottom: 32px;
+    margin-bottom: 0;
   }
   .homeFoodinfo__right .info_boxes {
     justify-content: space-between;
-    max-width: 495px;
+    max-width: 320px;
   }
   .homeFoodinfo__right .info_boxes .box {
     width: 150px;
@@ -2315,7 +2444,7 @@ body.admin-bar .foodModal__wrap {
     width: 360px;
   }
   .foodModal__wrap .closeImg {
-    width: 24px;
+    width: 30px;
   }
   .foodModal__content .gallery {
     width: 360px;
@@ -2326,9 +2455,9 @@ body.admin-bar .foodModal__wrap {
     height: 215px;
   }
   .foodModal__content .gallery .slick-arrow {
-    background-size: 24px;
-    width: 24px;
-    height: 24px;
+    background-size: 30px;
+    width: 30px;
+    height: 30px;
   }
   .foodModal__content .gallery .slick-arrow.slick-prev {
     left: 20px;
@@ -2993,7 +3122,7 @@ body.admin-bar .foodModal__wrap {
   .homeBenefits__content .benefitContent .info {
     font-size: 10px;
     line-height: 14px;
-    margin: 0 0 25px;
+    margin: 25px 0 0;
   }
   .homeBenefits__content .benefitContent .info span:first-of-type:before {
     background-size: 20px;
@@ -3061,16 +3190,13 @@ body.admin-bar .foodModal__wrap {
 }
 
 .homePricing__left p {
-  font-size: 16px;
-  line-height: 19px;
-  color: #4c4c4c;
-  max-width: 400px;
-  margin: 0 auto 20px;
-  text-align: center;
-}
-
-.homePricing__left p:last-of-type {
+  font-size: 20px;
+  line-height: 26px;
+  color: #000;
+  font-weight: 600;
+  max-width: 480px;
   margin: 0 auto 40px;
+  text-align: center;
 }
 
 .homePricing__left .info {
@@ -3349,6 +3475,7 @@ body.admin-bar .foodModal__wrap {
     font-size: 12px;
     line-height: 16px;
     margin: 0 0 10px;
+    max-width: 230px;
   }
   .homePricing__left p:last-of-type {
     margin: 0 auto 25px;
@@ -3395,10 +3522,23 @@ body.admin-bar .foodModal__wrap {
   }
   .homePricing__right .pricingContent__info .price .value span {
     font-size: 22px;
+    top: -11px;
   }
   .homePricing__right .pricingContent__info .portion {
     font-size: 15px;
     line-height: 1;
+  }
+  .homePricing__right .pricingContent--promotion .pricingContent__info .drop {
+    font-size: 16px;
+    line-height: 21px;
+  }
+  .homePricing__right .pricingContent--promotion .pricingContent__info .drop .value {
+    font-size: 23px;
+    line-height: 36px;
+  }
+  .homePricing__right .pricingContent--promotion .pricingContent__info .drop .value span {
+    font-size: 16px;
+    top: -5px;
   }
 }
 
@@ -4525,12 +4665,22 @@ body.page-template-page_gskarmy .siteHeader {
 }
 
 .gsKarmainfo__content .select__option:hover {
-  background-color: #f15748;
+  background-color: #EBEBEB;
 }
 
 .gsKarmainfo__content .select__option:hover .portion,
 .gsKarmainfo__content .select__option:hover .value {
-  color: #fff;
+  color: #000;
+}
+
+.gsKarmainfo__content .select__option--default, .gsKarmainfo__content .select__option--selected {
+  background-color: #f15748;
+}
+
+.gsKarmainfo__content .select__option--default .portion,
+.gsKarmainfo__content .select__option--default .value, .gsKarmainfo__content .select__option--selected .portion,
+.gsKarmainfo__content .select__option--selected .value {
+  color: #fff !important;
 }
 
 .gsKarmainfo__content .select__option .portion,
@@ -4879,7 +5029,7 @@ body.page-template-page_lpsale .BeaconFabButtonFrame {
   .lpSale .stickyBtn--toggle {
     display: block;
   }
-  .siteFooter {
+  body.page-template-page_lpsale .siteFooter {
     margin-bottom: 80px;
   }
 }

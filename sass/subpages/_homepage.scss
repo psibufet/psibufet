@@ -288,25 +288,49 @@
             color: #000;
             margin: 0 0 25px;
         }
-        .content{
-            max-width: 510px;
-            margin: 0 auto;
+        .subtitle{
+            font-size: 20px;
+            line-height: 26px;
+            font-weight: 400;
+            margin: 0;
+            color: #000;
+            text-align: center;
+        }
+        .info_boxes{
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 550px;
+            width: 100%;
+            margin: 30px auto 5px;
 
-            p{
-                font-size: 16px;
-                line-height: 22px;
-                font-weight: 400;
-                margin: 0 0 20px;
-                color: $primarycolor;
+            .box{
+                width: calc(100% / 4);
+                margin: 0 0 35px;
 
-                b{
-                    font-weight: 700;
+                &__thumb{
+                    height: 80px;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 0 10px;
+
+                    img{
+                        width: 70px;
+                        max-height: 80px;
+                        object-fit: contain;
+                    }
+                }
+
+                p{
+                    font-size: 14px;
+                    line-height: 18px;
+                    color: $primarycolor;
+                    max-width: 130px;
+                    margin: 0 auto;
+                    text-align: center;
                 }
             }
-        }
-        .info{
-            font-size: 10px;
-            margin: 0 0 40px;
         }
     }
     &__right{
@@ -315,6 +339,32 @@
         width: 50%;
         height: inherit;
         position: relative;
+
+        &:before{
+            content: '';
+            background-image: url('/wp-content/themes/psibufet/images/foodinfo_dog.svg');
+            background-size: 115px;
+            background-repeat: no-repeat;
+            width: 115px;
+            height: 170px;
+            position: absolute;
+            left: 60px;
+            bottom: -50px;
+            transform: scale(-1, 1);
+            z-index: 5;
+        }
+        &:after{
+            content: '';
+            background-image: url('/wp-content/themes/psibufet/images/polski_produkt_logo.svg');
+            background-repeat: no-repeat;
+            background-size: 90px;
+            width: 90px;
+            height: 52px;
+            position: absolute;
+            right: 195px;
+            bottom: 50px;
+            z-index: 5;
+        }
     }
 
     $imageswidth: 650px;
@@ -409,10 +459,35 @@
         }
     }
 }
+@media (max-width: 1599px){
+    .homeMiska{
+        &__right{
+            &:before{
+                left: -30px;
+            }
+            &:after{
+                right: 55px;
+            }
+        }
+    }
+}
 @media (max-width: 1199px){
     .homeMiska{
         $imageswidth: 500px;
 
+        &__right{
+            &:before{
+                background-size: 90px;
+                width: 90px;
+                height: 130px;
+                left: -50px;
+                bottom: -30px;
+            }
+            &:after{
+                right: 50px;
+                bottom: 80px;
+            }
+        }
         &__imageWrap{
             width: $imageswidth;
 
@@ -442,11 +517,44 @@
         &__left{
             width: 100%;
             padding-bottom: 70px;
+
+            .info_boxes{
+                justify-content: space-between;
+                max-width: 320px;
+
+                .box{
+                    width: 150px;
+                    padding: 13px 19px;
+                    background-color: #fff;
+                    border: 1px solid #BCBCBB;
+                    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+                    margin: 0 0 20px;
+
+                    &__thumb{
+                        img{
+                            width: 60px;
+                            max-height: 70px;
+                        }
+                    }
+                    p{
+                        font-size: 12px;
+                        line-height: 16px;
+                    }
+                }
+            }
         }
         &__right{
             width: 100%;
             height: 450px;
             position: unset;
+
+            &:before{
+                display: none;
+            }
+            &:after{
+                right: 160px;
+                top: 360px;
+            }
         }
     }
 }
@@ -458,11 +566,23 @@
                 line-height: 34px;
                 margin: 0 0 20px;
             }
-            .content{
-                p{
-                    font-size: 12px;
-                    line-height: 16px;
-                }
+            .subtitle{
+                font-size: 14px;
+                line-height: 17px;
+            }
+            .info_boxes{
+                margin: 20px auto 5px;
+            }
+        }
+        &__right{
+            &:after{
+                right: -240px;
+                top: 360px;
+                left: 0;
+                margin: 0 auto;
+                background-size: 62px;
+                width: 62px;
+                height: 36px;
             }
         }
         &__review{
@@ -516,9 +636,23 @@
             margin-top: -30px;
             position: relative;
             z-index: 4;
+
+            .info_boxes{
+                max-width: 320px;
+
+                .box{
+                    max-width: calc(100% / 2 - 10px);
+                    width: 100%;
+                }
+            }
         }
         &__right{
             height: 300px;
+
+            &:after{
+                right: -190px;
+                top: 220px;
+            }
         }
     }
 }
@@ -528,26 +662,14 @@
     background-image: url('/wp-content/themes/psibufet/images/homefoodinfobg.png');
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 770px;
+    min-height: 650px;
     padding: 0 0 40px;
 
     &__wrap{
         display: flex;
         min-height: inherit;
         position: relative;
-
-        &:before{
-            content: "";
-            background-image: url(/wp-content/themes/psibufet/images/foodinfo_dog.svg);
-            background-size: 150px;
-            background-repeat: no-repeat;
-            width: 150px;
-            height: 220px;
-            position: absolute;
-            left: 0;
-            top: -120px;
-            transform: scale(-1, 1);
-        }
+        margin-bottom: 50px;
     }
     &__left{
         width: 50%;
@@ -562,11 +684,12 @@
 
             .infoButtons{
                 position: absolute;
-                bottom: 60px;
+                bottom: 30px;
                 left: 0;
                 right: 0;
                 max-width: fit-content;
                 max-width: -moz-fit-content;
+                max-width: -webkit-fit-content;
                 margin: 0 auto;
 
                 &__button{
@@ -640,7 +763,7 @@
             margin: 0;
             display: flex;
             position: absolute;
-            bottom: -120px;
+            bottom: -165px;
             left: 0;
             right: 0;
             margin: 0 auto;
@@ -717,7 +840,7 @@
             line-height: 22px;
             font-weight: 400;
             margin: 0;
-            color: $primarycolor;
+            color: #000;
             text-align: center;
             
             b{
@@ -755,10 +878,11 @@
             display: flex;
             flex-wrap: wrap;
             max-width: 550px;
+            width: 100%;
             margin: 30px auto 5px;
 
             .box{
-                width: calc(100% / 3);
+                width: calc(100% / 4);
                 margin: 0 0 35px;
 
                 &__thumb{
@@ -906,6 +1030,13 @@
 }
 @media (max-width: 1199px){
     .homeFoodinfo{
+        &__left{
+            .slidesWrap{
+                .infoButtons{
+                    bottom: 90px;
+                }
+            }
+        }
         &__slides{
             .slick-arrow{
                 background-size: 30px;
@@ -918,6 +1049,9 @@
                 &.slick-next{
                     right: 40px;
                 }
+            }
+            .slick-dots{
+                bottom: -140px;
             }
         }
         &__info{
@@ -943,6 +1077,7 @@
     .homeFoodinfo{
         &__wrap{
             flex-direction: column;
+            margin-bottom: 20px;
         }
         &__left{
             width: 100%;
@@ -970,11 +1105,11 @@
         }
         &__right{
             width: 100%;
-            margin-bottom: 32px;
+            margin-bottom: 0;
 
             .info_boxes{
                 justify-content: space-between;
-                max-width: 495px;
+                max-width: 320px;
 
                 .box{
                     width: 150px;
@@ -1558,7 +1693,7 @@ body.admin-bar{
             width: 360px;
 
             .closeImg{
-                width: 24px;
+                width: 30px;
             }
         }
         &__content{
@@ -1572,9 +1707,9 @@ body.admin-bar{
                 }
 
                 .slick-arrow{
-                    background-size: 24px;
-                    width: 24px;
-                    height: 24px;
+                    background-size: 30px;
+                    width: 30px;
+                    height: 30px;
 
                     &.slick-prev{
                         left: 20px;
@@ -2328,7 +2463,7 @@ body.admin-bar{
                 .info{
                     font-size: 10px;
                     line-height: 14px;
-                    margin: 0 0 25px;
+                    margin: 25px 0 0;
 
                     span{
                         &:first-of-type{
@@ -2405,16 +2540,13 @@ body.admin-bar{
             text-align: center;
         }
         p{
-            font-size: 16px;
-            line-height: 19px;
-            color: $primarycolor;
-            max-width: 400px;
-            margin: 0 auto 20px;
+            font-size: 20px;
+            line-height: 26px;
+            color: #000;
+            font-weight: 600;
+            max-width: 480px;
+            margin: 0 auto 40px;
             text-align: center;
-
-            &:last-of-type{
-                margin: 0 auto 40px;
-            }
         }
         .info{
             display: flex;
@@ -2717,6 +2849,7 @@ body.admin-bar{
                 font-size: 12px;
                 line-height: 16px;
                 margin: 0 0 10px;
+                max-width: 230px;
 
                 &:last-of-type{
                     margin: 0 auto 25px;
@@ -2774,13 +2907,32 @@ body.admin-bar{
                             line-height: 42px;
 
                             span{
-                                font-size: 22px
+                                font-size: 22px;
+                                top: -11px;
                             }
                         }
                     }
                     .portion{
                         font-size: 15px;
                         line-height: 1;
+                    }
+                }
+                &--promotion{
+                    .pricingContent__info{
+                        .drop{
+                            font-size: 16px;
+                            line-height: 21px;
+    
+                            .value{
+                                font-size: 23px;
+                                line-height: 36px;
+    
+                                span{
+                                    font-size: 16px;
+                                    top: -5px;
+                                }
+                            }
+                        }
                     }
                 }
             }

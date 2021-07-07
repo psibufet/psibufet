@@ -64,6 +64,10 @@
         .info{
             width: 250px;
 
+            .logo{
+                display: none;
+            }
+
             a{
                 display: block;
                 font-size: 14px;
@@ -223,6 +227,15 @@
                 text-align: center;
                 margin: 30px 0;
 
+                .logo{
+                    display: block;
+                    margin-bottom: 15px;
+
+                    img{
+                        max-width: 122px;
+                        width: 100%;
+                    }
+                }
                 .social{
                     justify-content: center;
                 }

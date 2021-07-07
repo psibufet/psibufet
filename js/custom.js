@@ -892,6 +892,9 @@ $(document).ready(function(){
         var contentPrice_zl = $('#flavourPrice').find('span.value');
         contentPrice_zl.html(price_zl + '<small>' + price_gr + '</small>');
 
+        $('.select__option').removeClass('.select__option--selected');
+        $(this).addClass('select__option--selected');
+
         var contentValue = $('#flavourValue').find('span');
         contentValue.text(value);
 

@@ -299,11 +299,20 @@ body{
                 transition: ease .3s;
 
                 &:hover{
+                    background-color: #EBEBEB;
+
+                    .portion,
+                    .value{
+                        color: #000;
+                    }
+                }
+                &--default,
+                &--selected{
                     background-color: $redcolor;
 
                     .portion,
                     .value{
-                        color: #fff;
+                        color: #fff !important;
                     }
                 }
 

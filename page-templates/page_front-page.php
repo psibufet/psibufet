@@ -55,12 +55,33 @@ get_header(); ?>
     <section class="homeMiska animateMiska container">
         <div class="homeMiska__left">
             <h2 class="getMarker"><span class="marker">Prawdziwe jedzenie</span> w psiej misce</h2>
-            <div class="content">
-                <p>Czy wiesz, że karma z kurczakiem*, którą kupujesz swojemu psu może zawierać tylko 4% mięsa?*</p>
-                <p><b>Uważamy, że psy zasługują na wiele więcej!</b> W trosce o zdrowie czworonogów, wspólnie z dietetykami zwierzęcymi stworzyliśmy <b>pełnoporcjowe karmy ze świeżych składników.</b></p>
-                <p><b>To wszystko już od 4,90 zł dziennie!</b></p>
+            <p class="subtitle"><b>Bo psy zasługują na to, co najlepsze.</b></p>
+            <div class="info_boxes">
+                <div class="box">
+                    <div class="box__thumb">
+                        <img src="/wp-content/themes/psibufet/images/info_boxes/jagnie_z_gor.svg"/>
+                    </div>
+                    <p>Jakość<br/>Human-Grade</p>
+                </div>
+                <div class="box">
+                    <div class="box__thumb">
+                        <img src="/wp-content/themes/psibufet/images/info_boxes/ikonki_zbilansowane.svg"/>
+                    </div>
+                    <p>Zbilansowany,<br/>pełnoporcjowy skład</p>
+                </div>
+                <div class="box">
+                    <div class="box__thumb">
+                        <img src="/wp-content/themes/psibufet/images/info_boxes/garnek.svg"/>
+                    </div>
+                    <p>Gotowane<br/>na parze</p>
+                </div>
+                <div class="box">
+                    <div class="box__thumb">
+                        <img src="/wp-content/themes/psibufet/images/info_boxes/dopasowanaporcja.svg"/>
+                    </div>
+                    <p>Idealnie<br/>dopasowana porcja</p>
+                </div>
             </div>
-            <p class="info">*według Kodeksu Dobrej Praktyki Etykietowania FEDIAF</p>
             <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir"><span><?php the_field('front_uknow_cta') ?></span></a>
         </div>
         <div class="homeMiska__right">
@@ -103,20 +124,8 @@ get_header(); ?>
             </div>
             <div class="homeFoodinfo__right">
                 <h2 class="getMarker">Jedzenie, którego <span class="marker">pozazdrościsz swojemu psu</span></h2>
-                <p><b>55% mięsa oraz 45% warzyw i owoców, pełna suplementacja mineralno-witaminowa.</b><br/>Całość delikatnie gotowana na parze i pakowana próżniowo.</p>
+                <p><b>55% mięsa oraz 45% warzyw i owoców,<br/>pełna suplementacja mineralno-witaminowa.</b></p>
                 <div class="info_boxes">
-                    <div class="box">
-                        <div class="box__thumb">
-                            <img src="/wp-content/themes/psibufet/images/info_boxes/jagnie_z_gor.svg"/>
-                        </div>
-                        <p>Jakość<br/>Human-Grade</p>
-                    </div>
-                    <div class="box">
-                        <div class="box__thumb">
-                            <img src="/wp-content/themes/psibufet/images/info_boxes/ikonki_zbilansowane.svg"/>
-                        </div>
-                        <p>Zbilansowany, pełnoporcjowy skład</p>
-                    </div>
                     <div class="box">
                         <div class="box__thumb">
                             <img src="/wp-content/themes/psibufet/images/info_boxes/kurczak_classic.svg"/>
@@ -127,13 +136,13 @@ get_header(); ?>
                         <div class="box__thumb">
                             <img src="/wp-content/themes/psibufet/images/info_boxes/wpolsce.svg"/>
                         </div>
-                        <p>Bezzbożowe, monobiałkowe</p>
+                        <p>Brak zbóż</p>
                     </div>
                     <div class="box">
                         <div class="box__thumb">
-                            <img src="/wp-content/themes/psibufet/images/info_boxes/dopasowanaporcja.svg"/>
+                            <img src="/wp-content/themes/psibufet/images/info_boxes/ogien.svg"/>
                         </div>
-                        <p>Idealnie dopasowana porcja</p>
+                        <p>Bez ekstruzji</p>
                     </div>
                     <div class="box">
                         <div class="box__thumb">
@@ -327,7 +336,6 @@ get_header(); ?>
         <div class="homePricing__wrap container">
             <div class="homePricing__left">
                 <h2 class="getMarker">Dedykowany plan, <span class="marker">indywidualna dieta</span></h2>
-                <p>Nieprzypadkowo prosimy Cię o uzupełnienie informacji o Twoim psie. Potrzebujemy ich do przygotowania dopasowanego planu żywienia.</p>
                 <p>Swoją cenę PsiBufet sprawdzisz w czasie rejestracji, gdy już dobrze poznamy Twojego pupila.</p>
                 <div class="blockResponsive blockResponsive--hideMobile">
                     <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir"><span><?php the_field('front_price_cta') ?></span></a>
