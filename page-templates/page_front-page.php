@@ -486,7 +486,7 @@ get_header(); ?>
     <section class="homeStart">
         <div class="homeStart__wrap container">
             <div class="homeStart__content">
-                <h2 class="getMarker">Podaj imię swojego psa i rozpocznij <span class="marker">Zdrową dietę</span> już teraz!</h2>
+                <h2 class="getMarker">Podaj imię swojego psa i rozpocznij <span class="marker">Zdrową</span> dietę już teraz!</h2>
                 <form name="userStart" action="https://zamowienie.psibufet.pl/" autocomplete="off">
                     <input type="text" name="dogName" placeholder="Imię psa" autocomplete="off"/>
                     <button type="submit" value="Stwórz dietę" class="btn btn--center"><span>Stwórz dietę</span></button>

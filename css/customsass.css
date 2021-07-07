@@ -4045,7 +4045,7 @@ body.admin-bar .foodModal__wrap {
   width: 560px;
   padding: 32px 40px;
   background-color: #fff;
-  margin: 40px auto;
+  margin: 40px auto 0;
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 2;
