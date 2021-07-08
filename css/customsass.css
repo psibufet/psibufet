@@ -1186,6 +1186,12 @@ body.promocode .siteHeader--scrolled {
   text-align: center;
 }
 
+@media (min-width: 992px) {
+  .homeMiska__left .info_boxes .box:nth-child(3) .box__thumb img {
+    margin-top: -20px;
+  }
+}
+
 .homeMiska__right {
   display: flex;
   align-items: center;

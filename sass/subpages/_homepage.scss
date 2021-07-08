@@ -332,6 +332,16 @@
                     margin: 0 auto;
                     text-align: center;
                 }
+
+                @media (min-width: 992px){
+                    &:nth-child(3){
+                        .box__thumb{
+                            img{
+                                margin-top: -20px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
