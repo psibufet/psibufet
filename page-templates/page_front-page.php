@@ -45,7 +45,7 @@ get_header(); ?>
                             <img src="/wp-content/themes/psibufet/images/reviews/star.svg"/>
                             <img src="/wp-content/themes/psibufet/images/reviews/star.svg"/>
                         </div>
-                        <p>4,9/5 wg opinii klientów</p>
+                        <p>5/5 wg opinii klientów</p>
                     <?php endif; ?>
                 </div>
             <?php endwhile; ?>
