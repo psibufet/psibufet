@@ -334,8 +334,19 @@ $(document).ready(function(){
 // Menu bar options
 $(document).ready(function(){
     var siteHeader = $('.siteHeader');
-    $('.header-clone').css('height', siteHeader.height());
     setTimeout(function(){
+        if($('body').hasClass('promocode')){
+            if($(window).width() < 576){
+                $('.header-clone').css('height', siteHeader.height() + 58);
+            }else if($(window).width() < 767 || $(window).width() > 576){
+                $('.header-clone').css('height', siteHeader.height() + 39);
+            }else{
+                $('.header-clone').css('height', siteHeader.height() + 50);
+            }
+            $('.siteHeader').addClass('siteHeader--promocode');
+        }else{
+            $('.header-clone').css('height', siteHeader.height());
+        }
         if($(window).width() < 991){
             $('.mainnav').css('padding-top', siteHeader.height());
         }

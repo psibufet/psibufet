@@ -4,6 +4,11 @@
     align-items: center;
     justify-content: center;
     background-color: $redcolor;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 101;
 
     &.active{
         display: flex;
@@ -46,7 +51,7 @@
 @media (max-width: 767px){
     #promocode{
         height: auto;
-        position: relative;
+        position: fixed;
 
         p{
             position: unset;
@@ -71,6 +76,15 @@
         }
     }
 }
+@media (max-width: 575px){
+    #promocode{
+        p{
+            max-width: 400px;
+            padding: 10px 20px;
+        }
+    }
+}
+
 body.admin-bar{
     .siteHeader{
         top: 32px;
@@ -101,6 +115,9 @@ body.promocode{
     }
     &--shadow{
         box-shadow: 0 0 20px #0000005e;
+    }
+    &--promocode{
+        margin-top: 50px;
     }
 
     &__wrap{
@@ -461,10 +478,20 @@ body.promocode{
         }
     }
     .siteHeader{
+        &--promocode{
+            margin-top: 39px;
+        }
         &__menu{
             .mainnav{
                 width: 100%;
             }
+        }
+    }
+}
+@media (max-width: 575px){
+    .siteHeader{
+        &--promocode{
+            margin-top: 58px;
         }
     }
 }

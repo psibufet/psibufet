@@ -15,6 +15,11 @@
   align-items: center;
   justify-content: center;
   background-color: #f15748;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 101;
 }
 
 #promocode.active {
@@ -59,7 +64,7 @@
 @media (max-width: 767px) {
   #promocode {
     height: auto;
-    position: relative;
+    position: fixed;
   }
   #promocode p {
     position: unset;
@@ -80,6 +85,13 @@
     height: 41px;
     right: 0;
     bottom: -8px;
+  }
+}
+
+@media (max-width: 575px) {
+  #promocode p {
+    max-width: 400px;
+    padding: 10px 20px;
   }
 }
 
@@ -112,6 +124,10 @@ body.promocode .siteHeader--scrolled {
 
 .siteHeader--shadow {
   box-shadow: 0 0 20px #0000005e;
+}
+
+.siteHeader--promocode {
+  margin-top: 50px;
 }
 
 .siteHeader__wrap {
@@ -439,8 +455,17 @@ body.promocode .siteHeader--scrolled {
   body.admin-bar .siteHeader .mobileNav {
     top: 46px;
   }
+  .siteHeader--promocode {
+    margin-top: 39px;
+  }
   .siteHeader__menu .mainnav {
     width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .siteHeader--promocode {
+    margin-top: 58px;
   }
 }
 

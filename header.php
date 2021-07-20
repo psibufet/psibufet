@@ -115,11 +115,11 @@
     <?php do_action('sydney_before_site'); //Hooked: sydney_preloader() ?>
 
     <div id="page" class="hfeed site">
+        <a href="https://zamowienie.psibufet.pl/" id="promocode" class="dir">
+            <p>Masz <span class="amount">wczytywanie</span><span class="type"></span> zniżki na <span class="na">swoje pierwsze zamówienie</span>.<font> Całość zostanie doliczona w koszyku.</font></p>
+        </a>
         <div class="header-clone"></div>
         <header id="masthead" class="siteHeader" role="banner">
-            <a href="https://zamowienie.psibufet.pl/" id="promocode" class="dir">
-                <p>Masz <span class="amount">wczytywanie</span><span class="type"></span> zniżki na <span class="na">swoje pierwsze zamówienie</span>.<font> Całość zostanie doliczona w koszyku.</font></p>
-            </a>
             <div class="siteHeader__wrap container">
                 <div class="siteHeader__logo">
                     <?php if ( get_theme_mod('site_logo') ) : ?>
