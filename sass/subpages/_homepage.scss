@@ -1104,7 +1104,7 @@
 
             .slidesWrap{
                 .infoButtons{
-                    bottom: 25px;
+                    bottom: 15px;
 
                     &__button{
                         img{
@@ -1181,16 +1181,20 @@
 @media (max-width: 767px){
     .homeFoodinfo{
         &__wrap{
+            overflow: hidden;
+
             &:before{
                 display: none;
             }
         }
         &__left{
-            margin-top: 40px;   
+            margin-top: 40px; 
+            padding-bottom: 70px; 
+            overflow: visible; 
 
             .slidesWrap{
                 .infoButtons{
-                    bottom: 5px;
+                    bottom: -8px;
                 }
             }
         }
@@ -1272,7 +1276,7 @@
 
             .slidesWrap{
                 .infoButtons{
-                    bottom: 4px;
+                    bottom: -10px;
                 }
             }
         }

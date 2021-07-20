@@ -1936,7 +1936,7 @@ body.promocode .siteHeader--scrolled {
     padding-bottom: 50px;
   }
   .homeFoodinfo__left .slidesWrap .infoButtons {
-    bottom: 25px;
+    bottom: 15px;
   }
   .homeFoodinfo__left .slidesWrap .infoButtons__button {
     font-size: 14px;
@@ -1998,14 +1998,19 @@ body.promocode .siteHeader--scrolled {
 }
 
 @media (max-width: 767px) {
+  .homeFoodinfo__wrap {
+    overflow: hidden;
+  }
   .homeFoodinfo__wrap:before {
     display: none;
   }
   .homeFoodinfo__left {
     margin-top: 40px;
+    padding-bottom: 70px;
+    overflow: visible;
   }
   .homeFoodinfo__left .slidesWrap .infoButtons {
-    bottom: 5px;
+    bottom: -8px;
   }
   .homeFoodinfo__slides .slick-list {
     margin: 0;
@@ -2072,7 +2077,7 @@ body.promocode .siteHeader--scrolled {
     padding-bottom: 70px;
   }
   .homeFoodinfo__left .slidesWrap .infoButtons {
-    bottom: 4px;
+    bottom: -10px;
   }
   .homeFoodinfo__info {
     width: 70vw;
