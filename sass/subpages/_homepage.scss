@@ -689,6 +689,7 @@
         align-items: center;
         overflow: hidden;
         position: relative;
+        padding-bottom: 50px;
 
         .slidesWrap{
             display: block;
@@ -696,7 +697,7 @@
 
             .infoButtons{
                 position: absolute;
-                bottom: 0;
+                bottom: 4px;
                 left: 0;
                 right: 0;
                 max-width: fit-content;
@@ -706,22 +707,27 @@
 
                 &__button{
                     display: none;
+                    align-items: center;
                     font-size: 16px;
                     line-height: 19px;
                     color: $primarycolor;
                     font-weight: 700;
                     margin: 0;
+                    padding: 8px;
+                    background-color: #fff;
+                    border: 1px solid $primarycolor;
+                    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
                     cursor: pointer;
                     transition: ease .3s;
 
                     img{
                         width: 24px;
                         margin-right: 5px;
-                        margin-top: -2px;
+                        margin-top: 0;
                     }
 
                     &--active{
-                        display: block;
+                        display: flex;
                     }
 
                     &:hover{

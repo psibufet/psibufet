@@ -1532,6 +1532,7 @@ body.promocode .siteHeader--scrolled {
   align-items: center;
   overflow: hidden;
   position: relative;
+  padding-bottom: 50px;
 }
 
 .homeFoodinfo__left .slidesWrap {
@@ -1541,7 +1542,7 @@ body.promocode .siteHeader--scrolled {
 
 .homeFoodinfo__left .slidesWrap .infoButtons {
   position: absolute;
-  bottom: 0;
+  bottom: 4px;
   left: 0;
   right: 0;
   max-width: fit-content;
@@ -1551,11 +1552,16 @@ body.promocode .siteHeader--scrolled {
 
 .homeFoodinfo__left .slidesWrap .infoButtons__button {
   display: none;
+  align-items: center;
   font-size: 16px;
   line-height: 19px;
   color: #4c4c4c;
   font-weight: 700;
   margin: 0;
+  padding: 8px;
+  background-color: #fff;
+  border: 1px solid #4c4c4c;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: ease .3s;
 }
@@ -1563,11 +1569,11 @@ body.promocode .siteHeader--scrolled {
 .homeFoodinfo__left .slidesWrap .infoButtons__button img {
   width: 24px;
   margin-right: 5px;
-  margin-top: -2px;
+  margin-top: 0;
 }
 
 .homeFoodinfo__left .slidesWrap .infoButtons__button--active {
-  display: block;
+  display: flex;
 }
 
 .homeFoodinfo__left .slidesWrap .infoButtons__button:hover {
