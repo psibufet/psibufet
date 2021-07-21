@@ -100,6 +100,11 @@ body.promocode{
         &--scrolled{
             top: -120px !important;
         }
+        .mobileNav{
+            &__logo{
+                height: 100px;
+            }
+        }
     }
 }
 .siteHeader{
@@ -499,6 +504,24 @@ body.promocode{
     .siteHeader{
         &__logo{
             max-width: 120px;
+        }
+    }
+}
+@media (max-width: 350px){
+    .siteHeader{
+        .mobileNav{
+            &__menu{
+                ul{
+                    li{
+                        padding-bottom: 15px;
+
+                        a{
+                            font-size: 18px;
+                            line-height: 21px;
+                        }
+                    }
+                }
+            }
         }
     }
 }
