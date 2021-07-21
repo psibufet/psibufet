@@ -3253,7 +3253,7 @@ body.page-template-page_faq #site_footer_new {
     display: table;
     width: 100%;
     height: 390px;
-    box-shadow: inset -2000px 0 #0000008c;
+    box-shadow: inset -10000px 0 #0000008c;
 }
 #hiw_page .hiw_header .inner {
     display: table-cell;
@@ -4797,7 +4797,7 @@ body.page-template-page_contact #site_footer_new {
     width: 100%;
     height: 400px;
     position: relative;
-    box-shadow: inset -2000px 0 #0000006e;
+    box-shadow: inset -10000px 0 #0000006e;
 }
 #recipe_page .recipe_header .inner {
     display: table-cell;
