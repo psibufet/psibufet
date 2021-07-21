@@ -1,5 +1,9 @@
 body.page-template-page_lpsale{
-    .siteHeader{
+    #promocode.active{
+        display: none !important;
+    }
+    .siteHeader,
+    .header-clone{
         display: none !important;
     }
     #siteFooter{

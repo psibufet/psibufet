@@ -5044,7 +5044,12 @@ body.page-template-page_gskarmy .siteHeader {
   }
 }
 
-body.page-template-page_lpsale .siteHeader {
+body.page-template-page_lpsale #promocode.active {
+  display: none !important;
+}
+
+body.page-template-page_lpsale .siteHeader,
+body.page-template-page_lpsale .header-clone {
   display: none !important;
 }
 
