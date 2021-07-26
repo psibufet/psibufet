@@ -793,7 +793,7 @@ $(document).ready(function() {
         $('#promocode').addClass('active');
         $('body').trigger('promocode-active');
 
-        promoamount.html(amount);
+        promoamount.html('-' + amount);
 
         if(type == 'PERCENT'){
             promotype.html('%');

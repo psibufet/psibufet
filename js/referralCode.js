@@ -63,7 +63,7 @@ $(document).ready(function(){
 							promocodeWrap.addClass('active');
 							$('body').trigger('promocode-active');
 
-							promocodeWrap.find('.amount').html(data.amount);
+							promocodeWrap.find('.amount').html('-' + data.amount);
 							if(data.type == 'PERCENT'){
 								promocodeWrap.find('.type').html('%');
 							}
