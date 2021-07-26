@@ -71,7 +71,7 @@ $(document).ready(function(){
 								promocodeWrap.find('.type').html('PLN');
 							}
 							if(codeFirstLetter == 2){
-								promona.html('dwie pierwsze dostawy');
+								promona.html('na dwie pierwsze dostawy');
 							}
 						}			
 					});

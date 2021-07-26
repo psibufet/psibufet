@@ -116,7 +116,7 @@
 
     <div id="page" class="hfeed site">
         <a href="https://zamowienie.psibufet.pl/" id="promocode" class="dir">
-            <p>Masz <span class="amount">wczytywanie</span><span class="type"></span> zniżki na <span class="na">swoje pierwsze zamówienie</span>.<font> Całość zostanie doliczona w koszyku.</font></p>
+            <p><span class="amount">wczytywanie</span><span class="type"></span><span class="na">na swoje pierwsze zamówienie</span>! <font>Odbierz</font></p>
         </a>
         <div class="header-clone"></div>
         <header id="masthead" class="siteHeader" role="banner">

@@ -11,7 +11,7 @@
 --------------- */
 #promocode {
   display: none;
-  height: 50px;
+  height: 62px;
   align-items: center;
   justify-content: center;
   background-color: #f15748;
@@ -27,8 +27,11 @@
 }
 
 #promocode p {
+  display: flex;
+  align-items: center;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 21px;
+  font-size: 31px;
+  line-height: 1;
   color: #fff;
   padding: 0 40px;
   margin: 0 auto;
@@ -37,61 +40,127 @@
   position: relative;
 }
 
+#promocode p span.amount, #promocode p span.type {
+  display: inline-block;
+  font-size: 46px;
+  line-height: 1;
+  padding-top: 4px;
+}
+
+#promocode p span.type {
+  margin-right: 12px;
+}
+
+#promocode p font {
+  text-decoration: underline;
+  margin-left: 12px;
+  padding-right: 20px;
+  position: relative;
+}
+
+#promocode p font:after {
+  content: '';
+  background-image: url("/wp-content/themes/psibufet/images/chevron_right_white.svg");
+  background-repeat: no-repeat;
+  background-size: 10px;
+  width: 10px;
+  height: 14px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
 #promocode p:before {
   content: '';
-  background-image: url("/wp-content/themes/psibufet/images/promocode/miska.svg");
+  background-image: url("/wp-content/themes/psibufet/images/vectors/megaphone_left.svg");
   background-repeat: no-repeat;
-  background-size: 73px;
-  width: 73px;
+  background-size: 83px;
+  width: 83px;
   height: 58px;
   position: absolute;
-  left: -35px;
-  bottom: -15px;
+  left: -60px;
+  bottom: -3px;
 }
 
 #promocode p:after {
   content: '';
-  background-image: url("/wp-content/themes/psibufet/images/promocode/present.svg");
+  background-image: url("/wp-content/themes/psibufet/images/vectors/megaphone_right.svg");
   background-repeat: no-repeat;
-  background-size: 50px;
-  width: 50px;
-  height: 51px;
+  background-size: 83px;
+  width: 83px;
+  height: 58px;
   position: absolute;
-  right: -10px;
-  bottom: -15px;
+  right: -60px;
+  bottom: -3px;
+}
+
+@media (max-width: 991px) {
+  #promocode p {
+    font-size: 28px;
+  }
+  #promocode p span.amount, #promocode p span.type {
+    font-size: 40px;
+    padding-top: 0;
+  }
+  #promocode p span.type {
+    margin-right: 10px;
+  }
+  #promocode p font {
+    margin-left: 10px;
+  }
+  #promocode p:before {
+    background-size: 70px;
+    width: 70px;
+    height: 49px;
+    left: -40px;
+    bottom: -3px;
+  }
+  #promocode p:after {
+    background-size: 70px;
+    width: 70px;
+    height: 49px;
+    right: -40px;
+    bottom: -3px;
+  }
 }
 
 @media (max-width: 767px) {
   #promocode {
+    min-height: 45px;
     height: auto;
     position: fixed;
   }
   #promocode p {
     position: unset;
-    font-size: 16px;
-    line-height: 19px;
-    padding: 10px 50px;
+    font-size: 20px;
+    line-height: 24px;
+    padding: 5px 50px;
   }
-  #promocode p:before {
-    background-size: 55px;
-    width: 55px;
-    height: 44px;
-    left: 0;
-    bottom: -8px;
+  #promocode p span.amount, #promocode p span.type {
+    font-size: 31px;
   }
-  #promocode p:after {
-    background-size: 40px;
-    width: 40px;
-    height: 41px;
-    right: 0;
-    bottom: -8px;
+  #promocode p span.type {
+    margin-right: 8px;
+  }
+  #promocode p font {
+    margin-left: 8px;
+    padding-right: 13px;
+  }
+  #promocode p font:after {
+    background-size: 8px;
+    width: 8px;
+    height: 12px;
+  }
+  #promocode p:before, #promocode p:after {
+    display: none;
   }
 }
 
 @media (max-width: 575px) {
   #promocode p {
     max-width: 400px;
-    padding: 10px 20px;
+    padding: 10px 0;
   }
 }
 
@@ -131,7 +200,7 @@ body.promocode .siteHeader .mobileNav__logo {
 }
 
 .siteHeader--promocode {
-  margin-top: 50px;
+  margin-top: 62px;
 }
 
 .siteHeader__wrap {
@@ -460,7 +529,7 @@ body.promocode .siteHeader .mobileNav__logo {
     top: 46px;
   }
   .siteHeader--promocode {
-    margin-top: 39px;
+    margin-top: 45px;
   }
   .siteHeader__menu .mainnav {
     width: 100%;
@@ -469,7 +538,7 @@ body.promocode .siteHeader .mobileNav__logo {
 
 @media (max-width: 575px) {
   .siteHeader--promocode {
-    margin-top: 58px;
+    margin-top: 51px;
   }
 }
 

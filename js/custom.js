@@ -338,10 +338,10 @@ $(document).ready(function(){
         if($('body').hasClass('promocode')){
             if($(window).width() < 576){
                 $('.header-clone').css('height', siteHeader.height() + 58);
-            }else if($(window).width() < 767 || $(window).width() > 576){
+            }else if($(window).width() < 767 && $(window).width() > 576){
                 $('.header-clone').css('height', siteHeader.height() + 39);
             }else{
-                $('.header-clone').css('height', siteHeader.height() + 50);
+                $('.header-clone').css('height', siteHeader.height() + 62);
             }
             $('.siteHeader').addClass('siteHeader--promocode');
         }else{
@@ -350,7 +350,7 @@ $(document).ready(function(){
         if($(window).width() < 991){
             $('.mainnav').css('padding-top', siteHeader.height());
         }
-    }, 100);
+    }, 200);
 
     $('.btnMenu').on('click', function(){
         $(this).toggleClass('active');
@@ -803,7 +803,7 @@ $(document).ready(function() {
         }
 
         if(firstletter == 2){
-            promona.html('dwie pierwsze dostawy');
+            promona.html('na dwie pierwsze dostawy');
         }
 
         setTimeout(function(){
@@ -989,10 +989,12 @@ $(document).ready(function(){
         });
     }
     function mastheadClone(){
-        $('.siteHeader').each(function(){
-            var height = $(this).outerHeight();
-            $('.header-clone').css('height', height);
-        });
+        if($('body').hasClass('page-template-page_lpsale')){
+            $('.siteHeader').each(function(){
+                var height = $(this).outerHeight();
+                $('.header-clone').css('height', height);
+            });
+        }
     }
 
     saleMenuClone();
