@@ -57,12 +57,11 @@ $(document).ready(function(){
 				},
 				success: function(){
 					$.getJSON("https://app.psibufet.pl/api/order/couponcode/" + code, function (data) {
-						if (data.purpose == "MARKETING" || data.purpose == "CUSTOMER_CARE"){
+						if (data.purpose == "MARKETING" || data.purpose == "CUSTOMER_CARE" || data.purpose == "CLIENT"){
 							$('body').addClass('promocode');
 							$('.menu_dir a').addClass('dir');
 							promocodeWrap.addClass('active');
 							$('body').trigger('promocode-active');
-
 							promocodeWrap.find('.amount').html('-' + data.amount);
 							if(data.type == 'PERCENT'){
 								promocodeWrap.find('.type').html('%');
