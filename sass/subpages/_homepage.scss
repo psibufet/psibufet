@@ -96,6 +96,13 @@
         }
     }
 }
+@media (min-width: 992px){
+    .homeHeader{
+        &__scroll{
+            display: none;
+        }
+    }
+}
 @media (max-width: 1199px){
     .homeHeader{
         height: 500px;

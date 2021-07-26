@@ -1066,6 +1066,12 @@ body.promocode .siteHeader .mobileNav__logo {
   animation-iteration-count: infinite;
 }
 
+@media (min-width: 992px) {
+  .homeHeader__scroll {
+    display: none;
+  }
+}
+
 @media (max-width: 1199px) {
   .homeHeader {
     height: 500px;
