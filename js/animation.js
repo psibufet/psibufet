@@ -2,19 +2,14 @@
 /********** MISKA Z KARMĄ FRONT PAGE **********/
 
 $(window).on('scroll', function () {
-    var scrollTop     = $(window).scrollTop()
+    var scrollTop = $(window).scrollTop()
     if ($('.animateMiska').length) {
         var elementOffset = $('.animateMiska').offset().top
     }
-    var distance      = (elementOffset - scrollTop);
+    var distance = (elementOffset - scrollTop);
     
-    if ($(window).width() < 768) {
-        var image_width_desktop = distance + 80;
-        $('.ba_img.before').css('width', image_width_desktop + 'px');
-    } else {
-        var image_width_desktop = distance + 80;
-        $('.ba_img.before').css('width', image_width_desktop + 'px');
-    }
+    var image_width_desktop = distance + 80;
+    $('.ba_img.before').css('width', image_width_desktop + 'px');
 });
 
 /********** PODKREŚLENIA FUNKCJA **********/
@@ -232,6 +227,47 @@ $(document).ready(function() {
         if($(partnerSteps).visible(true)){
             setTimeout(function(){
                 partnerSteps.addClass('init');
+            }, 500)
+        }
+    });
+});
+
+/********** Kalkulator page **********/
+
+$(document).ready(function() {
+    var calcInfo = $('.calcInfo').find('.getMarker');
+    var calcHow = $('.calcHow').find('.getMarker');
+    var calcMiska = $('.calcMiska').find('.getMarker');
+
+    if($(calcInfo).visible(true)){
+        setTimeout(function(){
+            calcInfo.addClass('init');
+        }, 500)
+    }
+    if($(calcHow).visible(true)){
+        setTimeout(function(){
+            calcHow.addClass('init');
+        }, 500)
+    }
+    if($(calcMiska).visible(true)){
+        setTimeout(function(){
+            calcMiska.addClass('init');
+        }, 500)
+    }
+    $(window).on('scroll', function(){
+        if($(calcInfo).visible(true)){
+            setTimeout(function(){
+                calcInfo.addClass('init');
+            }, 500)
+        }
+        if($(calcHow).visible(true)){
+            setTimeout(function(){
+                calcHow.addClass('init');
+            }, 500)
+        }
+        if($(calcMiska).visible(true)){
+            setTimeout(function(){
+                calcMiska.addClass('init');
             }, 500)
         }
     });

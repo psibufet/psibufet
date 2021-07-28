@@ -29,6 +29,7 @@ $(document).ready(function(){
 					'regulamin_dla_hodowcow.pdf',
 					'lp',
 					'program-partnerski',
+					'kalkulator',
 				];
 
     if (typeof sPageURL === 'undefined'){
