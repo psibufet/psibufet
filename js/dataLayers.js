@@ -66,3 +66,27 @@ $(function () {
         });
     });
 });
+
+/*
+ *  Google Shopping
+ */
+$(document).ready(function(){
+    if($('body').hasClass('page-template-page_gskarmy')){
+        var name = $('.gsPage').attr('data-name');
+        var url = window.location.href;
+        dataLayer.push({
+            'event': 'shoppingProductView',
+            'label': name,
+            'page': url,
+            'value': 4.9,
+            'items': [{ 
+                'id': name, 
+                'google_business_vertical': 'retail'
+            }]
+        });
+    }
+});
+
+/*
+ *  Contact form is on header.php
+ */

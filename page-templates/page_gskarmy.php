@@ -3,8 +3,24 @@
     *   Template name: Google Shopping - karmy
     */
 get_header(); ?>
-
-<main class="gsPage">
+<script type="text/javascript">
+    $(document).ready(function(){
+        
+    });
+</script>
+<?php
+    $pageTitle = strtolower(get_the_title());
+    if($pageTitle == 'wołowe love'){
+        $pageName = 'Beef';
+    }else if($pageTitle == 'indyczy kąsek'){
+        $pageName = 'Turkey';
+    }else if($pageTitle == 'jagnię wcina'){
+        $pageName = 'Lamb';
+    }else{
+        $pageName = 'Chicken';
+    }
+?>
+<main class="gsPage" data-name="<?php echo $pageName; ?>">
     <section class="gsHeading">
         <div class="gsHeading__wrap">
             <h1 class="getMarker"><?php the_field('gspageHeader_title'); ?></h1>
