@@ -64,7 +64,6 @@
         }
     }
     &__scroll{
-        display: none;
         position: absolute;
         bottom: 40px;
         left: 0;
@@ -166,7 +165,9 @@
             }
         }
         &__scroll{
-            display: block;
+            p{
+                display: none;
+            }
         }
     }
 }

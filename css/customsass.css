@@ -1034,7 +1034,6 @@ body.promocode .siteHeader .mobileNav__logo {
 }
 
 .homeHeader__scroll {
-  display: none;
   position: absolute;
   bottom: 40px;
   left: 0;
@@ -1127,8 +1126,8 @@ body.promocode .siteHeader .mobileNav__logo {
   .homeHeader__content .tags {
     margin: 0 0 20px;
   }
-  .homeHeader__scroll {
-    display: block;
+  .homeHeader__scroll p {
+    display: none;
   }
 }
 

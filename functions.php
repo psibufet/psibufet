@@ -473,11 +473,28 @@ require get_template_directory() . '/inc/classes/class-sydney-svg-icons.php';
  */
 require_once dirname( __FILE__ ) . '/plugins/class-tgm-plugin-activation.php';
 
+/*
+ *	Versioning styles
+ */
+function wpmix_get_version() {
+	$theme_data = wp_get_theme();
+	return $theme_data->Version;
+}
+$theme_version = wpmix_get_version();
+global $theme_version;
+
+function wpmix_get_random() {
+	$randomizr = '-' . rand(100,999);
+	return $randomizr;
+}
+$random_number = wpmix_get_random();
+global $random_number;
 
 /* Custom scripts */
 function custom_scripts(){ 
-	wp_enqueue_style( 'customsass', get_template_directory_uri() . '/css/customsass.css' );
-	// wp_enqueue_script( 'visible-js', get_template_directory_uri() . '/plugins/visible/jquery.visible.min.js', array(), '1.0.0', true );
+	global $theme_version, $random_number;
+	wp_register_style('customsass', get_template_directory_uri() . '/css/customsass.css', false, $theme_version . $random_number);
+	wp_enqueue_style('customsass');
 }
 add_action('wp_enqueue_scripts', 'custom_scripts');
 
