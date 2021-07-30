@@ -7379,8 +7379,8 @@ body.page-template-page_lpsale .homeFoodinfo__right:after {
 @media (max-width: 767px) {
   .calcHeader {
     background-image: url("/wp-content/themes/psibufet/images/kalkulator/calcHeader_mobile.png");
-    background-size: contain;
-    background-position: center center;
+    background-size: cover;
+    background-position: center right;
     min-height: 480px;
     align-items: flex-start;
   }

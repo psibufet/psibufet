@@ -73,7 +73,7 @@ get_header(); ?>
                     <h4>Smakołyki</h4>
                 </div>
             </div>
-            <a href="#" class="btn btn--center"><span>Przejdź do kalkulatora</span></a>
+            <a href="https://zamowienie.psibufet.pl/" class="btn btn--center"><span>Przejdź do kalkulatora</span></a>
         </div>
     </section>
     <section class="calcMiska">
@@ -119,7 +119,7 @@ get_header(); ?>
                     </div>
                 </div>
             </div>
-            <a href="#" class="btn btn--center"><span>Dowiedz się więcej</span></a>
+            <a href="<?php echo home_url(); ?>" class="btn btn--center"><span>Dowiedz się więcej</span></a>
         </div>
     </section>
     <section class="calcContent">
