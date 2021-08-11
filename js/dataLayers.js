@@ -84,6 +84,7 @@ $(document).ready(function(){
                 'google_business_vertical': 'retail'
             }]
         });
+        console.log('shoppingProductView - ' + name + ' - push');
     }
 });
 
