@@ -58,7 +58,7 @@ $(document).ready(function(){
 				},
 				success: function(){
 					$.getJSON("https://app.psibufet.pl/api/order/couponcode/" + code, function (data) {
-						if (data.purpose == "MARKETING" || data.purpose == "CUSTOMER_CARE" || data.purpose == "CLIENT"){
+						if (data.purpose == "MARKETING" || data.purpose == "CUSTOMER_CARE" || data.purpose == "CLIENT" || data.purpose == 'INFLUENCER'){
 							$('body').addClass('promocode');
 							$('.menu_dir a').addClass('dir');
 							promocodeWrap.addClass('active');
@@ -94,8 +94,8 @@ $(document).ready(function(){
 					}else if (data.purpose == "MARKETING"){
 						window.location.replace("https://psibufet.pl/?code=" + sPageURL + '&amount=' + data.amount + '&type=' + data.type);
 					}else if (data.purpose == "INFLUENCER"){
-						window.location.replace("https://psibufet.pl/?code=" + sPageURL + '&amount=' + data.amount + '&type=' + data.type);
-					}			
+						window.location.replace("https://psibufet.pl/?code=" + sPageURL + '&utm_source=influencer&utm_medium=referral_link&utm_campaign=' + sPageURL + '&amount=' + data.amount + '&type=' + data.type);
+					}
 				});
 				$(".dir").each(function () {
 					var $this = $(this);
