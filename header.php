@@ -45,7 +45,7 @@
     <script src="/wp-content/themes/psibufet/plugins/visible/jquery.visible.min.js" type="text/javascript"></script>
     <script src="/wp-content/themes/psibufet/js/custom.js" type="text/javascript"></script>
     <script type="text/javascript" src="/wp-content/themes/psibufet/js/animation.js"></script>
-    <script type="text/javascript" src="/wp-content/themes/psibufet/js/dataLayers.js"></script>
+    <script type="text/javascript" src="/wp-content/themes/psibufet/js/dataLayers.js?ver=1.52"></script>
     <?php 
         function startsWith( $haystack, $needle ) {
             $length = strlen( $needle );
