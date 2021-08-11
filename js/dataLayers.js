@@ -58,11 +58,11 @@ $(function () {
 });
 $(function () {
     $('.siteFooter__menu .info a.social__fb').on('click', function () {
-        var link = $(this).attr('href');
+        var url = window.location.href;
         dataLayer.push({
             'event': 'socialRedirect',
             'label': 'Facebook',
-            'page': link,
+            'page': url,
         });
     });
 });
