@@ -30,6 +30,7 @@ $(document).ready(function(){
 					'lp',
 					'program-partnerski',
 					'kalkulator',
+					'serwis',
 				];
 
     if (typeof sPageURL === 'undefined'){
