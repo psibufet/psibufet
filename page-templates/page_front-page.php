@@ -15,7 +15,7 @@ get_header(); ?>
                     <div><p>Idealna porcja</p></div>
                     <div><p>Dostawa pod drzwi</p></div>
                 </div>
-                <a href="https://zamowienie.psibufet.pl/" class="btn btn--big btn--center dir"><span><?php the_field('front_header_cta') ?></span></a>
+                <a href="https://psibufet.pl/serwis" class="btn btn--big btn--center dir"><span><?php the_field('front_header_cta') ?></span></a>
             </div>
         </div>
         <a href="#page-continue" class="homeHeader__scroll">
@@ -82,7 +82,7 @@ get_header(); ?>
                     <p>Idealnie<br/>dopasowana porcja</p>
                 </div>
             </div>
-            <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir"><span><?php the_field('front_uknow_cta') ?></span></a>
+            <a href="https://psibufet.pl/serwis" class="btn btn--center dir"><span><?php the_field('front_uknow_cta') ?></span></a>
         </div>
         <div class="homeMiska__right">
             <div class="homeMiska__imageWrap">
@@ -162,7 +162,7 @@ get_header(); ?>
                 </div>
             </div>
         </div>
-        <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir"><span><?php the_field('front_foodinfo_cta') ?></span></a>
+        <a href="https://psibufet.pl/serwis" class="btn btn--center dir"><span><?php the_field('front_foodinfo_cta') ?></span></a>
         <div class="foodModal">
             <div class="foodModal__wrap">
                 <img class="closeFoodModal closeImg no-lazyload" src="<?php echo get_template_directory_uri() . '/images/icons/closeModal_ico.svg'; ?>"/>
@@ -285,7 +285,7 @@ get_header(); ?>
                 </div>
                 <?php endwhile; ?>
             </div>
-            <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir"><span><?php the_field('front_howitworks_cta') ?></span></a>
+            <a href="https://psibufet.pl/serwis" class="btn btn--center dir"><span><?php the_field('front_howitworks_cta') ?></span></a>
         </div>
     </section>
     <?php endif; ?>
@@ -338,7 +338,7 @@ get_header(); ?>
                 <h2 class="getMarker">Dedykowany plan, <span class="marker">indywidualna</span> cena</h2>
                 <p>Swoją cenę PsiBufet sprawdzisz w czasie rejestracji, gdy już dobrze poznamy Twojego pupila.</p>
                 <div class="blockResponsive blockResponsive--hideMobile">
-                    <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir"><span><?php the_field('front_price_cta') ?></span></a>
+                    <a href="https://psibufet.pl/serwis" class="btn btn--center dir"><span><?php the_field('front_price_cta') ?></span></a>
                     <div class="info">
                         <div class="info__box">
                             <div class="image">
@@ -418,7 +418,7 @@ get_header(); ?>
                             <p>Gwarancja czystej miski</p>
                         </div>
                     </div>
-                    <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir"><span><?php the_field('front_price_cta') ?></span></a>
+                    <a href="https://psibufet.pl/serwis" class="btn btn--center dir"><span><?php the_field('front_price_cta') ?></span></a>
                 </div>
             </div>
         </div>
@@ -447,7 +447,7 @@ get_header(); ?>
                     </div>
                 <?php endwhile; ?>
             </div>
-            <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir"><span><?php the_field('front_testi_cta') ?></span></a>
+            <a href="https://psibufet.pl/serwis" class="btn btn--center dir"><span><?php the_field('front_testi_cta') ?></span></a>
         </div>
     </section>
     <?php endif; ?>
@@ -487,7 +487,7 @@ get_header(); ?>
         <div class="homeStart__wrap container">
             <div class="homeStart__content">
                 <h2 class="getMarker">Podaj imię swojego psa i rozpocznij <span class="marker">Zdrową</span> dietę już teraz!</h2>
-                <form name="userStart" action="https://zamowienie.psibufet.pl/" autocomplete="off">
+                <form name="userStart" action="https://psibufet.pl/serwis" autocomplete="off">
                     <input type="text" name="dogName" placeholder="Imię psa" autocomplete="off"/>
                     <button type="submit" value="Stwórz dietę" class="btn btn--center"><span>Stwórz dietę</span></button>
                 </form>

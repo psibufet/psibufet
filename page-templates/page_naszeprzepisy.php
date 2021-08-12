@@ -65,7 +65,7 @@ Template Name: Nasze Przepisy
                 <?php endwhile; ?>
             </div>
             <?php endif; ?>
-            <a href="https://zamowienie.psibufet.pl/" class="check dir order"><span><?php the_field('recipe_menu_cta'); ?></span></a>
+            <a href="https://psibufet.pl/serwis" class="check dir order"><span><?php the_field('recipe_menu_cta'); ?></span></a>
         </div>
         <div class="popup_overlay"></div>
         <?php if( have_rows('popup') ): ?>
@@ -221,7 +221,7 @@ Template Name: Nasze Przepisy
             </ul>
         </div>
         <p class="pinus">Oznacz nas na Facebooku lub Instagramie <span>@Psibufet</span></p>
-        <a href="https://zamowienie.psibufet.pl/" class="check mobile-only dir"><span><?php the_field('recipe_psibufetgant_mobile_cta'); ?></span></a>
+        <a href="https://psibufet.pl/serwis" class="check mobile-only dir"><span><?php the_field('recipe_psibufetgant_mobile_cta'); ?></span></a>
     </section>
     <section class="recipe_price">
         <div class="container">
@@ -232,7 +232,7 @@ Template Name: Nasze Przepisy
                     Swoją cenę PsiBufet sprawdzisz w czasie rejestracji, gdy już dobrze poznamy Twojego pupila.
                     <br/><br/>
                     Zastanawiasz się, do której grupy zalicza się Twój pies? Wypełnij formularz rejestracyjny i sprawdź oferowany plan. Bez żadnych opłat oraz ukrytych formalności!</p>
-                    <a href="https://zamowienie.psibufet.pl/" class="check dir"><span><?php the_field('recipe_price_cta'); ?></span></a>
+                    <a href="https://psibufet.pl/serwis" class="check dir"><span><?php the_field('recipe_price_cta'); ?></span></a>
                 </div>
             </div>
             <div class="right_price">
@@ -266,7 +266,7 @@ Template Name: Nasze Przepisy
                         </div>
                     </div>
                 </div>
-                <a href="https://zamowienie.psibufet.pl/" class="check mobile-only dir"><span><?php the_field('recipe_price_cta'); ?></span></a>
+                <a href="https://psibufet.pl/serwis" class="check mobile-only dir"><span><?php the_field('recipe_price_cta'); ?></span></a>
             </div>
         </div>
     </section>
@@ -282,7 +282,7 @@ Template Name: Nasze Przepisy
                     <p>Dzienne porcje karmy PsiBufet pakujemy próżniowo w specjalne worki. Próżnia pozwala zachować świeżość produktu na długi czas. Opakowania nie zawierają bisfenolu (BPA free) i można w nich podgrzewać karmę przed podaniem. Całość przyjeżdża do Ciebie w specjalnym termicznym opakowaniu, dzięki któremu karma jest idealnie schłodzona.
                     <br/><br/>
                     Dbamy też o środowisko! Worki próżniowe nadają się do recyklingu i powinny trafić do żółtego pojemnika na tworzywa sztuczne, zaś kartonowe opakowania zbiorcze do niebieskiego pojemnika na papier.</p>
-                    <a href="https://zamowienie.psibufet.pl/" class="check dir order"><span><?php the_field('recipe_package_cta'); ?></span></a>
+                    <a href="https://psibufet.pl/serwis" class="check dir order"><span><?php the_field('recipe_package_cta'); ?></span></a>
                 </div>
             </div>
         </div>
@@ -432,7 +432,7 @@ Template Name: Nasze Przepisy
                     </div>
                 </div>
             </div>
-            <a href="https://zamowienie.psibufet.pl/" class="check dir order"><span><?php the_field('recipe_compare_cta'); ?></span></a>
+            <a href="https://psibufet.pl/serwis" class="check dir order"><span><?php the_field('recipe_compare_cta'); ?></span></a>
         </div>
     </section>
 </div>

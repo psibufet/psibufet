@@ -82,7 +82,7 @@ Template Name: Jak to działa?
                     </li>
                 </ul>
             </div>
-            <a href="https://zamowienie.psibufet.pl/" class="check dir"><?php the_field('hit_howitworks_btn'); ?></a>
+            <a href="https://psibufet.pl/serwis" class="check dir"><?php the_field('hit_howitworks_btn'); ?></a>
         </div>
     </section>
     <section class="hiw_plan">
@@ -151,7 +151,7 @@ Template Name: Jak to działa?
                     </div>
                 </div>
             </div>
-            <a href="https://zamowienie.psibufet.pl/" class="check dir"><span><?php the_field('hit_compare_cta'); ?></span></a>
+            <a href="https://psibufet.pl/serwis" class="check dir"><span><?php the_field('hit_compare_cta'); ?></span></a>
         </div>
     </section>
     <section class="hiw_testimonials">

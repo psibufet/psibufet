@@ -261,10 +261,10 @@ $(document).ready(function(){
     $(nameinput).on('change paste keyup', function(){
         var value = $(this).val();
         if(value){
-            form.attr('action', 'https://zamowienie.psibufet.pl/?dogName=' + value);
+            form.attr('action', 'https://psibufet.pl/serwis?dogName=' + value);
             form.addClass('hasValue');
         }else{
-            form.attr('action', 'https://zamowienie.psibufet.pl/');
+            form.attr('action', 'https://psibufet.pl/serwis');
             form.removeClass('hasValue');
         }
 

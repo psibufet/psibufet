@@ -118,7 +118,7 @@ Template Name: O nas
                 <p>Dołącz do #psibufetgang</p>
             </div>
             <p class="info">Złóż zamówienie<br/>i przetestuj świeżą karmę PsiBufet!</p>
-            <a href="https://zamowienie.psibufet.pl/" class="check dir order"><span><?php the_field('about_join_cta'); ?></span></a>
+            <a href="https://psibufet.pl/serwis" class="check dir order"><span><?php the_field('about_join_cta'); ?></span></a>
         </div>
     </section>
 </div>

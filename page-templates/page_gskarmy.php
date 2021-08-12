@@ -76,7 +76,7 @@ get_header(); ?>
                     </div>
                     <p class="desc"><?php the_field('gspageDesc'); ?></p>
                     <div class="infoButton"><img src="<?php echo get_template_directory_uri() . '/images/icons/info_icon_black.svg'; ?>"/>Zobacz skład</div>
-                    <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir"><span>Dobierz porcję</span></a>
+                    <a href="https://psibufet.pl/serwis" class="btn btn--center dir"><span>Dobierz porcję</span></a>
                 </div>
             </div>
         </div>
@@ -221,7 +221,7 @@ get_header(); ?>
                 </div>
                 <?php endwhile; ?>
             </div>
-            <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir"><span><?php the_field('front_howitworks_cta', 5) ?></span></a>
+            <a href="https://psibufet.pl/serwis" class="btn btn--center dir"><span><?php the_field('front_howitworks_cta', 5) ?></span></a>
         </div>
     </section>
     <?php endif; ?>
@@ -230,7 +230,7 @@ get_header(); ?>
         <div class="homeStart__wrap container">
             <div class="homeStart__content">
                 <h2 class="getMarker">Podaj imię swojego psa i rozpocznij <span class="marker">Zdrową dietę</span> już teraz!</h2>
-                <form name="userStart" action="https://zamowienie.psibufet.pl/" autocomplete="off">
+                <form name="userStart" action="https://psibufet.pl/serwis" autocomplete="off">
                     <input type="text" name="dogName" placeholder="Imię psa" autocomplete="off"/>
                     <button type="submit" value="Stwórz dietę" class="btn btn--center"><span>Stwórz dietę</span></button>
                 </form>

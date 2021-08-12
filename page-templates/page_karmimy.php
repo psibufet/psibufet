@@ -54,7 +54,7 @@ get_header();
                     <p>Dołącz do #psibufetgang</p>
                 </div>
                 <p class="info">Złóż zamówienie<br/>i przetestuj świeżą karmę PsiBufet!</p>
-                <a href="https://zamowienie.psibufet.pl/" class="check dir">Wypróbuj</a>
+                <a href="https://psibufet.pl/serwis" class="check dir">Wypróbuj</a>
             </div>
         </section>
     </div>

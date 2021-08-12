@@ -73,7 +73,7 @@ get_header(); ?>
                     <h4>Smakołyki</h4>
                 </div>
             </div>
-            <a href="https://zamowienie.psibufet.pl/" class="btn btn--center"><span>Przejdź do kalkulatora</span></a>
+            <a href="https://psibufet.pl/serwis" class="btn btn--center"><span>Przejdź do kalkulatora</span></a>
         </div>
     </section>
     <section class="calcMiska">

@@ -14,7 +14,7 @@ get_header();
                 <li><a href="/nasze-przepisy" class="dir">Nasze przepisy</a></li>
                 <li><a href="/o-nas" class="dir">O PsiBufet</a></li>
                 <li><a href="https://panel.psibufet.pl" class="dir">Zaloguj się</a></li>
-                <li><a href="https://zamowienie.psibufet.pl" class="dir order">Zamów</a></li>
+                <li><a href="https://psibufet.pl/serwis" class="dir order">Zamów</a></li>
             </ul>
             <ul>
                 <li><a href="/karmimy-psiaki" class="dir">Karmimy Psiaki</a></li>
