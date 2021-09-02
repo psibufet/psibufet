@@ -1090,4 +1090,14 @@ $(document).ready(function(){
             draggable: true,
         });
     }
+
+    // Home shortcuts slider mobile
+    if($(window).width() < 931){
+        $('.homeShortcuts__wrap').slick({
+            variableWidth: true,
+            centerMode: true,
+            arrows: false,
+            dots: true,
+        });
+    }
 });

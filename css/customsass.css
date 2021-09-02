@@ -4474,8 +4474,121 @@ body.admin-bar .foodModal__wrap {
   }
 }
 
+.homeShortcuts {
+  background-color: #fff;
+  padding: 32px 0 40px;
+}
+
+.homeShortcuts > h2 {
+  font-size: 41px;
+  line-height: 49px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 500;
+  color: #000;
+  margin: 0 0 32px;
+  text-align: center;
+}
+
+.homeShortcuts__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1166px;
+  margin: 0 auto;
+}
+
+.homeShortcuts__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: 362px;
+  height: 362px;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  background-size: cover;
+  background-position: center center;
+  transition: ease .3s;
+}
+
+.homeShortcuts__box:hover {
+  opacity: .8;
+}
+
+.homeShortcuts__box .title {
+  font-size: 60px;
+  line-height: 72px;
+  font-family: "Bebas Neue", sans-serif;
+  color: #fff;
+  margin: 0;
+}
+
+@media (max-width: 1199px) {
+  .homeShortcuts__wrap {
+    max-width: 890px;
+  }
+  .homeShortcuts__box {
+    width: 280px;
+    height: 280px;
+  }
+  .homeShortcuts__box .title {
+    font-size: 46px;
+    line-height: 55px;
+  }
+}
+
+@media (max-width: 930px) {
+  .homeShortcuts__wrap {
+    display: block;
+  }
+  .homeShortcuts__wrap .slick-track {
+    padding-bottom: 10px;
+  }
+  .homeShortcuts__wrap .slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  .homeShortcuts__wrap .slick-dots li {
+    height: auto;
+    line-height: normal;
+    margin: 0 3px;
+  }
+  .homeShortcuts__wrap .slick-dots li.slick-active button {
+    background-color: #f15748;
+  }
+  .homeShortcuts__wrap .slick-dots li button {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 8px;
+    height: 8px;
+    border: 0;
+    border-radius: 100%;
+    font-size: 0;
+    padding: 0;
+    transition: ease .3s;
+  }
+  .homeShortcuts__box {
+    display: flex !important;
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .homeShortcuts {
+    padding: 15px 0;
+  }
+  .homeShortcuts > h2 {
+    font-size: 28px;
+    line-height: 34px;
+    margin: 0 0 15px;
+  }
+}
+
 .homeFaq {
   background-color: #E8E8E8;
+  padding-top: 40px;
 }
 
 .homeFaq__wrap {
