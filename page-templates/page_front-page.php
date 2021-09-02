@@ -499,13 +499,13 @@ get_header(); ?>
     <section class="homeShortcuts">
         <h2 class="getMarker"><span class="marker">Poznaj</span> nas lepiej</h2>
         <div class="homeShortcuts__wrap">
-            <a href="" class="homeShortcuts__box" style="background-image: url('<?php echo get_template_directory_uri() . '/images/homepage/homeShortcuts_01.png'; ?>');">
+            <a href="/jak-to-dziala" class="homeShortcuts__box" style="background-image: url('<?php echo get_template_directory_uri() . '/images/homepage/homeShortcuts_01.png'; ?>');">
                 <p class="title">Jak to działa?</p>
             </a>
-            <a href="" class="homeShortcuts__box" style="background-image: url('<?php echo get_template_directory_uri() . '/images/homepage/homeShortcuts_02.png'; ?>');">
+            <a href="/nasze-przepisy" class="homeShortcuts__box" style="background-image: url('<?php echo get_template_directory_uri() . '/images/homepage/homeShortcuts_02.png'; ?>');">
                 <p class="title">Nasze przepisy</p>
             </a>
-            <a href="" class="homeShortcuts__box" style="background-image: url('<?php echo get_template_directory_uri() . '/images/homepage/homeShortcuts_03.png'; ?>');">
+            <a href="/o-nas" class="homeShortcuts__box" style="background-image: url('<?php echo get_template_directory_uri() . '/images/homepage/homeShortcuts_03.png'; ?>');">
                 <p class="title">O nas</p>
             </a>
         </div>
