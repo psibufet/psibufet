@@ -29,6 +29,7 @@ get_header(); ?>
                 $image = get_sub_field('logos_img');
                 $content = get_sub_field('logos_content');
                 $google = get_sub_field('google_slide');
+                $googleRate = get_sub_field('google_rate');
             ?>
                 <div class="homeReviews__logo">
                     <div class="logo">
@@ -45,7 +46,7 @@ get_header(); ?>
                             <img src="/wp-content/themes/psibufet/images/reviews/star.svg"/>
                             <img src="/wp-content/themes/psibufet/images/reviews/star.svg"/>
                         </div>
-                        <p>5/5 wg opinii klientów</p>
+                        <p><?php echo $googleRate; ?>/5 wg opinii klientów</p>
                     <?php endif; ?>
                 </div>
             <?php endwhile; ?>
