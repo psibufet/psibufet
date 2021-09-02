@@ -219,6 +219,7 @@ body.promocode .siteHeader .mobileNav__logo {
 .siteHeader__logo {
   width: 100%;
   max-width: 150px;
+  margin-right: 40px;
 }
 
 .siteHeader__logo a {
@@ -231,12 +232,25 @@ body.promocode .siteHeader .mobileNav__logo {
   object-fit: contain;
 }
 
+.siteHeader__menu {
+  width: calc(100% - 150px);
+}
+
 .siteHeader__menu .btn {
   display: none;
 }
 
 .siteHeader__menu .btnMenu {
   display: none;
+}
+
+.siteHeader__menu .mainnav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.siteHeader__menu .mainnav .menu-menu-top-container {
+  display: flex;
 }
 
 .siteHeader__menu .mainnav ul {
@@ -352,6 +366,98 @@ body.promocode .siteHeader .mobileNav__logo {
   color: #f15748;
 }
 
+.siteHeader__menu .mainnav__actions {
+  display: flex;
+}
+
+.siteHeader__menu .mainnav__actions .menuAction--login {
+  margin-right: 40px;
+}
+
+.siteHeader__menu .mainnav__actions .menuAction--login a {
+  font-size: 15px;
+  height: 32px;
+  font-weight: 500;
+}
+
+.siteHeader__menu .mainnav__actions .menuAction--login a:hover span {
+  color: #f15748;
+}
+
+.siteHeader__menu .mainnav__actions .menuAction--login a:hover span:before {
+  transform: rotate(10deg);
+}
+
+.siteHeader__menu .mainnav__actions .menuAction--login a span {
+  position: relative;
+  color: #000;
+  transition: ease .3s;
+}
+
+.siteHeader__menu .mainnav__actions .menuAction--login a span:before {
+  content: '';
+  background-image: url("/wp-content/themes/psibufet/images/menu_login_ico.svg");
+  background-repeat: no-repeat;
+  background-size: 30px;
+  width: 30px;
+  height: 33px;
+  display: block;
+  position: absolute;
+  top: -11px;
+  left: -36px;
+  transition: ease .3s;
+}
+
+.siteHeader__menu .mainnav__actions .menuAction--order a {
+  background-color: #f15748;
+  min-width: 115px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.1);
+  transition: ease .3s;
+}
+
+.siteHeader__menu .mainnav__actions .menuAction--order a span {
+  font-size: 15px;
+  color: #fff;
+  font-weight: 500;
+  padding-right: 6px;
+  position: relative;
+}
+
+.siteHeader__menu .mainnav__actions .menuAction--order a span:before {
+  content: '';
+  background-image: url("/wp-content/themes/psibufet/images/menu_order_ico.svg");
+  background-repeat: no-repeat;
+  background-size: 42px;
+  width: 42px;
+  height: 40px;
+  display: block;
+  position: absolute;
+  top: -15px;
+  left: -50px;
+}
+
+.siteHeader__menu .mainnav__actions .menuAction--order a span:after {
+  content: '';
+  background-image: url("/wp-content/themes/psibufet/images/chevron_right_white.svg");
+  background-repeat: no-repeat;
+  background-size: 7px;
+  width: 9px;
+  height: 11px;
+  display: block;
+  position: absolute;
+  top: 8px;
+  right: -10px;
+  transition: ease .3s;
+}
+
+.siteHeader__menu .mainnav__actions .menuAction--order a:hover span:after {
+  right: -13px;
+}
+
 .siteHeader .mobileNav {
   display: none;
 }
@@ -380,6 +486,7 @@ body.promocode .siteHeader .mobileNav__logo {
     transition: ease .8s;
   }
   .siteHeader__menu {
+    width: auto;
     display: flex;
     align-items: center;
   }

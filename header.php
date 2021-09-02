@@ -166,6 +166,14 @@
                     </div>
                     <nav id="mainnav" class="mainnav" role="navigation">
                         <?php wp_nav_menu( array( 'theme_location' => 'primary', 'fallback_cb' => 'sydney_menu_fallback' ) ); ?>
+                        <div class="mainnav__actions">
+                            <div class="menuAction menuAction--login login menu_dir">
+                                <a href="https://panel.psibufet.pl/"><span>Zaloguj się</span></a>
+                            </div>
+                            <div class="menuAction menuAction--order order menu_dir">
+                                <a href="https://zamowienie.psibufet.pl/"><span>Zamów</span></a>
+                            </div>
+                        </div>
                     </nav><!-- #site-navigation -->
                 </div>
             </div>
