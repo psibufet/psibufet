@@ -1,0 +1,358 @@
+.foodTile{
+    width: 100%;
+    max-width: 458px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+    position: relative;
+
+    &__gallery{
+        display: block;
+        height: 285px;
+        margin-bottom: 0 !important;
+
+        .galleryImage{
+            height: 285px;
+            overflow: hidden;
+
+            img{
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .slick-arrow{
+            height: 28px;
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            z-index: 2;
+            transition: ease .3s;
+            cursor: pointer;
+            font-size: 0;
+            line-height: normal;
+            border: 0;
+            padding: 0;
+            margin: 0;
+            background: none;
+
+            &:hover{
+                opacity: .7;
+            }
+
+            &.slick-prev{
+                left: 20px;
+
+                &:before{
+                    content: '';
+                    background-image: url('/wp-content/themes/psibufet/images/recipes/recipes/gallery_arrow.svg');
+                    background-repeat: no-repeat;
+                    background-size: 28px;
+                    width: 28px;
+                    height: 28px;
+                    opacity: 1;
+                    display: block;
+                    transform: rotate(-180deg);
+                }
+            }
+            &.slick-next{
+                right: 20px;
+
+                &:before{
+                    content: '';
+                    background-image: url('/wp-content/themes/psibufet/images/recipes/recipes/gallery_arrow.svg');
+                    background-repeat: no-repeat;
+                    background-size: 28px;
+                    width: 28px;
+                    height: 28px;
+                    opacity: 1;
+                    display: block;
+                }
+            }
+        }
+        .slick-dots{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            position: absolute;
+            bottom: 23px;
+            left: 0;
+            right: 0;
+
+            li{
+                display: flex;
+                width: 8px;
+                height: 8px;
+                margin: 0 3px;
+
+                button{
+                    padding: 0;
+                    border: 0;
+                    font-size: 0;
+                    line-height: normal;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 100%;
+                    background-color: rgba(0, 0, 0, .5);
+                    transition: ease .3s;
+
+                    &:before{
+                        display: none;
+                    }
+                }
+                &.slick-active{
+                    button{
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    &__name{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 56px;
+        position: relative;
+
+        h3{
+            font-family: 'Bebas Neue';
+            font-size: 42px;
+            line-height: inherit;
+            font-weight: 400;
+            color: #fff;
+            margin: 0;
+            text-align: center;
+            padding-top: 4px;
+        }
+        img{
+            position: absolute;
+            right: 20px;
+            top: -10px;
+            max-width: 100px;
+        }
+    }
+    &__content{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        min-height: 200px;
+        padding: 30px 40px 34px;
+        background-color: #fff;
+
+        .desc{
+            font-size: 24px;
+            line-height: 28px;
+            color: $primarycolorlight;
+            margin: 0 0 28px;
+            text-align: center;
+        }
+        .openFoodModal{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid $primarycolor;
+            box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+            min-width: 160px;
+            height: 40px;
+            margin: 0;
+            text-align: center;
+            cursor: pointer;
+            transition: ease .3s;
+            position: relative;
+
+            span{
+                font-size: 16px;
+                line-height: 19px;
+                font-weight: 600;
+                color: $primarycolor;
+                position: relative;
+                padding-right: 10px;
+
+                &:after{
+                    content: '';
+                    background-image: url('/wp-content/themes/psibufet/images/recipes/recipes/arrow_right.svg');
+                    background-repeat: no-repeat;
+                    background-size: 8px;
+                    width: 7px;
+                    height: 10px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                    right: -5px;
+                    transition: ease .3s;
+                }
+            }
+
+            &:hover{
+                background-color: #f1f1f1;
+
+                span{
+                    &:after{
+                        right: -8px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 991px){
+    .foodTile{
+        max-width: 350px;
+
+        &__gallery{
+            height: 230px;
+
+            .galleryImage{
+                height: 270px;
+            }
+        }
+        &__name{
+            height: 45px;
+
+            h3{
+                font-size: 32px;
+            }
+            img{
+                top: -8px;
+                max-width: 20%;
+                max-height: 60px;
+            }
+        }
+        &__content{
+            min-height: 180px;
+
+            .desc{
+                font-size: 16px;
+                line-height: 20px;
+                margin: 0 0 18px;
+            }
+            .openFoodModal{
+                font-size: 19px;
+                line-height: 24px;
+
+                &:after{
+                    background-size: 24px;
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .foodTile{
+        max-width: 280px;
+
+        &__gallery{
+            height: 175px;
+
+            .galleryImage{
+                height: 208px;
+            }
+
+            img{
+                min-height: 175px;
+                object-fit: cover !important;
+            }
+
+            .slick-arrow{
+                &.slick-next{
+                    &:before{
+                        background-size: 17px;
+                        width: 17px;
+                        height: 17px;
+                        margin: 0 auto;
+                    }
+                }
+                &.slick-prev{
+                    &:before{
+                        background-size: 17px;
+                        width: 17px;
+                        height: 17px;
+                        margin: 0 auto;
+                    }
+                }
+            }
+            .slick-dots{
+                bottom: 8px;
+
+                li{
+                    width: 5px;
+                    height: 5px;
+                    margin: 0 3px;
+
+                    button{
+                        width: 5px;
+                        height: 5px;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+        &__name{
+            height: 34px;
+
+            h3{
+                font-size: 26px;
+            }
+            img{
+                max-width: 60px;
+                right: 10px;
+            }
+        }
+        &__content{
+            min-height: 138px;
+            padding: 17px 20px 0;
+
+            .desc{
+                font-size: 14px;
+                line-height: 16px;
+            }
+            .openFoodModal{
+                font-size: 14px;
+                line-height: 16px;
+                min-width: 150px;
+                height: 34px;
+
+                span{
+                    font-size: 12px;
+                    line-height: 14px;
+
+                    &:after{
+                        background-size: 6px;
+                        width: 5px;
+                        height: 8px;
+                        right: -2px;
+                    }
+                }
+                &:hover{
+                    span{
+                        &:after{
+                            right: -5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 360px){
+    .foodTile{
+        &__name{
+            img{
+                max-width: 40px;
+                right: 5px;
+                top: 3px;
+            }
+        }
+        &__content{
+            padding: 17px 20px 30px;
+        }
+    }
+}

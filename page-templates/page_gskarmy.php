@@ -3,11 +3,6 @@
     *   Template name: Google Shopping - karmy
     */
 get_header(); ?>
-<script type="text/javascript">
-    $(document).ready(function(){
-        
-    });
-</script>
 <?php
     $pageTitle = strtolower(get_the_title());
     if($pageTitle == 'wołowe love'){

@@ -36,14 +36,16 @@
     </script>
     <script src="/wp-content/themes/psibufet/flexslider/jquery.flexslider.js"></script>
     <script src="/wp-content/themes/psibufet/slick/slick.min.js"></script>
-    <!-- <script type="text/javascript" src="/wp-content/themes/psibufet/plugins/select-dropdown/select-dropdown.js"></script> -->
+
     <!-- Autocomplete start -->
     <script src="/wp-content/themes/psibufet/plugins/autocomplete/jquery.easy-autocomplete.min.js"></script>
     <link rel="stylesheet" href="/wp-content/themes/psibufet/plugins/autocomplete/easy-autocomplete.min.css">
     <link rel="stylesheet" href="/wp-content/themes/psibufet/plugins/autocomplete/easy-autocomplete.themes.min.css">
     <!-- Autocomplete end -->
-    <script src="/wp-content/themes/psibufet/plugins/visible/jquery.visible.min.js" type="text/javascript"></script>
-    <script src="/wp-content/themes/psibufet/js/custom.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="/wp-content/themes/psibufet/plugins/visible/jquery.visible.min.js"></script>
+    <script type="text/javascript" src="/wp-content/themes/psibufet/js/custom.js"></script>
+    <script type="text/javascript" src="/wp-content/themes/psibufet/js/_sliders.js"></script>
     <script type="text/javascript" src="/wp-content/themes/psibufet/js/animation.js"></script>
     <script type="text/javascript" src="/wp-content/themes/psibufet/js/dataLayers.js?ver=1.52"></script>
     <?php 

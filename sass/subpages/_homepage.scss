@@ -262,6 +262,13 @@
             }
         }
     }
+
+    &--recipes{
+        padding: 25px 0;
+        border-bottom: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+        margin-bottom: 0;
+    }
 }
 @media (max-width: 991px){
     .homeReviews{
@@ -3710,7 +3717,7 @@ body.admin-bar{
 }
 
 // Skróty
-.homeShortcuts{
+.pbShortcuts{
     background-color: #fff;
     padding: 32px 0 40px;
 
@@ -3720,7 +3727,7 @@ body.admin-bar{
         font-family: $headingfont;
         font-weight: 500;
         color: #000;
-        margin: 0 0 32px;
+        margin: 0 0 26px;
         text-align: center;
     }
 
@@ -3757,7 +3764,7 @@ body.admin-bar{
     }
 }
 @media (max-width: 1199px){
-    .homeShortcuts{
+    .pbShortcuts{
         &__wrap{
             max-width: 890px;
         }
@@ -3773,7 +3780,7 @@ body.admin-bar{
     }
 }
 @media (max-width: 930px){
-    .homeShortcuts{
+    .pbShortcuts{
         &__wrap{
             display: block;
 
@@ -3818,7 +3825,7 @@ body.admin-bar{
     }
 }
 @media (max-width: 767px){
-    .homeShortcuts{
+    .pbShortcuts{
         padding: 15px 0;
 
         &>h2{

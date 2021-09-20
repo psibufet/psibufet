@@ -14,6 +14,7 @@ $(document).ready(function(){
 	var whitelist = ['',
 					'jak-to-dziala',
 					'nasze-przepisy',
+					'nasze-przepisy-new',
 					'?code=' + sPageURL,
 					'o-nas',
 					'pracuj-w-psibufet',

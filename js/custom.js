@@ -76,7 +76,7 @@ $(document).ready(function () {
     var closeBtn = $('.foodModal').find('.closeFoodModal');
     var openstatus;
 
-    $('.infoButtons__button').on('click', function(){
+    $('.infoButtons__button, .openFoodModal').on('click', function(){
         var dataid = $(this).attr('data');
 
         $('body').addClass('noscroll');
@@ -1093,7 +1093,7 @@ $(document).ready(function(){
 
     // Home shortcuts slider mobile
     if($(window).width() < 931){
-        $('.homeShortcuts__wrap').slick({
+        $('.pbShortcuts__wrap').slick({
             variableWidth: true,
             centerMode: true,
             arrows: false,

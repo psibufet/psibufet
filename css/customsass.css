@@ -1066,6 +1066,342 @@ body.promocode .siteHeader .mobileNav__logo {
   }
 }
 
+.foodTile {
+  width: 100%;
+  max-width: 458px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.foodTile__gallery {
+  display: block;
+  height: 285px;
+  margin-bottom: 0 !important;
+}
+
+.foodTile__gallery .galleryImage {
+  height: 285px;
+  overflow: hidden;
+}
+
+.foodTile__gallery .galleryImage img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.foodTile__gallery .slick-arrow {
+  height: 28px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 2;
+  transition: ease .3s;
+  cursor: pointer;
+  font-size: 0;
+  line-height: normal;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: none;
+}
+
+.foodTile__gallery .slick-arrow:hover {
+  opacity: .7;
+}
+
+.foodTile__gallery .slick-arrow.slick-prev {
+  left: 20px;
+}
+
+.foodTile__gallery .slick-arrow.slick-prev:before {
+  content: '';
+  background-image: url("/wp-content/themes/psibufet/images/recipes/recipes/gallery_arrow.svg");
+  background-repeat: no-repeat;
+  background-size: 28px;
+  width: 28px;
+  height: 28px;
+  opacity: 1;
+  display: block;
+  transform: rotate(-180deg);
+}
+
+.foodTile__gallery .slick-arrow.slick-next {
+  right: 20px;
+}
+
+.foodTile__gallery .slick-arrow.slick-next:before {
+  content: '';
+  background-image: url("/wp-content/themes/psibufet/images/recipes/recipes/gallery_arrow.svg");
+  background-repeat: no-repeat;
+  background-size: 28px;
+  width: 28px;
+  height: 28px;
+  opacity: 1;
+  display: block;
+}
+
+.foodTile__gallery .slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: absolute;
+  bottom: 23px;
+  left: 0;
+  right: 0;
+}
+
+.foodTile__gallery .slick-dots li {
+  display: flex;
+  width: 8px;
+  height: 8px;
+  margin: 0 3px;
+}
+
+.foodTile__gallery .slick-dots li button {
+  padding: 0;
+  border: 0;
+  font-size: 0;
+  line-height: normal;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: ease .3s;
+}
+
+.foodTile__gallery .slick-dots li button:before {
+  display: none;
+}
+
+.foodTile__gallery .slick-dots li.slick-active button {
+  background-color: #fff;
+}
+
+.foodTile__name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 56px;
+  position: relative;
+}
+
+.foodTile__name h3 {
+  font-family: 'Bebas Neue';
+  font-size: 42px;
+  line-height: inherit;
+  font-weight: 400;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+  padding-top: 4px;
+}
+
+.foodTile__name img {
+  position: absolute;
+  right: 20px;
+  top: -10px;
+  max-width: 100px;
+}
+
+.foodTile__content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 200px;
+  padding: 30px 40px 34px;
+  background-color: #fff;
+}
+
+.foodTile__content .desc {
+  font-size: 24px;
+  line-height: 28px;
+  color: #7f7f7f;
+  margin: 0 0 28px;
+  text-align: center;
+}
+
+.foodTile__content .openFoodModal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #4c4c4c;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  min-width: 160px;
+  height: 40px;
+  margin: 0;
+  text-align: center;
+  cursor: pointer;
+  transition: ease .3s;
+  position: relative;
+}
+
+.foodTile__content .openFoodModal span {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 600;
+  color: #4c4c4c;
+  position: relative;
+  padding-right: 10px;
+}
+
+.foodTile__content .openFoodModal span:after {
+  content: '';
+  background-image: url("/wp-content/themes/psibufet/images/recipes/recipes/arrow_right.svg");
+  background-repeat: no-repeat;
+  background-size: 8px;
+  width: 7px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: -5px;
+  transition: ease .3s;
+}
+
+.foodTile__content .openFoodModal:hover {
+  background-color: #f1f1f1;
+}
+
+.foodTile__content .openFoodModal:hover span:after {
+  right: -8px;
+}
+
+@media (max-width: 991px) {
+  .foodTile {
+    max-width: 350px;
+  }
+  .foodTile__gallery {
+    height: 230px;
+  }
+  .foodTile__gallery .galleryImage {
+    height: 270px;
+  }
+  .foodTile__name {
+    height: 45px;
+  }
+  .foodTile__name h3 {
+    font-size: 32px;
+  }
+  .foodTile__name img {
+    top: -8px;
+    max-width: 20%;
+    max-height: 60px;
+  }
+  .foodTile__content {
+    min-height: 180px;
+  }
+  .foodTile__content .desc {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0 0 18px;
+  }
+  .foodTile__content .openFoodModal {
+    font-size: 19px;
+    line-height: 24px;
+  }
+  .foodTile__content .openFoodModal:after {
+    background-size: 24px;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .foodTile {
+    max-width: 280px;
+  }
+  .foodTile__gallery {
+    height: 175px;
+  }
+  .foodTile__gallery .galleryImage {
+    height: 208px;
+  }
+  .foodTile__gallery img {
+    min-height: 175px;
+    object-fit: cover !important;
+  }
+  .foodTile__gallery .slick-arrow.slick-next:before {
+    background-size: 17px;
+    width: 17px;
+    height: 17px;
+    margin: 0 auto;
+  }
+  .foodTile__gallery .slick-arrow.slick-prev:before {
+    background-size: 17px;
+    width: 17px;
+    height: 17px;
+    margin: 0 auto;
+  }
+  .foodTile__gallery .slick-dots {
+    bottom: 8px;
+  }
+  .foodTile__gallery .slick-dots li {
+    width: 5px;
+    height: 5px;
+    margin: 0 3px;
+  }
+  .foodTile__gallery .slick-dots li button {
+    width: 5px;
+    height: 5px;
+    padding: 0;
+  }
+  .foodTile__name {
+    height: 34px;
+  }
+  .foodTile__name h3 {
+    font-size: 26px;
+  }
+  .foodTile__name img {
+    max-width: 60px;
+    right: 10px;
+  }
+  .foodTile__content {
+    min-height: 138px;
+    padding: 17px 20px 0;
+  }
+  .foodTile__content .desc {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .foodTile__content .openFoodModal {
+    font-size: 14px;
+    line-height: 16px;
+    min-width: 150px;
+    height: 34px;
+  }
+  .foodTile__content .openFoodModal span {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .foodTile__content .openFoodModal span:after {
+    background-size: 6px;
+    width: 5px;
+    height: 8px;
+    right: -2px;
+  }
+  .foodTile__content .openFoodModal:hover span:after {
+    right: -5px;
+  }
+}
+
+@media (max-width: 360px) {
+  .foodTile__name img {
+    max-width: 40px;
+    right: 5px;
+    top: 3px;
+  }
+  .foodTile__content {
+    padding: 17px 20px 30px;
+  }
+}
+
 /*  Sections 
 --------------- */
 /*  Subpages 
@@ -1324,6 +1660,13 @@ body.promocode .siteHeader .mobileNav__logo {
 .homeReviews__logo .stars img {
   max-width: 20px;
   margin: 0 2px;
+}
+
+.homeReviews--recipes {
+  padding: 25px 0;
+  border-bottom: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 0;
 }
 
 @media (max-width: 991px) {
@@ -4475,22 +4818,22 @@ body.admin-bar .foodModal__wrap {
   }
 }
 
-.homeShortcuts {
+.pbShortcuts {
   background-color: #fff;
   padding: 32px 0 40px;
 }
 
-.homeShortcuts > h2 {
+.pbShortcuts > h2 {
   font-size: 41px;
   line-height: 49px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 500;
   color: #000;
-  margin: 0 0 32px;
+  margin: 0 0 26px;
   text-align: center;
 }
 
-.homeShortcuts__wrap {
+.pbShortcuts__wrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -4498,7 +4841,7 @@ body.admin-bar .foodModal__wrap {
   margin: 0 auto;
 }
 
-.homeShortcuts__box {
+.pbShortcuts__box {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4511,11 +4854,11 @@ body.admin-bar .foodModal__wrap {
   transition: ease .3s;
 }
 
-.homeShortcuts__box:hover {
+.pbShortcuts__box:hover {
   opacity: .8;
 }
 
-.homeShortcuts__box .title {
+.pbShortcuts__box .title {
   font-size: 60px;
   line-height: 72px;
   font-family: "Bebas Neue", sans-serif;
@@ -4524,27 +4867,27 @@ body.admin-bar .foodModal__wrap {
 }
 
 @media (max-width: 1199px) {
-  .homeShortcuts__wrap {
+  .pbShortcuts__wrap {
     max-width: 890px;
   }
-  .homeShortcuts__box {
+  .pbShortcuts__box {
     width: 280px;
     height: 280px;
   }
-  .homeShortcuts__box .title {
+  .pbShortcuts__box .title {
     font-size: 46px;
     line-height: 55px;
   }
 }
 
 @media (max-width: 930px) {
-  .homeShortcuts__wrap {
+  .pbShortcuts__wrap {
     display: block;
   }
-  .homeShortcuts__wrap .slick-track {
+  .pbShortcuts__wrap .slick-track {
     padding-bottom: 10px;
   }
-  .homeShortcuts__wrap .slick-dots {
+  .pbShortcuts__wrap .slick-dots {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -4552,15 +4895,15 @@ body.admin-bar .foodModal__wrap {
     padding: 0;
     list-style: none;
   }
-  .homeShortcuts__wrap .slick-dots li {
+  .pbShortcuts__wrap .slick-dots li {
     height: auto;
     line-height: normal;
     margin: 0 3px;
   }
-  .homeShortcuts__wrap .slick-dots li.slick-active button {
+  .pbShortcuts__wrap .slick-dots li.slick-active button {
     background-color: #f15748;
   }
-  .homeShortcuts__wrap .slick-dots li button {
+  .pbShortcuts__wrap .slick-dots li button {
     background-color: rgba(0, 0, 0, 0.2);
     width: 8px;
     height: 8px;
@@ -4570,17 +4913,17 @@ body.admin-bar .foodModal__wrap {
     padding: 0;
     transition: ease .3s;
   }
-  .homeShortcuts__box {
+  .pbShortcuts__box {
     display: flex !important;
     margin: 0 10px;
   }
 }
 
 @media (max-width: 767px) {
-  .homeShortcuts {
+  .pbShortcuts {
     padding: 15px 0;
   }
-  .homeShortcuts > h2 {
+  .pbShortcuts > h2 {
     font-size: 28px;
     line-height: 34px;
     margin: 0 0 15px;
@@ -4717,6 +5060,699 @@ body.admin-bar .foodModal__wrap {
   .homeFaq__list .question__heading p {
     font-size: 16px;
     line-height: 19px;
+  }
+}
+
+.recipesHeading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 600px;
+  background-image: url("/wp-content/themes/psibufet/images/recipes/recipesHeading.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.recipesHeading__wrap h1 {
+  font-size: 60px;
+  line-height: 72px;
+  font-weight: 400;
+  color: #000;
+  font-family: "Bebas Neue", sans-serif;
+  text-align: center;
+  margin: 0 0 15px;
+}
+
+.recipesHeading__wrap p {
+  font-size: 25px;
+  line-height: 29px;
+  color: #000;
+  text-align: center;
+  max-width: 590px;
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .recipesHeading__wrap h1 {
+    font-size: 52px;
+    line-height: 62px;
+  }
+  .recipesHeading__wrap p {
+    font-size: 20px;
+    line-height: 24px;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 575px) {
+  .recipesHeading {
+    background-image: url("/wp-content/themes/psibufet/images/recipes/recipesHeading_mobile.png");
+  }
+}
+
+.recipesBoxes {
+  background-color: #fff;
+  padding: 25px 20px 40px;
+  box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+}
+
+.recipesBoxes__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.recipesBoxes__box--last {
+  display: none;
+}
+
+.recipesBoxes__box .icon {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 90px;
+  margin: 0 0 15px;
+}
+
+.recipesBoxes__box p {
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: #000;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .recipesBoxes {
+    padding: 25px 20px 5px;
+  }
+  .recipesBoxes__wrap {
+    flex-wrap: wrap;
+    max-width: 490px;
+  }
+  .recipesBoxes__box {
+    max-width: 150px;
+    width: 100%;
+    height: 150px;
+    border: 1px solid #BCBCBB;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  .recipesBoxes__box--last {
+    display: block;
+  }
+  .recipesBoxes__box p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+@media (max-width: 575px) {
+  .recipesBoxes__wrap {
+    max-width: 320px;
+  }
+}
+
+.recipesBanner {
+  text-align: center;
+}
+
+.recipesBanner img {
+  margin-bottom: 15px;
+}
+
+.recipesMenu {
+  padding: 40px 0 32px;
+  background-image: url("/wp-content/themes/psibufet/images/recipes/marmur_bg.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.recipesMenu__heading {
+  margin: 0 0 40px;
+}
+
+.recipesMenu__heading h2 {
+  font-size: 41px;
+  line-height: 49px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 0 20px;
+  color: #000;
+}
+
+.recipesMenu__heading p {
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  margin: 0;
+  color: #000;
+}
+
+.recipesMenu__heading p b {
+  display: block;
+  font-weight: 600;
+}
+
+.recipesMenu__wrap .recipesList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.recipesMenu__wrap .recipesList .foodTile:nth-child(-n+2) {
+  margin-bottom: 40px;
+}
+
+.recipesMenu__order {
+  text-align: center;
+  margin: 40px 0 0;
+}
+
+@media (max-width: 991px) {
+  .recipesMenu__heading p {
+    margin: 0 auto;
+    max-width: 540px;
+  }
+}
+
+@media (max-width: 767px) {
+  .recipesMenu {
+    padding: 30px 0 32px;
+  }
+  .recipesMenu__heading {
+    margin: 0 0 30px;
+  }
+  .recipesMenu__heading h2 {
+    font-size: 28px;
+    line-height: 34px;
+    margin: 0 0 10px;
+  }
+  .recipesMenu__heading p {
+    font-size: 16px;
+    line-height: 19px;
+    max-width: 430px;
+  }
+  .recipesMenu__wrap .recipesList {
+    max-width: 580px;
+  }
+  .recipesMenu__wrap .recipesList .foodTile:nth-child(-n+2) {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 599px) {
+  .recipesMenu {
+    padding: 20px 0;
+  }
+  .recipesMenu__heading {
+    margin: 0 0 20px;
+  }
+  .recipesMenu__heading h2 {
+    margin: 0;
+  }
+  .recipesMenu__heading p {
+    display: none;
+  }
+  .recipesMenu .recipesList {
+    max-width: 280px;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .recipesMenu .recipesList .foodTile {
+    margin-bottom: 20px;
+  }
+  .recipesMenu__order {
+    margin: 0;
+  }
+}
+
+.recipesExpert {
+  padding: 32px 0 40px;
+}
+
+.recipesExpert__wrap h2 {
+  font-size: 41px;
+  line-height: 49px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 0 20px;
+  color: #000;
+}
+
+.recipesExpert__expert {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background-color: #fff;
+  border: 1px solid #BCBCBB;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  max-width: 955px;
+  margin: 0 auto;
+}
+
+.recipesExpert__expert .image {
+  width: 265px;
+  margin-right: 20px;
+}
+
+.recipesExpert__expert .image img {
+  max-width: 242px;
+  border: 10px solid #fff;
+  border-radius: 100%;
+  box-shadow: 0 0 0 2px #4EACB6;
+}
+
+.recipesExpert__expert .image .name {
+  font-size: 26px;
+  line-height: 30px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  margin: 18px 0 0;
+}
+
+.recipesExpert__expert .image .name span {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.recipesExpert__expert .content {
+  width: calc(100% - 285px);
+}
+
+.recipesExpert__expert .content p {
+  font-size: 24px;
+  line-height: 32px;
+  color: #000;
+  margin: 0;
+}
+
+.recipesExpert__expert .content p b {
+  font-weight: 600;
+}
+
+@media (max-width: 991px) {
+  .recipesExpert__wrap h2 {
+    margin: 0 0 30px;
+  }
+  .recipesExpert__expert {
+    flex-direction: column;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+  }
+  .recipesExpert__expert .image {
+    margin: 0 0 20px;
+    text-align: center;
+  }
+  .recipesExpert__expert .content {
+    width: 100%;
+  }
+  .recipesExpert__expert .content p {
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .recipesExpert__wrap h2 {
+    font-size: 28px;
+    line-height: 34px;
+    max-width: 240px;
+    margin: 0 auto 20px;
+  }
+  .recipesExpert__expert .image {
+    width: 200px;
+  }
+  .recipesExpert__expert .image img {
+    max-width: 200px;
+    border: 6px solid #fff;
+  }
+  .recipesExpert__expert .content p {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0 auto;
+    max-width: 300px;
+  }
+}
+
+.recipesParts {
+  background-color: #F7BE45;
+  padding: 32px 0 80px;
+}
+
+.recipesParts__heading {
+  margin: 0 0 40px;
+}
+
+.recipesParts__heading h2 {
+  font-size: 41px;
+  line-height: 49px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 0 20px;
+  color: #000;
+}
+
+.recipesParts__heading p {
+  font-size: 16px;
+  line-height: 19px;
+  color: #000;
+  margin: 0;
+  text-align: center;
+}
+
+.recipesParts__heading p b {
+  font-weight: 600;
+}
+
+.recipesParts__list {
+  max-width: 1185px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.recipesParts__list .slick-track {
+  padding: 0 0 10px;
+}
+
+.recipesParts__list .slick-arrow {
+  font-size: 0;
+  line-height: normal;
+  background: none;
+  border: 0;
+  position: absolute;
+  padding: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 3;
+  transition: ease .3s;
+}
+
+.recipesParts__list .slick-arrow:hover {
+  opacity: .7;
+}
+
+.recipesParts__list .slick-arrow.slick-prev {
+  left: -60px;
+}
+
+.recipesParts__list .slick-arrow.slick-prev:before {
+  content: '';
+  background-image: url("/wp-content/themes/psibufet/images/recipes/recipes/gallery_arrow.svg");
+  background-repeat: no-repeat;
+  background-size: 40px;
+  width: 40px;
+  height: 40px;
+  opacity: 1;
+  display: block;
+  transform: rotate(-180deg);
+}
+
+.recipesParts__list .slick-arrow.slick-next {
+  right: -60px;
+}
+
+.recipesParts__list .slick-arrow.slick-next:before {
+  content: '';
+  background-image: url("/wp-content/themes/psibufet/images/recipes/recipes/gallery_arrow.svg");
+  background-repeat: no-repeat;
+  background-size: 40px;
+  width: 40px;
+  height: 40px;
+  opacity: 1;
+  display: block;
+}
+
+.recipesParts__list .slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  right: 0;
+}
+
+.recipesParts__list .slick-dots li {
+  display: flex;
+  width: 8px;
+  height: 8px;
+  margin: 0 3px;
+}
+
+.recipesParts__list .slick-dots li button {
+  padding: 0;
+  border: 0;
+  font-size: 0;
+  line-height: normal;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: ease .3s;
+}
+
+.recipesParts__list .slick-dots li button:before {
+  display: none;
+}
+
+.recipesParts__list .slick-dots li.slick-active button {
+  background-color: #f15748;
+}
+
+.recipesParts__box {
+  max-width: 280px;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  margin: 0 10px;
+}
+
+.recipesParts__box .image {
+  width: 100%;
+  height: 255px;
+}
+
+.recipesParts__box .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recipesParts__box .content {
+  min-height: 103px;
+  background-color: #fff;
+  padding: 16px 14px 30px;
+}
+
+.recipesParts__box .content p {
+  font-size: 12px;
+  line-height: 14px;
+  color: #000;
+  margin: 0;
+}
+
+.recipesParts__box .content p b {
+  font-weight: 600;
+}
+
+@media (max-width: 1349px) {
+  .recipesParts__list .slick-arrow.slick-prev {
+    left: -40px;
+  }
+  .recipesParts__list .slick-arrow.slick-prev:before {
+    background-size: 30px;
+    width: 30px;
+    height: 30px;
+  }
+  .recipesParts__list .slick-arrow.slick-next {
+    right: -40px;
+  }
+  .recipesParts__list .slick-arrow.slick-next:before {
+    background-size: 30px;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 1299px) {
+  .recipesParts__list {
+    max-width: 885px;
+  }
+}
+
+@media (max-width: 991px) {
+  .recipesParts__list {
+    max-width: 100%;
+  }
+  .recipesParts__list .slick-arrow {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .recipesParts {
+    padding: 20px 0 40px;
+  }
+  .recipesParts__heading {
+    margin: 0 0 25px;
+  }
+  .recipesParts__heading h2 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .recipesParts__heading p {
+    font-size: 14px;
+    line-height: 16px;
+    margin: 0 auto;
+    max-width: 210px;
+  }
+  .recipesParts__list .slick-dots {
+    bottom: -20px;
+  }
+}
+
+.recipesSafety__wrap {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.recipesSafety__image {
+  width: calc(100% / 2);
+}
+
+.recipesSafety__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recipesSafety__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: calc(100% / 2);
+  background-color: #fff;
+  padding: 30px 0 0;
+}
+
+.recipesSafety__content > h2 {
+  font-size: 41px;
+  line-height: 49px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 0 40px;
+  color: #000;
+}
+
+.recipesSafety__content .boxes {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.recipesSafety__content .boxes__box {
+  width: calc(100% / 2);
+  margin: 0 0 40px;
+}
+
+.recipesSafety__content .boxes__box .icon {
+  height: 60px;
+  text-align: center;
+  margin: 0 0 15px;
+}
+
+.recipesSafety__content .boxes__box .icon img {
+  max-width: 60px;
+  margin: 0 auto;
+}
+
+.recipesSafety__content .boxes__box .text {
+  font-size: 18px;
+  line-height: 24px;
+  color: #000;
+  text-align: center;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.recipesSafety__content .boxes__box .text b {
+  font-weight: 600;
+}
+
+@media (max-width: 1199px) {
+  .recipesSafety__content > h2 {
+    padding: 0 15px;
+  }
+  .recipesSafety__content .boxes__box .text {
+    font-size: 16px;
+    line-height: 20px;
+    max-width: 240px;
+  }
+}
+
+@media (max-width: 991px) {
+  .recipesSafety__content > h2 {
+    font-size: 28px;
+    line-height: 34px;
+    margin: 0 auto 20px;
+    max-width: 320px;
+    padding: 0;
+  }
+  .recipesSafety__content > h2 br {
+    display: none;
+  }
+  .recipesSafety__content .boxes__box {
+    margin: 0 0 30px;
+  }
+  .recipesSafety__content .boxes__box .icon {
+    height: 50px;
+  }
+  .recipesSafety__content .boxes__box .icon img {
+    max-width: 50px;
+  }
+  .recipesSafety__content .boxes__box .text {
+    font-size: 12px;
+    line-height: 16px;
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 767px) {
+  .recipesSafety__wrap {
+    flex-direction: column-reverse;
+  }
+  .recipesSafety__image {
+    width: 100%;
+  }
+  .recipesSafety__content {
+    width: 100%;
+  }
+  .recipesSafety__content .boxes {
+    max-width: 320px;
+  }
+  .recipesSafety__content .boxes__box .text {
+    max-width: 160px;
   }
 }
 
@@ -8768,13 +9804,6 @@ body a:hover {
   transition: ease .3s;
 }
 
-.btn--center {
-  display: block;
-  max-width: fit-content;
-  max-width: -moz-fit-content;
-  margin: 0 auto;
-}
-
 .btn span {
   font-size: 20px;
   line-height: inherit;
@@ -8797,6 +9826,21 @@ body a:hover {
   transform: translate(0, -50%);
   right: -10px;
   transition: ease .3s;
+}
+
+.btn:hover {
+  background-color: #fb6659;
+}
+
+.btn:hover span:after {
+  right: -15px;
+}
+
+.btn--center {
+  display: block;
+  max-width: fit-content;
+  max-width: -moz-fit-content;
+  margin: 0 auto;
 }
 
 .btn--big {
@@ -8826,14 +9870,6 @@ body a:hover {
   left: -15px;
 }
 
-.btn:hover {
-  background-color: #fb6659;
-}
-
-.btn:hover span:after {
-  right: -15px;
-}
-
 .btn--header {
   min-width: 125px;
   height: 38px;
@@ -8843,6 +9879,45 @@ body a:hover {
 .btn--header span {
   font-size: 17px;
   font-weight: 500;
+}
+
+.btn--clear {
+  height: 40px;
+  line-height: 40px;
+  background-color: #fff;
+  border: 1px solid #000;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  padding: 0 20px;
+  min-width: 205px;
+}
+
+.btn--clear span {
+  font-size: 15px;
+  color: #000;
+  padding-right: 15px;
+}
+
+.btn--clear span:after {
+  content: '';
+  background-image: url("/wp-content/themes/psibufet/images/recipes/recipes/arrow_right.svg");
+  background-repeat: no-repeat;
+  background-size: 7px;
+  width: 6px;
+  height: 9px;
+  filter: contrast(3) saturate(100);
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 0;
+  transition: ease .3s;
+}
+
+.btn--clear:hover {
+  background-color: #f1f1f1;
+}
+
+.btn--clear:hover span:after {
+  right: -5px;
 }
 
 @media (max-width: 991px) {
@@ -8900,6 +9975,27 @@ body a:hover {
   .btn--header span {
     font-size: 15px;
   }
+  .btn--clear {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: fit-content;
+    max-width: -moz-max-content;
+    max-width: -webkit-fit-content;
+    height: 34px;
+    line-height: 34px;
+    margin: 0 auto;
+  }
+  .btn--clear span {
+    font-size: 12px;
+    padding-right: 9px;
+  }
+  .btn--clear span:after {
+    background-size: 6px;
+    width: 6px;
+    height: 8px;
+    right: -3px;
+  }
 }
 
 @keyframes PulseDown {
@@ -8935,6 +10031,48 @@ body a:hover {
   }
   100% {
     transform: translate(0, 0) rotate(90deg);
+  }
+}
+
+.pbQuestions {
+  background-color: #E8E8E8;
+  padding: 34px 15px 24px;
+}
+
+.pbQuestions__title {
+  font-size: 41px;
+  line-height: 49px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 0 20px;
+  color: #000;
+}
+
+.pbQuestions__dog {
+  text-align: center;
+}
+
+.pbQuestions__dog img {
+  display: block;
+  margin: 0 auto;
+}
+
+.pbQuestions__dog .btn {
+  position: relative;
+  top: -15px;
+}
+
+@media (max-width: 767px) {
+  .pbQuestions {
+    padding: 24px 15px 10px;
+  }
+  .pbQuestions__title {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .pbQuestions__dog img {
+    max-width: 120px;
   }
 }
 /*# sourceMappingURL=customsass.css.map */

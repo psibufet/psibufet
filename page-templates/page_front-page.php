@@ -22,6 +22,7 @@ get_header(); ?>
             <p>Dowiedz się więcej</p>
         </a>
     </section>
+    
     <section id="page-continue" class="homeReviews">
         <?php if( have_rows('after_header_logos') ): ?>
         <ul class="slideul">
@@ -53,6 +54,7 @@ get_header(); ?>
         </ul>
         <?php endif; ?>
     </section>
+
     <section class="homeMiska animateMiska container">
         <div class="homeMiska__left">
             <h2 class="getMarker"><span class="marker">Prawdziwe</span> jedzenie w psiej misce</h2>
@@ -496,16 +498,16 @@ get_header(); ?>
         </div>
     </section>
 
-    <section class="homeShortcuts">
+    <section class="pbShortcuts">
         <h2 class="getMarker"><span class="marker">Poznaj</span> nas lepiej</h2>
-        <div class="homeShortcuts__wrap">
-            <a href="/jak-to-dziala" class="homeShortcuts__box" style="background-image: url('<?php echo get_template_directory_uri() . '/images/homepage/homeShortcuts_01.png'; ?>');">
+        <div class="pbShortcuts__wrap">
+            <a href="/jak-to-dziala" class="pbShortcuts__box" style="background-image: url('<?php echo get_template_directory_uri() . '/images/homepage/homeShortcuts_01.png'; ?>');">
                 <p class="title">Jak to działa?</p>
             </a>
-            <a href="/nasze-przepisy" class="homeShortcuts__box" style="background-image: url('<?php echo get_template_directory_uri() . '/images/homepage/homeShortcuts_02.png'; ?>');">
+            <a href="/nasze-przepisy" class="pbShortcuts__box" style="background-image: url('<?php echo get_template_directory_uri() . '/images/homepage/homeShortcuts_02.png'; ?>');">
                 <p class="title">Nasze przepisy</p>
             </a>
-            <a href="/o-nas" class="homeShortcuts__box" style="background-image: url('<?php echo get_template_directory_uri() . '/images/homepage/homeShortcuts_03.png'; ?>');">
+            <a href="/o-nas" class="pbShortcuts__box" style="background-image: url('<?php echo get_template_directory_uri() . '/images/homepage/homeShortcuts_03.png'; ?>');">
                 <p class="title">O nas</p>
             </a>
         </div>

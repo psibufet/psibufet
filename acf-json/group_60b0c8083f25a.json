@@ -3,6 +3,68 @@
     "title": "Smak",
     "fields": [
         {
+            "key": "field_613a0427e7283",
+            "label": "Podstrona \"Nasze przepisy\"",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_613a01aa81c2c",
+            "label": "Galeria smaku",
+            "name": "flavourGallery",
+            "type": "gallery",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "insert": "append",
+            "library": "all",
+            "min": "",
+            "max": "",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_613a02fbca6bb",
+            "label": "Opis kafelka",
+            "name": "flavourDesc_recipe",
+            "type": "textarea",
+            "instructions": "Opis smaku, na stronie \"Nasze przepisy\", na kafelku.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": "br"
+        },
+        {
             "key": "field_60b0c836a4d8d",
             "label": "Główne informacje",
             "name": "",
@@ -474,5 +536,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1622378870
+    "modified": 1631192123
 }
