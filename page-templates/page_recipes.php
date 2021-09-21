@@ -159,7 +159,7 @@ get_header(); ?>
         </div>
     </section>
 
-    <section id="page-continue" class="homeReviews homeReviews--recipes">
+    <section class="homeReviews homeReviews--recipes">
         <?php if( have_rows('after_header_logos', 5) ): ?>
         <ul class="slideul">
             <?php while( have_rows('after_header_logos', 5) ): the_row();

@@ -1662,7 +1662,7 @@ body.promocode .siteHeader .mobileNav__logo {
   margin: 0 2px;
 }
 
-.homeReviews--recipes {
+.homeReviews--recipes, .homeReviews--howitworks {
   padding: 25px 0;
   border-bottom: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
@@ -5754,6 +5754,586 @@ body.admin-bar .foodModal__wrap {
   .recipesSafety__content .boxes__box .text {
     max-width: 160px;
   }
+}
+
+.howHeading {
+  background-image: url("/wp-content/themes/psibufet/images/howitworks_new/howHeader.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.howHeading__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.howHeading__wrap h1 {
+  font-size: 60px;
+  line-height: 72px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  margin: 0 0 15px;
+  text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.howHeading__wrap p {
+  font-size: 25px;
+  line-height: 30px;
+  color: #fff;
+  text-align: center;
+  max-width: 380px;
+  margin: 0 auto;
+  text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.howVideo {
+  padding: 32px 0 40px;
+}
+
+.howVideo__wrap {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.howVideo__heading h2 {
+  font-size: 41px;
+  line-height: 49px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  margin: 0 0 32px;
+}
+
+.howVideo__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 430px;
+}
+
+.howVideo__content .video {
+  width: calc(100% - 400px);
+  height: inherit;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.howVideo__content .video .fluid-width-video-wrapper {
+  height: inherit;
+}
+
+.howVideo__content .video .fluid-width-video-wrapper iframe {
+  height: inherit;
+}
+
+.howVideo__content .content {
+  width: 360px;
+  height: inherit;
+  margin-left: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.howVideo__content .content:before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  transform: rotate(-45deg) translate(0, -50%);
+  position: absolute;
+  left: -4px;
+  top: 50%;
+  z-index: 2;
+}
+
+.howVideo__content .content h3 {
+  font-size: 30px;
+  line-height: 42px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  margin: 0 0 8px;
+}
+
+.howVideo__content .content p {
+  font-size: 18px;
+  line-height: 25px;
+  color: #4c4c4c;
+  text-align: center;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.howVideo__cta {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.howSteps {
+  background-color: #F7BE45;
+  padding: 32px 0 40px;
+}
+
+.howSteps__steps {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+  display: flex;
+  align-content: flex-start;
+  justify-content: space-between;
+}
+
+.howSteps__step {
+  background-color: #fff;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  max-width: 360px;
+  position: relative;
+}
+
+.howSteps__step:before {
+  content: attr(data-number);
+  font-size: 41px;
+  line-height: 1;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  margin: 0;
+  position: absolute;
+  left: 10px;
+  top: 5px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.howSteps__step:after {
+  content: '';
+  border-left: 43px solid #f15748;
+  border-top: 43px solid #f15748;
+  border-right: 43px solid transparent;
+  border-bottom: 43px solid transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.howSteps__step .thumb {
+  height: 360px;
+}
+
+.howSteps__step .thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.howSteps__step .content {
+  padding: 32px 24px 40px;
+}
+
+.howSteps__step .content h3 {
+  font-size: 41px;
+  line-height: 49px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  margin: 0 0 15px;
+}
+
+.howSteps__step .content p {
+  font-size: 18px;
+  line-height: 21px;
+  color: #000;
+  text-align: center;
+  margin: 0;
+}
+
+.howSteps__cta {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.howInfo {
+  padding: 32px 0 40px;
+}
+
+.howInfo__heading h2 {
+  font-size: 41px;
+  line-height: 49px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  margin: 0 0 32px;
+}
+
+.howInfo__wrap {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.howInfo__phone {
+  width: 380px;
+}
+
+.howInfo__content {
+  width: calc(100% - 380px);
+}
+
+.howInfo__content .boxes {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.howInfo__content .boxes__box {
+  width: calc(100% / 2);
+  margin-bottom: 70px;
+}
+
+.howInfo__content .boxes__box .icon {
+  text-align: center;
+  margin-bottom: 15px;
+  height: 75px;
+}
+
+.howInfo__content .boxes__box .icon img {
+  min-height: 70px;
+  object-fit: contain;
+}
+
+.howInfo__content .boxes__box p {
+  font-size: 18px;
+  line-height: 21px;
+  color: #000;
+  text-align: center;
+  max-width: 325px;
+  margin: 0 auto;
+}
+
+.howInfo__content .cta {
+  text-align: center;
+}
+
+.howPlan {
+  background-image: url("/wp-content/themes/psibufet/images/howitworks_new/marmur_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 32px 0 40px;
+}
+
+.howPlan__heading h2 {
+  font-size: 41px;
+  line-height: 49px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  margin: 0 0 32px;
+}
+
+.howPlan .pbPlans {
+  max-width: 950px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.howPlan .pbPlans__nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.howPlan .pbPlans__nav .pos {
+  width: calc(100% / 2);
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transition: all ease .3s;
+  transition-property: box-shadow, opacity;
+}
+
+.howPlan .pbPlans__nav .pos:not(.active):hover {
+  opacity: .7;
+}
+
+.howPlan .pbPlans__nav .pos.active {
+  border-bottom: 1px solid transparent;
+}
+
+.howPlan .pbPlans__nav .pos.active span {
+  opacity: 1;
+}
+
+.howPlan .pbPlans__nav .pos:nth-child(1).active {
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.howPlan .pbPlans__nav .pos:nth-child(2).active {
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: -4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.howPlan .pbPlans__nav .pos span {
+  font-size: 25px;
+  line-height: 1;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  color: #000;
+  margin: 0;
+  text-align: center;
+  opacity: .2;
+  transition: ease .3s;
+}
+
+.howPlan .pbPlans__content {
+  padding: 0 25px 25px;
+}
+
+.howPlan .pbPlans__content .content {
+  justify-content: space-between;
+  display: none;
+  opacity: 0;
+  transition: ease .3s;
+}
+
+.howPlan .pbPlans__content .content--ready {
+  display: flex;
+}
+
+.howPlan .pbPlans__content .content--active {
+  opacity: 1;
+}
+
+.howPlan .pbPlans__content .content__image {
+  width: 420px;
+}
+
+.howPlan .pbPlans__content .content__content {
+  width: calc(100% - 420px);
+}
+
+.howPlan .pbPlans__content .content__content .text {
+  max-width: 450px;
+  margin: 40px auto;
+}
+
+.howPlan .pbPlans__content .content__content .text p {
+  font-size: 18px;
+  line-height: 21px;
+  color: #000;
+  text-align: center;
+  margin: 0 0 15px;
+}
+
+.howPlan .pbPlans__content .content__content .text p:last-of-type {
+  margin: 0;
+}
+
+.howPlan .pbPlans__content .content__content .boxes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.howPlan .pbPlans__content .content__content .boxes__box {
+  width: calc(100% / 2);
+}
+
+.howPlan .pbPlans__content .content__content .boxes__box .icon {
+  min-height: 60px;
+  margin: 0 0 10px;
+  text-align: center;
+}
+
+.howPlan .pbPlans__content .content__content .boxes__box .icon img {
+  object-fit: contain;
+  min-height: inherit;
+}
+
+.howPlan .pbPlans__content .content__content .boxes__box p {
+  font-size: 14px;
+  line-height: 18px;
+  color: #000;
+  text-align: center;
+  margin: 0;
+}
+
+.howPlan__cta {
+  margin: 40px 0 60px;
+  text-align: center;
+}
+
+.howPlan__delivery .image {
+  text-align: center;
+  margin: 0 0 45px;
+}
+
+.howPlan__delivery .image img {
+  max-width: 240px;
+  width: 100%;
+  margin-right: -50px;
+}
+
+.howPlan__delivery h3 {
+  font-size: 41px;
+  line-height: 49px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  margin: 0 0 10px;
+}
+
+.howPlan__delivery p {
+  font-size: 16px;
+  line-height: 19px;
+  color: #000;
+  text-align: center;
+  margin: 0;
+}
+
+.howUsers {
+  background-color: #F7BE45;
+  padding: 32px 0 40px;
+}
+
+.howUsers__heading h2 {
+  font-size: 41px;
+  line-height: 49px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  margin: 0 0 28px;
+}
+
+.howUsers__list {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.howUsers__list .pbUserInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  margin: 0 0 40px;
+}
+
+.howUsers__list .pbUserInfo:last-of-type {
+  margin: 0;
+}
+
+.howUsers__list .pbUserInfo__video {
+  width: calc(100% / 2);
+}
+
+.howUsers__list .pbUserInfo__content {
+  width: calc(100% / 2);
+  background-color: #fff;
+  padding: 30px 20px;
+}
+
+.howUsers__list .pbUserInfo__content .title {
+  display: flex;
+  justify-content: center;
+  font-size: 21px;
+  line-height: 35px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 0 10px;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.howUsers__list .pbUserInfo__content .title div {
+  padding: 0 8px;
+}
+
+.howUsers__list .pbUserInfo__content .title span {
+  font-size: 30px;
+}
+
+.howUsers__list .pbUserInfo__content .info {
+  font-size: 18px;
+  line-height: 25px;
+  color: #4c4c4c;
+  text-align: center;
+  max-width: 480px;
+  margin: 0 auto 12px;
+}
+
+.howUsers__list .pbUserInfo__content .boxes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.howUsers__list .pbUserInfo__content .boxes__box {
+  min-width: 130px;
+}
+
+.howUsers__list .pbUserInfo__content .boxes__box .icon {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 10px;
+}
+
+.howUsers__list .pbUserInfo__content .boxes__box .icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.howUsers__list .pbUserInfo__content .boxes__box p {
+  font-size: 25px;
+  line-height: 30px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  margin: 0;
 }
 
 body.page-template-page_gskarmy .siteHeader {

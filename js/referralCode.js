@@ -13,6 +13,7 @@ $(document).ready(function(){
 	var sPageURL = window.location.pathname.replace('/','');
 	var whitelist = ['',
 					'jak-to-dziala',
+					'jak-to-dziala-new',
 					'nasze-przepisy',
 					'nasze-przepisy-new',
 					'?code=' + sPageURL,

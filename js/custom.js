@@ -1101,3 +1101,29 @@ $(document).ready(function(){
         });
     }
 });
+
+
+/*
+ *  Jak to działa page
+ */
+$(document).ready(function(){
+    $('.pbPlans__nav .pos').on('click', function(){
+        var id = $(this).attr('data-id');
+
+        $('.pos').removeClass('active');
+        $(this).addClass('active');
+
+        var openedBox = $('.pbPlans__content').find('.content--active');
+        var toOpen = $('.pbPlans__content').find('.content[data-id="' + id + '"]');
+
+        openedBox.removeClass('content--active');
+        setTimeout(function(){
+            openedBox.removeClass('content--ready');
+            toOpen.addClass('content--ready');
+
+            setTimeout(function(){
+                toOpen.addClass('content--active');
+            }, 100);
+        }, 300);
+    });
+}); 
