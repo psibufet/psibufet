@@ -30,5 +30,15 @@ $(document).ready(function(){
                 }
             }
         ]
-    })
+    });
+
+    if($(window).width() < 992){
+        $('.howUsers__list').slick({
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            centerMode: true,
+            variableWidth: true,
+        });
+    }
 });

@@ -5760,6 +5760,7 @@ body.admin-bar .foodModal__wrap {
   background-image: url("/wp-content/themes/psibufet/images/howitworks_new/howHeader.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   min-height: 600px;
   display: flex;
   align-items: center;
@@ -5792,6 +5793,27 @@ body.admin-bar .foodModal__wrap {
   max-width: 380px;
   margin: 0 auto;
   text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 991px) {
+  .howHeading {
+    background-image: url("/wp-content/themes/psibufet/images/howitworks_new/howHeader_mobile.png");
+    align-items: flex-end;
+  }
+  .howHeading__wrap {
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .howHeading__wrap h1 {
+    font-size: 52px;
+    line-height: 60px;
+  }
+  .howHeading__wrap p {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .howVideo {
@@ -5887,6 +5909,45 @@ body.admin-bar .foodModal__wrap {
   text-align: center;
 }
 
+@media (max-width: 991px) {
+  .howVideo__content {
+    height: auto;
+    flex-direction: column;
+    max-width: 770px;
+    margin: 0 auto;
+  }
+  .howVideo__content .video {
+    width: 100%;
+    height: 430px;
+    margin-bottom: 30px;
+  }
+  .howVideo__content .content {
+    width: 100%;
+    margin-left: 0;
+  }
+  .howVideo__content .content:before {
+    transform: rotate(45deg);
+    top: -10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .howVideo {
+    padding: 24px 0;
+  }
+  .howVideo__heading h2 {
+    font-size: 28px;
+    line-height: 34px;
+    margin: 0 0 24px;
+  }
+  .howVideo__cta {
+    margin-top: 24px;
+  }
+}
+
 .howSteps {
   background-color: #F7BE45;
   padding: 32px 0 40px;
@@ -5973,6 +6034,50 @@ body.admin-bar .foodModal__wrap {
   text-align: center;
 }
 
+@media (max-width: 1199px) {
+  .howSteps__steps {
+    max-width: 1040px;
+  }
+  .howSteps__step {
+    max-width: 320px;
+  }
+  .howSteps__step .thumb {
+    height: 320px;
+  }
+  .howSteps__step .content {
+    padding: 24px 30px;
+  }
+  .howSteps__step .content h3 {
+    font-size: 28px;
+    line-height: 34px;
+    margin: 0 0 5px;
+  }
+  .howSteps__step .content p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 992px) {
+  .howSteps__step {
+    max-width: 310px;
+  }
+}
+
+@media (max-width: 991px) {
+  .howSteps__steps {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .howSteps__step {
+    margin-bottom: 24px;
+  }
+  .howSteps__step:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
 .howInfo {
   padding: 32px 0 40px;
 }
@@ -6037,6 +6142,12 @@ body.admin-bar .foodModal__wrap {
 
 .howInfo__content .cta {
   text-align: center;
+}
+
+@media (max-width: 991px) {
+  .howInfo {
+    display: none !important;
+  }
 }
 
 .howPlan {
@@ -6227,6 +6338,105 @@ body.admin-bar .foodModal__wrap {
   margin: 0;
 }
 
+@media (max-width: 991px) {
+  .howPlan .pbPlans {
+    max-width: calc(100% - 40px);
+  }
+  .howPlan .pbPlans__content .content__image {
+    width: 50%;
+  }
+  .howPlan .pbPlans__content .content__content {
+    width: 50%;
+    padding-left: 0;
+  }
+  .howPlan .pbPlans__content .content__content .text p {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+@media (max-width: 767px) {
+  .howPlan {
+    padding: 26px 0;
+  }
+  .howPlan__heading h2 {
+    font-size: 28px;
+    line-height: 34px;
+    margin: 0 0 26px;
+  }
+  .howPlan .pbPlans__content .content {
+    flex-direction: column;
+  }
+  .howPlan .pbPlans__content .content__image {
+    width: 100%;
+    height: 200px;
+    text-align: center;
+  }
+  .howPlan .pbPlans__content .content__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .howPlan .pbPlans__content .content__content {
+    width: 100%;
+  }
+  .howPlan .pbPlans__content .content__content .text {
+    margin: 0 auto 40px;
+  }
+}
+
+@media (max-width: 575px) {
+  .howPlan .pbPlans__nav .pos {
+    height: 31px;
+  }
+  .howPlan .pbPlans__nav .pos span {
+    font-size: 16px;
+  }
+  .howPlan .pbPlans__content .content__image {
+    height: 150px;
+  }
+  .howPlan .pbPlans__content .content__content .text {
+    margin: 0 auto 25px;
+  }
+  .howPlan .pbPlans__content .content__content .text p {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .howPlan .pbPlans__content .content__content .boxes {
+    max-width: 280px;
+  }
+  .howPlan .pbPlans__content .content__content .boxes__box .icon {
+    min-height: auto;
+    height: 50px;
+  }
+  .howPlan .pbPlans__content .content__content .boxes__box .icon img {
+    width: 100%;
+    height: 100%;
+  }
+  .howPlan .pbPlans__content .content__content .boxes__box p {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .howPlan__cta {
+    margin: 32px 0;
+  }
+  .howPlan__delivery .image {
+    margin: 0 0 28px;
+  }
+  .howPlan__delivery .image img {
+    max-width: 180px;
+    margin-right: -30px;
+  }
+  .howPlan__delivery h3 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .howPlan__delivery p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
 .howUsers {
   background-color: #F7BE45;
   padding: 32px 0 40px;
@@ -6334,6 +6544,130 @@ body.admin-bar .foodModal__wrap {
   color: #000;
   text-align: center;
   margin: 0;
+}
+
+.howUsers__cta {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .howUsers {
+    padding: 32px 0;
+  }
+  .howUsers__list {
+    padding: 0;
+  }
+  .howUsers__list .pbUserInfo {
+    max-width: 320px;
+    margin: 0 10px;
+    flex-direction: column;
+  }
+  .howUsers__list .pbUserInfo__video {
+    width: 100%;
+    height: 320px;
+  }
+  .howUsers__list .pbUserInfo__video iframe {
+    height: 320px;
+  }
+  .howUsers__list .pbUserInfo__content {
+    width: 100%;
+    padding: 16px 12px;
+  }
+  .howUsers__list .pbUserInfo__content .title {
+    font-size: 14px;
+    line-height: 25px;
+    margin: 0 0 5px;
+  }
+  .howUsers__list .pbUserInfo__content .title span {
+    font-size: 21px;
+    line-height: 25px;
+  }
+  .howUsers__list .pbUserInfo__content .title div {
+    padding: 0 6px;
+    margin-top: 2px;
+  }
+  .howUsers__list .pbUserInfo__content .info {
+    font-size: 12px;
+    line-height: 16px;
+    padding: 0 10px;
+  }
+  .howUsers__list .pbUserInfo__content .boxes {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .howUsers__list .pbUserInfo__content .boxes__box {
+    display: flex;
+    align-items: center;
+    margin: 0 0 5px;
+  }
+  .howUsers__list .pbUserInfo__content .boxes__box:last-of-type {
+    margin: 0;
+  }
+  .howUsers__list .pbUserInfo__content .boxes__box .icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px 0 0;
+  }
+  .howUsers__list .pbUserInfo__content .boxes__box p {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .howUsers__list .slick-list {
+    padding-bottom: 10px !important;
+  }
+  .howUsers__list .slick-dots {
+    display: flex !important;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 14px 0 0;
+  }
+  .howUsers__list .slick-dots li {
+    margin: 0 3px;
+    line-height: 1;
+  }
+  .howUsers__list .slick-dots li.slick-active button {
+    background-color: #f15748;
+  }
+  .howUsers__list .slick-dots li button {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-size: 0;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: ease .3s;
+  }
+  .howUsers__cta {
+    display: block;
+    text-align: center;
+    margin: 18px 0 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .howUsers {
+    padding: 26px 0;
+  }
+  .howUsers__heading h2 {
+    font-size: 28px;
+    line-height: 34px;
+    margin: 0 0 26px;
+  }
+}
+
+@media (max-width: 575px) {
+  .howUsers .pbUserInfo {
+    max-width: 280px;
+  }
+  .howUsers .pbUserInfo__video {
+    height: 280px;
+  }
+  .howUsers .pbUserInfo__video iframe {
+    height: 280px;
+  }
 }
 
 body.page-template-page_gskarmy .siteHeader {

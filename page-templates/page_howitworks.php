@@ -190,7 +190,7 @@ get_header(); ?>
                         ?>
                         <div class="boxes__box">
                             <div class="icon">
-                                <img src="<?php echo $icon; ?>"/>
+                                <img src="<?php echo $icon; ?>" class="no-lazyload"/>
                             </div>
                             <p><?php echo $text; ?></p>
                         </div>
@@ -199,6 +199,9 @@ get_header(); ?>
                 </div>
             </div>
             <?php endwhile; ?>
+        </div>
+        <div class="howUsers__cta">
+            <a href="https://zamowienie.psibufet.pl/" class="btn"><span>Dołącz do nas</span></a>
         </div>
     </section>
 
