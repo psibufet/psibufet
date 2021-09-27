@@ -78,7 +78,7 @@
             "min": 4,
             "max": 0,
             "layout": "row",
-            "button_label": "",
+            "button_label": "Dodaj składnik",
             "sub_fields": [
                 {
                     "key": "field_613a18e39d61c",
@@ -103,6 +103,21 @@
                     "max_height": "",
                     "max_size": "",
                     "mime_types": ""
+                },
+                {
+                    "key": "field_615178c0a2b0c",
+                    "label": "Kolor tła",
+                    "name": "recipesParts_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": ""
                 },
                 {
                     "key": "field_613a18fe9d61e",
@@ -266,5 +281,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1632130422
+    "modified": 1632729317
 }

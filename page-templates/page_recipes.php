@@ -104,6 +104,7 @@ get_header(); ?>
                 <?php
                 while( have_rows('recipesParts') ): the_row();
                     $image = get_sub_field('recipesParts_image');
+                    $color = get_sub_field('recipesParts_color');
                     $name = get_sub_field('recipesParts_name');
                     $content = get_sub_field('recipesParts_content');
                 ?>
