@@ -109,7 +109,7 @@ get_header(); ?>
                     $content = get_sub_field('recipesParts_content');
                 ?>
                 <div class="recipesParts__box">
-                    <div class="image">
+                    <div class="image" style="background-color: <?php echo $color ?>33">
                         <img src="<?php echo $image; ?>" class="no-lazyload"/>
                     </div>
                     <div class="content">

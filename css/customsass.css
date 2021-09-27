@@ -5542,6 +5542,7 @@ body.admin-bar .foodModal__wrap {
   width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
   margin: 0 10px;
 }
 
