@@ -65,7 +65,8 @@ $(window).on('scroll', function () {
     var homePricing = $('.homePricing').find('.getMarker');
     var homeStart = $('.homeStart').find('.getMarker');
     var homeStartSection = $('.homeStart');
-    var homeShortcuts = $('.homeShortcuts').find('.getMarker');
+    var pbShortcuts = $('.pbShortcuts').find('.getMarker');
+    var pbQuestions = $('.pbQuestions').find('.getMarker');
 
     if($(homeMiska).visible(true)){
         setTimeout(function(){
@@ -102,9 +103,14 @@ $(window).on('scroll', function () {
             homeStartSection.addClass('visible');
         }, 500)
     }
-    if($(homeShortcuts).visible(true)){
+    if($(pbShortcuts).visible(true)){
         setTimeout(function(){
-            homeShortcuts.addClass('init');
+            pbShortcuts.addClass('init');
+        }, 500)
+    }
+    if($(pbQuestions).visible(true)){
+        setTimeout(function(){
+            pbQuestions.addClass('init');
         }, 500)
     }
 });
@@ -274,6 +280,58 @@ $(document).ready(function() {
         if($(calcMiska).visible(true)){
             setTimeout(function(){
                 calcMiska.addClass('init');
+            }, 500)
+        }
+    });
+});
+
+/********** Partner page **********/
+
+$(document).ready(function() {
+    var recipesMenu = $('.recipesMenu__heading').find('.getMarker');
+    var recipesExpert = $('.recipesExpert').find('.getMarker');
+    var recipesParts = $('.recipesParts__heading').find('.getMarker');
+    var recipesSafety = $('.recipesSafety').find('.getMarker');
+
+    if($(recipesMenu).visible(true)){
+        setTimeout(function(){
+            recipesMenu.addClass('init');
+        }, 500)
+    }
+    if($(recipesExpert).visible(true)){
+        setTimeout(function(){
+            recipesExpert.addClass('init');
+        }, 500)
+    }
+    if($(recipesParts).visible(true)){
+        setTimeout(function(){
+            recipesParts.addClass('init');
+        }, 500)
+    }
+    if($(recipesSafety).visible(true)){
+        setTimeout(function(){
+            recipesSafety.addClass('init');
+        }, 500)
+    }
+    $(window).on('scroll', function(){
+        if($(recipesMenu).visible(true)){
+            setTimeout(function(){
+                recipesMenu.addClass('init');
+            }, 500)
+        }
+        if($(recipesExpert).visible(true)){
+            setTimeout(function(){
+                recipesExpert.addClass('init');
+            }, 500)
+        }
+        if($(recipesParts).visible(true)){
+            setTimeout(function(){
+                recipesParts.addClass('init');
+            }, 500)
+        }
+        if($(recipesSafety).visible(true)){
+            setTimeout(function(){
+                recipesSafety.addClass('init');
             }, 500)
         }
     });
