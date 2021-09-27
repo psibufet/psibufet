@@ -90,7 +90,7 @@ get_header(); ?>
     <section class="howPlan">
         <div class="howPlan__wrap">
             <div class="howPlan__heading">
-                <h2>Dostępne plany <span class="marker">żywienia</span></h2>
+                <h2 class="getMarker">Dostępne plany <span class="marker">żywienia</span></h2>
             </div>
             <div class="pbPlans">
                 <div class="pbPlans__nav">
@@ -181,7 +181,7 @@ get_header(); ?>
                     <?php echo $video; ?>
                 </div>
                 <div class="pbUserInfo__content">
-                    <h3 class="title getMarker"><span><?php echo $owner; ?></span><div>x</div><span class="marker"><?php echo $dog; ?></span></h3>
+                    <h3 class="title getMarker getMarker--small"><span><?php echo $owner; ?></span><div>x</div><span class="marker"><?php echo $dog; ?></span></h3>
                     <p class="info"><?php echo $desc; ?></p>
                     <div class="boxes">
                         <?php while(have_rows('userList_info')): the_row();

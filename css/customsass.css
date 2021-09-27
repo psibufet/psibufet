@@ -10683,6 +10683,10 @@ body a:hover {
   transition: ease 1s;
 }
 
+.getMarker--small .marker:after {
+  height: 6px;
+}
+
 @media (max-width: 767px) {
   .getMarker .marker:after {
     height: 7px;

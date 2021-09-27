@@ -285,7 +285,7 @@ $(document).ready(function() {
     });
 });
 
-/********** Partner page **********/
+/********** Recipe page **********/
 
 $(document).ready(function() {
     var recipesMenu = $('.recipesMenu__heading').find('.getMarker');
@@ -332,6 +332,69 @@ $(document).ready(function() {
         if($(recipesSafety).visible(true)){
             setTimeout(function(){
                 recipesSafety.addClass('init');
+            }, 500)
+        }
+    });
+});
+
+/********** How it works page **********/
+
+$(document).ready(function() {
+    var howVideo = $('.howVideo__heading').find('.getMarker');
+    var howInfo = $('.howInfo__heading').find('.getMarker');
+    var howPlan = $('.howPlan__heading').find('.getMarker');
+    var howUsers = $('.howUsers__heading').find('.getMarker');
+    var userInfo = $('.pbUserInfo__content').find('.getMarker');
+
+    if($(howVideo).visible(true)){
+        setTimeout(function(){
+            howVideo.addClass('init');
+        }, 500)
+    }
+    if($(howInfo).visible(true)){
+        setTimeout(function(){
+            howInfo.addClass('init');
+        }, 500)
+    }
+    if($(howPlan).visible(true)){
+        setTimeout(function(){
+            howPlan.addClass('init');
+        }, 500)
+    }
+    if($(howUsers).visible(true)){
+        setTimeout(function(){
+            howUsers.addClass('init');
+        }, 500)
+    }
+    if($(userInfo).visible(true)){
+        setTimeout(function(){
+            userInfo.addClass('init');
+        }, 500)
+    }
+    $(window).on('scroll', function(){
+        if($(howVideo).visible(true)){
+            setTimeout(function(){
+                howVideo.addClass('init');
+            }, 500)
+        }
+        if($(howInfo).visible(true)){
+            setTimeout(function(){
+                howInfo.addClass('init');
+            }, 500)
+        }
+        if($(howPlan).visible(true)){
+            setTimeout(function(){
+                howPlan.addClass('init');
+            }, 500)
+        }
+        if($(howUsers).visible(true)){
+            setTimeout(function(){
+                howUsers.addClass('init');
+            }, 500)
+        }
+        if($(userInfo).visible(true)){
+            setTimeout(function(){
+                userInfo.addClass('init');
             }, 500)
         }
     });
