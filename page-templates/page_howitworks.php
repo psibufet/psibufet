@@ -20,11 +20,16 @@ get_header(); ?>
             </div>
             <div class="howVideo__content">
                 <div class="video">
-                    <iframe width="100%" height="auto" src="https://www.youtube.com/embed/8tiFEWemZ5o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <?php
+                    $attr = array(
+                        'src'       => get_field('howVideo_video'),
+                        'poster'    => false,
+                    );
+                    echo wp_video_shortcode($attr); ?>
                 </div>
                 <div class="content">
-                    <h3 class="getMarker">Tak to <span class="marker">robimy</span>!</h3>
-                    <p>Zobacz jak powstaje karma, którą pokochały tysiące psów w całej Polsce!</p>
+                    <h3 class="getMarker getMarker--small"><?php the_field('howVideo_box_title'); ?></h3>
+                    <p><?php the_field('howVideo_box_content'); ?></p>
                 </div>
             </div>
             <div class="howVideo__cta">
@@ -60,7 +65,7 @@ get_header(); ?>
 
     <section class="howInfo">
         <div class="howInfo__heading">
-            <h2 class="getMarker">Pełna elastyczność - nowy wymiar <span class="marker">subskrypcji</span>.</h2>
+            <h2 class="getMarker">Pełna elastyczność - nowy wymiar <span class="marker">subskrypcji</span></h2>
         </div>
         <div class="howInfo__wrap">
             <div class="howInfo__phone">
@@ -171,14 +176,26 @@ get_header(); ?>
         </div>
         <div class="howUsers__list">
             <?php while(have_rows('userList')): the_row();
-                $video = get_sub_field('userList_video');
                 $owner = get_sub_field('userList_owner');
                 $dog = get_sub_field('userList_dog');
                 $desc = get_sub_field('userList_desc');
             ?>
             <div class="pbUserInfo">
                 <div class="pbUserInfo__video">
-                    <?php echo $video; ?>
+                    <div class="desktop">
+                        <?php
+                        $attrDesktop = array(
+                            'src'   => get_sub_field('userList_video'),
+                        );
+                        echo wp_video_shortcode($attrDesktop); ?>
+                    </div>
+                    <div class="mobile">
+                        <?php
+                        $attrMobile = array(
+                            'src'   => get_sub_field('userList_video_mobile'),
+                        );
+                        echo wp_video_shortcode($attrMobile); ?>
+                    </div>
                 </div>
                 <div class="pbUserInfo__content">
                     <h3 class="title getMarker getMarker--small"><span><?php echo $owner; ?></span><div>x</div><span class="marker"><?php echo $dog; ?></span></h3>
@@ -254,8 +271,36 @@ get_header(); ?>
 
     <section class="pbQuestions">
         <h2 class="pbQuestions__title getMarker">Masz <span class="marker">pytanie</span>?</h2>
-        <div class="pbQuestions__dog">
-            <img src="<?php echo get_template_directory_uri() . '/images/dogQuestion.svg'; ?>"/>
+        <div class="pbQuestions__wrap">
+            <div class="pbQuestions__images">
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_01.png'; ?>"/>
+                </div>
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_02.png'; ?>"/>
+                </div>
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_03.png'; ?>"/>
+                </div>
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_04.png'; ?>"/>
+                </div>
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_05.png'; ?>"/>
+                </div>
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_06.png'; ?>"/>
+                </div>
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_07.png'; ?>"/>
+                </div>
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_08.png'; ?>"/>
+                </div>
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_09.png'; ?>"/>
+                </div>
+            </div>
             <a href="" class="btn btn--clear"><span>Skontaktuj się z nami</span></a>
         </div>
     </section>

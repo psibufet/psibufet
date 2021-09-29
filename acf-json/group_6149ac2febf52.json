@@ -3,6 +3,79 @@
     "title": "Jak to działa new",
     "fields": [
         {
+            "key": "field_61546fa90d4cd",
+            "label": "Sekcja \"Jak to robimy?\"",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_61546fbe0d4ce",
+            "label": "Wideo",
+            "name": "howVideo_video",
+            "type": "file",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_61546fda3afab",
+            "label": "Box tytuł",
+            "name": "howVideo_box_title",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_61546feb3afac",
+            "label": "Box treść",
+            "name": "howVideo_box_content",
+            "type": "textarea",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": "br"
+        },
+        {
             "key": "field_6149ac3edeccd",
             "label": "Sekcja kroki",
             "name": "",
@@ -220,7 +293,7 @@
                     "key": "field_6149e6f197c1c",
                     "label": "Film wideo",
                     "name": "userList_video",
-                    "type": "oembed",
+                    "type": "file",
                     "instructions": "",
                     "required": 1,
                     "conditional_logic": 0,
@@ -229,8 +302,30 @@
                         "class": "",
                         "id": ""
                     },
-                    "width": "100%",
-                    "height": "auto"
+                    "return_format": "url",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_615473ee7f86c",
+                    "label": "Film wideo (mobile)",
+                    "name": "userList_video_mobile",
+                    "type": "file",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": ""
                 },
                 {
                     "key": "field_6149e72297c1d",
@@ -373,5 +468,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1632233381
+    "modified": 1632924664
 }

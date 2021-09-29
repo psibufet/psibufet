@@ -340,7 +340,7 @@ $(document).ready(function() {
 /********** How it works page **********/
 
 $(document).ready(function() {
-    var howVideo = $('.howVideo__heading').find('.getMarker');
+    var howVideo = $('.howVideo').find('.getMarker');
     var howInfo = $('.howInfo__heading').find('.getMarker');
     var howPlan = $('.howPlan__heading').find('.getMarker');
     var howUsers = $('.howUsers__heading').find('.getMarker');
