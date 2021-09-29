@@ -194,8 +194,36 @@ get_header(); ?>
 
     <section class="pbQuestions">
         <h2 class="pbQuestions__title getMarker">Masz <span class="marker">pytanie</span>?</h2>
-        <div class="pbQuestions__dog">
-            <img src="<?php echo get_template_directory_uri() . '/images/dogQuestion.svg'; ?>"/>
+        <div class="pbQuestions__wrap">
+            <div class="pbQuestions__images">
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_01.png'; ?>"/>
+                </div>
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_02.png'; ?>"/>
+                </div>
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_03.png'; ?>"/>
+                </div>
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_04.png'; ?>"/>
+                </div>
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_05.png'; ?>"/>
+                </div>
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_06.png'; ?>"/>
+                </div>
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_07.png'; ?>"/>
+                </div>
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_08.png'; ?>"/>
+                </div>
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_09.png'; ?>"/>
+                </div>
+            </div>
             <a href="" class="btn btn--clear"><span>Skontaktuj się z nami</span></a>
         </div>
     </section>
