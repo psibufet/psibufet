@@ -38,6 +38,25 @@
             "mime_types": ""
         },
         {
+            "key": "field_6156142b24c63",
+            "label": "Wideo mobile",
+            "name": "howVideo_video_mobile",
+            "type": "file",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_61546fda3afab",
             "label": "Box tytuł",
             "name": "howVideo_box_title",
@@ -468,5 +487,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1632924664
+    "modified": 1633031223
 }

@@ -109,6 +109,9 @@
                     display: none !important;
                 }
             }
+            &--mobile{
+                display: none;
+            }
         }
         .content{
             width: 360px;
@@ -166,11 +169,10 @@
         &__content{
             height: auto;
             flex-direction: column;
-            max-width: 770px;
+            max-width: 450px;
             margin: 0 auto;
 
             .video{
-                display: block;
                 width: 100%;
                 height: auto;
                 margin-bottom: 30px;
@@ -184,6 +186,13 @@
                         display: block;
                         width: 100% !important;
                     }
+                }
+
+                &--desktop{
+                    display: none;
+                }
+                &--mobile{
+                    display: block;
                 }
             }
             .content{

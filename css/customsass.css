@@ -5873,6 +5873,10 @@ body.admin-bar .foodModal__wrap {
   display: none !important;
 }
 
+.howVideo__content .video--mobile {
+  display: none;
+}
+
 .howVideo__content .content {
   width: 360px;
   height: inherit;
@@ -5929,11 +5933,10 @@ body.admin-bar .foodModal__wrap {
   .howVideo__content {
     height: auto;
     flex-direction: column;
-    max-width: 770px;
+    max-width: 450px;
     margin: 0 auto;
   }
   .howVideo__content .video {
-    display: block;
     width: 100%;
     height: auto;
     margin-bottom: 30px;
@@ -5946,6 +5949,12 @@ body.admin-bar .foodModal__wrap {
   .howVideo__content .video .wp-video .mejs-video {
     display: block;
     width: 100% !important;
+  }
+  .howVideo__content .video--desktop {
+    display: none;
+  }
+  .howVideo__content .video--mobile {
+    display: block;
   }
   .howVideo__content .content {
     width: 100%;

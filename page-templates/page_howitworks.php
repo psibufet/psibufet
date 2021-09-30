@@ -19,10 +19,18 @@ get_header(); ?>
                 <h2 class="getMarker">Jak to <span class="marker">działa?</span></h2>
             </div>
             <div class="howVideo__content">
-                <div class="video">
+                <div class="video video--desktop">
                     <?php
                     $attr = array(
                         'src'       => get_field('howVideo_video'),
+                        'poster'    => false,
+                    );
+                    echo wp_video_shortcode($attr); ?>
+                </div>
+                <div class="video video--mobile">
+                    <?php
+                    $attr = array(
+                        'src'       => get_field('howVideo_video_mobile'),
                         'poster'    => false,
                     );
                     echo wp_video_shortcode($attr); ?>
