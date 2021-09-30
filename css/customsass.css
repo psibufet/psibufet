@@ -5792,7 +5792,7 @@ body.admin-bar .foodModal__wrap {
   line-height: 30px;
   color: #fff;
   text-align: center;
-  max-width: 380px;
+  max-width: 450px;
   margin: 0 auto;
   text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
 }
@@ -5815,6 +5815,12 @@ body.admin-bar .foodModal__wrap {
   .howHeading__wrap p {
     font-size: 20px;
     line-height: 24px;
+  }
+}
+
+@media (max-width: 450px) {
+  .howHeading {
+    background-image: url("/wp-content/themes/psibufet/images/howitworks_new/howHeader_mobile_small.png");
   }
 }
 
@@ -5856,9 +5862,11 @@ body.admin-bar .foodModal__wrap {
   width: 100% !important;
 }
 
-.howVideo__content .video .wp-video .mejs-video {
-  height: inherit !important;
-  width: 100% !important;
+@media (min-width: 992px) {
+  .howVideo__content .video .wp-video .mejs-video {
+    height: inherit !important;
+    width: 100% !important;
+  }
 }
 
 .howVideo__content .video .wp-video .mejs-controls {
@@ -5925,9 +5933,19 @@ body.admin-bar .foodModal__wrap {
     margin: 0 auto;
   }
   .howVideo__content .video {
+    display: block;
     width: 100%;
-    height: 430px;
+    height: auto;
     margin-bottom: 30px;
+  }
+  .howVideo__content .video .wp-video {
+    display: block;
+    height: auto;
+    width: 100% !important;
+  }
+  .howVideo__content .video .wp-video .mejs-video {
+    display: block;
+    width: 100% !important;
   }
   .howVideo__content .content {
     width: 100%;

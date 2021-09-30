@@ -29,7 +29,7 @@
             line-height: 30px;
             color: #fff;
             text-align: center;
-            max-width: 380px;
+            max-width: 450px;
             margin: 0 auto;
             text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
         }
@@ -57,6 +57,11 @@
                 line-height: 24px;
             }
         }
+    }
+}
+@media (max-width: 450px){
+    .howHeading{
+        background-image: url('/wp-content/themes/psibufet/images/howitworks_new/howHeader_mobile_small.png');
     }
 }
 
@@ -94,9 +99,11 @@
                 height: inherit;
                 width: 100% !important;
 
-                .mejs-video{
-                    height: inherit !important;
-                    width: 100% !important
+                @media (min-width: 992px){
+                    .mejs-video{
+                        height: inherit !important;
+                        width: 100% !important;
+                    }   
                 }
                 .mejs-controls{
                     display: none !important;
@@ -163,9 +170,21 @@
             margin: 0 auto;
 
             .video{
+                display: block;
                 width: 100%;
-                height: 430px;
+                height: auto;
                 margin-bottom: 30px;
+
+                .wp-video{
+                    display: block;
+                    height: auto;
+                    width: 100% !important;
+
+                    .mejs-video{
+                        display: block;
+                        width: 100% !important;
+                    }
+                }
             }
             .content{
                 width: 100%;

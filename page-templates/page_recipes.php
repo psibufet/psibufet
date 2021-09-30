@@ -9,7 +9,7 @@ get_header(); ?>
     <section class="recipesHeading">
         <div class="recipesHeading__wrap container">
             <h1>Nasze przepisy</h1>
-            <p>Przepisy przygotowany przez dietetyka zwierzęcego na bazie świeżych składniki od starannie wyselekcjonowanych dostawców.</p>
+            <p>Wyselekcjonowani dostawcy. Świeże składniki. Ekspercka wiedza.</p>
         </div>
     </section>
 
@@ -88,7 +88,7 @@ get_header(); ?>
                     <p class="name"><span>dr inż.</span> Olga Lasek</p>
                 </div>
                 <div class="content">
-                    <p><b>Absolwentka Wydziału Hodowli i Biologii Zwierząt Uniwersytetu Rolniczego</b> w Krakowie. Pracuje na stanowisku asystenta, nauczyciela akademickiego w Katedrze Żywienia Zwierząt i Paszoznawstwa UR Kraków. <b>Specjalizuje się w żywieniu zwierząt</b> monogastrycznych psów, kotów, drobiu i ptaków ozdobnych, a co się z tym wiąże, <b>prowadzi liczne badania naukowe</b> dotyczące wymienionych zagadnień.</p>
+                    <p>Nasze posiłki powstały we współpracy z <b>dr inż. Olgą Lasek</b> – nauczycielką akademicką w <b>Katedrze Żywienia, Biotechnologii Zwierząt i Rybactwa, Uniwersytetu Rolniczego w Krakowie</b>. Jej specjalizacja w żywieniu zwierząt – poparta licznymi prowadzonymi przez nią badaniami na ten temat – sprawia, że karmy PsiBufet <b>to pewny wybór dla Twojego pupila</b>.</p>
                 </div>
             </div>
         </div>
@@ -127,7 +127,7 @@ get_header(); ?>
                 <img src="<?php the_field('safetyImage'); ?>"/>
             </div>
             <div class="recipesSafety__content">
-                <h2 class="getMarker">Nasze jedzenie spełnia <br/>najwyższe <span class="marker">standardy</span> bezpieczeństwa</h2>
+                <h2 class="getMarker">Spełniamy najwyższe <span class="marker">standardy</span> bezpieczeństwa</h2>
                 <div class="boxes">
                     <?php while(have_rows('safetyBoxes')): the_row();
                         $icon = get_sub_field('safetyBoxes_icon');

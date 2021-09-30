@@ -8,8 +8,8 @@ get_header(); ?>
 
     <section class="howHeading">
         <div class="howHeading__wrap">
-            <h1>Jak to działa</h1>
-            <p>Świeże posiłki. Indywidualny plan.<br/>Dostawa pod same drzwi.<br/>Radość psa gwarantowana.</p>
+            <h1>Dlaczego PsiBufet</h1>
+            <p>Dopasowana dieta. Najlepsze składniki.<br/>Dostawa pod same drzwi.</p>
         </div>
     </section>
 
@@ -33,7 +33,7 @@ get_header(); ?>
                 </div>
             </div>
             <div class="howVideo__cta">
-                <a href="https://zamowienie.psibufet.pl/" class="btn"><span>Wypróbuj</span></a>
+                <a href="https://zamowienie.psibufet.pl/" class="btn"><span>Sprawdź</span></a>
             </div>
         </div>
     </section>
@@ -135,7 +135,7 @@ get_header(); ?>
                         </div>
                         <div class="content__content">
                             <div class="text">
-                                <p>Pokryje około <b>60% zapotrzebowania kalorycznego</b> Twojego psa.</p>
+                                <p>Pokrywa około <b>60% zapotrzebowania kalorycznego</b> Twojego psa.</p>
                                 <p>Opcja dla wszystkich właścicieli psów, którzy chcą łączyć PsiBufet z inna karmą, a także z ulubionymi smaczkami.</p>
                                 <p><b>Plan nie gwarantuje dostarczenia pupilowi wszystkich niezbędnych kalorii, witamin oraz składników odżywczych.</b></p>
                             </div>
@@ -158,7 +158,7 @@ get_header(); ?>
                 </div>
             </div>
             <div class="howPlan__cta">
-                <a href="https://zamowienie.psibufet.pl/" class="btn"><span>Wypróbuj</span></a>
+                <a href="https://zamowienie.psibufet.pl/" class="btn"><span>Wybierz</span></a>
             </div>
             <div class="howPlan__delivery">
                 <div class="image">
