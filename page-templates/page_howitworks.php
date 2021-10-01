@@ -66,7 +66,7 @@ get_header(); ?>
             <?php endwhile; ?>
         </div>
         <div class="howSteps__cta">
-            <a href="https://zamowienie.psibufet.pl/" class="btn"><span>Wypróbuj</span></a>
+            <a href="https://zamowienie.psibufet.pl/" class="btn"><span>Przekonaj się</span></a>
         </div>
     </section>
     <?php endif; ?>
@@ -309,7 +309,7 @@ get_header(); ?>
                     <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_09.png'; ?>"/>
                 </div>
             </div>
-            <a href="" class="btn btn--clear"><span>Skontaktuj się z nami</span></a>
+            <a href="https://psibufet.pl/kontakt" class="btn btn--clear"><span>Skontaktuj się z nami</span></a>
         </div>
     </section>
 

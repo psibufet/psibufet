@@ -104,12 +104,11 @@ get_header(); ?>
                 <?php
                 while( have_rows('recipesParts') ): the_row();
                     $image = get_sub_field('recipesParts_image');
-                    $color = get_sub_field('recipesParts_color');
                     $name = get_sub_field('recipesParts_name');
                     $content = get_sub_field('recipesParts_content');
                 ?>
                 <div class="recipesParts__box">
-                    <div class="image" style="background-color: <?php echo $color ?>33">
+                    <div class="image">
                         <img src="<?php echo $image; ?>" class="no-lazyload"/>
                     </div>
                     <div class="content">
@@ -224,7 +223,7 @@ get_header(); ?>
                     <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_09.png'; ?>"/>
                 </div>
             </div>
-            <a href="" class="btn btn--clear"><span>Skontaktuj się z nami</span></a>
+            <a href="https://psibufet.pl/kontakt" class="btn btn--clear"><span>Skontaktuj się z nami</span></a>
         </div>
     </section>
 

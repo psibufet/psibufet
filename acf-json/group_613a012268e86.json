@@ -105,21 +105,6 @@
                     "mime_types": ""
                 },
                 {
-                    "key": "field_615178c0a2b0c",
-                    "label": "Kolor tła",
-                    "name": "recipesParts_color",
-                    "type": "color_picker",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": ""
-                },
-                {
                     "key": "field_613a18fe9d61e",
                     "label": "Nazwa",
                     "name": "recipesParts_name",
@@ -281,5 +266,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1632729317
+    "modified": 1633075720
 }
