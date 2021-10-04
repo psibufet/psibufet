@@ -1,3 +1,17 @@
+/**
+ * Get URL param
+ */
+ function GetURLParameter(sParam){
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++){
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam){
+            return sParameterName[1];
+        }
+    }
+}    
+
 /*********** MENU MOBILE *************/
 
 $(document).mouseup(function(e){
@@ -291,6 +305,9 @@ $(document).ready(function(){
     var pricezl_promo = $('.pricingContent__option[type="' + defaultType + '"]').attr('promotion_price_zl');
     var pricegr_promo = $('.pricingContent__option[type="' + defaultType + '"]').attr('promotion_price_gr');
 
+    var code = GetURLParameter('code');
+    var amount = GetURLParameter('amount');
+
     if(!$('.pricingContent').hasClass('pricingContent--promotion')){
         $('.pricingContent__info').find('span.value').html(pricezl + '<span>' + pricegr + '</span> zł');
         $('.pricingContent__info').find('.portion').find('.value').text(portion + ' g');
@@ -308,9 +325,22 @@ $(document).ready(function(){
             $('.pricingContent__info').find('.portion').find('.value').text(portion + ' g');
         });
     }else{
-        $('.pricingContent__info').find('.drop').find('span.value').html(pricezl + '<span>' + pricegr + '</span> zł');
-        $('.pricingContent__info').find('.price').find('span.value').html(pricezl_promo + '<span>' + pricegr_promo + '</span> zł');
-        $('.pricingContent__info').find('.portion').find('.value').text(portion + ' g');
+        if(code !== undefined && amount !== undefined){
+            var discountGet = GetURLParameter('amount');
+            var priceGet = parseFloat(pricezl_promo + '.' + pricegr_promo);
+            var discount = priceGet * discountGet / 100;
+        
+            var price_full = priceGet - discount;
+            var price = price_full.toFixed(2).split('.');
+
+            $('.pricingContent__info').find('.drop').find('span.value').html(pricezl_promo + '<span>' + pricegr_promo + '</span> zł');
+            $('.pricingContent__info').find('.price').find('span.value').html(price[0] + '<span>' + price[1] + '</span> zł');
+            $('.pricingContent__info').find('.portion').find('.value').text(portion + ' g');
+        }else{
+            $('.pricingContent__info').find('.drop').find('span.value').html(pricezl + '<span>' + pricegr + '</span> zł');
+            $('.pricingContent__info').find('.price').find('span.value').html(pricezl_promo + '<span>' + pricegr_promo + '</span> zł');
+            $('.pricingContent__info').find('.portion').find('.value').text(portion + ' g');
+        }
 
         $('.pricingContent__option').on('click', function(){
             var type = $(this).attr('type');
@@ -324,9 +354,22 @@ $(document).ready(function(){
             $(this).parent().attr('type', type);
             $(this).parent().parent().find('.pricingContent__info').attr('type', type);
 
-            $('.pricingContent__info').find('.drop').find('span.value').html(pricezl + '<span>' + pricegr + '</span> zł');
-            $('.pricingContent__info').find('.price').find('span.value').html(pricezl_promo + '<span>' + pricegr_promo + '</span> zł');
-            $('.pricingContent__info').find('.portion').find('.value').text(portion + ' g');
+            if(code !== undefined && amount !== undefined){
+                var discountGet = GetURLParameter('amount');
+                var priceGet = parseFloat(pricezl_promo + '.' + pricegr_promo);
+                var discount = priceGet * discountGet / 100;
+            
+                var price_full = priceGet - discount;
+                var price = price_full.toFixed(2).split('.');
+
+                $('.pricingContent__info').find('.drop').find('span.value').html(pricezl_promo + '<span>' + pricegr_promo + '</span> zł');
+                $('.pricingContent__info').find('.price').find('span.value').html(price[0] + '<span>' + price[1] + '</span> zł');
+                $('.pricingContent__info').find('.portion').find('.value').text(portion + ' g');
+            }else{
+                $('.pricingContent__info').find('.drop').find('span.value').html(pricezl + '<span>' + pricegr + '</span> zł');
+                $('.pricingContent__info').find('.price').find('span.value').html(pricezl_promo + '<span>' + pricegr_promo + '</span> zł');
+                $('.pricingContent__info').find('.portion').find('.value').text(portion + ' g');
+            }
         });
     }
 });
@@ -760,18 +803,7 @@ $(document).mouseup(function(e){
 
 /************** PROMOCODE ***************/
 
-$(document).ready(function() {
-    function GetURLParameter(sParam){
-        var sPageURL = window.location.search.substring(1);
-        var sURLVariables = sPageURL.split('&');
-        for (var i = 0; i < sURLVariables.length; i++){
-            var sParameterName = sURLVariables[i].split('=');
-            if (sParameterName[0] == sParam){
-                return sParameterName[1];
-            }
-        }
-    }    
-    
+$(document).ready(function() {    
     var code = GetURLParameter('code');
     var type = GetURLParameter('type');
     var amount = GetURLParameter('amount');
