@@ -306,7 +306,6 @@ $(document).ready(function(){
     var pricegr_promo = $('.pricingContent__option[type="' + defaultType + '"]').attr('promotion_price_gr');
 
     var code = GetURLParameter('code');
-    var amount = GetURLParameter('amount');
 
     if(!$('.pricingContent').hasClass('pricingContent--promotion')){
         $('.pricingContent__info').find('span.value').html(pricezl + '<span>' + pricegr + '</span> zł');
@@ -325,17 +324,25 @@ $(document).ready(function(){
             $('.pricingContent__info').find('.portion').find('.value').text(portion + ' g');
         });
     }else{
-        if(code !== undefined && amount !== undefined){
-            var discountGet = GetURLParameter('amount');
-            var priceGet = parseFloat(pricezl_promo + '.' + pricegr_promo);
-            var discount = priceGet * discountGet / 100;
-        
-            var price_full = priceGet - discount;
-            var price = price_full.toFixed(2).split('.');
+        if(code !== undefined){
+            $.ajax({
+                url:'https://app.psibufet.pl/api/order/couponcode/' + code,
+                
+                success: function(){
+                    $.getJSON("https://app.psibufet.pl/api/order/couponcode/" + code, function (data) {
+                        var discountGet = data.amount;
+                        var priceGet = parseFloat(pricezl_promo + '.' + pricegr_promo);
+                        var discount = priceGet * discountGet / 100;
+                    
+                        var price_full = priceGet - discount;
+                        var price = price_full.toFixed(2).split('.');
 
-            $('.pricingContent__info').find('.drop').find('span.value').html(pricezl_promo + '<span>' + pricegr_promo + '</span> zł');
-            $('.pricingContent__info').find('.price').find('span.value').html(price[0] + '<span>' + price[1] + '</span> zł');
-            $('.pricingContent__info').find('.portion').find('.value').text(portion + ' g');
+                        $('.pricingContent__info').find('.drop').find('span.value').html(pricezl_promo + '<span>' + pricegr_promo + '</span> zł');
+                        $('.pricingContent__info').find('.price').find('span.value').html(price[0] + '<span>' + price[1] + '</span> zł');
+                        $('.pricingContent__info').find('.portion').find('.value').text(portion + ' g');
+                    });
+                }
+            });
         }else{
             $('.pricingContent__info').find('.drop').find('span.value').html(pricezl + '<span>' + pricegr + '</span> zł');
             $('.pricingContent__info').find('.price').find('span.value').html(pricezl_promo + '<span>' + pricegr_promo + '</span> zł');
@@ -354,17 +361,25 @@ $(document).ready(function(){
             $(this).parent().attr('type', type);
             $(this).parent().parent().find('.pricingContent__info').attr('type', type);
 
-            if(code !== undefined && amount !== undefined){
-                var discountGet = GetURLParameter('amount');
-                var priceGet = parseFloat(pricezl_promo + '.' + pricegr_promo);
-                var discount = priceGet * discountGet / 100;
-            
-                var price_full = priceGet - discount;
-                var price = price_full.toFixed(2).split('.');
+            if(code !== undefined){
+                $.ajax({
+                    url:'https://app.psibufet.pl/api/order/couponcode/' + code,
+                    
+                    success: function(){
+                        $.getJSON("https://app.psibufet.pl/api/order/couponcode/" + code, function (data) {
+                            var discountGet = data.amount;
+                            var priceGet = parseFloat(pricezl_promo + '.' + pricegr_promo);
+                            var discount = priceGet * discountGet / 100;
+                        
+                            var price_full = priceGet - discount;
+                            var price = price_full.toFixed(2).split('.');
 
-                $('.pricingContent__info').find('.drop').find('span.value').html(pricezl_promo + '<span>' + pricegr_promo + '</span> zł');
-                $('.pricingContent__info').find('.price').find('span.value').html(price[0] + '<span>' + price[1] + '</span> zł');
-                $('.pricingContent__info').find('.portion').find('.value').text(portion + ' g');
+                            $('.pricingContent__info').find('.drop').find('span.value').html(pricezl_promo + '<span>' + pricegr_promo + '</span> zł');
+                            $('.pricingContent__info').find('.price').find('span.value').html(price[0] + '<span>' + price[1] + '</span> zł');
+                            $('.pricingContent__info').find('.portion').find('.value').text(portion + ' g');
+                        });
+                    }
+                });
             }else{
                 $('.pricingContent__info').find('.drop').find('span.value').html(pricezl + '<span>' + pricegr + '</span> zł');
                 $('.pricingContent__info').find('.price').find('span.value').html(pricezl_promo + '<span>' + pricegr_promo + '</span> zł');
