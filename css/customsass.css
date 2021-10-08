@@ -11126,6 +11126,9 @@ body.admin-bar .pageSerwis {
 }
 
 @media (max-width: 767px) {
+  .meetMakers {
+    margin-bottom: 40px;
+  }
   .meetMakers__wrap > img {
     display: none;
   }
@@ -11136,7 +11139,7 @@ body.admin-bar .pageSerwis {
     list-style-type: none;
     padding-left: 0;
     position: absolute;
-    bottom: 126px;
+    bottom: 80px;
     left: 50%;
     transform: translate(-50%, 0);
   }
@@ -11166,7 +11169,7 @@ body.admin-bar .pageSerwis {
     height: 30px;
     width: 30px;
     position: relative;
-    top: -470px;
+    top: -426px;
     font-size: 0;
     outline: none !important;
   }
@@ -11181,7 +11184,7 @@ body.admin-bar .pageSerwis {
   }
   .meetMakers__content {
     position: absolute;
-    bottom: 12px;
+    bottom: -48px;
   }
   .meetMakers__content .box {
     max-width: 326px;
