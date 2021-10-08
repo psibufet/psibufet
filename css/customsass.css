@@ -10737,7 +10737,7 @@ body.admin-bar .pageSerwis {
 }
 
 .bookContent__image .gratis {
-  max-width: 255px;
+  max-width: calc(100% - 67.6%);
   position: absolute;
   left: 0;
   right: 0;
@@ -10957,6 +10957,7 @@ body.admin-bar .pageSerwis {
   top: 30px;
   left: 0;
   right: 0;
+  z-index: 1;
 }
 
 .meetMakers__wrap img {
@@ -11128,12 +11129,45 @@ body.admin-bar .pageSerwis {
   .meetMakers__wrap > img {
     display: none;
   }
+  .meetMakers__wrap .slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    padding-left: 0;
+  }
+  .meetMakers__wrap .slick-dots li {
+    margin-right: 6px;
+  }
+  .meetMakers__wrap .slick-dots li button {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    font-size: 0;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.2);
+    border: transparent;
+    outline: none;
+  }
+  .meetMakers__wrap .slick-dots li:nth-last-of-type(1) {
+    margin-right: 0;
+  }
+  .meetMakers__wrap .slick-dots .slick-active button {
+    background-color: #f15748;
+  }
   .meetMakers__images {
     display: block;
   }
   .meetMakers__content {
     position: relative;
     bottom: auto;
+    margin-bottom: 32px;
+  }
+  .meetMakers__content .box {
+    max-width: 326px;
+  }
+  .meetMakers__content .slick-dots {
+    display: none !important;
   }
 }
 

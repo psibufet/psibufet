@@ -45,15 +45,24 @@ $(document).ready(function(){
 
 
 //book slider
-
 $(document).ready(function() {
-    $('.mobileSlider').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: true,
-        dots: true,
-        appendDots: $('.bookDots'),
-        prevArrow: $('.bookArrow'),
-        nextArrow: $('.bookArrow'),
-    })
-});
+    if($(window).width() < 768){
+        $('.meetMakers__images').slick({
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            centerMode: true,
+            variableWidth: true,
+            asNavFor: ".meetMakers__content",
+        });
+        $('.meetMakers__content').slick({
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            arrows: false,
+            dots: true,
+            centerMode: true,
+            variableWidth: true,
+            asNavFor: ".meetMakers__images",
+        });
+    }
+})
