@@ -58,7 +58,7 @@ $(document).ready(function() {
         $('.meetMakers__content').slick({
             slidesToScroll: 1,
             slidesToShow: 1,
-            arrows: false,
+            arrows: true,
             dots: true,
             centerMode: true,
             variableWidth: true,
