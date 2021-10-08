@@ -42,3 +42,18 @@ $(document).ready(function(){
         });
     }
 });
+
+
+//book slider
+
+$(document).ready(function() {
+    $('.mobileSlider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: true,
+        appendDots: $('.bookDots'),
+        prevArrow: $('.bookArrow'),
+        nextArrow: $('.bookArrow'),
+    })
+});

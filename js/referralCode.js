@@ -33,6 +33,7 @@ $(document).ready(function(){
 					'program-partnerski',
 					'kalkulator',
 					'serwis',
+					'ksiazka',
 				];
 
     if (typeof sPageURL === 'undefined'){

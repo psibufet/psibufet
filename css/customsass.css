@@ -10661,6 +10661,362 @@ body.admin-bar .pageSerwis {
   }
 }
 
+.book__header {
+  background-image: url("/wp-content/themes/psibufet/images/book/header_bg.png");
+  background-repeat: no-repeat;
+  height: 402px;
+  background-size: cover;
+}
+
+.book__header__wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.book__header__wrap h1 {
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 72px;
+  color: #000;
+  font-family: "Bebas Neue", sans-serif;
+  margin-top: 142px;
+}
+
+.book__header__wrap p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 29px;
+}
+
+@media (max-width: 991px) {
+  .book__header__wrap h1 {
+    margin-top: 31px;
+    font-size: 48px;
+    line-height: 58px;
+  }
+  .book__header__wrap p {
+    font-size: 19px;
+    line-height: 23px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .book__header {
+    background-image: url("/wp-content/themes/psibufet/images/book/mobile_header_bg.png");
+    height: 524px;
+  }
+  .book__header__wrap h1 {
+    font-size: 48px;
+    line-height: 58px;
+    font-weight: 400;
+    text-align: center;
+  }
+}
+
+.book__content__header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book__content__header p {
+  width: 603px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.book__content__header p .bold {
+  font-weight: 700;
+}
+
+.book__content .book__price {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 0 auto;
+  width: max-content;
+}
+
+.book__content .book__price__cost {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.02em;
+  font-size: 26px;
+  line-height: 21px;
+  font-weight: 400;
+  width: max-content;
+}
+
+.book__content .book__price__cost img {
+  height: 11px;
+  width: 16px;
+}
+
+.book__content .book__price__cost span {
+  position: relative;
+  top: -8px;
+  font-size: 16px;
+}
+
+.book__content .book__price__free {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.02em;
+  font-size: 32px;
+  line-height: 26px;
+  font-weight: 400;
+  width: max-content;
+}
+
+.book__content .book__price__free span {
+  color: #f15748;
+  font-size: 40px;
+}
+
+.book__content .book__price__free img {
+  height: 11px;
+  width: 16px;
+}
+
+.book__content .freeBook {
+  width: 340px;
+  height: 56px;
+  margin: 50px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book__content .freeBook span {
+  font-size: 25px;
+  line-height: 29px;
+}
+
+.book__content .buyBook {
+  padding-top: 18px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  text-decoration: underline;
+  color: #000;
+  width: max-content;
+  margin: 0 auto;
+  display: block;
+}
+
+.book__content .book__description {
+  margin-top: 35px;
+  text-align: justify;
+  display: flex;
+  justify-content: center;
+}
+
+.book__content .book__description p {
+  width: 850px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.book__content .book__description p .inner {
+  margin-bottom: 5px;
+  font-size: 18px;
+  line-height: 36px;
+  font-weight: 400;
+}
+
+.book__content .book__description p .inner .bold {
+  font-weight: 700;
+  line-height: 26px;
+}
+
+@media (max-width: 768px) {
+  .book__content__header h2 {
+    font-size: 36px;
+    line-height: 43px;
+  }
+  .book__content__header p {
+    width: auto;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .book__content .book__price__cost {
+    font-size: 18px;
+    line-height: 19px;
+  }
+  .book__content .book__price__cost img {
+    height: 12px;
+    width: 8px;
+  }
+  .book__content .book__price__cost span {
+    top: -4px;
+    font-size: 10px;
+  }
+  .book__content .book__price__free {
+    font-size: 20px;
+    line-height: 19px;
+  }
+  .book__content .book__price__free span {
+    color: #f15748;
+    font-size: 26px;
+  }
+  .book__content .book__price__free img {
+    height: 12px;
+    width: 8px;
+  }
+  .book__content .freeBook {
+    width: 280px;
+    height: 46px;
+    margin: 36px auto 0;
+  }
+  .book__content .freeBook span {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .book__content .buyBook {
+    padding-top: 12px;
+    font-size: 12px;
+  }
+  .book__content .book__description p {
+    width: auto;
+  }
+  .book__content .book__description p .inner {
+    font-size: 14px;
+    line-height: 25px;
+  }
+  .book__content .book__description p .inner .bold {
+    line-height: 18px;
+  }
+}
+
+.meetMakers {
+  background-image: url("/wp-content/themes/psibufet/images/book/autorzy_razem.png");
+  background-repeat: no-repeat;
+  height: 1023px;
+  background-size: 100% 100%;
+  position: relative;
+  padding: 32px 0;
+}
+
+.meetMakers .pbShortcuts {
+  padding-bottom: 0;
+}
+
+.meetMakers .desktopMakers {
+  display: block;
+}
+
+.meetMakers .makers {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.meetMakers .makers .box {
+  text-align: center;
+  width: 420px;
+  height: 125px;
+}
+
+.meetMakers .makers .box:nth-of-type(1) {
+  margin-left: 30px;
+}
+
+.meetMakers .makers .box:nth-of-type(2) {
+  margin: 0 60px;
+}
+
+.meetMakers .makers .box:nth-of-type(3) {
+  margin-right: 30px;
+}
+
+.meetMakers .makers .box__title h3 {
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.meetMakers .makers .box__desc p {
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.meetMakers .mobileSlider, .meetMakers .bookPagination {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .meetMakers {
+    background-size: auto 100%;
+  }
+  .meetMakers .desktopMakers {
+    display: none;
+  }
+  .meetMakers .makers .box {
+    width: 326px;
+    height: auto;
+  }
+  .meetMakers .makers .box:nth-of-type(1) {
+    margin-left: 0;
+  }
+  .meetMakers .makers .box:nth-of-type(2) {
+    margin: 0;
+  }
+  .meetMakers .makers .box:nth-of-type(3) {
+    margin-right: 0;
+  }
+  .meetMakers .makers .box__title h3 {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .meetMakers .makers .box__desc p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .meetMakers .mobileSlider, .meetMakers .bookPagination {
+    display: block;
+  }
+}
+
+.book__library {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.book__library .pbShortcuts {
+  padding: 32px 0;
+}
+
+.book__library .book__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book__library .book__box__img {
+  margin-right: 55px;
+}
+
+.book__library .book__box__img:nth-last-of-type(1) {
+  margin-right: 0;
+}
+
+@media (max-width: 768px) {
+  .book__library .book__box__img {
+    margin-right: 32px;
+  }
+}
+
 /*  Global
 --------------- */
 .homeHeader:after {
