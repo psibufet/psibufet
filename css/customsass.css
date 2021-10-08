@@ -10899,7 +10899,7 @@ body.admin-bar .pageSerwis {
   background-image: url("/wp-content/themes/psibufet/images/book/autorzy_razem.png");
   background-repeat: no-repeat;
   height: 1023px;
-  background-size: 100% 100%;
+  background-size: cover;
   position: relative;
   padding: 32px 0;
 }
@@ -10915,9 +10915,10 @@ body.admin-bar .pageSerwis {
 .meetMakers .makers {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 100%;
   position: absolute;
-  bottom: 0;
+  bottom: 20px;
 }
 
 .meetMakers .makers .box {
