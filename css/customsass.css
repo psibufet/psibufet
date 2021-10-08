@@ -10698,16 +10698,23 @@ body.admin-bar .pageSerwis {
     height: 524px;
   }
   .book__header__wrap h1 {
-    font-size: 48px;
-    line-height: 58px;
     font-weight: 400;
     text-align: center;
     margin-top: 31px;
   }
   .book__header__wrap p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 575px) {
+  .book__header__wrap h1 {
+    font-size: 48px;
+    line-height: 58px;
+  }
+  .book__header__wrap p {
     font-size: 19px;
     line-height: 23px;
-    text-align: center;
   }
 }
 

@@ -34,17 +34,27 @@
 
         &__wrap {
             h1 {
-                font-size: 48px;
-                line-height: 58px;
                 font-weight: 400;
                 text-align: center;
                 margin-top: 31px;
             }
 
             p {
+                text-align: center;
+            }
+        }
+    }
+
+    @media(max-width: 575px) {
+        &__wrap {
+            h1 {
+                font-size: 48px;
+                line-height: 58px;
+            }
+
+            p {
                 font-size: 19px;
                 line-height: 23px;
-                text-align: center;
             }
         }
     }
