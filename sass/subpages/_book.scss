@@ -30,13 +30,14 @@
 
     @media(max-width: 768px) {
         background-image: url("/wp-content/themes/psibufet/images/book/medium_header_bg.png");
-        height: 524px;
+        background-position: left;
+        height: 525px;
 
         &__wrap {
             h1 {
                 font-weight: 400;
                 text-align: center;
-                margin-top: 31px;
+                margin: 30px 0 15px;
             }
 
             p {
@@ -46,13 +47,15 @@
     }
 
     @media(max-width: 575px) {
-        &__wrap {
-            h1 {
+        &__wrap{
+            max-width: 340px;
+            margin: 0 auto;
+
+            h1{
                 font-size: 48px;
                 line-height: 58px;
             }
-
-            p {
+            p{
                 font-size: 19px;
                 line-height: 23px;
             }
@@ -64,6 +67,24 @@
     }
 }
 
+.bookContent{
+    &__image{
+        text-align: center;
+        padding: 30px 0 0;
+        margin: 70px 0 0;
+        position: relative;
+
+        .gratis{
+            max-width: 255px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            margin: 0 auto;
+        }
+    }
+}
+
 .book__content {
 
     &__header {
@@ -71,13 +92,25 @@
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        margin: 25px 0 50px;
 
+        h2{
+            font-size: 41px;
+            line-height: 49px;
+            font-weight: 400;
+            font-family: "Bebas Neue", sans-serif;
+            color: #000;
+            text-align: center;
+            margin: 0 auto 22px;
+        }
         p {
-            width: 603px;
+            width: 100%;
+            max-width: 600px;
             text-align: center;
             font-weight: 400;
             font-size: 20px;
             line-height: 26px;
+            margin: 0;
 
             .bold {
                 font-weight: 700;
@@ -104,6 +137,7 @@
             img {
                 height: 11px;
                 width: 16px;
+                transform: rotate(-90deg);
             }
 
             span {
@@ -129,6 +163,7 @@
             img {
                 height: 11px;
                 width: 16px;
+                transform: rotate(-90deg);
             }
         }
     }
@@ -160,42 +195,40 @@
     }
 
     .book__description {
-        margin-top: 35px;
-        text-align: justify;
-        display: flex;
-        justify-content: center;
+        margin: 35px auto 40px;
+        max-width: 850px;
 
-        p {
-            width: 850px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+        p{
+            font-size: 18px;
+            line-height: 26px;
+            color: #000;
+            font-weight: 400;
+            margin: 0 0 10px;
 
-            .inner {
-                margin-bottom: 10px;
-                font-size: 18px;
-                line-height: 26px;
-                font-weight: 400;
+            &:last-of-type{
+                margin: 0;
+            }
 
-                .bold {
-                    font-weight: 700;
-                    line-height: 26px;
-                }
+            b{
+                font-weight: 600;
             }
         }
     }
 
-    @media(max-width: 768px) {
-        &__header {
-            h2 {
+    @media (max-width: 767px) {
+        &__header{
+            h2{
                 font-size: 36px;
                 line-height: 43px;
+                max-width: 300px;
+                margin: 0 auto 15px;
             }
-
-            p {
+            p{
                 width: auto;
                 font-size: 14px;
                 line-height: 18px;
+                max-width: 320px;
+                margin: 0 auto;
             }
         }
 
@@ -265,12 +298,61 @@
 }
 
 .meetMakers {
-    background-image: url("/wp-content/themes/psibufet/images/book/autorzy_razem.png");
-    background-repeat: no-repeat;
-    height: 1023px;
-    background-size: cover;
     position: relative;
-    padding: 32px 0;
+
+    &__wrap{
+        position: relative;
+        
+        h2{
+            font-size: 41px;
+            line-height: 49px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: 400;
+            color: #000;
+            margin: 0 auto;
+            text-align: center;
+            position: absolute;
+            top: 30px;
+            left: 0;
+            right: 0;
+        }
+        img{
+            width: 100%;
+        }
+    }
+    &__images{
+        display: none;
+    }
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+
+        .box{
+            width: 100%;
+            max-width: 420px;
+
+            &__title{
+                font-size: 20px;
+                line-height: 26px;
+                font-weight: 600;
+                text-align: center;
+                color: #000;
+                margin: 0 0 15px;
+            }
+            &__desc{
+                font-size: 18px;
+                line-height: 26px;
+                color: #000;
+                text-align: center;
+                margin: 0;
+            }
+        }
+    }
 
     .pbShortcuts {
         padding-bottom: 0;
@@ -331,13 +413,6 @@
     }
 
     @media(max-width: 768px) {
-        background-size: auto 100%;
-        height: 841px;
-
-        .desktopMakers {
-            display: none;
-        }
-
         .makers {
             bottom: 30px;
 
@@ -418,6 +493,34 @@
                 }
             }
 
+        }
+    }
+}
+@media (max-width: 991px){
+    .meetMakers{
+        &__wrap{
+            h2{
+                top: 20px;
+            }
+        }
+        &__content{
+            bottom: -10px;
+        }
+    }
+}
+@media (max-width: 767px){
+    .meetMakers{
+        &__wrap{
+            &>img{
+                display: none;
+            }
+        }
+        &__images{
+            display: block;
+        }
+        &__content{
+            position: relative;
+            bottom: auto;
         }
     }
 }

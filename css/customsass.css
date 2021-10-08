@@ -10695,12 +10695,13 @@ body.admin-bar .pageSerwis {
 @media (max-width: 768px) {
   .book__header {
     background-image: url("/wp-content/themes/psibufet/images/book/medium_header_bg.png");
-    height: 524px;
+    background-position: left;
+    height: 525px;
   }
   .book__header__wrap h1 {
     font-weight: 400;
     text-align: center;
-    margin-top: 31px;
+    margin: 30px 0 15px;
   }
   .book__header__wrap p {
     text-align: center;
@@ -10708,6 +10709,10 @@ body.admin-bar .pageSerwis {
 }
 
 @media (max-width: 575px) {
+  .book__header__wrap {
+    max-width: 340px;
+    margin: 0 auto;
+  }
   .book__header__wrap h1 {
     font-size: 48px;
     line-height: 58px;
@@ -10724,19 +10729,48 @@ body.admin-bar .pageSerwis {
   }
 }
 
+.bookContent__image {
+  text-align: center;
+  padding: 30px 0 0;
+  margin: 70px 0 0;
+  position: relative;
+}
+
+.bookContent__image .gratis {
+  max-width: 255px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0 auto;
+}
+
 .book__content__header {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  margin: 25px 0 50px;
+}
+
+.book__content__header h2 {
+  font-size: 41px;
+  line-height: 49px;
+  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  color: #000;
+  text-align: center;
+  margin: 0 auto 22px;
 }
 
 .book__content__header p {
-  width: 603px;
+  width: 100%;
+  max-width: 600px;
   text-align: center;
   font-weight: 400;
   font-size: 20px;
   line-height: 26px;
+  margin: 0;
 }
 
 .book__content__header p .bold {
@@ -10764,6 +10798,7 @@ body.admin-bar .pageSerwis {
 .book__content .book__price__cost img {
   height: 11px;
   width: 16px;
+  transform: rotate(-90deg);
 }
 
 .book__content .book__price__cost span {
@@ -10789,6 +10824,7 @@ body.admin-bar .pageSerwis {
 .book__content .book__price__free img {
   height: 11px;
   width: 16px;
+  transform: rotate(-90deg);
 }
 
 .book__content .freeBook {
@@ -10818,40 +10854,39 @@ body.admin-bar .pageSerwis {
 }
 
 .book__content .book__description {
-  margin-top: 35px;
-  text-align: justify;
-  display: flex;
-  justify-content: center;
+  margin: 35px auto 40px;
+  max-width: 850px;
 }
 
 .book__content .book__description p {
-  width: 850px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.book__content .book__description p .inner {
-  margin-bottom: 10px;
   font-size: 18px;
   line-height: 26px;
+  color: #000;
   font-weight: 400;
+  margin: 0 0 10px;
 }
 
-.book__content .book__description p .inner .bold {
-  font-weight: 700;
-  line-height: 26px;
+.book__content .book__description p:last-of-type {
+  margin: 0;
 }
 
-@media (max-width: 768px) {
+.book__content .book__description p b {
+  font-weight: 600;
+}
+
+@media (max-width: 767px) {
   .book__content__header h2 {
     font-size: 36px;
     line-height: 43px;
+    max-width: 300px;
+    margin: 0 auto 15px;
   }
   .book__content__header p {
     width: auto;
     font-size: 14px;
     line-height: 18px;
+    max-width: 320px;
+    margin: 0 auto;
   }
   .book__content .book__price__cost {
     font-size: 18px;
@@ -10903,12 +10938,65 @@ body.admin-bar .pageSerwis {
 }
 
 .meetMakers {
-  background-image: url("/wp-content/themes/psibufet/images/book/autorzy_razem.png");
-  background-repeat: no-repeat;
-  height: 1023px;
-  background-size: cover;
   position: relative;
-  padding: 32px 0;
+}
+
+.meetMakers__wrap {
+  position: relative;
+}
+
+.meetMakers__wrap h2 {
+  font-size: 41px;
+  line-height: 49px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  color: #000;
+  margin: 0 auto;
+  text-align: center;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+}
+
+.meetMakers__wrap img {
+  width: 100%;
+}
+
+.meetMakers__images {
+  display: none;
+}
+
+.meetMakers__content {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.meetMakers__content .box {
+  width: 100%;
+  max-width: 420px;
+}
+
+.meetMakers__content .box__title {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 600;
+  text-align: center;
+  color: #000;
+  margin: 0 0 15px;
+}
+
+.meetMakers__content .box__desc {
+  font-size: 18px;
+  line-height: 26px;
+  color: #000;
+  text-align: center;
+  margin: 0;
 }
 
 .meetMakers .pbShortcuts {
@@ -10966,13 +11054,6 @@ body.admin-bar .pageSerwis {
 }
 
 @media (max-width: 768px) {
-  .meetMakers {
-    background-size: auto 100%;
-    height: 841px;
-  }
-  .meetMakers .desktopMakers {
-    display: none;
-  }
   .meetMakers .makers {
     bottom: 30px;
   }
@@ -11031,6 +11112,28 @@ body.admin-bar .pageSerwis {
   }
   .meetMakers .bookPagination .bookDots ul .slick-active button {
     background-color: #f15748;
+  }
+}
+
+@media (max-width: 991px) {
+  .meetMakers__wrap h2 {
+    top: 20px;
+  }
+  .meetMakers__content {
+    bottom: -10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .meetMakers__wrap > img {
+    display: none;
+  }
+  .meetMakers__images {
+    display: block;
+  }
+  .meetMakers__content {
+    position: relative;
+    bottom: auto;
   }
 }
 
