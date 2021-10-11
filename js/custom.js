@@ -1182,13 +1182,14 @@ $(document).ready(function(){
  */
 $(document).ready(function(){
     $('.openDesc').on('click', function(){
-        var $this = $(this);
+        $(this).toggleClass('changed');
+        $('.book__description').toggleClass('opened');
 
-        $this.addClass('hide');
-        setTimeout(function(){
-            $this.css('margin', '0');
-        }, 300);
-        $('.book__description').css('height', 'auto');
-        $('.book__description').addClass('opened');
+        var text = $(this).text();
+        if (text == 'Zobacz więcej'){
+            $(this).text('Zobacz mniej');
+        }else{
+            $(this).text('Zobacz więcej');
+        }
     });
 });

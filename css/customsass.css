@@ -10674,6 +10674,9 @@ body.page-template-page_ksiazka .siteHeader--promocode {
     font-size: 36px;
     line-height: 43px;
   }
+  .psibufet--book .getMarker .marker:after {
+    bottom: 8px;
+  }
 }
 
 .book__header {
@@ -10770,6 +10773,9 @@ body.page-template-page_ksiazka .siteHeader--promocode {
 }
 
 @media (max-width: 767px) {
+  .bookContent__image {
+    margin: 0;
+  }
   .bookContent__image .book {
     display: none;
   }
@@ -10782,8 +10788,8 @@ body.page-template-page_ksiazka .siteHeader--promocode {
     max-width: 520px;
   }
   .bookContent__image .gratis {
-    width: 40%;
-    max-width: 170px;
+    width: 50%;
+    max-width: 200px;
     top: 20px;
     left: 30px;
   }
@@ -10936,8 +10942,12 @@ body.page-template-page_ksiazka .siteHeader--promocode {
   transition: ease .3s;
 }
 
-.book__content .openDesc.hide {
-  opacity: 0 !important;
+.book__content .openDesc.changed:after {
+  transform: rotate(180deg) translate(0px, 50%);
+}
+
+.book__content .openDesc.changed:before {
+  transform: rotate(-180deg) translate(0px, 50%);
 }
 
 .book__content .openDesc:hover {
@@ -10954,6 +10964,7 @@ body.page-template-page_ksiazka .siteHeader--promocode {
   left: 0;
   top: 50%;
   transform: translate(0, -50%);
+  transition: ease .3s;
 }
 
 .book__content .openDesc:after {
@@ -10966,6 +10977,7 @@ body.page-template-page_ksiazka .siteHeader--promocode {
   right: 0;
   top: 50%;
   transform: translate(0, -50%);
+  transition: ease .3s;
 }
 
 @media (max-width: 767px) {
@@ -11038,6 +11050,9 @@ body.page-template-page_ksiazka .siteHeader--promocode {
     background: linear-gradient(0deg, white 0%, rgba(255, 255, 255, 0) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
     transition: ease .3s;
+  }
+  .book__content .book__description.opened {
+    height: auto;
   }
   .book__content .book__description.opened:after {
     opacity: 0;
@@ -11170,15 +11185,12 @@ body.page-template-page_ksiazka .siteHeader--promocode {
 }
 
 @media (max-width: 767px) {
-  .meetMakers {
-    margin-bottom: 40px;
-  }
   .meetMakers__wrap h2 {
     font-size: 36px;
     line-height: 42px;
     background-color: #fefdfb;
-    position: relative;
-    top: auto;
+    position: absolute;
+    top: 0;
     padding: 25px 0 15px;
   }
   .meetMakers__wrap > img {
@@ -11191,7 +11203,7 @@ body.page-template-page_ksiazka .siteHeader--promocode {
     list-style-type: none;
     padding-left: 0;
     position: absolute;
-    bottom: 0;
+    bottom: 90px;
     left: 50%;
     transform: translate(-50%, 0);
   }
@@ -11240,9 +11252,8 @@ body.page-template-page_ksiazka .siteHeader--promocode {
     display: block;
   }
   .meetMakers__content {
-    position: relative;
-    bottom: auto;
-    background-color: #fff;
+    position: absolute;
+    bottom: 20px;
     padding: 15px 0 0;
   }
   .meetMakers__content .box {
