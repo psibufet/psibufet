@@ -10661,8 +10661,12 @@ body.admin-bar .pageSerwis {
   }
 }
 
-.psibufet--book #promocode {
+body.page-template-page_ksiazka #promocode {
   display: none !important;
+}
+
+body.page-template-page_ksiazka .siteHeader--promocode {
+  margin-top: 0;
 }
 
 @media (max-width: 767px) {

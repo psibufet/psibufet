@@ -1,8 +1,16 @@
+body.page-template-page_ksiazka{
+
+    #promocode{
+        display: none !important;
+    }
+    .siteHeader{
+        &--promocode{
+            margin-top: 0;
+        }
+    }
+}
 .psibufet{
     &--book{
-        #promocode{
-            display: none !important;
-        }
         .pbShortcuts{
             @media (max-width: 767px){
                 &>h2{

@@ -33,7 +33,7 @@ get_header(); ?>
             <img class="gratis" src="<?php echo get_template_directory_uri() . '/images/book/gratis_ico.svg' ?>"/>
         </div>
         <a href="https://zamowienie.psibufet.pl/?code=psiazka" class="btn freeBook"><span>Odbierz za darmo</span></a>
-        <a href="#" class="buyBook">Nie chcę prezentu. Pokaż, gdzie kupić tylko książkę.</a>
+        <a href="#library" class="buyBook">Nie chcę prezentu. Pokaż, gdzie kupić tylko książkę.</a>
         <div class="book__description">
             <p><b>Twój pies uwielbia ruch i długie zabawy?</b> Zapewnij mu odpowiednią dawkę energii i ugotuj wysokokaloryczne danie z wołowiny z dodatkiem sardynek.</p>
             <p><b>Psiemu seniorowi</b> na deser zaproponuj galaretkę z kurzych łapek – smakuje wyśmienicie i doskonale wspomaga stawy.</p>
@@ -77,7 +77,7 @@ get_header(); ?>
         </div>
     </section>
 
-    <section class="book__library">
+    <section class="book__library" id="library">
         <div class="container">
             <h2>KSIĄŻKA DOSTĘPNA W KSIĘGARNIACH</h2>
             <div class="book__box">
