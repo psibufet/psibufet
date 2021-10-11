@@ -392,8 +392,9 @@ $(document).ready(function(){
 // Menu bar options
 $(document).ready(function(){
     var siteHeader = $('.siteHeader');
+    var code = GetURLParameter('code');
     setTimeout(function(){
-        if($('body').hasClass('promocode')){
+        if($('body').hasClass('promocode') && code !== 'psiazka'){
             if($(window).width() < 576){
                 $('.header-clone').css('height', siteHeader.height() + 58);
             }else if($(window).width() < 767 && $(window).width() > 576){
