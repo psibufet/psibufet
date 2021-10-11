@@ -10661,6 +10661,10 @@ body.admin-bar .pageSerwis {
   }
 }
 
+.psibufet--book #promocode {
+  display: none !important;
+}
+
 @media (max-width: 767px) {
   .psibufet--book .pbShortcuts > h2 {
     font-size: 36px;

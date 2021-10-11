@@ -834,6 +834,7 @@ $(document).ready(function() {
         var firstletter = code.charAt(0);
     }
 
+    console.log(code);
     if(typeof code !== 'undefined' && code !== 'psiazka'){
         $('body').addClass('promocode');
         $('.menu_dir a').addClass('dir');

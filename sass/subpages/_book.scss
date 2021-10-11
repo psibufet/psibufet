@@ -1,5 +1,8 @@
 .psibufet{
     &--book{
+        #promocode{
+            display: none !important;
+        }
         .pbShortcuts{
             @media (max-width: 767px){
                 &>h2{
