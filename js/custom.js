@@ -1192,4 +1192,11 @@ $(document).ready(function(){
             $(this).text('Zobacz więcej');
         }
     });
+    if($('body').hasClass('page-template-page-templatespage_ksiazka-php')){
+        var href = $('.menuAction--order a').attr('href');
+        var hrefNew = href + '?code=psiazka';
+
+        $('.menuAction--order a').attr('href', hrefNew);
+        $('.siteHeader__menu').find('.btn.dir').attr('href', hrefNew);
+    }
 });
