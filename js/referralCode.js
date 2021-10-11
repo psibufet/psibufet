@@ -44,7 +44,7 @@ $(document).ready(function(){
 	if(whitelist.indexOf(sPageURL) !== -1){
 		console.log('This code contains existing page URL');
 		var code = GetURLParameter('code');
-
+		
 		if(typeof code !== 'undefined' && code !== 'psiazka'){
 			var codeFirstLetter = code.charAt(0);
 			console.log('Code parameter exists ' + code + codeFirstLetter);

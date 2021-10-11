@@ -392,9 +392,9 @@ $(document).ready(function(){
 // Menu bar options
 $(document).ready(function(){
     var siteHeader = $('.siteHeader');
-    var code = GetURLParameter('code');
+
     setTimeout(function(){
-        if($('body').hasClass('promocode') && code !== 'psiazka'){
+        if($('body').hasClass('promocode')){
             if($(window).width() < 576){
                 $('.header-clone').css('height', siteHeader.height() + 58);
             }else if($(window).width() < 767 && $(window).width() > 576){
@@ -835,7 +835,6 @@ $(document).ready(function() {
         var firstletter = code.charAt(0);
     }
 
-    console.log(code);
     if(typeof code !== 'undefined' && code !== 'psiazka'){
         $('body').addClass('promocode');
         $('.menu_dir a').addClass('dir');

@@ -10781,6 +10781,12 @@ body.page-template-page_ksiazka .siteHeader--promocode {
     right: 15px;
     max-width: 520px;
   }
+  .bookContent__image .gratis {
+    width: 40%;
+    max-width: 170px;
+    top: 20px;
+    left: 30px;
+  }
 }
 
 .book__content__header {
