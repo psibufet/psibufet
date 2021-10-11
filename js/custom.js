@@ -324,7 +324,7 @@ $(document).ready(function(){
             $('.pricingContent__info').find('.portion').find('.value').text(portion + ' g');
         });
     }else{
-        if(code !== undefined){
+        if(code !== undefined && code !== 'psiazka'){
             $.ajax({
                 url:'https://app.psibufet.pl/api/order/couponcode/' + code,
                 
@@ -361,7 +361,7 @@ $(document).ready(function(){
             $(this).parent().attr('type', type);
             $(this).parent().parent().find('.pricingContent__info').attr('type', type);
 
-            if(code !== undefined){
+            if(code !== undefined && code !== 'psiazka'){
                 $.ajax({
                     url:'https://app.psibufet.pl/api/order/couponcode/' + code,
                     
@@ -834,7 +834,7 @@ $(document).ready(function() {
         var firstletter = code.charAt(0);
     }
 
-    if(typeof code !== 'undefined'){
+    if(typeof code !== 'undefined' && code !== 'psiazka'){
         $('body').addClass('promocode');
         $('.menu_dir a').addClass('dir');
         $('#promocode').addClass('active');
@@ -1174,3 +1174,20 @@ $(document).ready(function(){
         }, 300);
     });
 }); 
+
+
+/*
+ *  Book page
+ */
+$(document).ready(function(){
+    $('.openDesc').on('click', function(){
+        var $this = $(this);
+
+        $this.addClass('hide');
+        setTimeout(function(){
+            $this.css('margin', '0');
+        }, 300);
+        $('.book__description').css('height', 'auto');
+        $('.book__description').addClass('opened');
+    });
+});

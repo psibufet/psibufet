@@ -10661,6 +10661,13 @@ body.admin-bar .pageSerwis {
   }
 }
 
+@media (max-width: 767px) {
+  .psibufet--book .pbShortcuts > h2 {
+    font-size: 36px;
+    line-height: 43px;
+  }
+}
+
 .book__header {
   background-image: url("/wp-content/themes/psibufet/images/book/header_bg.png");
   background-repeat: no-repeat;
@@ -10712,6 +10719,7 @@ body.admin-bar .pageSerwis {
   .book__header__wrap {
     max-width: 340px;
     margin: 0 auto;
+    padding: 0 8px;
   }
   .book__header__wrap h1 {
     font-size: 48px;
@@ -10729,6 +10737,10 @@ body.admin-bar .pageSerwis {
   }
 }
 
+.bookContent {
+  margin: 0 auto 40px;
+}
+
 .bookContent__image {
   text-align: center;
   padding: 30px 0 0;
@@ -10743,6 +10755,24 @@ body.admin-bar .pageSerwis {
   right: 0;
   top: 0;
   margin: 0 auto;
+}
+
+.bookContent__image .book_mobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .bookContent__image .book {
+    display: none;
+  }
+  .bookContent__image .book_mobile {
+    display: block;
+    margin: 0 auto;
+    width: calc(100% + 30px);
+    position: relative;
+    right: 15px;
+    max-width: 520px;
+  }
 }
 
 .book__content__header {
@@ -10854,8 +10884,9 @@ body.admin-bar .pageSerwis {
 }
 
 .book__content .book__description {
-  margin: 35px auto 40px;
+  margin: 35px auto 0;
   max-width: 850px;
+  transition: ease .3s;
 }
 
 .book__content .book__description p {
@@ -10872,6 +10903,55 @@ body.admin-bar .pageSerwis {
 
 .book__content .book__description p b {
   font-weight: 600;
+}
+
+.book__content .openDesc {
+  display: none;
+  max-width: fit-content;
+  max-width: -moz-max-content;
+  max-width: -webkit-fit-content;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+  color: #000;
+  text-align: center;
+  margin: 20px auto 0;
+  position: relative;
+  padding: 0 30px;
+  cursor: pointer;
+  transition: ease .3s;
+}
+
+.book__content .openDesc.hide {
+  opacity: 0 !important;
+}
+
+.book__content .openDesc:hover {
+  opacity: .7;
+}
+
+.book__content .openDesc:before {
+  content: '';
+  background-image: url("/wp-content/themes/psibufet/images/chevron_down.svg");
+  background-size: 15px;
+  width: 15px;
+  height: 11px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.book__content .openDesc:after {
+  content: '';
+  background-image: url("/wp-content/themes/psibufet/images/chevron_down.svg");
+  background-size: 15px;
+  width: 15px;
+  height: 11px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 
 @media (max-width: 767px) {
@@ -10925,15 +11005,35 @@ body.admin-bar .pageSerwis {
     padding-top: 12px;
     font-size: 12px;
   }
-  .book__content .book__description p {
-    width: auto;
+  .book__content .book__description {
+    height: 80px;
+    position: relative;
+    overflow: hidden;
   }
-  .book__content .book__description p .inner {
+  .book__content .book__description:after {
+    content: '';
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    pointer-events: none;
+    background: white;
+    background: linear-gradient(0deg, white 0%, rgba(255, 255, 255, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
+    transition: ease .3s;
+  }
+  .book__content .book__description.opened:after {
+    opacity: 0;
+  }
+  .book__content .book__description p {
     font-size: 14px;
     line-height: 18px;
   }
-  .book__content .book__description p .inner .bold {
-    line-height: 18px;
+  .book__content .openDesc {
+    display: block;
   }
 }
 
@@ -10972,7 +11072,7 @@ body.admin-bar .pageSerwis {
   display: flex;
   justify-content: space-between;
   position: absolute;
-  bottom: 30px;
+  bottom: 50px;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -11000,53 +11100,8 @@ body.admin-bar .pageSerwis {
   margin: 0;
 }
 
-.meetMakers .pbShortcuts {
-  padding-bottom: 0;
-}
-
 .meetMakers .desktopMakers {
   display: block;
-}
-
-.meetMakers .makers {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  position: absolute;
-  bottom: 20px;
-}
-
-.meetMakers .makers .box {
-  text-align: center;
-  width: 420px;
-  height: 125px;
-}
-
-.meetMakers .makers .box:nth-of-type(1) {
-  margin-left: 30px;
-}
-
-.meetMakers .makers .box:nth-of-type(2) {
-  margin: 0 60px;
-}
-
-.meetMakers .makers .box:nth-of-type(3) {
-  margin-right: 30px;
-}
-
-.meetMakers .makers .box__title h3 {
-  font-weight: 700;
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px;
-  line-height: 26px;
-}
-
-.meetMakers .makers .box__desc p {
-  font-weight: 400;
-  font-family: 'Roboto', sans-serif;
-  font-size: 18px;
-  line-height: 26px;
 }
 
 .meetMakers .mobileSlider,
@@ -11055,31 +11110,6 @@ body.admin-bar .pageSerwis {
 }
 
 @media (max-width: 768px) {
-  .meetMakers .makers {
-    bottom: 30px;
-  }
-  .meetMakers .makers .box {
-    width: 326px;
-    height: auto;
-    padding: 0 15px;
-  }
-  .meetMakers .makers .box:nth-of-type(1) {
-    margin-left: 0;
-  }
-  .meetMakers .makers .box:nth-of-type(2) {
-    margin: 0;
-  }
-  .meetMakers .makers .box:nth-of-type(3) {
-    margin-right: 0;
-  }
-  .meetMakers .makers .box__title h3 {
-    font-size: 16px;
-    line-height: 19px;
-  }
-  .meetMakers .makers .box__desc p {
-    font-size: 14px;
-    line-height: 24px;
-  }
   .meetMakers .mobileSlider,
   .meetMakers .bookPagination {
     display: block;
@@ -11129,6 +11159,14 @@ body.admin-bar .pageSerwis {
   .meetMakers {
     margin-bottom: 40px;
   }
+  .meetMakers__wrap h2 {
+    font-size: 36px;
+    line-height: 42px;
+    background-color: #fefdfb;
+    position: relative;
+    top: auto;
+    padding: 25px 0 15px;
+  }
   .meetMakers__wrap > img {
     display: none;
   }
@@ -11139,12 +11177,12 @@ body.admin-bar .pageSerwis {
     list-style-type: none;
     padding-left: 0;
     position: absolute;
-    bottom: 80px;
+    bottom: 0;
     left: 50%;
     transform: translate(-50%, 0);
   }
   .meetMakers__wrap .slick-dots li {
-    margin-right: 6px;
+    margin: 0 3px;
   }
   .meetMakers__wrap .slick-dots li button {
     height: 8px;
@@ -11156,50 +11194,71 @@ body.admin-bar .pageSerwis {
     border: transparent;
     outline: none;
   }
-  .meetMakers__wrap .slick-dots li:nth-last-of-type(1) {
-    margin-right: 0;
-  }
   .meetMakers__wrap .slick-dots .slick-active button {
     background-color: #f15748;
   }
-  .meetMakers__wrap .slick-prev, .meetMakers__wrap .slick-next {
+  .meetMakers__wrap .slick-arrow {
     background: none;
     border: none;
     padding: 0;
     height: 30px;
     width: 30px;
-    position: relative;
-    top: -388px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
     font-size: 0;
     outline: none !important;
+    z-index: 3;
   }
-  .meetMakers__wrap .slick-prev::before {
+  .meetMakers__wrap .slick-arrow.slick-prev {
+    left: 0;
+  }
+  .meetMakers__wrap .slick-arrow.slick-prev:before {
     content: url("/wp-content/themes/psibufet/images/book/left_arrow.svg");
   }
-  .meetMakers__wrap .slick-next::before {
+  .meetMakers__wrap .slick-arrow.slick-next {
+    right: 0;
+  }
+  .meetMakers__wrap .slick-arrow.slick-next:before {
     content: url("/wp-content/themes/psibufet/images/book/right_arrow.svg");
   }
   .meetMakers__images {
     display: block;
   }
   .meetMakers__content {
-    position: absolute;
-    bottom: -48px;
+    position: relative;
+    bottom: auto;
+    background-color: #fff;
+    padding: 15px 0 0;
   }
   .meetMakers__content .box {
-    max-width: 326px;
+    width: 100vw;
+    padding: 0 20px;
   }
-  .meetMakers__content .slick-dots {
-    display: none !important;
+  .meetMakers__content .box__title {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .meetMakers__content .box__desc {
+    font-size: 14px;
+    line-height: 16px;
   }
 }
 
 .book__library {
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 32px 0;
 }
 
-.book__library .pbShortcuts {
-  padding: 32px 0;
+.book__library h2 {
+  font-size: 41px;
+  line-height: 49px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  color: #000;
+  margin: 0 auto 20px;
+  text-align: center;
 }
 
 .book__library .book__box {
@@ -11219,6 +11278,17 @@ body.admin-bar .pageSerwis {
 @media (max-width: 768px) {
   .book__library .book__box__img {
     margin-right: 32px;
+  }
+}
+
+@media (max-width: 575px) {
+  .book__library h2 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .book__library .book__box__img img {
+    max-width: 75px;
+    max-height: 50px;
   }
 }
 

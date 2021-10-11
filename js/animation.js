@@ -400,6 +400,36 @@ $(document).ready(function() {
     });
 });
 
+/********** Książka LP **********/
+
+$(document).ready(function() {
+    var bookContent = $('.book__content__header').find('.getMarker');
+    var bookOwners = $('.meetMakers__wrap').find('.getMarker');
+
+    if($(bookContent).visible(true)){
+        setTimeout(function(){
+            bookContent.addClass('init');
+        }, 500)
+    }
+    if($(bookOwners).visible(true)){
+        setTimeout(function(){
+            bookOwners.addClass('init');
+        }, 500)
+    }
+    $(window).on('scroll', function(){
+        if($(bookContent).visible(true)){
+            setTimeout(function(){
+                bookContent.addClass('init');
+            }, 500)
+        }
+        if($(bookOwners).visible(true)){
+            setTimeout(function(){
+                bookOwners.addClass('init');
+            }, 500)
+        }
+    });
+});
+
 /********** PODKREŚLENIA NASZE PRZEPISY **********/
 
 // $(window).on('scroll', function () {

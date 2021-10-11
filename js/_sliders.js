@@ -49,17 +49,18 @@ $(document).ready(function() {
     if($(window).width() < 768){
         $('.meetMakers__images').slick({
             slidesToScroll: 1,
-            arrows: false,
+            arrows: true,
             dots: true,
-            centerMode: true,
-            variableWidth: true,
+            infinte: false,
+            fade: true,
             asNavFor: ".meetMakers__content",
         });
         $('.meetMakers__content').slick({
             slidesToScroll: 1,
             slidesToShow: 1,
-            arrows: true,
-            dots: true,
+            arrows: false,
+            dots: false,
+            infinte: false,
             centerMode: true,
             variableWidth: true,
             asNavFor: ".meetMakers__images",
