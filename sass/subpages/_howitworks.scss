@@ -163,6 +163,9 @@
         margin-top: 40px;
         text-align: center;
     }
+    &--rmkt{
+        padding: 32px 0 20px;
+    }
 }
 @media (max-width: 991px){
     .howVideo{
@@ -223,6 +226,9 @@
         }
         &__cta{
             margin-top: 24px;
+        }
+        &--rmkt{
+            padding: 24px 0 0;
         }
     }
 }

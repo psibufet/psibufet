@@ -1,4 +1,5 @@
-body.page-template-page_lpsale{
+body.page-template-page_lpsale,
+body.page-template-page_rmkt{
     #promocode.active{
         display: none !important;
     }
@@ -42,7 +43,8 @@ body.page-template-page_lpsale{
             }
         }
     }
-    body.page-template-page_lpsale{
+    body.page-template-page_lpsale,
+    body.page-template-page_rmkt{
         .siteFooter{
             margin-bottom: 80px;
         }
@@ -228,9 +230,6 @@ body.admin-bar{
 }
 .saleHeader{
     min-height: 600px;
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-position: center -50px;
     background-color: #ffbc32;
     position: relative;
     transition: ease .5s;
@@ -450,6 +449,13 @@ body.admin-bar{
 
     &--correct{
         min-height: 777px !important;
+    }
+    &--rmkt{
+        .saleHeader__wrap{
+            &:after{
+                display: none !important;
+            }
+        }
     }
 }
 @media (max-width: 1300px){
@@ -933,7 +939,8 @@ body.admin-bar{
     }
 }
 
-body.page-template-page_lpsale{
+body.page-template-page_lpsale,
+body.page-template-page_rmkt{
     .homeFoodinfo{
         &__wrap{
             &:before{
@@ -959,7 +966,8 @@ body.page-template-page_lpsale{
     }
 }
 @media (max-width: 767px){
-    body.page-template-page_lpsale{
+    body.page-template-page_lpsale,
+    body.page-template-page_rmkt{
         .homeFoodinfo{
             &__right{
                 &:after{
@@ -1176,6 +1184,30 @@ body.page-template-page_lpsale{
     &__ctaMobile{
         display: none;
     }
+
+    &--rmkt{
+        .videoSlide{
+            &__video{
+                height: 422px;
+
+                .wp-video{
+                    width: 100% !important;
+                    height: inherit !important;
+
+                    .mejs-video{
+                        height: inherit !important;
+
+                        video{
+                            height: inherit !important;
+                        }
+                        .mejs-controls{
+                            display: none !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 @media (max-width: 1599px){
     .saleVideos{
@@ -1193,6 +1225,42 @@ body.page-template-page_lpsale{
                 width: calc(100% / 3 - 15px);
             }
         }
+        &--rmkt{
+            .videoSlide{
+                &__video{
+                    height: 309px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1199px){
+    .saleVideos{
+        &--rmkt{
+            .videoSlide{
+                align-items: center;
+
+                &__video{
+                    height: 253px;
+                }
+                &__content{
+                    .content{
+                        padding: 20px 24px;
+
+                        img{
+                            margin: 0 auto 12px;
+                        }
+                        &__title{
+                            margin: 0 0 5px;
+                        }
+                        p{
+                            font-size: 16px;
+                            line-height: 21px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 @media (max-width: 991px){
@@ -1207,6 +1275,9 @@ body.page-template-page_lpsale{
 
             .slick-list{
                 margin: 0 -20px;
+            }
+            .slick-track{
+                padding: 0 0 5px;
             }
             .slick-dots{
                 display: flex;
@@ -1317,6 +1388,19 @@ body.page-template-page_lpsale{
             display: block;
             margin: 32px 0 0;
         }
+        &--rmkt{
+            .saleVideos__mobile{
+                .saleVideo{
+                    &__video{
+                        height: 450px;
+    
+                        .mejs-controls{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 @media (max-width: 767px){
@@ -1347,6 +1431,15 @@ body.page-template-page_lpsale{
             .saleVideo{
                 width: 280px;
                 margin: 0 10px;
+            }
+        }
+        &--rmkt{
+            .saleVideos__mobile{
+                .saleVideo{
+                    &__video{
+                        height: 280px;
+                    }
+                }
             }
         }
     }

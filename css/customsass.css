@@ -3188,6 +3188,20 @@ body.admin-bar .foodModal__wrap {
   text-align: center;
 }
 
+.homeHowitworks--rmkt {
+  padding: 30px 0 60px;
+}
+
+.homeHowitworks--rmkt .homeHowitworks__wrap:before {
+  display: none !important;
+}
+
+.homeHowitworks--rmkt .homeHowitworks__step {
+  border: 0;
+  box-shadow: none;
+  padding: 0 30px;
+}
+
 @media (max-width: 1199px) {
   .homeHowitworks__wrap:before {
     left: 20%;
@@ -5928,6 +5942,10 @@ body.admin-bar .foodModal__wrap {
   text-align: center;
 }
 
+.howVideo--rmkt {
+  padding: 32px 0 20px;
+}
+
 @media (max-width: 991px) {
   .howVideo__content {
     height: auto;
@@ -5979,6 +5997,9 @@ body.admin-bar .foodModal__wrap {
   }
   .howVideo__cta {
     margin-top: 24px;
+  }
+  .howVideo--rmkt {
+    padding: 24px 0 0;
   }
 }
 
@@ -7403,24 +7424,30 @@ body.page-template-page_gskarmy .siteHeader {
   }
 }
 
-body.page-template-page_lpsale #promocode.active {
+body.page-template-page_lpsale #promocode.active,
+body.page-template-page_rmkt #promocode.active {
   display: none !important;
 }
 
 body.page-template-page_lpsale .siteHeader,
-body.page-template-page_lpsale .header-clone {
+body.page-template-page_lpsale .header-clone,
+body.page-template-page_rmkt .siteHeader,
+body.page-template-page_rmkt .header-clone {
   display: none !important;
 }
 
-body.page-template-page_lpsale #siteFooter .siteFooter__wrap {
+body.page-template-page_lpsale #siteFooter .siteFooter__wrap,
+body.page-template-page_rmkt #siteFooter .siteFooter__wrap {
   display: none !important;
 }
 
-body.page-template-page_lpsale iframe#_hjRemoteVarsFrame {
+body.page-template-page_lpsale iframe#_hjRemoteVarsFrame,
+body.page-template-page_rmkt iframe#_hjRemoteVarsFrame {
   display: none !important;
 }
 
-body.page-template-page_lpsale .BeaconFabButtonFrame {
+body.page-template-page_lpsale .BeaconFabButtonFrame,
+body.page-template-page_rmkt .BeaconFabButtonFrame {
   display: none !important;
 }
 
@@ -7444,7 +7471,8 @@ body.page-template-page_lpsale .BeaconFabButtonFrame {
   .lpSale .stickyBtn--toggle {
     display: block;
   }
-  body.page-template-page_lpsale .siteFooter {
+  body.page-template-page_lpsale .siteFooter,
+  body.page-template-page_rmkt .siteFooter {
     margin-bottom: 80px;
   }
 }
@@ -7847,6 +7875,10 @@ body.admin-bar .saleMenu {
 
 .saleHeader--correct {
   min-height: 777px !important;
+}
+
+.saleHeader--rmkt .saleHeader__wrap:after {
+  display: none !important;
 }
 
 @media (max-width: 1300px) {
@@ -8271,15 +8303,18 @@ body.admin-bar .saleMenu {
   }
 }
 
-body.page-template-page_lpsale .homeFoodinfo__wrap:before {
+body.page-template-page_lpsale .homeFoodinfo__wrap:before,
+body.page-template-page_rmkt .homeFoodinfo__wrap:before {
   display: none;
 }
 
-body.page-template-page_lpsale .homeFoodinfo__right {
+body.page-template-page_lpsale .homeFoodinfo__right,
+body.page-template-page_rmkt .homeFoodinfo__right {
   position: relative;
 }
 
-body.page-template-page_lpsale .homeFoodinfo__right:after {
+body.page-template-page_lpsale .homeFoodinfo__right:after,
+body.page-template-page_rmkt .homeFoodinfo__right:after {
   content: "";
   background-image: url("/wp-content/themes/psibufet/images/foodinfo_dog.svg");
   background-size: 110px;
@@ -8293,10 +8328,12 @@ body.page-template-page_lpsale .homeFoodinfo__right:after {
 }
 
 @media (max-width: 767px) {
-  body.page-template-page_lpsale .homeFoodinfo__right:after {
+  body.page-template-page_lpsale .homeFoodinfo__right:after,
+  body.page-template-page_rmkt .homeFoodinfo__right:after {
     display: none;
   }
-  body.page-template-page_lpsale .homeFoodinfo__right h2 .marker {
+  body.page-template-page_lpsale .homeFoodinfo__right h2 .marker,
+  body.page-template-page_rmkt .homeFoodinfo__right h2 .marker {
     display: inline-block;
   }
 }
@@ -8501,12 +8538,58 @@ body.page-template-page_lpsale .homeFoodinfo__right:after {
   display: none;
 }
 
+.saleVideos--rmkt .videoSlide__video {
+  height: 422px;
+}
+
+.saleVideos--rmkt .videoSlide__video .wp-video {
+  width: 100% !important;
+  height: inherit !important;
+}
+
+.saleVideos--rmkt .videoSlide__video .wp-video .mejs-video {
+  height: inherit !important;
+}
+
+.saleVideos--rmkt .videoSlide__video .wp-video .mejs-video video {
+  height: inherit !important;
+}
+
+.saleVideos--rmkt .videoSlide__video .wp-video .mejs-video .mejs-controls {
+  display: none !important;
+}
+
 @media (max-width: 1599px) {
   .saleVideos__main .videoSlide__video iframe {
     height: 309px;
   }
   .saleVideos__list .saleVideo {
     width: calc(100% / 3 - 15px);
+  }
+  .saleVideos--rmkt .videoSlide__video {
+    height: 309px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .saleVideos--rmkt .videoSlide {
+    align-items: center;
+  }
+  .saleVideos--rmkt .videoSlide__video {
+    height: 253px;
+  }
+  .saleVideos--rmkt .videoSlide__content .content {
+    padding: 20px 24px;
+  }
+  .saleVideos--rmkt .videoSlide__content .content img {
+    margin: 0 auto 12px;
+  }
+  .saleVideos--rmkt .videoSlide__content .content__title {
+    margin: 0 0 5px;
+  }
+  .saleVideos--rmkt .videoSlide__content .content p {
+    font-size: 16px;
+    line-height: 21px;
   }
 }
 
@@ -8522,6 +8605,9 @@ body.page-template-page_lpsale .homeFoodinfo__right:after {
   }
   .saleVideos__mobile .slick-list {
     margin: 0 -20px;
+  }
+  .saleVideos__mobile .slick-track {
+    padding: 0 0 5px;
   }
   .saleVideos__mobile .slick-dots {
     display: flex;
@@ -8611,6 +8697,12 @@ body.page-template-page_lpsale .homeFoodinfo__right:after {
     display: block;
     margin: 32px 0 0;
   }
+  .saleVideos--rmkt .saleVideos__mobile .saleVideo__video {
+    height: 450px;
+  }
+  .saleVideos--rmkt .saleVideos__mobile .saleVideo__video .mejs-controls {
+    display: none;
+  }
 }
 
 @media (max-width: 767px) {
@@ -8634,6 +8726,9 @@ body.page-template-page_lpsale .homeFoodinfo__right:after {
   .saleVideos__mobile .saleVideo {
     width: 280px;
     margin: 0 10px;
+  }
+  .saleVideos--rmkt .saleVideos__mobile .saleVideo__video {
+    height: 280px;
   }
 }
 

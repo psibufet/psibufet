@@ -1911,6 +1911,20 @@ body.admin-bar{
             }
         }
     }
+    &--rmkt{
+        padding: 30px 0 60px;
+        
+        .homeHowitworks__wrap{
+            &:before{
+                display: none !important;
+            }
+        }
+        .homeHowitworks__step{
+            border: 0;
+            box-shadow: none;
+            padding: 0 30px;
+        }
+    }
 }
 @media (max-width: 1199px){
     .homeHowitworks{

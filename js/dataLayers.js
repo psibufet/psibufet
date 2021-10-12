@@ -73,6 +73,7 @@ $(function () {
 $(document).ready(function(){
     if($('body').hasClass('page-template-page_gskarmy')){
         var name = $('.gsPage').attr('data-name');
+        var id = $('.gsPage').attr('data-name');
         var url = window.location.href;
         dataLayer.push({
             'event': 'shoppingProductView',
@@ -80,7 +81,7 @@ $(document).ready(function(){
             'page': url,
             'value': 4.9,
             'items': [{ 
-                'id': name, 
+                'id': id, 
                 'google_business_vertical': 'retail'
             }]
         });

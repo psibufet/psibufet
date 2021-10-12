@@ -1137,6 +1137,14 @@ $(document).ready(function(){
             centerMode: true,
             draggable: true,
         });
+        $('.saleVideos__mobile').on('afterChange', function(event, slick, currentSlide){
+            $('video').each(function(){
+                if($(this).hasClass('wp-video-shortcode')){
+                    $(this)[0].pause();
+                    $(this)[0].currentTime = 0;
+                }
+            });
+        });
     }
 
     // Home shortcuts slider mobile

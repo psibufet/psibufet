@@ -7,15 +7,19 @@ get_header(); ?>
     $pageTitle = strtolower(get_the_title());
     if($pageTitle == 'wołowe love'){
         $pageName = 'Beef';
+        $pageID = '1';
     }else if($pageTitle == 'indyczy kąsek'){
         $pageName = 'Turkey';
+        $pageID = '4';
     }else if($pageTitle == 'jagnię wcina'){
         $pageName = 'Lamb';
+        $pageID = '2';
     }else{
         $pageName = 'Chicken';
+        $pageID = '3';
     }
 ?>
-<main class="gsPage" data-name="<?php echo $pageName; ?>">
+<main class="gsPage" data-name="<?php echo $pageName; ?>" data-id="<?php echo $pageID; ?>">
     <section class="gsHeading">
         <div class="gsHeading__wrap">
             <h1 class="getMarker"><?php the_field('gspageHeader_title'); ?></h1>
