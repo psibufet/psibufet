@@ -30,6 +30,7 @@ $(document).ready(function(){
 					'indyczy-kasek',
 					'regulamin_dla_hodowcow.pdf',
 					'lp',
+					'lp-rkmt',
 					'program-partnerski',
 					'kalkulator',
 					'serwis',
