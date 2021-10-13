@@ -73,7 +73,7 @@ $(function () {
 $(document).ready(function(){
     if($('body').hasClass('page-template-page_gskarmy')){
         var name = $('.gsPage').attr('data-name');
-        var id = $('.gsPage').attr('data-name');
+        var id = $('.gsPage').attr('data-id');
         var url = window.location.href;
         dataLayer.push({
             'event': 'shoppingProductView',
