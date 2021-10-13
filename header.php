@@ -55,9 +55,9 @@
        }
         if (!startsWith ($_SERVER['REQUEST_URI'], '/lp')):
     ?>
-        <script type="text/javascript" src="/wp-content/themes/psibufet/js/referralCode.js"></script>
+        <script type="text/javascript" src="/wp-content/themes/psibufet/js/referralCode.js?ver=1.1"></script>
     <?php else: ?>
-        <script type="text/javascript" src="/wp-content/themes/psibufet/js/referralCode_lp.js"></script>
+        <script type="text/javascript" src="/wp-content/themes/psibufet/js/referralCode_lp.js?ver=1.1"></script>
     <?php endif; ?>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
