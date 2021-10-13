@@ -85,7 +85,7 @@ $(document).ready(function(){
                 'google_business_vertical': 'retail'
             }]
         });
-        console.log('shoppingProductView - ' + name + ' - push');
+        console.log('shoppingProductView - ' + name + ' - ID ' + id + ' - push');
     }
 });
 
