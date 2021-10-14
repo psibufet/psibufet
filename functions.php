@@ -614,7 +614,6 @@ add_action('wp_ajax_availableForm', 'availableForm');
 add_action('wp_ajax_nopriv_availableForm', 'availableForm');
 
 function availableForm(){
-
 	$type = isset( $_POST['type'] ) ? $_POST['type'] : '';
 	$company = isset( $_POST['company'] ) ? $_POST['company'] : '';
 	$mail = isset( $_POST['mail'] ) ? $_POST['mail'] : '';
@@ -623,8 +622,17 @@ function availableForm(){
 	$to = 'michalina@psibufet.pl';
 	$subject = '[PsiBufet] Zgłoszenie ambasadora';
 	$message = "Typ: " . $type . "\r\nFirma: " . $company . "\r\nMail: " . $mail . "\r\nPhone: " . $phone;
+
+	// $user = $to;
+	// $subject_user = '[PsiBufet] Zgłoszenie ambasadora - user';
+	// ob_start();
+	// include( get_template_directory() . '/email-templates/partner-template.php');
+	// $message_user = ob_get_contents();
+	// ob_end_clean();
+	// $headers = array('Content-Type: text/html; charset=UTF-8');
 	
 	$sent = wp_mail( $to, $subject, $message );
+	// $sentUser = wp_mail($user, $subject_user, $message_user, $headers);
 
 	if($sent){
 		echo 'done';
