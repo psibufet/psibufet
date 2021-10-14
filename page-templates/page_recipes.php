@@ -150,11 +150,11 @@ get_header(); ?>
             <a href="/jak-to-dziala" class="pbShortcuts__box" style="background-image: url('<?php echo get_template_directory_uri() . '/images/homepage/homeShortcuts_01.png'; ?>');">
                 <p class="title">Jak to działa?</p>
             </a>
-            <a href="/nasze-przepisy" class="pbShortcuts__box" style="background-image: url('<?php echo get_template_directory_uri() . '/images/homepage/homeShortcuts_02.png'; ?>');">
-                <p class="title">Nasze przepisy</p>
-            </a>
             <a href="/o-nas" class="pbShortcuts__box" style="background-image: url('<?php echo get_template_directory_uri() . '/images/homepage/homeShortcuts_03.png'; ?>');">
                 <p class="title">O nas</p>
+            </a>
+            <a href="https://help.psibufet.pl/" class="pbShortcuts__box" style="background-image: url('<?php echo get_template_directory_uri() . '/images/homepage/homeShortcuts_04.png'; ?>');">
+                <p class="title">FAQ</p>
             </a>
         </div>
     </section>
