@@ -132,7 +132,7 @@
     <body>
         <div class="emailWrap">
             <div class="email">
-                <img src="https://psibufet.pl/wp-content/themes/psibufet/images/email/psibufet_logo.svg"/>
+                <img src="https://psibufet.pl/wp-content/themes/psibufet/images/email/psibufet_logo.png"/>
                 <p>Cześć!<br/>Nazywam się Michalina i przeprowadzę Cię przez proces dołączania do naszej ekipy 🐶</p>
                 <p>Jest mi bardzo miło, że się ze mną kontaktujesz 😊 Wysyłając do nas zgłoszenie, pokazujesz, że zależy Ci na szczęściu i zdrowiu psiaków, tak jak nam wszystkim w PsiBufet.</p>
                 <p>Program Partnerski daje Tobie wiele przywilejów i możliwości, dzięki którym możesz jeszcze łatwiej pomagać psiakom w całej Polsce.</p>
