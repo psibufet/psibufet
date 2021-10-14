@@ -619,22 +619,22 @@ function availableForm(){
 	$mail = isset( $_POST['mail'] ) ? $_POST['mail'] : '';
 	$phone = isset( $_POST['phone'] ) ? $_POST['phone'] : '';
 	
-	$to = 'piotrdevv@gmail.com';
+	$to = 'michalina@psibufet.pl';
 	$subject = '[PsiBufet] Zgłoszenie ambasadora';
 	$message = "Typ: " . $type . "\r\nFirma: " . $company . "\r\nMail: " . $mail . "\r\nPhone: " . $phone;
 
-	$user = $to;
-	$subject_user = 'Czas na garść informacji!';
-	ob_start();
-	include( get_template_directory() . '/email-templates/partner-template.php');
-	$message_user = ob_get_contents();
-	ob_end_clean();
-	$headers = array('Content-Type: text/html; charset=UTF-8');
+	// $user = $to;
+	// $subject_user = 'Czas na garść informacji!';
+	// ob_start();
+	// include( get_template_directory() . '/email-templates/partner-template.php');
+	// $message_user = ob_get_contents();
+	// ob_end_clean();
+	// $headers = array('Content-Type: text/html; charset=UTF-8');
 	
 	$sent = wp_mail( $to, $subject, $message );
-	$sentUser = wp_mail($user, $subject_user, $message_user, $headers);
+	// $sentUser = wp_mail($user, $subject_user, $message_user, $headers);
 
-	if($sent && $sentUser){
+	if($sent){
 		echo 'done';
 	}else{
 		echo 'error';
