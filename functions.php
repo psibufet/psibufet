@@ -607,21 +607,6 @@ function my_acf_json_load_point( $paths ) {
 
 /* Partner ajax form send engine */
 
-// Function to change email address
-function wpb_sender_email( $original_email_address ) {
-    return 'michalina@psibufet.pl';
-}
- 
-// Function to change sender name
-function wpb_sender_name( $original_email_from ) {
-    return 'PsiBufet';
-}
- 
-// Hooking up our functions to WordPress filters 
-add_filter( 'wp_mail_from', 'wpb_sender_email' );
-add_filter( 'wp_mail_from_name', 'wpb_sender_name' );
-
-
 wp_enqueue_script( 'partner-ajax', get_template_directory_uri() . '/js/partnerForm.js', array( 'jquery' ));
 wp_localize_script( 'partner-ajax', 'PBAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
 
@@ -656,5 +641,3 @@ function availableForm(){
 	}
 	exit();
 }
-remove_filter('wp_mail_from', 'wpb_sender_email');
-remove_filter('wp_mail_from_name', 'wpb_sender_name');
