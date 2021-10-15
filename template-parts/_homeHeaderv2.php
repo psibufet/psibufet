@@ -11,7 +11,7 @@
                 <h2 class="getMarker">Tylko <span class="number">1</span> minutę zajmie stworzenie <span class="marker">idealnego</span> planu dla Twojego psa</h2>
                 <input type="text" value="" placeholder="Wpisz imię swojego pupila" autocomplete="off"/>
                 <button type="submit"><span>Stwórz dietę</span></button>
-                <a href="#" class="more">Mam więcej niż jednego psa.</a>
+                <a href="https://zamowienie.psibufet.pl/" class="more">Mam więcej niż jednego psa.</a>
             </form>
         </div>
     </div>
