@@ -7,7 +7,7 @@ get_header(); ?>
 
 <main class="pbpage pbpage--frontpage">
 
-    <?php include get_template_directory_uri() . '/template-parts/_homeHeaderV2.php'; ?>
+    <?php include get_template_directory() . '/template-parts/_homeHeaderV2.php'; ?>
     
     <section id="page-continue" class="homeReviews">
         <?php if( have_rows('after_header_logos') ): ?>
