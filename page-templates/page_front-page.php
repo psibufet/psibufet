@@ -6,22 +6,8 @@ Template Name: Front Page
 get_header(); ?>
 
 <main class="pbpage pbpage--frontpage">
-    <section class="homeHeader" style="background-image: url('/wp-content/themes/psibufet/images/pricedrop/sgNewHeader-min.jpg');">
-        <div class="homeHeader__wrap">
-            <div class="homeHeader__content">
-                <h2>Świeże spojrzenie na psie jedzenie</h2>
-                <div class="tags">
-                    <div><p>Naturalne składniki</p></div>
-                    <div><p>Idealna porcja</p></div>
-                    <div><p>Dostawa pod drzwi</p></div>
-                </div>
-                <a href="https://zamowienie.psibufet.pl/" class="btn btn--big btn--center dir"><span><?php the_field('front_header_cta') ?></span></a>
-            </div>
-        </div>
-        <a href="#page-continue" class="homeHeader__scroll">
-            <p>Dowiedz się więcej</p>
-        </a>
-    </section>
+
+    <?php include get_template_directory() . '/template-parts/_homeHeaderV2.php'; ?>
     
     <section id="page-continue" class="homeReviews">
         <?php if( have_rows('after_header_logos') ): ?>
@@ -490,7 +476,7 @@ get_header(); ?>
         <div class="homeStart__wrap container">
             <div class="homeStart__content">
                 <h2 class="getMarker">Podaj imię swojego psa i rozpocznij <span class="marker">Zdrową</span> dietę już teraz!</h2>
-                <form name="userStart" action="https://zamowienie.psibufet.pl/" autocomplete="off">
+                <form class="dogNameForm" name="userStart" action="https://zamowienie.psibufet.pl/" autocomplete="off">
                     <input type="text" name="dogName" placeholder="Imię psa" autocomplete="off"/>
                     <button type="submit" value="Stwórz dietę" class="btn btn--center"><span>Stwórz dietę</span></button>
                 </form>

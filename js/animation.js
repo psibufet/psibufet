@@ -56,8 +56,8 @@ function getVisible(element){
     }
 }
 
-$(window).on('scroll', function () {
-
+$(document).ready(function() {
+    var homeHeaderV2 = $('.homeHeaderV2__form').find('.getMarker');
     var homeMiska = $('.homeMiska').find('.getMarker');
     var homeFoodinfo = $('.homeFoodinfo').find('.getMarker');
     var homeHowitworks = $('.homeHowitworks').find('.getMarker');
@@ -68,6 +68,11 @@ $(window).on('scroll', function () {
     var pbShortcuts = $('.pbShortcuts').find('.getMarker');
     var pbQuestions = $('.pbQuestions').find('.getMarker');
 
+    if($(homeHeaderV2).visible(true)){
+        setTimeout(function(){
+            homeHeaderV2.addClass('init');
+        }, 500)
+    }
     if($(homeMiska).visible(true)){
         setTimeout(function(){
             homeMiska.addClass('init');
@@ -100,7 +105,7 @@ $(window).on('scroll', function () {
     }
     if($(homeStartSection).visible(true)){
         setTimeout(function(){
-            homeStartSection.addClass('visible');
+            homeStartSection.addClass('init');
         }, 500)
     }
     if($(pbShortcuts).visible(true)){
@@ -113,6 +118,59 @@ $(window).on('scroll', function () {
             pbQuestions.addClass('init');
         }, 500)
     }
+
+    $(window).on('scroll', function () {
+        if($(homeHeaderV2).visible(true)){
+            setTimeout(function(){
+                homeHeaderV2.addClass('init');
+            }, 500)
+        }
+        if($(homeMiska).visible(true)){
+            setTimeout(function(){
+                homeMiska.addClass('init');
+            }, 500)
+        }
+        if($(homeFoodinfo).visible(true)){
+            setTimeout(function(){
+                homeFoodinfo.addClass('init');
+            }, 500)
+        }
+        if($(homeHowitworks).visible(true)){
+            setTimeout(function(){
+                homeHowitworks.addClass('init');
+            }, 500)
+        }
+        if($(homeBenefits).visible(true)){
+            setTimeout(function(){
+                homeBenefits.addClass('init');
+            }, 500)
+        }
+        if($(homePricing).visible(true)){
+            setTimeout(function(){
+                homePricing.addClass('init');
+            }, 500)
+        }
+        if($(homeStart).visible(true)){
+            setTimeout(function(){
+                homeStart.addClass('init');
+            }, 500)
+        }
+        if($(homeStartSection).visible(true)){
+            setTimeout(function(){
+                homeStartSection.addClass('visible');
+            }, 500)
+        }
+        if($(pbShortcuts).visible(true)){
+            setTimeout(function(){
+                pbShortcuts.addClass('init');
+            }, 500)
+        }
+        if($(pbQuestions).visible(true)){
+            setTimeout(function(){
+                pbQuestions.addClass('init');
+            }, 500)
+        }
+    });
 });
 
 /********** Google Shopping pages **********/

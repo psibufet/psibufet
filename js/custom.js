@@ -269,19 +269,29 @@ $(window).load(function(){
     });
 });
 
-$(document).ready(function(){
-    var form = $('form[name="userStart"]');
-    var nameinput = form.find('input[type="text"]');
-    $(nameinput).on('change paste keyup', function(){
-        var value = $(this).val();
-        if(value){
-            form.attr('action', 'https://zamowienie.psibufet.pl/?dogName=' + value);
-            form.addClass('hasValue');
-        }else{
-            form.attr('action', 'https://zamowienie.psibufet.pl/');
-            form.removeClass('hasValue');
-        }
+/**
+ * Front page forms
+ */
 
+$(document).ready(function(){
+    var form = $('form.dogNameForm');
+    $(form).each(function(){
+        var $this = $(this);
+        var nameinput = $(this).find('input[type="text"]');
+        $(nameinput).on('change paste keyup', function(){
+            var value = $(this).val();
+            if(value){
+                $this.attr('action', 'https://zamowienie.psibufet.pl/?dogName=' + value);
+                $this.addClass('hasValue');
+            }else{
+                $this.attr('action', 'https://zamowienie.psibufet.pl/');
+                $this.removeClass('hasValue');
+            }
+        });
+        $($this).on('submit', function(e){
+            e.preventDefault();
+            window.location.href = $(this).attr('action');
+        });
     });
 });
 
