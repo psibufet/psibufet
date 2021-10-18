@@ -1848,7 +1848,7 @@ body.promocode .siteHeader .mobileNav__logo {
 
 @media (max-width: 767px) {
   .homeHeaderV2 {
-    height: 800px;
+    height: 764px;
     background-image: url("/wp-content/themes/psibufet/images/homepage/homeHeaderV2_mobile.png") !important;
     background-size: auto 100%;
   }
@@ -1881,7 +1881,7 @@ body.promocode .siteHeader .mobileNav__logo {
   .homeHeaderV2__form {
     max-width: 320px;
     padding: 20px;
-    margin: 95px 0 30px;
+    margin: 100px 0 20px;
   }
   .homeHeaderV2__form h2 {
     font-size: 28px;
