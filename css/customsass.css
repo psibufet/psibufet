@@ -1601,7 +1601,7 @@ body.promocode .siteHeader .mobileNav__logo {
 }
 
 .homeHeaderV2 {
-  height: 595px;
+  height: 605px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1613,6 +1613,10 @@ body.promocode .siteHeader .mobileNav__logo {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.homeHeaderV2__content {
+  margin-bottom: 15px;
 }
 
 .homeHeaderV2__content h2 {
@@ -1781,7 +1785,38 @@ body.promocode .siteHeader .mobileNav__logo {
 }
 
 .homeHeaderV2__scroll {
-  display: none;
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.homeHeaderV2__scroll p {
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  margin: 0 0 7px;
+}
+
+.homeHeaderV2__scroll:after {
+  content: "";
+  background-image: url("/wp-content/themes/psibufet/images/chevron_down_white.svg");
+  background-repeat: no-repeat;
+  background-size: 15px;
+  height: 11px;
+  width: 15px;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -10px;
+  animation-name: PulseDown;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
 
 @media (max-width: 991px) {
@@ -1843,6 +1878,15 @@ body.promocode .siteHeader .mobileNav__logo {
     background-size: 8px;
     width: 8px;
     height: 10px;
+  }
+  .homeHeaderV2__scroll:after {
+    background-size: 12px;
+    height: 9px;
+    width: 12px;
+    bottom: -12px;
+  }
+  .homeHeaderV2__scroll p {
+    font-size: 14px;
   }
 }
 
@@ -1908,6 +1952,9 @@ body.promocode .siteHeader .mobileNav__logo {
     background-size: 8px;
     width: 8px;
     height: 10px;
+  }
+  .homeHeaderV2__scroll {
+    display: none;
   }
 }
 

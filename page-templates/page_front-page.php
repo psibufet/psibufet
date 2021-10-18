@@ -26,6 +26,9 @@ get_header(); ?>
                 </form>
             </div>
         </div>
+        <a href="#page-continue" class="homeHeaderV2__scroll">
+            <p>Dowiedz się więcej</p>
+        </a>
     </section>
     
     <section id="page-continue" class="homeReviews">

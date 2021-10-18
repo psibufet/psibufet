@@ -15,4 +15,7 @@
             </form>
         </div>
     </div>
+    <a href="#page-continue" class="homeHeaderV2__scroll">
+        <p>Dowiedz się więcej</p>
+    </a>
 </section>
