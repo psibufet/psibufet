@@ -5647,11 +5647,10 @@ body.admin-bar .foodModal__wrap {
   .recipesMenu__heading {
     margin: 0 0 20px;
   }
-  .recipesMenu__heading h2 {
-    margin: 0;
-  }
   .recipesMenu__heading p {
-    display: none;
+    font-size: 14px;
+    line-height: 19px;
+    max-width: 290px;
   }
   .recipesMenu .recipesList {
     max-width: 280px;

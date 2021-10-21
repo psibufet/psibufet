@@ -27,11 +27,6 @@
         }
     }
 }
-@media (max-width: 991px){
-    .recipesHeading{
-
-    }
-}
 @media (max-width: 767px){
     .recipesHeading{
         &__wrap{
@@ -228,11 +223,10 @@
         &__heading{
             margin: 0 0 20px;
 
-            h2{
-                margin: 0;
-            }
             p{
-                display: none;
+                font-size: 14px;
+                line-height: 19px;
+                max-width: 290px;
             }
         }
         .recipesList{
