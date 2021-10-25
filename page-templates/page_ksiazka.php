@@ -33,6 +33,7 @@ get_header(); ?>
             <img class="gratis" src="<?php echo get_template_directory_uri() . '/images/book/gratis_ico.svg' ?>"/>
         </div>
         <a href="https://zamowienie.psibufet.pl/?code=psiazka" class="btn freeBook"><span>Odbierz za darmo</span></a>
+        <a href="https://psibufet.pl/regulamin_promocji_ksiazki.pdf" target="_blank" class="terms">Regulamin Promocji</a>
         <a href="#library" class="buyBook">Nie chcę prezentu. Pokaż, gdzie kupić tylko książkę.</a>
         <div class="book__description">
             <p><b>Twój pies uwielbia ruch i długie zabawy?</b> Zapewnij mu odpowiednią dawkę energii i ugotuj wysokokaloryczne danie z wołowiny z dodatkiem sardynek.</p>
