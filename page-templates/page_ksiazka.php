@@ -80,7 +80,7 @@ get_header(); ?>
 
     <section class="book__library" id="library">
         <div class="container">
-            <h2>KSIĄŻKA DOSTĘPNA W KSIĘGARNIACH</h2>
+            <h2>KSIĄŻKA DOSTĘPNA RÓWNIEŻ W KSIĘGARNIACH</h2>
             <div class="book__box">
                 <div class="book__box__img">
                     <img src="/wp-content/themes/psibufet/images/book/bonito_logo.svg" />
