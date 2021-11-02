@@ -3196,6 +3196,43 @@ body.admin-bar{
                     }
                 }
             }
+            &--discount{
+                &:before{
+                    content: '-' attr(data-amount);
+                    background-image: url('/wp-content/themes/psibufet/images/percentPrice_badge.svg') !important;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 78px;
+                    font-family: 'Bebas Neue', sans-serif;
+                    color: #fff;
+                    padding-right: 30px;
+                }
+                &:after{
+                    content: '%';
+                    font-size: 54px;
+                    color: #fff;
+                    position: absolute;
+                    left: 28px;
+                    top: -5px;
+                    z-index: 3;
+                    display: block;
+                    font-family: 'Bebas Neue', sans-serif;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1599px){
+    .homePricing{
+        &__right{
+            .pricingContent{
+                &--discount{
+                    &:after{
+                        left: 67px;
+                    }
+                }
+            }
         }
     }
 }
@@ -3268,6 +3305,20 @@ body.admin-bar{
                             color: #000;
                             margin: 0;
                         }
+                    }
+                }
+            }
+            .pricingContent{
+                &--discount{
+                    &:before{
+                        font-size: 60px;
+                        padding-right: 25px;
+                        padding-top: 5px;
+                    }
+                    &:after{
+                        left: 40px;
+                        font-size: 35px;
+                        top: -7px;
                     }
                 }
             }
@@ -3370,6 +3421,18 @@ body.admin-bar{
                                 }
                             }
                         }
+                    }
+                }
+                &--discount{
+                    &:before{
+                        font-size: 42px;
+                        padding-right: 20px;
+                        padding-top: 5px;
+                    }
+                    &:after{
+                        left: 43px;
+                        font-size: 26px;
+                        top: -2px;
                     }
                 }
             }

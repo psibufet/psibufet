@@ -343,13 +343,15 @@ $(document).ready(function(){
                         var discountGet = data.amount;
                         var priceGet = parseFloat(pricezl_promo + '.' + pricegr_promo);
                         var discount = priceGet * discountGet / 100;
-                    
                         var price_full = priceGet - discount;
                         var price = price_full.toFixed(2).split('.');
 
                         $('.pricingContent__info').find('.drop').find('span.value').html(pricezl_promo + '<span>' + pricegr_promo + '</span> zł');
                         $('.pricingContent__info').find('.price').find('span.value').html(price[0] + '<span>' + price[1] + '</span> zł');
                         $('.pricingContent__info').find('.portion').find('.value').text(portion + ' g');
+
+                        // Add badge
+                        $('.pricingContent').addClass('pricingContent--discount').attr('data-amount', data.amount);
                     });
                 }
             });
