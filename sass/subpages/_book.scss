@@ -673,7 +673,7 @@ body.page-template-page_ksiazka{
     }
 }
 
-.book__library {
+.bookLibrary{
     border-top: 1px solid rgba(0, 0, 0, 0.2);
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     padding: 32px 0;
@@ -688,12 +688,12 @@ body.page-template-page_ksiazka{
         text-align: center;
     }
 
-    .book__box {
+    &__box{
         display: flex;
         justify-content: center;
         align-items: center;
 
-        &__img {
+        .logo {
             margin-right: 55px;
 
             &:nth-last-of-type(1) {
@@ -701,28 +701,68 @@ body.page-template-page_ksiazka{
             }
         }
     }
+    &__cta{
+        text-align: center;
+        margin: 20px 0 0;
 
+        .btn{
+            width: 340px;
+            height: 56px;
+            margin: 50px auto 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            span{
+                font-size: 25px;
+                line-height: 29px;
+            }
+        }
+        .terms{
+            display: block;
+            width: 100%;
+            margin: 18px 0 0;
+            font-size: 14px;
+            line-height: 19px;
+            color: #000;
+            text-decoration: underline;
+            text-align: center;
+        }
+    }
 }
 @media(max-width: 768px) {
-    .book__library{
-        .book__box {
-            &__img {
+    .bookLibrary{
+        &__box {
+            .logo {
                 margin-right: 32px;
             }
         }
     }
 }
 @media (max-width: 575px){
-    .book__library{
+    .bookLibrary{
         h2{
             font-size: 28px;
             line-height: 34px;
         }
-        .book__box{
-            &__img{
+        &__book{
+            .logo{
                 img{
                     max-width: 75px;
                     max-height: 50px;
+                }
+            }
+        }
+        &__cta{
+            .btn{
+                max-width: 280px;
+                width: 100%;
+                height: 46px;
+                margin: 36px auto 0;
+
+                span{
+                    font-size: 16px;
+                    line-height: 19px;
                 }
             }
         }

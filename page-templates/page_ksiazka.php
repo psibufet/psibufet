@@ -78,19 +78,23 @@ get_header(); ?>
         </div>
     </section>
 
-    <section class="book__library" id="library">
+    <section class="bookLibrary" id="library">
         <div class="container">
             <h2>KSIĄŻKA DOSTĘPNA RÓWNIEŻ W KSIĘGARNIACH</h2>
-            <div class="book__box">
-                <div class="book__box__img">
+            <div class="bookLibrary__box">
+                <div class="logo">
                     <img src="/wp-content/themes/psibufet/images/book/bonito_logo.svg" />
                 </div>
-                <div class="book__box__img">
+                <div class="logo">
                     <img src="/wp-content/themes/psibufet/images/book/empik_logo.svg" />
                 </div>
-                <div class="book__box__img">
+                <div class="logo">
                     <img src="/wp-content/themes/psibufet/images/book/znak_logo.svg" />
                 </div>
+            </div>
+            <div class="bookLibrary__cta">
+                <a href="#" class="btn"><span>Odbierz za darmo</span></a>
+                <a href="#" class="terms"><span>Regulamin promocji</span></a>
             </div>
         </div>
     </section>
