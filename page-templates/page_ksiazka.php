@@ -93,8 +93,8 @@ get_header(); ?>
                 </div>
             </div>
             <div class="bookLibrary__cta">
-                <a href="#" class="btn"><span>Odbierz za darmo</span></a>
-                <a href="#" class="terms"><span>Regulamin promocji</span></a>
+                <a href="https://zamowienie.psibufet.pl/?code=psiazka" class="btn"><span>Odbierz za darmo</span></a>
+                <a href="https://psibufet.pl/regulamin_promocji_ksiazki.pdf" target="_blank" class="terms"><span>Regulamin promocji</span></a>
             </div>
         </div>
     </section>
