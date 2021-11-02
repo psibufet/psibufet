@@ -4371,6 +4371,7 @@ body.admin-bar .foodModal__wrap {
   font-family: 'Bebas Neue', sans-serif;
   color: #fff;
   padding-right: 30px;
+  padding-top: 7px;
 }
 
 .homePricing__right .pricingContent--discount:after {
@@ -4379,7 +4380,7 @@ body.admin-bar .foodModal__wrap {
   color: #fff;
   position: absolute;
   left: 28px;
-  top: -5px;
+  top: -3px;
   z-index: 3;
   display: block;
   font-family: 'Bebas Neue', sans-serif;

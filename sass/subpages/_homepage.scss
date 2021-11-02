@@ -3207,6 +3207,7 @@ body.admin-bar{
                     font-family: 'Bebas Neue', sans-serif;
                     color: #fff;
                     padding-right: 30px;
+                    padding-top: 7px;
                 }
                 &:after{
                     content: '%';
@@ -3214,7 +3215,7 @@ body.admin-bar{
                     color: #fff;
                     position: absolute;
                     left: 28px;
-                    top: -5px;
+                    top: -3px;
                     z-index: 3;
                     display: block;
                     font-family: 'Bebas Neue', sans-serif;
