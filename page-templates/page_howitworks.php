@@ -9,7 +9,11 @@ get_header(); ?>
     <section class="howHeading">
         <div class="howHeading__wrap">
             <h1>Dlaczego PsiBufet</h1>
-            <p>Dopasowana dieta. Najlepsze składniki.<br/>Dostawa pod same drzwi.</p>
+            <div class="tags">
+                <div><p>Naturalne składniki</p></div>
+                <div><p>Idealna porcja</p></div>
+                <div><p>Dostawa pod drzwi</p></div>
+            </div>
         </div>
     </section>
 

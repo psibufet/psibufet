@@ -679,8 +679,8 @@
         text-align: center;
 
         h2{
-            font-size: 41px;
-            line-height: 49px;
+            font-size: 48px;
+            line-height: 54px;
             font-family: $headingfont;
             font-weight: 500;
             color: #000;
@@ -970,8 +970,8 @@
     .homeMiska{
         &__left{
             h2{
-                font-size: 28px;
-                line-height: 34px;
+                font-size: 36px;
+                line-height: 42px;
                 margin: 0 0 20px;
             }
             .subtitle{
@@ -1242,8 +1242,8 @@
         text-align: center;
 
         h2{
-            font-size: 41px;
-            line-height: 49px;
+            font-size: 48px;
+            line-height: 54px;
             font-family: $headingfont;
             font-weight: 500;
             color: #000;
@@ -1521,6 +1521,10 @@
             width: 100%;
             margin-bottom: 0;
 
+            h2{
+                max-width: 480px;
+                margin: 0 auto 25px;
+            }
             .info_boxes{
                 justify-content: space-between;
                 max-width: 320px;
@@ -1622,9 +1626,9 @@
             padding: 35px 0 0;
 
             h2{
-                font-size: 28px;
-                line-height: 34px;
-                margin: 0 0 20px;
+                font-size: 36px;
+                line-height: 42px;
+                margin: 0 auto 20px;
 
                 span{
                     display: block;
@@ -2244,8 +2248,8 @@ body.admin-bar{
         }
 
         &>h2{
-            font-size: 41px;
-            line-height: 49px;
+            font-size: 48px;
+            line-height: 54px;
             font-family: $headingfont;
             font-weight: 500;
             color: #000;
@@ -2362,8 +2366,8 @@ body.admin-bar{
                 display: none;
             }
             &>h2{
-                font-size: 28px;
-                line-height: 34px;
+                font-size: 36px;
+                line-height: 42px;
                 margin: 0 0 25px; 
             }
         }
@@ -2415,8 +2419,8 @@ body.admin-bar{
         position: relative;
 
         &>h2{
-            font-size: 41px;
-            line-height: 49px;
+            font-size: 48px;
+            line-height: 54px;
             font-family: $headingfont;
             font-weight: 500;
             color: #000;
@@ -2856,8 +2860,8 @@ body.admin-bar{
 @media (max-width: 767px){
     .homeBenefits{
         h2{
-            font-size: 28px;
-            line-height: 34px;
+            font-size: 36px;
+            line-height: 42px;
         }
         &__boxes{
             left: -140px;
@@ -2968,8 +2972,8 @@ body.admin-bar{
         width: 50%;
 
         h2{
-            font-size: 41px;
-            line-height: 49px;
+            font-size: 48px;
+            line-height: 54px;
             font-family: $headingfont;
             font-weight: 500;
             color: #000;
@@ -3226,6 +3230,11 @@ body.admin-bar{
 }
 @media (max-width: 1599px){
     .homePricing{
+        &__left{
+            h2{
+                max-width: 400px;
+            }
+        }
         &__right{
             .pricingContent{
                 &--discount{
@@ -3330,8 +3339,8 @@ body.admin-bar{
     .homePricing{
         &__left{
             h2{
-                font-size: 28px;
-                line-height: 34px;
+                font-size: 36px;
+                line-height: 42px;
                 max-width: 250px;
             }
             p{
@@ -3461,17 +3470,17 @@ body.admin-bar{
             display: block;
             position: absolute;
             top: -40px;
-            left: 260px;
+            left: 200px;
         }
 
         h2{
-            font-size: 41px;
-            line-height: 49px;
+            font-size: 48px;
+            line-height: 54px;
             font-family: $headingfont;
             font-weight: 500;
             color: #000;
             margin: 0 auto 40px;
-            max-width: 700px;
+            max-width: 900px;
             text-align: center;
         }
     }
@@ -3615,7 +3624,7 @@ body.admin-bar{
     .homeTestimonials{
         &__wrap{
             &:after{
-                left: 90px;
+                left: 30px;
             }
         }
     }
@@ -3629,6 +3638,9 @@ body.admin-bar{
                 height: 185px;
                 top: -40px;
                 left: 0;
+            }
+            h2{
+                max-width: 680px;
             }
         }
         &__slider{
@@ -3674,9 +3686,9 @@ body.admin-bar{
     .homeTestimonials{
         &__wrap{
             h2{
-                font-size: 28px;
-                line-height: 34px;
-                max-width: 320px;
+                font-size: 36px;
+                line-height: 42px;
+                max-width: 420px;
                 margin: 0 auto 26px;
             }
         }
@@ -3712,8 +3724,8 @@ body.admin-bar{
         position: relative;
 
         h2{
-            font-size: 41px;
-            line-height: 49px;
+            font-size: 48px;
+            line-height: 54px;
             font-family: $headingfont;
             font-weight: 500;
             color: #000;
@@ -3916,8 +3928,8 @@ body.admin-bar{
     .homeInstagram{
         &__wrap{
             h2{
-                font-size: 28px;
-                line-height: 34px;
+                font-size: 36px;
+                line-height: 42px;
                 margin: 26px auto;
 
                 span{
@@ -3970,7 +3982,7 @@ body.admin-bar{
         }
     }
     &__content{
-        width: 560px;
+        width: 650px;
         padding: 32px 40px;
         background-color: #fff;
         margin: 40px auto 0;
@@ -3981,8 +3993,8 @@ body.admin-bar{
         transition: ease .5s;
 
         h2{
-            font-size: 41px;
-            line-height: 49px;
+            font-size: 48px;
+            line-height: 54px;
             font-family: $headingfont;
             font-weight: 500;
             color: #000;
@@ -4066,7 +4078,7 @@ body.admin-bar{
                 background-size: 240px;
                 width: 240px;
                 height: 210px;
-                right: 30px;
+                right: 0;
             }
         }
     }
@@ -4078,9 +4090,14 @@ body.admin-bar{
                 background-size: 190px;
                 width: 190px;
                 height: 170px;
-                right: 0;
+                right: -40px;
             }
         }
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px){
+    .homeStart{
+        overflow: hidden;
     }
 }
 @media (max-width: 991px){
@@ -4128,10 +4145,10 @@ body.admin-bar{
             margin: 0 auto;
 
             h2{
-                font-size: 28px;
-                line-height: 34px;
+                font-size: 36px;
+                line-height: 42px;
                 margin: 0 auto 25px;
-                max-width: 250px;
+                max-width: 280px;
             }
             form{
                 max-width: 300px;
@@ -4184,8 +4201,8 @@ body.admin-bar{
     padding: 32px 0 40px;
 
     &>h2{
-        font-size: 41px;
-        line-height: 49px;
+        font-size: 48px;
+        line-height: 54px;
         font-family: $headingfont;
         font-weight: 500;
         color: #000;
@@ -4291,8 +4308,8 @@ body.admin-bar{
         padding: 15px 0;
 
         &>h2{
-            font-size: 28px;
-            line-height: 34px;
+            font-size: 36px;
+            line-height: 42px;
             margin: 0 0 15px;
         }
     }
@@ -4307,8 +4324,8 @@ body.admin-bar{
         position: relative;
 
         h2{
-            font-size: 41px;
-            line-height: 49px;
+            font-size: 48px;
+            line-height: 54px;
             font-family: $headingfont;
             font-weight: 500;
             color: #000;
@@ -4427,8 +4444,8 @@ body.admin-bar{
     .homeFaq{
         &__wrap{
             h2{
-                font-size: 28px;
-                line-height: 34px;
+                font-size: 36px;
+                line-height: 42px;
             }
         }
         &__list{

@@ -2052,8 +2052,8 @@ body.promocode .siteHeader .mobileNav__logo {
 }
 
 .homeMiska__left h2 {
-  font-size: 41px;
-  line-height: 49px;
+  font-size: 48px;
+  line-height: 54px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 500;
   color: #000;
@@ -2326,8 +2326,8 @@ body.promocode .siteHeader .mobileNav__logo {
 
 @media (max-width: 767px) {
   .homeMiska__left h2 {
-    font-size: 28px;
-    line-height: 34px;
+    font-size: 36px;
+    line-height: 42px;
     margin: 0 0 20px;
   }
   .homeMiska__left .subtitle {
@@ -2589,8 +2589,8 @@ body.promocode .siteHeader .mobileNav__logo {
 }
 
 .homeFoodinfo__right h2 {
-  font-size: 41px;
-  line-height: 49px;
+  font-size: 48px;
+  line-height: 54px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 500;
   color: #000;
@@ -2848,6 +2848,10 @@ body.promocode .siteHeader .mobileNav__logo {
     width: 100%;
     margin-bottom: 0;
   }
+  .homeFoodinfo__right h2 {
+    max-width: 480px;
+    margin: 0 auto 25px;
+  }
   .homeFoodinfo__right .info_boxes {
     justify-content: space-between;
     max-width: 320px;
@@ -2929,9 +2933,9 @@ body.promocode .siteHeader .mobileNav__logo {
     padding: 35px 0 0;
   }
   .homeFoodinfo__right h2 {
-    font-size: 28px;
-    line-height: 34px;
-    margin: 0 0 20px;
+    font-size: 36px;
+    line-height: 42px;
+    margin: 0 auto 20px;
   }
   .homeFoodinfo__right h2 span {
     display: block;
@@ -3494,8 +3498,8 @@ body.admin-bar .foodModal__wrap {
 }
 
 .homeHowitworks__wrap > h2 {
-  font-size: 41px;
-  line-height: 49px;
+  font-size: 48px;
+  line-height: 54px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 500;
   color: #000;
@@ -3601,8 +3605,8 @@ body.admin-bar .foodModal__wrap {
     display: none;
   }
   .homeHowitworks__wrap > h2 {
-    font-size: 28px;
-    line-height: 34px;
+    font-size: 36px;
+    line-height: 42px;
     margin: 0 0 25px;
   }
   .homeHowitworks__steps {
@@ -3648,8 +3652,8 @@ body.admin-bar .foodModal__wrap {
 }
 
 .homeBenefits__wrap > h2 {
-  font-size: 41px;
-  line-height: 49px;
+  font-size: 48px;
+  line-height: 54px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 500;
   color: #000;
@@ -4045,8 +4049,8 @@ body.admin-bar .foodModal__wrap {
 
 @media (max-width: 767px) {
   .homeBenefits h2 {
-    font-size: 28px;
-    line-height: 34px;
+    font-size: 36px;
+    line-height: 42px;
   }
   .homeBenefits__boxes {
     left: -140px;
@@ -4138,8 +4142,8 @@ body.admin-bar .foodModal__wrap {
 }
 
 .homePricing__left h2 {
-  font-size: 41px;
-  line-height: 49px;
+  font-size: 48px;
+  line-height: 54px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 500;
   color: #000;
@@ -4387,6 +4391,9 @@ body.admin-bar .foodModal__wrap {
 }
 
 @media (max-width: 1599px) {
+  .homePricing__left h2 {
+    max-width: 400px;
+  }
   .homePricing__right .pricingContent--discount:after {
     left: 67px;
   }
@@ -4466,8 +4473,8 @@ body.admin-bar .foodModal__wrap {
 
 @media (max-width: 767px) {
   .homePricing__left h2 {
-    font-size: 28px;
-    line-height: 34px;
+    font-size: 36px;
+    line-height: 42px;
     max-width: 250px;
   }
   .homePricing__left p {
@@ -4572,17 +4579,17 @@ body.admin-bar .foodModal__wrap {
   display: block;
   position: absolute;
   top: -40px;
-  left: 260px;
+  left: 200px;
 }
 
 .homeTestimonials__wrap h2 {
-  font-size: 41px;
-  line-height: 49px;
+  font-size: 48px;
+  line-height: 54px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 500;
   color: #000;
   margin: 0 auto 40px;
-  max-width: 700px;
+  max-width: 900px;
   text-align: center;
 }
 
@@ -4732,7 +4739,7 @@ body.admin-bar .foodModal__wrap {
 
 @media (max-width: 1599px) {
   .homeTestimonials__wrap:after {
-    left: 90px;
+    left: 30px;
   }
 }
 
@@ -4743,6 +4750,9 @@ body.admin-bar .foodModal__wrap {
     height: 185px;
     top: -40px;
     left: 0;
+  }
+  .homeTestimonials__wrap h2 {
+    max-width: 680px;
   }
   .homeTestimonials__slider .slick-list {
     margin: 0;
@@ -4778,9 +4788,9 @@ body.admin-bar .foodModal__wrap {
 
 @media (max-width: 767px) {
   .homeTestimonials__wrap h2 {
-    font-size: 28px;
-    line-height: 34px;
-    max-width: 320px;
+    font-size: 36px;
+    line-height: 42px;
+    max-width: 420px;
     margin: 0 auto 26px;
   }
   .homeTestimonials__slider .slick-arrow.slick-prev {
@@ -4810,8 +4820,8 @@ body.admin-bar .foodModal__wrap {
 }
 
 .homeInstagram__wrap h2 {
-  font-size: 41px;
-  line-height: 49px;
+  font-size: 48px;
+  line-height: 54px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 500;
   color: #000;
@@ -5001,8 +5011,8 @@ body.admin-bar .foodModal__wrap {
 
 @media (max-width: 767px) {
   .homeInstagram__wrap h2 {
-    font-size: 28px;
-    line-height: 34px;
+    font-size: 36px;
+    line-height: 42px;
     margin: 26px auto;
   }
   .homeInstagram__wrap h2 span {
@@ -5049,7 +5059,7 @@ body.admin-bar .foodModal__wrap {
 }
 
 .homeStart__content {
-  width: 560px;
+  width: 650px;
   padding: 32px 40px;
   background-color: #fff;
   margin: 40px auto 0;
@@ -5061,8 +5071,8 @@ body.admin-bar .foodModal__wrap {
 }
 
 .homeStart__content h2 {
-  font-size: 41px;
-  line-height: 49px;
+  font-size: 48px;
+  line-height: 54px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 500;
   color: #000;
@@ -5143,7 +5153,7 @@ body.admin-bar .foodModal__wrap {
     background-size: 240px;
     width: 240px;
     height: 210px;
-    right: 30px;
+    right: 0;
   }
 }
 
@@ -5152,7 +5162,13 @@ body.admin-bar .foodModal__wrap {
     background-size: 190px;
     width: 190px;
     height: 170px;
-    right: 0;
+    right: -40px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .homeStart {
+    overflow: hidden;
   }
 }
 
@@ -5197,10 +5213,10 @@ body.admin-bar .foodModal__wrap {
     margin: 0 auto;
   }
   .homeStart__content h2 {
-    font-size: 28px;
-    line-height: 34px;
+    font-size: 36px;
+    line-height: 42px;
     margin: 0 auto 25px;
-    max-width: 250px;
+    max-width: 280px;
   }
   .homeStart__content form {
     max-width: 300px;
@@ -5247,8 +5263,8 @@ body.admin-bar .foodModal__wrap {
 }
 
 .pbShortcuts > h2 {
-  font-size: 41px;
-  line-height: 49px;
+  font-size: 48px;
+  line-height: 54px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 500;
   color: #000;
@@ -5347,8 +5363,8 @@ body.admin-bar .foodModal__wrap {
     padding: 15px 0;
   }
   .pbShortcuts > h2 {
-    font-size: 28px;
-    line-height: 34px;
+    font-size: 36px;
+    line-height: 42px;
     margin: 0 0 15px;
   }
 }
@@ -5363,8 +5379,8 @@ body.admin-bar .foodModal__wrap {
 }
 
 .homeFaq__wrap h2 {
-  font-size: 41px;
-  line-height: 49px;
+  font-size: 48px;
+  line-height: 54px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 500;
   color: #000;
@@ -5477,8 +5493,8 @@ body.admin-bar .foodModal__wrap {
 
 @media (max-width: 767px) {
   .homeFaq__wrap h2 {
-    font-size: 28px;
-    line-height: 34px;
+    font-size: 36px;
+    line-height: 42px;
   }
   .homeFaq__list .question__heading p {
     font-size: 16px;
@@ -5620,8 +5636,8 @@ body.admin-bar .foodModal__wrap {
 }
 
 .recipesMenu__heading h2 {
-  font-size: 41px;
-  line-height: 49px;
+  font-size: 48px;
+  line-height: 54px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   text-align: center;
@@ -5674,8 +5690,8 @@ body.admin-bar .foodModal__wrap {
     margin: 0 0 30px;
   }
   .recipesMenu__heading h2 {
-    font-size: 28px;
-    line-height: 34px;
+    font-size: 36px;
+    line-height: 42px;
     margin: 0 0 10px;
   }
   .recipesMenu__heading p {
@@ -5721,8 +5737,8 @@ body.admin-bar .foodModal__wrap {
 }
 
 .recipesExpert__wrap h2 {
-  font-size: 41px;
-  line-height: 49px;
+  font-size: 48px;
+  line-height: 54px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   text-align: center;
@@ -5810,9 +5826,9 @@ body.admin-bar .foodModal__wrap {
 
 @media (max-width: 767px) {
   .recipesExpert__wrap h2 {
-    font-size: 28px;
-    line-height: 34px;
-    max-width: 240px;
+    font-size: 36px;
+    line-height: 42px;
+    max-width: 320px;
     margin: 0 auto 20px;
   }
   .recipesExpert__expert .image {
@@ -5840,8 +5856,8 @@ body.admin-bar .foodModal__wrap {
 }
 
 .recipesParts__heading h2 {
-  font-size: 41px;
-  line-height: 49px;
+  font-size: 48px;
+  line-height: 54px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   text-align: center;
@@ -6038,8 +6054,8 @@ body.admin-bar .foodModal__wrap {
     margin: 0 0 25px;
   }
   .recipesParts__heading h2 {
-    font-size: 28px;
-    line-height: 34px;
+    font-size: 36px;
+    line-height: 42px;
   }
   .recipesParts__heading p {
     font-size: 14px;
@@ -6078,8 +6094,8 @@ body.admin-bar .foodModal__wrap {
 }
 
 .recipesSafety__content > h2 {
-  font-size: 41px;
-  line-height: 49px;
+  font-size: 48px;
+  line-height: 54px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   text-align: center;
@@ -6136,10 +6152,10 @@ body.admin-bar .foodModal__wrap {
 
 @media (max-width: 991px) {
   .recipesSafety__content > h2 {
-    font-size: 28px;
-    line-height: 34px;
+    font-size: 36px;
+    line-height: 42px;
     margin: 0 auto 20px;
-    max-width: 320px;
+    max-width: 360px;
     padding: 0;
   }
   .recipesSafety__content > h2 br {
@@ -6208,14 +6224,44 @@ body.admin-bar .foodModal__wrap {
   text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
-.howHeading__wrap p {
+.howHeading__wrap .tags {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 50px;
+}
+
+.howHeading__wrap .tags div {
+  display: flex;
   font-size: 25px;
-  line-height: 30px;
+  line-height: 29px;
+  font-weight: 500;
   color: #fff;
-  text-align: center;
-  max-width: 450px;
-  margin: 0 auto;
-  text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  padding: 0 20px;
+  text-shadow: 3px 4px #00000024;
+}
+
+.howHeading__wrap .tags div:nth-child(2):before {
+  content: '|';
+  font-size: 25px;
+  color: #fff;
+  margin-right: 20px;
+}
+
+.howHeading__wrap .tags div:nth-child(2):after {
+  content: '|';
+  font-size: 25px;
+  color: #fff;
+  margin-left: 20px;
+}
+
+.howHeading__wrap .tags div:first-of-type {
+  padding-right: 0;
+}
+
+.howHeading__wrap .tags div:last-of-type {
+  padding-left: 0;
 }
 
 @media (max-width: 991px) {
@@ -6225,6 +6271,28 @@ body.admin-bar .foodModal__wrap {
   }
   .howHeading__wrap {
     padding-bottom: 40px;
+  }
+  .howHeading__wrap .tags {
+    margin: 0 0 20px;
+  }
+  .howHeading__wrap .tags div {
+    font-size: 18px;
+    line-height: 24px;
+    padding: 0 10px;
+  }
+  .howHeading__wrap .tags div:nth-child(2):before {
+    font-size: 18px;
+    line-height: 1;
+    position: relative;
+    top: 1px;
+    margin-right: 15px;
+  }
+  .howHeading__wrap .tags div:nth-child(2):after {
+    font-size: 18px;
+    line-height: 1;
+    position: relative;
+    top: 1px;
+    margin-left: 15px;
   }
 }
 
@@ -6236,6 +6304,25 @@ body.admin-bar .foodModal__wrap {
   .howHeading__wrap p {
     font-size: 20px;
     line-height: 24px;
+  }
+}
+
+@media (max-width: 575px) {
+  .howHeading__wrap .tags div {
+    text-align: center;
+  }
+  .howHeading__wrap .tags div:nth-child(2) {
+    border-left: 3px solid #fff;
+    border-right: 3px solid #fff;
+    margin: 0 10px;
+  }
+  .howHeading__wrap .tags div:nth-child(2):before, .howHeading__wrap .tags div:nth-child(2):after {
+    display: none;
+  }
+  .howHeading__wrap .tags div p {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0;
   }
 }
 
@@ -6256,8 +6343,8 @@ body.admin-bar .foodModal__wrap {
 }
 
 .howVideo__heading h2 {
-  font-size: 41px;
-  line-height: 49px;
+  font-size: 48px;
+  line-height: 54px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   color: #000;
@@ -6399,8 +6486,8 @@ body.admin-bar .foodModal__wrap {
     padding: 24px 0;
   }
   .howVideo__heading h2 {
-    font-size: 28px;
-    line-height: 34px;
+    font-size: 36px;
+    line-height: 42px;
     margin: 0 0 24px;
   }
   .howVideo__cta {
@@ -6546,8 +6633,8 @@ body.admin-bar .foodModal__wrap {
 }
 
 .howInfo__heading h2 {
-  font-size: 41px;
-  line-height: 49px;
+  font-size: 48px;
+  line-height: 54px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   color: #000;
@@ -6623,9 +6710,9 @@ body.admin-bar .foodModal__wrap {
 
 @media (max-width: 767px) {
   .howInfo__heading h2 {
-    font-size: 28px;
-    line-height: 34px;
-    max-width: 250px;
+    font-size: 36px;
+    line-height: 42px;
+    max-width: 320px;
     margin: 0 auto 32px;
   }
   .howInfo__content {
@@ -6661,8 +6748,8 @@ body.admin-bar .foodModal__wrap {
 }
 
 .howPlan__heading h2 {
-  font-size: 41px;
-  line-height: 49px;
+  font-size: 48px;
+  line-height: 54px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   color: #000;
@@ -6824,8 +6911,8 @@ body.admin-bar .foodModal__wrap {
 }
 
 .howPlan__delivery h3 {
-  font-size: 41px;
-  line-height: 49px;
+  font-size: 48px;
+  line-height: 54px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   color: #000;
@@ -6863,8 +6950,8 @@ body.admin-bar .foodModal__wrap {
     padding: 26px 0;
   }
   .howPlan__heading h2 {
-    font-size: 28px;
-    line-height: 34px;
+    font-size: 36px;
+    line-height: 42px;
     margin: 0 0 26px;
   }
   .howPlan .pbPlans__content .content {
@@ -6885,6 +6972,10 @@ body.admin-bar .foodModal__wrap {
   }
   .howPlan .pbPlans__content .content__content .text {
     margin: 0 auto 40px;
+  }
+  .howPlan__delivery h3 {
+    font-size: 36px;
+    line-height: 42px;
   }
 }
 
@@ -6931,8 +7022,9 @@ body.admin-bar .foodModal__wrap {
     margin-right: -30px;
   }
   .howPlan__delivery h3 {
-    font-size: 28px;
-    line-height: 34px;
+    max-width: 380px;
+    margin: 0 auto 10px;
+    padding: 0 10px;
   }
   .howPlan__delivery p {
     font-size: 16px;
@@ -6946,8 +7038,8 @@ body.admin-bar .foodModal__wrap {
 }
 
 .howUsers__heading h2 {
-  font-size: 41px;
-  line-height: 49px;
+  font-size: 48px;
+  line-height: 54px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   color: #000;
@@ -7182,9 +7274,10 @@ body.admin-bar .foodModal__wrap {
     padding: 26px 0;
   }
   .howUsers__heading h2 {
-    font-size: 28px;
-    line-height: 34px;
+    font-size: 36px;
+    line-height: 42px;
     margin: 0 0 26px;
+    padding: 0 10px;
   }
 }
 
@@ -12267,8 +12360,8 @@ body a:hover {
 }
 
 .pbQuestions__title {
-  font-size: 41px;
-  line-height: 49px;
+  font-size: 48px;
+  line-height: 54px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   text-align: center;
@@ -12305,8 +12398,8 @@ body a:hover {
     padding: 24px 0 0;
   }
   .pbQuestions__title {
-    font-size: 28px;
-    line-height: 34px;
+    font-size: 36px;
+    line-height: 42px;
   }
   .pbQuestions__wrap {
     position: relative;
