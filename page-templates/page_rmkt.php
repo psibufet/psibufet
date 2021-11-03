@@ -245,7 +245,7 @@ get_header(); ?>
                 </div>
                 <div class="expertInfo">
                     <div class="expertInfo__image">
-                        <img src="<?php echo get_template_directory_uri() . '/images/expertphoto.png'; ?>"/>
+                        <img src="<?php echo get_template_directory_uri() . '/images/expertphoto.webp'; ?>"/>
                     </div>
                     <div class="expertInfo__content">
                         <p><b>Składy karm PsiBufet</b> zostały opracowane i zweryfikowane przez <b>Eksperta.</b></p>
