@@ -1893,7 +1893,7 @@ body.promocode .siteHeader .mobileNav__logo {
 @media (max-width: 767px) {
   .homeHeaderV2 {
     height: 764px;
-    background-image: url("/wp-content/themes/psibufet/images/homepage/homeHeaderV2_mobile.png") !important;
+    background-image: url("/wp-content/themes/psibufet/images/homepage/homeHeaderV2_mobile.webp") !important;
     background-size: auto 100%;
   }
   .homeHeaderV2__wrap {
