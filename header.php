@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="/wp-content/themes/psibufet/css/custom.css?ver=1.1.5" />
     <link rel="stylesheet" href="/wp-content/themes/psibufet/flexslider/flexslider.css" type="text/css">
     <link rel="stylesheet" href="/wp-content/themes/psibufet/slick/slick.css" type="text/css">
-    <script src="https://kit.fontawesome.com/a1019066cc.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/a1019066cc.js" crossorigin="anonymous"></script> -->
     <script src="/wp-content/themes/psibufet/plugins/jQuery/jquery-2.2.4.min.js"></script>
     <script type="text/javascript">
         jQuery(document).ready(function(){
