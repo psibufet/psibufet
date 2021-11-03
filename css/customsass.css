@@ -2407,7 +2407,7 @@ body.promocode .siteHeader .mobileNav__logo {
 }
 
 .homeFoodinfo {
-  background-image: url("/wp-content/themes/psibufet/images/homefoodinfobg.png");
+  background-image: url("/wp-content/themes/psibufet/images/homefoodinfobg.webp");
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 650px;

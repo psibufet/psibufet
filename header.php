@@ -44,10 +44,10 @@
     <!-- Autocomplete end -->
 
     <script type="text/javascript" src="/wp-content/themes/psibufet/plugins/visible/jquery.visible.min.js"></script>
-    <script type="text/javascript" src="/wp-content/themes/psibufet/js/custom.js"></script>
-    <script type="text/javascript" src="/wp-content/themes/psibufet/js/_sliders.js"></script>
-    <script type="text/javascript" src="/wp-content/themes/psibufet/js/animation.js"></script>
-    <script type="text/javascript" src="/wp-content/themes/psibufet/js/dataLayers.js?ver=1.52"></script>
+    <script type="text/javascript" src="/wp-content/themes/psibufet/js/custom.js" async></script>
+    <script type="text/javascript" src="/wp-content/themes/psibufet/js/_sliders.js" async></script>
+    <script type="text/javascript" src="/wp-content/themes/psibufet/js/animation.js" async></script>
+    <script type="text/javascript" src="/wp-content/themes/psibufet/js/dataLayers.js?ver=1.52" async></script>
     <?php 
         function startsWith( $haystack, $needle ) {
             $length = strlen( $needle );
@@ -55,12 +55,12 @@
        }
         if (!startsWith ($_SERVER['REQUEST_URI'], '/lp')):
     ?>
-        <script type="text/javascript" src="/wp-content/themes/psibufet/js/referralCode.js?ver=1.1"></script>
+        <script type="text/javascript" src="/wp-content/themes/psibufet/js/referralCode.js?ver=1.1" defer></script>
     <?php else: ?>
-        <script type="text/javascript" src="/wp-content/themes/psibufet/js/referralCode_lp.js?ver=1.1"></script>
+        <script type="text/javascript" src="/wp-content/themes/psibufet/js/referralCode_lp.js?ver=1.1" defer></script>
     <?php endif; ?>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js" defer></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
     <?php if ( ! function_exists( 'has_site_icon' ) || ! has_site_icon() ) : ?>
     <?php if ( get_theme_mod('site_favicon') ) : ?>
