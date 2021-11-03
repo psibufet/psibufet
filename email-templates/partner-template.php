@@ -52,6 +52,9 @@
                 font-family: 'Roboto';
                 margin: 0 0 20px;
             }
+            .email p span{
+                font-size: 12px;
+            }
             .email p.beforeul{
                 margin: 0 0 5px;
             }
@@ -108,7 +111,7 @@
                 text-align: center;
             }
             .email .image img{
-                max-width: 200px;
+                max-width: 150px;
                 margin: 0 auto 15px;
             }
             .email .image p{
@@ -133,33 +136,29 @@
         <div class="emailWrap">
             <div class="email">
                 <img src="https://psibufet.pl/wp-content/themes/psibufet/images/email/psibufet_logo.png"/>
-                <p>Cześć!<br/>Nazywam się Michalina i przeprowadzę Cię przez proces dołączania do naszej ekipy 🐶</p>
-                <p>Jest mi bardzo miło, że się ze mną kontaktujesz 😊 Wysyłając do nas zgłoszenie, pokazujesz, że zależy Ci na szczęściu i zdrowiu psiaków, tak jak nam wszystkim w PsiBufet.</p>
-                <p>Program Partnerski daje Tobie wiele przywilejów i możliwości, dzięki którym możesz jeszcze łatwiej pomagać psiakom w całej Polsce.</p>
-                <p class="beforeul">Jako Partner PsiBufet zyskujesz:</p>
+                <p>Cześć!<br/>Dziękuję za kontakt i zainteresowanie naszym Programem Partnerskim, dzięki któremu otrzymasz:</p>
                 <ul>
-                    <li>indywidualny kod zniżkowy na dietę PsiBufet w wysokości -30% do rozpowszechniania,</li>
-                    <li>wynagrodzenie 100 zł za każdą pierwszą oraz 50 zł za każdą drugą sprzedaż z kodu zniżkowego,</li>
-                    <li>rozliczenie na podstawie podpisanej umowy partnerskiej,</li>
+                    <li>Twój indywidualny kod zniżkowy <b>-30%</b> na dietę PsiBufet do rozpowszechniania</li>
+                    <li>wynagrodzenie <b>100 zł</b> za każde pierwsze oraz <b>50 zł</b> za każde drugie zamówienie złożone przez tego samego użytkownika z użyciem Twojego kodu zniżkowego</li>
+                    <li>wsparcie w postaci materiałów edukacyjnych i reklamowych o PsiBufet</li>
                     <li>materiały edukacyjne i reklamowe o PsiBufet,</li>
-                    <li>możliwość stania się częścią firmy, gdzie każdy dzień rozpoczynamy od głaskania piesków 🐕</li>
+                    <li>rozliczenie na podstawie podpisanej umowy partnerskiej</li>
                 </ul>
-                <p>Decydujesz się do nas dołączyć? To świetnie! ❤️</p>
-                <p class="beforeul">Co teraz?</p>
+                <p>Chcesz do nas dołączyć? Świetnie! Zrobimy to tak:</p>
                 <ul class="decimal">
-                    <li>Sporządzamy umowę na podstawie podanych mi przez Ciebie danych i przesyłam do Ciebie uzupełnioną umowę poprzez platformę Autenti do podpisu.</li>
-                    <li>Przesyłam do Ciebie wszelkie informacje potrzebne do promowania diety PsiBufet z Twoim kodem zniżkowym.</li>
-                    <li>Otrzymujesz od nas wynagrodzenie oraz dostęp do specjalnych materiałów i wydarzeń.</li>
-                    <li>Jesteś częścią naszej ekipy PsiBufet i wspólnie z nami zmieniasz oblicze żywienia psów w Polsce!</li>
+                    <li>Na podstawie Twoich danych sporządzę umowę partnerską i prześlę Ci ją do podpisu poprzez <b>platformę Autenti</b></li>
+                    <li>Przekażę Ci wskazówki do promowania diety PsiBufet za pomocą Twojego kodu zniżkowego</li>
+                    <li>Kiedy Twój kod zacznie być używany otrzymasz od nas wynagrodzenie oraz dostęp do specjalnych materiałów i wydarzeń</li>
+                    <li>Jako Partner PsiBufet zmienisz z nami oblicze żywienia psów w Polsce!</li>
                 </ul>
-                <p class="center">To co, zaczynamy? 😊</p>
+                <p class="center">To co, zaczynamy? <span>😊</span></p>
                 <p class="center">Pod poniższym linkiem znajdziesz umowę do wglądu.</p>
                 <a href="https://psibufet.pl/umowa_partnerska_psibufet.pdf" class="btn"><span>Umowa partnerska</span></a>
-                <p class="center">Czekam na Twoją decyzję.<br/>Z psiozdrowieniami,</p>
+                <p class="center">Czekam na Twoją decyzję, a w razie pytań pozostaję do dyspozycji.<br/>Z psiozdrowieniami,</p>
                 <div class="image">
                     <img src="https://psibufet.pl/wp-content/themes/psibufet/images/email/michalina_photo.png"/>
                     <p>Michalina</p>
-                    <p class="big">Specjalistka ds. partnerstw</p>
+                    <p class="big">Specjalistka ds. Programu Partnerskiego</p>
                 </div>
             </div>
         </div>
