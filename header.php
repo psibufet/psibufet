@@ -20,8 +20,8 @@
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <?php if(!is_front_page()): ?>
         <link rel="stylesheet" href="/wp-content/themes/psibufet/css/custom.css?ver=1.1.5" />
+        <link rel="stylesheet" href="/wp-content/themes/psibufet/flexslider/flexslider.css" type="text/css">
     <?php endif; ?>
-    <link rel="stylesheet" href="/wp-content/themes/psibufet/flexslider/flexslider.css" type="text/css">
     <link rel="stylesheet" href="/wp-content/themes/psibufet/slick/slick.css" type="text/css">
     <!-- <script src="https://kit.fontawesome.com/a1019066cc.js" crossorigin="anonymous"></script> -->
     <script src="/wp-content/themes/psibufet/plugins/jQuery/jquery-2.2.4.min.js"></script>
@@ -39,11 +39,13 @@
     <script src="/wp-content/themes/psibufet/flexslider/jquery.flexslider.js"></script>
     <script src="/wp-content/themes/psibufet/slick/slick.min.js"></script>
 
+    <?php if(!is_front_page()): ?>
     <!-- Autocomplete start -->
-    <script src="/wp-content/themes/psibufet/plugins/autocomplete/jquery.easy-autocomplete.min.js"></script>
-    <link rel="stylesheet" href="/wp-content/themes/psibufet/plugins/autocomplete/easy-autocomplete.min.css">
-    <link rel="stylesheet" href="/wp-content/themes/psibufet/plugins/autocomplete/easy-autocomplete.themes.min.css">
+        <script src="/wp-content/themes/psibufet/plugins/autocomplete/jquery.easy-autocomplete.min.js"></script>
+        <link rel="stylesheet" href="/wp-content/themes/psibufet/plugins/autocomplete/easy-autocomplete.min.css">
+        <link rel="stylesheet" href="/wp-content/themes/psibufet/plugins/autocomplete/easy-autocomplete.themes.min.css">
     <!-- Autocomplete end -->
+    <?php endif; ?>
 
     <script type="text/javascript" src="/wp-content/themes/psibufet/plugins/visible/jquery.visible.min.js"></script>
     <script type="text/javascript" src="/wp-content/themes/psibufet/js/custom.js" async></script>
