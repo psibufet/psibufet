@@ -64,7 +64,7 @@
             <div class="siteInfo__wrap">
                 <div class="siteInfo__left">
                     <p class="company">Feedwell sp. z o.o. NIP: 1133005563<br />
-                        ul. Międzyborska 10B/124 , 04-041 Warszawa</p>
+                    ul. Sienna 64, 00-825 Warszawa</p>
                 </div>
                 <div class="siteInfo__right">
                     <a target="_blank" href="https://wizytowka.rzetelnafirma.pl/FKSA1C9O" rel="nofollow" class="rzetelna"><img src="<?php echo get_template_directory_uri() . '/images/icons/rzetelnafirma_ico.svg'; ?>"/></a>

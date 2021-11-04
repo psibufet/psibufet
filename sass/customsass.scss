@@ -64,7 +64,7 @@ body{
             height: 10px;
             position: absolute;
             background-color: $redcolor;
-            bottom: 8px;
+            bottom: 10px;
             z-index: -1;
             left: -1.5%;
             transition: ease 1s;
@@ -83,7 +83,7 @@ body{
         .marker{
             &:after{
                 height: 7px;
-                bottom: 5px;
+                bottom: 7px;
             }
         }
     }

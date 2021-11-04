@@ -134,7 +134,7 @@ get_header(); ?>
                 </div>
             </div>
             <div class="homeFoodinfo__right">
-                <h2 class="getMarker">Jedzenie, którego <span class="marker">pozazdrościsz</span> swojemu psu</h2>
+                <h2 class="getMarker">Jedzenie, <br/>którego <span class="marker">pozazdrościsz</span> <br/>swojemu psu</h2>
                 <p><b>55% mięsa oraz 45% warzyw i owoców,<br/>pełna suplementacja mineralno-witaminowa.</b></p>
                 <div class="info_boxes">
                     <div class="box">

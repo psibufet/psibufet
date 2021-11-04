@@ -231,6 +231,12 @@
             margin: 0 0 20px;
             text-shadow: 3px 4px #00000024;
             text-align: center;
+
+            .marker{
+                &:after{
+                    bottom: 8px;
+                }
+            }
         }
         .tags{
             display: flex;
@@ -523,6 +529,12 @@
             h2{
                 font-size: 52px;
                 line-height: 62px;
+
+                .marker{
+                    &:after{
+                        bottom: 5px;
+                    }
+                }
             }
             .tags{
                 div{
@@ -972,7 +984,8 @@
             h2{
                 font-size: 36px;
                 line-height: 42px;
-                margin: 0 0 20px;
+                margin: 0 auto 20px;
+                max-width: 260px;
             }
             .subtitle{
                 font-size: 14px;
@@ -1248,6 +1261,10 @@
             font-weight: 500;
             color: #000;
             margin: 0 0 25px;
+
+            br{
+                display: none;
+            }
         }
         p{
             font-size: 16px;
@@ -1631,9 +1648,12 @@
                 margin: 0 auto 20px;
 
                 span{
-                    display: block;
+                    display: inline-block;
                     max-width: fit-content;
                     margin: 0 auto;
+                }
+                br{
+                    display: block;
                 }
             }
             p{
