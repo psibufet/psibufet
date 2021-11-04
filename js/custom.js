@@ -1112,7 +1112,9 @@ $(document).ready(function(){
             }	
         }
     };
-    $('input[name="rasa_psa"]').easyAutocomplete(options);
+    if(!$('body').hasClass('page-template-page_front-page')){
+        $('input[name="rasa_psa"]').easyAutocomplete(options);
+    }
 
     /* Videos */
 
