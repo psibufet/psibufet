@@ -174,12 +174,12 @@ if ( ! defined( 'ELEMENTOR_PARTNER_ID' ) ) {
  */
 function sydney_scripts() {
 
-	wp_enqueue_style( 'sydney-google-fonts', esc_url( sydney_enqueue_google_fonts() ), array(), null );
+	// wp_enqueue_style( 'sydney-google-fonts', esc_url( sydney_enqueue_google_fonts() ), array(), null );
 
-	if ( is_customize_preview() ) {
-		wp_enqueue_style( 'sydney-preview-google-fonts-body', 'https://fonts.googleapis.com/', array(), null );
-		wp_enqueue_style( 'sydney-preview-google-fonts-headings', 'https://fonts.googleapis.com/', array(), null );
-	}
+	// if ( is_customize_preview() ) {
+	// 	wp_enqueue_style( 'sydney-preview-google-fonts-body', 'https://fonts.googleapis.com/', array(), null );
+	// 	wp_enqueue_style( 'sydney-preview-google-fonts-headings', 'https://fonts.googleapis.com/', array(), null );
+	// }
 
 	wp_enqueue_style( 'sydney-style', get_stylesheet_uri(), '', '20200129' );
 

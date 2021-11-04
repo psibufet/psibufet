@@ -6,6 +6,26 @@ Version: 99.99
 Description: GitHub
 */
 
+/**
+ * 	Fonts
+ */
+
+@font-face {
+	font-family: "Roboto";
+	font-weight: 400;
+	src: url('/wp-content/themes/psibufet/fonts/Roboto/Roboto-Regular.ttf') format("truetype");
+}
+@font-face {
+	font-family: "Roboto";
+	font-weight: 500;
+	src: url('/wp-content/themes/psibufet/fonts/Roboto/Roboto-Medium.ttf') format("truetype");
+}
+@font-face {
+	font-family: "Roboto";
+	font-weight: 700;
+	src: url('/wp-content/themes/psibufet/fonts/Roboto/Roboto-Bold.ttf') format("truetype");
+}
+
 /*--------------------------------------------------------------
 Repeatable Patterns
 --------------------------------------------------------------*/
@@ -19,7 +39,7 @@ Repeatable Patterns
 	body {
 		font-size: 14px;
 		line-height: 1.7;
-		font-family: "Source Sans Pro", sans-serif;
+		font-family: "Roboto", sans-serif;
 		background: #fff;
 		color: #767676;
         overflow-x: hidden;
