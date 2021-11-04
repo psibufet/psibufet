@@ -18,7 +18,9 @@
     <meta name="twitter:image" content="https://psibufet.pl/wp-content/uploads/2021/09/OpenGraph.png">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-    <link rel="stylesheet" href="/wp-content/themes/psibufet/css/custom.css?ver=1.1.5" />
+    <?php if(!is_front_page()): ?>
+        <link rel="stylesheet" href="/wp-content/themes/psibufet/css/custom.css?ver=1.1.5" />
+    <?php endif; ?>
     <link rel="stylesheet" href="/wp-content/themes/psibufet/flexslider/flexslider.css" type="text/css">
     <link rel="stylesheet" href="/wp-content/themes/psibufet/slick/slick.css" type="text/css">
     <!-- <script src="https://kit.fontawesome.com/a1019066cc.js" crossorigin="anonymous"></script> -->
