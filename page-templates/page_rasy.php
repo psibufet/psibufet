@@ -7,6 +7,9 @@ get_header();
 if($_SERVER['SERVER_NAME'] == 'psibufet.local'){
     $howitworks = 1996;
     $recipesPage = 1956;
+}else if($_SERVER['SERVER_NAME'] == 'psibufet.codestick.pl'){
+    $howitworks = 1985;
+    $recipesPage = 1955;
 }else{
     $howitworks = 2310;
     $recipesPage = 2271;
