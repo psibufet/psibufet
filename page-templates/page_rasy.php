@@ -4,11 +4,13 @@
      */
 get_header();
 
-$howitworks = 1996;
-// $howitworks = 2310;
-
-$recipesPage = 1956;
-// $recipesPage = 2271;
+if($_SERVER['SERVER_NAME'] == 'psibufet.local'){
+    $howitworks = 1996;
+    $recipesPage = 1956;
+}else{
+    $howitworks = 2310;
+    $recipesPage = 2271;
+}
 ?>
 
 <main class="psibufet psibufet--lprasy">
