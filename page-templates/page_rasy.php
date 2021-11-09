@@ -28,7 +28,7 @@ if($_SERVER['SERVER_NAME'] == 'psibufet.local'){
                 <div class="tags__divider"></div>
                 <p>Dostawa pod drzwi</p>
             </div>
-            <a href="#" class="btn"><span>Stwórz dietę</span></a>
+            <a href="https://zamowienie.psibufet.pl/" class="btn"><span>Stwórz dietę</span></a>
         </div>
     </section>
 
