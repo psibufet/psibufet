@@ -1222,3 +1222,85 @@ $(document).ready(function(){
         $('.siteHeader__menu').find('.btn.dir').attr('href', hrefNew);
     }
 });
+
+/**
+ *  Subscription modal
+ */
+$(document).ready(function(){
+    var openstatus = false;
+    $('.openSubModal').on('click', function(){
+        openstatus = true;
+        $('body').addClass('noscroll');
+        $('.subscriptionModal').addClass('subscriptionModal--ready');
+        setTimeout(function(){
+            $('.subscriptionModal').addClass('subscriptionModal--active');
+            setTimeout(function(){
+                $('.subscriptionModal').find('.getMarker').addClass('init');
+            }, 1000);
+        }, 300);
+
+        $('.closeSubModal').on('click', function(){
+            openstatus = false;
+            $('body').removeClass('noscroll');
+            $('.subscriptionModal').removeClass('subscriptionModal--active');
+            setTimeout(function(){
+                $('.subscriptionModal').removeClass('subscriptionModal--ready');
+                $('.subscriptionModal').find('.getMarker').removeClass('init');
+            }, 300);
+        });
+        $(document).mouseup(function(e){
+            if($('.subscriptionModal').hasClass('subscriptionModal--active')){
+                var modalWrap = $('.subscriptionModal').find('.subscriptionModal__wrap');
+                if (!modalWrap.is(e.target) && modalWrap.has(e.target).length === 0 && openstatus == true){
+                    $('body').removeClass('noscroll');
+                    $('.subscriptionModal').removeClass('subscriptionModal--active');
+                    setTimeout(function(){
+                        $('.subscriptionModal').removeClass('subscriptionModal--ready');
+                        $('.subscriptionModal').find('.getMarker').removeClass('init');
+                    }, 300);
+                }
+            }
+        });
+    });
+});
+
+
+/**
+ *  LP - Rasy 
+ */
+$(document).ready(function(){
+    if($('body').hasClass('page-template-page_rasy')){
+        var getRasa = GetURLParameter('rasa');
+        var rasaURL = [
+            'labrador',
+            'maltanczyk',
+            'szpic',
+            'owczarek',
+            'york',
+            'chihuahua'
+        ]
+        var rasaList = [
+            'Labradora',
+            'Maltańczyka',
+            'Szpica miniaturowego',
+            'Owczarka niemieckiego',
+            'Yorkshire terriera',
+            'Chihuahua'
+        ];
+        if(rasaURL.indexOf(getRasa) !== -1){
+            var rasy = new Map();
+            for(var i = 0; i < rasaURL.length; i++){
+                rasy.set(rasaURL[i], rasaList[i]);
+            }
+            for (var key of rasy.keys()) {
+                if(key == getRasa){
+                    $('.rasaHeader').addClass('rasaHeader--' + key);
+                    $('.rasaHeader h2.rasa').text(rasy.get(key));
+                }
+            }
+        }else{
+            $('.rasaHeader').addClass('rasaHeader--labrador');
+            $('.rasaHeader h2.rasa').text('Labradora');
+        }
+    }
+});

@@ -1,0 +1,453 @@
+.rasaHeader{
+    min-height: 600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $yellowcolor;
+    position: relative;
+
+    &--labrador{
+        .dog{
+            &:before{
+                background-image: url('/wp-content/themes/psibufet/images/lprasy/desktop/labrador_shadow.png');
+            }
+            &:after{
+                background-image: url('/wp-content/themes/psibufet/images/lprasy/desktop/labrador.png');
+            }
+        }
+    }
+    &--maltanczyk{
+        .dog{
+            &:before{
+                background-image: url('/wp-content/themes/psibufet/images/lprasy/desktop/maltanczyk_shadow.png');
+            }
+            &:after{
+                background-image: url('/wp-content/themes/psibufet/images/lprasy/desktop/maltanczyk.png');
+            }
+        }
+    }
+    &--szpic{
+        .dog{
+            &:before{
+                background-image: url('/wp-content/themes/psibufet/images/lprasy/desktop/szpic_shadow.png');
+            }
+            &:after{
+                background-image: url('/wp-content/themes/psibufet/images/lprasy/desktop/szpic.png');
+            }
+        }
+    }
+    &--owczarek{
+        .dog{
+            &:before{
+                display: none;
+            }
+            &:after{
+                background-image: url('/wp-content/themes/psibufet/images/lprasy/desktop/owczarek.png');
+            }
+        }
+    }
+    &--york{
+        .dog{
+            &:before{
+                background-image: url('/wp-content/themes/psibufet/images/lprasy/desktop/york_shadow.png');
+            }
+            &:after{
+                background-image: url('/wp-content/themes/psibufet/images/lprasy/desktop/york.png');
+            }
+        }
+    }
+    &--chihuahua{
+        .dog{
+            &:before{
+                background-image: url('/wp-content/themes/psibufet/images/lprasy/desktop/chihuahua_shadow.png');
+            }
+            &:after{
+                background-image: url('/wp-content/themes/psibufet/images/lprasy/desktop/chihuahua.png');
+            }
+        }
+    }
+
+    .dog{
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        &:before{
+            content: '';
+            background-repeat: no-repeat;
+            background-size: 550px;
+            width: 550px;
+            height: 600px;
+            position: relative;
+            display: block;
+            mix-blend-mode: multiply;
+            z-index: 1;
+        }
+        &:after{
+            content: '';
+            background-repeat: no-repeat;
+            background-size: 550px;
+            width: 550px;
+            height: 600px;
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: 2;
+        }
+    }
+    .hand{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        &:after{
+            content: '';
+            background-image: url('/wp-content/themes/psibufet/images/lprasy/paczka_karmy.png');
+            background-repeat: no-repeat;
+            background-size: 375px;
+            width: 375px;
+            height: 600px;
+            position: relative;
+            display: block;
+        }
+    }
+
+    &__wrap{
+        text-align: center;
+
+        h3{
+            font-size: 25px;
+            line-height: 29px;
+            color: #fff;
+            text-align: center;
+            margin: 0 0 15px;
+            font-weight: 400;
+        }
+        h2{
+            font-size: 60px;
+            line-height: 72px;
+            color: #fff;
+            text-align: center;
+            margin: 0 0 10px;
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 400;
+        }
+        .tags{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 0 40px;
+
+            &__divider{
+                height: 35px;
+                width: 3px;
+                background-color: #fff;
+            }
+            p{
+                font-size: 25px;
+                line-height: 29px;
+                color: #fff;
+                text-align: center;
+                margin: 0 20px;
+                font-weight: 500;
+                text-align: center;
+
+                &:first-of-type{
+                    margin-left: 0;
+                }
+                &:last-of-type{
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1399px){
+    .rasaHeader{
+        .dog{
+            &:before,
+            &:after{
+                background-size: 450px;
+                width: 450px;
+                height: 490px;
+            }
+        }
+        .hand{
+            &:after{
+                background-size: 300px;
+                width: 300px;
+                height: 500px;
+            }
+        }
+    }
+}
+@media (max-width: 1199px){
+    .rasaHeader{
+        .dog{
+            &:before,
+            &:after{
+                background-size: 400px;
+                width: 400px;
+                height: 430px;
+            }
+        }
+        .hand{
+            &:after{
+                background-size: 260px;
+                width: 260px;
+                height: 450px;
+            }
+        }
+    }
+}
+@media (max-width: 991px){
+    .rasaHeader{
+        overflow: hidden;
+        min-height: 620px;
+
+        &--labrador{
+            .dog{
+                &:before{
+                    background-image: url('/wp-content/themes/psibufet/images/lprasy/mobile/labrador_shadow.png');
+                }
+                &:after{
+                    background-image: url('/wp-content/themes/psibufet/images/lprasy/mobile/labrador.png');
+                }
+            }
+        }
+        &--maltanczyk{
+            .dog{
+                &:before{
+                    background-image: url('/wp-content/themes/psibufet/images/lprasy/mobile/maltanczyk_shadow.png');
+                }
+                &:after{
+                    background-image: url('/wp-content/themes/psibufet/images/lprasy/mobile/maltanczyk.png');
+                }
+            }
+        }
+        &--szpic{
+            .dog{
+                &:before{
+                    background-image: url('/wp-content/themes/psibufet/images/lprasy/mobile/szpic_shadow.png');
+                }
+                &:after{
+                    background-image: url('/wp-content/themes/psibufet/images/lprasy/mobile/szpic.png');
+                }
+            }
+        }
+        &--owczarek{
+            .dog{
+                &:before{
+                    display: none;
+                }
+                &:after{
+                    background-image: url('/wp-content/themes/psibufet/images/lprasy/mobile/owczarek.png');
+                }
+            }
+        }
+        &--york{
+            .dog{
+                &:before{
+                    background-image: url('/wp-content/themes/psibufet/images/lprasy/mobile/york_shadow.png');
+                }
+                &:after{
+                    background-image: url('/wp-content/themes/psibufet/images/lprasy/mobile/york.png');
+                }
+            }
+        }
+        &--chihuahua{
+            .dog{
+                &:before{
+                    background-image: url('/wp-content/themes/psibufet/images/lprasy/mobile/chihuahua_shadow.png');
+                }
+                &:after{
+                    background-image: url('/wp-content/themes/psibufet/images/lprasy/mobile/chihuahua.png');
+                }
+            }
+        }
+
+        .dog{
+            &:before{
+                background-size: 180px;
+                width: 180px;
+                height: 620px;
+            }
+            &:after{
+                background-size: 180px;
+                width: 180px;
+                height: 620px;
+            }
+        }
+        .hand{
+            top: -50px;
+
+            &:after{
+                background-size: 220px;
+                width: 220px;
+                height: 280px;
+            }
+        }
+        &__wrap{
+            h3{
+                font-size: 20px;
+                line-height: 24px;
+            }
+            h2{
+                font-size: 52px;
+                line-height: 54px;
+            }
+            .tags{
+                margin: 0 0 24px;
+
+                p{
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .rasaHeader{
+        align-items: flex-end;
+
+        .hand{
+            top: -30px;
+            right: -20px;
+
+            &:after{
+                background-size: 180px;
+                width: 180px;
+                height: 230px;
+            }
+        }
+        &__wrap{
+            padding-bottom: 20px;
+
+            h3{
+                max-width: 230px;
+                margin: 0 auto 15px;
+            }
+
+            h2{
+                padding: 0 10px;
+            }
+
+            .tags{
+                max-width: 230px;
+                margin: 0 auto 24px;
+
+                p{
+                    max-width: 100px;
+                }
+            }
+        }
+    }
+}
+
+.rasaSteps{
+    margin: 0 0 40px;
+
+    &__wrap{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+    &__step{
+        width: 100%;
+        max-width: 290px;
+
+        .icon{
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            width: 100%;
+            height: 110px;
+            margin: 0 0 25px;
+            text-align: center;
+
+            img{
+                object-fit: contain;
+            }
+        }
+        .content{
+            h3{
+                font-size: 30px;
+                line-height: 36px;
+                font-family: "Bebas Neue", sans-serif;
+                font-weight: 400;
+                color: #000;
+                text-align: center;
+                margin: 0 0 15px;
+            }
+            p{
+                font-size: 16px;
+                line-height: 19px;
+                color: $primarycolor;
+                margin: 0;
+                text-align: center;
+            }
+        }
+    }
+    &__cta{
+        text-align: center;
+        margin: 40px 0 0;
+    }
+}
+@media (max-width: 991px){
+    .rasaSteps{
+        &__wrap{
+            flex-direction: column;
+        }
+        &__step{
+            max-width: 320px;
+            margin: 0 auto 20px;
+
+            .icon{
+                max-width: 140px;
+                margin: 0 auto 25px;
+
+                img{
+                    max-height: 85px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .rasaSteps{
+        &__step{
+            max-width: 270px;
+            margin: 0 auto 10px;
+
+            .icon{
+                max-width: 125px;
+                margin: 0 auto 20px;
+
+                img{
+                    max-height: 75px;
+                }
+            }
+            .content{
+                h3{
+                    font-size: 21px;
+                    line-height: 25px;
+                    margin: 0 0 8px;
+                }
+                p{
+                    font-size: 12px;
+                    line-height: 16px;
+                }
+            }
+        }
+        &__cta{
+            margin: 20px 0 0;
+        }
+    }
+}

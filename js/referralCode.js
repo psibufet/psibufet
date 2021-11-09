@@ -35,6 +35,7 @@ $(document).ready(function(){
 					'kalkulator',
 					'serwis',
 					'ksiazka',
+					'rasy',
 				];
 
     if (typeof sPageURL === 'undefined'){
