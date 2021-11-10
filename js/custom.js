@@ -1196,7 +1196,15 @@ $(document).ready(function(){
             }, 100);
         }, 300);
     });
-}); 
+
+    $('.howUsers__list').on('init', function(){
+        $('.pbUserInfo.slick-current').find('.getMarker').addClass('init');
+    }); 
+    $('.howUsers__list').on('afterChange', function(event, slick, currentSlide){
+        $('.pbUserInfo').not('.slick-current').find('.getMarker').removeClass('init');
+        $('.pbUserInfo[data-slick-index="' + currentSlide + '"]').find('.getMarker').addClass('init');
+    }); 
+});
 
 
 /*

@@ -7139,6 +7139,10 @@ body.admin-bar .foodModal__wrap {
   font-size: 30px;
 }
 
+.howUsers__list .pbUserInfo__content .title span.marker:after {
+  bottom: 7px;
+}
+
 .howUsers__list .pbUserInfo__content .info {
   font-size: 18px;
   line-height: 25px;

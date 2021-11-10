@@ -978,6 +978,12 @@
                     }
                     span{
                         font-size: 30px;
+
+                        &.marker{
+                            &:after{
+                                bottom: 7px;
+                            }
+                        }
                     }
                 }
                 .info{
