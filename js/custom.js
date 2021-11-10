@@ -275,17 +275,26 @@ $(window).load(function(){
 
 $(document).ready(function(){
     var form = $('form.dogNameForm');
+    var code = GetURLParameter('code');
     $(form).each(function(){
         var $this = $(this);
         var nameinput = $(this).find('input[type="text"]');
         $(nameinput).on('change paste keyup', function(){
             var value = $(this).val();
             if(value){
-                $this.attr('action', 'https://zamowienie.psibufet.pl/?dogName=' + value);
                 $this.addClass('hasValue');
+                if(code){
+                    $this.attr('action', 'https://zamowienie.psibufet.pl/?code=' + code + '?dogName=' + value);
+                }else{
+                    $this.attr('action', 'https://zamowienie.psibufet.pl/?dogName=' + value);
+                }
             }else{
-                $this.attr('action', 'https://zamowienie.psibufet.pl/');
                 $this.removeClass('hasValue');
+                if(code){
+                    $this.attr('action', 'https://zamowienie.psibufet.pl/?code=' + code);
+                }else{
+                    $this.attr('action', 'https://zamowienie.psibufet.pl/');
+                }
             }
         });
         $($this).on('submit', function(e){
