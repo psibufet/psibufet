@@ -284,7 +284,7 @@ $(document).ready(function(){
             if(value){
                 $this.addClass('hasValue');
                 if(code){
-                    $this.attr('action', 'https://zamowienie.psibufet.pl/?code=' + code + '?dogName=' + value);
+                    $this.attr('action', 'https://zamowienie.psibufet.pl/?code=' + code + '&dogName=' + value);
                 }else{
                     $this.attr('action', 'https://zamowienie.psibufet.pl/?dogName=' + value);
                 }
