@@ -4393,6 +4393,9 @@ body.admin-bar{
                 }
             }
         }
+        &>.btn{
+            margin: 0 auto 40px;
+        }
     }
     &__list{
         max-width: 950px;
@@ -4466,6 +4469,12 @@ body.admin-bar{
             h2{
                 font-size: 36px;
                 line-height: 42px;
+            }
+            .moreFaq{
+                margin: 20px auto;
+            }
+            &>.btn{
+                margin: 0 auto 32px;
             }
         }
         &__list{

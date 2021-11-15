@@ -541,6 +541,7 @@ get_header(); ?>
                 <?php endwhile; ?>
             </div>
             <a href="https://help.psibufet.pl/" target="_blank" class="moreFaq"><span>Zobacz wszystkie pytania z działu FAQ</span></a>
+            <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir"><span>Spróbuj</span></a>
         </div>
     </section>
     <?php endif; ?>

@@ -5442,6 +5442,10 @@ body.admin-bar .foodModal__wrap {
   transition: ease .3s;
 }
 
+.homeFaq__wrap > .btn {
+  margin: 0 auto 40px;
+}
+
 .homeFaq__list {
   max-width: 950px;
   margin: 0 auto;
@@ -5510,6 +5514,12 @@ body.admin-bar .foodModal__wrap {
   .homeFaq__wrap h2 {
     font-size: 36px;
     line-height: 42px;
+  }
+  .homeFaq__wrap .moreFaq {
+    margin: 20px auto;
+  }
+  .homeFaq__wrap > .btn {
+    margin: 0 auto 32px;
   }
   .homeFaq__list .question__heading p {
     font-size: 16px;

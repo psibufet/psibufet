@@ -64,7 +64,7 @@ $(document).ready(function(){
 				},
 				success: function(){
 					$.getJSON("https://app.psibufet.pl/api/order/couponcode/" + code, function (data) {
-						if (data.purpose == "MARKETING" || data.purpose == "CUSTOMER_CARE" || data.purpose == "CLIENT" || data.purpose == 'INFLUENCER'){
+						if (data.purpose == "MARKETING" || data.purpose == "CUSTOMER_CARE" || data.purpose == "CLIENT" || data.purpose == 'INFLUENCER' || data.purpose == 'EVENT' || data.purpose == 'VET'){
 							$('body').addClass('promocode');
 							$('.menu_dir a').addClass('dir');
 							promocodeWrap.addClass('active');
