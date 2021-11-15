@@ -5641,12 +5641,55 @@ body.admin-bar .foodModal__wrap {
   }
 }
 
-.recipesBanner {
+.recipesBanner__wrap {
   text-align: center;
+  max-width: fit-content;
+  max-width: -moz-max-content;
+  max-width: -webkit-fit-content;
+  position: relative;
+  margin: 0 auto 15px;
 }
 
-.recipesBanner img {
-  margin-bottom: 15px;
+.recipesBanner__badges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 14px;
+  right: 20px;
+  z-index: 3;
+}
+
+.recipesBanner__badges img.polski {
+  margin-right: 24px;
+}
+
+.recipesBanner__badges img.lider {
+  max-width: 128px;
+}
+
+@media (max-width: 991px) {
+  .recipesBanner__badges img.polski {
+    max-width: 80px;
+    margin-right: 12px;
+  }
+  .recipesBanner__badges img.lider {
+    max-width: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .recipesBanner__badges {
+    top: 5px;
+    right: 5px;
+  }
+  .recipesBanner__badges img.polski {
+    max-width: 52px;
+    margin-right: 5px;
+  }
+  .recipesBanner__badges img.lider {
+    max-width: 54px;
+  }
 }
 
 .recipesMenu {

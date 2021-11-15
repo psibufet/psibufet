@@ -55,7 +55,13 @@ get_header(); ?>
     </section>
     
     <section class="recipesBanner">
-        <img src="<?php echo get_template_directory_uri() . '/images/recipes/recipesBanner.png'; ?>"/>
+        <div class="recipesBanner__wrap">
+            <div class="recipesBanner__badges">
+                <img src="<?php echo get_template_directory_uri() . '/images/recipes/polskiProdukt_ico.svg'; ?>" class="polski no-lazyload"/>
+                <img src="<?php echo get_template_directory_uri() . '/images/recipes/lider_ico.png'; ?>" class="lider no-lazyload"/>
+            </div>
+            <img src="<?php echo get_template_directory_uri() . '/images/recipes/recipesBanner.gif'; ?>"/>
+        </div>
     </section>
 
     <section class="recipesMenu">

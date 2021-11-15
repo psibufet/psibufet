@@ -117,10 +117,64 @@
 }
 
 .recipesBanner{
-    text-align: center;
+    &__wrap{
+        text-align: center;
+        max-width: fit-content;
+        max-width: -moz-max-content;
+        max-width: -webkit-fit-content;
+        position: relative;
+        margin: 0 auto 15px;
+    }
+    &__badges{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 14px;
+        right: 20px;
+        z-index: 3;
 
-    img{
-        margin-bottom: 15px;
+        img{
+            &.polski{
+                margin-right: 24px;
+            }
+            &.lider{
+                max-width: 128px;
+            }
+        }
+    }
+}
+@media (max-width: 991px){
+    .recipesBanner{
+        &__badges{
+            img{
+                &.polski{
+                    max-width: 80px;
+                    margin-right: 12px;
+                }
+                &.lider{
+                    max-width: 100px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .recipesBanner{
+        &__badges{
+            top: 5px;
+            right: 5px;
+            
+            img{
+                &.polski{
+                    max-width: 52px;
+                    margin-right: 5px;
+                }
+                &.lider{
+                    max-width: 54px;
+                }
+            }
+        }
     }
 }
 
