@@ -80,6 +80,7 @@ $(document).ready(function(){
             'label': name,
             'page': url,
             'value': 4.9,
+            'price': 4.9,
             'items': [{ 
                 'id': id, 
                 'google_business_vertical': 'retail'

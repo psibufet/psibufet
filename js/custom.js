@@ -428,7 +428,14 @@ function menuBar(){
             }
             $('.siteHeader').addClass('siteHeader--promocode');
         }else if($('body').hasClass('promocode-blackweek')){
-            $('.header-clone').css('height', siteHeader.height());
+            if($(window).width() < 768){
+                $('.header-clone').css('height', 180);
+            }else if($(window).width() < 992){
+                $('.header-clone').css('height', 160);
+            }else{
+                $('.header-clone').css('height', 187);
+            }
+            
         }else{
             $('.header-clone').css('height', siteHeader.height());
         }
