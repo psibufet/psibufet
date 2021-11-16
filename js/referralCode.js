@@ -27,6 +27,7 @@ function promobar(dataAmount, dataType){
         $('.menu_dir a').addClass('dir');
         $('#promocode').addClass('active');
         $('body').trigger('promocode-active');
+		$('.siteHeader').addClass('siteHeader--promocode');
 
         promoamount.html('-' + amount);
 
@@ -67,7 +68,6 @@ function blackweekBar(){
 	$('body').addClass('promocode-blackweek');
 	$('.menu_dir a').addClass('dir');
 	$('#blackweek').addClass('blackweek--active');
-	// $('body').trigger('promocode-active');
 
 	promoamount.html('-' + amount);
 
