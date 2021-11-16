@@ -411,7 +411,10 @@ $(document).ready(function(){
 });
 
 // Menu bar options
-$(document).ready(function(){
+$(document).ready(menuBar);
+$('body').on('promocode-active', menuBar);
+
+function menuBar(){
     var siteHeader = $('.siteHeader');
 
     setTimeout(function(){
@@ -424,6 +427,8 @@ $(document).ready(function(){
                 $('.header-clone').css('height', siteHeader.height() + 62);
             }
             $('.siteHeader').addClass('siteHeader--promocode');
+        }else if($('body').hasClass('promocode-blackweek')){
+            $('.header-clone').css('height', siteHeader.height());
         }else{
             $('.header-clone').css('height', siteHeader.height());
         }
@@ -469,15 +474,23 @@ $(document).ready(function(){
             return;
         
         if (st > lastScrollTop && st > navbarHeight){
-            siteHeader.addClass('siteHeader--scrolled');
+            if($('body').hasClass('promocode-blackweek')){
+                siteHeader.css('top', - siteHeader.height() - 35);
+            }else{
+                siteHeader.addClass('siteHeader--scrolled');
+            }
         } else {
             if(st + $(window).height() < $(document).height()) {
-                siteHeader.removeClass('siteHeader--scrolled');
+                if($('body').hasClass('promocode-blackweek')){
+                    siteHeader.css('top', 0);
+                }else{
+                    siteHeader.removeClass('siteHeader--scrolled');
+                }
             }
         }
         lastScrollTop = st;
     }
-});
+}
 
 /* OLD */
 $(document).ready(function () {
@@ -836,60 +849,6 @@ $(document).mouseup(function(e){
     }
 });
 
-
-
-/************** PROMOCODE ***************/
-
-$(document).ready(function() {    
-    var code = GetURLParameter('code');
-    var type = GetURLParameter('type');
-    var amount = GetURLParameter('amount');
-
-    var promoamount = $('#promocode p .amount');
-    var promotype = $('#promocode p .type');
-	var promona = $('#promocode p .na');
-    
-
-    if (typeof code === 'undefined'){
-        var firstletter = code;
-    }else{
-        var firstletter = code.charAt(0);
-    }
-
-    if(typeof code !== 'undefined' && code !== 'psiazka'){
-        $('body').addClass('promocode');
-        $('.menu_dir a').addClass('dir');
-        $('#promocode').addClass('active');
-        $('body').trigger('promocode-active');
-
-        promoamount.html('-' + amount);
-
-        if(type == 'PERCENT'){
-            promotype.html('%');
-        }
-        if(type == 'AMOUNT'){
-            promotype.html('PLN');
-        }
-
-        if(firstletter == 2){
-            promona.html('na dwie pierwsze dostawy');
-        }
-
-        setTimeout(function(){
-            $(".dir").each(function () {
-                var $this = $(this);
-                var _href = $this.attr("href");
-                if(typeof type !== 'undefined' && typeof amount !== 'undefined'){
-                    $this.attr("href", _href + '?code=' + code + '&amount=' + amount + '&type=' + type);
-                }else{
-                    $this.attr("href", _href + '?code=' + code);
-                }
-            });
-        }, 50);
-    }else{
-        console.log('Code error');
-    }
-});
 
 /******** COPY ********/
 $(document).ready(function() {

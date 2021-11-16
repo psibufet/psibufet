@@ -192,6 +192,18 @@
                     <?php wp_nav_menu( array( 'theme_location' => 'mobile' ) ); ?>
                 </div>
             </div>
+            <a href="https://zamowienie.psibufet.pl/" id="blackweek" class="blackweek dir">
+                <div class="blackweek__wrap container">
+                    <div class="blackweek__text">
+                        <h3>Black Week</h3>
+                        <p class="btn"><span>Odbierz rabat</span></p>
+                    </div>
+                    <div class="blackweek__amount">
+                        <img src="<?php echo get_template_directory_uri() . '/images/blackweek/blackweek_badge.svg'; ?>"/>
+                    </div>
+                    <p class="btn desktopbtn"><span>Odbierz rabat</span></p>
+                </div>
+            </a>
         </header><!-- #masthead -->
 
         <div id="content" class="page-wrap">

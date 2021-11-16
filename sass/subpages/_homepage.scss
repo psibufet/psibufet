@@ -514,6 +514,16 @@
     }
 }
 @media (max-width: 767px){
+    body.promocode-blackweek{
+        .homeHeaderV2{
+            height: 642px;
+            background-image: url('/wp-content/themes/psibufet/images/blackweek/header_image.png') !important;
+
+            &__form{
+                margin: 140px 0 20px;
+            }
+        }
+    }
     .homeHeaderV2{
         height: 764px;
         background-image: url('/wp-content/themes/psibufet/images/homepage/homeHeaderV2_mobile.webp') !important;
