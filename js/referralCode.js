@@ -1,4 +1,4 @@
-function promobar(){
+function promobar(dataAmount, dataType){
 	var code = GetURLParameter('code');
     var type = GetURLParameter('type');
     var amount = GetURLParameter('amount');
@@ -13,6 +13,14 @@ function promobar(){
     }else{
         var firstletter = code.charAt(0);
     }
+
+	if (typeof type === 'undefined'){
+		var type = dataType;
+	}
+
+	if (typeof amount === 'undefined'){
+		var amount = dataAmount;
+	}
 
     if(typeof code !== 'undefined' && code !== 'psiazka'){
         $('body').addClass('promocode');
@@ -149,7 +157,9 @@ $(document).ready(function(){
 							if(blackweek.indexOf(code) !== -1){
 								blackweekBar();
 							}else{
-								promobar();
+								var amount = data.amount;
+								var type = data.type;
+								promobar(amount, type);
 							}
 						}			
 					});
