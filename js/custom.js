@@ -412,7 +412,12 @@ $(document).ready(function(){
 
 // Menu bar options
 $(document).ready(function(){
-    menuBar();
+    var code = GetURLParameter('code');
+
+    if(typeof code !== 'undefined'){
+        $('body').addClass('promocode');
+        menuBar();
+    }
 });
 $('body').on('promocode-active', menuBar);
 
