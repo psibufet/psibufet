@@ -192,7 +192,7 @@
                     <?php wp_nav_menu( array( 'theme_location' => 'mobile' ) ); ?>
                 </div>
             </div>
-            <a href="https://zamowienie.psibufet.pl/" id="blackweek" class="blackweek dir">
+            <!-- <a href="https://zamowienie.psibufet.pl/" id="blackweek" class="blackweek dir">
                 <div class="blackweek__wrap container">
                     <div class="blackweek__text">
                         <h3>Black Week</h3>
@@ -203,7 +203,7 @@
                     </div>
                     <p class="btn desktopbtn"><span>Odbierz rabat</span></p>
                 </div>
-            </a>
+            </a> -->
         </header><!-- #masthead -->
 
         <div id="content" class="page-wrap">
