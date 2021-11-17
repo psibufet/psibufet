@@ -153,7 +153,7 @@ $(document).ready(function(){
 				},
 				success: function(){
 					$.getJSON("https://app.psibufet.pl/api/order/couponcode/" + code, function (data) {
-						if (data.purpose == "MARKETING" || data.purpose == "CUSTOMER_CARE" || data.purpose == "CLIENT" || data.purpose == 'INFLUENCER' || data.purpose == 'EVENT' || data.purpose == 'VET'){
+						if (data.purpose == "MARKETING" || data.purpose == "PARTNER" || data.purpose == "CUSTOMER_CARE" || data.purpose == "CLIENT" || data.purpose == 'INFLUENCER' || data.purpose == 'EVENT' || data.purpose == 'VET'){
 							if(blackweek.indexOf(code) !== -1){
 								blackweekBar();
 							}else{
