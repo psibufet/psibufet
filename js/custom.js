@@ -427,12 +427,12 @@ $('body').on('promocode-active', menuBar);
 function menuBar(){
     var siteHeader = $('.siteHeader');
 
-    if($('body').hasClass('promocode')){
+    if($('body').hasClass('promocode') && !$('body').hasClass('promocode-blackweek')){
         $('.siteHeader').addClass('siteHeader--promocode');
     }
 
     setTimeout(function(){
-        if($('body').hasClass('promocode')){
+        if($('body').hasClass('promocode') && !$('body').hasClass('promocode-blackweek')){
             $('.siteHeader').addClass('siteHeader--promocode');
             if($(window).width() < 576){
                 $('.header-clone').css('height', siteHeader.height() + 58);

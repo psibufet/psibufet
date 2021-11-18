@@ -183,6 +183,10 @@ body.promocode .siteHeader .mobileNav__logo {
   height: 100px;
 }
 
+body.promocode-blackweek .siteHeader--promocode {
+  margin-top: 0 !important;
+}
+
 .siteHeader {
   background-color: #fff;
   width: 100%;
@@ -12581,7 +12585,7 @@ body a:hover {
 }
 
 .blackweek--active {
-  display: block;
+  display: block !important;
 }
 
 .blackweek__wrap {

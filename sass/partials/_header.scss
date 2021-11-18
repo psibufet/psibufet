@@ -193,6 +193,14 @@ body.promocode{
         }
     }
 }
+
+body.promocode-blackweek{
+    .siteHeader{
+        &--promocode{
+            margin-top: 0 !important;
+        }
+    }
+}
 .siteHeader{
     background-color: #fff;
     width: 100%;

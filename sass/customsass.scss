@@ -100,7 +100,7 @@ body{
     background-color: #000;
 
     &--active{
-        display: block;
+        display: block !important;
     }
 
     &__wrap{
