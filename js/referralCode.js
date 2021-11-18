@@ -59,6 +59,7 @@ function promobar(dataAmount, dataType){
 };
 
 function blackweekBar(){
+	console.log('blackweek');
 	var code = GetURLParameter('code');
     var type = GetURLParameter('type');
     var amount = GetURLParameter('amount');
@@ -68,6 +69,7 @@ function blackweekBar(){
 	$('body').addClass('promocode-blackweek');
 	$('.menu_dir a').addClass('dir');
 	$('#blackweek').addClass('blackweek--active');
+	$('.siteHeader').removeClass('siteHeader--promocode');
 
 	promoamount.html('-' + amount);
 
