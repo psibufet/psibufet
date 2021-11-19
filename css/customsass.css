@@ -12582,6 +12582,8 @@ body a:hover {
   height: 120px;
   display: none;
   background-color: #000;
+  position: relative;
+  z-index: -1;
 }
 
 .blackweek--active {
