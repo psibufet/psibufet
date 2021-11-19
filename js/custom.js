@@ -428,13 +428,13 @@ $(document).ready(function(){
  * Menu bar scrolled
  */
 $(document).ready(function(){
-    var siteHeader = $('.siteHeader');
     var didScroll;
     var lastScrollTop = 0;
     var delta = 50;
     var navbarHeight = siteHeader.outerHeight();
 
     $(window).scroll(function(event){
+        var siteHeader = $('.siteHeader');
         if($(document).scrollTop() > 67){
             siteHeader.addClass('siteHeader--shadow');
         }else{
@@ -451,6 +451,7 @@ $(document).ready(function(){
     }, 250);
 
     function hasScrolled() {
+        var siteHeader = $('.siteHeader');
         var st = $(this).scrollTop();
         
         if(Math.abs(lastScrollTop - st) <= delta)
