@@ -421,39 +421,6 @@ $(document).ready(function(){
     if(!$('body').hasClass('promocode-blackweek') && !$('body').hasClass('promocode')){
         $('.header-clone').css('height', $('.siteHeader').height());
     }
-});
-$('body').on('promocode-active', menuBar);
-
-function menuBar(){
-    var siteHeader = $('.siteHeader');
-
-    if($('body').hasClass('promocode') && !$('body').hasClass('promocode-blackweek')){
-        $('.siteHeader').addClass('siteHeader--promocode');
-    }
-
-    setTimeout(function(){
-        if($('body').hasClass('promocode') && !$('body').hasClass('promocode-blackweek')){
-            $('.siteHeader').addClass('siteHeader--promocode');
-            if($(window).width() < 576){
-                $('.header-clone').css('height', siteHeader.height() + 58);
-            }else if($(window).width() < 767 && $(window).width() > 576){
-                $('.header-clone').css('height', siteHeader.height() + 39);
-            }else{
-                $('.header-clone').css('height', siteHeader.height() + 62);
-            }
-        }else if($('body').hasClass('promocode-blackweek')){
-            if($(window).width() < 768){
-                $('.header-clone').css('height', 180);
-            }else if($(window).width() < 992){
-                $('.header-clone').css('height', 160);
-            }else{
-                $('.header-clone').css('height', 187);
-            }
-        }
-        if($(window).width() < 991){
-            $('.mainnav').css('padding-top', siteHeader.height());
-        }
-    }, 300);
 
     $('.btnMenu').on('click', function(){
         $(this).toggleClass('active');
@@ -508,6 +475,39 @@ function menuBar(){
         }
         lastScrollTop = st;
     }
+});
+$('body').on('promocode-active', menuBar);
+
+function menuBar(){
+    var siteHeader = $('.siteHeader');
+
+    if($('body').hasClass('promocode') && !$('body').hasClass('promocode-blackweek')){
+        $('.siteHeader').addClass('siteHeader--promocode');
+    }
+
+    setTimeout(function(){
+        if($('body').hasClass('promocode') && !$('body').hasClass('promocode-blackweek')){
+            $('.siteHeader').addClass('siteHeader--promocode');
+            if($(window).width() < 576){
+                $('.header-clone').css('height', siteHeader.height() + 58);
+            }else if($(window).width() < 767 && $(window).width() > 576){
+                $('.header-clone').css('height', siteHeader.height() + 39);
+            }else{
+                $('.header-clone').css('height', siteHeader.height() + 62);
+            }
+        }else if($('body').hasClass('promocode-blackweek')){
+            if($(window).width() < 768){
+                $('.header-clone').css('height', 180);
+            }else if($(window).width() < 992){
+                $('.header-clone').css('height', 160);
+            }else{
+                $('.header-clone').css('height', 187);
+            }
+        }
+        if($(window).width() < 991){
+            $('.mainnav').css('padding-top', siteHeader.height());
+        }
+    }, 300);
 }
 
 /* OLD */
