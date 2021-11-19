@@ -54,6 +54,7 @@ function blackweekBar(dataCode, dataAmount, dataType){
 
 	$('body').addClass('promocode-blackweek');
 	$('.menu_dir a').addClass('dir');
+	$('.menu-item a').addClass('dir');
 	$('#blackweek').addClass('blackweek--active');
 
 	setTimeout(function(){
@@ -146,7 +147,26 @@ $(document).ready(function(){
 				];
 	var blackweek = [
 		'black50',
-		'black100',
+		'karma50',
+		'osa50',
+		'email50',
+		'gecko50',
+		'mamyje50',
+		'bwward',
+		'bwdarling',
+		'bwbialymaltan',
+		'bwbombel',
+		'bwpsiglos',
+		'bwtosieuda',
+		'bwdiamond',
+		'bwtellmehau',
+		'bw50',
+		'bweek50',
+		'bwzrozumpsa',
+		'bwhelppsiaki',
+		'bwpandzia',
+		'bwdogfulness',
+		'bwdogfan',
 	];
 
 	if(whitelist.indexOf(sPageURL) !== -1){
