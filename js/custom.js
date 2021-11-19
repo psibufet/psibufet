@@ -412,6 +412,7 @@ $(document).ready(function(){
 
 // Menu bar options
 $(document).ready(function(){
+    var siteHeader = $('.siteHeader');
     var code = GetURLParameter('code');
 
     if(typeof code !== 'undefined'){
