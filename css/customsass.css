@@ -12651,6 +12651,7 @@ body a:hover {
   }
   .blackweek__text {
     width: calc(100% - 120px);
+    padding-bottom: 8px;
   }
   .blackweek__text h3 {
     font-size: 48px;

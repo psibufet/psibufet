@@ -428,6 +428,7 @@ $(document).ready(function(){
  * Menu bar scrolled
  */
 $(document).ready(function(){
+    var siteHeader = $('.siteHeader');
     var didScroll;
     var lastScrollTop = 0;
     var delta = 50;
