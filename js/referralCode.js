@@ -1,28 +1,14 @@
-function promobar(dataAmount, dataType){
-	var code = GetURLParameter('code');
-    var type = GetURLParameter('type');
-    var amount = GetURLParameter('amount');
+function promobar(dataCode, dataAmount, dataType){
+	var code = dataCode;
+    var type = dataType;
+    var amount = dataAmount;
+	var firstletter = code.charAt(0);
 
     var promoamount = $('#promocode p .amount');
     var promotype = $('#promocode p .type');
 	var promona = $('#promocode p .na');
-    
 
-    if (typeof code === 'undefined'){
-        var firstletter = code;
-    }else{
-        var firstletter = code.charAt(0);
-    }
-
-	if (typeof type === 'undefined'){
-		var type = dataType;
-	}
-
-	if (typeof amount === 'undefined'){
-		var amount = dataAmount;
-	}
-
-    if(typeof code !== 'undefined' && code !== 'psiazka'){
+    if(typeof code !== 'psiazka'){
         $('body').addClass('promocode');
         $('.menu_dir a').addClass('dir');
         $('#promocode').addClass('active');
@@ -33,8 +19,7 @@ function promobar(dataAmount, dataType){
 
         if(type == 'PERCENT'){
             promotype.html('%');
-        }
-        if(type == 'AMOUNT'){
+        }else if(type == 'AMOUNT'){
             promotype.html('PLN');
         }
 
@@ -53,25 +38,23 @@ function promobar(dataAmount, dataType){
                 }
             });
         }, 50);
+
+		// Set header clone height
+		headerClone();
     }else{
         console.log('Code error');
     }
 };
 
-function blackweekBar(){
+function blackweekBar(dataCode, dataAmount, dataType){
 	console.log('blackweek');
-	var code = GetURLParameter('code');
-    var type = GetURLParameter('type');
-    var amount = GetURLParameter('amount');
-
-    var promoamount = $('.blackweek__amount span');
+	var code = dataCode;
+    var type = dataType;
+    var amount = dataAmount;
 
 	$('body').addClass('promocode-blackweek');
 	$('.menu_dir a').addClass('dir');
 	$('#blackweek').addClass('blackweek--active');
-	$('.siteHeader').removeClass('siteHeader--promocode');
-
-	promoamount.html('-' + amount);
 
 	setTimeout(function(){
 		$(".dir").each(function () {
@@ -84,6 +67,41 @@ function blackweekBar(){
 			}
 		});
 	}, 50);
+
+	// Set header clone height
+	headerClone();
+}
+
+$(document).ready(function(){
+	// Set header clone height
+	headerClone();
+});
+
+function headerClone(){
+	var siteHeader = $('.siteHeader');
+
+	if($('body').hasClass('promocode') && !$('body').hasClass('promocode-blackweek')){
+		if($(window).width() < 576){
+			$('.header-clone').css('height', siteHeader.height() + 58);
+		}else if($(window).width() < 767 && $(window).width() > 576){
+			$('.header-clone').css('height', siteHeader.height() + 39);
+		}else{
+			$('.header-clone').css('height', siteHeader.height() + 62);
+		}
+	}else if($('body').hasClass('promocode-blackweek')){
+		if($(window).width() < 768){
+			$('.header-clone').css('height', 180);
+		}else if($(window).width() < 992){
+			$('.header-clone').css('height', 160);
+		}else{
+			$('.header-clone').css('height', 187);
+		}
+	}else{
+		$('.header-clone').css('height', siteHeader.height());
+	}
+	if($(window).width() < 991){
+		$('.mainnav').css('padding-top', siteHeader.height());
+	}
 }
 
 $(document).ready(function(){
@@ -99,7 +117,6 @@ $(document).ready(function(){
 	}  
    
 	var code = GetURLParameter('code');
-
 	var sPageURL = window.location.pathname.replace('/','');
 	var whitelist = ['',
 					'jak-to-dziala',
@@ -132,11 +149,6 @@ $(document).ready(function(){
 		'black100',
 	];
 
-    // if (typeof sPageURL === 'undefined'){
-    //     var firstletter = sPageURL;
-    // }else{
-    //     var firstletter = sPageURL.charAt(0);
-    // }
 	if(whitelist.indexOf(sPageURL) !== -1){
 		console.log('This code contains existing page URL');
 		
@@ -156,12 +168,13 @@ $(document).ready(function(){
 				success: function(){
 					$.getJSON("https://app.psibufet.pl/api/order/couponcode/" + code, function (data) {
 						if (data.purpose == "MARKETING" || data.purpose == "PARTNER" || data.purpose == "CUSTOMER_CARE" || data.purpose == "CLIENT" || data.purpose == 'INFLUENCER' || data.purpose == 'EVENT' || data.purpose == 'VET'){
+							var amount = data.amount;
+							var type = data.type;
+
 							if(blackweek.indexOf(code) !== -1){
-								blackweekBar();
+								blackweekBar(code, amount, type);
 							}else{
-								var amount = data.amount;
-								var type = data.type;
-								promobar(amount, type);
+								promobar(code, amount, type);
 							}
 						}			
 					});
