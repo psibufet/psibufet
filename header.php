@@ -51,7 +51,7 @@
     <script type="text/javascript" src="/wp-content/themes/psibufet/js/custom.js?ver=<?php echo rand(); ?>" async></script>
     <script type="text/javascript" src="/wp-content/themes/psibufet/js/_sliders.js" async></script>
     <script type="text/javascript" src="/wp-content/themes/psibufet/js/animation.js" async></script>
-    <script type="text/javascript" src="/wp-content/themes/psibufet/js/dataLayers.js?ver=1.6" async></script>
+    <script type="text/javascript" src="/wp-content/themes/psibufet/js/dataLayers.js?ver=<?php echo rand(); ?>"></script>
     <?php 
         function startsWith( $haystack, $needle ) {
             $length = strlen( $needle );
