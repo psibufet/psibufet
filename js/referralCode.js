@@ -145,6 +145,7 @@ $(document).ready(function(){
 		'serwis',
 		'ksiazka',
 		'rasy',
+		'restauracje',
 	];
 	var blackweek = [
 		'black50',
@@ -186,6 +187,7 @@ $(document).ready(function(){
 		'lui50',
 		'maksio50',
 		'jessie50',
+		'jedzonko',
 	];
 
 	if(whitelist.indexOf(sPageURL) !== -1){
