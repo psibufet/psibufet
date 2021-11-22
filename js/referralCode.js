@@ -188,6 +188,7 @@ $(document).ready(function(){
 		'maksio50',
 		'jessie50',
 		'jedzonko',
+		'bwrico50',
 	];
 
 	if(whitelist.indexOf(sPageURL) !== -1){
