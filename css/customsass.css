@@ -12525,6 +12525,153 @@ body.page-template-page_ksiazka .siteHeader--promocode {
   }
 }
 
+.restMap {
+  background-image: url("/wp-content/themes/psibufet/images/restaurants/map_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 32px 0 40px;
+}
+
+.restMap__heading {
+  margin: 0 0 34px;
+}
+
+.restMap__heading h2 {
+  font-size: 41px;
+  line-height: 49px;
+  color: #000;
+  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  margin: 0 0 25px;
+  text-align: center;
+}
+
+.restMap__heading p {
+  font-size: 20px;
+  line-height: 23px;
+  color: #000;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 765px;
+}
+
+.restMap__wrap {
+  display: flex;
+  align-items: flex-start;
+  max-width: 1230px;
+}
+
+.restMap__map {
+  max-width: calc(100% - 411px);
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.restMap__map .clearfix {
+  height: 500px;
+  width: 100%;
+  background-color: #ddd;
+}
+
+.restMap .mapList {
+  max-width: 375px;
+  width: 100%;
+  margin-left: 36px;
+  padding: 10px 20px 20px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.restMap .mapList:before {
+  content: '';
+  width: 21px;
+  height: 21px;
+  background-color: #fff;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  transform: translate(0, -50%) rotate(-45deg);
+  position: absolute;
+  top: 50%;
+  left: -11px;
+}
+
+.restMap .mapList__heading {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 0 0 18px;
+}
+
+.restMap .mapList__heading h3 {
+  font-size: 24px;
+  line-height: 29px;
+  color: #000;
+  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  text-align: center;
+  margin: 0 0 6px;
+}
+
+.restMap .mapList__content .group {
+  display: flex;
+  align-items: flex-start;
+  margin: 0 0 16px;
+}
+
+.restMap .mapList__content .group__name {
+  width: 50%;
+  padding: 5px 20px 5px 0;
+}
+
+.restMap .mapList__content .group__name h4 {
+  font-size: 20px;
+  line-height: 24px;
+  color: #000;
+  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  text-align: right;
+  margin: 0;
+  opacity: .2;
+  transition: ease .3s;
+}
+
+.restMap .mapList__content .group__list {
+  width: 50%;
+  padding: 5px 0 5px 20px;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.restMap .mapList__content .group__list p {
+  font-size: 20px;
+  line-height: 24px;
+  color: #000;
+  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  text-align: left;
+  margin: 0 0 10px;
+  opacity: .2;
+  transition: ease .3s;
+}
+
+.restMap .mapList__content .group--active .group__name h4 {
+  opacity: 1;
+}
+
+.restMap .mapList__content .group--active .group__list p {
+  opacity: 1;
+}
+
+.restMap__cta {
+  text-align: center;
+  margin: 40px 0 0;
+}
+
+.restInstagram {
+  background-color: #F7BE45;
+  padding: 40px 0;
+}
+
 /*  Global
 --------------- */
 .homeHeader:after {
