@@ -67,3 +67,21 @@ $(document).ready(function() {
         });
     }
 })
+
+// Restaurants LP
+$(document).ready(function(){
+    if($(window).width() < 991){
+        // var images = $('.restInstagram__list').find('.restPost img');
+        // $(images).each(function(){
+        //     $(this).removeClass('lazyloading').addClass('no-lazyload');
+        // });
+        $('.restInstagram__list').slick({
+            slidesToScroll: 1,
+            infinite: true,
+            arrows: true,
+            dots: true,
+            centerMode: true,
+            variableWidth: true,
+        });
+    }
+});

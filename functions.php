@@ -605,6 +605,14 @@ function my_acf_json_load_point( $paths ) {
     return $paths;
 }
 
+/**
+ * ACF Google Maps
+ */
+function my_acf_init() {
+    acf_update_setting('google_api_key', 'AIzaSyCAihhg2fnZvuAF6biw73IE-A2WX0nosQk');
+}
+add_action('acf/init', 'my_acf_init');
+
 /* Partner ajax form send engine */
 
 wp_enqueue_script( 'partner-ajax', get_template_directory_uri() . '/js/partnerForm.js', array( 'jquery' ));

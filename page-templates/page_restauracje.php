@@ -8,12 +8,13 @@ get_header(); ?>
     <section class="restHeader">
         <div class="restHeader__wrap">
             <h1>Restauracyjna jakość</h1>
-            <p>Wypróbuj PsiBufet menu w restauracji<br/>w Twojej okolicy</p>
+            <p>Wypróbuj PsiBufet menu<br/>w restauracji<br/> w Twojej okolicy</p>
         </div>
         <a href="#page-continue" class="restHeader__scroll">
             <p>Dowiedz się więcej</p>
         </a>
     </section>
+    <?php if( have_rows('restList') ): ?>
     <section class="restMap">
         <div class="restMap__heading">
             <h2 class="getMarker">PsiBufet <span class="marker">bliżej</span> Ciebie</h2>
@@ -21,44 +22,68 @@ get_header(); ?>
         </div>
         <div class="restMap__wrap container">
             <div class="restMap__map">
-                <div class="clearfix"></div>
+                <div id="restaurantMap" class="restaurantMap" data-zoom="16">
+                <?php while ( have_rows('restList') ) : the_row(); 
+                    $city = get_sub_field('restList_city');
+
+                    while(have_rows('restList_restaurants')): the_row();
+                        $location = get_sub_field('restList_map');
+                    ?>
+                        <div class="marker" data-city="<?php echo $city; ?>" data-lat="<?php echo esc_attr($location['lat']); ?>" data-lng="<?php echo esc_attr($location['lng']); ?>"></div>
+                    <?php endwhile; ?>
+                <?php endwhile; ?>
+                </div>
             </div>
             <div class="restMap__list mapList">
                 <div class="mapList__heading">
                     <h3>Restauracje</h3>
                 </div>
                 <div class="mapList__content">
-                    <div class="group group--active">
+                    <?php while ( have_rows('restList') ) : the_row(); 
+                        $city = get_sub_field('restList_city');
+                    ?>
+                    <div class="group group--active" data-city="<?php echo $city; ?>">
                         <div class="group__name">
-                            <h4>Warszawa</h4>
+                            <h4 class="getMarker"><span class="marker"><?php echo $city; ?></span></h4>
                         </div>
-                        <div class="group__list">
-                            <p>Bota Bistro</p>
-                            <p>ORZO pl. Konstytucji</p>
-                            <p>ORZO Koneser</p>
-                            <p>Bez słowa</p>
+                        <div class="group__list">                        
+                            <?php while(have_rows('restList_restaurants')): the_row();
+                                $name = get_sub_field('restList_name');
+                            ?>
+                                <p><?php echo $name; ?></p>
+                            <?php endwhile; ?>
                         </div>
                     </div>
-                    <div class="group">
-                        <div class="group__name">
-                            <h4>Kraków</h4>
-                        </div>
-                        <div class="group__list">
-                            <p>Psikawka</p>
-                            <p>Kawiarnia Czyżyk</p>
-                        </div>
-                    </div>
+                    <?php endwhile; ?>
                 </div>
             </div>
         </div>
         <div class="restMap__cta">
+            <p class="openRestList"><span>Wybierz Psyjazny Lokal</span></p>
             <a href="https://zamowienie.psibufet.pl/" class="btn"><span>Zamów</span></a>
         </div>
     </section>
+    <?php endif; ?>
 
     <section class="restInstagram">
+        <div class="restInstagram__heading">
+            <h2 class="getMarker"><span class="marker">Zapsijaźnione</span> restauracje</h2>
+        </div>
         <div class="restInstagram__wrap container">
-
+            <div class="restInstagram__list">
+                <div class="restPost">
+                    <img class="no-lazyload" src="<?php echo get_template_directory_uri() . '/images/restaurants/instagram/post01.png'; ?>"/>
+                </div>
+                <div class="restPost">
+                    <img class="no-lazyload" src="<?php echo get_template_directory_uri() . '/images/restaurants/instagram/post02.png'; ?>"/>
+                </div>
+                <div class="restPost">
+                    <img class="no-lazyload" src="<?php echo get_template_directory_uri() . '/images/restaurants/instagram/post03.png'; ?>"/>
+                </div>
+                <div class="restPost">
+                    <img class="no-lazyload" src="<?php echo get_template_directory_uri() . '/images/restaurants/instagram/post04.png'; ?>"/>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -144,6 +169,38 @@ get_header(); ?>
             <a href="https://psibufet.pl/kontakt" class="btn btn--clear"><span>Skontaktuj się z nami</span></a>
         </div>
     </section>
+
+    <div class="restListModal">
+        <div class="restListModal__wrap mapList">
+            <div class="restListModal__heading">
+                <h3>Wybierz Psyjazny lokal</h3>
+                <div class="restListModal__close">
+                    <img src="<?php echo get_template_directory_uri() . '/images/restaurants/modalClose.svg' ?>"/>
+                </div>
+            </div>
+            <div class="mapList__heading">
+                <h3>Restauracje</h3>
+            </div>
+            <div class="mapList__content">
+                <?php while ( have_rows('restList') ) : the_row(); 
+                    $city = get_sub_field('restList_city');
+                ?>
+                <div class="group group--active" data-city="<?php echo $city; ?>">
+                    <div class="group__name">
+                        <h4 class="getMarker"><span class="marker"><?php echo $city; ?></span></h4>
+                    </div>
+                    <div class="group__list">                        
+                        <?php while(have_rows('restList_restaurants')): the_row();
+                            $name = get_sub_field('restList_name');
+                        ?>
+                            <p><?php echo $name; ?></p>
+                        <?php endwhile; ?>
+                    </div>
+                </div>
+                <?php endwhile; ?>
+            </div>
+        </div>
+    </div>
 </main>
 
 <?php get_footer(); ?>

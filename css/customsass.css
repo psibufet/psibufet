@@ -12472,6 +12472,10 @@ body.page-template-page_ksiazka .siteHeader--promocode {
   margin: 0;
 }
 
+.restHeader__wrap p br:nth-child(1) {
+  display: none;
+}
+
 .restHeader__scroll {
   position: absolute;
   bottom: 50px;
@@ -12520,7 +12524,54 @@ body.page-template-page_ksiazka .siteHeader--promocode {
 }
 
 @media (max-width: 767px) {
+  .restHeader {
+    background-image: url("/wp-content/themes/psibufet/images/restaurants/restHeader_mobile.png");
+    align-items: flex-start;
+    min-height: 620px;
+    margin-top: 30px;
+    position: relative;
+  }
+  .restHeader:before {
+    content: '';
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    background-color: #f5f7f1;
+    z-index: -1;
+  }
+  .restHeader__wrap {
+    padding-top: 0px;
+    margin-top: -10px;
+  }
+  .restHeader__wrap h1 {
+    font-size: 52px;
+    line-height: 62px;
+    margin: 0 0 5px;
+  }
+  .restHeader__wrap p {
+    font-size: 20px;
+    line-height: 24px;
+  }
   .restHeader__scroll {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .restHeader__wrap h1 {
+    max-width: 320px;
+    margin: 0 auto 5px;
+  }
+  .restHeader__wrap p {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .restHeader__wrap p br:nth-child(1) {
+    display: block;
+  }
+  .restHeader__wrap p br:nth-child(2) {
     display: none;
   }
 }
@@ -12568,15 +12619,14 @@ body.page-template-page_ksiazka .siteHeader--promocode {
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
-.restMap__map .clearfix {
-  height: 500px;
-  width: 100%;
-  background-color: #ddd;
+.restMap__map .restaurantMap {
+  min-height: 500px;
 }
 
 .restMap .mapList {
   max-width: 375px;
   width: 100%;
+  height: 500px;
   margin-left: 36px;
   padding: 10px 20px 20px;
   background-color: #fff;
@@ -12613,6 +12663,11 @@ body.page-template-page_ksiazka .siteHeader--promocode {
   margin: 0 0 6px;
 }
 
+.restMap .mapList__content {
+  max-height: 415px;
+  overflow-x: scroll;
+}
+
 .restMap .mapList__content .group {
   display: flex;
   align-items: flex-start;
@@ -12634,6 +12689,16 @@ body.page-template-page_ksiazka .siteHeader--promocode {
   margin: 0;
   opacity: .2;
   transition: ease .3s;
+  cursor: pointer;
+}
+
+.restMap .mapList__content .group__name h4:hover {
+  opacity: .8 !important;
+}
+
+.restMap .mapList__content .group__name h4 span:after {
+  height: 5px;
+  bottom: 2px;
 }
 
 .restMap .mapList__content .group__list {
@@ -12652,6 +12717,11 @@ body.page-template-page_ksiazka .siteHeader--promocode {
   margin: 0 0 10px;
   opacity: .2;
   transition: ease .3s;
+  cursor: pointer;
+}
+
+.restMap .mapList__content .group__list p:hover {
+  opacity: .8 !important;
 }
 
 .restMap .mapList__content .group--active .group__name h4 {
@@ -12667,9 +12737,384 @@ body.page-template-page_ksiazka .siteHeader--promocode {
   margin: 40px 0 0;
 }
 
+.restMap__cta .openRestList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 235px;
+  max-width: fit-content;
+  max-width: -webkit-fit-content;
+  margin: 0 auto 20px;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+  height: 46px;
+  background-color: #fff;
+  border: 1px solid #000;
+  transition: ease .3s;
+}
+
+.restMap__cta .openRestList:hover {
+  background-color: #f5f5f5;
+}
+
+.restMap__cta .openRestList span {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+  text-align: center;
+  padding-left: 21px;
+  position: relative;
+}
+
+.restMap__cta .openRestList span:before {
+  content: '';
+  background-image: url("/wp-content/themes/psibufet/images/restaurants/marker_ico.svg");
+  background-repeat: no-repeat;
+  background-size: 15px;
+  width: 15px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+@media (max-width: 1199px) {
+  .restMap__map {
+    max-width: calc(100% - 331px);
+  }
+  .restMap .mapList {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .restMap__heading {
+    padding: 0 10px;
+  }
+  .restMap__heading h2 {
+    font-size: 36px;
+    line-height: 43px;
+    margin: 0 0 10px;
+  }
+  .restMap__heading p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .restMap__wrap {
+    padding: 0;
+  }
+  .restMap__map {
+    max-width: 100%;
+    width: 100%;
+  }
+  .restMap__map .restaurantMap {
+    min-height: 438px;
+  }
+  .restMap .mapList {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .restMap {
+    padding: 32px 0;
+  }
+  .restMap__cta {
+    margin: 20px 0 0;
+  }
+  .restMap__cta .openRestList {
+    min-width: 280px;
+    padding: 0 15px;
+    height: 40px;
+  }
+  .restMap__cta .btn {
+    min-width: 280px;
+    height: 40px;
+  }
+}
+
 .restInstagram {
   background-color: #F7BE45;
   padding: 40px 0;
+}
+
+.restInstagram__heading {
+  margin: 0 0 34px;
+}
+
+.restInstagram__heading h2 {
+  font-size: 41px;
+  line-height: 49px;
+  color: #000;
+  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  margin: 0;
+  text-align: center;
+}
+
+.restInstagram__list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.restInstagram__list .restPost {
+  max-width: 280px;
+  width: 100%;
+}
+
+.restInstagram__list .restPost img {
+  max-width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1599px) {
+  .restInstagram__list .restPost {
+    max-width: 270px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .restInstagram__list .restPost {
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 991px) {
+  .restInstagram {
+    padding: 30px 0 62px;
+    overflow: hidden;
+  }
+  .restInstagram__heading {
+    margin: 0 0 24px;
+  }
+  .restInstagram__wrap {
+    position: relative;
+  }
+  .restInstagram__list {
+    justify-content: center;
+  }
+  .restInstagram__list .slick-list {
+    margin: 0 -10px;
+    overflow: visible !important;
+    max-width: 100%;
+  }
+  .restInstagram__list .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 3;
+  }
+  .restInstagram__list .slick-arrow.slick-prev, .restInstagram__list .slick-arrow.slick-next {
+    background-color: #f15748;
+    padding: 0;
+    border: 0;
+    border-radius: 100%;
+    font-size: 0;
+    line-height: 0;
+  }
+  .restInstagram__list .slick-arrow.slick-prev:before, .restInstagram__list .slick-arrow.slick-next:before {
+    content: '';
+    background-repeat: no-repeat;
+    background-size: 32px;
+    width: 32px;
+    height: 32px;
+    display: block;
+  }
+  .restInstagram__list .slick-arrow.slick-prev {
+    margin: 0 auto;
+    margin-left: -300px;
+  }
+  .restInstagram__list .slick-arrow.slick-prev:before {
+    background-image: url("/wp-content/themes/psibufet/images/icons/slider_arrow_left_red.svg");
+  }
+  .restInstagram__list .slick-arrow.slick-next {
+    margin: 0 auto;
+    margin-right: -300px;
+  }
+  .restInstagram__list .slick-arrow.slick-next:before {
+    background-image: url("/wp-content/themes/psibufet/images/icons/slider_arrow_right_red.svg");
+  }
+  .restInstagram__list .slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    position: absolute;
+    bottom: -58px;
+    left: 0;
+    right: 0;
+    padding: 0;
+  }
+  .restInstagram__list .slick-dots li {
+    margin: 0 3px;
+  }
+  .restInstagram__list .slick-dots li.slick-active button {
+    background-color: #f15748;
+  }
+  .restInstagram__list .slick-dots li button {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 0;
+    padding: 0;
+    font-size: 0;
+    transition: ease .3s;
+  }
+  .restInstagram__list .restPost {
+    max-width: 280px;
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .restInstagram__heading h2 {
+    font-size: 36px;
+    line-height: 43px;
+  }
+}
+
+.restListModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: ease .5s;
+}
+
+.restListModal--active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.restListModal__wrap {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.restListModal__heading {
+  min-height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.restListModal__heading h3 {
+  font-size: 28px;
+  line-height: 34px;
+  color: #000;
+  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  text-align: center;
+  margin: 0;
+}
+
+.restListModal__close {
+  position: absolute;
+  top: 5px;
+  right: 16px;
+}
+
+.restListModal .mapList__heading {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 0 auto 18px;
+  max-width: 240px;
+}
+
+.restListModal .mapList__heading h3 {
+  font-size: 24px;
+  line-height: 29px;
+  color: #000;
+  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.restListModal .mapList__content {
+  max-height: calc(100% - 155px);
+  overflow-x: scroll;
+}
+
+.restListModal .mapList__content .group {
+  display: flex;
+  align-items: flex-start;
+  margin: 0 0 16px;
+}
+
+.restListModal .mapList__content .group__name {
+  width: 50%;
+  padding: 5px 20px 5px 0;
+}
+
+.restListModal .mapList__content .group__name h4 {
+  font-size: 20px;
+  line-height: 24px;
+  color: #000;
+  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  text-align: right;
+  margin: 0;
+  opacity: .2;
+  transition: ease .3s;
+  cursor: pointer;
+}
+
+.restListModal .mapList__content .group__name h4:hover {
+  opacity: .8 !important;
+}
+
+.restListModal .mapList__content .group__name h4 span:after {
+  height: 5px;
+  bottom: 2px;
+}
+
+.restListModal .mapList__content .group__list {
+  width: 50%;
+  padding: 5px 0 5px 20px;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.restListModal .mapList__content .group__list p {
+  font-size: 20px;
+  line-height: 24px;
+  color: #000;
+  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  text-align: left;
+  margin: 0 0 10px;
+  opacity: .2;
+  transition: ease .3s;
+  cursor: pointer;
+}
+
+.restListModal .mapList__content .group__list p:hover {
+  opacity: .8 !important;
+}
+
+.restListModal .mapList__content .group--active .group__name h4 {
+  opacity: 1;
+}
+
+.restListModal .mapList__content .group--active .group__list p {
+  opacity: 1;
 }
 
 /*  Global

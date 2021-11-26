@@ -47,9 +47,11 @@
     <!-- Autocomplete end -->
     <?php endif; ?>
 
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAihhg2fnZvuAF6biw73IE-A2WX0nosQk"></script>
     <script type="text/javascript" src="/wp-content/themes/psibufet/plugins/visible/jquery.visible.min.js"></script>
     <script type="text/javascript" src="/wp-content/themes/psibufet/js/custom.js?ver=<?php echo rand(); ?>" async></script>
     <script type="text/javascript" src="/wp-content/themes/psibufet/js/_sliders.js" async></script>
+    <script type="text/javascript" src="/wp-content/themes/psibufet/js/_restMap.js"></script>
     <script type="text/javascript" src="/wp-content/themes/psibufet/js/animation.js" async></script>
     <script type="text/javascript" src="/wp-content/themes/psibufet/js/dataLayers.js?ver=<?php echo rand(); ?>"></script>
     <?php 

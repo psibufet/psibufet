@@ -1267,3 +1267,46 @@ $(document).ready(function(){
         }
     }
 });
+
+/**
+ *  Restaurants LP
+ */
+$(document).ready(function(){
+    $('.mapList__content').on('changed', function(){
+        $('.group').each(function(){
+            if($(this).hasClass('group--active')){
+                $(this).find('.getMarker').addClass('init');
+            }else{
+                $(this).find('.getMarker').removeClass('init');
+            }
+        });
+    });
+
+    if($(window).width() < 1200){
+        $('section.restMap').find('.mapList').remove();
+        $('body').trigger('rest_map_ready');
+    }else{
+        $('.restListModal').remove();
+        $('body').trigger('rest_map_ready');
+    }
+
+    $('.openRestList').on('click', function(){
+        $('body').addClass('noscroll');
+        $('.restListModal').addClass('restListModal--active');
+    });
+    $('.restListModal__close').on('click', function(){
+        $('body').removeClass('noscroll');
+        $('.restListModal').removeClass('restListModal--active');
+    });
+
+    var city = $('.restListModal').find('.group__name');
+    var restaurant = $('.restListModal .group__list').find('p');
+    $(city).on('click', function(){
+        $('body').removeClass('noscroll');
+        $('.restListModal').removeClass('restListModal--active');
+    });
+    $(restaurant).on('click', function(){
+        $('body').removeClass('noscroll');
+        $('.restListModal').removeClass('restListModal--active');
+    })
+});

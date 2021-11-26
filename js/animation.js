@@ -488,6 +488,36 @@ $(document).ready(function() {
     });
 });
 
+/********** Restauracje LP **********/
+
+$(document).ready(function() {
+    var instagramHeading = $('.restInstagram__heading').find('.getMarker');
+    var mapHeading = $('.restMap__heading').find('.getMarker');
+
+    if($(instagramHeading).visible(true)){
+        setTimeout(function(){
+            instagramHeading.addClass('init');
+        }, 500)
+    }
+    if($(mapHeading).visible(true)){
+        setTimeout(function(){
+            mapHeading.addClass('init');
+        }, 500)
+    }
+    $(window).on('scroll', function(){
+        if($(instagramHeading).visible(true)){
+            setTimeout(function(){
+                instagramHeading.addClass('init');
+            }, 500)
+        }
+        if($(mapHeading).visible(true)){
+            setTimeout(function(){
+                mapHeading.addClass('init');
+            }, 500)
+        }
+    });
+});
+
 /********** PODKREŚLENIA NASZE PRZEPISY **********/
 
 // $(window).on('scroll', function () {
