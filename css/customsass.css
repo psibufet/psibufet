@@ -12724,6 +12724,10 @@ body.page-template-page_ksiazka .siteHeader--promocode {
   opacity: .8 !important;
 }
 
+.restMap .mapList__content .group__list p:last-of-type {
+  margin: 0;
+}
+
 .restMap .mapList__content .group--active .group__name h4 {
   opacity: 1;
 }

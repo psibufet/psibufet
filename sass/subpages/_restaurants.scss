@@ -284,6 +284,9 @@
                         &:hover{
                             opacity: .8 !important;
                         }
+                        &:last-of-type{
+                            margin: 0;
+                        }
                     }
                 }
                 &--active{
