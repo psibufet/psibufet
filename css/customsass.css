@@ -12597,6 +12597,10 @@ body.page-template-page_ksiazka .siteHeader--promocode {
   text-align: center;
 }
 
+.restMap__heading h2 span:after {
+  bottom: 8px;
+}
+
 .restMap__heading p {
   font-size: 20px;
   line-height: 23px;
@@ -12742,7 +12746,7 @@ body.page-template-page_ksiazka .siteHeader--promocode {
 }
 
 .restMap__cta .openRestList {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   min-width: 235px;
@@ -12819,6 +12823,9 @@ body.page-template-page_ksiazka .siteHeader--promocode {
   .restMap .mapList {
     display: none;
   }
+  .restMap__cta .openRestList {
+    display: flex;
+  }
 }
 
 @media (max-width: 767px) {
@@ -12856,6 +12863,10 @@ body.page-template-page_ksiazka .siteHeader--promocode {
   font-family: "Bebas Neue", sans-serif;
   margin: 0;
   text-align: center;
+}
+
+.restInstagram__heading h2 span:after {
+  bottom: 8px;
 }
 
 .restInstagram__list {
@@ -13111,6 +13122,10 @@ body.page-template-page_ksiazka .siteHeader--promocode {
 
 .restListModal .mapList__content .group__list p:hover {
   opacity: .8 !important;
+}
+
+.restListModal .mapList__content .group__list p:last-of-type {
+  margin: 0;
 }
 
 .restListModal .mapList__content .group--active .group__name h4 {

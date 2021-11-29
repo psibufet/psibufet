@@ -8,7 +8,7 @@ get_header(); ?>
     <section class="restHeader">
         <div class="restHeader__wrap">
             <h1>Restauracyjna jakość</h1>
-            <p>Wypróbuj PsiBufet menu<br/>w restauracji<br/> w Twojej okolicy</p>
+            <p>Wypróbuj PsiBufet menu<br/> w restauracji<br/> w Twojej okolicy</p>
         </div>
         <a href="#page-continue" class="restHeader__scroll">
             <p>Dowiedz się więcej</p>
@@ -71,18 +71,18 @@ get_header(); ?>
         </div>
         <div class="restInstagram__wrap container">
             <div class="restInstagram__list">
-                <div class="restPost">
+                <a href="https://instagram.com/" target="_blank" class="restPost">
                     <img class="no-lazyload" src="<?php echo get_template_directory_uri() . '/images/restaurants/instagram/post01.png'; ?>"/>
-                </div>
-                <div class="restPost">
+                </a>
+                <a href="https://instagram.com/" target="_blank" class="restPost">
                     <img class="no-lazyload" src="<?php echo get_template_directory_uri() . '/images/restaurants/instagram/post02.png'; ?>"/>
-                </div>
-                <div class="restPost">
+                </a>
+                <a href="https://instagram.com/" target="_blank" class="restPost">
                     <img class="no-lazyload" src="<?php echo get_template_directory_uri() . '/images/restaurants/instagram/post03.png'; ?>"/>
-                </div>
-                <div class="restPost">
+                </a>
+                <a href="https://instagram.com/" target="_blank" class="restPost">
                     <img class="no-lazyload" src="<?php echo get_template_directory_uri() . '/images/restaurants/instagram/post04.png'; ?>"/>
-                </div>
+                </a>
             </div>
         </div>
     </section>

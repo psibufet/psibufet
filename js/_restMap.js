@@ -48,7 +48,7 @@
             $('.group__name').on('click', function(){
                 var index = $(this).attr('data-index');
                 google.maps.event.trigger(map.markers[index], 'click');
-                map.setZoom(9);
+                map.setZoom(11);
 
                 $('.group__name').find('.getMarker').removeClass('init');
                 $(this).find('.getMarker').addClass('init');
