@@ -74,7 +74,8 @@
     function initMarker( $marker, map ) {
 
         // Get position from marker.
-        var city = $marker.attr('data-city');
+        var city = $marker.parents('.group').attr('data-city');
+        var name = $marker.attr('data-name');
         var lat = $marker.data('lat');
         var lng = $marker.data('lng');
         var latLng = {
@@ -88,6 +89,7 @@
             position : latLng,
             map: map,
             title: city,
+            name: name,
             icon: iconBase + 'mapMarker.svg',
         });
 
@@ -98,6 +100,19 @@
         // Show info window when marker is clicked.
         google.maps.event.addListener(marker, 'click', function() {
             map.setCenter(marker.getPosition());
+
+            var listGroup = $('.mapList__content').find('.group');
+            var restaurants = listGroup.find('.group__list').find('p');
+
+            setTimeout(function(){
+                $(restaurants).each(function(){
+                    var name = $(this).attr('data-name');
+    
+                    if(name == marker.name){
+                        $(this).addClass('init');
+                    }
+                });
+            }, 100);
         });
     }
 
@@ -106,19 +121,53 @@
         var bounds = map.getBounds();
         for (var i = 0; i < $markers.length; i++) {
             var marker = $markers[i];
-            
+            var markerName = $markers[i].name;
+
+            var allrests = $('.group__list').find('p');
+            $(allrests).each(function(){
+                var restname = $(this).attr('data-name');
+
+                if(restname == markerName){
+                    $(this).removeClass('init');
+                }
+            });
+
             if(bounds.contains(marker.getPosition()) === true){
                 var group = marker.getTitle();
-                array.indexOf(group) === -1 ? array.push(group) : '';
+                var name = marker.name;
+                if(array[group] === undefined){
+                    array[group] = [];
+                }
+                array[group].push({name: name});
             }
         }
+
         var listGroup = $('.mapList__content').find('.group');
         $(listGroup).each(function(){
             var city = $(this).attr('data-city');
-            array.indexOf(city) === -1 ?
-            $(this).removeClass('group--active') :
-            $(this).addClass('group--active') ;
-            // $('.mapList__content').trigger('changed');
+            var restaurants = $(this).find('.group__list').find('p');
+
+            if(array[city] !== undefined){
+                $(this).addClass('group--active');
+            }else{
+                $(this).removeClass('group--active');
+            }
+
+            var visibleRests = [];
+            $.each(array[city], function (index, value) {
+                visibleRests.push(value.name);
+            });
+
+            $(restaurants).each(function(){
+                var rest = $(this);
+                var name = rest.attr('data-name');
+
+                if($.inArray(name, visibleRests) !== -1){
+                    rest.addClass('active');
+                }else{
+                    rest.removeClass('active');
+                }
+            });
         });
     }
 

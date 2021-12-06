@@ -42,7 +42,7 @@ get_header(); ?>
         <meta itemprop="name" content="<?php echo get_field('flavourName', $featuredFlavour[0]->ID); ?>">
         <meta itemprop="description" content="<?php echo $descValue; ?>">
         <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-            <meta itemprop="price" content="6.90">
+            <meta itemprop="price" content="4.90">
             <meta itemprop="priceCurrency" content="PLN">
         </span>
     </span>
@@ -71,7 +71,7 @@ get_header(); ?>
                     <h2 class="price" id="flavourPrice" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
                         <meta itemprop="priceCurrency" content="PLN"/>
                         <span>
-                            <span class="value" itemprop="price">6
+                            <span class="value" itemprop="price">4
                                 <small>90</small>
                             </span>ZŁ
                         </span> / dzień

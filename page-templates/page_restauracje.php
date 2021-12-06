@@ -25,12 +25,15 @@ get_header(); ?>
                 <div id="restaurantMap" class="restaurantMap" data-zoom="16">
                 <?php while ( have_rows('restList') ) : the_row(); 
                     $city = get_sub_field('restList_city');
-
-                    while(have_rows('restList_restaurants')): the_row();
-                        $location = get_sub_field('restList_map');
-                    ?>
-                        <div class="marker" data-city="<?php echo $city; ?>" data-lat="<?php echo esc_attr($location['lat']); ?>" data-lng="<?php echo esc_attr($location['lng']); ?>"></div>
-                    <?php endwhile; ?>
+                ?>
+                    <div class="group" data-city="<?php echo $city; ?>">
+                        <?php while(have_rows('restList_restaurants')): the_row();
+                            $location = get_sub_field('restList_map');
+                            $name = get_sub_field('restList_name');
+                        ?>
+                            <div class="marker" data-name="<?php echo $name; ?>" data-lat="<?php echo esc_attr($location['lat']); ?>" data-lng="<?php echo esc_attr($location['lng']); ?>"></div>
+                        <?php endwhile; ?>
+                    </div>
                 <?php endwhile; ?>
                 </div>
             </div>
@@ -50,7 +53,7 @@ get_header(); ?>
                             <?php while(have_rows('restList_restaurants')): the_row();
                                 $name = get_sub_field('restList_name');
                             ?>
-                                <p><?php echo $name; ?></p>
+                                <p data-name="<?php echo $name; ?>"><?php echo $name; ?></p>
                             <?php endwhile; ?>
                         </div>
                     </div>

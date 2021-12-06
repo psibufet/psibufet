@@ -293,6 +293,9 @@
                         &:last-of-type{
                             margin: 0;
                         }
+                        // &.active{
+
+                        // }
                     }
                 }
                 &--active{
@@ -303,7 +306,11 @@
                     }
                     .group__list{
                         p{
-                            opacity: 1;
+                            opacity: .2;
+
+                            &.active{
+                                opacity: 1;
+                            }
                         }
                     }
                 }
