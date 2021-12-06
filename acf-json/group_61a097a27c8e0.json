@@ -95,6 +95,25 @@
                             "maxlength": ""
                         },
                         {
+                            "key": "field_61ae4720a1576",
+                            "label": "Ulica",
+                            "name": "restList_street",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
                             "key": "field_61a09ec9a0fd0",
                             "label": "Restauracje",
                             "name": "restList_map",
@@ -134,5 +153,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1637916582
+    "modified": 1638811453
 }

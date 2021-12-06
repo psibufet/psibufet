@@ -194,6 +194,27 @@
         .restaurantMap{
             min-height: 500px;
         }
+        .mapPopup{
+            padding: 10px;
+            min-width: 180px;
+            max-width: 200px;
+
+            &__heading{
+                font-size: 26px;
+                line-height: 30px;
+                color: #000;
+                font-weight: 400;
+                font-family: "Bebas Neue", sans-serif;
+                margin: 0 0 7px;
+            }
+            p{
+                font-size: 16px;
+                line-height: 19px;
+                font-weight: 400;
+                color: #000;
+                margin: 0;
+            }
+        }
     }
     .mapList{
         max-width: 375px;
@@ -286,6 +307,11 @@
                         opacity: .2;
                         transition: ease .3s;
                         cursor: pointer;
+                        max-width: fit-content;
+                        max-width: -moz-max-content;
+                        max-width: -webkit-fit-content;
+                        position: relative;
+                        z-index: 1;
 
                         &:hover{
                             opacity: .8 !important;
@@ -293,9 +319,22 @@
                         &:last-of-type{
                             margin: 0;
                         }
-                        // &.active{
-
-                        // }
+                        &:after{
+                            content: '';
+                            width: 0;
+                            height: 5px;
+                            position: absolute;
+                            background-color: $redcolor;
+                            bottom: 4px;
+                            z-index: -1;
+                            left: -1.5%;
+                            transition: ease 1s;            
+                        }
+                        &.init{
+                            &:after{
+                                width: 103%;
+                            }
+                        }
                     }
                 }
                 &--active{

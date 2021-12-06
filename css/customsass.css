@@ -12627,6 +12627,29 @@ body.page-template-page_ksiazka .siteHeader--promocode {
   min-height: 500px;
 }
 
+.restMap__map .mapPopup {
+  padding: 10px;
+  min-width: 180px;
+  max-width: 200px;
+}
+
+.restMap__map .mapPopup__heading {
+  font-size: 26px;
+  line-height: 30px;
+  color: #000;
+  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  margin: 0 0 7px;
+}
+
+.restMap__map .mapPopup p {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+  color: #000;
+  margin: 0;
+}
+
 .restMap .mapList {
   max-width: 375px;
   width: 100%;
@@ -12722,6 +12745,11 @@ body.page-template-page_ksiazka .siteHeader--promocode {
   opacity: .2;
   transition: ease .3s;
   cursor: pointer;
+  max-width: fit-content;
+  max-width: -moz-max-content;
+  max-width: -webkit-fit-content;
+  position: relative;
+  z-index: 1;
 }
 
 .restMap .mapList__content .group__list p:hover {
@@ -12730,6 +12758,22 @@ body.page-template-page_ksiazka .siteHeader--promocode {
 
 .restMap .mapList__content .group__list p:last-of-type {
   margin: 0;
+}
+
+.restMap .mapList__content .group__list p:after {
+  content: '';
+  width: 0;
+  height: 5px;
+  position: absolute;
+  background-color: #f15748;
+  bottom: 4px;
+  z-index: -1;
+  left: -1.5%;
+  transition: ease 1s;
+}
+
+.restMap .mapList__content .group__list p.init:after {
+  width: 103%;
 }
 
 .restMap .mapList__content .group--active .group__name h4 {

@@ -47,7 +47,7 @@
             });
             $('.group__name').on('click', function(){
                 var index = $(this).attr('data-index');
-                google.maps.event.trigger(map.markers[index], 'click');
+                map.setCenter(map.markers[index].getPosition());
                 map.setZoom(11);
 
                 $('.group__name').find('.getMarker').removeClass('init');
@@ -76,6 +76,7 @@
         // Get position from marker.
         var city = $marker.parents('.group').attr('data-city');
         var name = $marker.attr('data-name');
+        var street = $marker.attr('data-street');
         var lat = $marker.data('lat');
         var lng = $marker.data('lng');
         var latLng = {
@@ -96,10 +97,26 @@
         // Append to reference for later use.
         map.markers.push( marker );
 
+        var contentString =
+            '<div class="mapPopup">' +
+            '<h3 class="mapPopup__heading">' + name + '</h3>' +
+            "<p>" + street + "</p>" +
+            "</div>";
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString,
+        });
 
         // Show info window when marker is clicked.
         google.maps.event.addListener(marker, 'click', function() {
             map.setCenter(marker.getPosition());
+
+            infowindow.close(map);
+            infowindow.open({
+                anchor: marker,
+                map,
+                shouldFocus: false,
+            });
+            map.setZoom(16);
 
             var listGroup = $('.mapList__content').find('.group');
             var restaurants = listGroup.find('.group__list').find('p');
@@ -107,7 +124,7 @@
             setTimeout(function(){
                 $(restaurants).each(function(){
                     var name = $(this).attr('data-name');
-    
+
                     if(name == marker.name){
                         $(this).addClass('init');
                     }
@@ -118,6 +135,7 @@
 
     function showVisibleMarkers(map, $markers) {
         var array = [];
+        var count = 0;
         var bounds = map.getBounds();
         for (var i = 0; i < $markers.length; i++) {
             var marker = $markers[i];
@@ -133,6 +151,7 @@
             });
 
             if(bounds.contains(marker.getPosition()) === true){
+                count++;
                 var group = marker.getTitle();
                 var name = marker.name;
                 if(array[group] === undefined){
@@ -164,6 +183,9 @@
 
                 if($.inArray(name, visibleRests) !== -1){
                     rest.addClass('active');
+                    if(count == 1){
+                        rest.addClass('init');
+                    }
                 }else{
                     rest.removeClass('active');
                 }
@@ -214,7 +236,6 @@
             $(restaurants).each(function(){
                 $(this).attr('data-index', count);
                 if($(this).is(':last-child')){
-                    console.log('last: ' + count);
                     $(this).parents('.group').find('.group__name').attr('data-index', count);
                 }
                 count++;

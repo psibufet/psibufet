@@ -30,8 +30,9 @@ get_header(); ?>
                         <?php while(have_rows('restList_restaurants')): the_row();
                             $location = get_sub_field('restList_map');
                             $name = get_sub_field('restList_name');
+                            $street = get_sub_field('restList_street');
                         ?>
-                            <div class="marker" data-name="<?php echo $name; ?>" data-lat="<?php echo esc_attr($location['lat']); ?>" data-lng="<?php echo esc_attr($location['lng']); ?>"></div>
+                            <div class="marker" data-name="<?php echo $name; ?>" data-street="<?php echo $street; ?>" data-lat="<?php echo esc_attr($location['lat']); ?>" data-lng="<?php echo esc_attr($location['lng']); ?>"></div>
                         <?php endwhile; ?>
                     </div>
                 <?php endwhile; ?>
@@ -41,7 +42,7 @@ get_header(); ?>
                 <div class="mapList__heading">
                     <h3>Restauracje</h3>
                 </div>
-                <div class="mapList__content">
+                <div class="mapList__content">                    
                     <?php while ( have_rows('restList') ) : the_row(); 
                         $city = get_sub_field('restList_city');
                     ?>
