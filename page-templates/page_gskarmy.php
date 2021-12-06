@@ -29,7 +29,7 @@ get_header(); ?>
     <?php
     $featuredFlavour = get_field('gspageMainFlavour');
     if( $featuredFlavour ): ?>
-    <section class="gsKarmainfo">
+    <section class="gsKarmainfo" itemscope itemtype="http://schema.org/Product">
         <div class="gsKarmainfo__wrap">
             <div class="gsKarmainfo__gallery">
                 <div class="gallery">
@@ -42,13 +42,20 @@ get_header(); ?>
                     <?php endforeach; ?>
                 </div>
                 <div class="bar" style="background-color: <?php the_field('flavourColor'); ?>">
-                    <p><?php the_field('flavourName'); ?></p>
-                    <img class="no-lazyload" src="<?php the_field('flavourIcon'); ?>"/>
+                    <p itemprop="name"><?php the_field('flavourName'); ?></p>
+                    <img class="no-lazyload" itemprop="image" src="<?php the_field('flavourIcon'); ?>"/>
                 </div>
             </div>
             <div class="gsKarmainfo__content">
                 <div class="gsKarmainfo__contentWrap">
-                    <h2 class="price" id="flavourPrice"><span><span class="value">6<small>90</small></span>ZŁ</span> / dzień</h2>
+                    <h2 class="price" id="flavourPrice" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <meta itemprop="priceCurrency" content="PLN"/>
+                        <span>
+                            <span class="value" itemprop="price">6
+                                <small>90</small>
+                            </span>ZŁ
+                        </span> / dzień
+                    </h2>
                     <p class="portion" id="flavourValue">Porcja: <span>125</span> g / dzień</p>
                     <div class="select">
                         <div class="select__selected">
@@ -73,7 +80,7 @@ get_header(); ?>
                             </div>
                         </div>
                     </div>
-                    <p class="desc"><?php the_field('gspageDesc'); ?></p>
+                    <p class="desc" itemprop="description"><?php the_field('gspageDesc'); ?></p>
                     <div class="infoButton"><img src="<?php echo get_template_directory_uri() . '/images/icons/info_icon_black.svg'; ?>"/>Zobacz skład</div>
                     <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir"><span>Dobierz porcję</span></a>
                 </div>
