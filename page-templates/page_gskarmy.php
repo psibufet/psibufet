@@ -29,6 +29,25 @@ get_header(); ?>
     <?php
     $featuredFlavour = get_field('gspageMainFlavour');
     if( $featuredFlavour ): ?>
+
+    <!-- Google Shopping - meta -->
+    <?php
+        $image = get_field('flavourThumb', $featuredFlavour[0]->ID);
+        $desc = get_field('gspageDesc', $featuredFlavour[0]->ID);
+        $toFind = array('<br />', '&nbsp;');
+        $descValue = str_replace($toFind, ' ', $desc);
+    ?>
+    <span itemscope itemtype="http://schema.org/Product" class="microdata">
+        <meta itemprop="image" content="<?php echo $image; ?>">
+        <meta itemprop="name" content="<?php echo get_field('flavourName', $featuredFlavour[0]->ID); ?>">
+        <meta itemprop="description" content="<?php echo $descValue; ?>">
+        <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <meta itemprop="price" content="6.90">
+            <meta itemprop="priceCurrency" content="PLN">
+        </span>
+    </span>
+    <!-- Google Shopping - meta -->
+
     <section class="gsKarmainfo" itemscope itemtype="http://schema.org/Product">
         <div class="gsKarmainfo__wrap">
             <div class="gsKarmainfo__gallery">
@@ -43,7 +62,7 @@ get_header(); ?>
                 </div>
                 <div class="bar" style="background-color: <?php the_field('flavourColor'); ?>">
                     <p itemprop="name"><?php the_field('flavourName'); ?></p>
-                    <img class="no-lazyload" itemprop="image" src="<?php the_field('flavourIcon'); ?>"/>
+                    <img class="no-lazyload" src="<?php the_field('flavourIcon'); ?>"/>
                 </div>
             </div>
             <div class="gsKarmainfo__content">
