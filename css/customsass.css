@@ -12692,7 +12692,20 @@ body.page-template-page_ksiazka .siteHeader--promocode {
 
 .restMap .mapList__content {
   max-height: 415px;
-  overflow-x: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.restMap .mapList__content::-webkit-scrollbar {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+  width: 4px;
+}
+
+.restMap .mapList__content::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  width: 4px;
 }
 
 .restMap .mapList__content .group {
@@ -12725,7 +12738,7 @@ body.page-template-page_ksiazka .siteHeader--promocode {
 
 .restMap .mapList__content .group__name h4 span:after {
   height: 5px;
-  bottom: 2px;
+  bottom: 4px;
 }
 
 .restMap .mapList__content .group__list {

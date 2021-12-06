@@ -256,7 +256,19 @@
         }
         &__content{
             max-height: 415px;
-            overflow-x: scroll;
+            overflow-x: hidden;
+            overflow-y: scroll;
+
+            &::-webkit-scrollbar{
+                background-color: rgba(0, 0, 0, 0.1);
+                border-radius: 0;
+                width: 4px;
+            }
+            &::-webkit-scrollbar-thumb{
+                background-color: rgba(0, 0, 0, 0.2);
+                border-radius: 0;
+                width: 4px;
+            }
 
             .group{
                 display: flex;
@@ -286,7 +298,7 @@
                         span{
                             &:after{
                                 height: 5px;
-                                bottom: 2px;
+                                bottom: 4px;
                             }
                         }
                     }
