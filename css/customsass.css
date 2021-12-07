@@ -12588,17 +12588,13 @@ body.page-template-page_ksiazka .siteHeader--promocode {
 }
 
 .restMap__heading h2 {
-  font-size: 41px;
-  line-height: 49px;
+  font-size: 48px;
+  line-height: 54px;
   color: #000;
   font-weight: 400;
   font-family: "Bebas Neue", sans-serif;
   margin: 0 0 25px;
   text-align: center;
-}
-
-.restMap__heading h2 span:after {
-  bottom: 8px;
 }
 
 .restMap__heading p {
@@ -12738,7 +12734,7 @@ body.page-template-page_ksiazka .siteHeader--promocode {
 
 .restMap .mapList__content .group__name h4 span:after {
   height: 5px;
-  bottom: 4px;
+  bottom: 3px;
 }
 
 .restMap .mapList__content .group__list {
@@ -12779,7 +12775,7 @@ body.page-template-page_ksiazka .siteHeader--promocode {
   height: 5px;
   position: absolute;
   background-color: #f15748;
-  bottom: 4px;
+  bottom: 3px;
   z-index: -1;
   left: -1.5%;
   transition: ease 1s;
@@ -12864,7 +12860,7 @@ body.page-template-page_ksiazka .siteHeader--promocode {
   }
   .restMap__heading h2 {
     font-size: 36px;
-    line-height: 43px;
+    line-height: 42px;
     margin: 0 0 10px;
   }
   .restMap__heading p {
@@ -12917,8 +12913,8 @@ body.page-template-page_ksiazka .siteHeader--promocode {
 }
 
 .restInstagram__heading h2 {
-  font-size: 41px;
-  line-height: 49px;
+  font-size: 48px;
+  line-height: 54px;
   color: #000;
   font-weight: 400;
   font-family: "Bebas Neue", sans-serif;
@@ -13052,7 +13048,7 @@ body.page-template-page_ksiazka .siteHeader--promocode {
 @media (max-width: 767px) {
   .restInstagram__heading h2 {
     font-size: 36px;
-    line-height: 43px;
+    line-height: 42px;
   }
 }
 
