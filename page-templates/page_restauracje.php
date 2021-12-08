@@ -197,7 +197,7 @@ get_header(); ?>
                         <?php while(have_rows('restList_restaurants')): the_row();
                             $name = get_sub_field('restList_name');
                         ?>
-                            <p><?php echo $name; ?></p>
+                            <p data-name="<?php echo $name; ?>"><?php echo $name; ?></p>
                         <?php endwhile; ?>
                     </div>
                 </div>

@@ -769,12 +769,33 @@
                         opacity: .2;
                         transition: ease .3s;
                         cursor: pointer;
+                        position: relative;
+                        max-width: fit-content;
+                        max-width: -moz-fit-content;
+                        max-width: -webkit-fit-content;
+                        z-index: 1;
 
                         &:hover{
                             opacity: .8 !important;
                         }
                         &:last-of-type{
                             margin: 0;
+                        }
+                        &:after{
+                            content: '';
+                            width: 0;
+                            height: 5px;
+                            position: absolute;
+                            background-color: $redcolor;
+                            bottom: 3px;
+                            z-index: -1;
+                            left: -1.5%;
+                            transition: ease 1s;            
+                        }
+                        &.init{
+                            &:after{
+                                width: 103%;
+                            }
                         }
                     }
                 }
@@ -786,7 +807,11 @@
                     }
                     .group__list{
                         p{
-                            opacity: 1;
+                            opacity: .2;
+
+                            &.active{
+                                opacity: 1;
+                            }
                         }
                     }
                 }

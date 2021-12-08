@@ -13175,6 +13175,10 @@ body.page-template-page_ksiazka .siteHeader--promocode {
   opacity: .2;
   transition: ease .3s;
   cursor: pointer;
+  position: relative;
+  max-width: fit-content;
+  max-width: -webkit-fit-content;
+  z-index: 1;
 }
 
 .restListModal .mapList__content .group__list p:hover {
@@ -13185,11 +13189,31 @@ body.page-template-page_ksiazka .siteHeader--promocode {
   margin: 0;
 }
 
+.restListModal .mapList__content .group__list p:after {
+  content: '';
+  width: 0;
+  height: 5px;
+  position: absolute;
+  background-color: #f15748;
+  bottom: 3px;
+  z-index: -1;
+  left: -1.5%;
+  transition: ease 1s;
+}
+
+.restListModal .mapList__content .group__list p.init:after {
+  width: 103%;
+}
+
 .restListModal .mapList__content .group--active .group__name h4 {
   opacity: 1;
 }
 
 .restListModal .mapList__content .group--active .group__list p {
+  opacity: .2;
+}
+
+.restListModal .mapList__content .group--active .group__list p.active {
   opacity: 1;
 }
 
