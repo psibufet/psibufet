@@ -699,6 +699,7 @@
         width: 50%;
         height: inherit;
         text-align: center;
+        padding-bottom: 30px;
 
         h2{
             font-size: 48px;
@@ -849,6 +850,11 @@
                 z-index: 1;
                 transform: translate(0, -50%);
             }
+        }
+    }
+    &__badge{
+        img{
+            margin-bottom: 30px;
         }
     }
     &__review{

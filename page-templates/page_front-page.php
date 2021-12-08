@@ -93,6 +93,7 @@ get_header(); ?>
                     <p>Idealnie<br/>dopasowana porcja</p>
                 </div>
             </div>
+            <div class="homeMiska__badge"></div>
             <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir"><span><?php the_field('front_uknow_cta') ?></span></a>
         </div>
         <div class="homeMiska__right">
