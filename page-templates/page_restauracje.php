@@ -69,27 +69,25 @@ get_header(); ?>
     </section>
     <?php endif; ?>
 
+    <?php if(get_field('restInstagram')): ?>
     <section class="restInstagram">
         <div class="restInstagram__heading">
             <h2 class="getMarker"><span class="marker">Zapsijaźnione</span> restauracje</h2>
         </div>
         <div class="restInstagram__wrap container">
             <div class="restInstagram__list">
-                <a href="https://instagram.com/" target="_blank" class="restPost">
-                    <img class="no-lazyload" src="<?php echo get_template_directory_uri() . '/images/restaurants/instagram/post01.png'; ?>"/>
-                </a>
-                <a href="https://instagram.com/" target="_blank" class="restPost">
-                    <img class="no-lazyload" src="<?php echo get_template_directory_uri() . '/images/restaurants/instagram/post02.png'; ?>"/>
-                </a>
-                <a href="https://instagram.com/" target="_blank" class="restPost">
-                    <img class="no-lazyload" src="<?php echo get_template_directory_uri() . '/images/restaurants/instagram/post03.png'; ?>"/>
-                </a>
-                <a href="https://instagram.com/" target="_blank" class="restPost">
-                    <img class="no-lazyload" src="<?php echo get_template_directory_uri() . '/images/restaurants/instagram/post04.png'; ?>"/>
-                </a>
+                <?php while(have_rows('restInstagram')): the_row();
+                    $post = get_sub_field('restInstagram_post');
+                    $link = get_sub_field('restInstagram_link');
+                ?>
+                    <a href="<?php echo $link; ?>" target="_blank" class="restPost">
+                        <img class="no-lazyload" src="<?php echo $post; ?>"/>
+                    </a>
+                <?php endwhile; ?>
             </div>
         </div>
     </section>
+    <?php endif; ?>
 
     <section class="pbShortcuts">
         <h2 class="getMarker"><span class="marker">Poznaj</span> nas lepiej</h2>
