@@ -46,32 +46,32 @@ function promobar(dataCode, dataAmount, dataType){
     }
 };
 
-// function blackweekBar(dataCode, dataAmount, dataType){
-// 	console.log('blackweek');
-// 	var code = dataCode;
-//     var type = dataType;
-//     var amount = dataAmount;
+function blackweekBar(dataCode, dataAmount, dataType){
+	console.log('blackweek');
+	var code = dataCode;
+    var type = dataType;
+    var amount = dataAmount;
 
-// 	$('body').addClass('promocode-blackweek');
-// 	$('.menu_dir a').addClass('dir');
-// 	$('.menu-item a').addClass('dir');
-// 	$('#blackweek').addClass('blackweek--active');
+	$('body').addClass('promocode-blackweek');
+	$('.menu_dir a').addClass('dir');
+	$('.menu-item a').addClass('dir');
+	$('#blackweek').addClass('blackweek--active');
 
-// 	setTimeout(function(){
-// 		$(".dir").each(function () {
-// 			var $this = $(this);
-// 			var _href = $this.attr("href");
-// 			if(typeof type !== 'undefined' && typeof amount !== 'undefined'){
-// 				$this.attr("href", _href + '?code=' + code + '&amount=' + amount + '&type=' + type);
-// 			}else{
-// 				$this.attr("href", _href + '?code=' + code);
-// 			}
-// 		});
-// 	}, 50);
+	setTimeout(function(){
+		$(".dir").each(function () {
+			var $this = $(this);
+			var _href = $this.attr("href");
+			if(typeof type !== 'undefined' && typeof amount !== 'undefined'){
+				$this.attr("href", _href + '?code=' + code + '&amount=' + amount + '&type=' + type);
+			}else{
+				$this.attr("href", _href + '?code=' + code);
+			}
+		});
+	}, 50);
 
-// 	// Set header clone height
-// 	headerClone();
-// }
+	// Set header clone height
+	headerClone();
+}
 
 $(document).ready(function(){
 	// Set header clone height
@@ -148,7 +148,7 @@ $(document).ready(function(){
 		'restauracje',
 	];
 	var blackweek = [
-		
+		'gwiazdka40',
 	];
 
 	if(whitelist.indexOf(sPageURL) !== -1){
@@ -173,11 +173,11 @@ $(document).ready(function(){
 							var amount = data.amount;
 							var type = data.type;
 
-							// if(blackweek.indexOf(code) !== -1){
-							// 	blackweekBar(code, amount, type);
-							// }else{
+							if(blackweek.indexOf(code) !== -1){
+								blackweekBar(code, amount, type);
+							}else{
 								promobar(code, amount, type);
-							// }
+							}
 						}			
 					});
 				}

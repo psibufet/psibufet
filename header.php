@@ -194,7 +194,7 @@
                     <?php wp_nav_menu( array( 'theme_location' => 'mobile' ) ); ?>
                 </div>
             </div>
-            <?php // include get_template_directory() . '/template-parts/_blackWeek.php'; ?>
+            <?php include get_template_directory() . '/template-parts/_blackWeek.php'; ?>
         </header><!-- #masthead -->
 
         <div id="content" class="page-wrap">
