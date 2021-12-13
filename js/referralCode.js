@@ -201,6 +201,13 @@ $(document).ready(function(){
 		'dogfan40',
 		'psicholozka40',
 		'helppsiaki40',
+		'zuzia40',
+		'oreo40',
+		'goofy40',
+		'fuksia40',
+		'tadek40',
+		'wspanialy40',
+		'fisia40',
 	];
 
 	if(whitelist.indexOf(sPageURL) !== -1){
