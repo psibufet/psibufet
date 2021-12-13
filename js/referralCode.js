@@ -200,6 +200,7 @@ $(document).ready(function(){
 		'voteforpralka40',
 		'dogfan40',
 		'psicholozka40',
+		'helppsiaki40',
 	];
 
 	if(whitelist.indexOf(sPageURL) !== -1){
