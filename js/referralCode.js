@@ -210,6 +210,7 @@ $(document).ready(function(){
 		'fisia40',
 		'pandzia40',
 		'malygamon40',
+		'filetzuszkami',
 	];
 
 	if(whitelist.indexOf(sPageURL) !== -1){
