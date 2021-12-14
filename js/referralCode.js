@@ -208,6 +208,8 @@ $(document).ready(function(){
 		'tadek40',
 		'wspanialy40',
 		'fisia40',
+		'pandzia40',
+		'malygamon40',
 	];
 
 	if(whitelist.indexOf(sPageURL) !== -1){
