@@ -116,6 +116,17 @@ get_header(); ?>
     </section>
     <section class="homeFoodinfo">
         <div class="homeFoodinfo__wrap container">
+            <div class="homeFoodinfo__mobileExpert">
+                <div class="expertInfo">
+                    <div class="expertInfo__image">
+                        <img src="<?php echo get_template_directory_uri() . '/images/expertphoto.webp'; ?>"/>
+                    </div>
+                    <div class="expertInfo__content">
+                        <p><b>Składy karm PsiBufet</b> zostały opracowane i zweryfikowane przez <b>Eksperta.</b></p>
+                        <h4><span>dr inż.</span> Olga Lasek</h4>
+                    </div>
+                </div>
+            </div>
             <div class="homeFoodinfo__left">
                 <div class="slidesWrap">
                     <div id="foodinfo_carousel" class="homeFoodinfo__slides">
@@ -174,7 +185,7 @@ get_header(); ?>
                 </div>
             </div>
         </div>
-        <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir"><span><?php the_field('front_foodinfo_cta') ?></span></a>
+        <a href="https://zamowienie.psibufet.pl/" class="btn btn--center btn--green dir"><span><?php the_field('front_foodinfo_cta') ?></span></a>
         <div class="foodModal">
             <div class="foodModal__wrap">
                 <img class="closeFoodModal closeImg no1-lazyload" src="<?php echo get_template_directory_uri() . '/images/icons/closeModal_ico.svg'; ?>"/>

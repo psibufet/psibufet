@@ -2704,64 +2704,6 @@ body.promocode-blackweek .siteHeader--promocode {
   text-align: center;
 }
 
-.homeFoodinfo__right .expertInfo {
-  display: flex;
-  align-items: center;
-  background-color: #fff;
-  border: 1px solid #BCBCBB;
-  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
-  padding: 15px 28px;
-  max-width: 440px;
-  margin: 0 auto 20px;
-}
-
-.homeFoodinfo__right .expertInfo__image {
-  width: 120px;
-}
-
-.homeFoodinfo__right .expertInfo__image img {
-  width: 100%;
-  object-fit: contain;
-  border: 2px solid #4EACB6;
-  border-radius: 100%;
-  padding: 2px;
-}
-
-.homeFoodinfo__right .expertInfo__content {
-  width: calc(100% - 120px);
-  padding-left: 25px;
-}
-
-.homeFoodinfo__right .expertInfo__content p {
-  font-size: 18px;
-  line-height: 21px;
-  font-weight: 400;
-  color: #000;
-  text-align: left;
-  margin: 0 0 10px;
-}
-
-.homeFoodinfo__right .expertInfo__content p b {
-  font-weight: 700;
-}
-
-.homeFoodinfo__right .expertInfo__content h4 {
-  display: block;
-  font-size: 26px;
-  line-height: 1;
-  font-weight: 500;
-  font-family: "Bebas Neue", sans-serif;
-  color: #000;
-  text-transform: uppercase;
-  margin: 0;
-  text-align: right;
-}
-
-.homeFoodinfo__right .expertInfo__content h4 span {
-  font-size: 18px;
-  line-height: 23px;
-}
-
 .homeFoodinfo__right .reviewBar {
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
@@ -2795,6 +2737,68 @@ body.promocode-blackweek .siteHeader--promocode {
 
 .homeFoodinfo__right .reviewBar .logo {
   width: 80px;
+}
+
+.homeFoodinfo .expertInfo {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #BCBCBB;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  padding: 15px 28px;
+  max-width: 440px;
+  margin: 0 auto 20px;
+}
+
+.homeFoodinfo .expertInfo__image {
+  width: 120px;
+}
+
+.homeFoodinfo .expertInfo__image img {
+  width: 100%;
+  object-fit: contain;
+  border: 2px solid #4EACB6;
+  border-radius: 100%;
+  padding: 2px;
+}
+
+.homeFoodinfo .expertInfo__content {
+  width: calc(100% - 120px);
+  padding-left: 25px;
+}
+
+.homeFoodinfo .expertInfo__content p {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #000;
+  text-align: left;
+  margin: 0 0 10px;
+}
+
+.homeFoodinfo .expertInfo__content p b {
+  font-weight: 700;
+}
+
+.homeFoodinfo .expertInfo__content h4 {
+  display: block;
+  font-size: 26px;
+  line-height: 1;
+  font-weight: 500;
+  font-family: "Bebas Neue", sans-serif;
+  color: #000;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: right;
+}
+
+.homeFoodinfo .expertInfo__content h4 span {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.homeFoodinfo__mobileExpert {
+  display: none;
 }
 
 @media (max-width: 1599px) {
@@ -2851,8 +2855,11 @@ body.promocode-blackweek .siteHeader--promocode {
 
 @media (max-width: 991px) {
   .homeFoodinfo__wrap {
-    flex-direction: column;
+    flex-direction: column-reverse;
     margin-bottom: 20px;
+  }
+  .homeFoodinfo__mobileExpert {
+    display: block;
   }
   .homeFoodinfo__left {
     width: 100%;
@@ -2875,6 +2882,7 @@ body.promocode-blackweek .siteHeader--promocode {
   .homeFoodinfo__right {
     width: 100%;
     margin-bottom: 0;
+    margin-top: 40px;
   }
   .homeFoodinfo__right h2 {
     max-width: 480px;
@@ -2901,25 +2909,29 @@ body.promocode-blackweek .siteHeader--promocode {
     line-height: 16px;
   }
   .homeFoodinfo__right .expertInfo {
+    display: none;
+  }
+  .homeFoodinfo .expertInfo {
     max-width: 320px;
     width: 100%;
     padding: 8px 20px;
+    margin: 20px auto 0;
   }
-  .homeFoodinfo__right .expertInfo__image {
+  .homeFoodinfo .expertInfo__image {
     width: 105px;
   }
-  .homeFoodinfo__right .expertInfo__content {
+  .homeFoodinfo .expertInfo__content {
     width: calc(100% - 105px);
     padding-left: 16px;
   }
-  .homeFoodinfo__right .expertInfo__content p {
+  .homeFoodinfo .expertInfo__content p {
     font-size: 12px;
     line-height: 15px;
   }
-  .homeFoodinfo__right .expertInfo__content h4 {
+  .homeFoodinfo .expertInfo__content h4 {
     font-size: 19px;
   }
-  .homeFoodinfo__right .expertInfo__content h4 span {
+  .homeFoodinfo .expertInfo__content h4 span {
     font-size: 13px;
     line-height: 15px;
   }
@@ -2933,12 +2945,12 @@ body.promocode-blackweek .siteHeader--promocode {
     display: none;
   }
   .homeFoodinfo__left {
-    margin-top: 40px;
-    padding-bottom: 70px;
+    margin-top: 10px;
+    padding-bottom: 100px;
     overflow: visible;
   }
   .homeFoodinfo__left .slidesWrap .infoButtons {
-    bottom: -8px;
+    bottom: 4px;
   }
   .homeFoodinfo__slides .slick-list {
     margin: 0;
@@ -2958,7 +2970,8 @@ body.promocode-blackweek .siteHeader--promocode {
     transform: scale(1);
   }
   .homeFoodinfo__right {
-    padding: 35px 0 0;
+    padding: 0;
+    margin-top: 50px;
   }
   .homeFoodinfo__right h2 {
     font-size: 36px;
@@ -3005,10 +3018,10 @@ body.promocode-blackweek .siteHeader--promocode {
 @media (max-width: 575px) {
   .homeFoodinfo__left {
     height: auto;
-    padding-bottom: 70px;
+    padding-bottom: 90px;
   }
   .homeFoodinfo__left .slidesWrap .infoButtons {
-    bottom: -10px;
+    bottom: 0;
   }
   .homeFoodinfo__info {
     width: 70vw;
@@ -13643,6 +13656,14 @@ body a:hover {
 
 .btn--info:hover {
   background-color: #f5f5f5;
+}
+
+.btn--green {
+  background-color: #129D6F;
+}
+
+.btn--green:hover {
+  background-color: #2abb8b;
 }
 
 @media (max-width: 991px) {

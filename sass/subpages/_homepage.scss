@@ -1357,61 +1357,6 @@
                 }
             }
         }
-        .expertInfo{
-            display: flex;
-            align-items: center;
-            background-color: #fff;
-            border: 1px solid #BCBCBB;
-            box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
-            padding: 15px 28px;
-            max-width: 440px;
-            margin: 0 auto 20px;
-
-            &__image{
-                width: 120px;
-
-                img{
-                    width: 100%;
-                    object-fit: contain;
-                    border: 2px solid #4EACB6;
-                    border-radius: 100%;
-                    padding: 2px;
-                }
-            }
-            &__content{
-                width: calc(100% - 120px);
-                padding-left: 25px;
-
-                p{
-                    font-size: 18px;
-                    line-height: 21px;
-                    font-weight: 400;
-                    color: #000;
-                    text-align: left;
-                    margin: 0 0 10px;
-
-                    b{
-                        font-weight: 700;
-                    }
-                }
-                h4{
-                    display: block;
-                    font-size: 26px;
-                    line-height: 1;
-                    font-weight: 500;
-                    font-family: $headingfont;
-                    color: #000;
-                    text-transform: uppercase;
-                    margin: 0;
-                    text-align: right;
-
-                    span{
-                        font-size: 18px;
-                        line-height: 23px;
-                    }
-                }
-            }
-        }
         .reviewBar{
             border: 1px solid rgba(0, 0, 0, 0.2);
             box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
@@ -1444,6 +1389,64 @@
                 width: 80px;
             }
         }
+    }
+    .expertInfo{
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        border: 1px solid #BCBCBB;
+        box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+        padding: 15px 28px;
+        max-width: 440px;
+        margin: 0 auto 20px;
+
+        &__image{
+            width: 120px;
+
+            img{
+                width: 100%;
+                object-fit: contain;
+                border: 2px solid #4EACB6;
+                border-radius: 100%;
+                padding: 2px;
+            }
+        }
+        &__content{
+            width: calc(100% - 120px);
+            padding-left: 25px;
+
+            p{
+                font-size: 18px;
+                line-height: 21px;
+                font-weight: 400;
+                color: #000;
+                text-align: left;
+                margin: 0 0 10px;
+
+                b{
+                    font-weight: 700;
+                }
+            }
+            h4{
+                display: block;
+                font-size: 26px;
+                line-height: 1;
+                font-weight: 500;
+                font-family: $headingfont;
+                color: #000;
+                text-transform: uppercase;
+                margin: 0;
+                text-align: right;
+
+                span{
+                    font-size: 18px;
+                    line-height: 23px;
+                }
+            }
+        }
+    }
+    &__mobileExpert{
+        display: none;
     }
 }
 @media (max-width: 1599px){
@@ -1523,8 +1526,11 @@
 @media (max-width: 991px){
     .homeFoodinfo{
         &__wrap{
-            flex-direction: column;
+            flex-direction: column-reverse;
             margin-bottom: 20px;
+        }
+        &__mobileExpert{
+            display: block;
         }
         &__left{
             width: 100%;
@@ -1553,6 +1559,7 @@
         &__right{
             width: 100%;
             margin-bottom: 0;
+            margin-top: 40px;
 
             h2{
                 max-width: 480px;
@@ -1583,28 +1590,32 @@
                 }
             }
             .expertInfo{
-                max-width: 320px;
-                width: 100%;
-                padding: 8px 20px;
+                display: none;
+            }
+        }
+        .expertInfo{
+            max-width: 320px;
+            width: 100%;
+            padding: 8px 20px;
+            margin: 20px auto 0;
 
-                &__image{
-                    width: 105px
+            &__image{
+                width: 105px
+            }
+            &__content{
+                width: calc(100% - 105px);
+                padding-left: 16px;
+
+                p{
+                    font-size: 12px;
+                    line-height: 15px;
                 }
-                &__content{
-                    width: calc(100% - 105px);
-                    padding-left: 16px;
+                h4{
+                    font-size: 19px;
 
-                    p{
-                        font-size: 12px;
+                    span{
+                        font-size: 13px;
                         line-height: 15px;
-                    }
-                    h4{
-                        font-size: 19px;
-
-                        span{
-                            font-size: 13px;
-                            line-height: 15px;
-                        }
                     }
                 }
             }
@@ -1621,13 +1632,13 @@
             }
         }
         &__left{
-            margin-top: 40px; 
-            padding-bottom: 70px; 
+            margin-top: 10px; 
+            padding-bottom: 100px; 
             overflow: visible; 
 
             .slidesWrap{
                 .infoButtons{
-                    bottom: -8px;
+                    bottom: 4px;
                 }
             }
         }
@@ -1656,7 +1667,8 @@
             }
         }
         &__right{
-            padding: 35px 0 0;
+            padding: 0;
+            margin-top: 50px;
 
             h2{
                 font-size: 36px;
@@ -1708,11 +1720,11 @@
     .homeFoodinfo{
         &__left{
             height: auto;
-            padding-bottom: 70px;
+            padding-bottom: 90px;
 
             .slidesWrap{
                 .infoButtons{
-                    bottom: -10px;
+                    bottom: 0;
                 }
             }
         }

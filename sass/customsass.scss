@@ -390,6 +390,13 @@ body{
             background-color: #f5f5f5;
         }
     }
+    &--green{
+        background-color: $greencolor;
+
+        &:hover{
+            background-color: $greencolorhover;
+        }
+    }
 }
 @media (max-width: 991px){
     .btn{
