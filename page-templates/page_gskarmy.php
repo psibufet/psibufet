@@ -227,6 +227,54 @@ get_header(); ?>
     </section>
     <?php endif; ?>
 
+    <section class="gsExpert">
+        <div class="gsExpert__heading">
+            <h2 class="getMarker">Składy karm opracowane przez <span class="marker">eksperta</span></h2>
+        </div>
+        <div class="gsExpert__wrap">
+            <div class="gsExpert__image">
+                <img src="<?php echo get_template_directory_uri() . '/images/expertphoto.webp'; ?>"/>
+                <h4><span>dr inż.</span> Olga Lasek</h4>
+            </div>
+            <div class="gsExpert__content">
+                <p><b>Absolwentka Wydziału Hodowli i Biologii Zwierząt Uniwersytetu Rolniczego</b> w Krakowie.
+                Pracuje na stanowisku asystenta, nauczyciela akademickiego w Katedrze Żywienia Zwierząt i Paszoznawstwa UR Kraków. <b>Specjalizuje się w żywieniu zwierząt</b> monogastrycznych psów, kotów, drobiu i ptaków ozdobnych, a co się z tym wiąże, <b>prowadzi liczne badania naukowe</b> dotyczące wymienionych zagadnień.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="gsStandard">
+        <div class="gsStandard__heading">
+            <h2 class="getMarker">Nasze jedzenie spełnia najwyższe <span class="marker">standardy</span> bezpieczeństwa</h2>
+        </div>
+        <div class="gsStandard__wrap container">
+            <div class="gsStandard__usp">
+                <div class="icon">
+                    <img src="<?php echo get_template_directory_uri() . '/images/gspages/gs_usp_01.svg'; ?>"/>
+                </div>
+                <p><b>HACCP i kuchnia pod nadzorem</b> inspektora weterynarii</p>
+            </div>
+            <div class="gsStandard__usp">
+                <div class="icon">
+                    <img src="<?php echo get_template_directory_uri() . '/images/gspages/gs_usp_02.svg'; ?>"/>
+                </div>
+                <p><b>Karma wolna od wirusów i bakterii</b> każda partia testowana w Zakładzie Higieny Weterynaryjnej</p>
+            </div>
+            <div class="gsStandard__usp">
+                <div class="icon">
+                    <img src="<?php echo get_template_directory_uri() . '/images/gspages/gs_usp_03.svg'; ?>"/>
+                </div>
+                <p><b>Regularne testy</b> laboratoryjne (skład, przydatność do spożycia)</p>
+            </div>
+            <div class="gsStandard__usp">
+                <div class="icon">
+                    <img src="<?php echo get_template_directory_uri() . '/images/gspages/gs_usp_04.svg'; ?>"/>
+                </div>
+                <p><b>Bezpieczne opakowanie</b> zapewniające świeżość do 48h od nadania</p>
+            </div>
+        </div>
+    </section>
+
     <?php if(get_field('howitworks_step', 5)): ?>
     <section class="homeHowitworks">
         <div class="homeHowitworks__wrap container">
@@ -252,6 +300,16 @@ get_header(); ?>
         </div>
     </section>
     <?php endif; ?>
+
+    <section class="gsDelivery">
+        <div class="gsDelivery__wrap">
+            <div class="image">
+                <img src="<?php echo get_template_directory_uri() . '/images/howitworks_new/howPlan_freedelivery.svg'; ?>"/>
+            </div>
+            <h3>Dostarczamy w całej Polsce. Za darmo.</h3>
+            <p>Od Szczecina po Wieliczkę, świeża karma w każdej misce! </p>
+        </div>
+    </section>
 
     <section class="homeStart">
         <div class="homeStart__wrap container">

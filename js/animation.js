@@ -177,11 +177,23 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     var gsPageHeader = $('.gsHeading').find('.getMarker');
+    var gsExpert = $('.gsExpert__heading').find('.getMarker');
+    var gsStandard = $('.gsStandard__heading').find('.getMarker');
     var gsKarmaList = $('.gsKarmaList__heading').find('.getMarker');
 
     if($(gsPageHeader).visible(true)){
         setTimeout(function(){
             gsPageHeader.addClass('init');
+        }, 500)
+    }
+    if($(gsExpert).visible(true)){
+        setTimeout(function(){
+            gsExpert.addClass('init');
+        }, 500)
+    }
+    if($(gsStandard).visible(true)){
+        setTimeout(function(){
+            gsStandard.addClass('init');
         }, 500)
     }
     if($(gsKarmaList).visible(true)){
@@ -193,6 +205,16 @@ $(document).ready(function() {
         if($(gsPageHeader).visible(true)){
             setTimeout(function(){
                 gsPageHeader.addClass('init');
+            }, 500)
+        }
+        if($(gsExpert).visible(true)){
+            setTimeout(function(){
+                gsExpert.addClass('init');
+            }, 500)
+        }
+        if($(gsStandard).visible(true)){
+            setTimeout(function(){
+                gsStandard.addClass('init');
             }, 500)
         }
         if($(gsKarmaList).visible(true)){
