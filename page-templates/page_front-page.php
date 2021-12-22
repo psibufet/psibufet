@@ -185,7 +185,7 @@ get_header(); ?>
                 </div>
             </div>
         </div>
-        <a href="https://zamowienie.psibufet.pl/" class="btn btn--center btn--green dir"><span><?php the_field('front_foodinfo_cta') ?></span></a>
+        <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir"><span><?php the_field('front_foodinfo_cta') ?></span></a>
         <div class="foodModal">
             <div class="foodModal__wrap">
                 <img class="closeFoodModal closeImg no1-lazyload" src="<?php echo get_template_directory_uri() . '/images/icons/closeModal_ico.svg'; ?>"/>
