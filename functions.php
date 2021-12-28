@@ -639,10 +639,10 @@ function availableForm(){
 	ob_end_clean();
 	$headers = array('Content-Type: text/html; charset=UTF-8');
 	
-	$sent = wp_mail( $to, $subject, $message );
+	// $sent = wp_mail( $to, $subject, $message );
 	$sentUser = wp_mail($user, $subject_user, $message_user, $headers);
 
-	if($sent && $sentUser){
+	if($sentUser){
 		echo 'done';
 	}else{
 		echo 'error';
