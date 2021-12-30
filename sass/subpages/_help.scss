@@ -919,6 +919,15 @@
             color: $greencolor;
             text-align: center;
             margin: 0; 
+
+            a{
+                color: $greencolor;
+                transition: ease .3s;
+
+                &:hover{
+                    opacity: .7;
+                }
+            }
         }
         p{
             font-size: 21px;

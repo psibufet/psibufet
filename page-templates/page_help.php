@@ -157,12 +157,12 @@ get_header(); ?>
             </div>
             <div class="helpContact__mail">
                 <h3>Wyślij maila</h3>
-                <h4>kontakt@psibufet.pl</h4>
+                <h4><a href="mailto:kontakt@psibufet.pl">kontakt@psibufet.pl</a></h4>
             </div>
             <div class="helpContact__call">
                 <span>lub</span>
                 <h3>Zadzwoń</h3>
-                <h4>+48 22 104 62 59</h4>
+                <h4><a href="tel:+48221046259">+48 22 104 62 59</a></h4>
                 <p>infolinia czynna w godzinach: 10:00 - 16:00</p>
             </div>
         </div>

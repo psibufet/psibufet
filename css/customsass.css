@@ -14393,6 +14393,15 @@ body.page-template-page_ksiazka .siteHeader--promocode {
   margin: 0;
 }
 
+.helpContact__chat h4 a, .helpContact__mail h4 a, .helpContact__call h4 a {
+  color: #129D6F;
+  transition: ease .3s;
+}
+
+.helpContact__chat h4 a:hover, .helpContact__mail h4 a:hover, .helpContact__call h4 a:hover {
+  opacity: .7;
+}
+
 .helpContact__chat p, .helpContact__mail p, .helpContact__call p {
   font-size: 21px;
   line-height: 25px;
