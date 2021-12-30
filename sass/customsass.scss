@@ -29,6 +29,7 @@
 @import 'subpages/book';
 @import 'subpages/lprasy';
 @import 'subpages/restaurants';
+@import 'subpages/help';
 
 /*  Global
 --------------- */
@@ -612,6 +613,11 @@ body{
                 object-fit: contain;
             }
         }
+    }
+
+    &--help{
+        padding: 0 !important;
+        background-color: #fff;
     }
 }
 @media (max-width: 767px){

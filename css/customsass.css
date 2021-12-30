@@ -13517,6 +13517,983 @@ body.page-template-page_ksiazka .siteHeader--promocode {
   opacity: 1;
 }
 
+.helpHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 3;
+}
+
+.helpHeader__wrap {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.helpHeader__wrap:after {
+  content: '';
+  background-image: url("/wp-content/themes/psibufet/images/help/header_dog.svg");
+  background-repeat: no-repeat;
+  background-size: 130px;
+  width: 130px;
+  height: 156px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 0;
+}
+
+.helpHeader__wrap h1 {
+  font-size: 51px;
+  line-height: 61px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  margin: 0;
+}
+
+.helpHeader__wrap h2 {
+  font-size: 35px;
+  line-height: 42px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .helpHeader__wrap {
+    max-width: 600px;
+  }
+  .helpHeader__wrap:after {
+    background-size: 100px;
+    width: 100px;
+    height: 120px;
+  }
+  .helpHeader__wrap h1 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .helpHeader__wrap h2 {
+    font-size: 28px;
+    line-height: 35px;
+  }
+}
+
+@media (max-width: 767px) {
+  .helpHeader {
+    padding: 18px 0;
+  }
+  .helpHeader__wrap:after {
+    display: none;
+  }
+  .helpHeader__wrap h1 {
+    font-size: 36px;
+    line-height: 43px;
+  }
+  .helpHeader__wrap h2 {
+    font-size: 21px;
+    line-height: 25px;
+  }
+}
+
+.helpCategories {
+  background-color: #F7BE45;
+  padding: 32px 0 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.helpCategories__heading {
+  margin: 0 0 30px;
+}
+
+.helpCategories__heading h2 {
+  font-size: 35px;
+  line-height: 42px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  margin: 0;
+}
+
+.helpCategories__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1090px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.helpCategories__cat {
+  max-width: 350px;
+  width: 100%;
+  min-height: 237px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  margin: 0 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 30px 15px;
+  transition: ease .3s;
+}
+
+.helpCategories__cat:hover {
+  background-color: #f3f3f3;
+}
+
+.helpCategories__cat:nth-last-child(-n+3) {
+  margin: 0;
+}
+
+.helpCategories__cat:last-of-type .icon {
+  align-items: flex-start;
+}
+
+.helpCategories__cat:last-of-type .icon img {
+  margin-right: -25px;
+}
+
+.helpCategories__cat .icon {
+  min-height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.helpCategories__cat p {
+  font-size: 28px;
+  line-height: 34px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  margin: 0;
+}
+
+@media (max-width: 1199px) {
+  .helpCategories__wrap {
+    max-width: 880px;
+  }
+  .helpCategories__cat {
+    max-width: 280px;
+    min-height: 184px;
+    padding: 20px 15px;
+  }
+  .helpCategories__cat .icon {
+    max-width: 180px;
+    height: 95px;
+    min-height: 0;
+  }
+  .helpCategories__cat .icon img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .helpCategories__cat p {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .helpCategories__cat:last-of-type .icon img {
+    width: 140px;
+  }
+}
+
+@media (max-width: 991px) {
+  .helpCategories__heading h2 {
+    font-size: 28px;
+    line-height: 35px;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .helpCategories__wrap {
+    max-width: 755px;
+  }
+  .helpCategories__cat {
+    max-width: 240px;
+    min-height: 170px;
+    padding: 20px 15px;
+  }
+  .helpCategories__cat .icon {
+    max-width: 150px;
+    height: 80px;
+  }
+  .helpCategories__cat p {
+    font-size: 21px;
+    line-height: 24px;
+  }
+  .helpCategories__cat:last-of-type .icon img {
+    width: 140px;
+  }
+}
+
+@media (max-width: 767px) {
+  .helpCategories {
+    padding: 28px 0 45px;
+    overflow: hidden;
+  }
+  .helpCategories__heading {
+    max-width: 370px;
+    padding: 0 15px;
+    margin: 0 auto 20px;
+  }
+  .helpCategories__heading h2 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .helpCategories__wrap .slick-arrow {
+    background-repeat: no-repeat;
+    background-size: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 1;
+    font-size: 0;
+    background-color: unset;
+    border: 0;
+    padding: 0;
+    transition: ease .3s;
+    position: absolute;
+    top: 50%;
+    outline: none;
+    transform: translate(0, -50%);
+    z-index: 5;
+  }
+  .helpCategories__wrap .slick-arrow:hover {
+    opacity: .8;
+  }
+  .helpCategories__wrap .slick-arrow.slick-prev {
+    background-image: url("/wp-content/themes/psibufet/images/icons/slider_arrow_left_red.svg");
+    left: -300px;
+    right: 0;
+    margin: 0 auto;
+  }
+  .helpCategories__wrap .slick-arrow.slick-next {
+    background-image: url("/wp-content/themes/psibufet/images/icons/slider_arrow_right_red.svg");
+    left: 0;
+    right: -300px;
+    margin: 0 auto;
+  }
+  .helpCategories__wrap .slick-arrow.slick-disabled {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .helpCategories__wrap .slick-dots {
+    display: flex !important;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    bottom: -30px;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  .helpCategories__wrap .slick-dots li {
+    margin: 0 3px;
+    line-height: 1;
+  }
+  .helpCategories__wrap .slick-dots li.slick-active button {
+    background-color: #f15748;
+  }
+  .helpCategories__wrap .slick-dots li button {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-size: 0;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: ease .3s;
+  }
+  .helpCategories__cat {
+    display: flex !important;
+    margin: 0 10px;
+  }
+}
+
+.helpAction {
+  background-color: rgba(71, 105, 178, 0.1);
+  padding: 32px 0 40px;
+}
+
+.helpAction__heading {
+  margin: 0 0 28px;
+}
+
+.helpAction__heading h2 {
+  font-size: 35px;
+  line-height: 42px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  margin: 0;
+}
+
+.helpAction__heading h3 {
+  font-size: 28px;
+  line-height: 40px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  margin: 0;
+}
+
+.helpAction__wrap {
+  position: relative;
+  max-width: 970px;
+  margin: 0 auto;
+}
+
+.helpAction__wrap:before {
+  content: '';
+  background-image: url("/wp-content/themes/psibufet/images/help/formDog_left.svg");
+  background-repeat: no-repeat;
+  background-size: 140px;
+  width: 140px;
+  height: 266px;
+  position: absolute;
+  left: 50px;
+  top: 0;
+}
+
+.helpAction__wrap:after {
+  content: '';
+  background-image: url("/wp-content/themes/psibufet/images/help/formDog_right.svg");
+  background-repeat: no-repeat;
+  background-size: 174px;
+  width: 174px;
+  height: 252px;
+  position: absolute;
+  right: 0;
+  bottom: 40px;
+}
+
+.helpAction .helpForm {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  padding: 12px 20px 20px;
+}
+
+.helpAction .helpForm__heading {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 0 0 20px;
+}
+
+.helpAction .helpForm__heading h2 {
+  font-size: 28px;
+  line-height: 34px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 8px;
+}
+
+.helpAction .helpForm__row {
+  max-width: 420px;
+  margin: 0 auto 20px;
+}
+
+.helpAction .helpForm__info {
+  opacity: 0;
+  transition: ease .3s;
+}
+
+.helpAction .helpForm__info .info {
+  max-width: 420px;
+  margin: 0 auto;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  padding: 18px 20px;
+  position: relative;
+}
+
+.helpAction .helpForm__info .info:before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 0px #e5e5e5;
+  transform: rotate(-45deg);
+  position: absolute;
+  left: 35px;
+  bottom: -11px;
+}
+
+.helpAction .helpForm__info .info p {
+  font-size: 14px;
+  line-height: 20px;
+  color: #000;
+  margin: 0;
+}
+
+.helpAction .helpForm__info .info p a {
+  color: #f15748;
+  outline: none;
+  transition: ease .3s;
+}
+
+.helpAction .helpForm__info .info p a:hover {
+  opacity: .7;
+}
+
+.helpAction .helpForm__info .author {
+  display: flex;
+  align-items: center;
+  max-width: 420px;
+  margin: 30px auto 20px;
+}
+
+.helpAction .helpForm__info .author__image {
+  width: 100px;
+  height: 100px;
+  margin-right: 12px;
+}
+
+.helpAction .helpForm__info .author__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.helpAction .helpForm__info .author__content h3 {
+  font-size: 21px;
+  line-height: 25px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  color: #000;
+  text-align: left;
+  margin: 0;
+}
+
+.helpAction .helpForm__info .author__content p {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+}
+
+.helpAction .helpForm__select {
+  position: relative;
+}
+
+.helpAction .helpForm__select.active .selectValue p {
+  opacity: .2;
+}
+
+.helpAction .helpForm__select .selectValue {
+  width: 100%;
+  height: 52px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  padding: 15px 20px 12px;
+  position: relative;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.helpAction .helpForm__select .selectValue:after {
+  content: '';
+  background-image: url("/wp-content/themes/psibufet/images/chevron_down.svg");
+  background-repeat: no-repeat;
+  background-size: 12px;
+  width: 12px;
+  height: 9px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.helpAction .helpForm__select .selectValue p {
+  font-size: 21px;
+  line-height: 25px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  color: #000;
+  text-align: left;
+  margin: 0;
+  transition: ease .3s;
+}
+
+.helpAction .helpForm__select .selectDropdown {
+  display: none;
+  background-color: #fff;
+  padding: 0 20px 14px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: 0;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: absolute;
+  top: calc(100% - 1px);
+  z-index: 3;
+}
+
+.helpAction .helpForm__select .selectDropdown__option {
+  margin: 0 0 10px;
+  cursor: pointer;
+}
+
+.helpAction .helpForm__select .selectDropdown__option:hover p {
+  opacity: .4;
+}
+
+.helpAction .helpForm__select .selectDropdown__option:last-of-type {
+  margin: 0;
+}
+
+.helpAction .helpForm__select .selectDropdown__option p {
+  font-size: 21px;
+  line-height: 25px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  color: #000;
+  text-align: left;
+  margin: 0;
+  transition: ease .3s;
+}
+
+.helpAction .helpForm__textarea {
+  display: flex;
+}
+
+.helpAction .helpForm__textarea:before {
+  top: 20px;
+}
+
+.helpAction .helpForm__textarea.focused:before {
+  top: -12px !important;
+  font-size: 10px;
+}
+
+.helpAction .helpForm__textarea textarea {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  height: 280px;
+  resize: none;
+  outline: none;
+  font-size: 14px;
+  color: #000;
+  transition: ease .3s;
+}
+
+.helpAction .helpForm__textarea textarea:focus {
+  border-color: #000;
+}
+
+.helpAction .helpForm__text:before {
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.helpAction .helpForm__text.focused:before {
+  top: -8px !important;
+  font-size: 10px;
+}
+
+.helpAction .helpForm__text input {
+  width: 100%;
+  height: 40px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+  font-size: 14px;
+  color: #000;
+  transition: ease .3s;
+}
+
+.helpAction .helpForm__text input:focus {
+  border-color: #000;
+}
+
+.helpAction .helpForm__textarea, .helpAction .helpForm__text {
+  position: relative;
+}
+
+.helpAction .helpForm__textarea:before, .helpAction .helpForm__text:before {
+  content: attr(data-name);
+  font-size: 14px;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  text-align: center;
+  pointer-events: none;
+  transition: ease .3s;
+}
+
+.helpAction .helpForm__submit button {
+  max-width: 280px;
+  width: 100%;
+  height: 40px;
+  background-color: #f15748;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 0;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+  transition: ease .3s;
+  margin: 0 auto;
+}
+
+.helpAction .helpForm__submit button:hover {
+  background-color: #fb6659;
+}
+
+.helpAction .helpForm__submit button:hover span:after {
+  right: -3px;
+}
+
+.helpAction .helpForm__submit button span {
+  font-size: 14px;
+  line-height: 1;
+  color: #fff;
+  padding-right: 14px;
+  position: relative;
+  text-transform: none;
+}
+
+.helpAction .helpForm__submit button span:after {
+  content: '';
+  background-image: url("/wp-content/themes/psibufet/images/chevron_right_white.svg");
+  background-repeat: no-repeat;
+  background-size: 8px;
+  width: 8px;
+  height: 12px;
+  display: block;
+  position: absolute;
+  top: 55%;
+  transform: translate(0, -50%);
+  right: 0;
+  transition: ease .3s;
+}
+
+.helpAction .helpForm__notice {
+  display: none;
+  max-width: 420px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 20px;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.helpAction .helpForm__notice p {
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.helpAction .helpForm__notice--active {
+  display: block;
+  margin: 20px auto 0;
+}
+
+.helpAction .helpForm__notice--success {
+  background-color: #129D6F;
+}
+
+.helpAction .helpForm__notice--error {
+  background-color: #f15748;
+}
+
+@media (max-width: 991px) {
+  .helpAction {
+    padding: 25px 0 30px;
+  }
+  .helpAction__wrap {
+    max-width: 830px;
+  }
+  .helpAction__wrap:before {
+    background-size: 100px;
+    width: 100px;
+    height: 190px;
+  }
+  .helpAction__wrap:after {
+    background-size: 130px;
+    width: 130px;
+    height: 190px;
+  }
+  .helpAction__heading {
+    margin: 0 0 20px;
+  }
+  .helpAction__heading h2 {
+    font-size: 28px;
+    line-height: 35px;
+  }
+  .helpAction__heading h3 {
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+
+@media (max-width: 767px) {
+  .helpAction__heading {
+    max-width: 280px;
+    padding: 0 15px;
+    margin: 0 auto 20px;
+  }
+  .helpAction__heading h3 {
+    font-size: 21px;
+    line-height: 25px;
+  }
+  .helpAction__wrap:before, .helpAction__wrap:after {
+    display: none;
+  }
+  .helpAction .helpForm__heading h2 {
+    font-size: 21px;
+    line-height: 25px;
+  }
+  .helpAction .helpForm__select .selectValue {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 10px 20px;
+  }
+  .helpAction .helpForm__select .selectValue p {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .helpAction .helpForm__textarea textarea {
+    height: 200px;
+  }
+}
+
+@media (max-width: 520px) {
+  .helpAction .helpForm {
+    max-width: calc(100% - 20px);
+  }
+}
+
+.helpInfo {
+  padding: 32px 0 30px;
+}
+
+.helpInfo__wrap h2 {
+  font-size: 35px;
+  line-height: 42px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  margin: 0;
+}
+
+.helpInfo__wrap h2 a {
+  color: #129D6F;
+  outline: none;
+  text-decoration: underline !important;
+  transition: ease .3s;
+}
+
+.helpInfo__wrap h2 a:hover {
+  color: #2abb8b;
+  text-decoration: underline !important;
+}
+
+@media (max-width: 991px) {
+  .helpInfo {
+    padding: 25px 0;
+  }
+  .helpInfo__wrap h2 {
+    font-size: 28px;
+    line-height: 35px;
+  }
+}
+
+@media (max-width: 767px) {
+  .helpInfo {
+    padding: 25px 0;
+  }
+  .helpInfo__wrap {
+    max-width: 330px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+}
+
+.helpContact {
+  background-color: #F7BE45;
+  padding: 40px 0;
+}
+
+.helpContact__wrap {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  padding: 20px 15px 24px;
+}
+
+.helpContact__wrap > h2 {
+  font-size: 35px;
+  line-height: 42px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  margin: 0 0 16px;
+}
+
+.helpContact__chat, .helpContact__mail, .helpContact__call {
+  margin: 0 0 20px;
+}
+
+.helpContact__chat h3, .helpContact__mail h3, .helpContact__call h3 {
+  font-size: 28px;
+  line-height: 34px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  max-width: fit-content;
+  max-width: -webkit-fit-content;
+  max-width: -moz-max-content;
+}
+
+.helpContact__chat h4, .helpContact__mail h4, .helpContact__call h4 {
+  font-size: 28px;
+  line-height: 34px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  color: #129D6F;
+  text-align: center;
+  margin: 0;
+}
+
+.helpContact__chat p, .helpContact__mail p, .helpContact__call p {
+  font-size: 21px;
+  line-height: 25px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  margin: 0;
+}
+
+.helpContact__chat span, .helpContact__mail span, .helpContact__call span {
+  display: block;
+  font-size: 21px;
+  line-height: 25px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  margin: 18px auto 21px;
+}
+
+.helpContact__chat h3 {
+  color: #129D6F;
+}
+
+.helpContact__chat h3:before {
+  content: '';
+  background-image: url("/wp-content/themes/psibufet/images/help/chat_ico.svg");
+  background-repeat: no-repeat;
+  background-size: 24px;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: -33px;
+  top: 44%;
+  transform: translate(0, -50%);
+}
+
+.helpContact__mail h3:before {
+  content: '';
+  background-image: url("/wp-content/themes/psibufet/images/help/mail_ico.svg");
+  background-repeat: no-repeat;
+  background-size: 30px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: -38px;
+  top: 44%;
+  transform: translate(0, -50%);
+}
+
+.helpContact__call {
+  margin: 0 !important;
+}
+
+.helpContact__call h3:before {
+  content: '';
+  background-image: url("/wp-content/themes/psibufet/images/help/phone_ico.svg");
+  background-repeat: no-repeat;
+  background-size: 30px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: -33px;
+  top: 44%;
+  transform: translate(0, -50%);
+}
+
+@media (max-width: 991px) {
+  .helpContact__wrap > h2 {
+    font-size: 28px;
+    line-height: 35px;
+  }
+  .helpContact__chat, .helpContact__mail, .helpContact__call {
+    margin: 0 0 15px;
+  }
+  .helpContact__chat h3, .helpContact__mail h3, .helpContact__call h3 {
+    font-size: 23px;
+    line-height: 29px;
+  }
+  .helpContact__chat h4, .helpContact__mail h4, .helpContact__call h4 {
+    font-size: 23px;
+    line-height: 29px;
+  }
+  .helpContact__chat p, .helpContact__mail p, .helpContact__call p {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .helpContact__chat span, .helpContact__mail span, .helpContact__call span {
+    font-size: 18px;
+    line-height: 21px;
+    margin: 12px auto 18px;
+  }
+}
+
+@media (max-width: 520px) {
+  .helpContact__wrap {
+    max-width: calc(100% - 20px);
+  }
+}
+
 /*  Global
 --------------- */
 .homeHeader:after {
@@ -14107,6 +15084,11 @@ body a:hover {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.pbQuestions--help {
+  padding: 0 !important;
+  background-color: #fff;
 }
 
 @media (max-width: 767px) {

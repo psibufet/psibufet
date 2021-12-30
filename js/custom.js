@@ -1310,3 +1310,93 @@ $(document).ready(function(){
         $('.restListModal').removeClass('restListModal--active');
     })
 });
+
+/**
+ * Help page
+ */
+$(document).ready(function(){
+    $('.selectValue').on('click', function(){
+        $(this).parent().toggleClass('active');
+        $(this).parent().find('.selectDropdown').slideToggle();
+    });
+    $(document).mouseup(function(e){
+        setTimeout(function(){
+            var select = $('.helpForm__select');
+            if($(select).hasClass('active')){
+                if (!select.is(e.target) && select.has(e.target).length === 0){
+                    $(select).find('.selectDropdown').slideUp();
+                    $(select).removeClass('active');
+                }
+            }
+        }, 50);
+    });
+    $('.selectDropdown__option').on('click', function(){
+        var value = $(this).find('p').text();
+        var id = $(this).attr('value');
+
+        $(this).parents('.helpForm__select').find('.selectValue').find('p').text(value);
+
+        $.ajax({
+            url: '/wp-content/themes/psibufet/template-parts/help/customer_answer_0' + id + '.php',
+            success: function(box) {
+                $('.helpForm__info').find('.info').remove();
+                $('.helpForm__info').find('.author').remove();
+                $('.helpForm__info').append(box);
+                setTimeout(function(){
+                    $('.helpForm__info').css('opacity', '1');
+                }, 300);
+            },
+            error: function(box){
+                $('.helpForm__info').find('.info').remove();
+                $('.helpForm__info').find('.author').remove();
+                console.error('Nie znaleziono pliku *.php z odpowiedzią na pytanie.');
+            }
+        });
+
+        $('.helpForm__select').find('.selectDropdown').slideUp();
+        $('.helpForm__select').removeClass('active');
+    });
+    $('.helpForm__input').each(function(){
+        var name = $(this).attr('placeholder');
+        $(this).attr('placeholder', '');
+        $(this).parent().attr('data-name', name);
+    });
+
+    $('.helpForm__input').on('focusin', function(){
+        $(this).parent().addClass('focused');
+    });
+    $('.helpForm__input').on('focusout', function(){
+        if($(this).val() == ''){
+            $(this).parent().removeClass('focused');
+        }
+    });
+
+    $('#helpForm').on('submit', function(e){
+        e.preventDefault();
+        var form = $(this);
+
+        var topic = form.find('p[name="helpTopic"]').text();
+        var message = form.find('textarea').val();
+        var name = form.find('input[name="helpName"]').val();
+        var dogName = form.find('input[name="helpDogName"]').val();
+        var mail = form.find('input[name="helpEmail"]').val();
+
+        
+        if(topic !== '' && message !== '' && name !== '' && dogName !== '' && mail !== ''){
+            var response = topic + '\n' + message + '\n' + name + '\n' + dogName + '\n' + mail;
+            alert(response);
+
+            form.find('p[name="helpTopic"]').text('Jak możemy Ci pomóc?');
+            form.find('textarea').val('');
+            form.find('input').val('');
+
+            form.find('.helpForm__notice').append('<p>Formularz został pomyślnie wysłany</p>');
+            form.find('.helpForm__notice').addClass('helpForm__notice--active helpForm__notice--success');
+
+            setTimeout(function(){
+                form.find('.helpForm__notice').removeClass('helpForm__notice--success helpForm__notice--error helpForm__notice--active');
+                form.find('.helpForm__notice').find('p').remove();
+            }, 4000);
+        }
+    });
+});

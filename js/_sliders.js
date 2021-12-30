@@ -85,3 +85,19 @@ $(document).ready(function(){
         });
     }
 });
+
+/**
+ * Help page slider
+ */
+$(document).ready(function(){
+    if($(window).width() < 768){
+        $('.helpCategories__wrap').slick({
+            slidesToScroll: 1,
+            infinite: true,
+            arrows: true,
+            dots: true,
+            centerMode: true,
+            variableWidth: true,
+        });
+    }
+});

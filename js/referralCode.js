@@ -146,6 +146,7 @@ $(document).ready(function(){
 		'ksiazka',
 		'rasy',
 		'restauracje',
+		'pomoc',
 	];
 	var blackweek = [
 		'gwiazdka40',
