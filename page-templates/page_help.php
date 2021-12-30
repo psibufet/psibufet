@@ -17,37 +17,37 @@ get_header(); ?>
             <h2>Odpowiedzi na najczęściej zadawanie pytania znajdziesz tutaj:</h2>
         </div>
         <div class="helpCategories__wrap">
-            <a href="#" class="helpCategories__cat">
+            <a href="https://help.psibufet.pl/category/25-dostawy" class="helpCategories__cat">
                 <div class="icon">
                     <img src="<?php echo get_template_directory_uri() . '/images/help/catIco_01.svg'; ?>" class="no-lazyload"/>
                 </div>
                 <p>Dostawy</p>
             </a>
-            <a href="#" class="helpCategories__cat">
+            <a href="https://help.psibufet.pl/category/36-nasze-karmy" class="helpCategories__cat">
                 <div class="icon">
                     <img src="<?php echo get_template_directory_uri() . '/images/help/catIco_02.svg'; ?>" class="no-lazyload"/>
                 </div>
                 <p>Nasze karmy</p>
             </a>
-            <a href="#" class="helpCategories__cat">
+            <a href="https://help.psibufet.pl/category/19-program-darmowa-karma" class="helpCategories__cat">
                 <div class="icon">
                     <img src="<?php echo get_template_directory_uri() . '/images/help/catIco_03.svg'; ?>" class="no-lazyload"/>
                 </div>
                 <p>Program darmowa karma</p>
             </a>
-            <a href="#" class="helpCategories__cat">
+            <a href="https://help.psibufet.pl/category/31-przechowywanie-i-karmienie" class="helpCategories__cat">
                 <div class="icon">
                     <img src="<?php echo get_template_directory_uri() . '/images/help/catIco_04.svg'; ?>" class="no-lazyload"/>
                 </div>
                 <p>Przechowywanie i karmienie</p>
             </a>
-            <a href="#" class="helpCategories__cat">
+            <a href="https://help.psibufet.pl/category/21-platnosci" class="helpCategories__cat">
                 <div class="icon">
                     <img src="<?php echo get_template_directory_uri() . '/images/help/catIco_05.svg'; ?>" class="no-lazyload"/>
                 </div>
                 <p>Płatności</p>
             </a>
-            <a href="#" class="helpCategories__cat">
+            <a href="https://help.psibufet.pl/category/10-zarzadzanie-planem-zywienia" class="helpCategories__cat">
                 <div class="icon">
                     <img src="<?php echo get_template_directory_uri() . '/images/help/catIco_06.svg'; ?>" class="no-lazyload"/>
                 </div>
@@ -110,7 +110,7 @@ get_header(); ?>
 
     <section class="helpInfo">
         <div class="helpInfo__wrap">
-            <h2>Jeśli potrzebujesz pomocy,<br/>nasz przyjazny zespół Customer Care jest <a href="#">tutaj</a></h2>
+            <h2>Jeśli potrzebujesz pomocy,<br/>nasz przyjazny zespół Customer Care jest <a href="#helpContact">tutaj</a></h2>
         </div>
     </section>
 
@@ -148,7 +148,7 @@ get_header(); ?>
         </div>
     </section>
 
-    <section class="helpContact">
+    <section class="helpContact" id="helpContact">
         <div class="helpContact__wrap">
             <h2>Skontaktuj się z nami</h2>
             <div class="helpContact__chat">
