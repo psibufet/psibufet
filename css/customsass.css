@@ -13960,6 +13960,13 @@ body.page-template-page_ksiazka .siteHeader--promocode {
   opacity: .7;
 }
 
+.helpAction .helpForm__info .info ul {
+  padding: 0 0 0 20px;
+  font-size: 14px;
+  line-height: 19px;
+  margin: 10px 0 0;
+}
+
 .helpAction .helpForm__info .author {
   display: flex;
   align-items: center;
@@ -13971,12 +13978,15 @@ body.page-template-page_ksiazka .siteHeader--promocode {
   width: 100px;
   height: 100px;
   margin-right: 12px;
+  border-radius: 100%;
+  overflow: hidden;
 }
 
 .helpAction .helpForm__info .author__image img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center;
 }
 
 .helpAction .helpForm__info .author__content h3 {

@@ -70,12 +70,16 @@ get_header(); ?>
                     <div class="helpForm__select">
                         <div class="selectValue"><p name="helpTopic">Jak możemy Ci pomóc?</p></div>
                         <div class="selectDropdown">
-                            <div class="selectDropdown__option" value="1"><p>Jak karma będzie dostarczona?</p></div>
-                            <div class="selectDropdown__option" value="2"><p>Jak mam ją przechowywać?</p></div>
-                            <div class="selectDropdown__option" value="3"><p>Ile karmy mam podawać?</p></div>
-                            <div class="selectDropdown__option" value="4"><p>Czy PsiBufet to jedzenie surowe?</p></div>
-                            <div class="selectDropdown__option" value="5"><p>Co jeśli mój pies nie chce jeś karmy PsiBufet?</p></div>
-                            <div class="selectDropdown__option" value="6"><p>Jak działa subskrypcja?</p></div>
+                            <div class="selectDropdown__option" value="1"><p>Ile kosztuje karma PsiBufet?</p></div>
+                            <div class="selectDropdown__option" value="2"><p>Jakie formy płatności mam do wyboru?</p></div>
+                            <div class="selectDropdown__option" value="3"><p>Czym jest subskrypcja?</p></div>
+                            <div class="selectDropdown__option" value="4"><p>Jakie formy dostawy oferuje PsiBufet?</p></div>
+                            <div class="selectDropdown__option" value="5"><p>Jak dostarczane są posiłki PsiBufet?</p></div>
+                            <div class="selectDropdown__option" value="6"><p>Jak sprawdzić status paczki?</p></div>
+                            <div class="selectDropdown__option" value="7"><p>Jak podawać/jak przechowywać karmę PsiBufet?</p></div>
+                            <div class="selectDropdown__option" value="8"><p>Jak dokonać zmian w swoim zamówieniu?</p></div>
+                            <div class="selectDropdown__option" value="9"><p>Jak zalogować się do Panelu Klienta?</p></div>
+                            <div class="selectDropdown__option" value="10"><p>Jak zrezygnować z kolejnej dostawy?</p></div>
                         </div>
                     </div>
                 </div>
