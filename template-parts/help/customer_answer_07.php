@@ -6,7 +6,7 @@
         <img src="/wp-content/themes/psibufet/images/help/customers/Jula_1.jpg"/>
     </div>
     <div class="author__content">
-        <h3>Julia</h3>
-        <p>Członkowie naszego zespołu Customare Care</p>
+        <h3>Julia i Nala</h3>
+        <p>Członkowie naszego zespołu Customer Care</p>
     </div>
 </div>

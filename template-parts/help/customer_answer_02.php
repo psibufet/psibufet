@@ -7,6 +7,6 @@
     </div>
     <div class="author__content">
         <h3>Bartosz i Zorka</h3>
-        <p>Członkowie naszego zespołu Customare Care</p>
+        <p>Członkowie naszego zespołu Customer Care</p>
     </div>
 </div>
