@@ -3,7 +3,7 @@
 </div>
 <div class="author">
     <div class="author__image">
-        <img src="/wp-content/themes/psibufet/images/help/customers/Zofia_1.jpg"/>
+        <img src="/wp-content/themes/psibufet/images/help/customers/Zofia.png"/>
     </div>
     <div class="author__content">
         <h3>Zofia i Mania</h3>

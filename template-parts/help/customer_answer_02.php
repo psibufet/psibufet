@@ -3,7 +3,7 @@
 </div>
 <div class="author">
     <div class="author__image">
-        <img src="/wp-content/themes/psibufet/images/help/customers/Bartek_2.jpg"/>
+        <img src="/wp-content/themes/psibufet/images/help/customers/Bartek.png"/>
     </div>
     <div class="author__content">
         <h3>Bartosz i Zorka</h3>

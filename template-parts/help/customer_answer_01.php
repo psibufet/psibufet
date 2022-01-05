@@ -3,7 +3,7 @@
 </div>
 <div class="author">
     <div class="author__image">
-        <img src="/wp-content/themes/psibufet/images/help/customers/Joasia_1.jpg"/>
+        <img src="/wp-content/themes/psibufet/images/help/customers/Joasia.png"/>
     </div>
     <div class="author__content">
         <h3>Joanna i Summer</h3>

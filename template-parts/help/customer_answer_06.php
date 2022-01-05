@@ -5,7 +5,7 @@
 </div>
 <div class="author">
     <div class="author__image">
-        <img src="/wp-content/themes/psibufet/images/help/customers/Kasia_Boss_1.jpg"/>
+        <img src="/wp-content/themes/psibufet/images/help/customers/Kasia_Boss.png"/>
     </div>
     <div class="author__content">
         <h3>Kasia i Fefco</h3>
