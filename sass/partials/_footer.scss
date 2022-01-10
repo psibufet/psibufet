@@ -7,7 +7,10 @@
         margin: 0 auto;
     }
     &__logo{
-        width: 300px;
+        display: flex;
+        align-items: center;
+        padding-bottom: 15px;
+        width: 305px;
 
         img{
             position: relative;
@@ -16,13 +19,13 @@
         }
     }
     &__menu{
-        width: calc(100% - 300px);
+        width: calc(100% - 305px);
         display: flex;
 
         .linksWrap{
             display: flex;
             justify-content: space-between;
-            width: 400px;
+            width: 432px;
 
             .links{
                 width: 50%;
@@ -63,7 +66,7 @@
             }
         }
         .info{
-            width: 250px;
+            width: 240px;
 
             .logo{
                 display: none;
@@ -104,7 +107,7 @@
             }
         }
         .payment{
-            width: 250px;
+            width: 165px;
 
             p{
                 font-size: 14px;
@@ -226,7 +229,7 @@
             .info{
                 width: 100%;
                 text-align: center;
-                margin: 30px 0;
+                margin: 30px 0 20px;
 
                 .logo{
                     display: block;
@@ -236,6 +239,9 @@
                         max-width: 122px;
                         width: 100%;
                     }
+                }
+                .hours{
+                    margin: 10px 0 26px;
                 }
                 .social{
                     justify-content: center;

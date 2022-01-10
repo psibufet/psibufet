@@ -375,12 +375,15 @@ body.promocode-blackweek .siteHeader--promocode {
 }
 
 .siteHeader__menu .mainnav__actions .menuAction--login {
+  display: flex;
+  align-items: center;
   margin-right: 40px;
 }
 
 .siteHeader__menu .mainnav__actions .menuAction--login a {
+  display: block;
   font-size: 15px;
-  height: 32px;
+  line-height: 1;
   font-weight: 500;
 }
 
@@ -402,13 +405,13 @@ body.promocode-blackweek .siteHeader--promocode {
   content: '';
   background-image: url("/wp-content/themes/psibufet/images/menu_login_ico.svg");
   background-repeat: no-repeat;
-  background-size: 30px;
-  width: 30px;
-  height: 33px;
+  background-size: 26px;
+  width: 26px;
+  height: 28px;
   display: block;
   position: absolute;
-  top: -11px;
-  left: -36px;
+  top: -8px;
+  left: -37px;
   transition: ease .3s;
 }
 
@@ -440,7 +443,7 @@ body.promocode-blackweek .siteHeader--promocode {
   height: 40px;
   display: block;
   position: absolute;
-  top: -15px;
+  top: -10px;
   left: -50px;
 }
 
@@ -557,8 +560,13 @@ body.promocode-blackweek .siteHeader--promocode {
   }
   .siteHeader .mobileNav__menu ul {
     list-style: none;
-    padding: 26px 0 0;
+    padding: 25px 0 0;
     margin: 0;
+    height: calc(100vh - 130px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 700px;
   }
   .siteHeader .mobileNav__menu ul li {
     width: 100%;
@@ -679,7 +687,10 @@ body.promocode-blackweek .siteHeader--promocode {
 }
 
 .siteFooter__logo {
-  width: 300px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 15px;
+  width: 305px;
 }
 
 .siteFooter__logo img {
@@ -689,14 +700,14 @@ body.promocode-blackweek .siteHeader--promocode {
 }
 
 .siteFooter__menu {
-  width: calc(100% - 300px);
+  width: calc(100% - 305px);
   display: flex;
 }
 
 .siteFooter__menu .linksWrap {
   display: flex;
   justify-content: space-between;
-  width: 400px;
+  width: 432px;
 }
 
 .siteFooter__menu .linksWrap .links {
@@ -739,7 +750,7 @@ body.promocode-blackweek .siteHeader--promocode {
 }
 
 .siteFooter__menu .info {
-  width: 250px;
+  width: 240px;
 }
 
 .siteFooter__menu .info .logo {
@@ -783,7 +794,7 @@ body.promocode-blackweek .siteHeader--promocode {
 }
 
 .siteFooter__menu .payment {
-  width: 250px;
+  width: 165px;
 }
 
 .siteFooter__menu .payment p {
@@ -899,7 +910,7 @@ body.promocode-blackweek .siteHeader--promocode {
   .siteFooter__menu .info {
     width: 100%;
     text-align: center;
-    margin: 30px 0;
+    margin: 30px 0 20px;
   }
   .siteFooter__menu .info .logo {
     display: block;
@@ -908,6 +919,9 @@ body.promocode-blackweek .siteHeader--promocode {
   .siteFooter__menu .info .logo img {
     max-width: 122px;
     width: 100%;
+  }
+  .siteFooter__menu .info .hours {
+    margin: 10px 0 26px;
   }
   .siteFooter__menu .info .social {
     justify-content: center;

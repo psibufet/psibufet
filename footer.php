@@ -20,20 +20,20 @@
                     <ul class="links">
                         <li><a href="/jak-to-dziala" class="dir">Jak to działa?</a></li>
                         <li><a href="/nasze-przepisy" class="dir">Nasze przepisy</a></li>
-                        <li><a href="/o-nas" class="dir">O PsiBufet</a></li>
+                        <li><a href="/o-nas" class="dir">O Nas</a></li>
                         <li><a href="https://panel.psibufet.pl" class="dir">Zaloguj się</a></li>
                         <li><a href="https://zamowienie.psibufet.pl" class="dir order">Zamów</a></li>
                     </ul>
                     <ul class="links">
                         <li><a href="/program-partnerski" class="dir">Program partnerski</a></li>
-                        <li><a href="https://psibufet.pl/blog/" class="dir">Blog</a></li>
-                        <li><a href="https://help.psibufet.pl" class="dir">FAQ</a></li>
+                        <li><a href="/restauracje" class="dir">Restauracje</a></li>
+                        <li><a href="/pomoc" class="dir">Pomoc</a></li>
+                        <li><a href="https://psibufet.pl/blog" class="dir">Blog</a></li>
                         <li><a href="/pracuj-w-psibufet" class="dir">Praca</a>
                             <?php if( get_field('offer_list', 1183) ): ?>
                                 <div class="flag">Zatrudniamy</div>
                             <?php endif; ?>
                         </li>
-                        <li><a href="/kontakt" class="dir">Kontakt</a></li>
                     </ul>
                 </div>
                 <div class="info">
