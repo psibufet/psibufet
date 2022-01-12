@@ -649,3 +649,30 @@ function availableForm(){
 	}
 	exit();
 }
+
+/* Help ajax form send engine */
+
+add_action('wp_ajax_helpForm', 'helpForm');
+add_action('wp_ajax_nopriv_helpForm', 'helpForm');
+
+function helpForm(){
+	$topic = isset( $_POST['topic'] ) ? $_POST['topic'] : '';
+	$message = isset( $_POST['message'] ) ? $_POST['message'] : '';
+	$name = isset( $_POST['name'] ) ? $_POST['name'] : '';
+	$dogName = isset( $_POST['dogname'] ) ? $_POST['dogname'] : '';
+	$mail = isset( $_POST['mail'] ) ? $_POST['mail'] : '';
+	
+	$to = 'kontakt@psibufet.pl';
+	$subject = '[PsiBufet] Formularz "POMOC"';
+	$message = "Temat: " . $topic . "<br/>Wiadomość: " . $message . "<br/>Imię: " . $name . "<br/>Imię psa: " . $dogName . "<br/>Adres e-mail: " . $mail;
+	$headers = 'Content-Type: text/html; charset=ISO-8859-1';
+	
+	$sent = wp_mail($to, $subject, $message, $headers);
+
+	if($sent){
+		echo 'done';
+	}else{
+		echo 'error';
+	}
+	exit();
+}

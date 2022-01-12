@@ -1383,20 +1383,46 @@ $(document).ready(function(){
 
         
         if(topic !== '' && message !== '' && name !== '' && dogName !== '' && mail !== ''){
-            var response = topic + '\n' + message + '\n' + name + '\n' + dogName + '\n' + mail;
-            alert(response);
+            var data = {
+                action: 'helpForm',
+                topic: topic,
+                message: message,
+                name: name,
+                dogname: dogName,
+                mail: mail,
+            }
 
-            form.find('p[name="helpTopic"]').text('Jak możemy Ci pomóc?');
-            form.find('textarea').val('');
-            form.find('input').val('');
+            $.ajax({
+                type: 'POST',
+                url: PBAjax.ajaxurl,
+                data: data,
+                beforeSend: function(){
+                    form.addClass('helpForm--loading');
+                },
+                success: function(response){
+                    console.log(response);
+                    form.removeClass('helpForm--loading');
+                    if(response == 'done'){
+                        form.find('p[name="helpTopic"]').text('Jak możemy Ci pomóc?');
+                        form.find('textarea').val('');
+                        form.find('input').val('');
 
-            form.find('.helpForm__notice').append('<p>Formularz został pomyślnie wysłany</p>');
-            form.find('.helpForm__notice').addClass('helpForm__notice--active helpForm__notice--success');
-
-            setTimeout(function(){
-                form.find('.helpForm__notice').removeClass('helpForm__notice--success helpForm__notice--error helpForm__notice--active');
-                form.find('.helpForm__notice').find('p').remove();
-            }, 4000);
+                        form.find('.helpForm__notice').append('<p>Formularz został pomyślnie wysłany</p>');
+                        form.find('.helpForm__notice').addClass('helpForm__notice--active helpForm__notice--success');
+                        setTimeout(function(){
+                            form.find('.helpForm__notice').removeClass('helpForm__notice--success helpForm__notice--error helpForm__notice--active');
+                            form.find('.helpForm__notice').find('p').remove();
+                        }, 4000);
+                    }else{
+                        form.find('.helpForm__notice').append('<p>Wystąpił błąd podczas wysyłki formularza. Spróbuj ponownie później.</p>');
+                        form.find('.helpForm__notice').addClass('helpForm__notice--active helpForm__notice--error');
+                        setTimeout(function(){
+                            form.find('.helpForm__notice').removeClass('helpForm__notice--success helpForm__notice--error helpForm__notice--active');
+                            form.find('.helpForm__notice').find('p').remove();
+                        }, 4000);
+                    }
+                }
+            });
         }
     });
 });
