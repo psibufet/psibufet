@@ -3897,6 +3897,16 @@ body.admin-bar{
             }
         }
     }
+    &__cta{
+        text-align: center;
+        margin: 0 0 40px;
+    }
+
+    &--about{
+        .homeInstagram__posts{
+            margin: 0 auto 60px;
+        }
+    }
 }
 @media (max-width: 1599px){
     .homeInstagram{
@@ -4269,7 +4279,7 @@ body.admin-bar{
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 20px;
+        padding: 20px 10px;
         width: 362px;
         height: 362px;
         box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);

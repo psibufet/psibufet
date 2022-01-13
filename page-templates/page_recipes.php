@@ -159,8 +159,8 @@ get_header(); ?>
             <a href="/o-nas" class="pbShortcuts__box" style="background-image: url('<?php echo get_template_directory_uri() . '/images/homepage/homeShortcuts_03.webp'; ?>');">
                 <p class="title">O nas</p>
             </a>
-            <a href="https://help.psibufet.pl/" class="pbShortcuts__box" style="background-image: url('<?php echo get_template_directory_uri() . '/images/homepage/homeShortcuts_04.webp'; ?>');">
-                <p class="title">FAQ</p>
+            <a href="/pomoc" class="pbShortcuts__box" style="background-image: url('<?php echo get_template_directory_uri() . '/images/homepage/homeShortcuts_04.webp'; ?>');">
+                <p class="title">Centrum pomocy</p>
             </a>
         </div>
     </section>

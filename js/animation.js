@@ -787,3 +787,62 @@ $(window).on('scroll', function () {
         }, 1000);
     }
 });
+
+/********** About **********/
+
+$(document).ready(function() {
+    var aboutHistory = $('.aboutHistory__heading').find('.getMarker');
+    var aboutStep = $('.aboutSteps__step').find('.getMarker');
+    var aboutTeam = $('.aboutTeam__content').find('.getMarker');
+    var aboutInfo = $('.aboutInfo__content').find('.getMarker');
+
+    if($(aboutHistory).visible(true)){
+        setTimeout(function(){
+            aboutHistory.addClass('init');
+        }, 500)
+    }
+    $(aboutStep).each(function(){
+        if($(this).visible(true)){
+            var $this = $(this);
+            setTimeout(function(){
+                $this.addClass('init');
+            }, 500)
+        }
+    });
+    if($(aboutTeam).visible(true)){
+        setTimeout(function(){
+            aboutTeam.addClass('init');
+        }, 500)
+    }
+    if($(aboutInfo).visible(true)){
+        setTimeout(function(){
+            aboutInfo.addClass('init');
+        }, 500)
+    }
+
+    $(window).on('scroll', function(){
+        if($(aboutHistory).visible(true)){
+            setTimeout(function(){
+                aboutHistory.addClass('init');
+            }, 500)
+        }
+        $(aboutStep).each(function(){
+            if($(this).visible(true)){
+                var $this = $(this);
+                setTimeout(function(){
+                    $this.addClass('init');
+                }, 500)
+            }
+        });
+        if($(aboutTeam).visible(true)){
+            setTimeout(function(){
+                aboutTeam.addClass('init');
+            }, 500)
+        }
+        if($(aboutInfo).visible(true)){
+            setTimeout(function(){
+                aboutInfo.addClass('init');
+            }, 500)
+        }
+    });
+});

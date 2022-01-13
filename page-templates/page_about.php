@@ -1,127 +1,240 @@
 <?php
+    /**
+     * Template name: About us
+     */
+get_header(); ?>
 
-/*
-
-Template Name: O nas
-
-*/
-	get_header();
-?>
-
-<div id="about_page">
-    <section class="about_header">
-        <div class="inner">
-            <h1><?php the_field('header_title'); ?></h1>
-            <p class="lead"><?php the_field('header_desc'); ?></p>
+<main class="psibufet psibufet--about">
+    <header class="aboutHeader">
+        <div class="aboutHeader__wrap">
+            <h1><?php the_field('aboutHeader_title'); ?></h1>
+            <p><?php the_field('aboutHeader_content'); ?></p>
         </div>
-        <a class="header_arrow" href="#first_section"><img src="/wp-content/themes/psibufet/images/chevron_down_white.svg"/></a>
-    </section>
-    <section class="about_idea">
-        <div class="container">
-            <div class="inner">
-                <h2>Skąd pomysł?</h2>
-                <p><?php the_field('skad_pomysl_tekst'); ?></p>
+    </header>
+    <section class="aboutHistory">
+        <div class="aboutHistory__wrap">
+            <div class="aboutHistory__heading">
+                <h2 class="getMarker"><span class="marker">Historia</span> PsiBufet</h2>
             </div>
-        </div>
-    </section>
-    <section class="about_story">
-        <div class="inner">
-            <h2>Nasza historia</h2>
-            <img src="/wp-content/themes/psibufet/images/about/owner.png"/>
-            <p>Nazywam się <b>Piotr Wawrysiuk</b> i jestem założycielem PsiBufet, miłośnikiem psów i zdrowego żywienia.<br/>Oto krótka historia firmy PsiBufet:</p>
+            <div class="aboutHistory__video">
+                <div class="video">
+                    <?php
+                    $attr = array(
+                        'src'       => get_field('aboutVideo'),
+                        'poster'    => false,
+                    );
+                    echo wp_video_shortcode($attr); ?>
+                </div>
+            </div>
         </div>
     </section>
-    <section class="about_steps">
-        <div class="step_1">
-            <div class="left_image">
-                <div class="inner">
-                    <img src="/wp-content/themes/psibufet/images/about/step_1.jpg"/>
+
+    <section class="aboutSteps">
+        <div class="aboutSteps__wrap">
+            <?php while(have_rows('aboutSteps')): the_row(); 
+                $title = get_sub_field('aboutSteps_title');
+                $content = get_sub_field('aboutSteps_content');
+                $imageType = get_sub_field('aboutSteps_image_type');
+                $image = get_sub_field('aboutSteps_image');
+                $imageTwo = get_sub_field('aboutSteps_image_two');
+                $imageTitle = get_sub_field('aboutSteps_image_title');
+                $imageTwoTitle = get_sub_field('aboutSteps_image_two_title');
+                $imageIcon = get_sub_field('aboutSteps_image_icon');
+            ?>
+            <div class="aboutSteps__step">
+                <div class="content">
+                    <h3 class="getMarker"><?php echo get_row_index(); ?>. <?php echo $title; ?></h3>
+                    <p><?php echo $content; ?></p>
                 </div>
-                <p class="image_info">Dom rodzinny, Cisie k. Warszawy</p>
+                <div class="image<?php if($imageType == 'two'): ?> image--two<?php endif; ?>">
+                    <div class="image__image">
+                        <img src="<?php echo $image; ?>"/>
+
+                        <div class="image__caption<?php if($imageIcon): ?> image__caption--icon<?php endif; ?>">
+                            <h4><?php echo $imageTitle; ?></h4>
+                        </div>
+                    </div>
+
+                    <?php if($imageType == 'two'): ?>
+                        <div class="image__image">
+                            <img src="<?php echo $imageTwo; ?>"/>
+
+                            <div class="image__caption<?php if($imageIcon): ?> image__caption--icon<?php endif; ?>">
+                                <h4><?php echo $imageTwoTitle; ?></h4>
+                            </div>
+                        </div>
+                    <?php endif; ?>
+                </div>
+                <div class="contentMobile">
+                    <p><?php echo $content; ?></p>
+                </div>
             </div>
-            <div class="right_content">
-                <div class="inner">
-                    <h2>1. Rodzinny <span>start</span></h2>
-                    <p><?php the_field('history_text_1'); ?></p>
+            <?php endwhile; ?>
+        </div>
+    </section>
+
+    <section class="aboutTeam">
+        <div class="aboutTeam__wrap">
+            <div class="aboutTeam__content">
+                <div class="video video--desktop">
+                    <?php
+                    $attr = array(
+                        'src'       => get_field('aboutTeam_video'),
+                        'poster'    => false,
+                    );
+                    echo wp_video_shortcode($attr); ?>
+                </div>
+                <div class="content">
+                    <h3 class="getMarker getMarker--small"><?php the_field('aboutTeam_title'); ?></h3>
+                    <p><?php the_field('aboutTeam_content'); ?></p>
                 </div>
             </div>
         </div>
-        <div class="step_2">
-            <div class="right_image_mobile">
-                <div class="inner">
-                    <img src="/wp-content/themes/psibufet/images/about/step_2.jpg"/>
-                </div>
-                <p class="image_info">Targ, Warszawa</p>
+    </section>
+
+    <section class="aboutInfo">
+        <div class="aboutInfo__wrap">
+            <div class="aboutInfo__content">
+                <h2 class="getMarker"><span class="marker">Dajemy</span> coś w zamian</h2>
+                <p>Założyliśmy PsiBUfet, ponieważ chcieliśmy pomóc. Oprócz przekazywania posiłku tym mniej szczęśliwym. Każdego roku współpracujemy również z wieloma partnerami charytatywnymi. Nie mówimy, że jesteśmy następni w kolejce do Pokojowej Nagrody Nobla czy czegoś podobnego, ale czy to wolontariat w naszym lokalnym banku żywności, czy budowa nowych schronisk dla psów ratowniczych, mamy nadzieję, że nasza praca trochę pomoże.</p>
             </div>
-            <div class="left_content">
-                <div class="inner">
-                    <h2>2. <span>Odważne zmiany</span></h2>
-                    <p><?php the_field('history_text_2'); ?></p>
-                </div>
-            </div>
-            <div class="right_image">
-                <div class="inner">
-                    <img src="/wp-content/themes/psibufet/images/about/step_2.jpg"/>
-                </div>
-                <p class="image_info">Targ, Warszawa</p>
-            </div>
-        </div>
-        <div class="step_3">
-            <div class="images-mobile">
-                <div class="left_image">
-                    <div class="inner">
-                        <img src="/wp-content/themes/psibufet/images/about/step_3-1.png"/>
-                    </div>
-                    <p class="image_info">The farmer’s dog, Nowy jork, usa</p>
-                </div>
-                <div class="center_content only-desktop">
-                    <div class="inner">
-                        <h2>3. Globalne <span>uznanie</span></h2>
-                        <p><?php the_field('history_text_3'); ?></p>
-                    </div>
-                </div>
-                <div class="right_image">
-                    <div class="inner">
-                        <img src="/wp-content/themes/psibufet/images/about/step_3-2.png"/>
-                    </div>
-                    <p class="image_info">butternut box, londyn, uk</p>
-                </div>
-            </div>
-            <div class="center_content only-mobile">
-                <div class="inner">
-                    <h2>3. Globalne <span>uznanie</span></h2>
-                    <p><?php the_field('history_text_3'); ?></p>
-                </div>
-            </div>
-        </div>
-        <div class="step_4">
-            <div class="left_image">
-                <div class="inner">
-                    <img src="/wp-content/themes/psibufet/images/about/step_4_new_2.png"/>
-                </div>
-                <p class="image_info">kuchnia psibufet, warszawa</p>
-            </div>
-            <div class="right_content">
-                <div class="inner">
-                    <div class="text_wrap">
-                        <h2>4. Dynamiczny <span>wzrost</span></h2>
-                        <p><?php the_field('history_text_4'); ?></p>
+            <div class="aboutInfo__images">
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/about-us/info_01.png'; ?>"/>
+                    <div class="image__caption">
+                        <h4>Zbiórka wraz z karmimy psiaki</h4>
                     </div>
                 </div>
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/about-us/info_02.png'; ?>"/>
+                    <div class="image__caption">
+                        <h4>Fundacja Azylu Pod Psim Aniołem</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="aboutInfo__contentMobile">
+                <p>Założyliśmy PsiBUfet, ponieważ chcieliśmy pomóc. Oprócz przekazywania posiłku tym mniej szczęśliwym. Każdego roku współpracujemy również z wieloma partnerami charytatywnymi. Nie mówimy, że jesteśmy następni w kolejce do Pokojowej Nagrody Nobla czy czegoś podobnego, ale czy to wolontariat w naszym lokalnym banku żywności, czy budowa nowych schronisk dla psów ratowniczych, mamy nadzieję, że nasza praca trochę pomoże.</p>
             </div>
         </div>
     </section>
-    <section class="about_contact">
-        <div class="container">
-            <div class="contact_heading">
-                <h2>Chcesz nas poznać?</h2>
-                <p>Dołącz do #psibufetgang</p>
+
+    <?php 
+    $posts = get_posts(array(
+        'posts_per_page'	=> -1,
+        'post_type'			=> 'instagram_posts'
+    ));
+    if( $posts ): ?>
+    <section class="homeInstagram homeInstagram--about">
+        <div class="homeInstagram__wrap container">
+            <h2>Szczęśliwi członkowie <span>#psibufetgang</span></h2>
+            <div class="homeInstagram__posts">
+            <?php foreach( $posts as $post ): setup_postdata( $post ); ?>
+                <div class="post">
+                    <div class="thumb">
+                        <img src="<?php the_field('post_thumbnail'); ?>" class="no1-lazyload"/>
+                    </div>
+                    <div class="content">
+                        <div class="actions">
+                            <img src="<?php echo get_template_directory_uri() . '/images/ig_like.svg'; ?>" class="no1-lazyload"/>
+                            <img src="<?php echo get_template_directory_uri() . '/images/ig_comment.svg'; ?>" class="no1-lazyload"/>
+                            <img src="<?php echo get_template_directory_uri() . '/images/ig_send.svg'; ?>" class="no1-lazyload"/>
+                        </div>
+                        <p><b><?php the_field('user_name'); ?>:</b> <?php the_field('post_content'); ?></p>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+            <?php wp_reset_postdata(); ?>
             </div>
-            <p class="info">Złóż zamówienie<br/>i przetestuj świeżą karmę PsiBufet!</p>
-            <a href="https://zamowienie.psibufet.pl/" class="check dir order"><span><?php the_field('about_join_cta'); ?></span></a>
+            <div class="homeInstagram__cta">
+                <a href="https://zamowienie.psibufet.pl/" class="btn"><span>Stwórz dietę</span></a>
+            </div>
         </div>
     </section>
-</div>
+    <?php endif; ?>
+
+    <section class="pbShortcuts">
+        <h2 class="getMarker"><span class="marker">Poznaj</span> nas lepiej</h2>
+        <div class="pbShortcuts__wrap">
+            <a href="/jak-to-dziala" class="pbShortcuts__box" style="background-image: url('<?php echo get_template_directory_uri() . '/images/homepage/homeShortcuts_01.webp'; ?>');">
+                <p class="title">Jak to działa?</p>
+            </a>
+            <a href="/nasze-przepisy" class="pbShortcuts__box" style="background-image: url('<?php echo get_template_directory_uri() . '/images/homepage/homeShortcuts_02.webp'; ?>');">
+                <p class="title">Nasze przepisy</p>
+            </a>
+            <a href="/pomoc" class="pbShortcuts__box" style="background-image: url('<?php echo get_template_directory_uri() . '/images/homepage/homeShortcuts_04.webp'; ?>');">
+                <p class="title">Centrum pomocy</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="homeReviews homeReviews--howitworks">
+        <?php if( have_rows('after_header_logos', 5) ): ?>
+        <ul class="slideul">
+            <?php while( have_rows('after_header_logos', 5) ): the_row();
+                $image = get_sub_field('logos_img');
+                $content = get_sub_field('logos_content');
+                $google = get_sub_field('google_slide');
+                $googleRate = get_sub_field('google_rate');
+            ?>
+                <div class="homeReviews__logo">
+                    <div class="logo">
+                        <img src="<?php echo $image; ?>"/>
+                    </div>
+                    <?php if( $content ): ?>
+                    <p>“<?php echo $content; ?>”</p>
+                    <?php endif; ?>
+                    <?php if( $google ): ?>
+                        <div class="stars">
+                            <img src="/wp-content/themes/psibufet/images/reviews/star.svg"/>
+                            <img src="/wp-content/themes/psibufet/images/reviews/star.svg"/>
+                            <img src="/wp-content/themes/psibufet/images/reviews/star.svg"/>
+                            <img src="/wp-content/themes/psibufet/images/reviews/star.svg"/>
+                            <img src="/wp-content/themes/psibufet/images/reviews/star.svg"/>
+                        </div>
+                        <p><?php echo $googleRate; ?>/5 wg opinii klientów</p>
+                    <?php endif; ?>
+                </div>
+            <?php endwhile; ?>
+        </ul>
+        <?php endif; ?>
+    </section>
+
+    <section class="pbQuestions">
+        <h2 class="pbQuestions__title getMarker">Masz <span class="marker">pytanie</span>?</h2>
+        <div class="pbQuestions__wrap">
+            <div class="pbQuestions__images">
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_01.png'; ?>"/>
+                </div>
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_02.png'; ?>"/>
+                </div>
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_03.png'; ?>"/>
+                </div>
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_04.png'; ?>"/>
+                </div>
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_05.png'; ?>"/>
+                </div>
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_06.png'; ?>"/>
+                </div>
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_07.png'; ?>"/>
+                </div>
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_08.png'; ?>"/>
+                </div>
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_09.png'; ?>"/>
+                </div>
+            </div>
+            <a href="https://psibufet.pl/kontakt" class="btn btn--clear"><span>Skontaktuj się z nami</span></a>
+        </div>
+    </section>
+
+</main>
 
 <?php get_footer(); ?>
-
