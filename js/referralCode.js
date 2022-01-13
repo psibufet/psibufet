@@ -127,6 +127,7 @@ $(document).ready(function(){
 		'nasze-przepisy-new',
 		'?code=' + sPageURL,
 		'o-nas',
+		'o-nas-new',
 		'pracuj-w-psibufet',
 		'kontakt',
 		'thank-you',
