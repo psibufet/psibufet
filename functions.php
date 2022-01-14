@@ -672,7 +672,7 @@ function helpForm(){
 	if($sent){
 		echo 'done';
 	}else{
-		echo 'error';
+		echo $sent;
 	}
 	exit();
 }
