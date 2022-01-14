@@ -664,8 +664,8 @@ function helpForm(){
 	
 	$to = 'kontakt@psibufet.pl';
 	$subject = '[PsiBufet] Formularz "POMOC"';
-	$message = "Temat: " . $topic . "<br/>Wiadomość: " . $message . "<br/>Imię: " . $name . "<br/>Imię psa: " . $dogName . "<br/>Adres e-mail: " . $mail;
-	$headers = 'Content-Type: text/html; charset=ISO-8859-1';
+	$message = "Temat: " . $topic . "%0D%0A Wiadomość: " . $message . "%0D%0A Imię: " . $name . "%0D%0A Imię psa: " . $dogName . "%0D%0A Adres e-mail: " . $mail;
+	$headers = 'Content-Type: text/html; charset=UTF-8';
 	
 	$sent = wp_mail($to, $subject, $message, $headers);
 
