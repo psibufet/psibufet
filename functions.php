@@ -662,7 +662,7 @@ function helpForm(){
 	$dogName = isset( $_POST['dogname'] ) ? $_POST['dogname'] : '';
 	$mail = isset( $_POST['mail'] ) ? $_POST['mail'] : '';
 	
-	$to = 'kontakt@psibufet.pl';
+	$to = 'piotrdevv@gmail.com';
 	$subject = '[PsiBufet] Formularz "POMOC"';
 	$message = "Temat: " . $topic . "<br/>Wiadomość: " . $message . "<br/>Imię: " . $name . "<br/>Imię psa: " . $dogName . "<br/>Adres e-mail: " . $mail;
 	$headers = 'Content-Type: text/html; charset=ISO-8859-1';
