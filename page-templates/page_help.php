@@ -70,16 +70,11 @@ get_header(); ?>
                     <div class="helpForm__select">
                         <div class="selectValue"><p name="helpTopic">Jak możemy Ci pomóc?</p></div>
                         <div class="selectDropdown">
-                            <div class="selectDropdown__option" value="1"><p>Ile kosztuje karma PsiBufet?</p></div>
-                            <div class="selectDropdown__option" value="2"><p>Jakie formy płatności mam do wyboru?</p></div>
-                            <div class="selectDropdown__option" value="3"><p>Czym jest subskrypcja?</p></div>
-                            <div class="selectDropdown__option" value="4"><p>Jakie formy dostawy oferuje PsiBufet?</p></div>
-                            <div class="selectDropdown__option" value="5"><p>Jak dostarczane są posiłki PsiBufet?</p></div>
-                            <div class="selectDropdown__option" value="6"><p>Jak sprawdzić status paczki?</p></div>
-                            <div class="selectDropdown__option" value="7"><p>Jak podawać/jak przechowywać karmę PsiBufet?</p></div>
-                            <div class="selectDropdown__option" value="8"><p>Jak dokonać zmian w swoim zamówieniu?</p></div>
-                            <div class="selectDropdown__option" value="9"><p>Jak zalogować się do Panelu Klienta?</p></div>
-                            <div class="selectDropdown__option" value="10"><p>Jak zrezygnować z kolejnej dostawy?</p></div>
+                            <?php while(have_rows('helpForm_qa')): the_row();
+                                $question = get_sub_field('helpForm_qa_question');
+                            ?>
+                                <div class="selectDropdown__option" value="<?php echo get_row_index(); ?>"><p><?php echo $question; ?></p></div>
+                            <?php endwhile; ?>
                         </div>
                     </div>
                 </div>
