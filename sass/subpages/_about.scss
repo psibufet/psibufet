@@ -402,28 +402,17 @@
     }
     &__content{
         display: flex;
-        align-items: center;
         justify-content: space-between;
-        height: 430px;
+        height: auto;
 
         .video{
             width: calc(100% - 400px);
-            height: inherit;
             box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
 
-            .wp-video{
-                height: inherit;
-                width: 100% !important;
-
-                @media (min-width: 992px){
-                    .mejs-video{
-                        height: inherit !important;
-                        width: 100% !important;
-                    }   
-                }
-                .mejs-controls{
-                    display: none !important;
-                }
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
             }
         }
         .content{

@@ -73,16 +73,12 @@ get_header(); ?>
         </div>
     </section>
 
+    <?php if(get_field('aboutTeam_gif')): ?>
     <section class="aboutTeam">
         <div class="aboutTeam__wrap">
             <div class="aboutTeam__content">
                 <div class="video video--desktop">
-                    <?php
-                    $attr = array(
-                        'src'       => get_field('aboutTeam_video'),
-                        'poster'    => false,
-                    );
-                    echo wp_video_shortcode($attr); ?>
+                    <img src="<?php the_field('aboutTeam_gif'); ?>"/>
                 </div>
                 <div class="content">
                     <h3 class="getMarker getMarker--small"><?php the_field('aboutTeam_title'); ?></h3>
@@ -91,29 +87,31 @@ get_header(); ?>
             </div>
         </div>
     </section>
+    <?php endif; ?>
 
     <section class="aboutInfo">
         <div class="aboutInfo__wrap">
             <div class="aboutInfo__content">
-                <h2 class="getMarker"><span class="marker">Dajemy</span> coś w zamian</h2>
-                <p>Założyliśmy PsiBUfet, ponieważ chcieliśmy pomóc. Oprócz przekazywania posiłku tym mniej szczęśliwym. Każdego roku współpracujemy również z wieloma partnerami charytatywnymi. Nie mówimy, że jesteśmy następni w kolejce do Pokojowej Nagrody Nobla czy czegoś podobnego, ale czy to wolontariat w naszym lokalnym banku żywności, czy budowa nowych schronisk dla psów ratowniczych, mamy nadzieję, że nasza praca trochę pomoże.</p>
+                <h2 class="getMarker"><?php the_field('aboutInfo_title'); ?></h2>
+                <p><?php the_field('aboutInfo_content'); ?></p>
             </div>
+            <?php if(get_field('aboutInfo_images')): ?>
             <div class="aboutInfo__images">
+                <?php while(have_rows('aboutInfo_images')): the_row(); 
+                    $image = get_sub_field('aboutInfo_images_image');
+                    $text = get_sub_field('aboutInfo_images_text');
+                ?>
                 <div class="image">
-                    <img src="<?php echo get_template_directory_uri() . '/images/about-us/info_01.png'; ?>"/>
+                    <img src="<?php echo $image; ?>"/>
                     <div class="image__caption">
-                        <h4>Zbiórka wraz z karmimy psiaki</h4>
+                        <h4><?php echo $text; ?></h4>
                     </div>
                 </div>
-                <div class="image">
-                    <img src="<?php echo get_template_directory_uri() . '/images/about-us/info_02.png'; ?>"/>
-                    <div class="image__caption">
-                        <h4>Fundacja Azylu Pod Psim Aniołem</h4>
-                    </div>
-                </div>
+                <?php endwhile; ?>
             </div>
+            <?php endif; ?>
             <div class="aboutInfo__contentMobile">
-                <p>Założyliśmy PsiBUfet, ponieważ chcieliśmy pomóc. Oprócz przekazywania posiłku tym mniej szczęśliwym. Każdego roku współpracujemy również z wieloma partnerami charytatywnymi. Nie mówimy, że jesteśmy następni w kolejce do Pokojowej Nagrody Nobla czy czegoś podobnego, ale czy to wolontariat w naszym lokalnym banku żywności, czy budowa nowych schronisk dla psów ratowniczych, mamy nadzieję, że nasza praca trochę pomoże.</p>
+                <p><?php the_field('aboutInfo_content'); ?></p>
             </div>
         </div>
     </section>

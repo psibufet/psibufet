@@ -1336,22 +1336,12 @@ $(document).ready(function(){
 
         $(this).parents('.helpForm__select').find('.selectValue').find('p').text(value);
 
-        $.ajax({
-            url: '/wp-content/themes/psibufet/template-parts/help/customer_answer_0' + id + '.php',
-            success: function(box) {
-                $('.helpForm__info').find('.info').remove();
-                $('.helpForm__info').find('.author').remove();
-                $('.helpForm__info').append(box);
-                setTimeout(function(){
-                    $('.helpForm__info').css('opacity', '1');
-                }, 300);
-            },
-            error: function(box){
-                $('.helpForm__info').find('.info').remove();
-                $('.helpForm__info').find('.author').remove();
-                console.error('Nie znaleziono pliku *.php z odpowiedzią na pytanie.');
-            }
-        });
+        $('.helpForm__info').find('.answer').css('opacity', '0');
+        setTimeout(function(){
+            $('.helpForm__info').find('.answer').hide();
+            $('.helpForm__info').find('.answer[data-id="' + id + '"]').show();
+            $('.helpForm__info').find('.answer[data-id="' + id + '"]').css('opacity', '1');
+        }, 300);            
 
         $('.helpForm__select').find('.selectDropdown').slideUp();
         $('.helpForm__select').removeClass('active');

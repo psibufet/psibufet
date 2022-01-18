@@ -7,8 +7,8 @@ get_header(); ?>
 <main class="pbpage pbpage--help">
     <header class="helpHeader">
         <div class="helpHeader__wrap">
-            <h1 class="getMarker">Jak możemy <span class="marker">pomóc?</span></h1>
-            <h2>Witaj w centrum pomocy PsiBufet</h2>
+            <h1 class="getMarker"><?php the_field('helpHeader_title'); ?></h1>
+            <h2><?php the_field('helpHeader_content'); ?></h2>
         </div>
     </header>
 
@@ -83,7 +83,29 @@ get_header(); ?>
                         </div>
                     </div>
                 </div>
-                <div class="helpForm__info"></div>
+                <div class="helpForm__info">
+                    <?php while(have_rows('helpForm_qa')): the_row();
+                        $answer = get_sub_field('helpForm_qa_answer');
+                        $image = get_sub_field('helpForm_qa_image');
+                        $name = get_sub_field('helpForm_qa_name');
+                        $position = get_sub_field('helpForm_qa_position');
+                    ?>
+                    <div class="answer" data-id="<?php echo get_row_index(); ?>" style="display: none;">
+                        <div class="info">
+                            <?php echo $answer; ?>
+                        </div>
+                        <div class="author">
+                            <div class="author__image">
+                                <img src="<?php echo $image; ?>"/>
+                            </div>
+                            <div class="author__content">
+                                <h3><?php echo $name; ?></h3>
+                                <p><?php echo $position; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <?php endwhile; ?>
+                </div>
                 <div class="helpForm__row">
                     <div class="helpForm__textarea">
                         <textarea name="helpMessage" class="helpForm__input" placeholder="Twoja wiadomość" required></textarea>

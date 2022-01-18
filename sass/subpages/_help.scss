@@ -421,9 +421,6 @@
             margin: 0 auto 20px;
         }
         &__info{
-            opacity: 0;
-            transition: ease .3s;
-
             .info{
                 max-width: 420px;
                 margin: 0 auto;
@@ -433,6 +430,7 @@
                 box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
                 padding: 18px 20px;
                 position: relative;
+                transition: ease .3s;
 
                 &:before{
                     content: '';
