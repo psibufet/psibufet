@@ -14,7 +14,7 @@ get_header(); ?>
 
     <section class="helpCategories">
         <div class="helpCategories__heading">
-            <h2>Odpowiedzi na najczęściej zadawanie pytania znajdziesz tutaj:</h2>
+            <h2><?php the_field('helpCategories_heading'); ?></h2>
         </div>
         <div class="helpCategories__wrap">
             <a href="https://help.psibufet.pl/category/25-dostawy" class="helpCategories__cat">
