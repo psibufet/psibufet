@@ -281,7 +281,7 @@ if($_SERVER['SERVER_NAME'] == 'psibufet.local'){
                     <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_09.png'; ?>"/>
                 </div>
             </div>
-            <a href="https://psibufet.pl/kontakt" class="btn btn--clear"><span>Skontaktuj się z nami</span></a>
+            <a href="https://psibufet.pl/pomoc" class="btn btn--clear"><span>Skontaktuj się z nami</span></a>
         </div>
     </section>
 
