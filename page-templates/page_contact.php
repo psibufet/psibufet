@@ -12,7 +12,7 @@ Template Name: Kontakt
     <section class="contact_header">
         <div class="inner">
             <h1>Masz pytanie?</h1>
-            <p class="lead">Odpowiedzi na najczęściej zadawane pytania znajdziesz w zakładce <a href="https://help.psibufet.pl" class="dir">FAQ</a>.</p>
+            <p class="lead">Odpowiedzi na najczęściej zadawane pytania znajdziesz w zakładce <a href="https://psibufet.pl/pomoc" class="dir">FAQ</a>.</p>
         </div>
         <a class="header_arrow" href="#first_section"><img src="/wp-content/themes/psibufet/images/chevron_down_white.svg"/></a>
     </section>
