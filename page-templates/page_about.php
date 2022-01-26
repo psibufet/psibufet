@@ -19,9 +19,10 @@ get_header(); ?>
             <div class="aboutHistory__video">
                 <div class="video">
                     <?php
+                    $video = get_field('aboutVideo');
                     $attr = array(
-                        'src'       => get_field('aboutVideo'),
-                        'poster'    => false,
+                        'src'       => $video['url'],
+                        'poster'    => $video['sizes']['large'],
                     );
                     echo wp_video_shortcode($attr); ?>
                 </div>
