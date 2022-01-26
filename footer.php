@@ -40,7 +40,6 @@
                     <div class="logo">
                         <img src="<?php echo get_template_directory_uri() . '/images/lpsale/psibufet_logo_lp.svg'; ?>"/>
                     </div>
-                    <a href="tel:+48221046259">+48 22 104 62 59</a>
                     <a href="mailto:kontakt@psibufet.pl">kontakt@psibufet.pl</a>
                     <p class="hours">
                         Godziny otwarcia:<br/>
