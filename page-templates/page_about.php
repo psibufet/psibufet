@@ -14,7 +14,7 @@ get_header(); ?>
     <section class="aboutHistory">
         <div class="aboutHistory__wrap">
             <div class="aboutHistory__heading">
-                <h2 class="getMarker"><span class="marker">Historia</span> PsiBufet</h2>
+                <h2 class="getMarker getMarker--lower"><span class="marker">Historia</span> PsiBufet</h2>
             </div>
             <div class="aboutHistory__video">
                 <div class="video">
@@ -44,7 +44,7 @@ get_header(); ?>
             ?>
             <div class="aboutSteps__step">
                 <div class="content">
-                    <h3 class="getMarker"><?php echo get_row_index(); ?>. <?php echo $title; ?></h3>
+                    <h3 class="getMarker getMarker--lower"><?php echo get_row_index(); ?>. <?php echo $title; ?></h3>
                     <p><?php echo $content; ?></p>
                 </div>
                 <div class="image<?php if($imageType == 'two'): ?> image--two<?php endif; ?>">
@@ -93,7 +93,7 @@ get_header(); ?>
     <section class="aboutInfo">
         <div class="aboutInfo__wrap">
             <div class="aboutInfo__content">
-                <h2 class="getMarker"><?php the_field('aboutInfo_title'); ?></h2>
+                <h2 class="getMarker getMarker--lower"><?php the_field('aboutInfo_title'); ?></h2>
                 <p><?php the_field('aboutInfo_content'); ?></p>
             </div>
             <?php if(get_field('aboutInfo_images')): ?>
@@ -152,7 +152,7 @@ get_header(); ?>
     <?php endif; ?>
 
     <section class="pbShortcuts">
-        <h2 class="getMarker"><span class="marker">Poznaj</span> nas lepiej</h2>
+        <h2 class="getMarker getMarker--lower"><span class="marker">Poznaj</span> nas lepiej</h2>
         <div class="pbShortcuts__wrap">
             <a href="/jak-to-dziala" class="pbShortcuts__box" style="background-image: url('<?php echo get_template_directory_uri() . '/images/homepage/homeShortcuts_01.webp'; ?>');">
                 <p class="title">Jak to działa?</p>
@@ -199,7 +199,7 @@ get_header(); ?>
     </section>
 
     <section class="pbQuestions">
-        <h2 class="pbQuestions__title getMarker">Masz <span class="marker">pytanie</span>?</h2>
+        <h2 class="pbQuestions__title getMarker getMarker--lower">Masz <span class="marker">pytanie</span>?</h2>
         <div class="pbQuestions__wrap">
             <div class="pbQuestions__images">
                 <div class="image">

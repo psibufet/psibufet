@@ -81,6 +81,13 @@ body{
             }
         }
     }
+    &--lower{
+        .marker{
+            &:after{
+                bottom: 8px;
+            }
+        }
+    }
 }
 @media (max-width: 767px){
     .getMarker{

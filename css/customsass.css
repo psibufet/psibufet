@@ -14612,8 +14612,8 @@ body.page-template-page_ksiazka .siteHeader--promocode {
 }
 
 .aboutHistory__heading h2 {
-  font-size: 41px;
-  line-height: 49px;
+  font-size: 48px;
+  line-height: 56px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   margin: 0;
@@ -14632,15 +14632,19 @@ body.page-template-page_ksiazka .siteHeader--promocode {
 }
 
 @media (max-width: 991px) {
+  .aboutHistory {
+    padding: 32px 0 20px;
+  }
   .aboutHistory__wrap {
     max-width: calc(100% - 40px);
+  }
+  .aboutHistory__video {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ccc;
   }
 }
 
 @media (max-width: 767px) {
-  .aboutHistory {
-    padding: 24px 0 32px;
-  }
   .aboutHistory__heading {
     margin: 0 0 20px;
   }
@@ -15042,8 +15046,8 @@ body.page-template-page_ksiazka .siteHeader--promocode {
 }
 
 .aboutInfo__content p {
-  font-size: 20px;
-  line-height: 26px;
+  font-size: 16px;
+  line-height: 21px;
   font-weight: 400;
   max-width: 500px;
   margin: 0 auto;
@@ -15115,6 +15119,7 @@ body.page-template-page_ksiazka .siteHeader--promocode {
   font-size: 14px;
   line-height: 20px;
   margin: 0;
+  text-align: justify;
 }
 
 @media (max-width: 1199px) {
@@ -15313,6 +15318,10 @@ body a:hover {
 
 .getMarker--small .marker:after {
   height: 6px;
+}
+
+.getMarker--lower .marker:after {
+  bottom: 8px;
 }
 
 @media (max-width: 767px) {
