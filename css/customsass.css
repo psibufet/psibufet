@@ -14631,10 +14631,6 @@ body.page-template-page_ksiazka .siteHeader--promocode {
   width: 100% !important;
 }
 
-.aboutHistory__video .video .wp-video .mejs-controls {
-  display: none !important;
-}
-
 @media (max-width: 991px) {
   .aboutHistory__wrap {
     max-width: calc(100% - 40px);
