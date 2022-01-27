@@ -457,8 +457,8 @@
                 margin: 0 0 8px;
             }
             p{
-                font-size: 18px;
-                line-height: 25px;
+                font-size: 16px;
+                line-height: 20px;
                 color: $primarycolor;
                 text-align: center;
                 max-width: 300px;
@@ -509,6 +509,15 @@
 @media (max-width: 767px){
     .aboutTeam{
         padding: 24px 0;
+
+        &__content{
+            .content{
+                p{
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+            }
+        }
     }
 }
 
@@ -536,7 +545,7 @@
         }
         p{
             font-size: 16px;
-            line-height: 21px;
+            line-height: 20px;
             font-weight: 400;
             max-width: 500px;
             margin: 0 auto;

@@ -14971,8 +14971,8 @@ body.page-template-page_ksiazka .siteHeader--promocode {
 }
 
 .aboutTeam__content .content p {
-  font-size: 18px;
-  line-height: 25px;
+  font-size: 16px;
+  line-height: 20px;
   color: #4c4c4c;
   text-align: center;
   max-width: 300px;
@@ -15017,6 +15017,10 @@ body.page-template-page_ksiazka .siteHeader--promocode {
   .aboutTeam {
     padding: 24px 0;
   }
+  .aboutTeam__content .content p {
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
 
 .aboutInfo {
@@ -15047,7 +15051,7 @@ body.page-template-page_ksiazka .siteHeader--promocode {
 
 .aboutInfo__content p {
   font-size: 16px;
-  line-height: 21px;
+  line-height: 20px;
   font-weight: 400;
   max-width: 500px;
   margin: 0 auto;
