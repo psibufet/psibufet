@@ -1336,6 +1336,11 @@ $(document).ready(function(){
 
         $(this).parents('.helpForm__select').find('.selectValue').find('p').text(value);
 
+        dataLayer.push({
+            'event': 'helpAsked',
+            'label': value, 
+        });
+
         $('.helpForm__info').find('.answer').css('opacity', '0');
         setTimeout(function(){
             $('.helpForm__info').find('.answer').hide();
@@ -1393,6 +1398,14 @@ $(document).ready(function(){
                     console.log(response);
                     form.removeClass('helpForm--loading');
                     if(response == 'done'){
+
+                        // GTM
+                        var value = form.find('p[name="helpTopic"]').text();
+                        dataLayer.push({
+                            'event': 'helpSent',
+                            'label': value,
+                        });
+
                         form.find('p[name="helpTopic"]').text('Jak możemy Ci pomóc?');
                         form.find('textarea').val('');
                         form.find('input').val('');
