@@ -495,6 +495,9 @@ function custom_scripts(){
 	global $theme_version, $random_number;
 	wp_register_style('customsass', get_template_directory_uri() . '/css/customsass.css', false, $theme_version . $random_number);
 	wp_enqueue_style('customsass');
+
+	wp_register_script('download_pdf', get_template_directory_uri() . '/js/_pdfdownload.js', '', $theme_version . $random_number, true);
+	wp_enqueue_script('download_pdf');
 }
 add_action('wp_enqueue_scripts', 'custom_scripts');
 

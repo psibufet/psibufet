@@ -15199,6 +15199,73 @@ body.page-template-page_ksiazka .siteHeader--promocode {
   }
 }
 
+body.page-template-page_pdf .siteHeader,
+body.page-template-page_pdf .siteFooter {
+  display: none !important;
+}
+
+body.admin-bar .pagePDF {
+  min-height: calc(100vh - 32px);
+}
+
+@media (max-width: 991px) {
+  body.admin-bar .pagePDF {
+    min-height: calc(100vh - 46px);
+  }
+}
+
+.pagePDF {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.pagePDF__wrap {
+  text-align: center;
+}
+
+.pagePDF__wrap img {
+  display: block;
+  max-width: 600px;
+  width: 100%;
+  margin: -40px auto 0;
+}
+
+.pagePDF__wrap h1 {
+  font-size: 48px;
+  line-height: 58px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  margin: 0;
+}
+
+.pagePDF__wrap .btn {
+  display: none;
+  margin: 40px auto 0;
+  padding: 0 30px;
+}
+
+.pagePDF__wrap .btn.visible {
+  display: inline-block;
+}
+
+.pagePDF__wrap .btn--back span {
+  padding-left: 15px;
+}
+
+@media (max-width: 767px) {
+  .pagePDF__wrap h1 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .pagePDF__wrap .btn {
+    margin: 20px auto 0;
+  }
+}
+
 /*  Global
 --------------- */
 .homeHeader:after {
