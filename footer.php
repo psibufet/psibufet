@@ -25,8 +25,8 @@
                         <li><a href="https://zamowienie.psibufet.pl" class="dir order">Zamów</a></li>
                     </ul>
                     <ul class="links">
-                        <li><a href="/program-partnerski" class="dir">Program partnerski</a></li>
-                        <li><a href="/restauracje" class="dir">Restauracje</a></li>
+                        <li><a href="/program-partnerski" class="dir">Zostań partnerem</a></li>
+                        <li><a href="/restauracje" class="dir">Psyjazne restauracje</a></li>
                         <li><a href="/pomoc" class="dir">Pomoc</a></li>
                         <li><a href="https://psibufet.pl/blog" class="dir">Blog</a></li>
                         <li><a href="/pracuj-w-psibufet" class="dir">Praca</a>
