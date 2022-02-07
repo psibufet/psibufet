@@ -141,12 +141,12 @@ $(document).ready(function(){
 		'regulamin_dla_hodowcow.pdf',
 		'lp',
 		'lp-rkmt',
-		'zostan-partnerem',
+		'program-partnerski',
 		'kalkulator',
 		'serwis',
 		'ksiazka',
 		'rasy',
-		'psyjazne-restauracje',
+		'restauracje',
 		'pomoc',
 	];
 	var blackweek = [
