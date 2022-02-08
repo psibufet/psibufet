@@ -32,6 +32,7 @@
 @import 'subpages/help';
 @import 'subpages/about';
 @import 'subpages/pdf';
+@import 'subpages/carrer';
 
 /*  Global
 --------------- */
@@ -283,6 +284,16 @@ body{
         margin: 0 auto;
     }
 
+    &--medium{
+        min-width: 190px;
+        height: 44px;
+        line-height: 44px;
+
+        span{
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
     &--big{
         min-width: 265px;
         height: 56px;
@@ -424,6 +435,16 @@ body{
 
             span{
                 font-size: 15px;
+            }
+        }
+        &--medium{
+            min-width: 190px;
+            height: 44px;
+            line-height: 44px;
+    
+            span{
+                font-size: 16px;
+                font-weight: 500;
             }
         }
     }

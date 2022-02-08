@@ -294,6 +294,25 @@ $(document).ready(function() {
     });
 });
 
+/********** Carrer page **********/
+
+$(document).ready(function() {
+    var carrerList = $('.carrerOffers__heading').find('.getMarker');
+
+    if($(carrerList).visible(true)){
+        setTimeout(function(){
+            carrerList.addClass('init');
+        }, 500)
+    }
+    $(window).on('scroll', function(){
+        if($(carrerList).visible(true)){
+            setTimeout(function(){
+                carrerList.addClass('init');
+            }, 500)
+        }
+    });
+});
+
 /********** Partner page **********/
 
 $(document).ready(function() {
