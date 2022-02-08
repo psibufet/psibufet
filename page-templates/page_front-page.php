@@ -506,6 +506,42 @@ get_header(); ?>
     </section>
     <?php endif; ?>
 
+    <section class="homeAbout">
+        <div class="homeAbout__wrap container">
+            <div class="homeAbout__content">
+                <h2 class="getMarker"><?php echo the_field('homeAbout_title'); ?></h2>
+                <p><?php echo the_field('homeAbout_content'); ?></p>
+                <div class="usp">
+                    <div class="usp__usp">
+                        <div class="icon">
+                            <img src="<?php echo get_template_directory_uri() . '/images/frontpage/about_usp01.svg'; ?>"/>
+                        </div>
+                        <p>Świeże<br/>posiłki</p>
+                    </div>
+                    <div class="usp__usp">
+                        <div class="icon">
+                            <img src="<?php echo get_template_directory_uri() . '/images/frontpage/about_usp02.svg'; ?>"/>
+                        </div>
+                        <p>Testowane<br/>na ludziach</p>
+                    </div>
+                    <div class="usp__usp">
+                        <div class="icon">
+                            <img src="<?php echo get_template_directory_uri() . '/images/frontpage/about_usp03.svg'; ?>"/>
+                        </div>
+                        <p>Z miłości<br/>do piesków</p>
+                    </div>
+                </div>
+                <a href="/o-nas" class="btn btn--center"><span>Więcej O Nas</span></a>
+            </div>
+            <div class="homeAbout__gif">
+                <div class="image">
+                    <img src="<?php echo the_field('homeAbout_image'); ?>"/>
+                </div>
+                <a href="/o-nas" class="btn btn--center"><span>Więcej O Nas</span></a>
+            </div>
+        </div>
+    </section>
+
     <section class="homeStart">
         <div class="homeStart__wrap container">
             <div class="homeStart__content">

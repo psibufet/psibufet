@@ -64,6 +64,7 @@ $(document).ready(function() {
     var homeBenefits = $('.homeBenefits').find('.getMarker');
     var homePricing = $('.homePricing').find('.getMarker');
     var homeStart = $('.homeStart').find('.getMarker');
+    var homeAbout = $('.homeAbout__content').find('.getMarker');
     var homeStartSection = $('.homeStart');
     var pbShortcuts = $('.pbShortcuts').find('.getMarker');
     var pbQuestions = $('.pbQuestions').find('.getMarker');
@@ -96,6 +97,11 @@ $(document).ready(function() {
     if($(homePricing).visible(true)){
         setTimeout(function(){
             homePricing.addClass('init');
+        }, 500)
+    }
+    if($(homeAbout).visible(true)){
+        setTimeout(function(){
+            homeAbout.addClass('init');
         }, 500)
     }
     if($(homeStart).visible(true)){
@@ -148,6 +154,11 @@ $(document).ready(function() {
         if($(homePricing).visible(true)){
             setTimeout(function(){
                 homePricing.addClass('init');
+            }, 500)
+        }
+        if($(homeAbout).visible(true)){
+            setTimeout(function(){
+                homeAbout.addClass('init');
             }, 500)
         }
         if($(homeStart).visible(true)){

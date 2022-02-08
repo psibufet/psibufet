@@ -3999,6 +3999,187 @@ body.admin-bar{
 }
 
 
+/**
+ *  Home about
+ */
+.homeAbout{
+    background-image: url('/wp-content/themes/psibufet/images/frontpage/homeabout_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px 0;
+
+    &__wrap{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1230px;
+        width: 100%;
+
+        &:before,
+        &:after{
+            display: none;
+        }
+    }
+
+    &__content{
+        width: 100%;
+        max-width: 540px;
+
+        h2{
+            font-size: 48px;
+            line-height: 58px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: 400;
+            color: #000;
+            text-align: center;
+            margin: 0 0 20px;
+        }
+        p{
+            font-size: 20px;
+            line-height: 26px;
+            font-weight: bold;
+            color: #000;
+            text-align: center;
+            margin: 0;
+        }
+        .usp{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 360px;
+            width: 100%;
+            margin: 36px auto 40px;
+
+            &__usp{
+                max-width: 75px;
+                width: 100%;
+
+                .icon{
+                    margin: 0 0 10px;
+                    text-align: center;
+                }
+                p{
+                    font-size: 14px;
+                    line-height: 18px;
+                    font-weight: normal;
+                    color: #000;
+                    text-align: center;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    &__gif{
+        width: 100%;
+        max-width: 582px;
+        display: flex;
+
+        .image{
+            position: relative;
+
+            &:after{
+                content: '';
+                background-image: url('/wp-content/themes/psibufet/images/frontpage/about_signature.svg');
+                background-repeat: no-repeat;
+                background-size: 127px;
+                width: 127px;
+                height: 117px;
+                position: absolute;
+                right: 0;
+                bottom: 20px;
+                z-index: 2;
+            }
+
+            img{
+                width: 100%;
+            }
+        }
+        .btn{
+            display: none;
+        }
+    }
+}
+@media (max-width: 1199px){
+    .homeAbout{
+        &__content{
+            padding: 0 20px;
+
+            h2{
+                font-size: 42px;
+                line-height: 52px;
+            }
+        }
+    }
+}
+@media (max-width: 991px){
+    .homeAbout{
+        padding: 40px 0 120px;
+
+        &__wrap{
+            flex-direction: column;
+        }
+        &__content{
+            margin: 0 auto;
+
+            .btn{
+                display: none;
+            }
+        }
+        &__gif{
+            flex-direction: column;
+            justify-content: center;
+            
+            .btn{
+                display: inline-block;
+                margin: 32px auto 0;
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .homeAbout{
+        padding: 25px 0 120px;
+
+        &__content{
+            h2{
+                font-size: 36px;
+                line-height: 43px;
+                max-width: 270px;
+                margin: 0 auto 15px;
+            }
+            &>p{
+                font-size: 14px;
+                line-height: 18px;
+                max-width: 320px;
+                margin: 0 auto;
+
+                br{
+                    display: none;
+                }
+            }
+            .usp{
+                margin: 30px auto 28px;
+
+                &__usp{
+                    p{
+                        font-size: 12px;
+                        line-height: 16px;
+                    }
+                }
+            }
+        }
+        &__gif{
+            .image{
+                &:after{
+                    background-size: 100%;
+                    width: 23%;
+                    height: 20%;
+                }
+            }
+        }
+    }
+}
+
 // Start form
 .homeStart{
     background-color: #E8E8E8;
