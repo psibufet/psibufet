@@ -276,6 +276,11 @@ $(window).load(function(){
 $(document).ready(function(){
     var form = $('form.dogNameForm');
     var code = GetURLParameter('code');
+    if(typeof code !== 'undefined' && form.length){
+        form.attr('action', 'https://zamowienie.psibufet.pl/?code=' + code);
+        var href = form.find('.more').attr('href');
+        form.find('.more').attr('href', href + '?code=' + code);
+    }
     $(form).each(function(){
         var $this = $(this);
         var nameinput = $(this).find('input[type="text"]');
