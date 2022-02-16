@@ -16,6 +16,7 @@
     <meta name="description" content="Catering dla psa - zbilansowana, pełnoporcjowa karma, przygotowana ze świeżych, naturalnych składników. Dieta wysyłana prosto pod Twoje drzwi!">
     <meta property="og:image" content="https://psibufet.pl/wp-content/uploads/2021/09/OpenGraph.png">
     <meta name="twitter:image" content="https://psibufet.pl/wp-content/uploads/2021/09/OpenGraph.png">
+    <meta name="google-site-verification" content="B1JDlnRHMgXy8VBU1fSK5tGioGEekdBYnM9lVlfW-kI" />
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <?php if(!is_front_page()): ?>
