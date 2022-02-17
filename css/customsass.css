@@ -5175,12 +5175,12 @@ body.admin-bar .foodModal__wrap {
   content: '';
   background-image: url("/wp-content/themes/psibufet/images/frontpage/about_signature.svg");
   background-repeat: no-repeat;
-  background-size: 127px;
-  width: 127px;
-  height: 117px;
+  background-size: 270px;
+  width: 270px;
+  height: 129px;
   position: absolute;
-  right: 0;
-  bottom: 20px;
+  left: 30px;
+  top: 90px;
   z-index: 2;
 }
 
@@ -5253,8 +5253,10 @@ body.admin-bar .foodModal__wrap {
   }
   .homeAbout__gif .image:after {
     background-size: 100%;
-    width: 23%;
-    height: 20%;
+    width: 46%;
+    height: 22%;
+    left: 4%;
+    top: 16%;
   }
 }
 
