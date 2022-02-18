@@ -110,7 +110,7 @@
         google.maps.event.addListener(marker, 'click', function() {
             map.setCenter(marker.getPosition());
 
-            infowindow.close(map);
+            infowindow.close();
             infowindow.open({
                 anchor: marker,
                 map,

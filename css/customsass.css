@@ -2219,7 +2219,7 @@ body.promocode-blackweek .siteHeader--promocode {
   height: 605px;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: right;
   position: relative;
 }
 
@@ -2341,6 +2341,7 @@ body.promocode-blackweek .siteHeader--promocode {
   .homeHeaderV4 {
     height: 605px;
     background-image: url("/wp-content/themes/psibufet/images/frontpage/homeHeaderV4_tablet_bg.png") !important;
+    background-position: right;
   }
   .homeHeaderV4__content {
     margin-bottom: 20px;
@@ -2381,6 +2382,7 @@ body.promocode-blackweek .siteHeader--promocode {
     height: 600px;
     background-image: url("/wp-content/themes/psibufet/images/frontpage/homeHeaderV4_mobile_bg.png") !important;
     background-size: auto 100%;
+    background-position: center;
     background-color: #f15748;
   }
   .homeHeaderV4__wrap {
