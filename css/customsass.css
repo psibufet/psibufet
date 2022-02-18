@@ -2006,7 +2006,7 @@ body.promocode-blackweek .siteHeader--promocode {
 }
 
 .homeHeaderV3__content {
-  margin-bottom: 60px;
+  padding-top: 50px;
 }
 
 .homeHeaderV3__content h2 {
@@ -2017,7 +2017,6 @@ body.promocode-blackweek .siteHeader--promocode {
   color: #000;
   max-width: 600px;
   margin: 0 auto 20px;
-  text-shadow: 3px 4px #00000024;
   text-align: center;
 }
 
@@ -2025,7 +2024,7 @@ body.promocode-blackweek .siteHeader--promocode {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 0 50px;
+  margin: 0 0 20px;
 }
 
 .homeHeaderV3__content .tags div {
@@ -2036,7 +2035,6 @@ body.promocode-blackweek .siteHeader--promocode {
   color: #000;
   margin: 0;
   padding: 0 20px;
-  text-shadow: 3px 4px #00000024;
 }
 
 .homeHeaderV3__content .tags div:nth-child(2):before {
@@ -2121,16 +2119,21 @@ body.promocode-blackweek .siteHeader--promocode {
     background-image: url("/wp-content/themes/psibufet/images/frontpage/homeHeaderV3_tablet_bg.png") !important;
     background-size: auto 100%;
   }
+  .homeHeaderV3__wrap {
+    align-items: flex-start;
+  }
   .homeHeaderV3__content {
-    margin-bottom: 20px;
+    margin-bottom: 0;
+    padding-top: 30px;
   }
   .homeHeaderV3__content h2 {
     font-size: 62px;
     line-height: 74px;
     max-width: 400px;
+    margin: 0 auto 10px;
   }
   .homeHeaderV3__content .tags {
-    margin: 0 0 20px;
+    margin: 0;
   }
   .homeHeaderV3__content .tags div {
     font-size: 18px;
@@ -2174,6 +2177,7 @@ body.promocode-blackweek .siteHeader--promocode {
   }
   .homeHeaderV3__content {
     margin: 30px 0 0;
+    padding-top: 0;
   }
   .homeHeaderV3__content .tags {
     margin: 0 0 20px;

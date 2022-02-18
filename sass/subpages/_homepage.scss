@@ -624,7 +624,7 @@
         justify-content: center;
     }
     &__content{
-        margin-bottom: 60px;
+        padding-top: 50px;
 
         h2{
             font-size: 89px;
@@ -634,14 +634,13 @@
             color: #000;
             max-width: 600px;
             margin: 0 auto 20px;
-            text-shadow: 3px 4px #00000024;
             text-align: center;
         }
         .tags{
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 0 50px;
+            margin: 0 0 20px;
 
             div{
                 display: flex;
@@ -651,7 +650,6 @@
                 color: #000;
                 margin: 0;
                 padding: 0 20px;
-                text-shadow: 3px 4px #00000024;
 
                 &:nth-child(2){
                     &:before{
@@ -743,16 +741,21 @@
         background-image: url('/wp-content/themes/psibufet/images/frontpage/homeHeaderV3_tablet_bg.png') !important;
         background-size: auto 100%;
 
+        &__wrap{
+            align-items: flex-start;
+        }
         &__content{
-            margin-bottom: 20px;
+            margin-bottom: 0;
+            padding-top: 30px;
 
             h2{
                 font-size: 62px;
                 line-height: 74px;
                 max-width: 400px;
+                margin: 0 auto 10px;
             }
             .tags{
-                margin: 0 0 20px;
+                margin: 0;
 
                 div{
                     font-size: 18px;
@@ -803,6 +806,7 @@
         }
         &__content{
             margin: 30px 0 0;
+            padding-top: 0;
 
             .tags{
                 margin: 0 0 20px;
