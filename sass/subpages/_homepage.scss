@@ -610,6 +610,525 @@
     }
 }
 
+.homeHeaderV3{
+    height: 700px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    &__wrap{
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__content{
+        margin-bottom: 60px;
+
+        h2{
+            font-size: 89px;
+            line-height: 106px;
+            font-weight: 500;
+            font-family: $headingfont;
+            color: #000;
+            max-width: 600px;
+            margin: 0 auto 20px;
+            text-shadow: 3px 4px #00000024;
+            text-align: center;
+        }
+        .tags{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 0 50px;
+
+            div{
+                display: flex;
+                font-size: 25px;
+                line-height: 29px;
+                font-weight: 500;
+                color: #000;
+                margin: 0;
+                padding: 0 20px;
+                text-shadow: 3px 4px #00000024;
+
+                &:nth-child(2){
+                    &:before{
+                        content: '|';
+                        font-size: 25px;
+                        color: #000;
+                        margin-right: 20px;
+                    }
+                    &:after{
+                        content: '|';
+                        font-size: 25px;
+                        color: #000;
+                        margin-left: 20px;
+                    }
+                }
+                &:first-of-type{
+                    padding-right: 0;
+                }
+                &:last-of-type{
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+    &__scroll{
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+
+        p{
+            color: #000;
+            font-weight: 500;
+            text-align: center;
+            margin: 0 0 5px;
+        }
+
+        &:after{
+            content: "";
+            background-image: url('/wp-content/themes/psibufet/images/chevron_down_white.svg');
+            background-repeat: no-repeat;
+            background-size: 15px;
+            height: 11px;
+            width: 15px;
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            bottom: -10px;
+            filter: invert(1);
+            animation-name: PulseDown;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+    }
+}
+@media (max-width: 1600px){
+    .homeHeaderV3{
+        height: 605px;
+
+        &__content{
+            .tags{
+                margin: 0 0 30px;
+            }
+        }
+    }
+}
+@media (max-width: 1199px){
+    .homeHeaderV3{
+        height: 500px;
+
+        &__content{
+            h2{
+                font-size: 80px;
+                line-height: 90px;
+            }
+            .tags{
+                div{
+                    font-size: 22px;
+                    line-height: 26px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 991px){
+    .homeHeaderV3{
+        height: 600px;
+        background-image: url('/wp-content/themes/psibufet/images/frontpage/homeHeaderV3_tablet_bg.png') !important;
+        background-size: auto 100%;
+
+        &__content{
+            margin-bottom: 20px;
+
+            h2{
+                font-size: 62px;
+                line-height: 74px;
+                max-width: 400px;
+            }
+            .tags{
+                margin: 0 0 20px;
+
+                div{
+                    font-size: 18px;
+                    line-height: 24px;
+                    padding: 0 10px;
+
+                    &:nth-child(2){
+                        &:before{
+                            font-size: 18px;
+                            line-height: 1;
+                            position: relative;
+                            top: 1px;
+                            margin-right: 15px;
+                        }
+                        &:after{
+                            font-size: 18px;
+                            line-height: 1;
+                            position: relative;
+                            top: 1px;
+                            margin-left: 15px;
+                        }
+                    }
+                }
+            }
+        }
+        &__scroll{
+            &:after{
+                background-size: 12px;
+                height: 9px;
+                width: 12px;
+                bottom: -12px;
+            }
+            p{
+                font-size: 14px;
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .homeHeaderV3{
+        height: 600px;
+        background-image: url('/wp-content/themes/psibufet/images/frontpage/homeHeaderV3_mobile_bg.png') !important;
+        background-size: auto 100%;
+        background-color: $redcolor;
+
+        &__wrap{
+            align-items: flex-start;
+        }
+        &__content{
+            margin: 30px 0 0;
+
+            .tags{
+                margin: 0 0 20px;
+            }
+        }
+        &__scroll{
+            p{
+                display: none;
+            }
+        }
+    }
+}
+@media (max-width: 575px){
+    .homeHeaderV3{
+        &__content{
+            max-width: 320px;
+
+            h2{
+                font-size: 52px;
+                line-height: 62px;
+            }
+            .tags{
+                margin: 0 0 30px;
+
+                div{
+                    text-align: center;
+
+                    &:nth-child(2){
+                        border-left: 3px solid #000;
+                        border-right: 3px solid #000;
+
+                        &:before,
+                        &:after{
+                            display: none;
+                        }
+                    }
+                    p{
+                        font-size: 20px;
+                        line-height: 24px;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.homeHeaderV4{
+    height: 800px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    &__wrap{
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    &__content{
+        margin-bottom: 60px;
+
+        h2{
+            font-size: 89px;
+            line-height: 106px;
+            font-weight: 500;
+            font-family: $headingfont;
+            color: #000;
+            max-width: 600px;
+            margin: 0 auto 20px;
+            text-shadow: 3px 4px #00000024;
+            text-align: left;
+        }
+        .tags{
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+            margin: 0 0 40px;
+
+            div{
+                display: flex;
+                font-size: 25px;
+                line-height: 29px;
+                font-weight: 500;
+                color: #000;
+                margin: 0;
+                padding: 10px 0;
+                text-shadow: 3px 4px #00000024;
+
+                p{
+                    margin: 0;
+                    position: relative;
+                    padding-left: 25px;
+
+                    &:before{
+                        content: '';
+                        background-color: #000;
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 100%;
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        transform: translate(0, -50%);
+                    }
+                }
+
+                // &:nth-child(2){
+                //     &:before{
+                //         content: '|';
+                //         font-size: 25px;
+                //         color: #000;
+                //         margin-right: 20px;
+                //     }
+                //     &:after{
+                //         content: '|';
+                //         font-size: 25px;
+                //         color: #000;
+                //         margin-left: 20px;
+                //     }
+                // }
+                // &:first-of-type{
+                //     padding-right: 0;
+                // }
+                // &:last-of-type{
+                //     padding-left: 0;
+                // }
+            }
+        }
+        .btn{
+            margin-left: 0;
+        }
+    }
+    &__scroll{
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+
+        p{
+            color: #000;
+            font-weight: 500;
+            text-align: center;
+            margin: 0 0 5px;
+        }
+
+        &:after{
+            content: "";
+            background-image: url('/wp-content/themes/psibufet/images/chevron_down_white.svg');
+            background-repeat: no-repeat;
+            background-size: 15px;
+            height: 11px;
+            width: 15px;
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            bottom: -10px;
+            filter: invert(1);
+            animation-name: PulseDown;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+    }
+}
+@media (max-width: 1600px){
+    .homeHeaderV4{
+        height: 605px;
+
+        &__content{
+            .tags{
+                margin: 0 0 30px;
+            }
+        }
+    }
+}
+@media (max-width: 1199px){
+    .homeHeaderV4{
+        height: 500px;
+
+        &__content{
+            h2{
+                font-size: 72px;
+                line-height: 82px;
+                max-width: 450px;
+                margin: 0 auto 10px;
+            }
+            .tags{
+                div{
+                    font-size: 22px;
+                    line-height: 26px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 991px){
+    .homeHeaderV4{
+        height: 605px;
+        background-image: url('/wp-content/themes/psibufet/images/frontpage/homeHeaderV4_tablet_bg.png') !important;
+
+        &__content{
+            margin-bottom: 20px;
+
+            h2{
+                font-size: 68px;
+                line-height: 82px;
+                max-width: 450px;
+            }
+            .tags{
+                margin: 0 0 20px;
+
+                div{
+                    font-size: 20px;
+                    line-height: 24px;
+                    padding: 10px 0;
+
+                    p{
+                        padding-left: 20px;
+
+                        &:before{
+                            width: 6px;
+                            height: 6px;
+                        }
+                    }
+                }
+            }
+        }
+        &__scroll{
+            &:after{
+                background-size: 12px;
+                height: 9px;
+                width: 12px;
+                bottom: -12px;
+            }
+            p{
+                font-size: 14px;
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .homeHeaderV4{
+        height: 600px;
+        background-image: url('/wp-content/themes/psibufet/images/frontpage/homeHeaderV4_mobile_bg.png') !important;
+        background-size: auto 100%;
+        background-color: $redcolor;
+
+        &__wrap{
+            align-items: flex-start;
+            justify-content: center;
+        }
+        &__content{
+            margin: 30px auto 0;
+            max-width: 320px;
+
+            h2{
+                text-align: center;
+                font-size: 52px;
+                line-height: 62px;
+            }
+            .tags{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                margin: 0 0 20px;
+
+                div{
+                    display: flex;
+                    font-size: 25px;
+                    line-height: 29px;
+                    font-weight: 500;
+                    color: #000;
+                    margin: 0;
+                    padding: 0 10px;
+                    text-shadow: 3px 4px #00000024;
+                    text-align: center;
+
+                    p{
+                        font-size: 20px;
+                        line-height: 24px;
+                        margin: 0;
+                        position: relative;
+                        padding-left: 0;
+
+                        &:before{
+                            display: none;
+                        }
+                    }
+
+                    &:nth-child(2){
+                        border-left: 3px solid #000;
+                        border-right: 3px solid #000;
+
+                        &:before,
+                        &:after{
+                            display: none;
+                        }
+                    }
+                    &:first-of-type{
+                        padding-right: 0;
+                    }
+                    &:last-of-type{
+                        padding-left: 0;
+                    }
+                }
+            }
+            .btn{
+                margin: 0 auto;
+            }
+        }
+        &__scroll{
+            p{
+                display: none;
+            }
+        }
+    }
+}
+
 // Home reviews
 .homeReviews{
     padding: 15px 0;

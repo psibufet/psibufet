@@ -1990,6 +1990,469 @@ body.promocode-blackweek .siteHeader--promocode {
   }
 }
 
+.homeHeaderV3 {
+  height: 700px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.homeHeaderV3__wrap {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homeHeaderV3__content {
+  margin-bottom: 60px;
+}
+
+.homeHeaderV3__content h2 {
+  font-size: 89px;
+  line-height: 106px;
+  font-weight: 500;
+  font-family: "Bebas Neue", sans-serif;
+  color: #000;
+  max-width: 600px;
+  margin: 0 auto 20px;
+  text-shadow: 3px 4px #00000024;
+  text-align: center;
+}
+
+.homeHeaderV3__content .tags {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 50px;
+}
+
+.homeHeaderV3__content .tags div {
+  display: flex;
+  font-size: 25px;
+  line-height: 29px;
+  font-weight: 500;
+  color: #000;
+  margin: 0;
+  padding: 0 20px;
+  text-shadow: 3px 4px #00000024;
+}
+
+.homeHeaderV3__content .tags div:nth-child(2):before {
+  content: '|';
+  font-size: 25px;
+  color: #000;
+  margin-right: 20px;
+}
+
+.homeHeaderV3__content .tags div:nth-child(2):after {
+  content: '|';
+  font-size: 25px;
+  color: #000;
+  margin-left: 20px;
+}
+
+.homeHeaderV3__content .tags div:first-of-type {
+  padding-right: 0;
+}
+
+.homeHeaderV3__content .tags div:last-of-type {
+  padding-left: 0;
+}
+
+.homeHeaderV3__scroll {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.homeHeaderV3__scroll p {
+  color: #000;
+  font-weight: 500;
+  text-align: center;
+  margin: 0 0 5px;
+}
+
+.homeHeaderV3__scroll:after {
+  content: "";
+  background-image: url("/wp-content/themes/psibufet/images/chevron_down_white.svg");
+  background-repeat: no-repeat;
+  background-size: 15px;
+  height: 11px;
+  width: 15px;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -10px;
+  filter: invert(1);
+  animation-name: PulseDown;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@media (max-width: 1600px) {
+  .homeHeaderV3 {
+    height: 605px;
+  }
+  .homeHeaderV3__content .tags {
+    margin: 0 0 30px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .homeHeaderV3 {
+    height: 500px;
+  }
+  .homeHeaderV3__content h2 {
+    font-size: 80px;
+    line-height: 90px;
+  }
+  .homeHeaderV3__content .tags div {
+    font-size: 22px;
+    line-height: 26px;
+  }
+}
+
+@media (max-width: 991px) {
+  .homeHeaderV3 {
+    height: 600px;
+    background-image: url("/wp-content/themes/psibufet/images/frontpage/homeHeaderV3_tablet_bg.png") !important;
+    background-size: auto 100%;
+  }
+  .homeHeaderV3__content {
+    margin-bottom: 20px;
+  }
+  .homeHeaderV3__content h2 {
+    font-size: 62px;
+    line-height: 74px;
+    max-width: 400px;
+  }
+  .homeHeaderV3__content .tags {
+    margin: 0 0 20px;
+  }
+  .homeHeaderV3__content .tags div {
+    font-size: 18px;
+    line-height: 24px;
+    padding: 0 10px;
+  }
+  .homeHeaderV3__content .tags div:nth-child(2):before {
+    font-size: 18px;
+    line-height: 1;
+    position: relative;
+    top: 1px;
+    margin-right: 15px;
+  }
+  .homeHeaderV3__content .tags div:nth-child(2):after {
+    font-size: 18px;
+    line-height: 1;
+    position: relative;
+    top: 1px;
+    margin-left: 15px;
+  }
+  .homeHeaderV3__scroll:after {
+    background-size: 12px;
+    height: 9px;
+    width: 12px;
+    bottom: -12px;
+  }
+  .homeHeaderV3__scroll p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .homeHeaderV3 {
+    height: 600px;
+    background-image: url("/wp-content/themes/psibufet/images/frontpage/homeHeaderV3_mobile_bg.png") !important;
+    background-size: auto 100%;
+    background-color: #f15748;
+  }
+  .homeHeaderV3__wrap {
+    align-items: flex-start;
+  }
+  .homeHeaderV3__content {
+    margin: 30px 0 0;
+  }
+  .homeHeaderV3__content .tags {
+    margin: 0 0 20px;
+  }
+  .homeHeaderV3__scroll p {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .homeHeaderV3__content {
+    max-width: 320px;
+  }
+  .homeHeaderV3__content h2 {
+    font-size: 52px;
+    line-height: 62px;
+  }
+  .homeHeaderV3__content .tags {
+    margin: 0 0 30px;
+  }
+  .homeHeaderV3__content .tags div {
+    text-align: center;
+  }
+  .homeHeaderV3__content .tags div:nth-child(2) {
+    border-left: 3px solid #000;
+    border-right: 3px solid #000;
+  }
+  .homeHeaderV3__content .tags div:nth-child(2):before, .homeHeaderV3__content .tags div:nth-child(2):after {
+    display: none;
+  }
+  .homeHeaderV3__content .tags div p {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0;
+  }
+}
+
+.homeHeaderV4 {
+  height: 800px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.homeHeaderV4__wrap {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.homeHeaderV4__content {
+  margin-bottom: 60px;
+}
+
+.homeHeaderV4__content h2 {
+  font-size: 89px;
+  line-height: 106px;
+  font-weight: 500;
+  font-family: "Bebas Neue", sans-serif;
+  color: #000;
+  max-width: 600px;
+  margin: 0 auto 20px;
+  text-shadow: 3px 4px #00000024;
+  text-align: left;
+}
+
+.homeHeaderV4__content .tags {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 0 0 40px;
+}
+
+.homeHeaderV4__content .tags div {
+  display: flex;
+  font-size: 25px;
+  line-height: 29px;
+  font-weight: 500;
+  color: #000;
+  margin: 0;
+  padding: 10px 0;
+  text-shadow: 3px 4px #00000024;
+}
+
+.homeHeaderV4__content .tags div p {
+  margin: 0;
+  position: relative;
+  padding-left: 25px;
+}
+
+.homeHeaderV4__content .tags div p:before {
+  content: '';
+  background-color: #000;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.homeHeaderV4__content .btn {
+  margin-left: 0;
+}
+
+.homeHeaderV4__scroll {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.homeHeaderV4__scroll p {
+  color: #000;
+  font-weight: 500;
+  text-align: center;
+  margin: 0 0 5px;
+}
+
+.homeHeaderV4__scroll:after {
+  content: "";
+  background-image: url("/wp-content/themes/psibufet/images/chevron_down_white.svg");
+  background-repeat: no-repeat;
+  background-size: 15px;
+  height: 11px;
+  width: 15px;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -10px;
+  filter: invert(1);
+  animation-name: PulseDown;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@media (max-width: 1600px) {
+  .homeHeaderV4 {
+    height: 605px;
+  }
+  .homeHeaderV4__content .tags {
+    margin: 0 0 30px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .homeHeaderV4 {
+    height: 500px;
+  }
+  .homeHeaderV4__content h2 {
+    font-size: 72px;
+    line-height: 82px;
+    max-width: 450px;
+    margin: 0 auto 10px;
+  }
+  .homeHeaderV4__content .tags div {
+    font-size: 22px;
+    line-height: 26px;
+  }
+}
+
+@media (max-width: 991px) {
+  .homeHeaderV4 {
+    height: 605px;
+    background-image: url("/wp-content/themes/psibufet/images/frontpage/homeHeaderV4_tablet_bg.png") !important;
+  }
+  .homeHeaderV4__content {
+    margin-bottom: 20px;
+  }
+  .homeHeaderV4__content h2 {
+    font-size: 68px;
+    line-height: 82px;
+    max-width: 450px;
+  }
+  .homeHeaderV4__content .tags {
+    margin: 0 0 20px;
+  }
+  .homeHeaderV4__content .tags div {
+    font-size: 20px;
+    line-height: 24px;
+    padding: 10px 0;
+  }
+  .homeHeaderV4__content .tags div p {
+    padding-left: 20px;
+  }
+  .homeHeaderV4__content .tags div p:before {
+    width: 6px;
+    height: 6px;
+  }
+  .homeHeaderV4__scroll:after {
+    background-size: 12px;
+    height: 9px;
+    width: 12px;
+    bottom: -12px;
+  }
+  .homeHeaderV4__scroll p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .homeHeaderV4 {
+    height: 600px;
+    background-image: url("/wp-content/themes/psibufet/images/frontpage/homeHeaderV4_mobile_bg.png") !important;
+    background-size: auto 100%;
+    background-color: #f15748;
+  }
+  .homeHeaderV4__wrap {
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .homeHeaderV4__content {
+    margin: 30px auto 0;
+    max-width: 320px;
+  }
+  .homeHeaderV4__content h2 {
+    text-align: center;
+    font-size: 52px;
+    line-height: 62px;
+  }
+  .homeHeaderV4__content .tags {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin: 0 0 20px;
+  }
+  .homeHeaderV4__content .tags div {
+    display: flex;
+    font-size: 25px;
+    line-height: 29px;
+    font-weight: 500;
+    color: #000;
+    margin: 0;
+    padding: 0 10px;
+    text-shadow: 3px 4px #00000024;
+    text-align: center;
+  }
+  .homeHeaderV4__content .tags div p {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0;
+    position: relative;
+    padding-left: 0;
+  }
+  .homeHeaderV4__content .tags div p:before {
+    display: none;
+  }
+  .homeHeaderV4__content .tags div:nth-child(2) {
+    border-left: 3px solid #000;
+    border-right: 3px solid #000;
+  }
+  .homeHeaderV4__content .tags div:nth-child(2):before, .homeHeaderV4__content .tags div:nth-child(2):after {
+    display: none;
+  }
+  .homeHeaderV4__content .tags div:first-of-type {
+    padding-right: 0;
+  }
+  .homeHeaderV4__content .tags div:last-of-type {
+    padding-left: 0;
+  }
+  .homeHeaderV4__content .btn {
+    margin: 0 auto;
+  }
+  .homeHeaderV4__scroll p {
+    display: none;
+  }
+}
+
 .homeReviews {
   padding: 15px 0;
   margin-bottom: 30px;

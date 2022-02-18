@@ -7,7 +7,7 @@ get_header(); ?>
 
 <main class="pbpage pbpage--frontpage">
 
-    <?php // include get_template_directory() . '/template-parts/_homeHeaderV2.php'; ?>
+    <?php // include get_template_directory() . '/template-parts/_homeHeaderV3.php'; ?>
 
     <section class="homeHeaderV2" style="background-image: url('/wp-content/themes/psibufet/images/pricedrop/sgNewHeader-min.webp');">
         <div class="homeHeaderV2__wrap">
