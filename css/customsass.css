@@ -2230,10 +2230,6 @@ body.promocode-blackweek .siteHeader--promocode {
   justify-content: flex-start;
 }
 
-.homeHeaderV4__content {
-  margin-bottom: 60px;
-}
-
 .homeHeaderV4__content h2 {
   font-size: 89px;
   line-height: 106px;
@@ -2242,7 +2238,6 @@ body.promocode-blackweek .siteHeader--promocode {
   color: #000;
   max-width: 600px;
   margin: 0 auto 20px;
-  text-shadow: 3px 4px #00000024;
   text-align: left;
 }
 
@@ -2262,7 +2257,6 @@ body.promocode-blackweek .siteHeader--promocode {
   color: #000;
   margin: 0;
   padding: 10px 0;
-  text-shadow: 3px 4px #00000024;
 }
 
 .homeHeaderV4__content .tags div p {

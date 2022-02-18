@@ -7,8 +7,8 @@ get_header(); ?>
 
 <main class="pbpage pbpage--frontpage">
 
-    <?php // include get_template_directory() . '/template-parts/_homeHeaderV3.php'; ?>
-
+    <?php include get_template_directory() . '/template-parts/_homeHeaderV4.php'; ?>
+<!-- 
     <section class="homeHeaderV2" style="background-image: url('/wp-content/themes/psibufet/images/pricedrop/sgNewHeader-min.webp');">
         <div class="homeHeaderV2__wrap">
             <div class="homeHeaderV2__content">
@@ -30,7 +30,7 @@ get_header(); ?>
             <p>Dowiedz się więcej</p>
         </a>
     </section>
-    
+     -->
     <section id="page-continue" class="homeReviews">
         <?php if( have_rows('after_header_logos') ): ?>
         <ul class="slideul">
