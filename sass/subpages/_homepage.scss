@@ -611,7 +611,7 @@
 }
 
 .homeHeaderV3{
-    height: 700px;
+    height: 605px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -712,8 +712,6 @@
 }
 @media (max-width: 1600px){
     .homeHeaderV3{
-        height: 605px;
-
         &__content{
             .tags{
                 margin: 0 0 30px;
@@ -723,7 +721,7 @@
 }
 @media (max-width: 1199px){
     .homeHeaderV3{
-        height: 500px;
+        height: 600px;
 
         &__content{
             h2{
@@ -853,7 +851,7 @@
 }
 
 .homeHeaderV4{
-    height: 800px;
+    height: 605px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -976,8 +974,6 @@
 }
 @media (max-width: 1600px){
     .homeHeaderV4{
-        height: 605px;
-
         &__content{
             .tags{
                 margin: 0 0 30px;
@@ -987,7 +983,7 @@
 }
 @media (max-width: 1199px){
     .homeHeaderV4{
-        height: 500px;
+        height: 605px;
 
         &__content{
             h2{

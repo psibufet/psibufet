@@ -1991,7 +1991,7 @@ body.promocode-blackweek .siteHeader--promocode {
 }
 
 .homeHeaderV3 {
-  height: 700px;
+  height: 605px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -2096,9 +2096,6 @@ body.promocode-blackweek .siteHeader--promocode {
 }
 
 @media (max-width: 1600px) {
-  .homeHeaderV3 {
-    height: 605px;
-  }
   .homeHeaderV3__content .tags {
     margin: 0 0 30px;
   }
@@ -2106,7 +2103,7 @@ body.promocode-blackweek .siteHeader--promocode {
 
 @media (max-width: 1199px) {
   .homeHeaderV3 {
-    height: 500px;
+    height: 600px;
   }
   .homeHeaderV3__content h2 {
     font-size: 80px;
@@ -2215,7 +2212,7 @@ body.promocode-blackweek .siteHeader--promocode {
 }
 
 .homeHeaderV4 {
-  height: 800px;
+  height: 605px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -2321,9 +2318,6 @@ body.promocode-blackweek .siteHeader--promocode {
 }
 
 @media (max-width: 1600px) {
-  .homeHeaderV4 {
-    height: 605px;
-  }
   .homeHeaderV4__content .tags {
     margin: 0 0 30px;
   }
@@ -2331,7 +2325,7 @@ body.promocode-blackweek .siteHeader--promocode {
 
 @media (max-width: 1199px) {
   .homeHeaderV4 {
-    height: 500px;
+    height: 605px;
   }
   .homeHeaderV4__content h2 {
     font-size: 72px;
