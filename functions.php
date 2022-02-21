@@ -516,27 +516,27 @@ function sydney_recommend_plugin() {
 
 }
 
-/**
- * Admin notice
- */
-require get_template_directory() . '/inc/notices/persist-admin-notices-dismissal.php';
+// /**
+//  * Admin notice
+//  */
+// require get_template_directory() . '/inc/notices/persist-admin-notices-dismissal.php';
 
-function sydney_welcome_admin_notice() {
-	if ( ! PAnD::is_admin_notice_active( 'sydney-welcome-forever' ) ) {
-		return;
-	}
+// function sydney_welcome_admin_notice() {
+// 	if ( ! PAnD::is_admin_notice_active( 'sydney-welcome-forever' ) ) {
+// 		return;
+// 	}
 	
-	?>
-	<div data-dismissible="sydney-welcome-forever" class="sydney-admin-notice updated notice notice-success is-dismissible">
+// 	?>
+// 	<div data-dismissible="sydney-welcome-forever" class="sydney-admin-notice updated notice notice-success is-dismissible">
 
-		<p><?php echo sprintf( __( 'Welcome to Sydney. To get started please make sure to visit our <a href="%s">welcome page</a>.', 'sydney' ), admin_url( 'themes.php?page=sydney-info.php' ) ); ?></p>
-		<a class="button" href="<?php echo admin_url( 'themes.php?page=sydney-info.php' ); ?>"><?php esc_html_e( 'Get started with Sydney', 'sydney' ); ?></a>
+// 		<p><?php echo sprintf( __( 'Welcome to Sydney. To get started please make sure to visit our <a href="%s">welcome page</a>.', 'sydney' ), admin_url( 'themes.php?page=sydney-info.php' ) ); ?></p>
+// 		<a class="button" href="<?php echo admin_url( 'themes.php?page=sydney-info.php' ); ?>"><?php esc_html_e( 'Get started with Sydney', 'sydney' ); ?></a>
 
-	</div>
-	<?php
-}
-add_action( 'admin_init', array( 'PAnD', 'init' ) );
-add_action( 'admin_notices', 'sydney_welcome_admin_notice' );
+// 	</div>
+// 	<?php
+// }
+// add_action( 'admin_init', array( 'PAnD', 'init' ) );
+// add_action( 'admin_notices', 'sydney_welcome_admin_notice' );
 
 
 function cptui_register_my_taxes_kategorie_instagram() {
@@ -623,16 +623,6 @@ function psibufet_scripts(){
 	wp_register_script( 'jQuery', get_template_directory_uri() . '/plugins/jQuery/jquery-2.2.4.min.js', null, null, true );
 	wp_enqueue_script('jQuery');
 
-	// Slick
-	// wp_enqueue_style( 'slick-theme', get_template_directory_uri() . '/plugins/slick/slick-theme.css', array());
-	wp_enqueue_style( 'slick-style', get_template_directory_uri() . '/plugins/slick/slick.css', false);
-	wp_register_script( 'slick-script', get_template_directory_uri() . '/plugins/slick/slick.min.js', null, null, true );
-	wp_enqueue_script('slick-script');
-
-	// Main sass style
-	wp_register_style('customsass', get_template_directory_uri() . '/css/customsass.css', false, $theme_version . $random_number);
-	wp_enqueue_style('customsass');
-
 	// Autocomplete
 	if(!is_front_page()){
 		wp_enqueue_style( 'theme-autocomplete', get_template_directory_uri() . '/plugins/autocomplete/easy-autocomplete.themes.min.css', array());
@@ -679,6 +669,7 @@ function psibufet_scripts(){
 	}
 
         
+	// Referral code
     if (!startsWith($_SERVER['REQUEST_URI'], '/lp')){
 		wp_register_script( 'psibufet-referralCode', get_template_directory_uri() . '/js/referralCode.js?ver=' . $theme_version . $random_number, null, null, true );
 		wp_enqueue_script('psibufet-referralCode');
@@ -686,6 +677,16 @@ function psibufet_scripts(){
 		wp_register_script( 'psibufet-referralCode-lp', get_template_directory_uri() . '/js/referralCode_lp.js?ver=' . $theme_version . $random_number, null, null, true );
 		wp_enqueue_script('psibufet-referralCode-lp');
 	}
+
+	// Slick
+	// wp_enqueue_style( 'slick-theme', get_template_directory_uri() . '/plugins/slick/slick-theme.css', array());
+	wp_enqueue_style( 'slick-style', get_template_directory_uri() . '/plugins/slick/slick.css', false);
+	wp_register_script( 'slick-script', get_template_directory_uri() . '/plugins/slick/slick.min.js', null, null, true );
+	wp_enqueue_script('slick-script');
+
+	// Main sass style
+	wp_register_style('customsass', get_template_directory_uri() . '/css/customsass.css', false, $theme_version . $random_number);
+	wp_enqueue_style('customsass');
 }
 add_action( 'wp_enqueue_scripts', 'psibufet_scripts' );
 
