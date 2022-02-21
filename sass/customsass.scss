@@ -1,3 +1,8 @@
+/*  Global
+--------------- */
+@import 'global';
+@import 'pricedrop';
+
 /*  Fonts 
 --------------- */
 @import 'fonts';
@@ -34,11 +39,10 @@
 @import 'subpages/pdf';
 @import 'subpages/carrer';
 
-/*  Global
---------------- */
-@import 'pricedrop';
 
 body{
+    margin: 0;
+
     &.noscroll{
         overflow: hidden;
     }
