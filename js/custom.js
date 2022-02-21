@@ -12,6 +12,16 @@
     }
 }    
 
+/**
+ * Preloader
+ */
+$(window).on('load', function(){
+    $('.preloader').css('opacity', 0);
+    setTimeout(function(){
+        $('.preloader').addClass('disable');
+    }, 600)
+});
+
 /*********** MENU MOBILE *************/
 
 $(document).mouseup(function(e){

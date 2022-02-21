@@ -9,7 +9,6 @@
 ?>
 	</div><!-- #content -->
 
-    <a class="go-top"><i class="sydney-svg-icon"><?php sydney_get_svg_icon( 'icon-chevron-up', true ); ?></i></a>
 	<footer id="siteFooter" class="siteFooter">
         <div class="siteFooter__wrap">
             <div class="siteFooter__logo">
