@@ -1,4 +1,4 @@
-<section class="homeHeaderV3" style="background-image: url('/wp-content/themes/psibufet/images/frontpage/homeHeaderV3_bg.png');">
+<section class="homeHeaderV3" style="background-image: url('/wp-content/themes/psibufet/images/frontpage/homeHeaderV3_bg.webp');">
     <div class="homeHeaderV3__wrap">
         <div class="homeHeaderV3__content">
             <h2>Świeże spojrzenie na psie jedzenie</h2>

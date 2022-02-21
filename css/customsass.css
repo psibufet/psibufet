@@ -2,7 +2,25 @@
 --------------- */
 @font-face {
   font-family: "Bebas Neue";
-  src: url(/wp-content/themes/psibufet/fonts/BebasNeue/BebasNeue-Regular.ttf) format("truetype");
+  src: url("/wp-content/themes/psibufet/fonts/BebasNeue/BebasNeue-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  src: url("/wp-content/themes/psibufet/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 500;
+  src: url("/wp-content/themes/psibufet/fonts/Roboto/Roboto-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 700;
+  src: url("/wp-content/themes/psibufet/fonts/Roboto/Roboto-Bold.ttf") format("truetype");
 }
 
 /*  Variables 
@@ -2116,7 +2134,7 @@ body.promocode-blackweek .siteHeader--promocode {
 @media (max-width: 991px) {
   .homeHeaderV3 {
     height: 600px;
-    background-image: url("/wp-content/themes/psibufet/images/frontpage/homeHeaderV3_tablet_bg.png") !important;
+    background-image: url("/wp-content/themes/psibufet/images/frontpage/homeHeaderV3_tablet_bg.webp") !important;
     background-size: auto 100%;
   }
   .homeHeaderV3__wrap {
@@ -2168,7 +2186,7 @@ body.promocode-blackweek .siteHeader--promocode {
 @media (max-width: 767px) {
   .homeHeaderV3 {
     height: 600px;
-    background-image: url("/wp-content/themes/psibufet/images/frontpage/homeHeaderV3_mobile_bg.png") !important;
+    background-image: url("/wp-content/themes/psibufet/images/frontpage/homeHeaderV3_mobile_bg.webp") !important;
     background-size: auto 100%;
     background-color: #f15748;
   }
@@ -2340,7 +2358,7 @@ body.promocode-blackweek .siteHeader--promocode {
 @media (max-width: 991px) {
   .homeHeaderV4 {
     height: 605px;
-    background-image: url("/wp-content/themes/psibufet/images/frontpage/homeHeaderV4_tablet_bg.png") !important;
+    background-image: url("/wp-content/themes/psibufet/images/frontpage/homeHeaderV4_tablet_bg.webp") !important;
     background-position: right;
   }
   .homeHeaderV4__content {
@@ -2380,7 +2398,7 @@ body.promocode-blackweek .siteHeader--promocode {
 @media (max-width: 767px) {
   .homeHeaderV4 {
     height: 600px;
-    background-image: url("/wp-content/themes/psibufet/images/frontpage/homeHeaderV4_mobile_bg.png") !important;
+    background-image: url("/wp-content/themes/psibufet/images/frontpage/homeHeaderV4_mobile_bg.webp") !important;
     background-size: auto 100%;
     background-position: center;
     background-color: #f15748;

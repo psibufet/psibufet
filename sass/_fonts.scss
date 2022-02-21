@@ -1,4 +1,19 @@
 @font-face {
     font-family: "Bebas Neue";
-    src: url(/wp-content/themes/psibufet/fonts/BebasNeue/BebasNeue-Regular.ttf) format("truetype");
+    src: url('/wp-content/themes/psibufet/fonts/BebasNeue/BebasNeue-Regular.ttf') format("truetype");
+}
+@font-face {
+	font-family: "Roboto";
+	font-weight: 400;
+	src: url('/wp-content/themes/psibufet/fonts/Roboto/Roboto-Regular.ttf') format("truetype");
+}
+@font-face {
+	font-family: "Roboto";
+	font-weight: 500;
+	src: url('/wp-content/themes/psibufet/fonts/Roboto/Roboto-Medium.ttf') format("truetype");
+}
+@font-face {
+	font-family: "Roboto";
+	font-weight: 700;
+	src: url('/wp-content/themes/psibufet/fonts/Roboto/Roboto-Bold.ttf') format("truetype");
 }
