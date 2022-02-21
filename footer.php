@@ -26,7 +26,7 @@
                         <li><a href="/program-partnerski" class="dir">Zostań partnerem</a></li>
                         <li><a href="/restauracje" class="dir">Psyjazne restauracje</a></li>
                         <li><a href="/pomoc" class="dir">Pomoc</a></li>
-                        <li><a href="https://psibufet.pl/blog" class="dir">Blog</a></li>
+                        <li><a href="https://psibufet.pl/blog/" class="dir">Blog</a></li>
                         <li><a href="/pracuj-w-psibufet" class="dir">Praca</a>
                             <?php if( get_field('offer_list', 1183) ): ?>
                                 <div class="flag">Zatrudniamy</div>

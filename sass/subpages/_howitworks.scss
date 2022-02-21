@@ -1,5 +1,5 @@
 .howHeading{
-    background-image: url('/wp-content/themes/psibufet/images/howitworks_new/howHeader.png');
+    background-image: url('/wp-content/themes/psibufet/images/howitworks_new/howHeader.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -66,7 +66,7 @@
 }
 @media (max-width: 991px){
     .howHeading{
-        background-image: url('/wp-content/themes/psibufet/images/howitworks_new/howHeader_mobile.png');
+        background-image: url('/wp-content/themes/psibufet/images/howitworks_new/howHeader_mobile.webp');
         align-items: flex-end;
 
         &__wrap{
@@ -569,7 +569,7 @@
 }
 
 .howPlan{
-    background-image: url('/wp-content/themes/psibufet/images/howitworks_new/marmur_bg.png');
+    background-image: url('/wp-content/themes/psibufet/images/howitworks_new/marmur_bg.webp');
     background-repeat: no-repeat;
     background-size: cover;
     padding: 32px 0 40px;
