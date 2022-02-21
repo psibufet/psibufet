@@ -8,7 +8,6 @@
  */
 ?>
 	</div><!-- #content -->
-
 	<footer id="siteFooter" class="siteFooter">
         <div class="siteFooter__wrap">
             <div class="siteFooter__logo">

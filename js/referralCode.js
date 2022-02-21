@@ -251,11 +251,13 @@ $(document).ready(function(){
 		$.ajax({
 			url:'https://app.psibufet.pl/api/order/couponcode/' + sPageURL,
 			error: function(){
-				if(!$('body').hasClass('page-template-page_pdf')){
+				if($('body').hasClass('page-template-page_pdf')){
+					console.log('PDF download page');
+				}else if($('body').hasClass('error404')){
+					console.log('404');
+				}else{
 					window.location.replace("https://psibufet.pl/");
 					console.log('Error while code loading :(');
-				}else{
-					console.log('PDF download page');
 				}
 			},
 			success: function(){

@@ -38,6 +38,7 @@
 @import 'subpages/about';
 @import 'subpages/pdf';
 @import 'subpages/carrer';
+@import 'subpages/404';
 
 
 body{
@@ -310,21 +311,23 @@ body{
     }
 
     &--back{
+        padding: 0 30px;
+        
         span{
             padding-right: 0;
-            padding-left: 10px;
+            padding-left: 20px;
 
             &:after{
                 top: 50%;
                 right: auto;
-                left: -10px;
+                left: 0;
                 transform: translate(0, -50%) rotate(-180deg);
             }
         }
         &:hover{
             span{
                 &:after{
-                    left: -15px;
+                    left: -5px;
                 }
             }
         }
