@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     min-height: 600px;
-    background-image: url('/wp-content/themes/psibufet/images/recipes/recipesHeading.png');
+    background-image: url('/wp-content/themes/psibufet/images/recipes/recipesHeading.webp');
     background-size: cover;
     background-position: center;
 
@@ -44,7 +44,7 @@
 }
 @media (max-width: 575px){
     .recipesHeading{
-        background-image: url('/wp-content/themes/psibufet/images/recipes/recipesHeading_mobile.png');
+        background-image: url('/wp-content/themes/psibufet/images/recipes/recipesHeading_mobile.webp');
     }
 }
 
@@ -180,7 +180,7 @@
 
 .recipesMenu{
     padding: 40px 0 32px;
-    background-image: url('/wp-content/themes/psibufet/images/recipes/marmur_bg.png');
+    background-image: url('/wp-content/themes/psibufet/images/recipes/marmur_bg.webp');
     background-size: cover;
     background-position: center;
 
