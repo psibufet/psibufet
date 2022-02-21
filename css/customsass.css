@@ -16383,7 +16383,7 @@ body.admin-bar .pagePDF {
 }
 
 .page404 {
-  min-height: 550px;
+  min-height: calc(100vh - 350px);
   background-color: #F2F1F6;
   display: flex;
   align-items: center;
@@ -16438,7 +16438,7 @@ body.admin-bar .pagePDF {
 @media (max-width: 991px) {
   .page404 {
     align-items: flex-start;
-    min-height: 610px;
+    min-height: calc(100vh - 637px);
   }
   .page404 img {
     left: 0;
