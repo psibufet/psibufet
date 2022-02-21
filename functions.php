@@ -516,28 +516,6 @@ function sydney_recommend_plugin() {
 
 }
 
-// /**
-//  * Admin notice
-//  */
-// require get_template_directory() . '/inc/notices/persist-admin-notices-dismissal.php';
-
-// function sydney_welcome_admin_notice() {
-// 	if ( ! PAnD::is_admin_notice_active( 'sydney-welcome-forever' ) ) {
-// 		return;
-// 	}
-	
-// 	?>
-// 	<div data-dismissible="sydney-welcome-forever" class="sydney-admin-notice updated notice notice-success is-dismissible">
-
-// 		<p><?php echo sprintf( __( 'Welcome to Sydney. To get started please make sure to visit our <a href="%s">welcome page</a>.', 'sydney' ), admin_url( 'themes.php?page=sydney-info.php' ) ); ?></p>
-// 		<a class="button" href="<?php echo admin_url( 'themes.php?page=sydney-info.php' ); ?>"><?php esc_html_e( 'Get started with Sydney', 'sydney' ); ?></a>
-
-// 	</div>
-// 	<?php
-// }
-// add_action( 'admin_init', array( 'PAnD', 'init' ) );
-// add_action( 'admin_notices', 'sydney_welcome_admin_notice' );
-
 
 function cptui_register_my_taxes_kategorie_instagram() {
 
