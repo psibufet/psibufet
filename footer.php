@@ -80,5 +80,59 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+<script type="text/javascript">
+        jQuery(document).on( 'nfFormReady', function( e, layoutView ) {
+            $('.nf-field-container.text-center .ninja-forms-field').focus(function(){
+                var parent = $(this).parent().parent().parent().parent();
+                parent.removeClass('ready');
+                
+                if( !$(this).val() ) {
+                    $(this).find('.field-wrap').removeClass('active');
+                }
+                $(this).parent().parent().addClass('active'); 
+            });
+        });
+        jQuery(document).on( 'nfFormReady', function( e, layoutView ) {
+            $('.nf-field-container.text-center .ninja-forms-field').focusout(function(){
+                var parent = $(this).parent().parent().parent().parent();
+                
+                if( $(this).val() ) {
+                    $(this).find('.field-wrap').removeClass('active');
+                }
+                if( !$(this).val() ) {
+                    $(this).removeClass('active');
+                    parent.addClass('ready');
+                }
+            });
+        });
+
+        var topic;
+        var message;
+        var name;
+        jQuery(document).on( 'nfFormReady', function( e, layoutView ) {
+            $("#nf-field-4").prop("type", "submit");
+
+            $('#nf-field-5').on('keyup paste', function(){
+                subject = $(this).val();
+            });
+            $('#nf-field-6').on('keyup paste', function(){
+                message = $(this).val();
+            });
+            $('#nf-field-8').on('keyup paste', function(){
+                name = $(this).val();
+            });
+        });
+        
+        jQuery(document).on('nfFormSubmitResponse', function(){
+            dataLayer.push({
+                'event': 'contact',
+                'contact':{
+                    'topic': subject,
+                    'content': message,
+                    'name': name,
+                }
+            });
+        });
+    </script>
 </body>
 </html>

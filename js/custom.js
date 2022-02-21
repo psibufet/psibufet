@@ -484,52 +484,6 @@ $(document).ready(function(){
     }, 150);
 });
 
-/* OLD */
-$(document).ready(function () {
-    $('.flexslider .gang_posts').slick({
-        dots: true,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 4,
-        slidesToScroll: 2,
-        variableWidth: true,
-        prevArrow: $('.gang_prev'),
-        nextArrow: $('.gang_next'),
-        responsive: [{
-                breakpoint: 768,
-                settings: {
-                    centerMode: true,
-                    centerPadding: 30,
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    variableWidth: true,
-                }
-                    }
-                ]
-    });
-});
-$(document).ready(function () {
-    $('.howitworks_slider').flexslider({
-        animation: "slide",
-        maxItems: 1,
-        move: 1,
-        animationLoop: false,
-        slideshow: false,
-        manualControls: ".slide_control li",
-        responsive: [{
-                breakpoint: 768,
-                settings: {
-                    centerMode: true,
-                    centerPadding: 10,
-                    itemMargin: 0,
-                    slidesToShow: 1,
-                    variableWidth: true,
-                }
-                    }
-                ]
-    });
-});
-
 /************ SLIDERS END **************/
 
 /****** MENU JQ ******/

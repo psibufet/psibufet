@@ -1,3 +1,16 @@
+/**
+ * Config
+ */
+$(document).ready(function(){
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      originalLocation: document.location.protocol + '//' +
+                        document.location.hostname +
+                        document.location.pathname +
+                        document.location.search
+    }); 
+});
+
 /********* MENU BOXES SKŁAD **********/
 $(function () {
     $('.menu_boxes .box .content p.info').on('click', function () {

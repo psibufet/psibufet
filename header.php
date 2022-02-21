@@ -21,54 +21,11 @@
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <?php if(!is_front_page()): ?>
         <link rel="stylesheet" href="/wp-content/themes/psibufet/css/custom.css?ver=1.1.5" />
-        <link rel="stylesheet" href="/wp-content/themes/psibufet/flexslider/flexslider.css" type="text/css">
-    <?php endif; ?>
-    <link rel="stylesheet" href="/wp-content/themes/psibufet/slick/slick.css" type="text/css">
-    <!-- <script src="https://kit.fontawesome.com/a1019066cc.js" crossorigin="anonymous"></script> -->
-    <script src="/wp-content/themes/psibufet/plugins/jQuery/jquery-2.2.4.min.js"></script>
-    <script type="text/javascript">
-        jQuery(document).ready(function(){
-            window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push({
-              originalLocation: document.location.protocol + '//' +
-                                document.location.hostname +
-                                document.location.pathname +
-                                document.location.search
-            }); 
-        });
-    </script>
-    <script src="/wp-content/themes/psibufet/flexslider/jquery.flexslider.js"></script>
-    <script src="/wp-content/themes/psibufet/slick/slick.min.js"></script>
-
-    <?php if(!is_front_page()): ?>
-    <!-- Autocomplete start -->
-        <script src="/wp-content/themes/psibufet/plugins/autocomplete/jquery.easy-autocomplete.min.js"></script>
-        <link rel="stylesheet" href="/wp-content/themes/psibufet/plugins/autocomplete/easy-autocomplete.min.css">
-        <link rel="stylesheet" href="/wp-content/themes/psibufet/plugins/autocomplete/easy-autocomplete.themes.min.css">
-    <!-- Autocomplete end -->
     <?php endif; ?>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAihhg2fnZvuAF6biw73IE-A2WX0nosQk"></script>
-    <script type="text/javascript" src="/wp-content/themes/psibufet/plugins/visible/jquery.visible.min.js"></script>
-    <script type="text/javascript" src="/wp-content/themes/psibufet/js/custom.js?ver=<?php echo rand(); ?>" async></script>
-    <script type="text/javascript" src="/wp-content/themes/psibufet/js/_sliders.js" async></script>
-    <script type="text/javascript" src="/wp-content/themes/psibufet/js/_restMap.js"></script>
-    <script type="text/javascript" src="/wp-content/themes/psibufet/js/animation.js" async></script>
-    <script type="text/javascript" src="/wp-content/themes/psibufet/js/dataLayers.js?ver=<?php echo rand(); ?>"></script>
-    <?php 
-        function startsWith( $haystack, $needle ) {
-            $length = strlen( $needle );
-            return substr( $haystack, 0, $length ) === $needle;
-       }
-        if (!startsWith ($_SERVER['REQUEST_URI'], '/lp')):
-    ?>
-        <script type="text/javascript" src="/wp-content/themes/psibufet/js/referralCode.js?ver=<?php echo rand(); ?>" defer></script>
-    <?php else: ?>
-        <script type="text/javascript" src="/wp-content/themes/psibufet/js/referralCode_lp.js?ver=<?php echo rand(); ?>" defer></script>
-    <?php endif; ?>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js" defer></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js" defer></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script> -->
     <script type="text/javascript" src="/wp-content/themes/psibufet/plugins/gsap/gsap.min.js"></script>
     <?php if ( ! function_exists( 'has_site_icon' ) || ! has_site_icon() ) : ?>
     <?php if ( get_theme_mod('site_favicon') ) : ?>
@@ -77,60 +34,6 @@
     <?php endif; ?>
 
     <?php wp_head(); ?>
-    <script type="text/javascript">
-        jQuery(document).on( 'nfFormReady', function( e, layoutView ) {
-            $('.nf-field-container.text-center .ninja-forms-field').focus(function(){
-                var parent = $(this).parent().parent().parent().parent();
-                parent.removeClass('ready');
-                
-                if( !$(this).val() ) {
-                    $(this).find('.field-wrap').removeClass('active');
-                }
-                $(this).parent().parent().addClass('active'); 
-            });
-        });
-        jQuery(document).on( 'nfFormReady', function( e, layoutView ) {
-            $('.nf-field-container.text-center .ninja-forms-field').focusout(function(){
-                var parent = $(this).parent().parent().parent().parent();
-                
-                if( $(this).val() ) {
-                    $(this).find('.field-wrap').removeClass('active');
-                }
-                if( !$(this).val() ) {
-                    $(this).removeClass('active');
-                    parent.addClass('ready');
-                }
-            });
-        });
-
-        var topic;
-        var message;
-        var name;
-        jQuery(document).on( 'nfFormReady', function( e, layoutView ) {
-            $("#nf-field-4").prop("type", "submit");
-
-            $('#nf-field-5').on('keyup paste', function(){
-                subject = $(this).val();
-            });
-            $('#nf-field-6').on('keyup paste', function(){
-                message = $(this).val();
-            });
-            $('#nf-field-8').on('keyup paste', function(){
-                name = $(this).val();
-            });
-        });
-        
-        jQuery(document).on('nfFormSubmitResponse', function(){
-            dataLayer.push({
-                'event': 'contact',
-                'contact':{
-                    'topic': subject,
-                    'content': message,
-                    'name': name,
-                }
-            });
-        });
-    </script>
     
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
