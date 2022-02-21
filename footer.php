@@ -80,6 +80,7 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAihhg2fnZvuAF6biw73IE-A2WX0nosQk"></script>
 <script type="text/javascript">
         jQuery(document).on( 'nfFormReady', function( e, layoutView ) {
             $('.nf-field-container.text-center .ninja-forms-field').focus(function(){
