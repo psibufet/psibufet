@@ -262,18 +262,21 @@ $(document).ready(function(){
 			},
 			success: function(){
 				$.getJSON("https://app.psibufet.pl/api/order/couponcode/" + sPageURL, function (data) {
-					if (data.purpose == "CLIENT"){
-						window.location.replace("https://psibufet.pl/?code=" + sPageURL + '&utm_source=MGM&utm_medium=referral_link&utm_campaign=' + sPageURL + '&amount=' + data.amount + '&type=' + data.type);
-					}else if (data.purpose == "PARTNER"){
-						window.location.replace("https://psibufet.pl/?code=" + sPageURL + '&utm_source=partner&utm_medium=referral_link&utm_campaign=' + sPageURL + '&amount=' + data.amount + '&type=' + data.type);
-					}else if (data.purpose == "MARKETING"){
-						window.location.replace("https://psibufet.pl/?code=" + sPageURL + '&amount=' + data.amount + '&type=' + data.type);
-					}else if (data.purpose == "INFLUENCER"){
-						window.location.replace("https://psibufet.pl/?code=" + sPageURL + '&utm_source=influencer&utm_medium=referral_link&utm_campaign=' + sPageURL + '&amount=' + data.amount + '&type=' + data.type);
-					}else if (data.purpose == "EVENT"){
-						window.location.replace("https://psibufet.pl/?code=" + sPageURL + '&utm_source=event&utm_medium=referral_link&utm_campaign=' + sPageURL);
-					}else if (data.purpose == "VET"){
-						window.location.replace("https://psibufet.pl/?code=" + sPageURL + '&utm_source=vet&utm_medium=referral_link&utm_campaign=' + sPageURL);
+					if($('body').hasClass('error404')){
+						$('.preloader').attr('style', 'opacity: 1 !important; display: flex !important;');
+						if (data.purpose == "CLIENT"){
+							window.location.replace("https://psibufet.pl/?code=" + sPageURL + '&utm_source=MGM&utm_medium=referral_link&utm_campaign=' + sPageURL + '&amount=' + data.amount + '&type=' + data.type);
+						}else if (data.purpose == "PARTNER"){
+							window.location.replace("https://psibufet.pl/?code=" + sPageURL + '&utm_source=partner&utm_medium=referral_link&utm_campaign=' + sPageURL + '&amount=' + data.amount + '&type=' + data.type);
+						}else if (data.purpose == "MARKETING"){
+							window.location.replace("https://psibufet.pl/?code=" + sPageURL + '&amount=' + data.amount + '&type=' + data.type);
+						}else if (data.purpose == "INFLUENCER"){
+							window.location.replace("https://psibufet.pl/?code=" + sPageURL + '&utm_source=influencer&utm_medium=referral_link&utm_campaign=' + sPageURL + '&amount=' + data.amount + '&type=' + data.type);
+						}else if (data.purpose == "EVENT"){
+							window.location.replace("https://psibufet.pl/?code=" + sPageURL + '&utm_source=event&utm_medium=referral_link&utm_campaign=' + sPageURL);
+						}else if (data.purpose == "VET"){
+							window.location.replace("https://psibufet.pl/?code=" + sPageURL + '&utm_source=vet&utm_medium=referral_link&utm_campaign=' + sPageURL);
+						}
 					}
 				});
 				$(".dir").each(function () {
