@@ -14,7 +14,7 @@ get_header(); ?>
 </style> -->
 <div class="page404">
     <div class="page404__wrap container">
-        <h1>Upss...<br/>Coś poszło nie tak</h1>
+        <h1>Ups...<br/>Coś poszło nie tak</h1>
         <p>Sprawdź poprawność adresu lub wróć do strony głównej</p>
         <a href="<?php echo home_url(); ?>" class="btn btn--back btn--center"><span>Wróć do strony głównej</span></a>
     </div>
