@@ -78,6 +78,10 @@ summary {
   display: block;
 }
 
+p {
+  margin: 0 0 10px;
+}
+
 .homeHeader:after {
   content: '';
   background-image: url("/wp-content/themes/psibufet/images/pricedrop/sgHeader_drop.png");
@@ -10802,7 +10806,7 @@ body.page-template-page_rmkt .homeFoodinfo__right:after {
   align-items: center;
   justify-content: center;
   min-height: 400px;
-  background-image: url("/wp-content/themes/psibufet/images/partner/partnerHeading_bg.png");
+  background-image: url("/wp-content/themes/psibufet/images/partner/partnerHeading_bg.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -13580,7 +13584,7 @@ body.page-template-page_ksiazka .siteHeader--promocode {
 
 .restHeader {
   min-height: 600px;
-  background-image: url("/wp-content/themes/psibufet/images/restaurants/restHeader.png");
+  background-image: url("/wp-content/themes/psibufet/images/restaurants/restHeader.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -13661,7 +13665,7 @@ body.page-template-page_ksiazka .siteHeader--promocode {
 
 @media (max-width: 767px) {
   .restHeader {
-    background-image: url("/wp-content/themes/psibufet/images/restaurants/restHeader_mobile.png");
+    background-image: url("/wp-content/themes/psibufet/images/restaurants/restHeader_mobile.webp");
     align-items: flex-start;
     min-height: 620px;
     margin-top: 30px;
@@ -13713,7 +13717,7 @@ body.page-template-page_ksiazka .siteHeader--promocode {
 }
 
 .restMap {
-  background-image: url("/wp-content/themes/psibufet/images/restaurants/map_bg.png");
+  background-image: url("/wp-content/themes/psibufet/images/restaurants/map_bg.webp");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 32px 0 40px;

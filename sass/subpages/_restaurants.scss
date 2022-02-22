@@ -1,6 +1,6 @@
 .restHeader{
     min-height: 600px;
-    background-image: url('/wp-content/themes/psibufet/images/restaurants/restHeader.png');
+    background-image: url('/wp-content/themes/psibufet/images/restaurants/restHeader.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -85,7 +85,7 @@
 }
 @media (max-width: 767px){
     .restHeader{
-        background-image: url('/wp-content/themes/psibufet/images/restaurants/restHeader_mobile.png');
+        background-image: url('/wp-content/themes/psibufet/images/restaurants/restHeader_mobile.webp');
         align-items: flex-start;
         min-height: 620px;
         margin-top: 30px;
@@ -147,7 +147,7 @@
 }
 
 .restMap{
-    background-image: url('/wp-content/themes/psibufet/images/restaurants/map_bg.png');
+    background-image: url('/wp-content/themes/psibufet/images/restaurants/map_bg.webp');
     background-repeat: no-repeat;
     background-size: cover;
     padding: 32px 0 40px;
