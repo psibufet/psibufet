@@ -570,6 +570,58 @@ $(document).ready(function() {
     });
 });
 
+/********** Szczeniaki LP **********/
+
+$(document).ready(function() {
+    var pupInfo = $('.pupInfo__heading').find('.getMarker');
+    var pupReviews = $('.pupReviews__heading').find('.getMarker');
+    var pupAll = $('.pupAll__heading').find('.getMarker');
+    var pupUsp = $('.pupUsp__heading').find('.getMarker');
+
+    if($(pupInfo).visible(true)){
+        setTimeout(function(){
+            pupInfo.addClass('init');
+        }, 500)
+    }
+    if($(pupReviews).visible(true)){
+        setTimeout(function(){
+            pupReviews.addClass('init');
+        }, 500)
+    }
+    if($(pupAll).visible(true)){
+        setTimeout(function(){
+            pupAll.addClass('init');
+        }, 500)
+    }
+    if($(pupUsp).visible(true)){
+        setTimeout(function(){
+            pupUsp.addClass('init');
+        }, 500)
+    }
+    $(window).on('scroll', function(){
+        if($(pupInfo).visible(true)){
+            setTimeout(function(){
+                pupInfo.addClass('init');
+            }, 500)
+        }
+        if($(pupReviews).visible(true)){
+            setTimeout(function(){
+                pupReviews.addClass('init');
+            }, 500)
+        }
+        if($(pupAll).visible(true)){
+            setTimeout(function(){
+                pupAll.addClass('init');
+            }, 500)
+        }
+        if($(pupUsp).visible(true)){
+            setTimeout(function(){
+                pupUsp.addClass('init');
+            }, 500)
+        }
+    });
+});
+
 /********** PODKREŚLENIA NASZE PRZEPISY **********/
 
 // $(window).on('scroll', function () {
