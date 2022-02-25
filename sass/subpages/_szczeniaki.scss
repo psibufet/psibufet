@@ -1,0 +1,655 @@
+.pupHeader{
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/wp-content/themes/psibufet/images/szczeniaki/szczeniaki_bg_full.png');
+    background-size: cover;
+    background-position: center;
+
+    &__wrap{
+        max-width: 570px;
+        padding-bottom: 100px;
+
+        h1{
+            font-size: 72px;
+            line-height: 80px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: 400;
+            color: #fff;
+            margin: 0 0 30px;
+            text-align: center;
+        }
+    }
+}
+@media (max-width: 991px){
+    .pupHeader{
+        background-image: url('/wp-content/themes/psibufet/images/szczeniaki/szczeniaki_bg_tablet.png');
+        align-items: flex-start;
+
+        &__wrap{
+            padding-top: 38px;
+            padding-bottom: 0;
+
+            h1{
+                font-size: 60px;
+                line-height: 64px;
+                max-width: 420px;
+                margin: 0 auto 25px;
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .pupHeader{
+        background-image: url('/wp-content/themes/psibufet/images/szczeniaki/szczeniaki_bg_mobile.png');
+    }
+}
+@media (max-width: 450px){
+    .pupHeader{
+        background-position: -270px center;
+
+        &__wrap{
+            h1{
+                font-size: 50px;
+                line-height: 56px;
+                padding: 0 5px;
+            }
+        }
+    }
+}
+
+
+.pupInfo{
+    background-color: rgba(247, 190, 69, 0.1);
+    padding: 30px 0 40px;
+
+    &__heading{
+        margin: 0 0 30px;
+
+        h2{
+            font-size: 48px;
+            line-height: 58px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: 400;
+            color: #000;
+            margin: 0;
+            text-align: center;
+        }
+    }
+    &__wrap{
+        display: flex;
+        justify-content: space-between;
+        max-width: 1195px;
+
+        &:before,
+        &:after{
+            display: none;
+        }
+    }
+    &__box{
+        width: 100%;
+        max-width: 362px;
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+
+        .thumb{
+            display: flex;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .content{
+            padding: 16px 20px;
+
+            p{
+                font-size: 18px;
+                line-height: 24px;
+                margin: 0;
+                text-align: justify;
+            }
+        }
+    }
+    &__cta{
+        margin: 40px 0 0;
+    }
+}
+@media (max-width: 1199px){
+    .pupInfo{
+        &__box{
+            max-width: 300px;
+
+            .thumb{
+                height: 280px;
+            }
+            .content{
+                p{
+                    font-size: 16px;
+                    line-height: 19px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 991px){
+    .pupInfo{
+        &__heading{
+            max-width: 500px;
+            margin: 0 auto 30px;
+        }
+        &__wrap{
+            max-width: 100%;
+            width: 100%;
+            padding: 0;
+
+            .slick-list{
+                margin: 0 -5px;
+            }
+
+            .slick-dots{
+                display: flex !important;
+                justify-content: center;
+                list-style: none;
+                padding: 0;
+                margin: 0 auto;
+                bottom: -30px;
+                position: absolute;
+                left: 0;
+                right: 0;
+
+                li{
+                    margin: 0 3px;
+                    line-height: 1;
+
+                    &.slick-active{
+                        button{
+                            background-color: $redcolor;
+                        }
+                    }
+
+                    button{
+                        width: 8px;
+                        height: 8px;
+                        padding: 0;
+                        margin: 0;
+                        border: 0;
+                        font-size: 0;
+                        border-radius: 100%;
+                        background-color: rgba(0, 0, 0, .2);
+                        transition: ease .3s;
+                    }
+                }
+            }
+        }
+        &__box{
+            margin: 0 5px;
+        }
+    }
+}
+@media (max-width: 767px){
+    .pupInfo{
+        padding: 26px 0 32px;
+
+        &__heading{
+            margin: 0 auto 16px;
+            max-width: 300px;
+
+            h2{
+                font-size: 36px;
+                line-height: 42px;
+            }
+        }
+        &__box{
+            .content{
+                p{
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+            }
+        }
+    }
+}
+
+.pupReviews{
+    background-image: url('/wp-content/themes/psibufet/images/szczeniaki/pupReview_bg.png');
+    background-size: cover;
+    background-position: center;
+    padding: 32px 0 40px;
+
+    &__heading{
+        margin: 0 0 30px;
+
+        h2{
+            font-size: 48px;
+            line-height: 58px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: 400;
+            color: #000;
+            margin: 0;
+            text-align: center;
+        }
+    }
+
+    &__list{
+        max-width: 1195px;
+        margin: 0 auto;
+
+        .slick-list{
+            margin: 0 -20px;
+            padding-bottom: 10px !important;
+        }
+        .slick-arrow{
+            background-repeat: no-repeat;
+            background-size: 32px;
+            width: 32px;
+            height: 32px;
+            opacity: 1;
+            font-size: 0;
+            background-color: unset;
+            border: 0;
+            padding: 0;
+            transition: ease .3s;
+            position: absolute;
+            top: 50%;
+            outline: none;
+            cursor: pointer;
+            transform: translate(0, -50%);
+            z-index: 5;
+
+            &:hover{
+                opacity: .8;
+            }
+            &.slick-prev{
+                background-image: url('/wp-content/themes/psibufet/images/icons/slider_arrow_left_red.svg');
+                left: -40px;
+            }
+            &.slick-next{
+                background-image: url('/wp-content/themes/psibufet/images/icons/slider_arrow_right_red.svg');
+                right: -40px;
+            }
+            &.slick-disabled{
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
+
+        .slick-dots{
+            display: flex !important;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            bottom: -30px;
+            position: absolute;
+            left: 0;
+            right: 0;
+
+            li{
+                margin: 0 3px;
+                line-height: 1;
+
+                &.slick-active{
+                    button{
+                        background-color: #fff;
+                    }
+                }
+
+                button{
+                    width: 8px;
+                    height: 8px;
+                    padding: 0;
+                    margin: 0;
+                    border: 0;
+                    font-size: 0;
+                    border-radius: 100%;
+                    background-color: rgba(255, 255, 255, 0.4);
+                    transition: ease .3s;
+                }
+            }
+        }
+    }
+    &__box{
+        width: 100%;
+        max-width: 362px;
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+        padding: 16px 20px;
+        margin: 0 20px;
+
+        .name{
+            font-size: 21px;
+            line-height: 25px;
+            font-weight: bold;
+            color: #000;
+            margin: 0 0 4px;
+        }
+
+        .stars{
+            display: flex;
+            align-items: center;
+            margin: 0 0 5px;
+
+            &__star{
+                margin-right: 2px;
+
+                &:last-of-type{
+                    margin-right: 0;
+                }
+            }
+        }
+
+        .review{
+            font-size: 16px;
+            line-height: 19px;
+            color: rgba(0, 0, 0, 0.5);
+            font-style: italic;
+            margin: 0;
+        }
+    }
+    &__cta{
+        margin: 60px 0 0;
+    }
+}
+@media (max-width: 1320px){
+    .pupReviews{
+        overflow: hidden;
+
+        &__list{
+            max-width: 1130px;
+
+            .slick-list{
+                margin: 0 -10px;
+            }
+        }
+        &__box{
+            margin: 0 10px;
+        }
+    }
+}
+@media (max-width: 1199px){
+    .pupReviews{
+        &__list{
+            max-width: 880px;
+        }
+        &__box{
+            max-width: 280px;
+        }
+    }
+}
+@media (max-width: 991px){
+    .pupReviews{
+        &__list{
+            max-width: 100%;
+
+            .slick-list{
+                margin: 0 -5px;
+            }
+            .slick-arrow{
+                filter: grayscale(1) brightness(140%) !important;
+                opacity: .3 !important;
+                transition: ease .3s;
+
+                &.slick-prev{
+                    left: -330px;
+                    right: 0;
+                    margin: 0 auto;
+                }
+                &.slick-next{
+                    left: 0;
+                    right: -330px;
+                    margin: 0 auto;
+                }
+            }
+        }
+        &__box{
+            max-width: 320px;
+            margin: 0 5px;
+
+            .stars{
+                margin: 10px 0;
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .pupReviews{
+        padding: 26px 0 32px;
+
+        &__heading{
+            margin: 0 0 26px;
+            
+            h2{
+                font-size: 36px;
+                line-height: 42px;
+            }
+        }
+        &__box{
+            max-width: 280px;
+
+            .name{
+                font-size: 16px;
+                line-height: 19px;
+            }
+            .review{
+                font-size: 12px;
+                line-height: 14px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px){
+    .psibufet{
+        &--szczeniaki{
+            .saleMiska{
+                &__heading{
+                    max-width: 280px;
+                    margin: 27px auto 0;
+
+                    h2{
+                        font-size: 36px;
+                        line-height: 42px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.pupAll{
+    padding: 32px 0 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-image: url('/wp-content/themes/psibufet/images/szczeniaki/wszystkierasy_bg.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 700px;
+
+    &__heading{
+        max-width: 870px;
+        margin: 0 auto;
+
+        h2{
+            font-size: 48px;
+            line-height: 58px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: 400;
+            color: #000;
+            margin: 0 0 15px;
+            text-align: center;
+        }
+        p{
+            font-size: 20px;
+            line-height: 26px;
+            color: #000;
+            text-align: center;
+        }
+    }
+}
+@media (max-width: 991px){
+    .pupAll{
+        &__heading{
+            max-width: 700px;
+        }
+    }
+}
+@media (max-width: 767px){
+    .pupAll{
+        padding: 26px 0 32px;
+
+        &__heading{
+            max-width: 320px;
+            margin: 0 auto;
+
+            h2{
+                font-size: 36px;
+                line-height: 42px;
+                max-width: 280px;
+                margin: 0 auto 10px;
+            }
+            p{
+                font-size: 14px;
+                line-height: 18px;
+            }
+        }
+    }
+}
+
+.pupUsp{
+    padding: 32px 0 40px;
+
+    &__heading{
+        max-width: 545px;
+        margin: 0 auto 40px;
+
+        h2{
+            font-size: 48px;
+            line-height: 58px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: 400;
+            color: #000;
+            margin: 0;
+            text-align: center;
+        }
+    }
+
+    &__list{
+        max-width: 905px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .usp{
+            width: calc(100% / 4);
+            margin: 0 0 52px;
+
+            &:nth-last-child(-n+4){
+                margin: 0;
+            }
+
+            &__icon{
+                min-width: 150px;
+                height: 150px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto;
+            }
+            p{
+                font-size: 28px;
+                line-height: 34px;
+                font-family: 'Bebas Neue', sans-serif;
+                font-weight: 400;
+                color: #000;
+                text-align: center;
+                margin: 0;
+            }
+        }
+    }
+    &__cta{
+        margin: 35px 0 0;
+    }
+}
+@media (max-width: 991px){
+    .pupUsp{
+        overflow: hidden;
+
+        &__list{
+            display: block;
+
+            .slick-list{
+                margin: 0 -15px;
+            }
+
+            .slick-dots{
+                display: flex !important;
+                justify-content: center;
+                list-style: none;
+                padding: 0;
+                margin: 0 auto;
+                bottom: -30px;
+                position: absolute;
+                left: 0;
+                right: 0;
+
+                li{
+                    margin: 0 3px;
+                    line-height: 1;
+
+                    &.slick-active{
+                        button{
+                            background-color: $redcolor;
+                        }
+                    }
+
+                    button{
+                        width: 8px;
+                        height: 8px;
+                        padding: 0;
+                        margin: 0;
+                        border: 0;
+                        font-size: 0;
+                        border-radius: 100%;
+                        background-color: rgba(0, 0, 0, .2);
+                        transition: ease .3s;
+                    }
+                }
+            }
+
+            .usp{
+                width: 160px;
+                margin: 0 15px;
+
+                p{
+                    font-size: 24px;
+                    line-height: 1.2;
+                }
+            }
+        }
+        &__cta{
+            margin: 60px 0 0;
+        }
+    }
+}
+@media (max-width: 767px){
+    .pupUsp{
+        padding: 26px 0 32px;
+
+        &__heading{
+            max-width: 320px;
+            margin: 0 auto 15px;
+
+            h2{
+                font-size: 36px;
+                line-height: 42px;
+            }
+        }
+    }
+}

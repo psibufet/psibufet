@@ -1184,6 +1184,10 @@
         }
     }
 
+    &--nomargin{
+        margin-bottom: 0;
+    }
+
     &--recipes,
     &--howitworks{
         padding: 25px 0;
@@ -2874,6 +2878,17 @@ body.admin-bar{
             border: 0;
             box-shadow: none;
             padding: 0 30px;
+        }
+    }
+
+    &--yellow{
+        background-color: #F7BE45;
+    }
+    &--nodog{
+        .homeHowitworks__wrap{
+            &:before{
+                display: none !important;
+            }
         }
     }
 }

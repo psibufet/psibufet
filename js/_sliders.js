@@ -101,3 +101,37 @@ $(document).ready(function(){
         });
     }
 });
+
+/**
+ * LP - Szczeniaki
+ */
+$(document).ready(function(){
+    $('.pupReviews__list').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        variableWidth: true,
+        centerMode: true,
+        dots: true,
+        arrows: true,
+        infinite: true,
+    });
+
+    if($(window).width() < 992){
+        $('.pupInfo__wrap').slick({
+            slidesToScroll: 1,
+            infinite: true,
+            arrows: false,
+            dots: true,
+            centerMode: true,
+            variableWidth: true,
+        });
+        $('.pupUsp__list').slick({
+            slidesToScroll: 1,
+            infinite: true,
+            arrows: false,
+            dots: true,
+            centerMode: true,
+            variableWidth: true,
+        });
+    }
+});

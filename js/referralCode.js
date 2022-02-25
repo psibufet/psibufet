@@ -148,6 +148,7 @@ $(document).ready(function(){
 		'rasy',
 		'restauracje',
 		'pomoc',
+		'szczeniaki',
 	];
 	var blackweek = [
 		'gwiazdka40',
