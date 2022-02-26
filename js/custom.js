@@ -1209,7 +1209,11 @@ $(document).ready(function(){
             'szpic',
             'owczarek',
             'york',
-            'chihuahua'
+            'chihuahua',
+            'spaniel',
+            'amstaff',
+            'buldog',
+            'pekinczyk',
         ]
         var rasaList = [
             'Labradora',
@@ -1217,7 +1221,11 @@ $(document).ready(function(){
             'Szpica miniaturowego',
             'Owczarka niemieckiego',
             'Yorkshire terriera',
-            'Chihuahua'
+            'Chihuahua',
+            'Cocker spaniela',
+            'Amstaffa',
+            'Buldoga francuskiego',
+            'Pekińczyka',
         ];
         if(rasaURL.indexOf(getRasa) !== -1){
             var rasy = new Map();

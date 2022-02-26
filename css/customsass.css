@@ -13261,6 +13261,38 @@ body.page-template-page_ksiazka .siteHeader--promocode {
   background-image: url("/wp-content/themes/psibufet/images/lprasy/desktop/chihuahua.png");
 }
 
+.rasaHeader--spaniel .dog:before {
+  background-image: url("/wp-content/themes/psibufet/images/lprasy/desktop/spaniel_shadow.png");
+}
+
+.rasaHeader--spaniel .dog:after {
+  background-image: url("/wp-content/themes/psibufet/images/lprasy/desktop/spaniel.png");
+}
+
+.rasaHeader--amstaff .dog:before {
+  background-image: url("/wp-content/themes/psibufet/images/lprasy/desktop/amstaff_shadow.png");
+}
+
+.rasaHeader--amstaff .dog:after {
+  background-image: url("/wp-content/themes/psibufet/images/lprasy/desktop/amstaff.png");
+}
+
+.rasaHeader--buldog .dog:before {
+  background-image: url("/wp-content/themes/psibufet/images/lprasy/desktop/buldog_shadow.png");
+}
+
+.rasaHeader--buldog .dog:after {
+  background-image: url("/wp-content/themes/psibufet/images/lprasy/desktop/buldog.png");
+}
+
+.rasaHeader--pekinczyk .dog:before {
+  background-image: url("/wp-content/themes/psibufet/images/lprasy/desktop/pekinczyk_shadow.png");
+}
+
+.rasaHeader--pekinczyk .dog:after {
+  background-image: url("/wp-content/themes/psibufet/images/lprasy/desktop/pekinczyk.png");
+}
+
 .rasaHeader .dog {
   display: block;
   position: absolute;
@@ -13313,6 +13345,8 @@ body.page-template-page_ksiazka .siteHeader--promocode {
 
 .rasaHeader__wrap {
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
 .rasaHeader__wrap h3 {
@@ -13432,6 +13466,36 @@ body.page-template-page_ksiazka .siteHeader--promocode {
   .rasaHeader--chihuahua .dog:after {
     background-image: url("/wp-content/themes/psibufet/images/lprasy/mobile/chihuahua.png");
   }
+  .rasaHeader--spaniel .dog:before {
+    background-image: url("/wp-content/themes/psibufet/images/lprasy/mobile/spaniel_shadow.png");
+  }
+  .rasaHeader--spaniel .dog:after {
+    background-image: url("/wp-content/themes/psibufet/images/lprasy/mobile/spaniel.png");
+  }
+  .rasaHeader--amstaff .dog:before {
+    background-image: url("/wp-content/themes/psibufet/images/lprasy/mobile/amstaff_shadow.png");
+  }
+  .rasaHeader--amstaff .dog:after {
+    background-image: url("/wp-content/themes/psibufet/images/lprasy/mobile/amstaff.png");
+  }
+  .rasaHeader--buldog .dog:before {
+    background-image: url("/wp-content/themes/psibufet/images/lprasy/mobile/buldog_shadow.png");
+  }
+  .rasaHeader--buldog .dog:after {
+    background-image: url("/wp-content/themes/psibufet/images/lprasy/mobile/buldog.png");
+  }
+  .rasaHeader--pekinczyk .dog:before {
+    background-image: url("/wp-content/themes/psibufet/images/lprasy/mobile/pekinczyk_shadow.png");
+    background-size: 383px !important;
+    width: 383px !important;
+    height: 620px !important;
+  }
+  .rasaHeader--pekinczyk .dog:after {
+    background-image: url("/wp-content/themes/psibufet/images/lprasy/mobile/pekinczyk.png");
+    background-size: 383px !important;
+    width: 383px !important;
+    height: 620px !important;
+  }
   .rasaHeader .dog:before {
     background-size: 180px;
     width: 180px;
@@ -13496,6 +13560,22 @@ body.page-template-page_ksiazka .siteHeader--promocode {
   }
   .rasaHeader__wrap .tags p {
     max-width: 100px;
+  }
+  .rasaHeader--pekinczyk .dog {
+    top: 0;
+    bottom: auto;
+  }
+  .rasaHeader--pekinczyk .dog:before {
+    background-image: url("/wp-content/themes/psibufet/images/lprasy/mobile/pekinczyk_small_shadow.png");
+    background-size: 360px !important;
+    width: 360px !important;
+    height: 450px !important;
+  }
+  .rasaHeader--pekinczyk .dog:after {
+    background-image: url("/wp-content/themes/psibufet/images/lprasy/mobile/pekinczyk_small.png");
+    background-size: 360px !important;
+    width: 360px !important;
+    height: 450px !important;
   }
 }
 
