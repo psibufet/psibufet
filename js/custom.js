@@ -15,7 +15,7 @@
 /**
  * Preloader
  */
-$(window).on('load', function(){
+$(document).on('ready', function(){
     $('.preloader').css('opacity', 0);
     setTimeout(function(){
         $('.preloader').addClass('disable');
