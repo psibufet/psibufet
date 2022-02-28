@@ -16,10 +16,12 @@
  * Preloader
  */
 $(document).on('ready', function(){
-    $('.preloader').css('opacity', 0);
     setTimeout(function(){
-        $('.preloader').addClass('disable');
-    }, 600)
+        $('.preloader').css('opacity', 0);
+        setTimeout(function(){
+            $('.preloader').addClass('disable');
+        }, 600);
+    }, 1000);
 });
 
 /*********** MENU MOBILE *************/
