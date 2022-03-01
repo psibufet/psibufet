@@ -131,6 +131,7 @@ $(document).ready(function(){
 		'pracuj-w-psibufet',
 		'kontakt',
 		'thank-you',
+		'thank-you-new',
 		'failed-payment',
 		'regulamin',
 		'regulamin.pdf',

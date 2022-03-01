@@ -1408,3 +1408,82 @@ $(document).ready(function(){
         }
     });
 });
+
+/**
+ * Thank you page
+ */
+ $(document).ready(function(){
+    var type = GetURLParameter('type');
+    var courier = '';
+    var text = '';
+
+    if(type == 'FX'){
+        courier = 'fx';
+        text = 'Nasze świeże jedzenie trafi do Was wieczorem w dniu jego spakowania – dzięki temu będzie <b>idealnie zmrożone</b>.';
+    }else if(type == 'COURIER'){
+        courier = 'dhl';
+        text = 'Nasze świeże jedzenie dostarczy Wam DHL – informację o planowanej dostawie już wkrótce otrzymasz od kuriera';
+    }else if(type == 'GOODSPEED'){
+        courier = 'goodspeed';
+        text = 'Nasze świeże jedzenie trafi do Was w nocy – w sam raz na poranne karmienie! Jeśli nie chcesz, żeby kurier budził Cię w środku nocy, dodaj kod do domofonu w Panelu Klienta.';
+    }
+
+    if($('main').hasClass('psibufet--typ')){
+        $('#masthead').remove();
+        $('.header-clone').remove();
+    }
+
+    if($('main').hasClass('psibufet--typ') && courier !== '' && text !== ''){
+        $('.courier__wrap').append().html('<p>' + text + '</p>');
+    }
+});
+
+/**
+ * TYP page accordion
+ */
+ $(document).ready(function(){
+    if($('main').hasClass('psibufet--typ')){
+        var duration = 5 * 1000;
+        var animationEnd = Date.now() + duration;
+        var defaults = {
+            startVelocity: 30,
+            spread: 360,
+            ticks: 60,
+            zIndex: 0
+        };
+
+        function randomInRange(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+
+        var interval = setInterval(function() {
+            var timeLeft = animationEnd - Date.now();
+
+            if (timeLeft <= 0) {
+                return clearInterval(interval);
+            }
+
+            var particleCount = 50 * (timeLeft / duration);
+            var colors = ['#F15748', '#F7BE45', '#129D67'];
+            // since particles fall down, start a bit higher than random
+            confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 }, colors: colors }));
+            confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 }, colors: colors }));
+        }, 250);
+    }
+    $('.openQue').on('click', function(){
+        var parent = $(this).parent();
+        if(parent.hasClass('typContent__que--opened')){
+            parent.removeClass('typContent__que--opened');
+            parent.find('.content').slideUp();
+        }else{
+            parent.addClass('typContent__que--opened');
+            parent.find('.content').slideDown();
+        }
+        $('.typContent__que').not(parent).each(function(){
+            if($(this).hasClass('typContent__que--opened')){
+                $(this).removeClass('typContent__que--opened');
+                $(this).find('.content').slideUp();
+            }
+        });
+    });
+});
