@@ -15671,8 +15671,8 @@ body.admin-bar .pagePDF {
 .typMain__heading h2 {
   font-size: 48px;
   line-height: 58px;
-  font-family: "Bebas Neue Pro", sans-serif;
-  font-weight: bold;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
   color: #000;
   text-align: center;
   margin: 0;
@@ -15867,6 +15867,9 @@ body.admin-bar .pagePDF {
   }
   .typContent__solid .btn {
     margin: 15px auto 0;
+    min-width: auto;
+    max-width: 280px;
+    width: 100%;
   }
   .typContent__solid .courier__wrap img {
     max-width: 100px;
