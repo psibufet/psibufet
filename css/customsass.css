@@ -15811,7 +15811,7 @@ body.admin-bar .pagePDF {
 }
 .typContent__que .heading:after {
   content: "";
-  background-image: url("../assets/img/arrow_red.svg");
+  background-image: url("/wp-content/themes/psibufet/images/thank-you/arrow_red.svg");
   background-repeat: no-repeat;
   background-size: 16px;
   width: 16px;
