@@ -110,7 +110,7 @@
                 font-size: 18px;
                 line-height: 24px;
                 margin: 0;
-                text-align: justify;
+                text-align: center;
             }
         }
     }
@@ -326,13 +326,13 @@
             line-height: 25px;
             font-weight: bold;
             color: #000;
-            margin: 0 0 4px;
+            margin: 0;
         }
 
         .stars{
             display: flex;
             align-items: center;
-            margin: 0 0 5px;
+            margin: 10px 0;
 
             &__star{
                 margin-right: 2px;

@@ -15146,7 +15146,7 @@ body.admin-bar .pagePDF {
   font-size: 18px;
   line-height: 24px;
   margin: 0;
-  text-align: justify;
+  text-align: center;
 }
 .pupInfo__cta {
   margin: 40px 0 0;
@@ -15329,12 +15329,12 @@ body.admin-bar .pagePDF {
   line-height: 25px;
   font-weight: bold;
   color: #000;
-  margin: 0 0 4px;
+  margin: 0;
 }
 .pupReviews__box .stars {
   display: flex;
   align-items: center;
-  margin: 0 0 5px;
+  margin: 10px 0;
 }
 .pupReviews__box .stars__star {
   margin-right: 2px;
