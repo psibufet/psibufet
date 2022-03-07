@@ -108,7 +108,7 @@ get_header(); ?>
                 </div>
                 <div class="helpForm__row">
                     <div class="helpForm__text">
-                        <input type="text" class="helpForm__input" name="helpName" placeholder="Imię i naziwsko" required/>
+                        <input type="text" class="helpForm__input" name="helpName" placeholder="Imię i nazwisko" required/>
                     </div>
                 </div>
                 <div class="helpForm__row">
