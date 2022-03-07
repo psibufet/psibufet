@@ -30,11 +30,11 @@ get_header(); ?>
                     <?php endif; ?>
                     <?php if( $google ): ?>
                         <div class="stars">
-                            <img src="/wp-content/themes/psibufet/images/reviews/star.svg" class="no-lazyload"/>
-                            <img src="/wp-content/themes/psibufet/images/reviews/star.svg" class="no-lazyload"/>
-                            <img src="/wp-content/themes/psibufet/images/reviews/star.svg" class="no-lazyload"/>
-                            <img src="/wp-content/themes/psibufet/images/reviews/star.svg" class="no-lazyload"/>
-                            <img src="/wp-content/themes/psibufet/images/reviews/star.svg" class="no-lazyload"/>
+                            <img src="/wp-content/themes/psibufet/images/reviews/star.svg" class="no-lazyload no-lazy"/>
+                            <img src="/wp-content/themes/psibufet/images/reviews/star.svg" class="no-lazyload no-lazy"/>
+                            <img src="/wp-content/themes/psibufet/images/reviews/star.svg" class="no-lazyload no-lazy"/>
+                            <img src="/wp-content/themes/psibufet/images/reviews/star.svg" class="no-lazyload no-lazy"/>
+                            <img src="/wp-content/themes/psibufet/images/reviews/star.svg" class="no-lazyload no-lazy"/>
                         </div>
                         <p><?php echo $googleRate; ?>/5 wg opinii klientów</p>
                     <?php endif; ?>
