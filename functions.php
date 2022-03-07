@@ -638,6 +638,10 @@ function psibufet_scripts(){
 	wp_register_script( 'psibufet-datalayers', get_template_directory_uri() . '/js/dataLayers.js?ver=' . $theme_version . $random_number, null, null, true );
 	wp_enqueue_script('psibufet-datalayers');
 
+	// SEO scriptrs
+	wp_register_script( 'psibufet-seo', get_template_directory_uri() . '/js/_seo.js', null, null, true );
+	wp_enqueue_script('psibufet-seo');
+
 	// Partner form
 	wp_register_script( 'psibufet-partnerform', get_template_directory_uri() . '/js/partnerForm.js?ver=' . $theme_version . $random_number, null, null, true );
 	wp_enqueue_script('psibufet-partnerform');

@@ -321,6 +321,9 @@ $(document).ready(function(){
     });
 });
 
+/**
+ * FAQ
+ */
 $(document).ready(function(){
     var question = $('.homeFaq__list').find('.question');
 

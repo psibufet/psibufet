@@ -332,12 +332,14 @@ get_header(); ?>
                     $question = get_sub_field('faq_list_question');
                     $answer = get_sub_field('faq_list_answer');
                 ?>
-                <div class="question question--close">
+                <div class="question question--close" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <div class="question__heading">
-                        <p class="title"><?php echo $question; ?></p>
+                        <p class="title" itemprop="name"><?php echo $question; ?></p>
                     </div>
-                    <div class="question__answer">
-                        <?php echo $answer; ?>
+                    <div class="question__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text">
+                            <?php echo $answer; ?>
+                        </div>
                     </div>
                 </div>
                 <?php endwhile; ?>
