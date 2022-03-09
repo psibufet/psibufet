@@ -63,7 +63,7 @@
                     <h3>kiedy otrzymam kolejną dostawę?</h3>
                 </div>
                 <div class="content">
-                    <p>Twoja druga paczka zostanie dostarczona 14 dni po pierwszej. Możesz dostosować tę datę do swoich preferencji z poziomu panelu klienta..</p>
+                    <p>Twoja druga paczka zostanie dostarczona 14 dni po pierwszej. Możesz dostosować tę datę do swoich preferencji z poziomu panelu klienta.</p>
                 </div>
             </div>
         </div>
