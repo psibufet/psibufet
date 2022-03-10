@@ -5,17 +5,16 @@
 get_header(); ?>
 <?php
     $page_id = get_the_ID();
-    $pageTitle = strtolower(get_the_title());
-    if($pageTitle == 'wołowe love'){
+    if($page_id == 1971){
         $pageName = 'Beef';
         $pageID = '1';
-    }else if($pageTitle == 'indyczy kąsek'){
+    }else if($page_id == 1980){
         $pageName = 'Turkey';
         $pageID = '4';
-    }else if($pageTitle == 'jagnię wcina'){
+    }else if($page_id == 1982){
         $pageName = 'Lamb';
         $pageID = '2';
-    }else{
+    }else if($page_id == 1984){
         $pageName = 'Chicken';
         $pageID = '3';
     }
