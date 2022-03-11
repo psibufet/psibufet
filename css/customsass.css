@@ -15530,6 +15530,10 @@ body.admin-bar .pagePDF {
   justify-content: center;
   margin: 0 auto;
 }
+.pupUsp__list .usp__icon img {
+  max-width: 100%;
+  max-height: 100%;
+}
 .pupUsp__list .usp p {
   font-size: 28px;
   line-height: 34px;
