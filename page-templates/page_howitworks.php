@@ -260,7 +260,7 @@ get_header(); ?>
             ?>
                 <div class="homeReviews__logo">
                     <div class="logo">
-                        <img src="<?php echo $image; ?>"/>
+                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
                     </div>
                     <?php if( $content ): ?>
                     <p>“<?php echo $content; ?>”</p>

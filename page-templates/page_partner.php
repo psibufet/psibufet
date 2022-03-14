@@ -39,7 +39,7 @@ get_header(); ?>
                 <div class="partnerSteps__step">
                     <div class="position"><?php echo get_row_index(); ?>.</div>
                     <div class="image">
-                        <img src="<?php echo $ico; ?>"/>
+                        <img src="<?php echo $ico['url']; ?>" alt="<?php echo $ico['alt']; ?>"/>
                     </div>
                     <p><?php echo $content; ?></p>
                 </div>

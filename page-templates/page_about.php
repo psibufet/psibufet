@@ -49,7 +49,7 @@ get_header(); ?>
                 </div>
                 <div class="image<?php if($imageType == 'two'): ?> image--two<?php endif; ?>">
                     <div class="image__image">
-                        <img src="<?php echo $image; ?>"/>
+                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
 
                         <div class="image__caption<?php if($imageIcon): ?> image__caption--icon<?php endif; ?>">
                             <h4><?php echo $imageTitle; ?></h4>
@@ -58,7 +58,7 @@ get_header(); ?>
 
                     <?php if($imageType == 'two'): ?>
                         <div class="image__image">
-                            <img src="<?php echo $imageTwo; ?>"/>
+                            <img src="<?php echo $imageTwo['url']; ?>" alt="<?php echo $imageTwo['alt']; ?>"/>
 
                             <div class="image__caption<?php if($imageIcon): ?> image__caption--icon<?php endif; ?>">
                                 <h4><?php echo $imageTwoTitle; ?></h4>
@@ -79,7 +79,7 @@ get_header(); ?>
         <div class="aboutTeam__wrap">
             <div class="aboutTeam__content">
                 <div class="video video--desktop">
-                    <img src="<?php the_field('aboutTeam_gif'); ?>"/>
+                    <img src="<?php echo get_field('aboutTeam_gif')['url']; ?>" alt="<?php echo get_field('aboutTeam_gif')['alt']; ?>"/>
                 </div>
                 <div class="content">
                     <h3 class="getMarker getMarker--small"><?php the_field('aboutTeam_title'); ?></h3>
@@ -103,7 +103,7 @@ get_header(); ?>
                     $text = get_sub_field('aboutInfo_images_text');
                 ?>
                 <div class="image">
-                    <img src="<?php echo $image; ?>"/>
+                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
                     <div class="image__caption">
                         <h4><?php echo $text; ?></h4>
                     </div>
@@ -130,13 +130,13 @@ get_header(); ?>
             <?php foreach( $posts as $post ): setup_postdata( $post ); ?>
                 <div class="post">
                     <div class="thumb">
-                        <img src="<?php the_field('post_thumbnail'); ?>" class="no1-lazyload"/>
+                        <img src="<?php the_field('post_thumbnail'); ?>" class="no-lazyload"/>
                     </div>
                     <div class="content">
                         <div class="actions">
-                            <img src="<?php echo get_template_directory_uri() . '/images/ig_like.svg'; ?>" class="no1-lazyload"/>
-                            <img src="<?php echo get_template_directory_uri() . '/images/ig_comment.svg'; ?>" class="no1-lazyload"/>
-                            <img src="<?php echo get_template_directory_uri() . '/images/ig_send.svg'; ?>" class="no1-lazyload"/>
+                            <img src="<?php echo get_template_directory_uri() . '/images/ig_like.svg'; ?>" class="no-lazyload"/>
+                            <img src="<?php echo get_template_directory_uri() . '/images/ig_comment.svg'; ?>" class="no-lazyload"/>
+                            <img src="<?php echo get_template_directory_uri() . '/images/ig_send.svg'; ?>" class="no-lazyload"/>
                         </div>
                         <p><b><?php the_field('user_name'); ?>:</b> <?php the_field('post_content'); ?></p>
                     </div>
@@ -177,7 +177,7 @@ get_header(); ?>
             ?>
                 <div class="homeReviews__logo">
                     <div class="logo">
-                        <img src="<?php echo $image; ?>"/>
+                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
                     </div>
                     <?php if( $content ): ?>
                     <p>“<?php echo $content; ?>”</p>

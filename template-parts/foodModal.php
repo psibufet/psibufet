@@ -12,7 +12,7 @@
     <div class="gallery" data="<?php echo get_the_ID(); ?>">
         <?php foreach( $images as $image ): ?>
             <div class="gallery__image">
-                <img class="no-lazyload" src="<?php echo $image; ?>"/>
+                <img class="no-lazyload" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
             </div>
         <?php endforeach; ?>
     </div>

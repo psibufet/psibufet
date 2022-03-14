@@ -53,7 +53,7 @@ get_header(); ?>
             ?>
                 <div class="homeReviews__logo">
                     <div class="logo">
-                        <img src="<?php echo $image; ?>"/>
+                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
                     </div>
                     <?php if( $content ): ?>
                     <p>“<?php echo $content; ?>”</p>
@@ -197,7 +197,7 @@ get_header(); ?>
                 ?>
                 <div class="homeHowitworks__step">
                     <div class="image">
-                        <img src="<?php echo $icon; ?>"/>
+                        <img src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>"/>
                     </div>
                     <div class="content">
                         <h3><?php echo get_row_index(); ?>. <?php echo $title; ?></h3>
@@ -220,7 +220,7 @@ get_header(); ?>
                             $image = get_sub_field('karma_img');
                         ?>
                             <div class="homeFoodinfo__info" data="data_0<?php echo get_row_index(); ?>">
-                                <img src="<?php echo $image; ?>"  class="no-lazyload"/>
+                                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="no-lazyload"/>
                             </div>
                         <?php endwhile; ?>
                     </div>
@@ -283,11 +283,11 @@ get_header(); ?>
                     <div class="gallery" data="data_0<?php echo get_row_index(); ?>">
                         <?php foreach( $images as $image ): ?>
                             <div class="gallery__image">
-                                <img class="no-lazyload" src="<?php echo $image; ?>"/>
+                                <img class="no-lazyload" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
                             </div>
                         <?php endforeach; ?>
                     </div>
-                    <div class="title" style="background-color: <?php echo $color; ?>"><p><?php echo $name; ?><img class="no-lazyload" src="<?php echo $icon; ?>"/></p></div>
+                    <div class="title" style="background-color: <?php echo $color; ?>"><p><?php echo $name; ?><img class="no-lazyload" src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>"/></p></div>
                     <div class="desc">
                         <p><?php echo $desc; ?></p>
                     </div>

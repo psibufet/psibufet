@@ -3,6 +3,41 @@
     "title": "Jak to działa new",
     "fields": [
         {
+            "key": "field_622f2caeaa1e2",
+            "label": "Header",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_622f2cb4aa1e3",
+            "label": "Tekst alternatywny tła",
+            "name": "howHeader_alt",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_61546fa90d4cd",
             "label": "Sekcja \"Jak to robimy?\"",
             "name": "",
@@ -487,5 +522,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1633031223
+    "modified": 1647259088
 }

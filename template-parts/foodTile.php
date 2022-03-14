@@ -3,7 +3,7 @@
         <?php $gallery = get_field('flavourGallery');
         foreach( $gallery as $image ): ?>
             <div class="galleryImage">
-                <img src="<?php echo $image; ?>" class="no-lazyload"/>
+                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="no-lazyload"/>
             </div>
         <?php endforeach; ?>
     </div>

@@ -81,7 +81,7 @@ get_header(); ?>
                     $link = get_sub_field('restInstagram_link');
                 ?>
                     <a href="<?php echo $link; ?>" target="_blank" class="restPost">
-                        <img class="no-lazyload" src="<?php echo $post; ?>"/>
+                        <img class="no-lazyload" src="<?php echo $post['url']; ?>" alt="<?php echo $post['alt']; ?>"/>
                     </a>
                 <?php endwhile; ?>
             </div>
@@ -115,7 +115,7 @@ get_header(); ?>
             ?>
                 <div class="homeReviews__logo">
                     <div class="logo">
-                        <img src="<?php echo $image; ?>"/>
+                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
                     </div>
                     <?php if( $content ): ?>
                     <p>“<?php echo $content; ?>”</p>

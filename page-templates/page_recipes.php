@@ -57,10 +57,10 @@ get_header(); ?>
     <section class="recipesBanner">
         <div class="recipesBanner__wrap">
             <div class="recipesBanner__badges">
-                <img src="<?php echo get_template_directory_uri() . '/images/recipes/polskiProdukt_ico.svg'; ?>" class="polski no-lazyload"/>
-                <img src="<?php echo get_template_directory_uri() . '/images/recipes/lider_ico.png'; ?>" class="lider no-lazyload"/>
+                <img src="<?php echo get_template_directory_uri() . '/images/recipes/polskiProdukt_ico.svg'; ?>" class="polski no-lazyload" alt="PsiBufet - Polski proudukt"/>
+                <img src="<?php echo get_template_directory_uri() . '/images/recipes/lider_ico.png'; ?>" class="lider no-lazyload" alt="PsiBufet - Konsumencki Lider Jakości 2021"/>
             </div>
-            <img src="<?php echo get_template_directory_uri() . '/images/recipes/recipesBanner.gif'; ?>"/>
+            <img src="<?php echo get_template_directory_uri() . '/images/recipes/recipesBanner.gif'; ?>" alt="<?php echo get_field('recipesGif_alt'); ?>"/>
         </div>
     </section>
 
@@ -115,7 +115,7 @@ get_header(); ?>
                 ?>
                 <div class="recipesParts__box">
                     <div class="image">
-                        <img src="<?php echo $image; ?>" class="no-lazyload"/>
+                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="no-lazyload"/>
                     </div>
                     <div class="content">
                         <p><b><?php echo $name; ?>:</b> <?php echo $content; ?></p>
@@ -129,7 +129,7 @@ get_header(); ?>
     <section class="recipesSafety">
         <div class="recipesSafety__wrap">
             <div class="recipesSafety__image">
-                <img src="<?php the_field('safetyImage'); ?>"/>
+                <img src="<?php echo get_field('safetyImage')['url']; ?>" alt="<?php echo get_field('safetyImage')['alt']; ?>"/>
             </div>
             <div class="recipesSafety__content">
                 <h2 class="getMarker">Spełniamy najwyższe <span class="marker">standardy</span> bezpieczeństwa</h2>
@@ -140,7 +140,7 @@ get_header(); ?>
                     ?>
                     <div class="boxes__box">
                         <div class="icon">
-                            <img src="<?php echo $icon; ?>"/>
+                            <img src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>"/>
                         </div>
                         <p class="text"><?php echo $text; ?></p>
                     </div>
@@ -176,7 +176,7 @@ get_header(); ?>
             ?>
                 <div class="homeReviews__logo">
                     <div class="logo">
-                        <img src="<?php echo $image; ?>"/>
+                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
                     </div>
                     <?php if( $content ): ?>
                     <p>“<?php echo $content; ?>”</p>

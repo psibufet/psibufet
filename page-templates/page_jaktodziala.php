@@ -31,7 +31,7 @@ Template Name: Jak to działa?
                                 $content = get_sub_field('hiw_content', 5);
                             ?>
                                 <li>
-                                    <img src="<?php echo $image; ?>"/>
+                                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
                                     <div class="slide_inner">
                                         <h4 class="slide_title"><?php echo get_row_index(); ?>. <?php echo $title; ?></h4>
                                         <p class="slide_content"><?php echo $content; ?></p>
@@ -168,7 +168,7 @@ Template Name: Jak to działa?
                     ?>
                     <li class="slide">
                         <div class="inner">
-                            <img src="<?php echo $image; ?>"/>
+                            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
                             <p class="name"><?php echo $name; ?></p>
                             <?php if( $stanowisko ): ?>
                                 <p class="lead"><?php echo $stanowisko; ?></p>

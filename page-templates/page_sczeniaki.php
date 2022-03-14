@@ -23,7 +23,7 @@ get_header(); ?>
             ?>
                 <div class="homeReviews__logo">
                     <div class="logo">
-                        <img src="<?php echo $image; ?>"/>
+                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
                     </div>
                     <?php if( $content ): ?>
                     <p>“<?php echo $content; ?>”</p>
@@ -178,7 +178,7 @@ get_header(); ?>
                 ?>
                 <div class="homeHowitworks__step">
                     <div class="image">
-                        <img src="<?php echo $icon; ?>"/>
+                        <img src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>"/>
                     </div>
                     <div class="content">
                         <h3><?php echo get_row_index(); ?>. <?php echo $title; ?></h3>

@@ -56,7 +56,7 @@ get_header(); ?>
                     <?php foreach( $featuredFlavour as $post ): setup_postdata($post); ?>
                         <?php while(have_rows('gspageGallery')): the_row(); ?>
                         <div class="gallery__photo">
-                            <img src="<?php echo get_sub_field('gspageGallery_image'); ?>" class="no-lazyload"/>
+                            <img src="<?php echo get_sub_field('gspageGallery_image')['url']; ?>" alt="<?php echo get_sub_field('gspageGallery_image')['alt']; ?>" class="no-lazyload"/>
                         </div>
                         <?php endwhile; ?>
                     <?php endforeach; ?>
@@ -286,7 +286,7 @@ get_header(); ?>
                 ?>
                 <div class="homeHowitworks__step">
                     <div class="image">
-                        <img src="<?php echo $icon; ?>"/>
+                        <img src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>"/>
                     </div>
                     <div class="content">
                         <h3><?php echo get_row_index(); ?>. <?php echo $title; ?></h3>
