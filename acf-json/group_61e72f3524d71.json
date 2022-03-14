@@ -92,6 +92,102 @@
             "maxlength": ""
         },
         {
+            "key": "field_622f790b696a5",
+            "label": "Dostawy",
+            "name": "helpCategories_dostawy",
+            "type": "url",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_622f793d696a6",
+            "label": "Nasze karmy",
+            "name": "helpCategories_naszekarmy",
+            "type": "url",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_622f7947696a7",
+            "label": "Program darmowa karma",
+            "name": "helpCategories_darmowakarma",
+            "type": "url",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_622f7955696a8",
+            "label": "Przechowywanie i karmienie",
+            "name": "helpCategories_przechowywanie",
+            "type": "url",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_622f795d696a9",
+            "label": "Płatności",
+            "name": "helpCategories_platnosci",
+            "type": "url",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_622f796a696ab",
+            "label": "Zarządzanie planem żywienia",
+            "name": "helpCategories_plan",
+            "type": "url",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
             "key": "field_61e7324326af0",
             "label": "Formularz - Q&A",
             "name": "",
@@ -246,5 +342,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1642603850
+    "modified": 1647278457
 }

@@ -17,37 +17,37 @@ get_header(); ?>
             <h2><?php the_field('helpCategories_heading'); ?></h2>
         </div>
         <div class="helpCategories__wrap">
-            <a href="https://help.psibufet.pl/category/25-dostawy" class="helpCategories__cat">
+            <a href="<?php echo the_field('helpCategories_dostawy'); ?>" class="helpCategories__cat">
                 <div class="icon">
                     <img src="<?php echo get_template_directory_uri() . '/images/help/catIco_01.svg'; ?>" class="no-lazyload"/>
                 </div>
                 <p>Dostawy</p>
             </a>
-            <a href="https://help.psibufet.pl/category/36-nasze-karmy" class="helpCategories__cat">
+            <a href="<?php echo the_field('helpCategories_naszekarmy'); ?>" class="helpCategories__cat">
                 <div class="icon">
                     <img src="<?php echo get_template_directory_uri() . '/images/help/catIco_02.svg'; ?>" class="no-lazyload"/>
                 </div>
                 <p>Nasze karmy</p>
             </a>
-            <a href="https://help.psibufet.pl/category/19-program-darmowa-karma" class="helpCategories__cat">
+            <a href="<?php echo the_field('helpCategories_darmowakarma'); ?>" class="helpCategories__cat">
                 <div class="icon">
                     <img src="<?php echo get_template_directory_uri() . '/images/help/catIco_03.svg'; ?>" class="no-lazyload"/>
                 </div>
                 <p>Program darmowa karma</p>
             </a>
-            <a href="https://help.psibufet.pl/category/31-przechowywanie-i-karmienie" class="helpCategories__cat">
+            <a href="<?php echo the_field('helpCategories_przechowywanie'); ?>" class="helpCategories__cat">
                 <div class="icon">
                     <img src="<?php echo get_template_directory_uri() . '/images/help/catIco_04.svg'; ?>" class="no-lazyload"/>
                 </div>
                 <p>Przechowywanie i karmienie</p>
             </a>
-            <a href="https://help.psibufet.pl/category/21-platnosci" class="helpCategories__cat">
+            <a href="<?php echo the_field('helpCategories_platnosci'); ?>" class="helpCategories__cat">
                 <div class="icon">
                     <img src="<?php echo get_template_directory_uri() . '/images/help/catIco_05.svg'; ?>" class="no-lazyload"/>
                 </div>
                 <p>Płatności</p>
             </a>
-            <a href="https://help.psibufet.pl/category/10-zarzadzanie-planem-zywienia" class="helpCategories__cat">
+            <a href="<?php echo the_field('helpCategories_plan'); ?>" class="helpCategories__cat">
                 <div class="icon">
                     <img src="<?php echo get_template_directory_uri() . '/images/help/catIco_06.svg'; ?>" class="no-lazyload"/>
                 </div>
