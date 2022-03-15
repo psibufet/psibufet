@@ -24,6 +24,14 @@ function headerClone(){
 		$('.mainnav').css('padding-top', siteHeader.height());
 	}
 }
+function bottomBar(code, amount, type){
+	if(type == 'PERCENT'){
+		var typ = '%';
+	}else if(type == 'AMOUNT'){
+		var typ = 'PLN';
+	}
+	$('.siteFooter').before('<div class="bottomBar"><a href="https://zamowienie.psibufet.pl/?code=' + code + '&amount=' + amount + '&type=' + type + '" class="btn"><span>Odbierz zniżkę -' + amount + typ + '</span></a></div>');
+}
 function promobar(dataCode, dataAmount, dataType){
 	var code = dataCode;
     var type = dataType;
@@ -67,6 +75,9 @@ function promobar(dataCode, dataAmount, dataType){
 
 		// Set header clone height
 		headerClone();
+		if($(window).width() < 768){
+			bottomBar(dataCode, dataAmount, dataType);
+		}
     }else{
         console.log('Code error');
     }

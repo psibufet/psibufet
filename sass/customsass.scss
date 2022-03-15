@@ -110,6 +110,39 @@ body{
 }
 
 /**
+ *  Bottom promobar - Mobile
+ */
+.bottomBar{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 85px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px -2px 0px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 99;
+
+    .btn{
+        width: 100%;
+        max-width: 100%;
+    }
+}
+@media (max-width: 767px){
+    .bottomBar{
+        display: flex;
+    }
+    body.promocode{
+        .dixa-messenger-wrapper{
+            bottom: 100px !important;
+        }
+    }
+}
+
+/**
  *  Promobar BLACK WEEK
  */
 .blackweek{

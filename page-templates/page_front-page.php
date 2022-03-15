@@ -7,29 +7,7 @@ get_header(); ?>
 
 <main class="pbpage pbpage--frontpage">
 
-    <?php // include get_template_directory() . '/template-parts/_homeHeaderV4.php'; ?>
-
-    <section class="homeHeaderV2" style="background-image: url('/wp-content/themes/psibufet/images/pricedrop/sgNewHeader-min.webp');">
-        <div class="homeHeaderV2__wrap">
-            <div class="homeHeaderV2__content">
-                <h2>Świeże spojrzenie na psie jedzenie</h2>
-                <div class="tags">
-                    <div><p>Naturalne składniki</p></div>
-                    <div><p>Idealna porcja</p></div>
-                    <div><p>Dostawa pod drzwi</p></div>
-                </div>
-                <form class="homeHeaderV2__form dogNameForm" action="https://zamowienie.psibufet.pl/" autocomplete="off">
-                    <h2 class="getMarker">Stwórz <span class="marker">idealny</span> plan dla Twojego psa w <span class="number">1</span> minutę</h2>
-                    <input type="text" value="" placeholder="Wpisz imię swojego pupila" autocomplete="off"/>
-                    <button type="submit"><span>Rozpocznij</span></button>
-                    <a href="https://zamowienie.psibufet.pl/" class="more">Mam więcej niż jednego psa.</a>
-                </form>
-            </div>
-        </div>
-        <a href="#page-continue" class="homeHeaderV2__scroll">
-            <p>Dowiedz się więcej</p>
-        </a>
-    </section>
+    <?php include get_template_directory() . '/template-parts/_homeHeaderV3.php'; ?>
     
     <section id="page-continue" class="homeReviews">
         <?php if( have_rows('after_header_logos') ): ?>
@@ -447,33 +425,7 @@ get_header(); ?>
         </div>
     </section>
 
-    <?php if( have_rows('testimonial_opinia') ): ?>
-    <section class="homeTestimonials">
-        <div class="homeTestimonials__wrap container">
-            <h2>Opracowane przez dietetyków zwierzęcych, rekomendowane przez specjalistów i weterynarzy</h2>
-            <div class="homeTestimonials__slider">
-                <?php while( have_rows('testimonial_opinia') ): the_row(); 
-                    $image = get_sub_field('testi_img');
-                    $name = get_sub_field('testi_name');
-                    $pos = get_sub_field('testi_stanowisko');
-                    $content = get_sub_field('testi_content');
-                ?>
-                    <div class="slide">
-                        <div class="image">
-                            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
-                        </div>
-                        <div class="name">
-                            <p><?php echo $name; ?></p>
-                            <p class="position"><?php echo $pos; ?></p>
-                        </div>
-                        <p class="quote">"<?php echo $content; ?>"</p>
-                    </div>
-                <?php endwhile; ?>
-            </div>
-            <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir"><span><?php the_field('front_testi_cta') ?></span></a>
-        </div>
-    </section>
-    <?php endif; ?>
+    <?php // include get_template_directory() . '/template-parts/_homeTestimonials.php'; ?>
 
     <?php 
     $posts = get_posts(array(
