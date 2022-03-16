@@ -269,6 +269,8 @@ $(document).ready(function(){
 					console.log('PDF download page');
 				}else if($('body').hasClass('error404')){
 					console.log('404');
+				}else if($('body').hasClass('post-type-archive-rasy-psow') || $('body').hasClass('single-rasy-psow')){
+					console.log('Rasy psów - archive');
 				}else{
 					window.location.replace("https://psibufet.pl/");
 					console.log('Error while code loading :(');

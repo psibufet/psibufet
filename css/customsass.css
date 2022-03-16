@@ -6689,6 +6689,7 @@ body.admin-bar .foodModal__wrap {
   width: 360px;
   height: inherit;
   margin-left: 40px;
+  background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
   position: relative;
@@ -6734,6 +6735,42 @@ body.admin-bar .foodModal__wrap {
 }
 .howVideo--rmkt {
   padding: 32px 0 20px;
+}
+.howVideo--breed {
+  padding: 50px 0 40px;
+  background-color: #FBDEA2;
+}
+.howVideo--breed .howVideo__content {
+  height: auto;
+  flex-direction: column;
+}
+.howVideo--breed .howVideo__content .video {
+  width: 100%;
+  height: 446px;
+  margin-bottom: 30px;
+}
+.howVideo--breed .howVideo__content .video .wp-video {
+  display: block;
+  height: inherit;
+  width: 100% !important;
+}
+.howVideo--breed .howVideo__content .video .wp-video .mejs-video {
+  display: block;
+  width: 100% !important;
+}
+.howVideo--breed .howVideo__content .content {
+  width: 100%;
+  margin-left: 0;
+}
+.howVideo--breed .howVideo__content .content:before {
+  transform: rotate(45deg);
+  top: -10px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.howVideo--breed .howVideo__content .content p {
+  max-width: none;
 }
 
 @media (max-width: 991px) {
@@ -15940,6 +15977,393 @@ body.admin-bar .pagePDF {
   left: auto;
 }
 
+.rascatHeader {
+  background-image: url("/wp-content/themes/psibufet/images/rasy/rascatHeader_bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 580px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.rascatHeader__wrap {
+  margin-top: 70px;
+}
+.rascatHeader__wrap h1 {
+  font-size: 72px;
+  line-height: 86px;
+  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  color: #000;
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .rascatHeader {
+    min-height: 500px;
+  }
+  .rascatHeader__wrap {
+    margin-top: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .rascatHeader {
+    min-height: 300px;
+  }
+  .rascatHeader__wrap {
+    margin-top: 25px;
+  }
+  .rascatHeader__wrap h1 {
+    font-size: 54px;
+    line-height: 65px;
+  }
+}
+@media (max-width: 575px) {
+  .rascatHeader {
+    background-image: url("/wp-content/themes/psibufet/images/rasy/rascatHeader_bg_mobile.png");
+  }
+  .rascatHeader__wrap {
+    margin-top: 15px;
+  }
+}
+.rascatList {
+  padding: 40px 0;
+}
+.rascatList__wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1170px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.rascatList .rasaPost {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: calc(50% - 20px);
+  min-height: 362px;
+  margin: 0 0 40px;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.rascatList .rasaPost:hover {
+  opacity: 0.8;
+}
+@media (min-width: 768px) {
+  .rascatList .rasaPost:nth-last-child(-n+2) {
+    margin: 0;
+  }
+}
+.rascatList .rasaPost h2 {
+  font-size: 48px;
+  line-height: 58px;
+  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  color: #fff;
+  margin: 0 0 26px;
+  text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 991px) {
+  .rascatList .rasaPost {
+    width: calc(50% - 10px);
+    min-height: 290px;
+  }
+}
+@media (max-width: 767px) {
+  .rascatList {
+    padding: 32px 0;
+  }
+  .rascatList__wrap {
+    max-width: 360px;
+  }
+  .rascatList .rasaPost {
+    width: 100%;
+    max-width: 320px;
+    min-height: 210px;
+    margin: 0 0 20px;
+  }
+  .rascatList .rasaPost:last-of-type {
+    margin: 0;
+  }
+  .rascatList .rasaPost h2 {
+    font-size: 28px;
+    line-height: 34px;
+    margin: 0 0 12px;
+  }
+}
+@media (min-width: 1600px) {
+  .psibufet--rasapsa .container {
+    width: 1170px;
+  }
+}
+.psibufet--rasapsa .sectionContent {
+  width: 100%;
+  max-width: calc(100% - 308px);
+  padding-right: 40px;
+}
+
+.raspostHeader {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 580px;
+  display: flex;
+  align-items: center;
+}
+.raspostHeader__wrap h1 {
+  font-size: 72px;
+  line-height: 86px;
+  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  color: #fff;
+  margin: 0;
+  text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.raspostMainInfo {
+  background-color: rgba(247, 190, 69, 0.5);
+  padding: 32px 0 35px;
+}
+.raspostMainInfo__wrap .info p {
+  font-size: 24px;
+  line-height: 32px;
+  text-align: justify;
+  color: #000;
+}
+.raspostMainInfo__wrap .info p:last-of-type {
+  margin: 0;
+}
+.raspostMainInfo__wrap .usp {
+  display: flex;
+  justify-content: space-between;
+}
+.raspostMainInfo__wrap .usp__pos {
+  width: 100%;
+  max-width: calc(25% - 3px);
+  text-align: center;
+}
+.raspostMainInfo__wrap .usp__pos img {
+  margin: 0 0 -15px;
+}
+.raspostMainInfo__wrap .usp__pos .name {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 20px;
+}
+.raspostMainInfo__wrap .usp__pos .rate {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  color: #000;
+  margin: 0;
+}
+.raspostMainInfo__wrap .usp__pos .rate span {
+  font-size: 54px;
+}
+
+.raspostMainheading {
+  padding: 30px 0 40px;
+}
+.raspostMainheading .tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 0 40px;
+}
+.raspostMainheading .tags__heading {
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  color: #000;
+  text-align: center;
+  margin: 0 0 20px;
+}
+.raspostMainheading .tags__tag {
+  font-size: 24px;
+  line-height: 28px;
+  color: #000;
+  margin: 0;
+  padding-right: 15px;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.raspostMainheading .tags__tag:after {
+  content: "";
+  width: 2px;
+  height: 24px;
+  background-color: #F7BE45;
+  display: block;
+  position: absolute;
+  top: 2px;
+  right: -1px;
+}
+.raspostMainheading .contentsTable {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  padding: 38px 40px 56px;
+}
+.raspostMainheading .contentsTable__heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 20px;
+  position: relative;
+}
+.raspostMainheading .contentsTable__heading:after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #f15748;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 1;
+}
+.raspostMainheading .contentsTable__heading h2 {
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  color: #000;
+  text-align: center;
+  margin: 0;
+  background-color: #fff;
+  padding: 0 30px;
+  position: relative;
+  z-index: 2;
+}
+.raspostMainheading .contentsTable__list {
+  max-width: 590px;
+  margin: 0 auto;
+}
+.raspostMainheading .contentsTable__list .pos {
+  margin: 0 0 15px;
+}
+.raspostMainheading .contentsTable__list .pos:last-of-type {
+  margin: 0;
+}
+.raspostMainheading .contentsTable__list .pos h3 {
+  font-size: 36px;
+  line-height: 46px;
+  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  color: #000;
+  margin: 0;
+  cursor: pointer;
+  transition: ease 0.3s;
+}
+.raspostMainheading .contentsTable__list .pos h3:hover {
+  color: #f15748;
+}
+
+.breedInfo {
+  padding: 32px 0 40px;
+}
+.breedInfo__wrap h2 {
+  font-size: 48px;
+  line-height: 58px;
+  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  color: #000;
+  text-align: center;
+  margin: 0 0 20px;
+}
+.breedInfo__image {
+  margin: 0 0 12px;
+  display: flex;
+}
+.breedInfo__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.breedInfo__content p {
+  font-size: 24px;
+  line-height: 32px;
+  color: #000;
+  text-align: justify;
+  margin: 0 0 40px;
+}
+.breedInfo__content p:last-of-type {
+  margin: 0;
+}
+.breedInfo__section {
+  margin-top: 34px;
+}
+.breedInfo__section h3 {
+  font-size: 36px;
+  line-height: 43px;
+  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  color: #000;
+  margin: 0 0 22px;
+  text-align: center;
+}
+.breedInfo__section p {
+  font-size: 24px;
+  line-height: 32px;
+  color: #000;
+  text-align: justify;
+  margin: 0 0 40px;
+}
+.breedInfo__section p:last-of-type {
+  margin: 0;
+}
+.breedInfo__section ul li {
+  font-size: 24px;
+  margin: 0 0 10px;
+}
+.breedInfo__section ul li:last-of-type {
+  margin: 0;
+}
+.breedInfo__banner {
+  text-align: center;
+  margin-top: 36px;
+}
+.breedInfo__banner img {
+  width: 100%;
+  max-width: 170px;
+  margin: 0 0 20px;
+}
+.breedInfo__banner h3 {
+  font-size: 64px;
+  line-height: 77px;
+  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  color: #000;
+  margin: 0 0 32px;
+  text-align: center;
+}
+.breedInfo__banner .usp {
+  display: flex;
+  justify-content: space-between;
+}
+.breedInfo__banner .usp__pos img {
+  width: 115px;
+  height: 115px;
+  margin: 0 0 15px;
+}
+.breedInfo__banner .usp__pos p {
+  font-size: 20px;
+  line-height: 24px;
+  color: #000;
+  text-align: center;
+  margin: 0;
+}
+
 body {
   margin: 0;
 }
@@ -16013,6 +16437,9 @@ body a:hover {
 
   body.promocode .dixa-messenger-wrapper {
     bottom: 100px !important;
+  }
+  body.promocode .siteFooter {
+    margin-bottom: 85px !important;
   }
 }
 /**
@@ -16487,6 +16914,7 @@ body a:hover {
   justify-content: center;
 }
 .pbQuestions__images .image {
+  display: flex;
   width: 11.1111111111%;
 }
 .pbQuestions__images .image img {

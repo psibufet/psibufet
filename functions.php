@@ -736,3 +736,25 @@ function helpForm(){
 	}
 	exit();
 }
+
+/**
+ * ACF Blocks
+ */
+add_action('acf/init', 'my_acf_init_block_types');
+function my_acf_init_block_types() {
+
+    // Check function exists.
+    if( function_exists('acf_register_block_type') ) {
+
+		// Opis i wylgąd rasy
+        acf_register_block_type(array(
+            'name'              => 'rasa_desc',
+            'title'             => __('Rasa - Sekcja'),
+            'description'       => __('Sekcja na stronie rasy psa.'),
+            'render_template'   => 'template-parts/blocks/rasa_desc.php',
+            'category'          => 'formatting',
+            'icon'              => 'admin-comments',
+            'keywords'          => array('rasa_desc', 'quote'),
+        ));
+    }
+}

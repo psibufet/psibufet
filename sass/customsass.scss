@@ -41,7 +41,8 @@
 @import 'subpages/404';
 @import 'subpages/szczeniaki';
 @import 'subpages/thankyou';
-
+@import 'subpages/rasy';
+@import 'subpages/rasy-single';
 
 body{
     margin: 0;
@@ -138,6 +139,9 @@ body{
     body.promocode{
         .dixa-messenger-wrapper{
             bottom: 100px !important;
+        }
+        .siteFooter{
+            margin-bottom: 85px !important;
         }
     }
 }
@@ -677,6 +681,7 @@ body{
         justify-content: center;
 
         .image{
+            display: flex;
             width: calc(100% / 9);
 
             img{

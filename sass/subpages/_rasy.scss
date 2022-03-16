@@ -1,0 +1,134 @@
+.rascatHeader{
+    background-image: url('/wp-content/themes/psibufet/images/rasy/rascatHeader_bg.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 580px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    &__wrap{
+        margin-top: 70px;
+
+        h1{
+            font-size: 72px;
+            line-height: 86px;
+            font-weight: 400;
+            font-family: 'Bebas Neue', sans-serif;
+            color: #000;
+            margin: 0;
+        }
+    }
+}
+@media (max-width: 991px){
+    .rascatHeader{
+        min-height: 500px;
+
+        &__wrap{
+            margin-top: 40px;
+        }
+    }
+}
+@media (max-width: 767px){
+    .rascatHeader{
+        min-height: 300px;
+
+        &__wrap{
+            margin-top: 25px;
+
+            h1{
+                font-size: 54px;
+                line-height: 65px;
+            }
+        }
+    }
+}
+@media (max-width: 575px){
+    .rascatHeader{
+        background-image: url('/wp-content/themes/psibufet/images/rasy/rascatHeader_bg_mobile.png');
+
+        &__wrap{
+            margin-top: 15px;
+        }
+    }
+}
+
+.rascatList{
+    padding: 40px 0;
+
+    &__wrap{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 1170px;
+        padding: 0 20px;
+        margin: 0 auto;
+    }
+    .rasaPost{
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: calc(100% / 2 - 20px);
+        min-height: 362px;
+        margin: 0 0 40px;
+        box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+
+        &:hover{
+            opacity: .8;
+        }
+
+        @media (min-width: 768px){
+            &:nth-last-child(-n+2){
+                margin: 0;
+            }
+        }
+
+        h2{
+            font-size: 48px;
+            line-height: 58px;
+            font-weight: 400;
+            font-family: 'Bebas Neue', sans-serif;
+            color: #fff;
+            margin: 0 0 26px;
+            text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+@media (max-width: 991px){
+    .rascatList{
+        .rasaPost{
+            width: calc(100% / 2 - 10px);
+            min-height: 290px;
+        }
+    }
+}
+@media (max-width: 767px){
+    .rascatList{
+        padding: 32px 0;
+
+        &__wrap{
+            max-width: 360px;
+        }
+        .rasaPost{
+            width: 100%;
+            max-width: 320px;
+            min-height: 210px;
+            margin: 0 0 20px;
+
+            &:last-of-type{
+                margin: 0;
+            }
+
+            h2{
+                font-size: 28px;
+                line-height: 34px;
+                margin: 0 0 12px;
+            }
+        }
+    }
+}
