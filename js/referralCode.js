@@ -30,7 +30,7 @@ function bottomBar(code, amount, type){
 	}else if(type == 'AMOUNT'){
 		var typ = 'PLN';
 	}
-	$('.siteFooter').before('<div class="bottomBar"><a href="https://zamowienie.psibufet.pl/?code=' + code + '&amount=' + amount + '&type=' + type + '" class="btn"><span>Odbierz zniżkę -' + amount + typ + '</span></a></div>');
+	$('.siteFooter').before('<div class="bottomBar"><a href="https://zamowienie.psibufet.pl/?code=' + code + '&amount=' + amount + '&type=' + type + '" class="btn btn--green"><span>Odbierz zniżkę -' + amount + typ + '</span></a></div>');
 }
 function promobar(dataCode, dataAmount, dataType){
 	var code = dataCode;
