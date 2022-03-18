@@ -19,77 +19,90 @@ get_header(); ?>
             <h1><?php the_title(); ?></h1>
         </div>
     </header>
-    <section class="raspostMainInfo">
-        <div class="raspostMainInfo__wrap container">
-            <div class="sectionContent">
-                <div class="info">
-                    <?php echo get_field('raspostInfo_desc'); ?>
+
+    <section class="postContent">
+        <section class="raspostMainInfo">
+            <div class="raspostMainInfo__wrap container">
+                <div class="sectionContent">
+                    <div class="info">
+                        <?php echo get_field('raspostInfo_desc'); ?>
+                    </div>
+                    <div class="usp">
+                        <div class="usp__pos">
+                            <img src="<?php echo get_template_directory_uri() . '/images/rasy/usp/usp_01.svg'; ?>"/>
+                            <p class="name">Aktywność</p>
+                            <h3 class="rate"><span>6</span>/10</h3>
+                        </div>
+                        <div class="usp__pos">
+                            <img src="<?php echo get_template_directory_uri() . '/images/rasy/usp/usp_02.svg'; ?>"/>
+                            <p class="name">Pielęgnacja</p>
+                            <h3 class="rate"><span>6</span>/10</h3>
+                        </div>
+                        <div class="usp__pos">
+                            <img src="<?php echo get_template_directory_uri() . '/images/rasy/usp/usp_03.svg'; ?>"/>
+                            <p class="name">Podatność na choroby</p>
+                            <h3 class="rate"><span>3</span>/10</h3>
+                        </div>
+                        <div class="usp__pos">
+                            <img src="<?php echo get_template_directory_uri() . '/images/rasy/usp/usp_04.svg'; ?>"/>
+                            <p class="name">Długość życia</p>
+                            <h3 class="rate"><span>7</span>/10</h3>
+                        </div>
+                    </div>
                 </div>
-                <div class="usp">
-                    <div class="usp__pos">
-                        <img src="<?php echo get_template_directory_uri() . '/images/rasy/usp/usp_01.svg'; ?>"/>
-                        <p class="name">Aktywność</p>
-                        <h3 class="rate"><span>6</span>/10</h3>
+            </div>
+        </section>
+        <section class="raspostMainheading">
+            <div class="raspostMainheading__wrap container">
+                <div class="sectionContent">
+                    <h2 class="tags__heading">Z tego artykułu dowiesz się:</h2>
+                    <div class="tags">
+                        <?php while(have_rows('raspostInfo_tags')): the_row(); ?>
+                            <p class="tags__tag"><?php echo get_sub_field('raspostInfo_tags_pos'); ?></p>
+                        <?php endwhile; ?>
                     </div>
-                    <div class="usp__pos">
-                        <img src="<?php echo get_template_directory_uri() . '/images/rasy/usp/usp_02.svg'; ?>"/>
-                        <p class="name">Pielęgnacja</p>
-                        <h3 class="rate"><span>6</span>/10</h3>
+                    <div class="contentsTable">
+                        <div class="contentsTable__heading">
+                            <h2>Spis treści</h2>
+                        </div>
+                        <div class="contentsTable__list" data-name="<?php the_title(); ?>"></div>
                     </div>
-                    <div class="usp__pos">
-                        <img src="<?php echo get_template_directory_uri() . '/images/rasy/usp/usp_03.svg'; ?>"/>
-                        <p class="name">Podatność na choroby</p>
-                        <h3 class="rate"><span>3</span>/10</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content START -->
+
+        <?php the_content(); ?>
+
+        <!-- Content END -->
+
+        <aside class="postSidebar">
+            <a href="http://zamowienie.psibufet.pl/">
+                <img src="<?php echo get_template_directory_uri() . '/images/rasy/sidebarBaner.png'; ?>" class="desktop"/>
+                <img src="<?php echo get_template_directory_uri() . '/images/rasy/bannerMobile.png'; ?>" class="mobile"/>
+            </a>
+        </aside>
+    </section>
+
+    <section class="postAuthor">
+        <div class="postAuthor__wrap container">
+            <div class="sectionContent">
+                <h2 class="postAuthor__title">Kilka słów o autorce artykułu</h2>
+                <div class="postAuthor__content">
+                    <div class="postAuthor__author">
+                        <div class="image">
+                            <img src="<?php echo get_template_directory_uri() . '/images/rasy/postAuthor.png'; ?>"/>
+                        </div>
+                        <h3>Aleksandra Więcławska</h3>
                     </div>
-                    <div class="usp__pos">
-                        <img src="<?php echo get_template_directory_uri() . '/images/rasy/usp/usp_04.svg'; ?>"/>
-                        <p class="name">Długość życia</p>
-                        <h3 class="rate"><span>7</span>/10</h3>
+                    <div class="postAuthor__about">
+                        <p>Certyfikowana trenerka psów (kurs ukończony w Centrum Kynologicznym Canid). Ukończyła też liczne kursy i uczestniczyła w kilkunastu seminariach z zakresu zachowania, żywienia i opieki nad psami. Z magazynem "Mój Pies" (teraz - "Mój Pies i Kot") i portalem Psy.pl związana od 2011 roku. Absolwentka polonistyki na Uniwersytecie Warszawskim. Prywatnie mama Ady i Maksa oraz opiekunka psa w typie labradora Dino (ur. 2008) i dwóch rudych kotów.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="raspostMainheading">
-        <div class="raspostMainheading__wrap container">
-            <div class="sectionContent">
-                <h2 class="tags__heading">Z tego artykułu dowiesz się:</h2>
-                <div class="tags">
-                    <?php while(have_rows('raspostInfo_tags')): the_row(); ?>
-                        <p class="tags__tag"><?php echo get_sub_field('raspostInfo_tags_pos'); ?></p>
-                    <?php endwhile; ?>
-                </div>
-                <div class="contentsTable">
-                    <div class="contentsTable__heading">
-                        <h2>Spis treści</h2>
-                    </div>
-                    <div class="contentsTable__list">
-                        <div class="pos">
-                            <h3>1. <?php the_title(); ?> - Opis i wygląd rasy</h3>
-                        </div>
-                        <div class="pos">
-                            <h3>2. <?php the_title(); ?> - Charakter i usposobienie</h3>
-                        </div>
-                        <div class="pos">
-                            <h3>3. <?php the_title(); ?> - Historia rasy</h3>
-                        </div>
-                        <div class="pos">
-                            <h3>4. <?php the_title(); ?> - Pielęgnacja i zdrowie</h3>
-                        </div>
-                        <div class="pos">
-                            <h3>5. <?php the_title(); ?> - Ciekawostki</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Content START -->
-
-    <?php the_content(); ?>
-
-    <!-- Content END -->
 
     <section class="howVideo howVideo--breed">
         <div class="howVideo__wrap container">
@@ -138,6 +151,42 @@ get_header(); ?>
                 style="background-image: url('<?php echo get_template_directory_uri() . '/images/homepage/homeShortcuts_04.webp'; ?>');">
                 <p class="title">Centrum pomocy</p>
             </a>
+        </div>
+    </section>
+
+    <section class="pbQuestions">
+        <h2 class="pbQuestions__title getMarker">Masz <span class="marker">pytanie</span>?</h2>
+        <div class="pbQuestions__wrap">
+            <div class="pbQuestions__images">
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_01.png'; ?>"/>
+                </div>
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_02.png'; ?>"/>
+                </div>
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_03.png'; ?>"/>
+                </div>
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_04.png'; ?>"/>
+                </div>
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_05.png'; ?>"/>
+                </div>
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_06.png'; ?>"/>
+                </div>
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_07.png'; ?>"/>
+                </div>
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_08.png'; ?>"/>
+                </div>
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_09.png'; ?>"/>
+                </div>
+            </div>
+            <a href="https://psibufet.pl/pomoc" class="btn btn--clear"><span>Skontaktuj się z nami</span></a>
         </div>
     </section>
 </main>

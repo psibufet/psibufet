@@ -6747,7 +6747,7 @@ body.admin-bar .foodModal__wrap {
 .howVideo--breed .howVideo__content .video {
   width: 100%;
   height: 446px;
-  margin-bottom: 30px;
+  margin-bottom: 45px;
 }
 .howVideo--breed .howVideo__content .video .wp-video {
   display: block;
@@ -6773,6 +6773,12 @@ body.admin-bar .foodModal__wrap {
   max-width: none;
 }
 
+@media (max-width: 1199px) {
+  .howVideo--breed .howVideo__content .video {
+    height: 355px;
+    margin-bottom: 30px;
+  }
+}
 @media (max-width: 991px) {
   .howVideo__content {
     height: auto;
@@ -16104,10 +16110,21 @@ body.admin-bar .pagePDF {
 }
 .psibufet--rasapsa .sectionContent {
   width: 100%;
-  max-width: calc(100% - 308px);
+  max-width: calc(100% - 268px);
   padding-right: 40px;
 }
 
+@media (max-width: 991px) {
+  .psibufet--rasapsa .sectionContent {
+    max-width: 100%;
+    padding-right: 0;
+  }
+}
+@media (max-width: 767px) {
+  .psibufet--rasapsa .container {
+    padding: 0 20px;
+  }
+}
 .raspostHeader {
   background-repeat: no-repeat;
   background-size: cover;
@@ -16124,6 +16141,26 @@ body.admin-bar .pagePDF {
   color: #fff;
   margin: 0;
   text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 991px) {
+  .raspostHeader {
+    min-height: 250px;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .raspostHeader__wrap {
+    margin: 0 0 12px;
+  }
+  .raspostHeader__wrap h1 {
+    font-size: 42px;
+    line-height: 50px;
+    margin: 0;
+    text-align: center;
+  }
+}
+.postContent {
+  position: relative;
 }
 
 .raspostMainInfo {
@@ -16170,6 +16207,48 @@ body.admin-bar .pagePDF {
   font-size: 54px;
 }
 
+@media (max-width: 991px) {
+  .raspostMainInfo__wrap .usp {
+    flex-wrap: wrap;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .raspostMainInfo__wrap .usp__pos {
+    max-width: calc(50% - 3px);
+    margin: 0;
+  }
+  .raspostMainInfo__wrap .usp__pos .name {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .raspostMainInfo__wrap .usp__pos .rate {
+    font-size: 32px;
+    line-height: 32px;
+  }
+  .raspostMainInfo__wrap .usp__pos .rate span {
+    font-size: 48px;
+  }
+}
+@media (max-width: 767px) {
+  .raspostMainInfo__wrap .info p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .raspostMainInfo__wrap .usp {
+    max-width: 300px;
+  }
+  .raspostMainInfo__wrap .usp__pos .name {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .raspostMainInfo__wrap .usp__pos .rate {
+    font-size: 24px;
+    line-height: 24px;
+  }
+  .raspostMainInfo__wrap .usp__pos .rate span {
+    font-size: 36px;
+  }
+}
 .raspostMainheading {
   padding: 30px 0 40px;
 }
@@ -16255,7 +16334,8 @@ body.admin-bar .pagePDF {
 .raspostMainheading .contentsTable__list .pos:last-of-type {
   margin: 0;
 }
-.raspostMainheading .contentsTable__list .pos h3 {
+.raspostMainheading .contentsTable__list .pos__name {
+  display: block;
   font-size: 36px;
   line-height: 46px;
   font-weight: 400;
@@ -16265,10 +16345,85 @@ body.admin-bar .pagePDF {
   cursor: pointer;
   transition: ease 0.3s;
 }
-.raspostMainheading .contentsTable__list .pos h3:hover {
+.raspostMainheading .contentsTable__list .pos__name:hover {
+  color: #f15748;
+}
+.raspostMainheading .contentsTable__list .pos__section {
+  display: block;
+  padding-left: 50px;
+  font-size: 36px;
+  line-height: 46px;
+  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  color: #000;
+  margin: 0;
+  cursor: pointer;
+  transition: ease 0.3s;
+}
+.raspostMainheading .contentsTable__list .pos__section:hover {
   color: #f15748;
 }
 
+@media (max-width: 1199px) {
+  .raspostMainheading .tags__tag {
+    font-size: 21px;
+    line-height: 26px;
+  }
+}
+@media (max-width: 767px) {
+  .raspostMainheading {
+    padding: 26px 0 24px;
+  }
+  .raspostMainheading .tags {
+    margin: 0 0 28px;
+  }
+  .raspostMainheading .tags__heading {
+    font-size: 36px;
+    line-height: 42px;
+  }
+  .raspostMainheading .tags__tag {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .raspostMainheading .contentsTable {
+    padding: 0;
+    border: 0;
+    box-shadow: unset;
+  }
+  .raspostMainheading .contentsTable__heading h2 {
+    font-size: 36px;
+    line-height: 42px;
+  }
+  .raspostMainheading .contentsTable__list .pos {
+    margin: 0 0 10px;
+  }
+  .raspostMainheading .contentsTable__list .pos__name {
+    font-size: 21px;
+    line-height: 28px;
+  }
+  .raspostMainheading .contentsTable__list .pos__section {
+    font-size: 21px;
+    line-height: 28px;
+    padding-left: 30px;
+  }
+}
+@media (max-width: 575px) {
+  .raspostMainheading .tags {
+    display: block;
+  }
+  .raspostMainheading .tags__heading {
+    margin: 0 auto 10px;
+    max-width: 280px;
+  }
+  .raspostMainheading .tags__tag {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  .raspostMainheading .tags__tag:after {
+    display: none;
+  }
+}
 .breedInfo {
   padding: 32px 0 40px;
 }
@@ -16298,6 +16453,13 @@ body.admin-bar .pagePDF {
   margin: 0 0 40px;
 }
 .breedInfo__content p:last-of-type {
+  margin: 0;
+}
+.breedInfo__content ul li {
+  font-size: 24px;
+  margin: 0 0 10px;
+}
+.breedInfo__content ul li:last-of-type {
   margin: 0;
 }
 .breedInfo__section {
@@ -16364,6 +16526,200 @@ body.admin-bar .pagePDF {
   margin: 0;
 }
 
+@media (max-width: 767px) {
+  .breedInfo {
+    padding: 25px 0 35px;
+  }
+  .breedInfo__wrap h2 {
+    font-size: 36px;
+    line-height: 42px;
+  }
+  .breedInfo__content p {
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0 0 25px;
+  }
+  .breedInfo__content ul li {
+    font-size: 18px;
+    margin: 0 0 6px;
+  }
+  .breedInfo__section h3 {
+    font-size: 28px;
+    line-height: 34px;
+    margin: 0 0 10px;
+  }
+  .breedInfo__section ul li {
+    font-size: 18px;
+    margin: 0 0 6px;
+  }
+  .breedInfo__section p {
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0 0 25px;
+  }
+  .breedInfo__banner img {
+    max-width: 70px;
+    margin: 0 0 5px;
+  }
+  .breedInfo__banner h3 {
+    font-size: 28px;
+    line-height: 34px;
+    margin: 0 0 15px;
+  }
+  .breedInfo__banner .usp {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .breedInfo__banner .usp__pos:nth-child(2), .breedInfo__banner .usp__pos:nth-child(4) {
+    display: none;
+  }
+  .breedInfo__banner .usp__pos img {
+    height: 85px;
+    margin: 0 0 5px;
+  }
+  .breedInfo__banner .usp__pos p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+.postAuthor {
+  padding: 30px 0 40px;
+}
+.postAuthor__title {
+  font-size: 48px;
+  line-height: 58px;
+  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  color: #000;
+  text-align: center;
+  margin: 0 0 25px;
+}
+.postAuthor__content {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 50px 40px 35px;
+}
+.postAuthor__author {
+  width: 265px;
+  margin-right: 40px;
+}
+.postAuthor__author .image {
+  display: flex;
+  width: 100%;
+  border: 2px solid #F79E1B;
+  border-radius: 100%;
+  margin: 0 0 20px;
+  padding: 11px;
+}
+.postAuthor__author .image img {
+  width: 100%;
+  border-radius: 100%;
+}
+.postAuthor__author h3 {
+  font-size: 26px;
+  line-height: 32px;
+  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  color: #000;
+  margin: 0;
+  text-align: center;
+}
+.postAuthor__about {
+  width: calc(100% - 305px);
+}
+.postAuthor__about p {
+  font-size: 24px;
+  line-height: 32px;
+  color: #000;
+  text-align: justify;
+  margin: 0;
+}
+
+@media (max-width: 1199px) {
+  .postAuthor__content {
+    flex-direction: column;
+    padding: 35px 40px;
+  }
+  .postAuthor__author {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .postAuthor__author .image {
+    width: 240px;
+    margin: 0 auto 20px;
+  }
+  .postAuthor__about {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .postAuthor__title {
+    font-size: 36px;
+    line-height: 42px;
+  }
+  .postAuthor__content {
+    padding: 0;
+    border: 0;
+    box-shadow: unset;
+  }
+  .postAuthor__author .image {
+    max-width: 200px;
+  }
+  .postAuthor__about p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+/**
+ *  Sidebar
+ */
+.postSidebar {
+  display: flex;
+  position: absolute;
+  right: -870px;
+  left: 0;
+  top: 33px;
+  width: 268px;
+  margin: 0 auto;
+  transition: top ease 0.1s;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+.postSidebar a {
+  display: flex;
+  transition: ease 0.3s;
+}
+.postSidebar a:hover {
+  opacity: 0.9;
+}
+.postSidebar a img {
+  width: 100%;
+}
+.postSidebar a img.mobile {
+  display: none;
+}
+
+@media (max-width: 1199px) {
+  .postSidebar {
+    right: 0;
+    width: 100%;
+    position: fixed;
+    top: auto !important;
+    bottom: 0;
+    z-index: 99;
+    box-shadow: 0px -2px 0px rgba(0, 0, 0, 0.1);
+  }
+  .postSidebar a img.desktop {
+    display: none;
+  }
+  .postSidebar a img.mobile {
+    display: block;
+  }
+}
 body {
   margin: 0;
 }

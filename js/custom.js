@@ -1490,3 +1490,63 @@ $(document).ready(function(){
         });
     });
 });
+
+/**
+ * Breed post sidebar float
+ */
+$(document).ready(function(){
+    var sidebar = $('.postSidebar');
+
+    if(sidebar.length && $(window).width() > 991){
+        var sidebarOffset = sidebar.offset().top;
+
+        $(window).on('scroll', function(){
+            var windowOffset = $(window).scrollTop();
+            var windowOffset_sidebar = windowOffset + sidebar.height() + 30;
+            var videoOffset = $('.howVideo').offset().top + $('.howVideo').height();
+            var top = windowOffset - sidebarOffset + 30;
+
+            if(windowOffset >= sidebarOffset && windowOffset_sidebar <= videoOffset){
+                sidebar.css('top', top);
+            }else if(windowOffset_sidebar >= videoOffset){
+                if($(window).width() > 1199){
+                    sidebar.css('top', videoOffset - $('.howVideo').height() - sidebar.height() + 64);
+                }else{
+                    sidebar.css('top', videoOffset - $('.howVideo').height() - sidebar.height() - 42);
+                }
+            }else{
+                sidebar.css('top', '32px');
+            }
+        });
+    }
+});
+
+/**
+ * Breed table of contents
+ */
+$(document).ready(function(){
+    if($('body').hasClass('single-rasy-psow')){
+        var count = 1;
+        $('.breedInfo').each(function(){
+            var name = $('.contentsTable__list').attr('data-name');
+            var title = $(this).attr('data-title');
+            var id = $(this).attr('id');
+            var section = $(this).find('.breedInfo__section')
+
+            if(section.length !== 0){
+                var secCount = 1;
+                $('.contentsTable__list').append('<div class="pos" data-id="' + id + '"><a href="#' + id + '" class="pos__name">' + count + '. ' + name + ' - ' + title + '</a></div>');
+
+                $(section).each(function(){
+                    var sectionName = $(this).attr('data-title');
+                    var sectionID = $(this).attr('id');
+                    $('.contentsTable__list').find('.pos[data-id="' + id + '"]').append('<a href="#' + sectionID + '" class="pos__section">' + count + '.' + secCount + '. ' + sectionName + '</a>');
+                    secCount++;
+                });
+            }else{
+                $('.contentsTable__list').append('<div class="pos" data-id="' + id + '"><a href="#' + id + '" class="pos__name">' + count + '. ' + name + ' - ' + title + '</a></div>');
+            }
+            count++;
+        });
+    }
+});

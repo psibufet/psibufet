@@ -261,7 +261,7 @@
             .video{
                 width: 100%;
                 height: 446px;
-                margin-bottom: 30px;
+                margin-bottom: 45px;
 
                 .wp-video{
                     display: block;
@@ -288,6 +288,18 @@
 
                 p{
                     max-width: none;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1199px){
+    .howVideo{
+        &--breed{
+            .howVideo__content{
+                .video{
+                    height: 355px;
+                    margin-bottom: 30px;
                 }
             }
         }

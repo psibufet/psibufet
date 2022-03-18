@@ -25,12 +25,12 @@
 
     // Load values and assign defaults.
     $image = get_field('rasa_image');
-    $color = get_field('rasa_color');
+    $color = get_field('rasa_color') ?: '#ffffff';
     $title = get_field('rasa_title') ?: 'Tytuł sekcji';
     $content = get_field('rasa_content') ?: 'Tutaj jest miejsce na treść....';
 
 ?>
-<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>" style="background-color: <?php echo $color . '1a'; ?>">
+<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>" style="background-color: <?php echo $color . '1a'; ?>" data-title="<?php echo $title; ?>">
     <div class="breedInfo__wrap container">
         <div class="sectionContent">
             <h2><?php echo get_the_title($post_id); ?> - <?php echo $title; ?></h2>
@@ -48,7 +48,8 @@
             <?php if(get_field('rasa_sections')): ?>
                 <?php while(have_rows('rasa_sections')): the_row(); ?>
                     <?php if(!get_sub_field('rasa_sections_ad')): ?>
-                    <div class="breedInfo__section">
+                    <?php $secID = $id . rand(); ?>
+                    <div id="<?php echo $secID; ?>" class="breedInfo__section" data-title="<?php echo get_sub_field('rasa_sections_title'); ?>">
                         <h3><?php echo get_sub_field('rasa_sections_title'); ?></h3>
                         <?php echo get_sub_field('rasa_sections_content'); ?>
                     </div>
