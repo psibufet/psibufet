@@ -1526,6 +1526,10 @@ $(document).ready(function(){
  */
 $(document).ready(function(){
     if($('body').hasClass('single-rasy-psow')){
+        if($(window).width() < 1200){
+            $('.dixa-messenger-wrapper').css('bottom', '17vw');
+        }
+
         var count = 1;
         $('.breedInfo').each(function(){
             var name = $('.contentsTable__list').attr('data-name');

@@ -31,22 +31,22 @@ get_header(); ?>
                         <div class="usp__pos">
                             <img src="<?php echo get_template_directory_uri() . '/images/rasy/usp/usp_01.svg'; ?>"/>
                             <p class="name">Aktywność</p>
-                            <h3 class="rate"><span>6</span>/10</h3>
+                            <h3 class="rate"><span><?php echo get_field('review_aktywnosc'); ?></span>/10</h3>
                         </div>
                         <div class="usp__pos">
                             <img src="<?php echo get_template_directory_uri() . '/images/rasy/usp/usp_02.svg'; ?>"/>
                             <p class="name">Pielęgnacja</p>
-                            <h3 class="rate"><span>6</span>/10</h3>
+                            <h3 class="rate"><span><?php echo get_field('review_pielegnacja'); ?></span>/10</h3>
                         </div>
                         <div class="usp__pos">
                             <img src="<?php echo get_template_directory_uri() . '/images/rasy/usp/usp_03.svg'; ?>"/>
                             <p class="name">Podatność na choroby</p>
-                            <h3 class="rate"><span>3</span>/10</h3>
+                            <h3 class="rate"><span><?php echo get_field('review_podatnosc'); ?></span>/10</h3>
                         </div>
                         <div class="usp__pos">
                             <img src="<?php echo get_template_directory_uri() . '/images/rasy/usp/usp_04.svg'; ?>"/>
                             <p class="name">Długość życia</p>
-                            <h3 class="rate"><span>7</span>/10</h3>
+                            <h3 class="rate"><span><?php echo get_field('review_dlugosc'); ?></span>/10</h3>
                         </div>
                     </div>
                 </div>
@@ -78,9 +78,9 @@ get_header(); ?>
         <!-- Content END -->
 
         <aside class="postSidebar">
-            <a href="http://zamowienie.psibufet.pl/">
-                <img src="<?php echo get_template_directory_uri() . '/images/rasy/sidebarBaner.png'; ?>" class="desktop"/>
-                <img src="<?php echo get_template_directory_uri() . '/images/rasy/bannerMobile.png'; ?>" class="mobile"/>
+            <a href="<?php echo get_field('rasa_banner_url', 'cpt_rasy-psow_ustawienia'); ?>" target="_blank">
+                <img src="<?php echo get_field('rasa_banner', 'cpt_rasy-psow_ustawienia')['url']; ?>" alt="<?php echo get_field('rasa_banner', 'cpt_rasy-psow_ustawienia')['alt']; ?>" class="desktop"/>
+                <img src="<?php echo get_field('rasa_banner_mobile', 'cpt_rasy-psow_ustawienia')['url']; ?>" alt="<?php echo get_field('rasa_banner_mobile', 'cpt_rasy-psow_ustawienia')['alt']; ?>" class="mobile"/>
             </a>
         </aside>
     </section>
@@ -97,7 +97,7 @@ get_header(); ?>
                         <h3>Aleksandra Więcławska</h3>
                     </div>
                     <div class="postAuthor__about">
-                        <p>Certyfikowana trenerka psów (kurs ukończony w Centrum Kynologicznym Canid). Ukończyła też liczne kursy i uczestniczyła w kilkunastu seminariach z zakresu zachowania, żywienia i opieki nad psami. Z magazynem "Mój Pies" (teraz - "Mój Pies i Kot") i portalem Psy.pl związana od 2011 roku. Absolwentka polonistyki na Uniwersytecie Warszawskim. Prywatnie mama Ady i Maksa oraz opiekunka psa w typie labradora Dino (ur. 2008) i dwóch rudych kotów.</p>
+                        <p><?php the_field('rasa_author', 'cpt_rasy-psow_ustawienia'); ?></p>
                     </div>
                 </div>
             </div>

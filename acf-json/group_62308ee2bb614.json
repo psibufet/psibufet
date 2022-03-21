@@ -86,6 +86,90 @@
             "delay": 0
         },
         {
+            "key": "field_623892a235c1d",
+            "label": "Aktywność",
+            "name": "review_aktywnosc",
+            "type": "number",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 1,
+            "max": 10,
+            "step": 1
+        },
+        {
+            "key": "field_623892d735c1e",
+            "label": "Pielęgnacja",
+            "name": "review_pielegnacja",
+            "type": "number",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 1,
+            "max": 10,
+            "step": 1
+        },
+        {
+            "key": "field_623892e135c1f",
+            "label": "Podatność na choroby",
+            "name": "review_podatnosc",
+            "type": "number",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 1,
+            "max": 10,
+            "step": 1
+        },
+        {
+            "key": "field_623892ee35c20",
+            "label": "Długość życia",
+            "name": "review_dlugosc",
+            "type": "number",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 1,
+            "max": 10,
+            "step": 1
+        },
+        {
             "key": "field_62322c8905be8",
             "label": "Z tego artykułu dowiesz się",
             "name": "raspostInfo_tags",
@@ -143,5 +227,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1647455481
+    "modified": 1647874810
 }

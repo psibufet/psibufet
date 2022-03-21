@@ -56,28 +56,14 @@
                     <?php else: ?>
                     <div class="breedInfo__banner">
                         <img src="<?php echo get_template_directory_uri() . '/images/lpsale/psibufet_logo_lp.svg'; ?>"/>
-                        <h3>Alternatywna dieta dla psa</h3>
+                        <h3><?php the_field('ad_title', 'cpt_rasy-psow_ustawienia'); ?></h3>
                         <div class="usp">
+                            <?php while(have_rows('ad_usp', 'cpt_rasy-psow_ustawienia')): the_row(); ?>
                             <div class="usp__pos">
-                                <img src="<?php echo get_template_directory_uri() . '/images/rasy/banner_usp_01.svg'; ?>"/>
-                                <p>Dla piesków <br/>wszystkich <br/>rozmiarów</p>
+                                <img src="<?php echo get_sub_field('ad_usp_ico')['url']; ?>" alt="<?php echo get_sub_field('ad_usp_ico')['alt']; ?>"/>
+                                <p><?php echo get_sub_field('ad_usp_text'); ?></p>
                             </div>
-                            <div class="usp__pos">
-                                <img src="<?php echo get_template_directory_uri() . '/images/rasy/banner_usp_02.svg'; ?>"/>
-                                <p>Porcja rośnie <br/>razem z pieskiem</p>
-                            </div>
-                            <div class="usp__pos">
-                                <img src="<?php echo get_template_directory_uri() . '/images/rasy/banner_usp_03.svg'; ?>"/>
-                                <p>Idealnie <br/>dopasowane <br/>do wieku</p>
-                            </div>
-                            <div class="usp__pos">
-                                <img src="<?php echo get_template_directory_uri() . '/images/rasy/banner_usp_04.svg'; ?>"/>
-                                <p>Świetne do <br/>wypełniania <br/>zabawek</p>
-                            </div>
-                            <div class="usp__pos">
-                                <img src="<?php echo get_template_directory_uri() . '/images/rasy/banner_usp_05.svg'; ?>"/>
-                                <p>Łatwe do <br/>podania w kilku <br/>posiłkach</p>
-                            </div>
+                            <?php endwhile; ?>
                         </div>
                     </div>
                     <?php endif; ?>
