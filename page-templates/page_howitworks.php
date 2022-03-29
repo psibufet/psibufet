@@ -219,7 +219,7 @@ get_header(); ?>
                         ?>
                         <div class="boxes__box">
                             <div class="icon">
-                                <img src="<?php echo $icon; ?>" class="no-lazyload"/>
+                                <img data-original="<?php echo $icon; ?>" class="no-lazyload"/>
                             </div>
                             <p><?php echo $text; ?></p>
                         </div>

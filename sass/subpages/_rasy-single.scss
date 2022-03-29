@@ -77,13 +77,14 @@
 
 .raspostMainInfo{
     background-color: rgba(247, 190, 69, 0.5);
-    padding: 32px 0 35px;
+    // padding: 32px 0 35px;
+    padding: 50px 0 70px;
 
     &__wrap{
         .info{
             p{
-                font-size: 24px;
-                line-height: 32px;
+                font-size: 18px;
+                line-height: 24px;
                 text-align: justify;
                 color: #000;
 
@@ -198,17 +199,17 @@
         margin: 0 0 40px;
 
         &__heading{
-            font-size: 48px;
-            line-height: 56px;
+            font-size: 42px;
+            line-height: 52px;
             font-weight: 400;
             font-family: 'Bebas Neue', sans-serif;
             color: #000;
             text-align: center;
-            margin: 0 0 20px;
+            margin: 0 0 15px;
         }
         &__tag{
-            font-size: 24px;
-            line-height: 28px;
+            font-size: 18px;
+            line-height: 21px;
             color: #000;
             margin: 0;
             padding-right: 15px;
@@ -232,7 +233,7 @@
         background-color: #fff;
         border: 1px solid rgba(0, 0, 0, 0.2);
         box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
-        padding: 38px 40px 56px;
+        padding: 28px 30px 46px;
 
         &__heading{
             display: flex;
@@ -254,8 +255,8 @@
             }
 
             h2{
-                font-size: 48px;
-                line-height: 56px;
+                font-size: 42px;
+                line-height: 52px;
                 font-weight: 400;
                 font-family: 'Bebas Neue', sans-serif;
                 color: #000;
@@ -280,8 +281,8 @@
 
                 &__name{
                     display: block;
-                    font-size: 36px;
-                    line-height: 46px;
+                    font-size: 32px;
+                    line-height: 40px;
                     font-weight: 400;
                     font-family: 'Bebas Neue', sans-serif;
                     color: #000;
@@ -296,8 +297,8 @@
                 &__section{
                     display: block;
                     padding-left: 50px;
-                    font-size: 36px;
-                    line-height: 46px;
+                    font-size: 28px;
+                    line-height: 38px;
                     font-weight: 400;
                     font-family: 'Bebas Neue', sans-serif;
                     color: #000;
@@ -317,8 +318,8 @@
     .raspostMainheading{
         .tags{
             &__tag{
-                font-size: 21px;
-                line-height: 26px;
+                font-size: 18px;
+                line-height: 21px;
             }
         }
     }
@@ -336,7 +337,7 @@
             }
             &__tag{
                 font-size: 18px;
-                line-height: 28px;
+                line-height: 21px;
             }
         }
         .contentsTable{
@@ -396,8 +397,8 @@
     
     &__wrap{
         h2{
-            font-size: 48px;
-            line-height: 58px;
+            font-size: 42px;
+            line-height: 52px;
             font-weight: 400;
             font-family: 'Bebas Neue', sans-serif;
             color: #000;
@@ -417,8 +418,8 @@
     }
     &__content{
         p{
-            font-size: 24px;
-            line-height: 32px;
+            font-size: 18px;
+            line-height: 24px;
             color: #000;
             text-align: justify;
             margin: 0 0 40px;
@@ -429,7 +430,7 @@
         }
         ul{
             li{
-                font-size: 24px;
+                font-size: 18px;
                 margin: 0 0 10px;
 
                 &:last-of-type{
@@ -451,8 +452,8 @@
             text-align: center;
         }
         p{
-            font-size: 24px;
-            line-height: 32px;
+            font-size: 18px;
+            line-height: 24px;
             color: #000;
             text-align: justify;
             margin: 0 0 40px;
@@ -464,7 +465,7 @@
 
         ul{
             li{
-                font-size: 24px;
+                font-size: 18px;
                 margin: 0 0 10px;
 
                 &:last-of-type{
@@ -591,13 +592,13 @@
     padding: 30px 0 40px;
 
     &__title{
-        font-size: 48px;
-        line-height: 58px;
+        font-size: 42px;
+        line-height: 52px;
         font-weight: 400;
         font-family: 'Bebas Neue', sans-serif;
         color: #000;
         text-align: center;
-        margin: 0 0 25px;
+        margin: 0 0 20px;
     }
     &__content{
         display: flex;
@@ -608,7 +609,7 @@
         padding: 50px 40px 35px;
     }
     &__author{
-        width: 265px;
+        width: 200px;
         margin-right: 40px;
 
         .image{
@@ -625,8 +626,8 @@
             }
         }
         h3{
-            font-size: 26px;
-            line-height: 32px;
+            font-size: 24px;
+            line-height: 28px;
             font-weight: 400;
             font-family: 'Bebas Neue', sans-serif;
             color: #000;
@@ -635,11 +636,11 @@
         }
     }
     &__about{
-        width: calc(100% - 305px);
+        width: calc(100% - 240px);
         
         p{
-            font-size: 24px;
-            line-height: 32px;
+            font-size: 18px;
+            line-height: 28px;
             color: #000;
             text-align: justify;
             margin: 0;

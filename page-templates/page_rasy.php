@@ -219,7 +219,7 @@ if($_SERVER['SERVER_NAME'] == 'psibufet.local'){
                         ?>
                         <div class="boxes__box">
                             <div class="icon">
-                                <img src="<?php echo $icon; ?>" class="no-lazyload"/>
+                                <img data-original="<?php echo $icon; ?>" class="no-lazyload"/>
                             </div>
                             <p><?php echo $text; ?></p>
                         </div>
@@ -288,7 +288,7 @@ if($_SERVER['SERVER_NAME'] == 'psibufet.local'){
 
     <div class="subscriptionModal">
         <div class="subscriptionModal__wrap">
-            <img class="closeSubModal closeImg no-lazyload" src="<?php echo get_template_directory_uri() . '/images/icons/closeModal_ico.svg'; ?>"/>
+            <img class="closeSubModal closeImg no-lazyload" data-original="<?php echo get_template_directory_uri() . '/images/icons/closeModal_ico.svg'; ?>"/>
             <div class="subscriptionModal__content">
                 <h2 class="getMarker">Pełna elastyczność - nowy wymiar <span class="marker">subskrypcji</span>.</h2>
                 <div class="uspList">
@@ -328,7 +328,7 @@ if($_SERVER['SERVER_NAME'] == 'psibufet.local'){
 
     <div class="foodModal">
         <div class="foodModal__wrap">
-            <img class="closeFoodModal closeImg no-lazyload" src="<?php echo get_template_directory_uri() . '/images/icons/closeModal_ico.svg'; ?>"/>
+            <img class="closeFoodModal closeImg no-lazyload" data-original="<?php echo get_template_directory_uri() . '/images/icons/closeModal_ico.svg'; ?>"/>
             <?php
                 if($flavours){
                     foreach( $flavours as $post ){

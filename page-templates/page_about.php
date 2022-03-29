@@ -130,13 +130,13 @@ get_header(); ?>
             <?php foreach( $posts as $post ): setup_postdata( $post ); ?>
                 <div class="post">
                     <div class="thumb">
-                        <img src="<?php the_field('post_thumbnail'); ?>" class="no-lazyload"/>
+                        <img data-original="<?php the_field('post_thumbnail'); ?>" class="no-lazyload"/>
                     </div>
                     <div class="content">
                         <div class="actions">
-                            <img src="<?php echo get_template_directory_uri() . '/images/ig_like.svg'; ?>" class="no-lazyload"/>
-                            <img src="<?php echo get_template_directory_uri() . '/images/ig_comment.svg'; ?>" class="no-lazyload"/>
-                            <img src="<?php echo get_template_directory_uri() . '/images/ig_send.svg'; ?>" class="no-lazyload"/>
+                            <img data-original="<?php echo get_template_directory_uri() . '/images/ig_like.svg'; ?>" class="no-lazyload"/>
+                            <img data-original="<?php echo get_template_directory_uri() . '/images/ig_comment.svg'; ?>" class="no-lazyload"/>
+                            <img data-original="<?php echo get_template_directory_uri() . '/images/ig_send.svg'; ?>" class="no-lazyload"/>
                         </div>
                         <p><b><?php the_field('user_name'); ?>:</b> <?php the_field('post_content'); ?></p>
                     </div>

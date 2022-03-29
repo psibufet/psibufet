@@ -57,8 +57,8 @@ get_header(); ?>
     <section class="recipesBanner">
         <div class="recipesBanner__wrap">
             <div class="recipesBanner__badges">
-                <img src="<?php echo get_template_directory_uri() . '/images/recipes/polskiProdukt_ico.svg'; ?>" class="polski no-lazyload" alt="PsiBufet - Polski proudukt"/>
-                <img src="<?php echo get_template_directory_uri() . '/images/recipes/lider_ico.png'; ?>" class="lider no-lazyload" alt="PsiBufet - Konsumencki Lider Jakości 2021"/>
+                <img data-original="<?php echo get_template_directory_uri() . '/images/recipes/polskiProdukt_ico.svg'; ?>" class="polski no-lazyload" alt="PsiBufet - Polski proudukt"/>
+                <img data-original="<?php echo get_template_directory_uri() . '/images/recipes/lider_ico.png'; ?>" class="lider no-lazyload" alt="PsiBufet - Konsumencki Lider Jakości 2021"/>
             </div>
             <img src="<?php echo get_template_directory_uri() . '/images/recipes/recipesBanner.gif'; ?>" alt="<?php echo get_field('recipesGif_alt'); ?>"/>
         </div>
@@ -115,7 +115,7 @@ get_header(); ?>
                 ?>
                 <div class="recipesParts__box">
                     <div class="image">
-                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="no-lazyload"/>
+                        <img data-original="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="no-lazyload"/>
                     </div>
                     <div class="content">
                         <p><b><?php echo $name; ?>:</b> <?php echo $content; ?></p>
@@ -235,7 +235,7 @@ get_header(); ?>
 
     <div class="foodModal">
         <div class="foodModal__wrap">
-            <img class="closeFoodModal closeImg no-lazyload" src="<?php echo get_template_directory_uri() . '/images/icons/closeModal_ico.svg'; ?>"/>
+            <img class="closeFoodModal closeImg no-lazyload" data-original="<?php echo get_template_directory_uri() . '/images/icons/closeModal_ico.svg'; ?>"/>
             <?php
                 if($flavours){
                     foreach( $flavours as $post ){

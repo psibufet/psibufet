@@ -72,20 +72,14 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        width: calc(100% / 2 - 20px);
+        width: calc(100% / 3 - 10px);
         min-height: 362px;
-        margin: 0 0 40px;
+        margin: 0 0 20px;
         box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
         cursor: pointer;
 
         &:hover{
             opacity: .8;
-        }
-
-        @media (min-width: 768px){
-            &:nth-last-child(-n+2){
-                margin: 0;
-            }
         }
 
         h2{

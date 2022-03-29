@@ -16051,19 +16051,14 @@ body.admin-bar .pagePDF {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: calc(50% - 20px);
+  width: calc(33.3333333333% - 10px);
   min-height: 362px;
-  margin: 0 0 40px;
+  margin: 0 0 20px;
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 .rascatList .rasaPost:hover {
   opacity: 0.8;
-}
-@media (min-width: 768px) {
-  .rascatList .rasaPost:nth-last-child(-n+2) {
-    margin: 0;
-  }
 }
 .rascatList .rasaPost h2 {
   font-size: 48px;
@@ -16165,11 +16160,11 @@ body.admin-bar .pagePDF {
 
 .raspostMainInfo {
   background-color: rgba(247, 190, 69, 0.5);
-  padding: 32px 0 35px;
+  padding: 50px 0 70px;
 }
 .raspostMainInfo__wrap .info p {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 18px;
+  line-height: 24px;
   text-align: justify;
   color: #000;
 }
@@ -16259,17 +16254,17 @@ body.admin-bar .pagePDF {
   margin: 0 0 40px;
 }
 .raspostMainheading .tags__heading {
-  font-size: 48px;
-  line-height: 56px;
+  font-size: 42px;
+  line-height: 52px;
   font-weight: 400;
   font-family: "Bebas Neue", sans-serif;
   color: #000;
   text-align: center;
-  margin: 0 0 20px;
+  margin: 0 0 15px;
 }
 .raspostMainheading .tags__tag {
-  font-size: 24px;
-  line-height: 28px;
+  font-size: 18px;
+  line-height: 21px;
   color: #000;
   margin: 0;
   padding-right: 15px;
@@ -16291,7 +16286,7 @@ body.admin-bar .pagePDF {
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
-  padding: 38px 40px 56px;
+  padding: 28px 30px 46px;
 }
 .raspostMainheading .contentsTable__heading {
   display: flex;
@@ -16312,8 +16307,8 @@ body.admin-bar .pagePDF {
   z-index: 1;
 }
 .raspostMainheading .contentsTable__heading h2 {
-  font-size: 48px;
-  line-height: 56px;
+  font-size: 42px;
+  line-height: 52px;
   font-weight: 400;
   font-family: "Bebas Neue", sans-serif;
   color: #000;
@@ -16336,8 +16331,8 @@ body.admin-bar .pagePDF {
 }
 .raspostMainheading .contentsTable__list .pos__name {
   display: block;
-  font-size: 36px;
-  line-height: 46px;
+  font-size: 32px;
+  line-height: 40px;
   font-weight: 400;
   font-family: "Bebas Neue", sans-serif;
   color: #000;
@@ -16351,8 +16346,8 @@ body.admin-bar .pagePDF {
 .raspostMainheading .contentsTable__list .pos__section {
   display: block;
   padding-left: 50px;
-  font-size: 36px;
-  line-height: 46px;
+  font-size: 28px;
+  line-height: 38px;
   font-weight: 400;
   font-family: "Bebas Neue", sans-serif;
   color: #000;
@@ -16366,8 +16361,8 @@ body.admin-bar .pagePDF {
 
 @media (max-width: 1199px) {
   .raspostMainheading .tags__tag {
-    font-size: 21px;
-    line-height: 26px;
+    font-size: 18px;
+    line-height: 21px;
   }
 }
 @media (max-width: 767px) {
@@ -16383,7 +16378,7 @@ body.admin-bar .pagePDF {
   }
   .raspostMainheading .tags__tag {
     font-size: 18px;
-    line-height: 28px;
+    line-height: 21px;
   }
   .raspostMainheading .contentsTable {
     padding: 0;
@@ -16428,8 +16423,8 @@ body.admin-bar .pagePDF {
   padding: 32px 0 40px;
 }
 .breedInfo__wrap h2 {
-  font-size: 48px;
-  line-height: 58px;
+  font-size: 42px;
+  line-height: 52px;
   font-weight: 400;
   font-family: "Bebas Neue", sans-serif;
   color: #000;
@@ -16446,8 +16441,8 @@ body.admin-bar .pagePDF {
   object-fit: contain;
 }
 .breedInfo__content p {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 18px;
+  line-height: 24px;
   color: #000;
   text-align: justify;
   margin: 0 0 40px;
@@ -16456,7 +16451,7 @@ body.admin-bar .pagePDF {
   margin: 0;
 }
 .breedInfo__content ul li {
-  font-size: 24px;
+  font-size: 18px;
   margin: 0 0 10px;
 }
 .breedInfo__content ul li:last-of-type {
@@ -16475,8 +16470,8 @@ body.admin-bar .pagePDF {
   text-align: center;
 }
 .breedInfo__section p {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 18px;
+  line-height: 24px;
   color: #000;
   text-align: justify;
   margin: 0 0 40px;
@@ -16485,7 +16480,7 @@ body.admin-bar .pagePDF {
   margin: 0;
 }
 .breedInfo__section ul li {
-  font-size: 24px;
+  font-size: 18px;
   margin: 0 0 10px;
 }
 .breedInfo__section ul li:last-of-type {
@@ -16586,13 +16581,13 @@ body.admin-bar .pagePDF {
   padding: 30px 0 40px;
 }
 .postAuthor__title {
-  font-size: 48px;
-  line-height: 58px;
+  font-size: 42px;
+  line-height: 52px;
   font-weight: 400;
   font-family: "Bebas Neue", sans-serif;
   color: #000;
   text-align: center;
-  margin: 0 0 25px;
+  margin: 0 0 20px;
 }
 .postAuthor__content {
   display: flex;
@@ -16603,7 +16598,7 @@ body.admin-bar .pagePDF {
   padding: 50px 40px 35px;
 }
 .postAuthor__author {
-  width: 265px;
+  width: 200px;
   margin-right: 40px;
 }
 .postAuthor__author .image {
@@ -16619,8 +16614,8 @@ body.admin-bar .pagePDF {
   border-radius: 100%;
 }
 .postAuthor__author h3 {
-  font-size: 26px;
-  line-height: 32px;
+  font-size: 24px;
+  line-height: 28px;
   font-weight: 400;
   font-family: "Bebas Neue", sans-serif;
   color: #000;
@@ -16628,11 +16623,11 @@ body.admin-bar .pagePDF {
   text-align: center;
 }
 .postAuthor__about {
-  width: calc(100% - 305px);
+  width: calc(100% - 240px);
 }
 .postAuthor__about p {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 18px;
+  line-height: 28px;
   color: #000;
   text-align: justify;
   margin: 0;

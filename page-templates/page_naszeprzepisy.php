@@ -171,14 +171,14 @@ Template Name: Nasze Przepisy
                 <li class="post <?php if( get_field('full_post') ) { ?>full-post<?php } ?>">
                     <div class="inner short">
                         <div class="post_thumbnail">
-                            <img src="<?php the_field('post_thumbnail'); ?>" class="no-lazyload"/>
+                            <img data-original="<?php the_field('post_thumbnail'); ?>" class="no-lazyload"/>
                         </div>
                         <div class="post_content">
                             <div class="excerpt">
                                 <div class="post_info">
-                                    <img src="/wp-content/themes/psibufet/images/ig_like.svg" class="no-lazyload"/>
-                                    <img src="/wp-content/themes/psibufet/images/ig_comment.svg" class="no-lazyload"/>
-                                    <img src="/wp-content/themes/psibufet/images/ig_send.svg" class="no-lazyload"/>
+                                    <img data-original="/wp-content/themes/psibufet/images/ig_like.svg" class="no-lazyload"/>
+                                    <img data-original="/wp-content/themes/psibufet/images/ig_comment.svg" class="no-lazyload"/>
+                                    <img data-original="/wp-content/themes/psibufet/images/ig_send.svg" class="no-lazyload"/>
                                 </div>
                                 <p><span class="nickname"><?php the_field('user_name'); ?>: </span><?php the_field('post_content'); ?></p>
                             </div>
@@ -186,12 +186,12 @@ Template Name: Nasze Przepisy
                     </div>
                     <div class="inner full">
                         <div class="post_thumbnail">
-                            <img src="<?php the_field('backing_image'); ?>" class="no-lazyload"/>
+                            <img data-original="<?php the_field('backing_image'); ?>" class="no-lazyload"/>
                         </div>
                         <div class="full">
                             <div class="full_heading">
                                 <div class="image">
-                                    <img src="<?php the_field('account_image'); ?>" class="no-lazyload"/>
+                                    <img data-original="<?php the_field('account_image'); ?>" class="no-lazyload"/>
                                 </div>
                                 <h4><?php the_field('name'); ?></h4>
                             </div>
@@ -204,8 +204,8 @@ Template Name: Nasze Przepisy
                                 <p><?php the_field('post_content'); ?></p>
                             </div>
                             <div class="full_post_info">
-                                <img src="/wp-content/themes/psibufet/images/ig_like.svg" class="no-lazyload"/>
-                                <img src="/wp-content/themes/psibufet/images/subway_like.svg" class="no-lazyload"/>
+                                <img data-original="/wp-content/themes/psibufet/images/ig_like.svg" class="no-lazyload"/>
+                                <img data-original="/wp-content/themes/psibufet/images/subway_like.svg" class="no-lazyload"/>
                                 <span><?php the_field('like_count'); ?></span>
                             </div>
                         </div>
@@ -304,7 +304,7 @@ Template Name: Nasze Przepisy
                     ?>
                 <li class="skladnik slide">
                     <div class="thumb">
-                        <img src="<?php echo $image; ?>" class="no-lazyload"/>
+                        <img data-original="<?php echo $image; ?>" class="no-lazyload"/>
                     </div>
                     <div class="content">
                         <p><b><?php echo $name; ?>: </b><?php echo $desc; ?></p>

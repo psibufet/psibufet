@@ -13,6 +13,17 @@
 }    
 
 /**
+ * Lazyload
+ */
+$(document).ready(function(){
+    $('.no-lazyload').each(function(){
+        $(this).lazyload({
+            effect: "fadeIn",
+        });
+    });
+});
+
+/**
  * Preloader
  */
 $(document).on('ready', function(){

@@ -4,7 +4,7 @@
     </div>
     <div class="flavourTile__bar" style="background-color: <?php echo the_field('flavourColor'); ?>">
         <p><?php the_field('flavourName'); ?></p>
-        <img class="no-lazyload" src="<?php the_field('flavourIcon'); ?>"/>
+        <img class="no-lazyload" data-original="<?php the_field('flavourIcon'); ?>"/>
     </div>
     <div class="flavourTile__content">
         <p class="desc"><?php echo the_field('flavourDesc'); ?></p>

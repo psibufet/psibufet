@@ -81,7 +81,7 @@ get_header(); ?>
                     $link = get_sub_field('restInstagram_link');
                 ?>
                     <a href="<?php echo $link; ?>" target="_blank" class="restPost">
-                        <img class="no-lazyload" src="<?php echo $post['url']; ?>" alt="<?php echo $post['alt']; ?>"/>
+                        <img class="no-lazyload" data-original="<?php echo $post['url']; ?>" alt="<?php echo $post['alt']; ?>"/>
                     </a>
                 <?php endwhile; ?>
             </div>

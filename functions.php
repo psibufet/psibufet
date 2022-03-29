@@ -613,6 +613,10 @@ function psibufet_scripts(){
 	wp_register_script( 'jquery-visible', get_template_directory_uri() . '/plugins/visible/jquery.visible.min.js', null, null, true );
 	wp_enqueue_script('jquery-visible');
 
+	// Lazyload
+	wp_register_script( 'jquery-lazyload', get_template_directory_uri() . '/plugins/lazyload/lazyload.js', null, null, true );
+	wp_enqueue_script('jquery-lazyload');
+
 	// Confetti
 	wp_register_script('psibufet-confetti', get_template_directory_uri() . '/plugins/confetti/confetti.min.js', null, null, true);
 	wp_enqueue_script('psibufet-confetti');

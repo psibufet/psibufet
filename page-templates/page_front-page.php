@@ -112,7 +112,7 @@ get_header(); ?>
                             $image = get_sub_field('karma_img');
                         ?>
                             <div class="homeFoodinfo__info" data="data_0<?php echo get_row_index(); ?>">
-                                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="no-lazyload"/>
+                                <img data-original="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="no-lazyload"/>
                             </div>
                         <?php endwhile; ?>
                     </div>
@@ -166,7 +166,7 @@ get_header(); ?>
         <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir"><span><?php the_field('front_foodinfo_cta') ?></span></a>
         <div class="foodModal">
             <div class="foodModal__wrap">
-                <img class="closeFoodModal closeImg no-lazyload" src="<?php echo get_template_directory_uri() . '/images/icons/closeModal_ico.svg'; ?>"/>
+                <img class="closeFoodModal closeImg no-lazyload" data-original="<?php echo get_template_directory_uri() . '/images/icons/closeModal_ico.svg'; ?>"/>
                 <?php while( have_rows('slider_z_karmami') ): the_row();
                     $images = get_sub_field('karma_gallery');
                     $name = get_sub_field('karma_name');
@@ -181,11 +181,11 @@ get_header(); ?>
                     <div class="gallery" data="data_0<?php echo get_row_index(); ?>">
                         <?php foreach( $images as $image ): ?>
                             <div class="gallery__image">
-                                <img class="no-lazyload" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
+                                <img class="no-lazyload" data-original="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
                             </div>
                         <?php endforeach; ?>
                     </div>
-                    <div class="title" style="background-color: <?php echo $color; ?>"><p><?php echo $name; ?><img class="no-lazyload" src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>"/></p></div>
+                    <div class="title" style="background-color: <?php echo $color; ?>"><p><?php echo $name; ?><img class="no-lazyload" data-original="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>"/></p></div>
                     <div class="desc">
                         <p><?php echo $desc; ?></p>
                     </div>
@@ -231,7 +231,7 @@ get_header(); ?>
                         <div class="accordion__element accordion__element--close">
                             <div class="heading">
                                 <p>Skład</p>
-                                <img class="no-lazyload" src="<?php echo get_template_directory_uri() . '/images/icons/arrow_down_red_ico.svg'; ?>"/>
+                                <img class="no-lazyload" data-original="<?php echo get_template_directory_uri() . '/images/icons/arrow_down_red_ico.svg'; ?>"/>
                             </div>
                             <div class="content">
                                 <p><?php echo $sklad; ?></p>
@@ -440,13 +440,13 @@ get_header(); ?>
             <?php foreach( $posts as $post ): setup_postdata( $post ); ?>
                 <div class="post">
                     <div class="thumb">
-                        <img src="<?php the_field('post_thumbnail'); ?>" class="no-lazyload"/>
+                        <img data-original="<?php the_field('post_thumbnail'); ?>" class="no-lazyload"/>
                     </div>
                     <div class="content">
                         <div class="actions">
-                            <img src="<?php echo get_template_directory_uri() . '/images/ig_like.svg'; ?>" class="no-lazyload"/>
-                            <img src="<?php echo get_template_directory_uri() . '/images/ig_comment.svg'; ?>" class="no-lazyload"/>
-                            <img src="<?php echo get_template_directory_uri() . '/images/ig_send.svg'; ?>" class="no-lazyload"/>
+                            <img data-original="<?php echo get_template_directory_uri() . '/images/ig_like.svg'; ?>" class="no-lazyload"/>
+                            <img data-original="<?php echo get_template_directory_uri() . '/images/ig_comment.svg'; ?>" class="no-lazyload"/>
+                            <img data-original="<?php echo get_template_directory_uri() . '/images/ig_send.svg'; ?>" class="no-lazyload"/>
                         </div>
                         <p><b><?php the_field('user_name'); ?>:</b> <?php the_field('post_content'); ?></p>
                     </div>

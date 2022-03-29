@@ -51,13 +51,13 @@ get_header(); ?>
             <h2 class="getMarker">Poznaj <span class="marker">twórców</span></h2>
             <div class="meetMakers__images">
                 <div class="image">
-                    <img class="no-lazyload" src="<?php echo get_template_directory_uri() . '/images/book/first_person.png'; ?>"/>
+                    <img class="no-lazyload" data-original="<?php echo get_template_directory_uri() . '/images/book/first_person.png'; ?>"/>
                 </div>
                 <div class="image">
-                    <img class="no-lazyload" src="<?php echo get_template_directory_uri() . '/images/book/sec_person.png'; ?>"/>
+                    <img class="no-lazyload" data-original="<?php echo get_template_directory_uri() . '/images/book/sec_person.png'; ?>"/>
                 </div>
                 <div class="image">
-                    <img class="no-lazyload" src="<?php echo get_template_directory_uri() . '/images/book/third_person.png'; ?>"/>
+                    <img class="no-lazyload" data-original="<?php echo get_template_directory_uri() . '/images/book/third_person.png'; ?>"/>
                 </div>
             </div>
             <img src="<?php echo get_template_directory_uri() . '/images/book/autorzy_razem.png'; ?>" />

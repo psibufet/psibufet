@@ -49,21 +49,21 @@ get_header(); ?>
     <!-- Google Shopping - meta -->
 
     <section class="gsKarmainfo" itemscope itemtype="http://schema.org/Product">
-        <img src="<?php echo $image; ?>" class="no-lazyload" itemprop="image" style="display: none !important;"/>
+        <img data-original="<?php echo $image; ?>" class="no-lazyload" itemprop="image" style="display: none !important;"/>
         <div class="gsKarmainfo__wrap">
             <div class="gsKarmainfo__gallery">
                 <div class="gallery">
                     <?php foreach( $featuredFlavour as $post ): setup_postdata($post); ?>
                         <?php while(have_rows('gspageGallery')): the_row(); ?>
                         <div class="gallery__photo">
-                            <img src="<?php echo get_sub_field('gspageGallery_image')['url']; ?>" alt="<?php echo get_sub_field('gspageGallery_image')['alt']; ?>" class="no-lazyload"/>
+                            <img data-original="<?php echo get_sub_field('gspageGallery_image')['url']; ?>" alt="<?php echo get_sub_field('gspageGallery_image')['alt']; ?>" class="no-lazyload"/>
                         </div>
                         <?php endwhile; ?>
                     <?php endforeach; ?>
                 </div>
                 <div class="bar" style="background-color: <?php the_field('flavourColor'); ?>">
                     <p itemprop="name"><?php the_field('flavourName'); ?></p>
-                    <img class="no-lazyload" src="<?php the_field('flavourIcon'); ?>"/>
+                    <img class="no-lazyload" data-original="<?php the_field('flavourIcon'); ?>"/>
                 </div>
             </div>
             <div class="gsKarmainfo__content">
@@ -109,7 +109,7 @@ get_header(); ?>
     </section>
     <div class="foodModal">
         <div class="foodModal__wrap">
-            <img class="closeFoodModal closeImg no-lazyload" src="<?php echo get_template_directory_uri() . '/images/icons/closeModal_ico.svg'; ?>"/>
+            <img class="closeFoodModal closeImg no-lazyload" data-original="<?php echo get_template_directory_uri() . '/images/icons/closeModal_ico.svg'; ?>"/>
             <?php foreach( $featuredFlavour as $post ): setup_postdata($post);
                 $images = get_field('flavourPopup_gallery');
                 $name = get_field('flavourName');
@@ -124,11 +124,11 @@ get_header(); ?>
                 <div class="gallery">
                     <?php foreach( $images as $image ): ?>
                         <div class="gallery__image">
-                            <img class="no-lazyload" src="<?php echo $image; ?>"/>
+                            <img class="no-lazyload" data-original="<?php echo $image; ?>"/>
                         </div>
                     <?php endforeach; ?>
                 </div>
-                <div class="title" style="background-color: <?php echo $color; ?>"><p><?php echo $name; ?><img class="no-lazyload" src="<?php echo $icon; ?>"/></p></div>
+                <div class="title" style="background-color: <?php echo $color; ?>"><p><?php echo $name; ?><img class="no-lazyload" data-original="<?php echo $icon; ?>"/></p></div>
                 <div class="desc">
                     <p><?php echo $desc; ?></p>
                 </div>
@@ -174,7 +174,7 @@ get_header(); ?>
                     <div class="accordion__element accordion__element--close">
                         <div class="heading">
                             <p>Skład</p>
-                            <img class="no-lazyload" src="<?php echo get_template_directory_uri() . '/images/icons/arrow_down_red_ico.svg'; ?>"/>
+                            <img class="no-lazyload" data-original="<?php echo get_template_directory_uri() . '/images/icons/arrow_down_red_ico.svg'; ?>"/>
                         </div>
                         <div class="content">
                             <p><?php echo $sklad; ?></p>

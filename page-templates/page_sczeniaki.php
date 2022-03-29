@@ -30,11 +30,11 @@ get_header(); ?>
                     <?php endif; ?>
                     <?php if( $google ): ?>
                         <div class="stars">
-                            <img src="/wp-content/themes/psibufet/images/reviews/star.svg" class="no-lazyload"/>
-                            <img src="/wp-content/themes/psibufet/images/reviews/star.svg" class="no-lazyload"/>
-                            <img src="/wp-content/themes/psibufet/images/reviews/star.svg" class="no-lazyload"/>
-                            <img src="/wp-content/themes/psibufet/images/reviews/star.svg" class="no-lazyload"/>
-                            <img src="/wp-content/themes/psibufet/images/reviews/star.svg" class="no-lazyload"/>
+                            <img data-original="/wp-content/themes/psibufet/images/reviews/star.svg" class="no-lazyload"/>
+                            <img data-original="/wp-content/themes/psibufet/images/reviews/star.svg" class="no-lazyload"/>
+                            <img data-original="/wp-content/themes/psibufet/images/reviews/star.svg" class="no-lazyload"/>
+                            <img data-original="/wp-content/themes/psibufet/images/reviews/star.svg" class="no-lazyload"/>
+                            <img data-original="/wp-content/themes/psibufet/images/reviews/star.svg" class="no-lazyload"/>
                         </div>
                         <p><?php echo $googleRate; ?>/5 wg opinii klientów</p>
                     <?php endif; ?>
@@ -82,7 +82,7 @@ get_header(); ?>
                 <div class="stars">
                     <?php for($i = 0; $i < $stars; $i++): ?>
                     <div class="stars__star">
-                        <img src="<?php echo get_template_directory_uri() . '/images/szczeniaki/review_star.svg'; ?>" class="no-lazyload"/>
+                        <img data-original="<?php echo get_template_directory_uri() . '/images/szczeniaki/review_star.svg'; ?>" class="no-lazyload"/>
                     </div>
                     <?php endfor; ?>
                 </div>
