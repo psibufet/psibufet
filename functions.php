@@ -621,14 +621,14 @@ function psibufet_scripts(){
 	wp_register_script('psibufet-confetti', get_template_directory_uri() . '/plugins/confetti/confetti.min.js', null, null, true);
 	wp_enqueue_script('psibufet-confetti');
 
+	// Restaurants map
+	wp_register_script( 'psibufet-restmap', get_template_directory_uri() . '/js/_restMap.js?ver=' . $theme_version . $random_number, null, null, true );
+	wp_enqueue_script('psibufet-restmap');
+
 	// Custom scripts / sliders
 	wp_register_script( 'psibufet-script', get_template_directory_uri() . '/js/custom.js?ver=' . $theme_version . $random_number, null, null, true );
 	wp_enqueue_script('psibufet-script');
 	wp_localize_script( 'psibufet-script', 'PBAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
-	
-	// Restaurants map
-	wp_register_script( 'psibufet-restmap', get_template_directory_uri() . '/js/_restMap.js?ver=' . $theme_version . $random_number, null, null, true );
-	wp_enqueue_script('psibufet-restmap');
 
 	// Sliders
 	wp_register_script( 'psibufet-sliders', get_template_directory_uri() . '/js/_sliders.js?ver=' . $theme_version . $random_number, null, null, true );

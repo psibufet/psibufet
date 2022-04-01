@@ -17,9 +17,14 @@
  */
 $(document).ready(function(){
     $('.no-lazyload').each(function(){
-        $(this).lazyload({
-            effect: "fadeIn",
-        });
+        if(!$(this).hasClass('lazy-fix')){
+            $(this).lazyload({
+                effect: "fadeIn",
+            });
+        }else{
+            var src = $(this).attr('data-original');
+            $(this).attr('src', src);
+        }
     });
 });
 

@@ -65,6 +65,9 @@
                             </div>
                             <?php endwhile; ?>
                         </div>
+                        <div class="cta">
+                            <a href="<?php echo get_sub_field('ad_link'); ?>" class="btn btn--center"><span>Dowiedz się więcej</span></a>
+                        </div>
                     </div>
                     <?php endif; ?>
                 <?php endwhile; ?>

@@ -176,7 +176,7 @@ get_header(); ?>
         <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir dir"><span><?php the_field('front_foodinfo_cta', 5) ?></span></a>
         <div class="foodModal">
             <div class="foodModal__wrap">
-                <img class="closeFoodModal closeImg no-lazyload" data-original="<?php echo get_template_directory_uri() . '/images/icons/closeModal_ico.svg'; ?>"/>
+                <img class="closeFoodModal closeImg no-lazyload lazy-fix" data-original="<?php echo get_template_directory_uri() . '/images/icons/closeModal_ico.svg'; ?>"/>
                 <?php while( have_rows('slider_z_karmami', 5) ): the_row();
                     $images = get_sub_field('karma_gallery');
                     $name = get_sub_field('karma_name');
@@ -191,11 +191,11 @@ get_header(); ?>
                     <div class="gallery" data="data_0<?php echo get_row_index(); ?>">
                         <?php foreach( $images as $image ): ?>
                             <div class="gallery__image">
-                                <img class="no-lazyload" data-original="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
+                                <img class="no-lazyload lazy-fix" data-original="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
                             </div>
                         <?php endforeach; ?>
                     </div>
-                    <div class="title" style="background-color: <?php echo $color; ?>"><p><?php echo $name; ?><img class="no-lazyload" data-original="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>"/></p></div>
+                    <div class="title" style="background-color: <?php echo $color; ?>"><p><?php echo $name; ?><img class="no-lazyload lazy-fix" data-original="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>"/></p></div>
                     <div class="desc">
                         <p><?php echo $desc; ?></p>
                     </div>

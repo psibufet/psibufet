@@ -16165,7 +16165,7 @@ body.admin-bar .pagePDF {
 .raspostMainInfo__wrap .info p {
   font-size: 18px;
   line-height: 24px;
-  text-align: justify;
+  text-align: left;
   color: #000;
 }
 .raspostMainInfo__wrap .info p:last-of-type {
@@ -16444,7 +16444,7 @@ body.admin-bar .pagePDF {
   font-size: 18px;
   line-height: 24px;
   color: #000;
-  text-align: justify;
+  text-align: left;
   margin: 0 0 40px;
 }
 .breedInfo__content p:last-of-type {
@@ -16473,7 +16473,7 @@ body.admin-bar .pagePDF {
   font-size: 18px;
   line-height: 24px;
   color: #000;
-  text-align: justify;
+  text-align: left;
   margin: 0 0 40px;
 }
 .breedInfo__section p:last-of-type {
@@ -16519,6 +16519,9 @@ body.admin-bar .pagePDF {
   color: #000;
   text-align: center;
   margin: 0;
+}
+.breedInfo__banner .cta {
+  margin: 30px 0 0;
 }
 
 @media (max-width: 767px) {

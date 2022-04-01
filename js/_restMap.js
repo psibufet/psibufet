@@ -228,7 +228,7 @@
     // Render maps on page load.
     $(document).ready(function(){
         $('#restaurantMap').each(function(){
-            var map = initMap( $(this) );
+            var map = initMap($(this));
         });
         $('body').on('rest_map_ready', function(){
             var restaurants = $('.group').find('p');
