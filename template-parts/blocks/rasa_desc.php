@@ -66,7 +66,7 @@
                             <?php endwhile; ?>
                         </div>
                         <div class="cta">
-                            <a href="<?php echo get_sub_field('ad_link'); ?>" class="btn btn--center"><span>Dowiedz się więcej</span></a>
+                            <a href="<?php the_field('ad_link', 'cpt_rasy-psow_ustawienia'); ?>" class="btn btn--center"><span>Dowiedz się więcej</span></a>
                         </div>
                     </div>
                     <?php endif; ?>

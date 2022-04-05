@@ -22,7 +22,7 @@
             "key": "field_6238918aedcf2",
             "label": "Link",
             "name": "rasa_banner_url",
-            "type": "url",
+            "type": "text",
             "instructions": "",
             "required": 1,
             "conditional_logic": 0,
@@ -32,7 +32,10 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": ""
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_62388fc452132",
@@ -182,6 +185,25 @@
             ]
         },
         {
+            "key": "field_624c2d157c000",
+            "label": "Link przycisku",
+            "name": "ad_link",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_6238906b75d51",
             "label": "Autor",
             "name": "",
@@ -234,5 +256,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1647874461
+    "modified": 1649159479
 }

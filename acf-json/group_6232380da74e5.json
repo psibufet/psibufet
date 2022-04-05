@@ -118,30 +118,6 @@
                     "ui_off_text": ""
                 },
                 {
-                    "key": "field_62470b3fd24b7",
-                    "label": "Link przycisku",
-                    "name": "ad_link",
-                    "type": "url",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_623245e00deae",
-                                "operator": "==",
-                                "value": "1"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": ""
-                },
-                {
                     "key": "field_62323ce62b3c7",
                     "label": "Tytuł",
                     "name": "rasa_sections_title",
@@ -215,5 +191,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1648823127
+    "modified": 1649159416
 }
