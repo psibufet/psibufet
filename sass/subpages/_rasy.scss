@@ -59,7 +59,6 @@
 
     &__wrap{
         display: flex;
-        justify-content: space-between;
         flex-wrap: wrap;
         max-width: 1170px;
         padding: 0 20px;
@@ -74,9 +73,15 @@
         background-position: center;
         width: calc(100% / 3 - 10px);
         min-height: 362px;
-        margin: 0 0 20px;
+        margin: 0 15px 20px 0;
         box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
         cursor: pointer;
+
+        @media (min-width: 992px){
+            &:nth-of-type(3n+3){
+                margin-right: 0;
+            }
+        }
 
         &:hover{
             opacity: .8;
@@ -90,6 +95,7 @@
             color: #fff;
             margin: 0 0 26px;
             text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+            text-align: center;
         }
     }
 }
@@ -98,6 +104,10 @@
         .rasaPost{
             width: calc(100% / 2 - 10px);
             min-height: 290px;
+
+            &:nth-of-type(2n+2){
+                margin-right: 0;
+            }
         }
     }
 }

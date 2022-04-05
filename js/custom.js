@@ -1523,15 +1523,16 @@ $(document).ready(function(){
             var top = windowOffset - sidebarOffset + 30;
 
             if(windowOffset >= sidebarOffset && windowOffset_sidebar <= videoOffset){
-                sidebar.css('top', top);
+                sidebar.css('transform', 'translateY(' + top + 'px)');
             }else if(windowOffset_sidebar >= videoOffset){
                 if($(window).width() > 1199){
-                    sidebar.css('top', videoOffset - $('.howVideo').height() - sidebar.height() + 64);
+                    sidebar.css('transform', 'translateY(' + videoOffset - $('.howVideo').height() - sidebar.height() + 64 + ');');
                 }else{
-                    sidebar.css('top', videoOffset - $('.howVideo').height() - sidebar.height() - 42);
+                    sidebar.css('transform', 'translateY(' + videoOffset - $('.howVideo').height() - sidebar.height() - 42 + ');');
                 }
             }else{
-                sidebar.css('top', '32px');
+                sidebar.css('top', '0');
+                sidebar.css('transform', 'translateY(32px)');
             }
         });
     }

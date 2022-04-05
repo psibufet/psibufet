@@ -16038,7 +16038,6 @@ body.admin-bar .pagePDF {
 }
 .rascatList__wrap {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   max-width: 1170px;
   padding: 0 20px;
@@ -16053,9 +16052,14 @@ body.admin-bar .pagePDF {
   background-position: center;
   width: calc(33.3333333333% - 10px);
   min-height: 362px;
-  margin: 0 0 20px;
+  margin: 0 15px 20px 0;
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+}
+@media (min-width: 992px) {
+  .rascatList .rasaPost:nth-of-type(3n+3) {
+    margin-right: 0;
+  }
 }
 .rascatList .rasaPost:hover {
   opacity: 0.8;
@@ -16068,12 +16072,16 @@ body.admin-bar .pagePDF {
   color: #fff;
   margin: 0 0 26px;
   text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
 @media (max-width: 991px) {
   .rascatList .rasaPost {
     width: calc(50% - 10px);
     min-height: 290px;
+  }
+  .rascatList .rasaPost:nth-of-type(2n+2) {
+    margin-right: 0;
   }
 }
 @media (max-width: 767px) {
@@ -16683,7 +16691,7 @@ body.admin-bar .pagePDF {
   top: 33px;
   width: 268px;
   margin: 0 auto;
-  transition: top ease 0.1s;
+  transition: transform ease 0.15s;
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
 }
