@@ -3797,7 +3797,7 @@ body.admin-bar{
                     font-size: 54px;
                     color: #fff;
                     position: absolute;
-                    left: 28px;
+                    left: 68px;
                     top: -3px;
                     z-index: 3;
                     display: block;
@@ -3840,6 +3840,18 @@ body.admin-bar{
                     height: 120px;
                     left: -30px;
                     top: -30px;
+                }
+                &--discount{
+                    &:before{
+                        font-size: 60px;
+                        padding-right: 20px;
+                        padding-top: 3px;
+                    }
+                    &:after{
+                        font-size: 35px;
+                        left: 53px;
+                        top: -8px;
+                    }
                 }
             }
         }
@@ -3905,7 +3917,7 @@ body.admin-bar{
                         padding-top: 5px;
                     }
                     &:after{
-                        left: 40px;
+                        left: 50px;
                         font-size: 35px;
                         top: -7px;
                     }
@@ -4019,9 +4031,9 @@ body.admin-bar{
                         padding-top: 5px;
                     }
                     &:after{
-                        left: 43px;
+                        left: 36px;
                         font-size: 26px;
-                        top: -2px;
+                        top: -5px;
                     }
                 }
             }
