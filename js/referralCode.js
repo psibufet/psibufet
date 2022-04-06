@@ -245,7 +245,7 @@ $(document).ready(function(){
 				},
 				success: function(){
 					$.getJSON("https://app.psibufet.pl/api/order/couponcode/" + code, function (data) {
-						if (data.purpose == "MARKETING" || data.purpose == "PARTNER" || data.purpose == "CUSTOMER_CARE" || data.purpose == "CLIENT" || data.purpose == 'INFLUENCER' || data.purpose == 'EVENT' || data.purpose == 'VET'){
+						// if (data.purpose == "MARKETING" || data.purpose == "PARTNER" || data.purpose == "CUSTOMER_CARE" || data.purpose == "CLIENT" || data.purpose == 'INFLUENCER' || data.purpose == 'EVENT' || data.purpose == 'VET'){
 							var amount = data.amount;
 							var type = data.type;
 
@@ -256,7 +256,7 @@ $(document).ready(function(){
 								promobar(code, amount, type);
 								$('#blackweek').remove();
 							}
-						}			
+						// }		
 					});
 				}
 			});
