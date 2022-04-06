@@ -12,11 +12,11 @@
     <div class="gallery" data="<?php echo get_the_ID(); ?>">
         <?php foreach( $images as $image ): ?>
             <div class="gallery__image">
-                <img class="no-lazyload lazy-fix" data-original="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
+                <img class="no-lazyload" data-original="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
             </div>
         <?php endforeach; ?>
     </div>
-    <div class="title" style="background-color: <?php echo $color; ?>"><p><?php echo $name; ?><img class="no-lazyload lazy-fix" data-original="<?php echo $icon; ?>"/></p></div>
+    <div class="title" style="background-color: <?php echo $color; ?>"><p><?php echo $name; ?><img class="no-lazyload" data-original="<?php echo $icon; ?>"/></p></div>
     <div class="desc">
         <p><?php echo $desc; ?></p>
     </div>

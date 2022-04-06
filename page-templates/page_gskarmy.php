@@ -109,7 +109,7 @@ get_header(); ?>
     </section>
     <div class="foodModal">
         <div class="foodModal__wrap">
-            <img class="closeFoodModal closeImg no-lazyload lazy-fix" data-original="<?php echo get_template_directory_uri() . '/images/icons/closeModal_ico.svg'; ?>"/>
+        <img class="closeFoodModal closeImg no-lazyload" src="<?php echo get_template_directory_uri() . '/images/icons/closeModal_ico.svg'; ?>"/>
             <?php foreach( $featuredFlavour as $post ): setup_postdata($post);
                 $images = get_field('flavourPopup_gallery');
                 $name = get_field('flavourName');
@@ -124,11 +124,11 @@ get_header(); ?>
                 <div class="gallery">
                     <?php foreach( $images as $image ): ?>
                         <div class="gallery__image">
-                            <img class="no-lazyload lazy-fix" data-original="<?php echo $image; ?>"/>
+                            <img class="no-lazyload" data-original="<?php echo $image; ?>"/>
                         </div>
                     <?php endforeach; ?>
                 </div>
-                <div class="title" style="background-color: <?php echo $color; ?>"><p><?php echo $name; ?><img class="no-lazyload lazy-fix" data-original="<?php echo $icon; ?>"/></p></div>
+                <div class="title" style="background-color: <?php echo $color; ?>"><p><?php echo $name; ?><img class="no-lazyload" data-original="<?php echo $icon; ?>"/></p></div>
                 <div class="desc">
                     <p><?php echo $desc; ?></p>
                 </div>

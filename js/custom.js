@@ -15,18 +15,18 @@
 /**
  * Lazyload
  */
-$(document).ready(function(){
-    $('.no-lazyload').each(function(){
-        if(!$(this).hasClass('lazy-fix')){
-            $(this).lazyload({
-                effect: "fadeIn",
-            });
-        }else{
-            var src = $(this).attr('data-original');
-            $(this).attr('src', src);
-        }
-    });
-});
+// $(document).ready(function(){
+//     $('.no-lazyload').each(function(){
+//         if(!$(this).hasClass('lazy-fix')){
+//             $(this).lazyload({
+//                 effect: "fadeIn",
+//             });
+//         }else{
+//             var src = $(this).attr('data-original');
+//             $(this).attr('src', src);
+//         }
+//     });
+// });
 
 /**
  * Preloader
@@ -120,8 +120,16 @@ $(document).ready(function () {
 
     $('.infoButtons__button, .openFoodModal').on('click', function(){
         var dataid = $(this).attr('data');
-
         $('body').addClass('noscroll');
+
+        // Lazy load fix
+        $('.foodModal__content[data="' + dataid + '"]').each(function(){
+            var images = $(this).find('img[data-original]');
+            
+            $(images).each(function(){
+
+            });
+        });
 
         modal.find('.foodModal__content[data="' + dataid + '"]').addClass('foodModal__content--active');
         modal.addClass('foodModal--ready');

@@ -328,7 +328,7 @@ if($_SERVER['SERVER_NAME'] == 'psibufet.local'){
 
     <div class="foodModal">
         <div class="foodModal__wrap">
-            <img class="closeFoodModal closeImg no-lazyload lazy-fix" data-original="<?php echo get_template_directory_uri() . '/images/icons/closeModal_ico.svg'; ?>"/>
+        <img class="closeFoodModal closeImg no-lazyload" src="<?php echo get_template_directory_uri() . '/images/icons/closeModal_ico.svg'; ?>"/>
             <?php
                 if($flavours){
                     foreach( $flavours as $post ){
