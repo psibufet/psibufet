@@ -1441,6 +1441,7 @@ $(document).ready(function(){
  */
  $(document).ready(function(){
     var type = GetURLParameter('type');
+    var date = GetURLParameter('nextDeliveryDate');
     var courier = '';
     var text = '';
 
@@ -1453,6 +1454,10 @@ $(document).ready(function(){
     }else if(type == 'GOODSPEED'){
         courier = 'goodspeed';
         text = 'Nasze świeże jedzenie trafi do Was w nocy – w sam raz na poranne karmienie! Jeśli nie chcesz, żeby kurier budził Cię w środku nocy, dodaj kod do domofonu w Panelu Klienta.';
+    }
+
+    if(date !== ''){
+        $('#deliveryDate').html(date);
     }
 
     if($('main').hasClass('psibufet--typ')){
