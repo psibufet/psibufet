@@ -123,9 +123,6 @@
                 margin: 0;
             }
             .email .image p.contact{
-                display: flex;
-                align-items: center;
-                justify-content: center;
                 margin: 8px auto 0;
                 text-align: center;
             }
