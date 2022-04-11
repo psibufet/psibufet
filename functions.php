@@ -703,17 +703,19 @@ function availableForm(){
 	ob_end_clean();
 	$headers = array('Content-Type: text/html; charset=UTF-8');
 	
+	$sent = false;
+	$sent = wp_mail( $to, $subject, $message );
+
+	$sentUser = false;
 	$sentUser = wp_mail($user, $subject_user, $message_user, $headers);
 
-	if($sentUser){
-		$sent = wp_mail( $to, $subject, $message );
+	$response = array(
+		'admin' => $sent,
+		'user' => $sentUser,
+	);
 
-		if($sent){
-			echo 'done';
-		}
-	}else{
-		echo 'user_error';
-	}
+	echo $response;
+	
 	exit();
 }
 
