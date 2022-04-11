@@ -714,8 +714,8 @@ function availableForm(){
 		'user' => $sentUser,
 	);
 
-	echo $response;
-	
+	echo json_encode($response);
+
 	exit();
 }
 

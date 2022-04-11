@@ -116,10 +116,10 @@ $(document).ready(function(){
         }
 
         function ajaxSubmit() {
-            var type = partnerForm.find('input[name="partnerType"]').val();
-            var company = partnerForm.find('input[name="partnerCompany"]').val();
-            var mail = partnerForm.find('input[name="partnerEmail"]').val();
-            var phone = partnerForm.find('input[name="partnerPhone"]').val();
+            let type = partnerForm.find('input[name="partnerType"]').val(),
+                company = partnerForm.find('input[name="partnerCompany"]').val(),
+                mail = partnerForm.find('input[name="partnerEmail"]').val(),
+                phone = partnerForm.find('input[name="partnerPhone"]').val();
 
             $.ajax({ 
                 url: PBAjax.ajaxurl,
@@ -134,18 +134,27 @@ $(document).ready(function(){
 
                 success: function(response) {
                     console.log(response);
-                    if(response == 'done'){
-                        console.log('mail sent');
-                        partnerForm.removeClass('form--loading');
-                        $('.feedback').addClass('feedback--done');
-                        $('.feedback p').html('Formularz zgłoszeniowy został wysłany pomyślnie.');
-                        $('.form__submit').find('button').attr('disabled', true);
-                    }else{
-                        console.log('mail error');
-                        partnerForm.removeClass('form--loading');
-                        $('.feedback').addClass('feedback--error');
-                        $('.feedback p').html('Wystąpił błąd podczas wysyłania formularza.<br/>Spróbuj ponownie później.');
-                    }
+                    var data = jQuery.parseJSON(response);
+
+                    $.each(data, function (key, value) {
+                        if(key == 'user'){
+                            if(value == true){
+                                partnerForm.removeClass('form--loading');
+                                $('.feedback').addClass('feedback--done');
+                                $('.feedback p').html('Formularz zgłoszeniowy został wysłany pomyślnie.');
+                                $('.form__submit').find('button').attr('disabled', true);
+                            }else{
+                                console.error('ERROR: User mail error');
+                                partnerForm.removeClass('form--loading');
+                                $('.feedback').addClass('feedback--error');
+                                $('.feedback p').html('Wystąpił błąd podczas wysyłania formularza.<br/>Spróbuj ponownie później.');
+                            }
+                        }else{
+                            if(value !== true){
+                                console.error('ERROR: Admin mail does not sent');
+                            }
+                        }
+                    });
                 }
             });
             return false;
