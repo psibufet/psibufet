@@ -126,7 +126,8 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                margin: 8px 0 0;
+                margin: 8px auto 0;
+                text-align: center;
             }
             .email .image p.contact span{
                 margin: 0 15px;
