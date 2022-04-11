@@ -691,7 +691,7 @@ function availableForm(){
 	$mail = isset( $_POST['mail'] ) ? $_POST['mail'] : '';
 	$phone = isset( $_POST['phone'] ) ? $_POST['phone'] : '';
 	
-	$to = 'michalina@psibufet.pl';
+	$to = 'tomek@psibufet.pl';
 	$subject = '[PsiBufet] Zgłoszenie ambasadora';
 	$message = "Typ: " . $type . "\r\nFirma: " . $company . "\r\nMail: " . $mail . "\r\nPhone: " . $phone;
 
@@ -703,10 +703,10 @@ function availableForm(){
 	ob_end_clean();
 	$headers = array('Content-Type: text/html; charset=UTF-8');
 	
-	// $sent = wp_mail( $to, $subject, $message );
+	$sent = wp_mail( $to, $subject, $message );
 	$sentUser = wp_mail($user, $subject_user, $message_user, $headers);
 
-	if($sentUser){
+	if($sentUser && $sent){
 		echo 'done';
 	}else{
 		echo 'error';

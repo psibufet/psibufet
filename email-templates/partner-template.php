@@ -122,6 +122,22 @@
                 text-align: center;
                 margin: 0;
             }
+            .email .image p.contact{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 8px 0 0;
+            }
+            .email .image p.contact span{
+                margin: 0 15px;
+            }
+            .email .image p.contact a{
+                font-size: 14px;
+                line-height: 17px;
+                color: #000;
+                cursor: pointer;
+                text-decoration: none;
+            }
             .email .image p.big{
                 font-size: 20px;
                 line-height: 24px;
@@ -156,9 +172,10 @@
                 <a href="https://psibufet.pl/umowa_partnerska_psibufet.pdf" class="btn"><span>Umowa partnerska</span></a>
                 <p class="center">Czekam na Twoją decyzję, a w razie pytań pozostaję do dyspozycji.<br/>Z psiozdrowieniami,</p>
                 <div class="image">
-                    <img src="https://psibufet.pl/wp-content/themes/psibufet/images/email/michalina_photo.png"/>
-                    <p>Michalina</p>
-                    <p class="big">Specjalistka ds. Programu Partnerskiego</p>
+                    <img src="https://psibufet.pl/wp-content/themes/psibufet/images/email/tomasz_kornacki.png"/>
+                    <p>Tomek Kornacki</p>
+                    <p class="big">Specjalista ds. Programu Partnerskiego</p>
+                    <p class="contact"><a href="mailto:tomek@psibufet.pl">tomek@psibufet.pl</a><span>|</span><a href="tel:+48534704083">+48 534 704 083</a></p>
                 </div>
             </div>
         </div>
