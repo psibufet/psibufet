@@ -133,6 +133,7 @@ $(document).ready(function(){
                 },
 
                 success: function(response) {
+                    console.log(response);
                     if(response == 'done'){
                         console.log('mail sent');
                         partnerForm.removeClass('form--loading');
