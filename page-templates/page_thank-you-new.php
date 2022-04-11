@@ -63,7 +63,7 @@
                     <h3>kiedy otrzymam kolejną dostawę?</h3>
                 </div>
                 <div class="content">
-                    <p>Twoja druga dostawa karmy PsiBufet jest zaplanowana na <span id="deliveryDate"></span> + 14 dni. Możesz dostosować tą datę do siebie z poziomu panelu klienta.</p>
+                    <p>Twoja druga dostawa karmy PsiBufet jest zaplanowana na <span id="deliveryDate"></span>. Możesz dostosować tą datę do siebie z poziomu panelu klienta.</p>
                 </div>
             </div>
         </div>
