@@ -4,7 +4,8 @@
   "description": "PsiBufet website",
   "main": "index.js",
   "scripts": {
-    "watch sass": "sass --watch sass:css"
+    "sass": "sass --watch sass:css",
+    "minify": "css-minify -f /css/customsass.css"
   },
   "repository": {
     "type": "git",

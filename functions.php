@@ -680,6 +680,17 @@ function psibufet_scripts(){
 }
 add_action( 'wp_enqueue_scripts', 'psibufet_scripts' );
 
+/**
+ * Add preload
+ */
+add_filter( 'style_loader_tag',  'preload_filter', 10, 2 );
+function preload_filter( $html, $handle ){
+    if (strcmp($handle, 'customsass') == 0) {
+        $html = str_replace("rel='stylesheet'", "rel='preload stylesheet' as='style' crossorigin='anonymous' ", $html);
+    }
+    return $html;
+}
+
 /* Partner ajax form send engine */
 
 add_action('wp_ajax_availableForm', 'availableForm');
