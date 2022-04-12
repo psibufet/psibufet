@@ -23,6 +23,7 @@ Repeatable Patterns
 		background: #fff;
 		color: #767676;
         overflow-x: hidden;
+		font-display: swap;
 	}
 	img{
 		max-width: 100%;
