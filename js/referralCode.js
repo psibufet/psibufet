@@ -1,8 +1,11 @@
 function headerClone(){
 	var siteHeader = $('.siteHeader');
+	var promocode = $('#promocode');
+	
 
 	if($('body').hasClass('promocode') && !$('body').hasClass('promocode-blackweek')){
 		if($(window).width() < 576){
+			$('#masthead').css('margin-top', promocode.height());
 			$('.header-clone').css('height', siteHeader.height() + 58);
 		}else if($(window).width() < 767 && $(window).width() > 576){
 			$('.header-clone').css('height', siteHeader.height() + 39);
@@ -32,55 +35,72 @@ function bottomBar(code, amount, type){
 	}
 	$('.siteFooter').before('<div class="bottomBar"><a href="https://zamowienie.psibufet.pl/?code=' + code + '&amount=' + amount + '&type=' + type + '" class="btn btn--green"><span>Odbierz zniżkę -' + amount + typ + '</span></a></div>');
 }
-function promobar(dataCode, dataAmount, dataType){
+function promobar(dataCode, dataAmount, dataType, dataPurpose){
 	var code = dataCode;
     var type = dataType;
     var amount = dataAmount;
+    var purpose = dataPurpose;
 	var firstletter = code.charAt(0);
 
     var promoamount = $('#promocode p .amount');
     var promotype = $('#promocode p .type');
 	var promona = $('#promocode p .na');
 
-    if(typeof code !== 'psiazka'){
-        $('body').addClass('promocode');
-        $('.menu_dir a').addClass('dir');
-        $('#promocode').addClass('active');
-        $('body').trigger('promocode-active');
+	if(purpose = 'CLIENT'){
+		$('body').addClass('promocode');
+		$('.menu_dir a').addClass('dir');
+		$('#promocode').addClass('active');
+		$('body').trigger('promocode-active');
 		$('.siteHeader').addClass('siteHeader--promocode');
 
-        promoamount.html('-' + amount);
+		let promobar = $('#promocode').find('p');
 
-        if(type == 'PERCENT'){
-            promotype.html('%');
-        }else if(type == 'AMOUNT'){
-            promotype.html('PLN');
-        }
-
-        if(firstletter == 2){
-            promona.html('na dwie pierwsze dostawy');
-        }
-
-        setTimeout(function(){
-            $(".dir").each(function () {
-                var $this = $(this);
-                var _href = $this.attr("href");
-                if(typeof type !== 'undefined' && typeof amount !== 'undefined'){
-                    $this.attr("href", _href + '?code=' + code + '&amount=' + amount + '&type=' + type);
-                }else{
-                    $this.attr("href", _href + '?code=' + code);
-                }
-            });
-        }, 50);
+		promobar.html('<div><span class="amount">-50</span><span class="type">%</span> na pierwszą | <span class="amount">-25</span><span class="type">%</span> na drugą dostawę. <a href="#" class="promobutton">ODBIERZ</a></div>');
 
 		// Set header clone height
 		headerClone();
-		if($(window).width() < 768){
-			bottomBar(dataCode, dataAmount, dataType);
+	}else{
+		if(typeof code !== 'psiazka'){
+			$('body').addClass('promocode');
+			$('.menu_dir a').addClass('dir');
+			$('#promocode').addClass('active');
+			$('body').trigger('promocode-active');
+			$('.siteHeader').addClass('siteHeader--promocode');
+	
+			promoamount.html('-' + amount);
+	
+			if(type == 'PERCENT'){
+				promotype.html('%');
+			}else if(type == 'AMOUNT'){
+				promotype.html('PLN');
+			}
+	
+			if(firstletter == 2){
+				promona.html('na dwie pierwsze dostawy');
+			}
+	
+			setTimeout(function(){
+				$(".dir").each(function () {
+					var $this = $(this);
+					var _href = $this.attr("href");
+					if(typeof type !== 'undefined' && typeof amount !== 'undefined'){
+						$this.attr("href", _href + '?code=' + code + '&amount=' + amount + '&type=' + type);
+					}else{
+						$this.attr("href", _href + '?code=' + code);
+					}
+				});
+			}, 50);
+	
+			// Set header clone height
+			headerClone();
+
+			if($(window).width() < 768){
+				bottomBar(dataCode, dataAmount, dataType);
+			}
+		}else{
+			console.log('Code error');
 		}
-    }else{
-        console.log('Code error');
-    }
+	}
 };
 
 function blackweekBar(dataCode, dataAmount, dataType){
@@ -245,18 +265,17 @@ $(document).ready(function(){
 				},
 				success: function(){
 					$.getJSON("https://app.psibufet.pl/api/order/couponcode/" + code, function (data) {
-						// if (data.purpose == "MARKETING" || data.purpose == "PARTNER" || data.purpose == "CUSTOMER_CARE" || data.purpose == "CLIENT" || data.purpose == 'INFLUENCER' || data.purpose == 'EVENT' || data.purpose == 'VET'){
-							var amount = data.amount;
-							var type = data.type;
+						var amount = data.amount;
+						var type = data.type;
+						var purpose = data.purpose;
 
-							if(blackweek.indexOf(code) !== -1){
-								blackweekBar(code, amount, type);
-								$('#promocode').remove();
-							}else{
-								promobar(code, amount, type);
-								$('#blackweek').remove();
-							}
-						// }		
+						if(blackweek.indexOf(code) !== -1){
+							blackweekBar(code, amount, type);
+							$('#promocode').remove();
+						}else{
+							promobar(code, amount, type, purpose);
+							$('#blackweek').remove();
+						}	
 					});
 				}
 			});

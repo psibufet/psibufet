@@ -207,6 +207,30 @@ p {
 #promocode.active {
   display: flex;
 }
+#promocode .promobutton {
+  font-size: 31px;
+  line-height: 1;
+  color: #fff;
+  text-decoration: underline !important;
+  font-weight: 400;
+  margin-left: 10px;
+  padding-right: 20px;
+  position: relative;
+}
+#promocode .promobutton:after {
+  content: "";
+  background-image: url("/wp-content/themes/psibufet/images/chevron_right_white.svg");
+  background-size: 12px;
+  width: 12px;
+  height: 15px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+#promocode .promobutton:hover {
+  opacity: 0.7;
+}
 #promocode p {
   display: flex;
   align-items: center;
@@ -257,7 +281,8 @@ p {
   height: 58px;
   position: absolute;
   left: -60px;
-  bottom: -3px;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 #promocode p:after {
   content: "";
@@ -268,7 +293,8 @@ p {
   height: 58px;
   position: absolute;
   right: -60px;
-  bottom: -3px;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 
 @media (max-width: 991px) {
@@ -290,14 +316,12 @@ p {
     width: 70px;
     height: 49px;
     left: -40px;
-    bottom: -3px;
   }
   #promocode p:after {
     background-size: 70px;
     width: 70px;
     height: 49px;
     right: -40px;
-    bottom: -3px;
   }
 }
 @media (max-width: 767px) {
@@ -305,6 +329,25 @@ p {
     min-height: 45px;
     height: auto;
     position: fixed;
+  }
+  #promocode .promobutton {
+    font-size: 21px;
+    margin-left: 6px;
+    padding-right: 14px;
+  }
+  #promocode .promobutton:after {
+    content: "";
+    background-image: url("/wp-content/themes/psibufet/images/chevron_right_white.svg");
+    background-size: 8px;
+    width: 8px;
+    height: 10px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+  #promocode .promobutton:hover {
+    opacity: 0.7;
   }
   #promocode p {
     position: unset;
@@ -630,7 +673,8 @@ body.promocode-blackweek .siteHeader--promocode {
   .siteHeader__logo a {
     position: absolute;
     z-index: 2;
-    width: 150px;
+    width: 100%;
+    max-width: inherit;
     left: 20px;
     transition: ease 0.8s;
   }

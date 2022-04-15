@@ -14,6 +14,33 @@
         display: flex;
     }
 
+    .promobutton{
+        font-size: 31px;
+        line-height: 1;
+        color: #fff;
+        text-decoration: underline !important;
+        font-weight: 400;
+        margin-left: 10px;
+        padding-right: 20px;
+        position: relative;
+
+        &:after{
+            content: '';
+            background-image: url('/wp-content/themes/psibufet/images/chevron_right_white.svg');
+            background-size: 12px;
+            width: 12px;
+            height: 15px;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+
+        &:hover{
+            opacity: .7;
+        }
+    }
+
     p{
         display: flex;
         align-items: center;
@@ -70,7 +97,8 @@
             height: 58px;
             position: absolute;
             left: -60px;
-            bottom: -3px;
+            top: 50%;
+            transform: translate(0, -50%);
         }
         &:after{
             content: '';
@@ -81,7 +109,8 @@
             height: 58px;
             position: absolute;
             right: -60px;
-            bottom: -3px;
+            top: 50%;
+            transform: translate(0, -50%);
         }
     }
 }
@@ -110,14 +139,12 @@
                 width: 70px;
                 height: 49px;
                 left: -40px;
-                bottom: -3px;
             }
             &:after{
                 background-size: 70px;
                 width: 70px;
                 height: 49px;
                 right: -40px;
-                bottom: -3px;
             }
         }
     }
@@ -127,6 +154,28 @@
         min-height: 45px;
         height: auto;
         position: fixed;
+
+        .promobutton{
+            font-size: 21px;
+            margin-left: 6px;
+            padding-right: 14px;
+    
+            &:after{
+                content: '';
+                background-image: url('/wp-content/themes/psibufet/images/chevron_right_white.svg');
+                background-size: 8px;
+                width: 8px;
+                height: 10px;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+    
+            &:hover{
+                opacity: .7;
+            }
+        }
 
         p{
             position: unset;
@@ -524,7 +573,8 @@ body.promocode-blackweek{
             a{
                 position: absolute;
                 z-index: 2;
-                width: 150px;
+                width: 100%;
+                max-width: inherit;
                 left: 20px;
                 transition: ease .8s;
             }
