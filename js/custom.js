@@ -1403,33 +1403,38 @@ $(document).ready(function(){
                 success: function(response){
                     console.log(response);
                     form.removeClass('helpForm--loading');
-                    if(response == 'done'){
+                    let data = jQuery.parseJSON(response);
 
-                        // GTM
-                        var value = form.find('p[name="helpTopic"]').text();
-                        dataLayer.push({
-                            'event': 'helpSent',
-                            'label': value,
-                        });
+                    $.each(data, function (key, v) {
+                        if(key == 'status'){
+                            if(v == true){
+                                // GTM
+                                var value = form.find('p[name="helpTopic"]').text();
+                                dataLayer.push({
+                                    'event': 'helpSent',
+                                    'label': value,
+                                });
 
-                        form.find('p[name="helpTopic"]').text('Jak możemy Ci pomóc?');
-                        form.find('textarea').val('');
-                        form.find('input').val('');
+                                form.find('p[name="helpTopic"]').text('Jak możemy Ci pomóc?');
+                                form.find('textarea').val('');
+                                form.find('input').val('');
 
-                        form.find('.helpForm__notice').append('<p>Formularz został pomyślnie wysłany</p>');
-                        form.find('.helpForm__notice').addClass('helpForm__notice--active helpForm__notice--success');
-                        setTimeout(function(){
-                            form.find('.helpForm__notice').removeClass('helpForm__notice--success helpForm__notice--error helpForm__notice--active');
-                            form.find('.helpForm__notice').find('p').remove();
-                        }, 4000);
-                    }else{
-                        form.find('.helpForm__notice').append('<p>Wystąpił błąd podczas wysyłki formularza. Spróbuj ponownie później.</p>');
-                        form.find('.helpForm__notice').addClass('helpForm__notice--active helpForm__notice--error');
-                        setTimeout(function(){
-                            form.find('.helpForm__notice').removeClass('helpForm__notice--success helpForm__notice--error helpForm__notice--active');
-                            form.find('.helpForm__notice').find('p').remove();
-                        }, 4000);
-                    }
+                                form.find('.helpForm__notice').append('<p>Formularz został pomyślnie wysłany</p>');
+                                form.find('.helpForm__notice').addClass('helpForm__notice--active helpForm__notice--success');
+                                setTimeout(function(){
+                                    form.find('.helpForm__notice').removeClass('helpForm__notice--success helpForm__notice--error helpForm__notice--active');
+                                    form.find('.helpForm__notice').find('p').remove();
+                                }, 4000);
+                            }else{
+                                form.find('.helpForm__notice').append('<p>Wystąpił błąd podczas wysyłki formularza. Spróbuj ponownie później.</p>');
+                                form.find('.helpForm__notice').addClass('helpForm__notice--active helpForm__notice--error');
+                                setTimeout(function(){
+                                    form.find('.helpForm__notice').removeClass('helpForm__notice--success helpForm__notice--error helpForm__notice--active');
+                                    form.find('.helpForm__notice').find('p').remove();
+                                }, 4000);
+                            }
+                        }
+                    });
                 }
             });
         }

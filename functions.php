@@ -715,7 +715,7 @@ function availableForm(){
 	$headers = array('Content-Type: text/html; charset=UTF-8');
 	
 	$sent = false;
-	$sent = wp_mail( $to, $subject, $message );
+	$sent = wp_mail( $to, $subject, $message, $headers);
 
 	$sentUser = false;
 	$sentUser = wp_mail($user, $subject_user, $message_user, $headers);
@@ -744,16 +744,18 @@ function helpForm(){
 	
 	$to = 'kontakt@psibufet.pl';
 	$subject = '[PsiBufet] Formularz "POMOC"';
-	$message = "Temat: " . $topic . "<br/>Wiadomość: " . $message . "<br/>Imię: " . $name . "<br/>Imię psa: " . $dogName . "<br/>Adres e-mail: " . $mail;
-	$headers = 'Content-Type: text/html; charset=UTF-8';
+	$message_user = "Temat: " . $topic . "<br/>Wiadomość: " . $message . "<br/>Imię: " . $name . "<br/>Imię psa: " . $dogName . "<br/>Adres e-mail: " . $mail;
+	$headers = array('Content-Type: text/html; charset=UTF-8');
 	
-	$sent = wp_mail($to, $subject, $message, $headers);
+	$sent = false;
+	$sent = wp_mail($to, $subject, $message_user, $headers);
 
-	if($sent){
-		echo 'done';
-	}else{
-		print_r($sent);
-	}
+	$response = array(
+		'status' => $sent,
+	);
+
+	echo json_encode($response);
+
 	exit();
 }
 
