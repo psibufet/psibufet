@@ -245,6 +245,12 @@ p {
   max-width: fit-content;
   position: relative;
 }
+@media (min-width: 576px) {
+  #promocode p > div {
+    display: flex;
+    align-items: center;
+  }
+}
 #promocode p span.amount, #promocode p span.type {
   display: inline-block;
   font-size: 46px;
@@ -14153,7 +14159,7 @@ body.page-template-page_ksiazka .siteHeader--promocode {
   background-image: url("/wp-content/themes/psibufet/images/about-us/about-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center right;
+  background-position: center;
 }
 .aboutHeader__wrap {
   padding-top: 100px;
@@ -14165,22 +14171,17 @@ body.page-template-page_ksiazka .siteHeader--promocode {
   font-weight: 400;
   margin: 0 0 20px;
   text-align: center;
-  color: #fff;
+  color: #000;
 }
 .aboutHeader__wrap p {
   font-size: 25px;
   line-height: 29px;
-  color: #fff;
+  color: #000;
   text-align: center;
   max-width: 620px;
   margin: 0 auto;
 }
 
-@media (max-width: 1199px) {
-  .aboutHeader {
-    background-position: 70% center;
-  }
-}
 @media (max-width: 767px) {
   .aboutHeader {
     background-image: url("/wp-content/themes/psibufet/images/about-us/about-bg-mobile.png");

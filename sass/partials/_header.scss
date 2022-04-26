@@ -55,6 +55,13 @@
         max-width: fit-content;
         position: relative;
 
+        @media (min-width: 576px){
+            &>div{
+                display: flex;
+                align-items: center;
+            }
+        }
+
         span{
             &.amount,
             &.type{

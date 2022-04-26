@@ -55,7 +55,7 @@ function promobar(dataCode, dataAmount, dataType, dataPurpose){
 
 		let promobar = $('#promocode').find('p');
 
-		promobar.html('<div><span class="amount">-50</span><span class="type">%</span> na pierwszą | <span class="amount">-25</span><span class="type">%</span> na drugą dostawę. <a href="#" class="promobutton">ODBIERZ</a></div>');
+		promobar.html('<div><span class="amount">-50</span><span class="type">%</span> na pierwszą | <span class="amount">-25</span><span class="type">%</span> na drugą dostawę. <a href="https://zamowienie.psibufet.pl/?code=' + dataCode + '&amount=' + dataAmount + '&type=' + dataType + '" class="promobutton">ODBIERZ</a></div>');
 
 		// Set header clone height
 		headerClone();
