@@ -46,7 +46,8 @@ function promobar(dataCode, dataAmount, dataType, dataPurpose){
     var promotype = $('#promocode p .type');
 	var promona = $('#promocode p .na');
 
-	if(purpose = 'CLIENT'){
+	
+	if(purpose == 'CLIENT'){
 		$('body').addClass('promocode');
 		$('.menu_dir a').addClass('dir');
 		$('#promocode').addClass('active');
