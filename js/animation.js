@@ -622,6 +622,58 @@ $(document).ready(function() {
     });
 });
 
+/********** Pies senior **********/
+
+$(document).ready(function() {
+    var seniorDogs = $('.seniorDogs__heading').find('.getMarker');
+    var seniorReviews = $('.seniorReviews__heading').find('.getMarker');
+    var seniorInfo = $('.seniorInfo__heading').find('.getMarker');
+    var seniorUSP = $('.seniorUSP__heading').find('.getMarker');
+
+    if($(seniorDogs).visible(true)){
+        setTimeout(function(){
+            seniorDogs.addClass('init');
+        }, 500)
+    }
+    if($(seniorReviews).visible(true)){
+        setTimeout(function(){
+            seniorReviews.addClass('init');
+        }, 500)
+    }
+    if($(seniorInfo).visible(true)){
+        setTimeout(function(){
+            seniorInfo.addClass('init');
+        }, 500)
+    }
+    if($(seniorUSP).visible(true)){
+        setTimeout(function(){
+            seniorUSP.addClass('init');
+        }, 500)
+    }
+    $(window).on('scroll', function(){
+        if($(seniorDogs).visible(true)){
+            setTimeout(function(){
+                seniorDogs.addClass('init');
+            }, 500)
+        }
+        if($(seniorReviews).visible(true)){
+            setTimeout(function(){
+                seniorReviews.addClass('init');
+            }, 500)
+        }
+        if($(seniorInfo).visible(true)){
+            setTimeout(function(){
+                seniorInfo.addClass('init');
+            }, 500)
+        }
+        if($(seniorUSP).visible(true)){
+            setTimeout(function(){
+                seniorUSP.addClass('init');
+            }, 500)
+        }
+    });
+});
+
 /********** PODKREŚLENIA NASZE PRZEPISY **********/
 
 // $(window).on('scroll', function () {

@@ -156,7 +156,7 @@ get_header(); ?>
     <section class="seniorUSP">
         <div class="seniorUSP__wrap container">
             <div class="seniorUSP__heading">
-                <h2 class="getMarker">Sprawdź, co<span class="marker">zyska</span> Twój senior dzięki PsiBufet!</h2>
+                <h2 class="getMarker">Sprawdź, co <span class="marker">zyska</span> Twój senior dzięki PsiBufet!</h2>
             </div>
             <div class="seniorUSP__list">
                 <?php while(have_rows('seniorUSP')): the_row();
