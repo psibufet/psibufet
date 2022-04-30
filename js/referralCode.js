@@ -181,6 +181,7 @@ $(document).ready(function(){
 		'restauracje',
 		'pomoc',
 		'szczeniaki',
+		'senior',
 	];
 	var blackweek = [
 		'gwiazdka40',

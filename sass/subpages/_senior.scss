@@ -1,0 +1,747 @@
+.seniorHeading{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    min-height: 600px;
+    position: relative;
+
+    &__wrap{
+        max-width: 550px;
+        margin: 74px auto 0;
+
+        h1{
+            font-size: 88px;
+            line-height: 90px;
+            font-weight: 400;
+            font-family: 'Bebas Neue', sans-serif;
+            color: #000;
+            margin: 0 0 50px;
+            text-align: center;
+        }
+    }
+    &__scroll{
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+
+        p{
+            font-size: 16px;
+            line-height: 1;
+            font-weight: 500;
+            color: #000;
+            text-align: center;
+            margin: 0 0 7px;
+        }
+
+        &:after{
+            content: "";
+            background-image: url('/wp-content/themes/psibufet/images/chevron_down_white.svg');
+            background-repeat: no-repeat;
+            background-size: 13px;
+            height: 9px;
+            width: 13px;
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            bottom: -10px;
+            filter: invert(1);
+            animation-name: PulseDown;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+    }
+}
+@media (max-width: 991px){
+    .seniorHeading{
+        background-position: right;
+        background-image: url('/wp-content/themes/psibufet/images/senior/seniorHeader_mid.png') !important;
+
+        &__wrap{
+            max-width: 450px;
+            margin: 36px auto 0;
+            
+            h1{
+                font-size: 60px;
+                line-height: 62px;
+                margin: 0 0 36px;
+            }
+        }
+
+        &__scroll{
+            display: none;
+        }
+    }
+}
+@media (max-width: 767px){
+    .seniorHeading{
+        &__wrap{
+            max-width: 300px;
+            margin: 26px auto 0;
+            
+            h1{
+                font-size: 56px;
+                line-height: 64px;
+            }
+        }
+    }
+}
+@media (max-width: 600px){
+    .seniorHeading{
+        background-position: center;
+        background-image: url('/wp-content/themes/psibufet/images/senior/seniorHeader_mobile.png') !important;
+    }
+}
+
+.seniorDogs{
+    background-color: rgba(247, 190, 69, 0.1);
+    padding: 30px 0 40px;
+
+    &__heading{
+        margin: 0 0 32px;
+
+        h2{
+            font-size: 41px;
+            line-height: 49px;
+            font-weight: 400;
+            font-family: 'Bebas Neue', sans-serif;
+            color: #000;
+            margin: 0;
+            text-align: center;
+        }
+    }
+    &__boxes{
+        display: flex;
+        justify-content: space-between;
+        max-width: 1166px;
+        margin: 0 auto;
+
+        .box{
+            width: 100%;
+            max-width: 362px;
+            background-color: #fff;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+            margin: 0 20px;
+
+            &:first-of-type{
+                margin-left: 0;
+            }
+            &:last-of-type{
+                margin-right: 0;
+            }
+
+            &__thumb{
+                height: 362px;
+                width: 100%;
+                display: flex;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            &__content{
+                padding: 16px 20px 26px;
+                background-color: #fff;
+
+                p{
+                    font-size: 18px;
+                    line-height: 24px;
+                    color: #000;
+                    text-align: center;
+                    
+                    &:last-of-type{
+                        margin: 0;
+                    }
+
+                    b{
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+    &__cta{
+        margin: 40px 0 0;
+    }
+}
+@media (max-width: 1199px){
+    .seniorDogs{
+        &__boxes{
+            .box{
+                margin: 0 10px;
+
+                &__thumb{
+                    height: 300px;
+                }
+                &__content{
+                    p{
+                        font-size: 16px;
+                        line-height: 21px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 991px){
+    .seniorDogs{
+        &__boxes{
+            .box{
+                margin: 0 5px;
+
+                &__thumb{
+                    height: 230px;
+                }
+                &__content{
+                    padding: 14px 10px 14px;
+
+                    p{
+                        font-size: 14px;
+                        line-height: 19px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .seniorDogs{
+        padding: 26px 0 32px;
+
+        &__wrap{
+            padding: 0;
+        }
+        &__heading{
+            max-width: 320px;
+            margin: 0 auto 23px;
+            padding: 0 15px;
+
+            h2{
+                font-size: 36px;
+                line-height: 42px;
+            }
+        }
+        &__boxes{
+            display: block;
+
+            .box{
+                max-width: 280px;
+
+                &__thumb{
+                    height: 280px;
+                }
+                &__content{
+                    min-height: 158px;
+                }
+            }
+            .slick-dots{
+                display: flex;
+                justify-content: center;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                position: relative;
+                bottom: -25px;
+    
+                li{
+                    line-height: 1;
+                    margin: 0 3px;
+    
+                    &.slick-active{
+                        button{
+                            background-color: $redcolor;
+                        }
+                    }
+                    button{
+                        width: 8px;
+                        height: 8px;
+                        font-size: 0;
+                        padding: 0;
+                        border: 0;
+                        border-radius: 100%;
+                        background: rgba(0, 0, 0, 0.2);
+                        transition: ease .3s;
+                        outline: none;
+                    }
+                }
+            }
+        }
+        &__cta{
+            margin: 48px 0 0;
+        }
+    }
+}
+
+.seniorReviews{
+    background-color: #9ccfe1;
+    background-image: url('/wp-content/themes/psibufet/images/senior/seniorReviews_bg.webp');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: cover;
+    min-height: 550px;
+    padding: 32px 0 40px;
+
+    &__heading{
+        margin: 0 0 32px;
+
+        h2{
+            font-size: 41px;
+            line-height: 49px;
+            font-weight: 400;
+            font-family: 'Bebas Neue', sans-serif;
+            color: #000;
+            margin: 0;
+            text-align: center;
+        }
+    }
+    &__list{
+        max-width: 1175px;
+        margin: 0 auto;
+
+        .slick-track{
+            padding-bottom: 10px;
+        }
+        .slick-dots{
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: relative;
+            bottom: -15px;
+
+            li{
+                line-height: 1;
+                margin: 0 3px;
+
+                &.slick-active{
+                    button{
+                        background-color: #fff;
+                    }
+                }
+                button{
+                    width: 8px;
+                    height: 8px;
+                    font-size: 0;
+                    padding: 0;
+                    border: 0;
+                    border-radius: 100%;
+                    background: rgba(255, 255, 255, 0.4);
+                    transition: ease .3s;
+                    outline: none;
+                }
+            }
+        }
+        .slick-arrow{
+            background-repeat: no-repeat;
+            background-size: 40px;
+            width: 40px;
+            height: 40px;
+            opacity: 1;
+            font-size: 0;
+            background-color: unset;
+            border: 0;
+            padding: 0;
+            transition: ease .3s;
+            position: absolute;
+            top: 50%;
+            outline: none;
+            transform: translate(0, -50%);
+            z-index: 5;
+            cursor: pointer;
+
+            &:hover{
+                opacity: .8;
+            }
+
+            &.slick-prev{
+                background-image: url('/wp-content/themes/psibufet/images/icons/slider_arrow_left_red.svg');
+                left: -60px;
+            }
+            &.slick-next{
+                background-image: url('/wp-content/themes/psibufet/images/icons/slider_arrow_right_red.svg');
+                right: -60px;
+            }
+            &.slick-disabled{
+                opacity: .3;
+                pointer-events: none;
+            }
+        }
+    }
+    &__review{
+        max-width: 362px;
+        width: 100%;
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+        padding: 16px 20px 14px;
+        margin: 0 20px;
+
+        .author{
+            font-size: 21px;
+            line-height: 25px;
+            color: #000;
+            font-weight: 600;
+            text-align: left;
+            margin: 0 0 8px;
+        }
+        .stars{
+            margin: 0 0 10px;
+            display: flex;
+            align-items: center;
+
+            &__star{
+                margin-right: 3px;
+
+                &:last-of-type{
+                    margin-right: 0;
+                }
+            }
+        }
+        .content{
+            p{
+                font-size: 16px;
+                line-height: 19px;
+                color: $primarycolor;
+                text-align: justify;
+                font-style: italic;
+                
+                &:last-of-type{
+                    margin: 0;
+                }
+            }
+        }
+    }
+    &__cta{
+        margin: 48px 0 0;
+    }
+}
+@media (max-width: 1599px){
+    .seniorReviews{
+        &__review{
+            margin: 0 10px;
+        }
+    }
+}
+@media (max-width: 1270px){
+    .seniorReviews{
+        &__list{
+            .slick-arrow{
+                &.slick-prev{
+                    left: -20px;
+                }
+                &.slick-next{
+                    right: -20px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1199px){
+    .seniorReviews{
+        overflow: hidden;
+
+        &__list{
+            .slick-arrow{
+                &.slick-prev{
+                    left: -30px;
+                }
+                &.slick-next{
+                    right: -30px;
+                }
+            }
+        }
+        &__review{
+            max-width: 300px;
+        }
+    }
+}
+@media (max-width: 1199px){
+    .seniorReviews{
+        overflow: hidden;
+        
+        &__list{
+            .slick-list{
+                overflow: visible;
+            }
+            .slick-arrow{
+                &:hover{
+                    opacity: .9;
+                }
+                
+                &.slick-prev{
+                    background-image: url('/wp-content/themes/psibufet/images/icons/slider_arrow_left_light.svg');
+                    left: 155px;
+                }
+                &.slick-next{
+                    background-image: url('/wp-content/themes/psibufet/images/icons/slider_arrow_right_light.svg');
+                    right: 155px;
+                }
+            }
+        }
+        &__review{
+            max-width: 360px;
+            margin: 0 5px;
+        }
+    }
+}
+@media (max-width: 767px){
+    .seniorReviews{
+        background-image: url('/wp-content/themes/psibufet/images/senior/seniorReviews_bg_mobile.webp');
+        background-position: center;
+        min-height: auto;
+        padding: 25px 0 32px;
+
+
+        &__heading{
+            margin: 0 0 20px;
+
+            h2{
+                font-size: 36px;
+                line-height: 43px;
+            }
+        }
+        &__list{
+            .slick-arrow{    
+                background-size: 32px;
+                width: 32px;
+                height: 32px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+
+                &.slick-prev{
+                    left: -287px;
+                }
+                &.slick-next{
+                    right: -290px;
+                }
+            }
+        }
+        &__review{
+            max-width: 280px;
+            margin: 0 5px;
+
+            .author{
+                font-size: 16px;
+                line-height: 19px;
+            }
+            .content{
+                p{
+                    font-size: 12px;
+                    line-height: 14px;
+                }
+            }
+        }
+        &__cta{
+            margin: 35px 0 0;
+        }
+    }
+}
+
+.seniorInfo{
+    background-image: url('/wp-content/themes/psibufet/images/senior/seniorInfo_bg.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 32px 0 0;
+    min-height: 700px;
+
+    &__heading{
+        max-width: 870px;
+        margin: 0 auto;
+
+        h2{
+            font-size: 41px;
+            line-height: 49px;
+            font-weight: 400;
+            font-family: 'Bebas Neue', sans-serif;
+            color: #000;
+            margin: 0 0 23px;
+            text-align: center;
+        }
+        p{
+            font-size: 20px;
+            line-height: 26px;
+            color: #000;
+            text-align: center;
+            margin: 0;
+        }
+    }
+}
+@media (max-width: 767px){
+    .seniorInfo{
+        background-image: url('/wp-content/themes/psibufet/images/senior/seniorInfo_bg_mobile.webp');
+        background-position: top center;
+
+        &__heading{
+            max-width: 320px;
+
+            h2{
+                font-size: 36px;
+                line-height: 43px;
+                max-width: 300px;
+                margin: 0 auto 15px;
+            }
+            p{
+                font-size: 14px;
+                line-height: 19px;
+            }
+        }
+    }
+}
+
+.seniorUSP{
+    padding: 32px 0 40px;
+
+    &__heading{
+        margin: 0 0 25px;
+
+        h2{
+            font-size: 41px;
+            line-height: 49px;
+            font-weight: 400;
+            font-family: 'Bebas Neue', sans-serif;
+            color: #000;
+            margin: 0;
+            text-align: center;
+        }
+    }
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1170px;
+        margin: 0 auto 35px;
+
+        .pos{
+            width: calc(100% / 4);
+            margin: 0 0 52px;
+
+            &:nth-last-child(-n+3){
+                margin: 0;
+            }
+
+            &__icon{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 150px;
+                height: 150px;
+                margin: 0 auto 14px;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+            h3{
+                font-size: 28px;
+                line-height: 34px;
+                font-weight: 400;
+                font-family: 'Bebas Neue', sans-serif;
+                color: #000;
+                margin: 0 auto;
+                max-width: 200px;
+                text-align: center;
+            }
+        }
+    }
+}
+@media (max-width: 991px){
+    .seniorUSP{
+        &__list{
+            max-width: 620px;
+
+            .pos{
+                margin: 0 0 40px;
+
+                &__icon{
+                    width: 110px;
+                    height: 110px;
+                }
+                h3{
+                    font-size: 21px;
+                    line-height: 26px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .seniorUSP{
+        &__heading{
+            max-width: 320px;
+            margin: 0 auto 29px;
+
+            h2{
+                font-size: 36px;
+                line-height: 43px;
+            }
+        }
+        &__list{
+            display: block;
+            flex-wrap: nowrap;
+
+            .slick-list,
+            .slick-track{
+                overflow: visible;
+            }
+
+            .slick-dots{
+                display: flex;
+                justify-content: center;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                position: relative;
+                bottom: -8px;
+    
+                li{
+                    line-height: 1;
+                    margin: 0 3px;
+    
+                    &.slick-active{
+                        button{
+                            background-color: $redcolor;
+                        }
+                    }
+                    button{
+                        width: 8px;
+                        height: 8px;
+                        font-size: 0;
+                        padding: 0;
+                        border: 0;
+                        border-radius: 100%;
+                        background: rgba(0, 0, 0, 0.2);
+                        transition: ease .3s;
+                        outline: none;
+                    }
+                }
+            }
+            
+            .pos{
+                width: 100%;
+                max-width: 180px;
+                margin: 0;
+
+                &__icon{
+                    width: 130px;
+                    height: 130px;
+                }
+                h3{
+                    font-size: 24px;
+                    line-height: 28px;
+                }
+            }
+        }
+    }
+}

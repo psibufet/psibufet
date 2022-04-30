@@ -135,3 +135,36 @@ $(document).ready(function(){
         });
     }
 });
+
+/**
+ * Pies senior
+ */
+$(document).ready(function(){
+    if($(window).width() < 768){
+        $('.seniorDogs__boxes').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: true,
+            variableWidth: true,
+            arrows: false,
+            dots: true,
+        });
+        $('.seniorUSP__list').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: true,
+            variableWidth: true,
+            arrows: false,
+            dots: true,
+        });
+    }
+    $('.seniorReviews__list').slick({
+        slidesToScroll: 1,
+        slidesToShow: 3,
+        initialSlide: 1,
+        centerMode: true,
+        variableWidth: true,
+        arrows: true,
+        dots: true,
+    });
+});
