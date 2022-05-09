@@ -1562,7 +1562,14 @@ $(document).ready(function(){
 $(document).ready(function(){
     if($('body').hasClass('single-rasy-psow')){
         if($(window).width() < 1200){
-            $('.dixa-messenger-wrapper').css('bottom', '17vw');
+            let interval = setInterval(function(){
+                console.log('run');
+                if($('.dixa-messenger-wrapper').length){
+                    $('.dixa-messenger-wrapper').css('bottom', '17vw');
+                    console.log('cleared');
+                    clearInterval(interval);
+                }
+            }, 100);            
         }
 
         var count = 1;

@@ -15077,6 +15077,7 @@ body.admin-bar .pagePDF {
   z-index: 1;
 }
 .page404__wrap {
+  padding: 50px 15px;
   position: relative;
   z-index: 2;
 }
@@ -15121,6 +15122,7 @@ body.admin-bar .pagePDF {
   }
   .page404__wrap {
     padding-top: 26px;
+    padding-bottom: 350px;
   }
   .page404__wrap h1 {
     font-size: 48px;
