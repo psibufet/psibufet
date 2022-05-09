@@ -10,11 +10,11 @@ get_header(); ?>
             <h1><?php the_field('seniorHeading_title'); ?></h1>
             <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir"><span>Stwórz dietę</span></a>
         </div>
-        <a href="#test" class="seniorHeading__scroll">
+        <a href="#page-continue" class="seniorHeading__scroll">
             <p>Dowiedz się więcej</p>
         </a>
     </section>
-    <section class="homeReviews homeReviews--nomargin">
+    <section id="page-continue" class="homeReviews homeReviews--nomargin">
         <?php if( have_rows('after_header_logos', 5) ): ?>
         <ul class="slideul">
             <?php while( have_rows('after_header_logos', 5) ): the_row();
@@ -54,7 +54,7 @@ get_header(); ?>
                 <?php while(have_rows('seniorDogs')): the_row(); ?>
                 <div class="box">
                     <div class="box__thumb">
-                        <img src="<?php echo get_sub_field('seniorDogs_image')['url']; ?>" alt="<?php echo get_sub_field('seniorDogs_image')['alt']; ?>"/>
+                        <img data-original="<?php echo get_sub_field('seniorDogs_image')['url']; ?>" alt="<?php echo get_sub_field('seniorDogs_image')['alt']; ?>" class="no-lazyload"/>
                     </div>
                     <div class="box__content">
                         <?php echo get_sub_field('seniorDogs_content'); ?>
@@ -102,7 +102,7 @@ get_header(); ?>
 
     <section class="calcMiska">
         <div class="calcMiska__wrap container">
-            <h2 class="getMarker">Dlaczego PsiBufet jes dobry dla <span class="marker">starszego</span> psa?</h2>
+            <h2 class="getMarker">Dlaczego PsiBufet jest dobry dla <span class="marker">starszego</span> psa?</h2>
 
             <div class="calcMiska__miskaWrap animateMiska">
                 <div class="calcMiska__miska">
@@ -140,7 +140,7 @@ get_header(); ?>
                     </div>
                 </div>
             </div>
-            <a href="<?php echo home_url(); ?>" class="btn btn--center"><span>Dowiedz się więcej</span></a>
+            <a href="<?php echo home_url(); ?>" class="btn btn--center btn--clear"><span>Dowiedz się więcej</span></a>
         </div>
     </section>
 
@@ -165,7 +165,7 @@ get_header(); ?>
                 ?>
                 <div class="pos">
                     <div class="pos__icon">
-                        <img src="<?php echo $icon['url'] ?>" alt="<?php echo $icon['alt'] ?>"/>
+                        <img data-original="<?php echo $icon['url'] ?>" alt="<?php echo $icon['alt'] ?>" class="no-lazyload"/>
                     </div>
                     <h3><?php echo $text; ?></h3>
                 </div>

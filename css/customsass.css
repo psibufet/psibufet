@@ -16789,6 +16789,17 @@ body.admin-bar .pagePDF {
     display: block;
   }
 }
+body.page-template-page_senior .calcMiska .btn {
+  display: flex;
+  padding: 0 30px;
+}
+@media (max-width: 767px) {
+  body.page-template-page_senior .calcMiska__wrap h2 {
+    font-size: 36px;
+    line-height: 43px;
+  }
+}
+
 .seniorHeading {
   display: flex;
   align-items: flex-start;
@@ -17305,6 +17316,7 @@ body.admin-bar .pagePDF {
 }
 .seniorUSP {
   padding: 32px 0 40px;
+  overflow: hidden;
 }
 .seniorUSP__heading {
   margin: 0 0 25px;
@@ -17343,6 +17355,7 @@ body.admin-bar .pagePDF {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  image-rendering: pixelated;
 }
 .seniorUSP__list .pos h3 {
   font-size: 28px;
