@@ -329,7 +329,7 @@
 
 .partnerJoin{
     background-color: #E8E8E8;
-    padding: 80px 0;
+    padding: 50px 0;
 
     &__form{
         max-width: 740px;
@@ -339,20 +339,6 @@
         border: 1px solid rgba(0, 0, 0, 0.2);
         box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
         position: relative;
-
-        &:before{
-            content: '';
-            background-image: url('/wp-content/themes/psibufet/images/partner/formPaws_vec.svg');
-            background-repeat: no-repeat;
-            background-size: 124px;
-            width: 124px;
-            height: 120px;
-            position: absolute;
-            top: -100px;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-        }
 
         .formHeading{
             margin: 0 0 40px;
@@ -564,18 +550,11 @@
 }
 @media (max-width: 767px){
     .partnerJoin{
-        padding: 44px 0 32px;
+        padding: 32px 0;
 
         &__form{
             max-width: 465px;
             margin: 0 auto;
-
-            &:before{
-                background-size: 78px;
-                width: 78px;
-                height: 74px;
-                top: -60px;
-            }
 
             .formHeading{
                 margin: 0 0 20px;
