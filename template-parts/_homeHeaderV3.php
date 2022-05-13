@@ -10,7 +10,7 @@
             <a href="https://zamowienie.psibufet.pl/" class="btn btn--big btn--center dir"><span><?php the_field('front_header_cta') ?></span></a>
         </div>
     </div>
-    <a href="#page-continue" class="homeHeaderV3__scroll">
+    <!-- <a href="#page-continue" class="homeHeaderV3__scroll">
         <p>Dowiedz się więcej</p>
-    </a>
+    </a> -->
 </section>

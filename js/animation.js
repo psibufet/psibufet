@@ -184,6 +184,71 @@ $(document).ready(function() {
     });
 });
 
+/**
+ * New home page
+ */
+ $(document).ready(function() {
+    var homeMiska = $('.homeMiska').find('.getMarker');
+    var homeFood = $('.homeFood').find('.getMarker');
+    var homeClients = $('.homeClients').find('.getMarker');
+    var homeStart = $('.homeStartnew').find('.getMarker');
+    var homeReturn = $('.homeReturn').find('.getMarker');
+
+    if($(homeMiska).visible(true)){
+        setTimeout(function(){
+            homeMiska.addClass('init');
+        }, 500)
+    }
+    if($(homeFood).visible(true)){
+        setTimeout(function(){
+            homeFood.addClass('init');
+        }, 500)
+    }
+    if($(homeClients).visible(true)){
+        setTimeout(function(){
+            homeClients.addClass('init');
+        }, 500)
+    }
+    if($(homeStart).visible(true)){
+        setTimeout(function(){
+            homeStart.addClass('init');
+        }, 500)
+    }
+    if($(homeReturn).visible(true)){
+        setTimeout(function(){
+            homeReturn.addClass('init');
+        }, 500)
+    }
+
+    $(window).on('scroll', function () {
+        if($(homeMiska).visible(true)){
+            setTimeout(function(){
+                homeMiska.addClass('init');
+            }, 500)
+        }
+        if($(homeFood).visible(true)){
+            setTimeout(function(){
+                homeFood.addClass('init');
+            }, 500)
+        }
+        if($(homeClients).visible(true)){
+            setTimeout(function(){
+                homeClients.addClass('init');
+            }, 500)
+        }
+        if($(homeStart).visible(true)){
+            setTimeout(function(){
+                homeStart.addClass('init');
+            }, 500)
+        }
+        if($(homeReturn).visible(true)){
+            setTimeout(function(){
+                homeReturn.addClass('init');
+            }, 500)
+        }
+    });
+});
+
 /********** Google Shopping pages **********/
 
 $(document).ready(function() {
