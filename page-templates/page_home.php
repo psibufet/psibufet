@@ -105,7 +105,7 @@ get_header(); ?>
         <div class="mainUSP__wrap">
             <?php while(have_rows('homeUSP')): the_row(); ?>
             <div class="usp">
-                <div class="usp__icon">
+                <div class="usp__icon usp__icon--nomargin">
                     <img src="<?php echo get_sub_field('homeUSP_icon')['url']; ?>" alt="<?php echo get_sub_field('homeUSP_icon')['alt']; ?>"/>
                 </div>
                 <p><?php echo get_sub_field('homeUSP_text'); ?></p>

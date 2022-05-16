@@ -1598,6 +1598,9 @@ body.promocode-blackweek .siteHeader--promocode {
   width: 100%;
   margin: 0 auto 20px;
 }
+.mainUSP__wrap .usp__icon--nomargin {
+  margin: 0 auto;
+}
 .mainUSP__wrap .usp p {
   font-size: 18px;
   line-height: 24px;
@@ -1652,10 +1655,10 @@ body.promocode-blackweek .siteHeader--promocode {
     line-height: 14px;
   }
   .mainUSP__wrap {
-    max-width: 330px;
+    max-width: 340px;
   }
   .mainUSP__wrap .usp {
-    max-width: 110px;
+    max-width: 120px;
   }
   .mainUSP__wrap .usp__icon {
     max-width: 92px;

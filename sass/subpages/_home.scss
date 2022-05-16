@@ -58,6 +58,10 @@
                 justify-content: center;
                 width: 100%;
                 margin: 0 auto 20px;
+
+                &--nomargin{
+                    margin: 0 auto;
+                }
             }
             p{
                 font-size: 18px;
@@ -126,10 +130,10 @@
             }
         }
         &__wrap{
-            max-width: 330px;
+            max-width: 340px;
 
             .usp{
-                max-width: 110px;
+                max-width: 120px;
 
                 &__icon{
                     max-width: 92px;
