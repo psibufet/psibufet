@@ -6834,7 +6834,7 @@ body.admin-bar .foodModal__wrap {
 }
 .homeFaq {
   background-color: #E8E8E8;
-  padding-top: 40px;
+  padding: 40px 0;
 }
 .homeFaq__wrap {
   position: relative;
