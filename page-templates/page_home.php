@@ -81,13 +81,14 @@ get_header(); ?>
                         $image = get_sub_field('karma_img');
                         $name = get_sub_field('karma_name');
                         $desc = get_sub_field('karma_short_desc');
+                        $color = get_sub_field('karma_color');
                     ?>
                     <div class="homeFood__food">
                         <div class="image">
                             <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt']; ?>"/>
                         </div>
                         <div class="content">
-                            <h3 class="name"><?php echo $name; ?></h3>
+                            <h3 class="name" style="--dots-color: <?php echo $color; ?>;"><?php echo $name; ?></h3>
                             <p><?php echo $desc; ?></p>
                             <div class="image">
                                 <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt']; ?>"/>

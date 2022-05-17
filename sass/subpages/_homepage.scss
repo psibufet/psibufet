@@ -1472,7 +1472,19 @@
             .ba_img{
                 &.before{
                     &::after{
-                        display: none;
+                        content: '';
+                        width: 2px;
+                        height: 100%;
+                        background: rgb(255,255,255);
+                        background: linear-gradient(0deg, rgba(255,255,255,0) 10%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 90%);
+                        opacity: 0;
+                        transition: ease .3s;
+                    }
+
+                    &.line{
+                        &::after{
+                            opacity: 1;
+                        }
                     }
                 }
             }
@@ -3113,7 +3125,7 @@ body.admin-bar{
         &--new{
             .homeHowitworks__step{
                 .image{
-                    height: 180px;
+                    height: 252px;
                 }
                 .content{
                     p{

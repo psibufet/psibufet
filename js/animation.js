@@ -10,6 +10,26 @@ $(window).on('scroll', function () {
     
     var image_width_desktop = distance + 80;
     $('.ba_img.before').css('width', image_width_desktop + 'px');
+
+    if($(window).width() > 1200){
+        if(image_width_desktop < 550 && image_width_desktop > 100){
+            $('.ba_img.before').addClass('line');
+        }else{
+            $('.ba_img.before').removeClass('line');
+        }
+    }else if($(window).width() <= 1199 && $(window).width() > 576 ){
+        if(image_width_desktop < 420 && image_width_desktop > 85){
+            $('.ba_img.before').addClass('line');
+        }else{
+            $('.ba_img.before').removeClass('line');
+        }
+    }else if($(window).width() <= 575){
+        if(image_width_desktop < 250 && image_width_desktop > 50){
+            $('.ba_img.before').addClass('line');
+        }else{
+            $('.ba_img.before').removeClass('line');
+        }
+    }
 });
 
 /********** PODKREŚLENIA FUNKCJA **********/

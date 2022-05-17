@@ -1608,6 +1608,7 @@ body.promocode-blackweek .siteHeader--promocode {
   text-align: center;
 }
 .mainUSP--yellow {
+  padding: 30px 0;
   background-color: #F7BE45;
 }
 .mainUSP--yellow .mainUSP__wrap .usp p {
@@ -1667,6 +1668,13 @@ body.promocode-blackweek .siteHeader--promocode {
   .mainUSP__wrap .usp p {
     font-size: 12px;
     line-height: 16px;
+  }
+  .mainUSP--yellow {
+    padding: 22px 0;
+  }
+  .mainUSP--yellow .mainUSP__wrap .usp__icon {
+    max-width: 94px;
+    max-height: 92px;
   }
 }
 @media (max-width: 340px) {
@@ -1781,7 +1789,7 @@ body.promocode-blackweek .siteHeader--promocode {
   top: 50%;
   transform: translate(0, -50%);
   border-radius: 100%;
-  background-color: #4769B2;
+  background-color: var(--dots-color);
 }
 .homeFood__food .content .name:before {
   left: 0;
@@ -3673,7 +3681,16 @@ body.promocode-blackweek .siteHeader--promocode {
   display: none;
 }
 .homeMiska--new .homeMiska__imageWrap .ba_img.before::after {
-  display: none;
+  content: "";
+  width: 2px;
+  height: 100%;
+  background: white;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 10%, white 50%, rgba(255, 255, 255, 0) 90%);
+  opacity: 0;
+  transition: ease 0.3s;
+}
+.homeMiska--new .homeMiska__imageWrap .ba_img.before.line::after {
+  opacity: 1;
 }
 
 @media (max-width: 1599px) {
@@ -5033,7 +5050,7 @@ body.admin-bar .foodModal__wrap {
     line-height: 16px;
   }
   .homeHowitworks--new .homeHowitworks__step .image {
-    height: 180px;
+    height: 252px;
   }
   .homeHowitworks--new .homeHowitworks__step .content p {
     font-size: 12px;

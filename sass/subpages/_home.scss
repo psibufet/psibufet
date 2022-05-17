@@ -73,6 +73,7 @@
     }
 
     &--yellow{
+        padding: 30px 0;
         background-color: $yellowcolor;
 
         .mainUSP__wrap{
@@ -142,6 +143,18 @@
                 p{
                     font-size: 12px;
                     line-height: 16px;
+                }
+            }
+        }
+        &--yellow{
+            padding: 22px 0;
+            
+            .mainUSP__wrap{
+                .usp{
+                    &__icon{
+                        max-width: 94px;
+                        max-height: 92px;
+                    }
                 }
             }
         }
@@ -268,7 +281,7 @@
                     top: 50%;
                     transform: translate(0, -50%);
                     border-radius: 100%;
-                    background-color: $bluecolor;
+                    background-color: var(--dots-color);;
                 }
                 &:before{
                     left: 0;
