@@ -636,6 +636,14 @@
             margin: 0 auto 20px;
             text-align: center;
         }
+        p{
+            font-size: 26px;
+            line-height: 30px;
+            font-weight: 500;
+            color: #000;
+            text-align: center;
+            margin: 0 0 40px;
+        }
         .tags{
             display: flex;
             align-items: center;
@@ -753,6 +761,12 @@
                 line-height: 74px;
                 max-width: 400px;
                 margin: 0 auto 10px;
+            }
+            p{
+                font-size: 20px;
+                line-height: 24px;
+                max-width: 220px;
+                margin: 0 auto 30px;
             }
             .tags{
                 margin: 0;

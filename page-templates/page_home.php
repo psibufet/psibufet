@@ -7,7 +7,15 @@ get_header(); ?>
 
 <main class="pbpage pbpage--home">
 
-    <?php include get_template_directory() . '/template-parts/_homeHeaderV3.php'; ?>
+    <section class="homeHeaderV3" style="background-image: url('/wp-content/themes/psibufet/images/frontpage/homeHeaderV3_bg.webp');">
+        <div class="homeHeaderV3__wrap">
+            <div class="homeHeaderV3__content">
+                <h2>Świeże spojrzenie na psie jedzenie</h2>
+                <p>Zdrowe i pyszne posiłki z dostawą pod drzwi</p>
+                <a href="https://zamowienie.psibufet.pl/" class="btn btn--big btn--center dir"><span><?php the_field('front_header_cta') ?></span></a>
+            </div>
+        </div>
+    </section>
     
     <div class="mainUSP">
         <div class="mainUSP__google">
@@ -72,7 +80,7 @@ get_header(); ?>
     <section class="homeFood">
         <div class="homeFood__wrap">
             <div class="homeFood__image">
-                <img src="<?php echo get_template_directory_uri() . '/images/home/homeFood.gif'; ?>"/>
+                <img src="<?php echo get_template_directory_uri() . '/images/home/homeFood.png'; ?>"/>
             </div>
             <div class="homeFood__content">
                 <h2 class="getMarker">Poznaj nasz <span class="marker">smaki</span></h2>
