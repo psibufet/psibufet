@@ -1620,6 +1620,7 @@ $(document).ready(function(){
  */
 $(document).ready(function(){
     let param = GetURLParameter('test'),
+        preloader = '',
         data = {
             action: 'homepageTest',
         }
@@ -1629,10 +1630,23 @@ $(document).ready(function(){
             url: PBAjax.ajaxurl,
             data: data,
 
+            beforeSend: function(response){
+                preloader = setInterval(function(){
+                    $('.preloader').css('opacity', '1');
+                    $('.preloader').css('display', 'flex');
+                }, 100);
+            },
             success: function(response){
                 $('.pbpage--frontpage').html(response);
                 $('.pbpage').removeClass('pbpage--frontpage').addClass('pbpage--home');
                 newHomepage_sliders();
+
+                clearInterval(preloader);
+
+                $('.preloader').css('opacity', '0');
+                setTimeout(function(){
+                    $('.preloader').css('display', 'none');
+                }, 500);
             }
         });
     }
