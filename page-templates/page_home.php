@@ -26,7 +26,7 @@ get_header(); ?>
                     <img class="stars__star" src="<?php echo get_template_directory_uri() . '/images/reviews/star_new.svg'; ?>"/>
                 <?php endfor; ?>
             </div>
-            <p>4.9 / 5 na podstawie <b>1 300 opinii</b></p>
+            <p>4.9 / 5 na podstawie <b><?php echo get_field('reviewsCount'); ?> opinii</b></p>
         </div>
         <div class="mainUSP__wrap">
             <?php while(have_rows('homeAfterheader')): the_row(); ?>
@@ -144,7 +144,7 @@ get_header(); ?>
                 </div>
                 <?php endwhile; ?>
             </div>
-            <div class="discountInfo discountInfo--active">
+            <div class="discountInfo">
                 <img src="<?php echo get_template_directory_uri() . '/images/home/discountInfo.svg'; ?>"/>
             </div>
             <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir"><span><?php the_field('front_howitworks_cta') ?></span></a>
@@ -163,7 +163,7 @@ get_header(); ?>
                         <img class="stars__star" src="<?php echo get_template_directory_uri() . '/images/reviews/star_new.svg'; ?>"/>
                     <?php endfor; ?>
                     </div>
-                    <p>4.9 / 5 na podstawie <b>1 300 opinii</b></p>
+                    <p>4.9 / 5 na podstawie <b><?php echo get_field('reviewsCount'); ?> opinii</b></p>
                 </div>
                 <div class="reviews">
 
@@ -287,7 +287,7 @@ get_header(); ?>
             </div>
             <div class="homeReturn__content">
                 <h2 class="getMarker">Wylizana miska lub <span class="marker">zwrot</span> pieniędzy</h2>
-                <p>Jesteśmy pewni, że Twój pies pokocha PsiBufet, dlatego na nasze jedzenie dajemy <u>Gwarancję Czystej Miski</u>.</p>
+                <p>Jesteśmy pewni, że Twój pies pokocha PsiBufet, dlatego na nasze jedzenie dajemy <a href="https://psibufet.pl/regulamin.pdf" target="_blank">Gwarancję Czystej Miski</a>.</p>
             </div>
         </div>
     </section>

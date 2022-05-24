@@ -643,6 +643,27 @@
             "endpoint": 0
         },
         {
+            "key": "field_628c9336b2857",
+            "label": "Liczba opinii",
+            "name": "reviewsCount",
+            "type": "number",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
             "key": "field_627d1f1a1e38b",
             "label": "Opinie klientów",
             "name": "homeClients",
@@ -989,5 +1010,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1652694714
+    "modified": 1653379913
 }

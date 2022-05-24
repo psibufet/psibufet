@@ -1002,8 +1002,15 @@
             margin: 0;
             letter-spacing: .3px;
 
-            u{
-                text-decoration: underline;
+            a{
+                text-decoration: underline !important;
+                color: #fff !important;
+
+                &:hover{
+                    text-decoration: underline !important;
+                    color: #fff !important;
+                    opacity: .7;
+                }
             }
         }
     }

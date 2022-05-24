@@ -2397,8 +2397,14 @@ body.promocode-blackweek .siteHeader--promocode {
   margin: 0;
   letter-spacing: 0.3px;
 }
-.homeReturn__content p u {
-  text-decoration: underline;
+.homeReturn__content p a {
+  text-decoration: underline !important;
+  color: #fff !important;
+}
+.homeReturn__content p a:hover {
+  text-decoration: underline !important;
+  color: #fff !important;
+  opacity: 0.7;
 }
 
 @media (max-width: 991px) {
