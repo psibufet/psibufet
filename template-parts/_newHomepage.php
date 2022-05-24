@@ -1,10 +1,3 @@
-<?php
-/*
-Template Name: Homepage
-*/
-
-get_header(); ?>
-
 <main class="pbpage pbpage--home">
 
     <section class="homeHeaderV3" style="background-image: url('/wp-content/themes/psibufet/images/frontpage/homeHeaderV3_bg.webp');">
@@ -12,7 +5,7 @@ get_header(); ?>
             <div class="homeHeaderV3__content">
                 <h2>Świeże spojrzenie na psie jedzenie</h2>
                 <p>Zdrowe i pyszne posiłki z dostawą pod drzwi</p>
-                <a href="https://zamowienie.psibufet.pl/" class="btn btn--big btn--center dir"><span><?php the_field('front_header_cta') ?></span></a>
+                <a href="https://zamowienie.psibufet.pl/" class="btn btn--big btn--center dir"><span><?php the_field('front_header_cta', 69325) ?></span></a>
             </div>
         </div>
     </section>
@@ -26,10 +19,10 @@ get_header(); ?>
                     <img class="stars__star" src="<?php echo get_template_directory_uri() . '/images/reviews/star_new.svg'; ?>"/>
                 <?php endfor; ?>
             </div>
-            <p>4.9 / 5 na podstawie <b><?php echo get_field('reviewsCount'); ?> opinii</b></p>
+            <p>4.9 / 5 na podstawie <b><?php echo get_field('reviewsCount', 69325); ?> opinii</b></p>
         </div>
         <div class="mainUSP__wrap">
-            <?php while(have_rows('homeAfterheader')): the_row(); ?>
+            <?php while(have_rows('homeAfterheader', 69325)): the_row(); ?>
             <div class="usp">
                 <div class="usp__icon">
                     <img src="<?php echo get_sub_field('homeAfterheader_icon')['url']; ?>" alt="<?php echo get_sub_field('homeAfterheader_icon')['alt']; ?>"/>
@@ -66,7 +59,7 @@ get_header(); ?>
                     </div>
                 </div>
                 <div class="homeMiska__badge"></div>
-                <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir"><span><?php the_field('front_uknow_cta') ?></span></a>
+                <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir"><span><?php the_field('front_uknow_cta', 69325) ?></span></a>
             </div>
             <div class="homeMiska__right">
                 <div class="homeMiska__imageWrap">
@@ -85,7 +78,7 @@ get_header(); ?>
             <div class="homeFood__content">
                 <h2 class="getMarker">Poznaj nasz <span class="marker">smaki</span></h2>
                 <div class="homeFood__slider">
-                    <?php while( have_rows('slider_z_karmami') ): the_row(); 
+                    <?php while( have_rows('slider_z_karmami', 69325) ): the_row(); 
                         $image = get_sub_field('karma_img');
                         $name = get_sub_field('karma_name');
                         $desc = get_sub_field('karma_short_desc');
@@ -112,7 +105,7 @@ get_header(); ?>
 
     <div class="mainUSP mainUSP--yellow">
         <div class="mainUSP__wrap">
-            <?php while(have_rows('homeUSP')): the_row(); ?>
+            <?php while(have_rows('homeUSP', 69325)): the_row(); ?>
             <div class="usp">
                 <div class="usp__icon usp__icon--nomargin">
                     <img src="<?php echo get_sub_field('homeUSP_icon')['url']; ?>" alt="<?php echo get_sub_field('homeUSP_icon')['alt']; ?>"/>
@@ -123,12 +116,12 @@ get_header(); ?>
         </div>
     </div>
 
-    <?php if(get_field('howitworks_step')): ?>
+    <?php if(get_field('howitworks_step', 69325)): ?>
     <section class="homeHowitworks homeHowitworks--new homeHowitworks--nodog">
         <div class="homeHowitworks__wrap container">
             <h2 class="getMarker">Jak działa <span class="marker">subskrypcja?</span></h2>
             <div class="homeHowitworks__steps">
-                <?php while(have_rows('howitworks_step')): the_row();
+                <?php while(have_rows('howitworks_step', 69325)): the_row();
                     $image = get_sub_field('howitworks_step_image');
                     $title = get_sub_field('howitworks_step_title');
                     $content = get_sub_field('howitworks_step_content');
@@ -147,7 +140,7 @@ get_header(); ?>
             <div class="discountInfo">
                 <img src="<?php echo get_template_directory_uri() . '/images/home/discountInfo.svg'; ?>"/>
             </div>
-            <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir"><span><?php the_field('front_howitworks_cta') ?></span></a>
+            <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir"><span><?php the_field('front_howitworks_cta', 69325) ?></span></a>
         </div>
     </section>
     <?php endif; ?>
@@ -163,13 +156,13 @@ get_header(); ?>
                         <img class="stars__star" src="<?php echo get_template_directory_uri() . '/images/reviews/star_new.svg'; ?>"/>
                     <?php endfor; ?>
                     </div>
-                    <p>4.9 / 5 na podstawie <b><?php echo get_field('reviewsCount'); ?> opinii</b></p>
+                    <p>4.9 / 5 na podstawie <b><?php echo get_field('reviewsCount', 69325); ?> opinii</b></p>
                 </div>
                 <div class="reviews">
 
                     <?php
                     $colors = array('#795405', '#4769B2', '#F95892', '#5bb7c9', '#975bc9');
-                    while(have_rows('homeClients')): the_row();
+                    while(have_rows('homeClients', 69325)): the_row();
                         $letter = substr(get_sub_field('homeClients_author'), -100, 1);
                         $author = get_sub_field('homeClients_author');
                         $stars = get_sub_field('homeClients_stars');
@@ -233,8 +226,8 @@ get_header(); ?>
     <section class="homeAbout">
         <div class="homeAbout__wrap container">
             <div class="homeAbout__content">
-                <h2 class="getMarker"><?php echo the_field('homeAbout_title'); ?></h2>
-                <p><?php echo the_field('homeAbout_content'); ?></p>
+                <h2 class="getMarker"><?php echo get_field('homeAbout_title', 69325); ?></h2>
+                <p><?php echo get_field('homeAbout_content', 69325); ?></p>
                 <div class="usp">
                     <div class="usp__usp">
                         <div class="icon">
@@ -259,7 +252,7 @@ get_header(); ?>
             </div>
             <div class="homeAbout__gif">
                 <div class="image">
-                    <img src="<?php echo get_field('homeAbout_image')['url']; ?>" alt="<?php echo get_field('homeAbout_image')['alt']; ?>"/>
+                    <img src="<?php echo get_field('homeAbout_image', 69325)['url']; ?>" alt="<?php echo get_field('homeAbout_image', 69325)['alt']; ?>"/>
                 </div>
                 <a href="/o-nas" class="btn btn--info btn--center"><span>Więcej o nas</span></a>
             </div>
@@ -307,12 +300,12 @@ get_header(); ?>
         </div>
     </section>
 
-    <?php if(get_field('faq_list')): ?>
+    <?php if(get_field('faq_list', 69325)): ?>
     <section class="homeFaq">
         <div class="homeFaq__wrap container">
             <h2>Najczęściej zadawane pytania</h2>
             <div class="homeFaq__list">
-                <?php while( have_rows('faq_list') ): the_row(); 
+                <?php while( have_rows('faq_list', 69325) ): the_row(); 
                     $question = get_sub_field('faq_list_question');
                     $answer = get_sub_field('faq_list_answer');
                 ?>
@@ -334,4 +327,3 @@ get_header(); ?>
     </section>
     <?php endif; ?>
 </main>
-<?php get_footer(); ?>

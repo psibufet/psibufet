@@ -172,7 +172,7 @@ $(document).ready(function(){
 /**
  * New homepage 
  */
-$(document).ready(function(){
+function newHomepage_sliders(){
     $('.homeFood__slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -207,4 +207,5 @@ $(document).ready(function(){
             }
         ]
     });
-});
+}
+$(document).ready(newHomepage_sliders);

@@ -1614,3 +1614,26 @@ $(document).ready(function(){
         });
     }
 });
+
+/**
+ * Google optimize homepage test
+ */
+$(document).ready(function(){
+    let param = GetURLParameter('test'),
+        data = {
+            action: 'homepageTest',
+        }
+
+    if(param){
+        $.ajax({
+            url: PBAjax.ajaxurl,
+            data: data,
+
+            success: function(response){
+                $('.pbpage--frontpage').html(response);
+                $('.pbpage').removeClass('pbpage--frontpage').addClass('pbpage--home');
+                newHomepage_sliders();
+            }
+        });
+    }
+});
