@@ -1630,7 +1630,7 @@ $(document).ready(function(){
             $('.preloader').removeClass('disable')
             $('.preloader').css('opacity', '1');
             $('.preloader').css('display', 'flex');
-        }, 100);
+        }, 20);
 
         $.ajax({
             url: PBAjax.ajaxurl,
