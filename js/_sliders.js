@@ -207,5 +207,20 @@ function newHomepage_sliders(){
             }
         ]
     });
+    $('.homeInstagram__posts').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: true,
+        infinite: true,
+        variableWidth: true,
+        responsive: [{
+            breakpoint: 992,
+            settings: {
+                swipe: true,
+                centerMode: true,
+            }
+        }]
+    });
 }
 $(document).ready(newHomepage_sliders);
