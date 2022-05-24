@@ -33,6 +33,9 @@
     <?php endif; ?>
 
     <?php wp_head(); ?>
+
+    <!-- Google optimize homepage test -->
+    <script type="text/javascript" src="<?php echo get_template_directory_uri() . '/js/_homepagetest.js'; ?>"></script>
     
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -48,6 +51,15 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-56FMXQ3"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) --> 
+
+    <script type="text/javascript">
+        // (function($){
+        //     $(document).ready(function(){
+        //         $(document).trigger('run-homepage-test');
+        //         console.log('triggered');
+        //     });
+        // }(jQuery));
+    </script>
 
     <?php do_action('sydney_before_site'); //Hooked: sydney_preloader() ?>
 
