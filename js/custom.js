@@ -1626,16 +1626,16 @@ $(document).ready(function(){
         }
 
     if(param){
+        preloader = setInterval(function(){
+            $('.preloader').removeClass('disable')
+            $('.preloader').css('opacity', '1');
+            $('.preloader').css('display', 'flex');
+        }, 100);
+
         $.ajax({
             url: PBAjax.ajaxurl,
             data: data,
 
-            beforeSend: function(response){
-                preloader = setInterval(function(){
-                    $('.preloader').css('opacity', '1');
-                    $('.preloader').css('display', 'flex');
-                }, 100);
-            },
             success: function(response){
                 $('.pbpage--frontpage').html(response);
                 $('.pbpage').removeClass('pbpage--frontpage').addClass('pbpage--home');
@@ -1646,6 +1646,7 @@ $(document).ready(function(){
                 $('.preloader').css('opacity', '0');
                 setTimeout(function(){
                     $('.preloader').css('display', 'none');
+                    $('.preloader').addClass('disable');
                 }, 500);
             }
         });
