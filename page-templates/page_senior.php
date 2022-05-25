@@ -140,7 +140,7 @@ get_header(); ?>
                     </div>
                 </div>
             </div>
-            <a href="<?php echo home_url(); ?>" class="btn btn--center btn--clear"><span>Dowiedz się więcej</span></a>
+            <a href="<?php echo home_url('/nasze-przepisy'); ?>" class="btn btn--center btn--clear"><span>Dowiedz się więcej</span></a>
         </div>
     </section>
 
