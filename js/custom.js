@@ -466,7 +466,11 @@ $(document).ready(function(){
         success: function(){
             $.getJSON("https://app.psibufet.pl/api/order/couponcode/" + code, function (data) {
                 // Add badge - new homepage
-                $('.homeHowitworks').find('.discountInfo').addClass('discountInfo--active');
+                let discountInfo = $('.homeHowitworks').find('.discountInfo');
+                discountInfo.addClass('discountInfo--active');
+
+                discountInfo.find('.discountInfo__one').find('p').find('span').text('-' + data.amount);
+                discountInfo.find('.discountInfo__two').find('p').find('span').text('-' + data.amount2);
             });
         }
     });

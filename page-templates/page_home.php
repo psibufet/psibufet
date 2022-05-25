@@ -145,7 +145,13 @@ get_header(); ?>
                 <?php endwhile; ?>
             </div>
             <div class="discountInfo">
-                <img src="<?php echo get_template_directory_uri() . '/images/home/discountInfo.svg'; ?>"/>
+                <div class="discountInfo__one">
+                    <p><span>-20</span>%</p>
+                </div>
+                <img src="<?php echo get_template_directory_uri() . '/images/home/discountInfo_divider.svg'; ?>"/>
+                <div class="discountInfo__two">
+                    <p><span>-20</span>%</p>
+                </div>
             </div>
             <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir"><span><?php the_field('front_howitworks_cta') ?></span></a>
         </div>

@@ -5026,14 +5026,53 @@ body.admin-bar .foodModal__wrap {
 }
 .homeHowitworks--new .discountInfo {
   display: none;
-  margin: 40px 0;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 252px;
+  margin: 40px auto;
+}
+.homeHowitworks--new .discountInfo__one, .homeHowitworks--new .discountInfo__two {
+  width: 104px;
+  height: 104px;
+  position: relative;
+}
+.homeHowitworks--new .discountInfo__one:after, .homeHowitworks--new .discountInfo__two:after {
+  content: "";
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.homeHowitworks--new .discountInfo__one p, .homeHowitworks--new .discountInfo__two p {
+  font-size: 38px;
+  line-height: 1;
+  color: #fff;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  position: absolute;
+  top: 13px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.homeHowitworks--new .discountInfo__one p span, .homeHowitworks--new .discountInfo__two p span {
+  font-size: 48px;
+  line-height: 1;
+}
+.homeHowitworks--new .discountInfo__one:after {
+  background-image: url("/wp-content/themes/psibufet/images/home/discountInfo_01.svg");
+}
+.homeHowitworks--new .discountInfo__two:after {
+  background-image: url("/wp-content/themes/psibufet/images/home/discountInfo_02.svg");
 }
 .homeHowitworks--new .discountInfo--active {
-  display: block;
+  display: flex;
 }
 .homeHowitworks--new .discountInfo img {
   display: block;
-  margin: 0 auto;
+  margin: 0 15px;
 }
 
 @media (max-width: 1199px) {
