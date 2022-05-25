@@ -33,6 +33,21 @@
                     $('.preloader').css('display', 'none');
                     $('.preloader').addClass('disable');
                 }, 500);
+
+                let code = GetURLParameter('code');
+
+                if(code !== ''){
+                    $.ajax({
+                        url:'https://app.psibufet.pl/api/order/couponcode/' + code,
+                        
+                        success: function(){
+                            $.getJSON("https://app.psibufet.pl/api/order/couponcode/" + code, function (data) {
+                                // Add badge - new homepage
+                                $('.homeHowitworks').find('.discountInfo').addClass('discountInfo--active');
+                            });
+                        }
+                    });
+                }
             }
         });
     });
