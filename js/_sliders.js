@@ -168,3 +168,59 @@ $(document).ready(function(){
         dots: true,
     });
 });
+
+/**
+ * New homepage 
+ */
+function newHomepage_sliders(){
+    $('.homeFood__slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: false,
+    });
+
+    let homeClients = $('.homeClients').find('.reviews');
+    $(homeClients).slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: false,
+        centerMode: true,
+        variableWidth: true,
+        responsive: [
+            {
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 2,
+                    centerMode: false,
+                }
+            },
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 1,
+                    variableWidth: true,
+                    centerMode: true,
+                    dots: true,
+                }
+            }
+        ]
+    });
+    $('.homeInstagram__posts').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: true,
+        infinite: true,
+        variableWidth: true,
+        responsive: [{
+            breakpoint: 992,
+            settings: {
+                swipe: true,
+                centerMode: true,
+            }
+        }]
+    });
+}
+$(document).ready(newHomepage_sliders);

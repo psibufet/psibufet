@@ -23,6 +23,7 @@
 
 /*  Subpages 
 --------------- */
+@import 'subpages/home';
 @import 'subpages/homepage';
 @import 'subpages/recipes';
 @import 'subpages/howitworks';
@@ -326,7 +327,7 @@ body{
         display: block;
         max-width: fit-content;
         max-width: -moz-fit-content;
-        margin: 0 auto;
+        margin: 0 auto !important;
     }
 
     &--medium{
