@@ -222,5 +222,13 @@ function newHomepage_sliders(){
             }
         }]
     });
+    if($(window).width() < 931){
+        $('.pbShortcuts__wrap').slick({
+            variableWidth: true,
+            centerMode: true,
+            arrows: false,
+            dots: true,
+        });
+    }
 }
 $(document).ready(newHomepage_sliders);
