@@ -2,6 +2,7 @@
  * Google optimize homepage test
  */
 (function($){
+    console.log('homepage test ready');
     // let param = GetURLParameter('test');
     let preloader = '',
         data = {
@@ -9,7 +10,7 @@
         };
 
     $(document).on('run-homepage-test', function(){
-        console.log('runned');
+        console.log('homepage test run');
         preloader = setInterval(function(){
             $('.preloader').removeClass('disable')
             $('.preloader').css('opacity', '1');
