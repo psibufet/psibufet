@@ -78,6 +78,11 @@
 
 </div><!-- #page -->
 
+<script type="text/javascript">
+    // let event = new CustomEvent('run-homepage-test');
+    // document.dispatchEvent(event);
+</script>
+
 <?php wp_footer(); ?>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAihhg2fnZvuAF6biw73IE-A2WX0nosQk"></script>
 <script type="text/javascript">

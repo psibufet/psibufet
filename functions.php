@@ -601,6 +601,11 @@ function psibufet_scripts(){
 	wp_register_script( 'jQuery', get_template_directory_uri() . '/plugins/jQuery/jquery-2.2.4.min.js', null, null, true );
 	wp_enqueue_script('jQuery');
 
+	// Homepage test
+	wp_register_script( 'psibufet-homepagetest', get_template_directory_uri() . '/js/_homepagetest.js', null, null, false );
+	wp_enqueue_script('psibufet-homepagetest');
+	wp_localize_script( 'psibufet-homepagetest', 'PBAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
+
 	// Autocomplete
 	if(!is_front_page()){
 		wp_enqueue_style( 'theme-autocomplete', get_template_directory_uri() . '/plugins/autocomplete/easy-autocomplete.themes.min.css', array());
