@@ -636,6 +636,14 @@
             margin: 0 auto 20px;
             text-align: center;
         }
+        p{
+            font-size: 26px;
+            line-height: 30px;
+            font-weight: 500;
+            color: #000;
+            text-align: center;
+            margin: 0 0 40px;
+        }
         .tags{
             display: flex;
             align-items: center;
@@ -753,6 +761,12 @@
                 line-height: 74px;
                 max-width: 400px;
                 margin: 0 auto 10px;
+            }
+            p{
+                font-size: 20px;
+                line-height: 24px;
+                max-width: 220px;
+                margin: 0 auto 30px;
             }
             .tags{
                 margin: 0;
@@ -1414,6 +1428,82 @@
             width: 80px;
         }
     }
+
+    &--new{
+        background-image: url('/wp-content/themes/psibufet/images/home/miska_bg.png');
+        background-repeat: no-repeat;
+        background-position: center right;
+
+        .homeMiska__wrap{
+            height: inherit;
+            display: flex;
+        }
+
+        .homeMiska__left{
+            background-color: #fff;
+            position: relative;
+
+            &:before{
+                content: '';
+                width: 100vw;
+                height: 100%;
+                left: calc(-100vw + 1px);
+                top: 0;
+                position: absolute;
+                z-index: 99;
+                background-color: #fff;
+            }
+
+            .subtitle{
+                max-width: 506px;
+                margin: 0 auto;
+                font-size: 18px;
+                line-height: 24px;
+            }
+            .info_boxes{
+                max-width: 400px;
+
+                .box{
+                    width: calc(100% / 3);
+
+                    &:nth-child(3){
+                        .box__thumb{
+                            img{
+                                margin-top: 0 !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .homeMiska__right{
+            &::before,
+            &::after{
+                display: none;
+            }
+        }
+        .homeMiska__imageWrap{
+            .ba_img{
+                &.before{
+                    &::after{
+                        content: '';
+                        width: 2px;
+                        height: 100%;
+                        background: rgb(255,255,255);
+                        background: linear-gradient(0deg, rgba(255,255,255,0) 10%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 90%);
+                        opacity: 0;
+                        transition: ease .3s;
+                    }
+
+                    &.line{
+                        &::after{
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 @media (max-width: 1599px){
     .homeMiska{
@@ -1460,6 +1550,11 @@
                     width: $imageswidth;
                     height: $imageswidth;
                 }
+            }
+        }
+        &--new{
+            .homeMiska__left{
+                padding-right: 60px;
             }
         }
     }
@@ -1512,6 +1607,38 @@
                 top: 360px;
             }
         }
+        &--new{
+            background-image: unset;
+            
+            .homeMiska__wrap{
+                flex-direction: column-reverse;
+                position: relative;
+                width: 100%;
+                padding: 0;
+            }
+            .homeMiska__left{
+                width: 750px;
+                padding: 25px 15px 32px;
+                margin: 0 auto;
+
+                &:before{
+                    display: none;
+                }
+                .info_boxes{
+                    .box{
+                        border: 0;
+                        padding: 0;
+                        box-shadow: none;
+                    }
+                }
+            }
+            .homeMiska__right{
+                background-image: url('/wp-content/themes/psibufet/images/home/miska_bg.png');
+                background-repeat: no-repeat;
+                background-position: center right;
+                background-size: auto 100%;
+            }
+        }
     }
 }
 @media (max-width: 767px){
@@ -1562,6 +1689,31 @@
             }
             .logo{
                 width: 60px;
+            }
+        }
+        &--new{
+            .homeMiska__left{
+                width: 100%;
+
+                .subtitle{
+                    font-size: 14px;
+                    line-height: 18px;
+                    max-width: 320px;
+                }
+                .info_boxes{
+                    max-width: 320px;
+
+                    .box{
+                        &__thumb{
+                            height: 60px;
+
+                            img{
+                                width: 45px;
+                                max-height: 60px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -2891,6 +3043,54 @@ body.admin-bar{
             }
         }
     }
+    &--new{
+        background-image: url('/wp-content/themes/psibufet/images/homefoodinfobg.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .homeHowitworks__step{
+            padding: 0;
+
+            .image{
+                width: 100%;
+                height: 286px;
+                margin: 0;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .content{
+                h3{
+                    background-color: $bluecolor;
+                    padding: 7px 10px;
+                    color: #fff;
+                    margin: 0;
+                }
+                p{
+                    font-size: 16px;
+                    line-height: 19px;
+                    padding: 14px 30px 20px;
+                    color: rgba(0, 0, 0, .7)
+                }
+            }
+        }
+        .discountInfo{
+            display: none;
+            margin: 40px 0;
+
+            &--active{
+                display: block;
+            }
+
+            img{
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
 }
 @media (max-width: 1199px){
     .homeHowitworks{
@@ -2933,6 +3133,20 @@ body.admin-bar{
                 p{
                     font-size: 12px;
                     line-height: 16px;
+                }
+            }
+        }
+        &--new{
+            .homeHowitworks__step{
+                .image{
+                    height: 252px;
+                }
+                .content{
+                    p{
+                        font-size: 12px;
+                        line-height: 16px;
+                        padding: 10px 15px 15px;
+                    }
                 }
             }
         }
@@ -4332,6 +4546,10 @@ body.admin-bar{
     &__posts{
         max-width: 1185px;
         margin: 0 auto 80px;
+        
+        .slick-list{
+            padding: 0 0 10px;
+        }
 
         .slick-arrow{
             background-repeat: no-repeat;
@@ -4449,6 +4667,9 @@ body.admin-bar{
         .homeInstagram__posts{
             margin: 0 auto 60px;
         }
+    }
+    &--new{
+        background-color: #f7be454d;
     }
 }
 @media (max-width: 1599px){
@@ -4618,6 +4839,7 @@ body.admin-bar{
         display: flex;
 
         .image{
+            display: flex;
             position: relative;
 
             &:after{
@@ -4674,14 +4896,14 @@ body.admin-bar{
             
             .btn{
                 display: inline-block;
-                margin: 32px auto 0;
+                margin: 32px auto 0 !important;
             }
         }
     }
 }
 @media (max-width: 767px){
     .homeAbout{
-        padding: 25px 0 120px;
+        padding: 25px 0 32px;
 
         &__content{
             h2{
@@ -5102,7 +5324,7 @@ body.admin-bar{
 // FAQ
 .homeFaq{
     background-color: #E8E8E8;
-    padding-top: 40px;
+    padding: 40px 0;
 
     &__wrap{
         position: relative;

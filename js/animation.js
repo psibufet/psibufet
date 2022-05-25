@@ -10,6 +10,26 @@ $(window).on('scroll', function () {
     
     var image_width_desktop = distance + 80;
     $('.ba_img.before').css('width', image_width_desktop + 'px');
+
+    if($(window).width() > 1200){
+        if(image_width_desktop < 550 && image_width_desktop > 100){
+            $('.ba_img.before').addClass('line');
+        }else{
+            $('.ba_img.before').removeClass('line');
+        }
+    }else if($(window).width() <= 1199 && $(window).width() > 576 ){
+        if(image_width_desktop < 420 && image_width_desktop > 85){
+            $('.ba_img.before').addClass('line');
+        }else{
+            $('.ba_img.before').removeClass('line');
+        }
+    }else if($(window).width() <= 575){
+        if(image_width_desktop < 250 && image_width_desktop > 50){
+            $('.ba_img.before').addClass('line');
+        }else{
+            $('.ba_img.before').removeClass('line');
+        }
+    }
 });
 
 /********** PODKREŚLENIA FUNKCJA **********/
@@ -179,6 +199,71 @@ $(document).ready(function() {
         if($(pbQuestions).visible(true)){
             setTimeout(function(){
                 pbQuestions.addClass('init');
+            }, 500)
+        }
+    });
+});
+
+/**
+ * New home page
+ */
+ $(document).ready(function() {
+    var homeMiska = $('.homeMiska').find('.getMarker');
+    var homeFood = $('.homeFood').find('.getMarker');
+    var homeClients = $('.homeClients').find('.getMarker');
+    var homeStart = $('.homeStartnew').find('.getMarker');
+    var homeReturn = $('.homeReturn').find('.getMarker');
+
+    if($(homeMiska).visible(true)){
+        setTimeout(function(){
+            homeMiska.addClass('init');
+        }, 500)
+    }
+    if($(homeFood).visible(true)){
+        setTimeout(function(){
+            homeFood.addClass('init');
+        }, 500)
+    }
+    if($(homeClients).visible(true)){
+        setTimeout(function(){
+            homeClients.addClass('init');
+        }, 500)
+    }
+    if($(homeStart).visible(true)){
+        setTimeout(function(){
+            homeStart.addClass('init');
+        }, 500)
+    }
+    if($(homeReturn).visible(true)){
+        setTimeout(function(){
+            homeReturn.addClass('init');
+        }, 500)
+    }
+
+    $(window).on('scroll', function () {
+        if($(homeMiska).visible(true)){
+            setTimeout(function(){
+                homeMiska.addClass('init');
+            }, 500)
+        }
+        if($(homeFood).visible(true)){
+            setTimeout(function(){
+                homeFood.addClass('init');
+            }, 500)
+        }
+        if($(homeClients).visible(true)){
+            setTimeout(function(){
+                homeClients.addClass('init');
+            }, 500)
+        }
+        if($(homeStart).visible(true)){
+            setTimeout(function(){
+                homeStart.addClass('init');
+            }, 500)
+        }
+        if($(homeReturn).visible(true)){
+            setTimeout(function(){
+                homeReturn.addClass('init');
             }, 500)
         }
     });

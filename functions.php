@@ -780,3 +780,17 @@ function my_acf_init_block_types() {
         ));
     }
 }
+
+
+/**
+ * Google optimize new homepage test
+ */
+add_action('wp_ajax_homepageTest', 'homepageTest');
+add_action('wp_ajax_nopriv_homepageTest', 'homepageTest');
+function homepageTest(){
+	$homepage = include (get_template_directory() . '/template-parts/_newHomepage.php');
+
+	return $homepage;
+	
+	die();
+}

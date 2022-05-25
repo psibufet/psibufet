@@ -454,6 +454,24 @@ $(document).ready(function(){
     }
 });
 
+/**
+ * New homepage badge
+ */
+$(document).ready(function(){
+    let code = GetURLParameter('code');
+
+    $.ajax({
+        url:'https://app.psibufet.pl/api/order/couponcode/' + code,
+        
+        success: function(){
+            $.getJSON("https://app.psibufet.pl/api/order/couponcode/" + code, function (data) {
+                // Add badge - new homepage
+                $('.homeHowitworks').find('.discountInfo').addClass('discountInfo--active');
+            });
+        }
+    });
+});
+
 /** 
  * Menu mobile
  */

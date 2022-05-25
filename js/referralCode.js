@@ -152,6 +152,7 @@ $(document).ready(function(){
 	var sPageURL = window.location.pathname.replace('/','');
 	var whitelist = [
 		'',
+		'new',
 		'jak-to-dziala',
 		'jak-to-dziala-new',
 		'nasze-przepisy',
