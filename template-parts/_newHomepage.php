@@ -232,8 +232,8 @@
     <section class="homeAbout">
         <div class="homeAbout__wrap container">
             <div class="homeAbout__content">
-                <h2 class="getMarker"><?php echo get_field('homeAbout_title', 69325); ?></h2>
-                <p><?php echo get_field('homeAbout_content', 69325); ?></p>
+                <h2 class="getMarker"><?php echo get_field('homeAbout_title', 5); ?></h2>
+                <p><?php echo get_field('homeAbout_content', 5); ?></p>
                 <div class="usp">
                     <div class="usp__usp">
                         <div class="icon">
@@ -258,7 +258,7 @@
             </div>
             <div class="homeAbout__gif">
                 <div class="image">
-                    <img src="<?php echo get_field('homeAbout_image', 69325)['url']; ?>" alt="<?php echo get_field('homeAbout_image', 69325)['alt']; ?>"/>
+                    <img src="<?php echo get_field('homeAbout_image', 5)['url']; ?>" alt="<?php echo get_field('homeAbout_image', 5)['alt']; ?>"/>
                 </div>
                 <a href="/o-nas" class="btn btn--info btn--center"><span>Więcej o nas</span></a>
             </div>
