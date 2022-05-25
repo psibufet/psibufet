@@ -34,8 +34,9 @@
                     $('.preloader').addClass('disable');
                 }, 500);
 
-                let code = GetURLParameter('code');
 
+                // If code exist
+                let code = GetURLParameter('code');
                 if(code !== ''){
                     $.ajax({
                         url:'https://app.psibufet.pl/api/order/couponcode/' + code,
@@ -48,6 +49,17 @@
 
                                 discountInfo.find('.discountInfo__one').find('p').find('span').text('-' + data.amount);
                                 discountInfo.find('.discountInfo__two').find('p').find('span').text('-' + data.amount2);
+
+                                // Add discount info to <a>
+                                $('.dir').each(function () {
+                                    let $this = $(this),
+                                        _href = $this.attr('href');
+                                    if(typeof data.type !== 'undefined' && typeof data.amount !== 'undefined'){
+                                        $this.attr('href', _href + '?code=' + code + '&amount=' + data.amount + '&type=' + data.type);
+                                    }else{
+                                        $this.attr('href', _href + '?code=' + code);
+                                    }
+                                });
                             });
                         }
                     });
