@@ -207,7 +207,7 @@ $(document).ready(function() {
 /**
  * New home page
  */
- $(document).ready(function() {
+function newhomepage_underscores() {
     var homeMiska = $('.homeMiska').find('.getMarker');
     var homeFood = $('.homeFood').find('.getMarker');
     var homeClients = $('.homeClients').find('.getMarker');
@@ -267,7 +267,8 @@ $(document).ready(function() {
             }, 500)
         }
     });
-});
+}
+$(document).ready(newhomepage_underscores());
 
 /********** Google Shopping pages **********/
 

@@ -25,6 +25,7 @@
                 $('.pbpage--frontpage').html(response);
                 $('.pbpage').removeClass('pbpage--frontpage').addClass('pbpage--home');
                 newHomepage_sliders();
+                newhomepage_underscores();
 
                 clearInterval(preloader);
 
