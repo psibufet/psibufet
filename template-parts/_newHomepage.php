@@ -94,7 +94,7 @@
                             <div class="image">
                                 <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt']; ?>"/>
                             </div>
-                            <a href="/nasze-przepisy"><span>Zobacz nasze przepisy</span></a>
+                            <a href="/nasze-przepisy" class="dir"><span>Zobacz nasze przepisy</span></a>
                         </div>
                     </div>
                     <?php endwhile; ?>
@@ -254,13 +254,13 @@
                         <p>Z miłości<br/>do piesków</p>
                     </div>
                 </div>
-                <a href="/o-nas" class="btn btn--info btn--center"><span>Więcej o nas</span></a>
+                <a href="/o-nas" class="btn btn--info btn--center dir"><span>Więcej o nas</span></a>
             </div>
             <div class="homeAbout__gif">
                 <div class="image">
                     <img src="<?php echo get_field('homeAbout_image', 5)['url']; ?>" alt="<?php echo get_field('homeAbout_image', 5)['alt']; ?>"/>
                 </div>
-                <a href="/o-nas" class="btn btn--info btn--center"><span>Więcej o nas</span></a>
+                <a href="/o-nas" class="btn btn--info btn--center dir"><span>Więcej o nas</span></a>
             </div>
         </div>
     </section>
@@ -294,13 +294,13 @@
     <section class="pbShortcuts">
         <h2 class="getMarker"><span class="marker">Poznaj</span> nas lepiej</h2>
         <div class="pbShortcuts__wrap">
-            <a href="/jak-to-dziala" class="pbShortcuts__box" style="background-image: url('<?php echo get_template_directory_uri() . '/images/homepage/homeShortcuts_01.webp'; ?>');">
+            <a href="/jak-to-dziala" class="pbShortcuts__box dir" style="background-image: url('<?php echo get_template_directory_uri() . '/images/homepage/homeShortcuts_01.webp'; ?>');">
                 <p class="title">Jak to działa?</p>
             </a>
-            <a href="/nasze-przepisy" class="pbShortcuts__box" style="background-image: url('<?php echo get_template_directory_uri() . '/images/homepage/homeShortcuts_02.webp'; ?>');">
+            <a href="/nasze-przepisy" class="pbShortcuts__box dir" style="background-image: url('<?php echo get_template_directory_uri() . '/images/homepage/homeShortcuts_02.webp'; ?>');">
                 <p class="title">Nasze przepisy</p>
             </a>
-            <a href="/o-nas" class="pbShortcuts__box" style="background-image: url('<?php echo get_template_directory_uri() . '/images/homepage/homeShortcuts_03.webp'; ?>');">
+            <a href="/o-nas" class="pbShortcuts__box dir" style="background-image: url('<?php echo get_template_directory_uri() . '/images/homepage/homeShortcuts_03.webp'; ?>');">
                 <p class="title">O nas</p>
             </a>
         </div>

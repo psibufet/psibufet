@@ -154,13 +154,13 @@ get_header(); ?>
     <section class="pbShortcuts">
         <h2 class="getMarker getMarker--lower"><span class="marker">Poznaj</span> nas lepiej</h2>
         <div class="pbShortcuts__wrap">
-            <a href="/jak-to-dziala" class="pbShortcuts__box" style="background-image: url('<?php echo get_template_directory_uri() . '/images/homepage/homeShortcuts_01.webp'; ?>');">
+            <a href="/jak-to-dziala" class="pbShortcuts__box dir" style="background-image: url('<?php echo get_template_directory_uri() . '/images/homepage/homeShortcuts_01.webp'; ?>');">
                 <p class="title">Jak to działa?</p>
             </a>
-            <a href="/nasze-przepisy" class="pbShortcuts__box" style="background-image: url('<?php echo get_template_directory_uri() . '/images/homepage/homeShortcuts_02.webp'; ?>');">
+            <a href="/nasze-przepisy" class="pbShortcuts__box dir" style="background-image: url('<?php echo get_template_directory_uri() . '/images/homepage/homeShortcuts_02.webp'; ?>');">
                 <p class="title">Nasze przepisy</p>
             </a>
-            <a href="/pomoc" class="pbShortcuts__box" style="background-image: url('<?php echo get_template_directory_uri() . '/images/homepage/homeShortcuts_04.webp'; ?>');">
+            <a href="/pomoc" class="pbShortcuts__box dir" style="background-image: url('<?php echo get_template_directory_uri() . '/images/homepage/homeShortcuts_04.webp'; ?>');">
                 <p class="title">Centrum pomocy</p>
             </a>
         </div>
