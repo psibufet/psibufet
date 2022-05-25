@@ -173,7 +173,7 @@ $(document).ready(function(){
  * New homepage 
  */
 function newHomepage_sliders(){
-    $('.homeFood__slider').slick({
+    $('.homeFood__slider').not('.slick-initialized').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
@@ -181,7 +181,7 @@ function newHomepage_sliders(){
     });
 
     let homeClients = $('.homeClients').find('.reviews');
-    $(homeClients).slick({
+    $(homeClients).not('.slick-initialized').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
         arrows: true,
@@ -207,7 +207,7 @@ function newHomepage_sliders(){
             }
         ]
     });
-    $('.homeInstagram__posts').slick({
+    $('.homeInstagram__posts').not('.slick-initialized').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
         arrows: true,
@@ -223,7 +223,7 @@ function newHomepage_sliders(){
         }]
     });
     if($(window).width() < 931){
-        $('.pbShortcuts__wrap').slick({
+        $('.pbShortcuts__wrap').not('.slick-initialized').slick({
             variableWidth: true,
             centerMode: true,
             arrows: false,

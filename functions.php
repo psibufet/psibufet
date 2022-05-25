@@ -794,8 +794,9 @@ add_action('wp_ajax_homepageTest', 'homepageTest');
 add_action('wp_ajax_nopriv_homepageTest', 'homepageTest');
 function homepageTest(){
 	$homepage = include (get_template_directory() . '/template-parts/_newHomepage.php');
+	// $homepage = 'test';
 
-	return $homepage;
-	
-	die();
+	echo json_encode($homepage);
+
+	wp_die();
 }

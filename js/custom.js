@@ -1138,7 +1138,7 @@ $(document).ready(function(){
 
     // Home shortcuts slider mobile
     if($(window).width() < 931){
-        $('.pbShortcuts__wrap').slick({
+        $('.pbShortcuts__wrap').not('.slick-initialized').slick({
             variableWidth: true,
             centerMode: true,
             arrows: false,
