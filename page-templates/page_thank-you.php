@@ -53,7 +53,7 @@ Template Name: Thank you page
                 <p>Twój unikalny link polecający:</p>
                 <div class="input_wrap">
                     <span id="link" class="link">www.psibufet.pl/uuid</span>
-                        <button id="copybtn" onclick="copyToClipboard('#link')" class="submit">Kopiuj<img src="/wp-content/themes/psibufet/images/copy.svg" /><p>Skopiowano!</p></button>
+                    <button id="copybtn" onclick="copyToClipboard('#link')" class="submit">Kopiuj<img src="/wp-content/themes/psibufet/images/copy.svg" /><p>Skopiowano!</p></button>
                 </div>
             </div>
             <div class="link_wrap">
