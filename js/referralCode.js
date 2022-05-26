@@ -163,6 +163,7 @@ $(document).ready(function(){
 		'pracuj-w-psibufet',
 		'kontakt',
 		'thank-you',
+		'thank-you2',
 		'thank-you-new',
 		'failed-payment',
 		'regulamin',

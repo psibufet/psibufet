@@ -858,20 +858,30 @@ $(document).mouseup(function(e){
 
 
 /******** COPY ********/
-$(document).ready(function() {
-    function copyToClipboard(element) {
-        var $temp = $("<input>");
-        $("body").append($temp);
-        $temp.val($(element).text()).select();
-        document.execCommand("copy");
-        $temp.remove();
-    }
-});
+function copyToClipboard(element) {
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val($(element).text()).select();
+    document.execCommand("copy");
+    $temp.remove();
+}
+
 $(document).on("click", "#copybtn", function () {
     $(this).find('p').addClass('active');
     setTimeout(function(){
         $('#copybtn p').removeClass('active');
-    },2000);
+    }, 2000);
+});
+
+$(document).on('click', '#copybtn', function(){
+    let $this = $(this);
+        value = $this.parent().find('.value');
+    copyToClipboard(value);
+
+    $this.parent().addClass('copied');
+    setTimeout(function(){
+        $this.parent().removeClass('copied');
+    }, 2000);
 });
 
 
@@ -1474,13 +1484,13 @@ $(document).ready(function(){
 
     if(type == 'FX'){
         courier = 'fx';
-        text = 'Nasze świeże jedzenie trafi do Was wieczorem w dniu jego spakowania – dzięki temu będzie <b>idealnie zmrożone</b>.';
+        text = '<b>Nasze świeże jedzenie trafi do Was wieczorem w dniu jego spakowania</b> – dzięki temu będzie <b>idealnie zmrożone</b>.';
     }else if(type == 'COURIER'){
         courier = 'dhl';
-        text = 'Nasze świeże jedzenie dostarczy Wam DHL – informację o planowanej dostawie już wkrótce otrzymasz od kuriera';
+        text = '<b>Nasze świeże jedzenie dostarczy Wam DHL</b> – informację o planowanej dostawie już wkrótce otrzymasz od kuriera';
     }else if(type == 'GOODSPEED'){
         courier = 'goodspeed';
-        text = 'Nasze świeże jedzenie trafi do Was w nocy – w sam raz na poranne karmienie! Jeśli nie chcesz, żeby kurier budził Cię w środku nocy, dodaj kod do domofonu w Panelu Klienta.';
+        text = '<b>Nasze świeże jedzenie trafi do Was w nocy</b> – w sam raz na poranne karmienie! Jeśli nie chcesz, żeby kurier budził Cię w środku nocy, dodaj kod do domofonu w Panelu Klienta.';
     }
 
     if(date !== ''){

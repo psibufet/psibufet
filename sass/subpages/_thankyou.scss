@@ -204,6 +204,169 @@
                     margin: 0 auto;
                 }
             }
+            &--referral{
+                .courier__wrap{
+                    margin: 23px 0 18px;
+
+                    p{
+                        max-width: 100%;
+                        text-align: justify;
+                    }
+                }
+            }
+        }
+    }
+    .referralInfo{
+        padding: 15px 0 0;
+        border-top: 1px solid rgba(0, 0, 0, .2);
+
+        &__heading{
+            margin: 0 0 15px;
+
+            h2{
+                font-size: 24px;
+                line-height: 29px;
+                font-weight: 400;
+                color: #000;
+                font-family: 'Bebas Neue', sans-serif;
+                margin: 0 0 20px;
+                text-align: center;
+            }
+            p{
+                font-size: 14px;
+                line-height: 17px;
+                color: #000;
+                text-align: justify;
+                margin: 0;
+            }
+        }
+
+        &__wrap{
+            .info{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 0 20px;
+
+                &__box{
+                    width: 50%;
+                    padding: 5px 20px 0;
+
+                    &:first-of-type{
+                        background-image: linear-gradient($redcolor 50%, rgba(255,255,255,0) 0%);
+                        background-position: right;
+                        background-size: 2px 16px;
+                        background-repeat: repeat-y;
+                    }
+
+                    .amount{
+                        font-size: 36px;
+                        line-height: 42px;
+                        font-weight: 400;
+                        font-family: 'Bebas Neue', sans-serif;
+                        color: $redcolor;
+                        margin: 0;
+                        text-align: center;
+                    }
+                    img{
+                        display: block;
+                        max-height: 120px;
+                        height: 120px;
+                        margin: 10px auto 15px;
+                    }
+                    p,
+                    h4{
+                        font-size: 24px;
+                        line-height: 32px;
+                        font-weight: 400;
+                        font-family: 'Bebas Neue', sans-serif;
+                        color: #000;
+                        margin: 0;
+                        text-align: center;
+                    }
+                }
+
+            }
+            .referralCode{
+                padding-top: 15px;
+                border-top: 1px solid rgba(0, 0, 0, .2);
+
+                h2{
+                    font-size: 24px;
+                    line-height: 29px;
+                    font-weight: 400;
+                    font-family: 'Bebas Neue', sans-serif;
+                    color: #000;
+                    text-align: center;
+                    margin: 0 0 15px;
+                }
+
+                &__input{
+                    max-width: 310px;
+                    height: 48px;
+                    border: 1px solid rgba(0, 0, 0, .2);
+                    background-color: #fff;
+                    box-shadow: 4px 4px 0 rgba(0, 0, 0, .1);
+                    padding: 0 17px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin: 0 auto;
+
+                    .value{
+                        font-size: 15px;
+                        line-height: 18px;
+                        font-weight: 600;
+                        color: #000;
+                        text-align: left;
+                    }
+                    button{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        max-width: fit-content;
+                        max-width: -moz-max-content;
+                        max-width: -webkit-fit-content;
+                        height: 30px;
+                        padding: 0 17px 0 15px;
+                        border: 0;
+                        border-radius: 0;
+                        box-shadow: 3px 3px 0 rgba(0, 0, 0, .1);
+                        outline: none;
+                        cursor: pointer;
+                        transition: ease .3s;
+
+                        &:hover{
+                            background-color: $redcolorhover;
+                        }
+
+                        span{
+                            font-size: 12px;
+                            line-height: 14px;
+                            text-transform: none;
+                            font-weight: 400;
+                            color: #fff;
+                            margin: 0;
+                            padding-right: 17px;
+                            position: relative;
+
+                            &:after{
+                                content: '';
+                                background-image: url('/wp-content/themes/psibufet/images/thank-you/copy_ico.svg');
+                                background-repeat: no-repeat;
+                                background-size: 12px;
+                                width: 12px;
+                                height: 12px;
+                                position: absolute;
+                                right: 0;
+                                top: 50%;
+                                transform: translate(0, -50%);
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
     &__que{
@@ -338,6 +501,59 @@
 @media (max-width: 640px){
     .typContent{
         padding: 0 20px 270px;
+    }
+}
+@media (max-width: 575px){
+    .typContent{
+        .referralInfo{
+            &__heading{
+                h2{
+                    font-size: 16px;
+                    line-height: 19px;
+                    margin: 0 0 12px;
+                }
+                p{
+                    font-size: 12px;
+                    line-height: 16px;
+                }
+            }
+            .info{
+                max-width: 320px;
+                margin: 0 auto;
+
+                &__box{
+                    padding: 5px 8px 0;
+
+                    .amount{
+                        font-size: 24px;
+                        line-height: 28px;
+                    }
+                    img{
+                        height: 65px;
+                    }
+                    p,
+                    h4{
+                        font-size: 16px;
+                        line-height: 19px;
+                    }
+                }
+            }
+            .referralCode{
+                h2{
+                    font-size: 16px;
+                    line-height: 19px;
+                }
+                &__input{
+                    max-width: 258px;
+                    padding: 0 14px;
+
+                    .value{
+                        font-size: 13px;
+                        line-height: 15px;
+                    }
+                }
+            }
+        }
     }
 }
 
