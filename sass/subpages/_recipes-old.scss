@@ -213,17 +213,13 @@
         .recipesList{
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: space-between;
+            max-width: 950px;
             margin: 0 auto;
 
             .foodTile{
-                margin: 0 10px;
-
-                &:first-of-type{
-                    margin-left: 0;
-                }
-                &:last-of-type{
-                    margin-right: 0;
+                &:nth-child(-n+2){
+                    margin-bottom: 40px;
                 }
             }
         }
@@ -231,24 +227,6 @@
     &__order{
         text-align: center;
         margin: 40px 0 0;
-    }
-}
-@media (max-width: 1599px){
-    .recipesMenu{
-        &__wrap{
-            .recipesList{
-                justify-content: space-between;
-                max-width: 660px;
-
-                .foodTile{
-                    margin: 0;
-                    
-                    &:nth-child(-n+2){
-                        margin-bottom: 40px;
-                    }
-                }
-            }
-        }
     }
 }
 @media (max-width: 991px){
@@ -281,7 +259,7 @@
         }
         &__wrap{
             .recipesList{
-                max-width: 420px;
+                max-width: 580px;
     
                 .foodTile{
                     &:nth-child(-n+2){
@@ -306,8 +284,8 @@
             }
         }
         .recipesList{
-            max-width: 320px;
-            // justify-content: center;
+            max-width: 280px;
+            justify-content: center;
             margin: 0 auto;
 
             .foodTile{
@@ -319,69 +297,39 @@
         }
     }
 }
-@media (max-width: 350px){
-    .recipesMenu{
-        .recipesList{
-            .foodTile{
-                max-width: calc(100% / 2 - 10px);
-            }
-        }
-    }
-}
 
 .recipesExpert{
-    background-image: url('/wp-content/themes/psibufet/images/recipes/expert_marmur.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+    padding: 32px 0 40px;
 
     &__wrap{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        max-height: 700px;
-    }
-    &__content{
-        width: 100%;
-        max-width: calc(100% / 2);
-    }
-    &__image{
-        display: flex;
-        width: 100%;
-        max-width: calc(100% / 2);
-        max-height: inherit;
-        overflow: hidden;
-
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-    &__expert{
-        max-width: 510px;
-        margin-left: auto;
-        margin-right: 108px;
-
         h2{
             font-size: 48px;
             line-height: 54px;
             font-family: $headingfont;
             font-weight: 400;
             text-align: center;
-            max-width: 410px;
-            margin: 0 auto 20px;
+            margin: 0 0 20px;
             color: #000;
         }
+    }
+    &__expert{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+        background-color: #fff;
+        border: 1px solid #BCBCBB;
+        box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+        max-width: 955px;
+        margin: 0 auto;
 
         .image{
-            display: block;
-            margin: 0 auto 21px;
-            width: 150px;
-            text-align: center;
+            width: 265px;
+            margin-right: 20px;
 
             img{
-                max-width: 137px;
-                border: 4px solid #fff;
+                max-width: 242px;
+                border: 10px solid #fff;
                 border-radius: 100%;
                 box-shadow: 0 0 0 2px #4EACB6;
             }
@@ -392,7 +340,7 @@
                 font-weight: 400;
                 color: #000;
                 text-align: center;
-                margin: 12px 0 0;
+                margin: 18px 0 0;
 
                 span{
                     font-size: 18px;
@@ -401,14 +349,13 @@
             }
         }
         .content{
-            width: 100%;
+            width: calc(100% - 285px);
 
             p{
-                font-size: 18px;
-                line-height: 24px;
+                font-size: 24px;
+                line-height: 32px;
                 color: #000;
                 margin: 0;
-                text-align: justify;
 
                 b{
                     font-weight: 600;
@@ -417,46 +364,22 @@
         }
     }
 }
-@media (max-width: 1599px){
-    .recipesExpert{
-        &__wrap{
-            align-items: unset;
-        }
-        &__expert{
-            margin: 0 auto !important;
-            padding: 32px 0 36px;
-        }
-    }
-}
-@media (max-width: 1199px){
-    .recipesExpert{
-        &__expert{
-            max-width: 550px;
-            padding: 32px 20px 36px;
-        }
-    }
-}
 @media (max-width: 991px){
     .recipesExpert{
-        padding: 0 15px;
-
-        &__content{
-            max-width: 100%;
-        }
-        &__image{
-            display: none;
+        &__wrap{
+            h2{
+                margin: 0 0 30px;
+            }
         }
         &__expert{
+            flex-direction: column;
             border: 0;
             box-shadow: none;
-            padding: 21px 0 28px;
-
-            h2{
-                margin: 0 auto 30px;
-            }
+            padding: 0;
 
             .image{
-                margin: 0 auto 20px;
+                margin: 0 0 20px;
+                text-align: center;
             }
             .content{
                 width: 100%;
@@ -464,7 +387,7 @@
                 p{
                     font-size: 18px;
                     line-height: 24px;
-                    text-align: justify;
+                    text-align: center;
                 }
             }
         }
@@ -496,427 +419,6 @@
                     margin: 0 auto;
                     max-width: 300px;
                 }
-            }
-        }
-    }
-}
-
-.recipesPricing{
-    padding: 30px 15px 40px;
-
-    &__heading{
-        margin: 0 auto 36px;
-
-        h2{
-            font-size: 48px;
-            line-height: 54px;
-            font-family: $headingfont;
-            font-weight: 400;
-            text-align: center;
-            max-width: 410px;
-            margin: 0 auto 20px;
-            color: #000;
-        }
-        p{
-            font-size: 18px;
-            line-height: 24px;
-            color: #000;
-            text-align: center;
-        }
-    }
-    &__list{
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        margin: 0 0 34px;
-
-        .exampleBox{
-            width: 100%;
-            max-width: 312px;
-            margin: 0 10px;
-            border: 1px solid rgba(0, 0, 0, .2);
-            box-shadow: 4px 4px 0px rgba(0, 0, 0, .1);
-
-            &:first-of-type{
-                margin-left: 0;
-            }
-            &:last-of-type{
-                margin-right: 0;
-            }
-
-            &__heading{
-                width: 100%;
-                min-height: 55px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin: 0 auto 20px;
-
-                h3{
-                    font-size: 41px;
-                    line-height: 49px;
-                    font-weight: 400;
-                    font-family: 'Bebas Neue', sans-serif;
-                    color: #fff;
-                    text-align: center;
-                    margin: 0;
-                }
-            }
-            &__main{
-                width: 100%;
-                max-width: 218px;
-                padding-bottom: 20px;
-                border-bottom: 1px solid rgba(0, 0, 0, .2);
-                margin: 0 auto;
-
-                .image{
-                    display: flex;
-                    width: 160px;
-                    height: 160px;
-                    box-shadow: 2px 2px 0 rgba(0, 0, 0, .2);
-                    margin: 0 auto 13px;
-                    border-radius: 100%;
-
-                    img{
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                    }
-                }
-                h3{
-                    font-size: 36px;
-                    line-height: 43px;
-                    font-weight: 400;
-                    font-family: 'Bebas Neue', sans-serif;
-                    color: #000;
-                    text-align: center;
-                    margin: 0 0 10px;
-                }
-                p{
-                    font-size: 16px;
-                    line-height: 19px;
-                    color: #000;
-                    text-align: center;
-                    margin: 0;
-                }
-            }
-            &__info{
-                padding: 12px 0;
-
-                .price{
-                    font-size: 32px;
-                    line-height: 38px;
-                    font-weight: 400;
-                    font-family: 'Bebas Neue', sans-serif;
-                    color: #000;
-                    margin: 0;
-                    text-align: center;
-
-                    span{
-                        font-size: 41px;
-                        line-height: 49px;
-                        padding-right: 24px;
-                        position: relative;
-
-                        small{
-                            font-size: 28px;
-                            line-height: 1;
-                            position: absolute;
-                            right: 0;
-                            top: 5px;
-                        }
-                    }
-                }
-                .portion{
-                    font-size: 16px;
-                    line-height: 19px;
-                    color: #000;
-                    text-align: center;
-                    margin: 0;
-
-                    b{
-                        font-size: 32px;
-                        line-height: 38px;
-                        display: block;
-                        font-weight: 400;
-                        font-family: 'Bebas Neue', sans-serif;
-                        margin: 8px 0 0;
-                    }
-                }
-            }
-            &__details{
-                width: 100%;
-                max-width: 218px;
-                margin: 0 auto 20px;
-                background-color: #fff;
-                border: 1px solid #000;
-                box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
-                cursor: pointer;
-
-                &.active{
-                    .heading{
-                        p{
-                            &:after{
-                                transform: translate(0, -50%) rotate(-180deg);
-                            }
-                        }
-                    }
-                }
-
-                .heading{
-                    width: 100%;
-                    height: 34px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-
-                    p{
-                        font-size: 16px;
-                        line-height: 19px;
-                        color: #000;
-                        font-weight: 700;
-                        margin: 0;
-                        position: relative;
-                        padding-right: 17px;
-
-                        &:after{
-                            content: '';
-                            background-image: url('/wp-content/themes/psibufet/images/icons/arrow_down_black.svg');
-                            background-repeat: no-repeat;
-                            background-size: 11px;
-                            width: 11px;
-                            height: 8px;
-                            position: absolute;
-                            right: 0;
-                            top: 50%;
-                            transform: translate(0, -50%);
-                            transition: ease .3s;
-                        }
-                    }
-                }
-                .content{
-                    display: none;
-                    padding: 8px 10px 15px;
-
-                    p{
-                        font-size: 16px;
-                        line-height: 24px;
-                        color: #000;
-                        text-align: center;
-                        margin: 0;
-                    }
-                }
-            }
-        }
-    }
-    &__cta{
-        text-align: center;
-
-        h3{
-            font-size: 32px;
-            line-height: 38px;
-            font-weight: 400;
-            font-family: 'Bebas Neue', sans-serif;
-            color: #000;
-            text-align: center;
-            margin: 0 0 30px;
-        }
-    }
-}
-@media (max-width: 1199px){
-    .recipesPricing{
-        &__heading{
-            max-width: 560px;
-        }
-        &__list{
-            max-width: 640px;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin: 0 auto 34px;
-
-            .exampleBox{
-                margin: 0 !important;
-
-                &:nth-of-type(-n+2){
-                    margin: 0 0 20px !important;
-                }
-            }
-        }
-    }
-}
-@media (max-width: 991px){
-    .recipesPricing{
-        &__list{
-            display: block !important;
-        }
-    }
-}
-@media (max-width: 767px){
-    .recipesPricing{
-        padding: 25px 0 32px;
-        overflow: hidden;
-
-        &__wrap{
-            width: 100%;
-            padding: 0;
-        }
-        &__heading{
-            max-width: 320px;
-
-            h2{
-                font-size: 36px;
-                line-height: 43px;
-                margin: 0 auto 10px;
-            }
-            p{
-                font-size: 14px;
-                line-height: 20px;
-            }
-        }
-
-        &__list{
-            max-width: none;
-            margin: 0 0 58px;
-            padding-bottom: 10px;
-
-            .slick-list{
-                height: 100% !important;
-                overflow: visible;
-                margin: 0 -20px;
-                padding-bottom: 10px !important;
-            }
-            .slick-dots{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 0;
-                margin: 0;
-                list-style: none;
-                position: absolute;
-                bottom: -30px;
-                left: 0;
-                right: 0;
-    
-                li{
-                    display: flex;
-                    width: 8px;
-                    height: 8px;
-                    margin: 0 3px;
-    
-                    button{
-                        padding: 0;
-                        border: 0;
-                        font-size: 0;
-                        line-height: normal;
-                        width: 8px;
-                        height: 8px;
-                        border-radius: 100%;
-                        background-color: rgba(0, 0, 0, .2);
-                        transition: ease .3s;
-    
-                        &:before{
-                            display: none;
-                        }
-                    }
-                    &.slick-active{
-                        button{
-                            background-color: $redcolor;
-                        }
-                    }
-                }
-            }
-            .exampleBox{
-                max-width: 280px;
-                margin: 0 10px !important;
-
-                &:nth-of-type(-n+2){
-                    margin: 0 10px !important;
-                }
-                
-                &__heading{
-                    height: 50px;
-
-                    h3{
-                        font-size: 36px;
-                        line-height: 43px;
-                    }
-                }
-                &__main{
-                    max-width: 195px;
-
-                    .image{
-                        width: 145px;
-                        height: 145px;
-                    }
-                    h3{
-                        font-size: 32px;
-                        line-height: 38px;
-                        margin: 0 0 5px;
-                    }
-                    p{
-                        font-size: 14px;
-                        line-height: 17px;
-                    }
-                }
-                &__info{
-                    .price{
-                        font-size: 28px;
-                        line-height: 34px;
-    
-                        span{
-                            font-size: 36px;
-                            line-height: 43px;
-                            padding-right: 20px;
-    
-                            small{
-                                font-size: 24px;
-                                top: 5px;
-                            }
-                        }
-                    }
-                    .portion{
-                        font-size: 14px;
-                        line-height: 19px;
-
-                        b{
-                            font-size: 28px;
-                            line-height: 34px;
-                        }
-                    }
-                }
-                &__details{
-                    max-width: 195px;
-
-                    .heading{
-                        p{
-                            font-size: 14px;
-                            line-height: 16px;
-
-                            &:after{
-                                background-size: 10px;
-                                width: 10px;
-                            }
-                        }
-                    }
-                    .content{
-                        padding: 5px 10px 12px;
-
-                        p{
-                            font-size: 14px;
-                            line-height: 21px;
-                        }
-                    }
-                }
-            }
-        }
-        &__cta{
-            max-width: 320px;
-            margin: 0 auto;
-
-            h3{
-                font-size: 28px;
-                line-height: 34px;
-                margin: 0 0 23px;
             }
         }
     }

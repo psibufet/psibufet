@@ -232,3 +232,21 @@ function newHomepage_sliders(){
     }
 }
 $(document).ready(newHomepage_sliders);
+
+
+/**
+ * Nasze przepisy
+ */
+$(document).ready(function(){
+    if($(window).width() < 768){
+        $('.recipesPricing__list').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            variableWidth: true,
+            adaptiveHeight: true,
+            dots: true,
+            arrows: false,
+            centerMode: true,
+        });
+    }
+});

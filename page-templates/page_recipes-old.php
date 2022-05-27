@@ -1,6 +1,6 @@
 <?php
     /*
-     *  Template Name: Nasze przepisy - new
+     *  Template Name: Nasze przepisy - old
      */
 get_header(); ?>
 
@@ -57,6 +57,7 @@ get_header(); ?>
     <section class="recipesBanner">
         <div class="recipesBanner__wrap">
             <div class="recipesBanner__badges">
+                <img data-original="<?php echo get_template_directory_uri() . '/images/recipes/polskiProdukt_ico.svg'; ?>" class="polski no-lazyload" alt="PsiBufet - Polski proudukt"/>
                 <img data-original="<?php echo get_template_directory_uri() . '/images/recipes/lider_ico.png'; ?>" class="lider no-lazyload" alt="PsiBufet - Konsumencki Lider Jakości 2021"/>
             </div>
             <img src="<?php echo get_template_directory_uri() . '/images/recipes/recipesBanner.gif'; ?>" alt="<?php echo get_field('recipesGif_alt'); ?>"/>
@@ -74,7 +75,6 @@ get_header(); ?>
                 $flavours = get_field('recipesMenu_flavours');
                 foreach( $flavours as $post ){
                     setup_postdata($post);
-                    $tileType = 'small';
                     include get_template_directory() . '/template-parts/foodTile.php';
                     wp_reset_postdata();
                 } ?>
@@ -86,85 +86,66 @@ get_header(); ?>
     </section>
 
     <section class="recipesExpert">
-        <div class="recipesExpert__wrap">
-            <div class="recipesExpert__content">
-                <div class="recipesExpert__expert">
-                    <h2 class="getMarker">Składy karm opracowane przez <span class="marker">eksperta</span></h2>
-                    <div class="image">
-                        <img src="<?php echo get_template_directory_uri() . '/images/recipes/expert_image.png'; ?>"/>
-                        <p class="name"><span>dr inż.</span> Olga Lasek</p>
-                    </div>
-                    <div class="content">
-                        <p>Absolwentka Wydziału Hodowli i Biologii Zwierząt Uniwersytetu Rolniczego w Krakowie. Pracuje w Katedrze Żywienia Zwierząt i Paszoznawstwa UR Kraków. Specjalizuje się w żywieniu zwierząt i prowadzi liczne badania naukowe.</p>
-                    </div>
+        <div class="recipesExpert__wrap container">
+            <h2 class="getMarker">Składy karm opracowane przez <span class="marker">eksperta</span></h2>
+            <div class="recipesExpert__expert">
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/recipes/expert_image.png'; ?>"/>
+                    <p class="name"><span>dr inż.</span> Olga Lasek</p>
                 </div>
-            </div>
-            <div class="recipesExpert__image">
-                <img src="<?php echo get_template_directory_uri() . '/images/recipes/expert_full_img.png'; ?>"/>
+                <div class="content">
+                    <p>Nasze posiłki powstały we współpracy z <b>dr inż. Olgą Lasek</b> – nauczycielką akademicką w <b>Katedrze Żywienia, Biotechnologii Zwierząt i Rybactwa, Uniwersytetu Rolniczego w Krakowie</b>. Jej specjalizacja w żywieniu zwierząt – poparta licznymi prowadzonymi przez nią badaniami na ten temat – sprawia, że karmy PsiBufet <b>to pewny wybór dla Twojego pupila</b>.</p>
+                </div>
             </div>
         </div>
     </section>
-
-    <section class="recipesPricing">
-        <div class="recipesPricing__wrap container">
-            <div class="recipesPricing__heading">
-                <h2 class="getMarker">Ile <span class="marker">kosztuje</span> PsiBufet?</h2>
-                <p>Cena PsiBufet zależy od indywidualnego planu, na który wpływa waga psa, zapotrzebowanie kaloryczne, częstotliwość dostaw. <br/>Sprawdź przykłady!</p>
+    
+    <section class="recipesParts">
+        <div class="recipesParts__wrap">
+            <div class="recipesParts__heading">
+                <h2 class="getMarker">Nasze <span class="marker">składniki</span></h2>
+                <p><b>Najwyższej jakości półprodukty</b> od zaufanych dostawców.</p>
             </div>
-            <div class="recipesPricing__list">
-                <?php while(have_rows('recipesPricing')): the_row();
-                    $name = get_sub_field('recipesPricing_name');
-                    $color = get_sub_field('recipesPricing_color');
-                    $image = get_sub_field('recipesPricing_image');
-                    $dogname = get_sub_field('recipesPricing_dogname');
-                    $rasa = get_sub_field('recipesPricing_rasa');
-                    $price_zl = get_sub_field('recipesPricing_price_zl');
-                    $price_gr = get_sub_field('recipesPricing_price_gr');
-                    $portion = get_sub_field('recipesPricing_portion');
-                    $details = get_sub_field('recipesPricing_details');
+            <div class="recipesParts__list">
+                <?php
+                while( have_rows('recipesParts') ): the_row();
+                    $image = get_sub_field('recipesParts_image');
+                    $name = get_sub_field('recipesParts_name');
+                    $content = get_sub_field('recipesParts_content');
                 ?>
-                <div class="exampleBox" style="background-color: <?php echo $color . '1a'; ?>">
-                    <div class="exampleBox__heading" style="background-color: <?php echo $color; ?>">
-                        <h3><?php echo $name; ?></h3>
+                <div class="recipesParts__box">
+                    <div class="image">
+                        <img data-original="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="no-lazyload"/>
                     </div>
-                    <div class="exampleBox__main">
-                        <div class="image">
-                            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
-                        </div>
-                        <h3><?php echo $dogname; ?></h3>
-                        <p><?php echo $rasa; ?></p>
-                    </div>
-                    <div class="exampleBox__info">
-                        <p class="price">
-                            <span><?php echo $price_zl; ?><small><?php echo $price_gr; ?></small></span>
-                            zł / dzień
-                        </p>
-                        <p class="portion">dla porcji dziennej<b><?php echo $portion; ?> g</b></p>
-                    </div>
-                    <div class="exampleBox__details">
-                        <div class="heading"><p>Szczegóły planu</p></div>
-                        <div class="content">
-                            <p><?php echo $details; ?></p>
-                        </div>
+                    <div class="content">
+                        <p><b><?php echo $name; ?>:</b> <?php echo $content; ?></p>
                     </div>
                 </div>
                 <?php endwhile; ?>
             </div>
-            <div class="recipesPricing__cta">
-                <h3>Wypełnij 2-minutowy formularz i poznaj swoją cenę</h3>
-                <a href="https://zamowienie.psibufet.pl/" class="btn btn--center dir"><span>Sprawdź cenę</span></a>
-            </div>
         </div>
     </section>
 
-    <section class="homeReturn">
-        <div class="homeReturn__wrap container">
-            <div class="homeReturn__miska">
-                <img src="<?php echo get_template_directory_uri() . '/images/home/homeReturn_miska.gif'; ?>"/>
+    <section class="recipesSafety">
+        <div class="recipesSafety__wrap">
+            <div class="recipesSafety__image">
+                <img src="<?php echo get_field('safetyImage')['url']; ?>" alt="<?php echo get_field('safetyImage')['alt']; ?>"/>
             </div>
-            <div class="homeReturn__content">
-                <h2 class="getMarker">Wylizana miska lub <span class="marker">zwrot</span> pieniędzy</h2>
-                <p>Jesteśmy pewni, że Twój pies pokocha PsiBufet, dlatego na nasze jedzenie dajemy <a href="https://psibufet.pl/regulamin.pdf" target="_blank">Gwarancję Czystej Miski</a>.</p>
+            <div class="recipesSafety__content">
+                <h2 class="getMarker">Spełniamy najwyższe <span class="marker">standardy</span> bezpieczeństwa</h2>
+                <div class="boxes">
+                    <?php while(have_rows('safetyBoxes')): the_row();
+                        $icon = get_sub_field('safetyBoxes_icon');
+                        $text = get_sub_field('safetyBoxes_text');
+                    ?>
+                    <div class="boxes__box">
+                        <div class="icon">
+                            <img src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>"/>
+                        </div>
+                        <p class="text"><?php echo $text; ?></p>
+                    </div>
+                    <?php endwhile; ?>
+                </div>
             </div>
         </div>
     </section>

@@ -200,6 +200,36 @@
             }
         }
     }
+    &--small{
+        max-width: 312px;
+
+        .foodTile__gallery{
+            height: 267px;
+        }
+        .foodTile__name{
+            height: 40px;
+
+            h3{
+                font-size: 30px;
+                line-height: 36px;
+            }
+            img{
+                max-width: 65px;
+                right: 15px;
+                top: -7px;
+            }
+        }
+        .foodTile__content{
+            padding: 20px 24px 24px;
+            min-height: auto;
+
+            .desc{
+                font-size: 18px;
+                line-height: 24px;
+                margin: 0 0 20px;
+            }
+        }
+    }
 }
 @media (max-width: 991px){
     .foodTile{
@@ -242,6 +272,9 @@
                     height: 24px;
                 }
             }
+        }
+        &--small{
+            max-width: 310px;
         }
     }
 }
@@ -337,6 +370,84 @@
                             right: -5px;
                         }
                     }
+                }
+            }
+        }
+        &--small{
+            max-width: 200px;
+
+            .foodTile__gallery{
+                height: 170px;
+                overflow: hidden;
+            }
+            .foodTile__name{
+                height: 30px;
+
+                h3{
+                    font-size: 22px;
+                    line-height: 26px;
+                }
+                img{
+                    display: none;
+                }
+            }
+            .foodTile__content{
+                padding: 8px 6px 15px;
+
+                .desc{
+                    font-size: 12px;
+                    line-height: 14px;
+                    margin: 0 0 10px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 575px){
+    .foodTile{
+        &--small{
+            max-width: 150px;
+
+            .foodTile__gallery{
+                height: 100px;
+                overflow: hidden;
+
+                .slick-list,
+                .slick-track{
+                    height: inherit;
+                }
+
+                .galleryImage{
+                    height: inherit;
+
+                    img{
+                        height: inherit;
+                        min-height: 130px;
+                    }
+                }
+            }
+            .foodTile__name{
+                height: 30px;
+
+                h3{
+                    font-size: 22px;
+                    line-height: 26px;
+                }
+                img{
+                    display: none;
+                }
+            }
+            .foodTile__content{
+                padding: 8px 6px 15px;
+
+                .desc{
+                    font-size: 9px;
+                    line-height: 12px;
+                    margin: 0 0 10px;
+                }
+                .openFoodModal{
+                    min-width: 110px;
+                    height: 30px;
                 }
             }
         }

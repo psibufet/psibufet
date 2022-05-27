@@ -510,6 +510,7 @@ $(document).ready(function() {
     var recipesExpert = $('.recipesExpert').find('.getMarker');
     var recipesParts = $('.recipesParts__heading').find('.getMarker');
     var recipesSafety = $('.recipesSafety').find('.getMarker');
+    var recipesPricing = $('.recipesPricing').find('.getMarker');
 
     if($(recipesMenu).visible(true)){
         setTimeout(function(){
@@ -531,6 +532,11 @@ $(document).ready(function() {
             recipesSafety.addClass('init');
         }, 500)
     }
+    if($(recipesPricing).visible(true)){
+        setTimeout(function(){
+            recipesPricing.addClass('init');
+        }, 500)
+    }
     $(window).on('scroll', function(){
         if($(recipesMenu).visible(true)){
             setTimeout(function(){
@@ -550,6 +556,11 @@ $(document).ready(function() {
         if($(recipesSafety).visible(true)){
             setTimeout(function(){
                 recipesSafety.addClass('init');
+            }, 500)
+        }
+        if($(recipesPricing).visible(true)){
+            setTimeout(function(){
+                recipesPricing.addClass('init');
             }, 500)
         }
     });

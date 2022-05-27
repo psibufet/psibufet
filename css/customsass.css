@@ -1410,6 +1410,33 @@ body.promocode-blackweek .siteHeader--promocode {
 .foodTile__content .openFoodModal:hover span:after {
   right: -8px;
 }
+.foodTile--small {
+  max-width: 312px;
+}
+.foodTile--small .foodTile__gallery {
+  height: 267px;
+}
+.foodTile--small .foodTile__name {
+  height: 40px;
+}
+.foodTile--small .foodTile__name h3 {
+  font-size: 30px;
+  line-height: 36px;
+}
+.foodTile--small .foodTile__name img {
+  max-width: 65px;
+  right: 15px;
+  top: -7px;
+}
+.foodTile--small .foodTile__content {
+  padding: 20px 24px 24px;
+  min-height: auto;
+}
+.foodTile--small .foodTile__content .desc {
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0 0 20px;
+}
 
 @media (max-width: 991px) {
   .foodTile {
@@ -1448,6 +1475,9 @@ body.promocode-blackweek .siteHeader--promocode {
     background-size: 24px;
     width: 24px;
     height: 24px;
+  }
+  .foodTile--small {
+    max-width: 310px;
   }
 }
 @media (max-width: 767px) {
@@ -1525,6 +1555,73 @@ body.promocode-blackweek .siteHeader--promocode {
   }
   .foodTile__content .openFoodModal:hover span:after {
     right: -5px;
+  }
+  .foodTile--small {
+    max-width: 200px;
+  }
+  .foodTile--small .foodTile__gallery {
+    height: 170px;
+    overflow: hidden;
+  }
+  .foodTile--small .foodTile__name {
+    height: 30px;
+  }
+  .foodTile--small .foodTile__name h3 {
+    font-size: 22px;
+    line-height: 26px;
+  }
+  .foodTile--small .foodTile__name img {
+    display: none;
+  }
+  .foodTile--small .foodTile__content {
+    padding: 8px 6px 15px;
+  }
+  .foodTile--small .foodTile__content .desc {
+    font-size: 12px;
+    line-height: 14px;
+    margin: 0 0 10px;
+  }
+}
+@media (max-width: 575px) {
+  .foodTile--small {
+    max-width: 150px;
+  }
+  .foodTile--small .foodTile__gallery {
+    height: 100px;
+    overflow: hidden;
+  }
+  .foodTile--small .foodTile__gallery .slick-list,
+.foodTile--small .foodTile__gallery .slick-track {
+    height: inherit;
+  }
+  .foodTile--small .foodTile__gallery .galleryImage {
+    height: inherit;
+  }
+  .foodTile--small .foodTile__gallery .galleryImage img {
+    height: inherit;
+    min-height: 130px;
+  }
+  .foodTile--small .foodTile__name {
+    height: 30px;
+  }
+  .foodTile--small .foodTile__name h3 {
+    font-size: 22px;
+    line-height: 26px;
+  }
+  .foodTile--small .foodTile__name img {
+    display: none;
+  }
+  .foodTile--small .foodTile__content {
+    padding: 8px 6px 15px;
+  }
+  .foodTile--small .foodTile__content .desc {
+    font-size: 9px;
+    line-height: 12px;
+    margin: 0 0 10px;
+  }
+  .foodTile--small .foodTile__content .openFoodModal {
+    min-width: 110px;
+    height: 30px;
   }
 }
 @media (max-width: 360px) {
@@ -7218,18 +7315,35 @@ body.admin-bar .foodModal__wrap {
 .recipesMenu__wrap .recipesList {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 950px;
+  justify-content: center;
   margin: 0 auto;
 }
-.recipesMenu__wrap .recipesList .foodTile:nth-child(-n+2) {
-  margin-bottom: 40px;
+.recipesMenu__wrap .recipesList .foodTile {
+  margin: 0 10px;
+}
+.recipesMenu__wrap .recipesList .foodTile:first-of-type {
+  margin-left: 0;
+}
+.recipesMenu__wrap .recipesList .foodTile:last-of-type {
+  margin-right: 0;
 }
 .recipesMenu__order {
   text-align: center;
   margin: 40px 0 0;
 }
 
+@media (max-width: 1599px) {
+  .recipesMenu__wrap .recipesList {
+    justify-content: space-between;
+    max-width: 660px;
+  }
+  .recipesMenu__wrap .recipesList .foodTile {
+    margin: 0;
+  }
+  .recipesMenu__wrap .recipesList .foodTile:nth-child(-n+2) {
+    margin-bottom: 40px;
+  }
+}
 @media (max-width: 991px) {
   .recipesMenu__heading p {
     margin: 0 auto;
@@ -7254,7 +7368,7 @@ body.admin-bar .foodModal__wrap {
     max-width: 430px;
   }
   .recipesMenu__wrap .recipesList {
-    max-width: 580px;
+    max-width: 420px;
   }
   .recipesMenu__wrap .recipesList .foodTile:nth-child(-n+2) {
     margin-bottom: 20px;
@@ -7273,8 +7387,7 @@ body.admin-bar .foodModal__wrap {
     max-width: 290px;
   }
   .recipesMenu .recipesList {
-    max-width: 280px;
-    justify-content: center;
+    max-width: 320px;
     margin: 0 auto;
   }
   .recipesMenu .recipesList .foodTile {
@@ -7284,36 +7397,62 @@ body.admin-bar .foodModal__wrap {
     margin: 0;
   }
 }
-.recipesExpert {
-  padding: 32px 0 40px;
+@media (max-width: 350px) {
+  .recipesMenu .recipesList .foodTile {
+    max-width: calc(50% - 10px);
+  }
 }
-.recipesExpert__wrap h2 {
+.recipesExpert {
+  background-image: url("/wp-content/themes/psibufet/images/recipes/expert_marmur.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.recipesExpert__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-height: 700px;
+}
+.recipesExpert__content {
+  width: 100%;
+  max-width: 50%;
+}
+.recipesExpert__image {
+  display: flex;
+  width: 100%;
+  max-width: 50%;
+  max-height: inherit;
+  overflow: hidden;
+}
+.recipesExpert__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.recipesExpert__expert {
+  max-width: 510px;
+  margin-left: auto;
+  margin-right: 108px;
+}
+.recipesExpert__expert h2 {
   font-size: 48px;
   line-height: 54px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   text-align: center;
-  margin: 0 0 20px;
+  max-width: 410px;
+  margin: 0 auto 20px;
   color: #000;
 }
-.recipesExpert__expert {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px;
-  background-color: #fff;
-  border: 1px solid #BCBCBB;
-  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
-  max-width: 955px;
-  margin: 0 auto;
-}
 .recipesExpert__expert .image {
-  width: 265px;
-  margin-right: 20px;
+  display: block;
+  margin: 0 auto 21px;
+  width: 150px;
+  text-align: center;
 }
 .recipesExpert__expert .image img {
-  max-width: 242px;
-  border: 10px solid #fff;
+  max-width: 137px;
+  border: 4px solid #fff;
   border-radius: 100%;
   box-shadow: 0 0 0 2px #4EACB6;
 }
@@ -7324,38 +7463,61 @@ body.admin-bar .foodModal__wrap {
   font-weight: 400;
   color: #000;
   text-align: center;
-  margin: 18px 0 0;
+  margin: 12px 0 0;
 }
 .recipesExpert__expert .image .name span {
   font-size: 18px;
   line-height: 23px;
 }
 .recipesExpert__expert .content {
-  width: calc(100% - 285px);
+  width: 100%;
 }
 .recipesExpert__expert .content p {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 18px;
+  line-height: 24px;
   color: #000;
   margin: 0;
+  text-align: justify;
 }
 .recipesExpert__expert .content p b {
   font-weight: 600;
 }
 
-@media (max-width: 991px) {
-  .recipesExpert__wrap h2 {
-    margin: 0 0 30px;
+@media (max-width: 1599px) {
+  .recipesExpert__wrap {
+    align-items: unset;
   }
   .recipesExpert__expert {
-    flex-direction: column;
+    margin: 0 auto !important;
+    padding: 32px 0 36px;
+  }
+}
+@media (max-width: 1199px) {
+  .recipesExpert__expert {
+    max-width: 550px;
+    padding: 32px 20px 36px;
+  }
+}
+@media (max-width: 991px) {
+  .recipesExpert {
+    padding: 0 15px;
+  }
+  .recipesExpert__content {
+    max-width: 100%;
+  }
+  .recipesExpert__image {
+    display: none;
+  }
+  .recipesExpert__expert {
     border: 0;
     box-shadow: none;
-    padding: 0;
+    padding: 21px 0 28px;
+  }
+  .recipesExpert__expert h2 {
+    margin: 0 auto 30px;
   }
   .recipesExpert__expert .image {
-    margin: 0 0 20px;
-    text-align: center;
+    margin: 0 auto 20px;
   }
   .recipesExpert__expert .content {
     width: 100%;
@@ -7363,7 +7525,7 @@ body.admin-bar .foodModal__wrap {
   .recipesExpert__expert .content p {
     font-size: 18px;
     line-height: 24px;
-    text-align: center;
+    text-align: justify;
   }
 }
 @media (max-width: 767px) {
@@ -7385,6 +7547,373 @@ body.admin-bar .foodModal__wrap {
     line-height: 24px;
     margin: 0 auto;
     max-width: 300px;
+  }
+}
+.recipesPricing {
+  padding: 30px 15px 40px;
+}
+.recipesPricing__heading {
+  margin: 0 auto 36px;
+}
+.recipesPricing__heading h2 {
+  font-size: 48px;
+  line-height: 54px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  max-width: 410px;
+  margin: 0 auto 20px;
+  color: #000;
+}
+.recipesPricing__heading p {
+  font-size: 18px;
+  line-height: 24px;
+  color: #000;
+  text-align: center;
+}
+.recipesPricing__list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0 0 34px;
+}
+.recipesPricing__list .exampleBox {
+  width: 100%;
+  max-width: 312px;
+  margin: 0 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+.recipesPricing__list .exampleBox:first-of-type {
+  margin-left: 0;
+}
+.recipesPricing__list .exampleBox:last-of-type {
+  margin-right: 0;
+}
+.recipesPricing__list .exampleBox__heading {
+  width: 100%;
+  min-height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+.recipesPricing__list .exampleBox__heading h3 {
+  font-size: 41px;
+  line-height: 49px;
+  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+}
+.recipesPricing__list .exampleBox__main {
+  width: 100%;
+  max-width: 218px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+}
+.recipesPricing__list .exampleBox__main .image {
+  display: flex;
+  width: 160px;
+  height: 160px;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+  margin: 0 auto 13px;
+  border-radius: 100%;
+}
+.recipesPricing__list .exampleBox__main .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.recipesPricing__list .exampleBox__main h3 {
+  font-size: 36px;
+  line-height: 43px;
+  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  color: #000;
+  text-align: center;
+  margin: 0 0 10px;
+}
+.recipesPricing__list .exampleBox__main p {
+  font-size: 16px;
+  line-height: 19px;
+  color: #000;
+  text-align: center;
+  margin: 0;
+}
+.recipesPricing__list .exampleBox__info {
+  padding: 12px 0;
+}
+.recipesPricing__list .exampleBox__info .price {
+  font-size: 32px;
+  line-height: 38px;
+  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  color: #000;
+  margin: 0;
+  text-align: center;
+}
+.recipesPricing__list .exampleBox__info .price span {
+  font-size: 41px;
+  line-height: 49px;
+  padding-right: 24px;
+  position: relative;
+}
+.recipesPricing__list .exampleBox__info .price span small {
+  font-size: 28px;
+  line-height: 1;
+  position: absolute;
+  right: 0;
+  top: 5px;
+}
+.recipesPricing__list .exampleBox__info .portion {
+  font-size: 16px;
+  line-height: 19px;
+  color: #000;
+  text-align: center;
+  margin: 0;
+}
+.recipesPricing__list .exampleBox__info .portion b {
+  font-size: 32px;
+  line-height: 38px;
+  display: block;
+  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  margin: 8px 0 0;
+}
+.recipesPricing__list .exampleBox__details {
+  width: 100%;
+  max-width: 218px;
+  margin: 0 auto 20px;
+  background-color: #fff;
+  border: 1px solid #000;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.recipesPricing__list .exampleBox__details.active .heading p:after {
+  transform: translate(0, -50%) rotate(-180deg);
+}
+.recipesPricing__list .exampleBox__details .heading {
+  width: 100%;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.recipesPricing__list .exampleBox__details .heading p {
+  font-size: 16px;
+  line-height: 19px;
+  color: #000;
+  font-weight: 700;
+  margin: 0;
+  position: relative;
+  padding-right: 17px;
+}
+.recipesPricing__list .exampleBox__details .heading p:after {
+  content: "";
+  background-image: url("/wp-content/themes/psibufet/images/icons/arrow_down_black.svg");
+  background-repeat: no-repeat;
+  background-size: 11px;
+  width: 11px;
+  height: 8px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  transition: ease 0.3s;
+}
+.recipesPricing__list .exampleBox__details .content {
+  display: none;
+  padding: 8px 10px 15px;
+}
+.recipesPricing__list .exampleBox__details .content p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #000;
+  text-align: center;
+  margin: 0;
+}
+.recipesPricing__cta {
+  text-align: center;
+}
+.recipesPricing__cta h3 {
+  font-size: 32px;
+  line-height: 38px;
+  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  color: #000;
+  text-align: center;
+  margin: 0 0 30px;
+}
+
+@media (max-width: 1199px) {
+  .recipesPricing__heading {
+    max-width: 560px;
+  }
+  .recipesPricing__list {
+    max-width: 640px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto 34px;
+  }
+  .recipesPricing__list .exampleBox {
+    margin: 0 !important;
+  }
+  .recipesPricing__list .exampleBox:nth-of-type(-n+2) {
+    margin: 0 0 20px !important;
+  }
+}
+@media (max-width: 991px) {
+  .recipesPricing__list {
+    display: block !important;
+  }
+}
+@media (max-width: 767px) {
+  .recipesPricing {
+    padding: 25px 0 32px;
+    overflow: hidden;
+  }
+  .recipesPricing__wrap {
+    width: 100%;
+    padding: 0;
+  }
+  .recipesPricing__heading {
+    max-width: 320px;
+  }
+  .recipesPricing__heading h2 {
+    font-size: 36px;
+    line-height: 43px;
+    margin: 0 auto 10px;
+  }
+  .recipesPricing__heading p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .recipesPricing__list {
+    max-width: none;
+    margin: 0 0 58px;
+    padding-bottom: 10px;
+  }
+  .recipesPricing__list .slick-list {
+    height: 100% !important;
+    overflow: visible;
+    margin: 0 -20px;
+    padding-bottom: 10px !important;
+  }
+  .recipesPricing__list .slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    right: 0;
+  }
+  .recipesPricing__list .slick-dots li {
+    display: flex;
+    width: 8px;
+    height: 8px;
+    margin: 0 3px;
+  }
+  .recipesPricing__list .slick-dots li button {
+    padding: 0;
+    border: 0;
+    font-size: 0;
+    line-height: normal;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: ease 0.3s;
+  }
+  .recipesPricing__list .slick-dots li button:before {
+    display: none;
+  }
+  .recipesPricing__list .slick-dots li.slick-active button {
+    background-color: #f15748;
+  }
+  .recipesPricing__list .exampleBox {
+    max-width: 280px;
+    margin: 0 10px !important;
+  }
+  .recipesPricing__list .exampleBox:nth-of-type(-n+2) {
+    margin: 0 10px !important;
+  }
+  .recipesPricing__list .exampleBox__heading {
+    height: 50px;
+  }
+  .recipesPricing__list .exampleBox__heading h3 {
+    font-size: 36px;
+    line-height: 43px;
+  }
+  .recipesPricing__list .exampleBox__main {
+    max-width: 195px;
+  }
+  .recipesPricing__list .exampleBox__main .image {
+    width: 145px;
+    height: 145px;
+  }
+  .recipesPricing__list .exampleBox__main h3 {
+    font-size: 32px;
+    line-height: 38px;
+    margin: 0 0 5px;
+  }
+  .recipesPricing__list .exampleBox__main p {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .recipesPricing__list .exampleBox__info .price {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .recipesPricing__list .exampleBox__info .price span {
+    font-size: 36px;
+    line-height: 43px;
+    padding-right: 20px;
+  }
+  .recipesPricing__list .exampleBox__info .price span small {
+    font-size: 24px;
+    top: 5px;
+  }
+  .recipesPricing__list .exampleBox__info .portion {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .recipesPricing__list .exampleBox__info .portion b {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .recipesPricing__list .exampleBox__details {
+    max-width: 195px;
+  }
+  .recipesPricing__list .exampleBox__details .heading p {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .recipesPricing__list .exampleBox__details .heading p:after {
+    background-size: 10px;
+    width: 10px;
+  }
+  .recipesPricing__list .exampleBox__details .content {
+    padding: 5px 10px 12px;
+  }
+  .recipesPricing__list .exampleBox__details .content p {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .recipesPricing__cta {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .recipesPricing__cta h3 {
+    font-size: 28px;
+    line-height: 34px;
+    margin: 0 0 23px;
   }
 }
 .recipesParts {

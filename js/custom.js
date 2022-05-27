@@ -1628,3 +1628,15 @@ $(document).ready(function(){
         });
     }
 });
+
+/**
+ * Nasze przepisy - tabela przykładów
+ */
+$(document).ready(function(){
+    $('.exampleBox__details').on('click', function(){
+        let content = $(this).find('.content');
+
+        $(this).toggleClass('active');
+        content.slideToggle('fast');
+    });
+});
