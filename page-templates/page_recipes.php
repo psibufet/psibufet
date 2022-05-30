@@ -130,7 +130,7 @@ get_header(); ?>
                     </div>
                     <div class="exampleBox__main">
                         <div class="image">
-                            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
+                            <img class="no-lazyload" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
                         </div>
                         <h3><?php echo $dogname; ?></h3>
                         <p><?php echo $rasa; ?></p>
