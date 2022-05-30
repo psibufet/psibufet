@@ -1,0 +1,143 @@
+.dropdownEngine{
+    max-width: 440px;
+    margin: 0 auto;
+    position: relative;
+
+    &.active{
+        .dropdownEngine__selected{
+            &:before{
+                opacity: 1;
+            }
+            &:after{
+                transform: rotate(-180deg) translate(0, 50%);
+            }
+        }
+    }
+
+    &__selected{
+        width: 100%;
+        height: 52px;
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+        padding: 15px 20px 12px;
+        position: relative;
+        cursor: pointer;
+        z-index: 2;
+
+        &:before{
+            content: '';
+            width: calc(100% - 70px);
+            height: 1px;
+            background-color: rgba(0, 0, 0, .2);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            opacity: 0;
+            transition: ease .3s;
+        }
+
+        &:after{
+            content: '';
+            background-image: url('/wp-content/themes/psibufet/images/chevron_down.svg');
+            background-repeat: no-repeat;
+            background-size: 12px;
+            width: 12px;
+            height: 9px;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translate(0, -50%);
+            transition: ease .3s;
+        }
+        p{
+            font-size: 21px;
+            line-height: 25px;
+            font-family: $headingfont;
+            font-weight: 400;
+            color: #000;
+            text-align: center;
+            margin: 0;
+            transition: ease .3s;
+        }
+    }
+    &__dropdown{
+        display: none;
+        background-color: #fff;
+        padding: 0;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-top: 0;
+        box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        position: absolute;
+        top: calc(100% - 1px);
+        z-index: 3;
+        height: 250px;
+        overflow: scroll;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+    &__option{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 53px;
+        padding: 8px 0;
+        cursor: pointer;
+
+        &:hover{
+            background-color: $greencolor;
+
+            .wrap{             
+                p{
+                    color: #fff;
+                }
+            }
+        }
+
+        &:last-of-type{
+            margin: 0;
+        }
+
+        .wrap{
+            width: 100%;
+            display: block;
+            padding: 0 35px;
+
+            p{
+                font-size: 21px;
+                line-height: 25px;
+                font-family: $headingfont;
+                font-weight: 400;
+                color: #000;
+                text-align: center;
+                max-width: fit-content;
+                max-width: -moz-max-content;
+                max-width: -webkit-fit-content;
+                margin: 0 auto;
+                position: relative;
+            }
+        }
+
+        &--active{
+            .wrap{
+                p{
+                    &:before{
+                        content: '';
+                        background-image: url('/wp-content/themes/psibufet/images/icons/check_ico_green.svg');
+                        background-repeat: no-repeat;
+                        background-size: 12px;
+                        width: 12px;
+                        height: 11px;
+                        position: absolute;
+                        left: -20px;
+                        top: 43%;
+                        transform: translate(0, -50%);
+                    }
+                }
+            }
+        }
+    }
+}

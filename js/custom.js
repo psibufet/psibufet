@@ -1640,3 +1640,45 @@ $(document).ready(function(){
         content.slideToggle('fast');
     });
 });
+
+/**
+ * Dropdown selection engine
+ */
+$(document).ready(function(){
+    $('.dropdownEngine__selected').on('click', function(){
+        let parent = $(this).parents('.dropdownEngine');
+
+        parent.toggleClass('active');
+        parent.find('.dropdownEngine__dropdown').slideToggle();
+    });
+    $(document).mouseup(function(e){
+        setTimeout(function(){
+            var select = $('.dropdownEngine');
+            if($(select).hasClass('active')){
+                if (!select.is(e.target) && select.has(e.target).length === 0){
+                    $(select).find('.dropdownEngine__dropdown').slideUp();
+                    $(select).removeClass('active');
+                }
+            }
+        }, 50);
+    });
+    $('.dropdownEngine__option').on('click', function(){
+        let parent = $(this).parents('.dropdownEngine'),
+            options = parent.find('.dropdownEngine__option'),
+            value = $(this).find('p').text(),
+            id = $(this).attr('value');
+
+        // Remove active class and add to selected item
+        $(options).each(function(){
+            $(this).removeClass('dropdownEngine__option--active');
+        });
+        $(this).addClass('dropdownEngine__option--active');
+
+        // Add value
+        parent.find('.dropdownEngine__selected').find('p').text(value);
+
+        // Close dropdown
+        parent.find('.dropdownEngine__dropdown').slideUp();
+        parent.removeClass('active');
+    });
+});

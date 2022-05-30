@@ -1634,6 +1634,128 @@ body.promocode-blackweek .siteHeader--promocode {
     padding: 17px 20px 30px;
   }
 }
+.dropdownEngine {
+  max-width: 440px;
+  margin: 0 auto;
+  position: relative;
+}
+.dropdownEngine.active .dropdownEngine__selected:before {
+  opacity: 1;
+}
+.dropdownEngine.active .dropdownEngine__selected:after {
+  transform: rotate(-180deg) translate(0, 50%);
+}
+.dropdownEngine__selected {
+  width: 100%;
+  height: 52px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  padding: 15px 20px 12px;
+  position: relative;
+  cursor: pointer;
+  z-index: 2;
+}
+.dropdownEngine__selected:before {
+  content: "";
+  width: calc(100% - 70px);
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  opacity: 0;
+  transition: ease 0.3s;
+}
+.dropdownEngine__selected:after {
+  content: "";
+  background-image: url("/wp-content/themes/psibufet/images/chevron_down.svg");
+  background-repeat: no-repeat;
+  background-size: 12px;
+  width: 12px;
+  height: 9px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translate(0, -50%);
+  transition: ease 0.3s;
+}
+.dropdownEngine__selected p {
+  font-size: 21px;
+  line-height: 25px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  margin: 0;
+  transition: ease 0.3s;
+}
+.dropdownEngine__dropdown {
+  display: none;
+  background-color: #fff;
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: 0;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: absolute;
+  top: calc(100% - 1px);
+  z-index: 3;
+  height: 250px;
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.dropdownEngine__option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 53px;
+  padding: 8px 0;
+  cursor: pointer;
+}
+.dropdownEngine__option:hover {
+  background-color: #129D6F;
+}
+.dropdownEngine__option:hover .wrap p {
+  color: #fff;
+}
+.dropdownEngine__option:last-of-type {
+  margin: 0;
+}
+.dropdownEngine__option .wrap {
+  width: 100%;
+  display: block;
+  padding: 0 35px;
+}
+.dropdownEngine__option .wrap p {
+  font-size: 21px;
+  line-height: 25px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  max-width: fit-content;
+  max-width: -moz-max-content;
+  max-width: -webkit-fit-content;
+  margin: 0 auto;
+  position: relative;
+}
+.dropdownEngine__option--active .wrap p:before {
+  content: "";
+  background-image: url("/wp-content/themes/psibufet/images/icons/check_ico_green.svg");
+  background-repeat: no-repeat;
+  background-size: 12px;
+  width: 12px;
+  height: 11px;
+  position: absolute;
+  left: -20px;
+  top: 43%;
+  transform: translate(0, -50%);
+}
+
 /*  Sections 
 --------------- */
 /*  Subpages 
@@ -3779,6 +3901,9 @@ body.promocode-blackweek .siteHeader--promocode {
   z-index: 99;
   background-color: #fff;
 }
+.homeMiska--new .homeMiska__left h2 br {
+  display: none;
+}
 .homeMiska--new .homeMiska__left .subtitle {
   max-width: 506px;
   margin: 0 auto;
@@ -3927,6 +4052,9 @@ body.promocode-blackweek .siteHeader--promocode {
     line-height: 42px;
     margin: 0 auto 20px;
     max-width: 260px;
+  }
+  .homeMiska__left h2 br {
+    display: block;
   }
   .homeMiska__left .subtitle {
     font-size: 14px;
@@ -19296,6 +19424,89 @@ body.page-template-page_senior .calcMiska .btn {
     line-height: 28px;
   }
 }
+.elasticHeader {
+  background-image: url("/wp-content/themes/psibufet/images/elastyczne_plany/elastyczneHeader_desktop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 440px;
+  position: relative;
+}
+.elasticHeader__wrap {
+  max-width: 550px;
+  margin: 0 auto;
+}
+.elasticHeader__wrap h1 {
+  font-size: 88px;
+  line-height: 90px;
+  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  color: #000;
+  margin: 0 0 20px;
+  text-align: center;
+}
+.elasticHeader__wrap p {
+  font-size: 26px;
+  line-height: 38px;
+  color: #000;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 350px;
+}
+.elasticHeader__scroll {
+  display: block;
+  width: 16px;
+  height: 12px;
+  background-image: url("/wp-content/themes/psibufet/images/icons/arrow_down_red_ico.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  animation-name: PulseDown;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.elasticSelector {
+  padding: 30px 0 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.elasticSelector__heading {
+  margin: 0 0 34px;
+}
+.elasticSelector__heading h2 {
+  font-size: 48px;
+  line-height: 58px;
+  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  color: #000;
+  margin: 0 0 15px;
+  text-align: center;
+}
+.elasticSelector__heading p {
+  font-size: 18px;
+  line-height: 24px;
+  color: #000;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 910px;
+}
+.elasticSelector__select h3 {
+  font-size: 36px;
+  line-height: 43px;
+  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  color: #000;
+  margin: 0 0 15px;
+  text-align: center;
+}
+
 body {
   margin: 0;
 }

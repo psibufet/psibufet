@@ -36,7 +36,7 @@
     <section class="homeMiska homeMiska--new animateMiska">
         <div class="homeMiska__wrap container">
             <div class="homeMiska__left">
-                <h2 class="getMarker">Czym jest <span class="marker">świeże</span> psie jedzenie?</h2>
+                <h2 class="getMarker">Czym jest <br/><span class="marker">świeże</span> psie jedzenie?</h2>
                 <p class="subtitle">Mięso i warzywa jakości human-grade, delikatnie gotowane na parze, z dodatkiem witamin i minerałów - to właśnie świeże jedzenie. W ten prosty sposób powstają pyszne, zbilansowane posiłki, idealne dla psów w każdym wieku.</p>
                 <div class="info_boxes">
                     <div class="box">
@@ -76,7 +76,7 @@
                 <img src="<?php echo get_template_directory_uri() . '/images/home/homeFood.png'; ?>"/>
             </div>
             <div class="homeFood__content">
-                <h2 class="getMarker">Poznaj nasz <span class="marker">smaki</span></h2>
+                <h2 class="getMarker">Poznaj nasze <span class="marker">smaki</span></h2>
                 <div class="homeFood__slider">
                     <?php while( have_rows('slider_z_karmami', 69325) ): the_row(); 
                         $image = get_sub_field('karma_img');

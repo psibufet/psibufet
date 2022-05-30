@@ -184,6 +184,7 @@ $(document).ready(function(){
 		'pomoc',
 		'szczeniaki',
 		'senior',
+		'elastyczne-plany',
 	];
 	var blackweek = [
 		'gwiazdka40',
