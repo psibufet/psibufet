@@ -4054,7 +4054,7 @@ body.promocode-blackweek .siteHeader--promocode {
     max-width: 260px;
   }
   .homeMiska__left h2 br {
-    display: block;
+    display: block !important;
   }
   .homeMiska__left .subtitle {
     font-size: 14px;
