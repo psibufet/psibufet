@@ -1,5 +1,5 @@
 <div class="foodTile<?php if($tileType){echo ' foodTile--' . $tileType;} ?>">
-    <div class="foodTile__gallery">
+    <div class="foodTile__gallery<?php if($gallery){echo ' foodTile__gallery--' . $gallery; } ?>">
         <?php $gallery = get_field('flavourGallery');
         foreach( $gallery as $image ): ?>
             <div class="galleryImage">

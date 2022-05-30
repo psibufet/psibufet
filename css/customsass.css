@@ -7231,10 +7231,34 @@ body.admin-bar .foodModal__wrap {
     font-size: 12px;
     line-height: 16px;
   }
+  .recipesBoxes--new {
+    padding: 5px 20px 0;
+  }
+  .recipesBoxes--new .recipesBoxes__wrap {
+    max-width: 100%;
+    justify-content: center;
+    flex-direction: row-reverse;
+  }
+  .recipesBoxes--new .recipesBoxes__box {
+    border: 0;
+    box-shadow: none;
+  }
+  .recipesBoxes--new .recipesBoxes__box:first-of-type, .recipesBoxes--new .recipesBoxes__box:nth-last-child(-n+2) {
+    display: none;
+  }
 }
 @media (max-width: 575px) {
   .recipesBoxes__wrap {
     max-width: 320px;
+  }
+  .recipesBoxes--new .recipesBoxes__wrap {
+    max-width: 360px;
+  }
+  .recipesBoxes--new .recipesBoxes__box {
+    max-width: 33.3333333333%;
+  }
+  .recipesBoxes--new .recipesBoxes__box .icon {
+    padding: 0 10px;
   }
 }
 .recipesBanner__wrap {
@@ -7272,8 +7296,8 @@ body.admin-bar .foodModal__wrap {
 }
 @media (max-width: 767px) {
   .recipesBanner__badges {
-    top: 5px;
-    right: 5px;
+    top: 15px;
+    right: 15px;
   }
   .recipesBanner__badges img.polski {
     max-width: 52px;
@@ -7321,6 +7345,9 @@ body.admin-bar .foodModal__wrap {
 .recipesMenu__wrap .recipesList .foodTile {
   margin: 0 10px;
 }
+.recipesMenu__wrap .recipesList .foodTile__gallery .galleryImage {
+  height: inherit;
+}
 .recipesMenu__wrap .recipesList .foodTile:first-of-type {
   margin-left: 0;
 }
@@ -7332,7 +7359,22 @@ body.admin-bar .foodModal__wrap {
   margin: 40px 0 0;
 }
 
-@media (max-width: 1599px) {
+@media (min-width: 1200px) and (max-width: 1599px) {
+  .recipesMenu__wrap .recipesList .foodTile {
+    max-width: 277px;
+    margin: 0 5px;
+  }
+  .recipesMenu__wrap .recipesList .foodTile__name img {
+    max-width: 50px;
+    right: 10px;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+  .recipesMenu__wrap .recipesList .foodTile__gallery {
+    height: 240px;
+  }
+}
+@media (max-width: 1199px) {
   .recipesMenu__wrap .recipesList {
     justify-content: space-between;
     max-width: 660px;
@@ -7374,7 +7416,7 @@ body.admin-bar .foodModal__wrap {
     margin-bottom: 20px;
   }
 }
-@media (max-width: 599px) {
+@media (max-width: 575px) {
   .recipesMenu {
     padding: 20px 0;
   }
@@ -7599,13 +7641,14 @@ body.admin-bar .foodModal__wrap {
   margin: 0 auto 20px;
 }
 .recipesPricing__list .exampleBox__heading h3 {
-  font-size: 41px;
-  line-height: 49px;
+  font-size: 36px;
+  line-height: 42px;
   font-weight: 400;
   font-family: "Bebas Neue", sans-serif;
   color: #fff;
   text-align: center;
   margin: 0;
+  padding-top: 3px;
 }
 .recipesPricing__list .exampleBox__main {
   width: 100%;

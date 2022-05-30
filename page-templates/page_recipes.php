@@ -13,7 +13,7 @@ get_header(); ?>
         </div>
     </section>
 
-    <section class="recipesBoxes">
+    <section class="recipesBoxes recipesBoxes--new">
         <div class="recipesBoxes__wrap">
             <div class="recipesBoxes__box">
                 <div class="icon">
@@ -75,6 +75,7 @@ get_header(); ?>
                 foreach( $flavours as $post ){
                     setup_postdata($post);
                     $tileType = 'small';
+                    $gallery = 'static';
                     include get_template_directory() . '/template-parts/foodTile.php';
                     wp_reset_postdata();
                 } ?>

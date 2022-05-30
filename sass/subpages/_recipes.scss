@@ -106,12 +106,43 @@
                 line-height: 16px;
             }
         }
+
+        &--new{
+            padding: 5px 20px 0;
+
+            .recipesBoxes__wrap{
+                max-width: 100%;
+                justify-content: center;
+                flex-direction: row-reverse;
+            }
+            .recipesBoxes__box{
+                border: 0;
+                box-shadow: none;
+
+                &:first-of-type,
+                &:nth-last-child(-n+2){
+                    display: none;
+                }
+            }
+        }
     }
 }
 @media (max-width: 575px){
     .recipesBoxes{
         &__wrap{
             max-width: 320px;
+        }
+        &--new{
+            .recipesBoxes__wrap{
+                max-width: 360px;
+            }
+            .recipesBoxes__box{
+                max-width: calc(100% / 3);
+
+                .icon{
+                    padding: 0 10px;
+                }
+            }
         }
     }
 }
@@ -162,8 +193,8 @@
 @media (max-width: 767px){
     .recipesBanner{
         &__badges{
-            top: 5px;
-            right: 5px;
+            top: 15px;
+            right: 15px;
 
             img{
                 &.polski{
@@ -219,6 +250,12 @@
             .foodTile{
                 margin: 0 10px;
 
+                &__gallery{
+                    .galleryImage{
+                        height: inherit;
+                    }
+                }
+
                 &:first-of-type{
                     margin-left: 0;
                 }
@@ -233,7 +270,32 @@
         margin: 40px 0 0;
     }
 }
-@media (max-width: 1599px){
+@media (min-width: 1200px) and (max-width: 1599px){
+    .recipesMenu{
+        &__wrap{
+            .recipesList{
+                .foodTile{
+                    max-width: 277px;
+                    margin: 0 5px;
+
+                    &__name{
+                        img{
+                            max-width: 50px;
+                            right: 10px;
+                            top: 50%;
+                            transform: translate(0, -50%);
+                        }
+                    }
+
+                    &__gallery{
+                        height: 240px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1199px){
     .recipesMenu{
         &__wrap{
             .recipesList{
@@ -292,7 +354,7 @@
         }
     }
 }
-@media (max-width: 599px){
+@media (max-width: 575px){
     .recipesMenu{
         padding: 20px 0;
 
@@ -553,13 +615,14 @@
                 margin: 0 auto 20px;
 
                 h3{
-                    font-size: 41px;
-                    line-height: 49px;
+                    font-size: 36px;
+                    line-height: 42px;
                     font-weight: 400;
                     font-family: 'Bebas Neue', sans-serif;
                     color: #fff;
                     text-align: center;
                     margin: 0;
+                    padding-top: 3px;
                 }
             }
             &__main{

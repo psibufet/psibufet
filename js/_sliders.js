@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('.foodTile__gallery').slick({
+    $('.foodTile__gallery').not('.foodTile__gallery--static').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
@@ -239,6 +239,23 @@ $(document).ready(newHomepage_sliders);
  */
 $(document).ready(function(){
     if($(window).width() < 768){
+        $('.recipesPricing__list').on('init', function(event, slick){
+            let current = $(this).find('.exampleBox.slick-current'),
+                details = current.find('.exampleBox__details');
+
+            current.addClass('active');
+            details.find('.content').slideDown('fast');
+        });
+        $('.recipesPricing__list').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+            let content_current = $('.exampleBox[data-slick-index="' + currentSlide + '"]').find('.exampleBox__details'),
+                content_next = $('.exampleBox[data-slick-index="' + nextSlide + '"]').find('.exampleBox__details');
+
+            content_next.addClass('active');
+            content_next.find('.content').slideDown('fast');
+
+            content_current.removeClass('active');
+            content_current.find('.content').slideUp('fast');
+        });
         $('.recipesPricing__list').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
