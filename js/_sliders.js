@@ -267,3 +267,20 @@ $(document).ready(function(){
         });
     }
 });
+
+/**
+ * LP - Elastyczne plany
+ */
+$(document).ready(function(){
+    if($(window).width() < 992){
+        $('.elasticPlans__list').slick({
+            slidesToScroll: 1,
+            infinite: true,
+            variableWidth: true,
+            centerMode: true,
+            arrows: false,
+            dots: true,
+            initialSlide: 1,
+        });
+    }
+});

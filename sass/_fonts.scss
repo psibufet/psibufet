@@ -4,6 +4,18 @@
     src: url('/wp-content/themes/psibufet/fonts/BebasNeue/BebasNeue-Regular.ttf') format("truetype");
 }
 @font-face {
+    font-family: "Bebas Neue Pro";
+	font-weight: 400;
+	font-display: swap;
+    src: url('/wp-content/themes/psibufet/fonts/BebasNeuePro/BebasNeuePro_Book.otf') format("opentype");
+}
+@font-face {
+    font-family: "Bebas Neue Pro";
+	font-weight: 700;
+	font-display: swap;
+    src: url('/wp-content/themes/psibufet/fonts/BebasNeuePro/BebasNeuePro_Regular.otf') format("opentype");
+}
+@font-face {
 	font-family: "Roboto";
 	font-display: swap;
 	font-weight: 400;

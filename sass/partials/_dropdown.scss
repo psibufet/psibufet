@@ -43,9 +43,9 @@
             content: '';
             background-image: url('/wp-content/themes/psibufet/images/chevron_down.svg');
             background-repeat: no-repeat;
-            background-size: 12px;
-            width: 12px;
-            height: 9px;
+            background-size: 15px;
+            width: 15px;
+            height: 11px;
             position: absolute;
             right: 20px;
             top: 50%;
@@ -53,13 +53,13 @@
             transition: ease .3s;
         }
         p{
-            font-size: 21px;
-            line-height: 25px;
+            font-size: 28px;
+            line-height: 1;
             font-family: $headingfont;
             font-weight: 400;
             color: #000;
             text-align: center;
-            margin: 0;
+            margin: -2px 0 0;
             transition: ease .3s;
         }
     }
@@ -74,7 +74,7 @@
         position: absolute;
         top: calc(100% - 1px);
         z-index: 3;
-        height: 250px;
+        max-height: 250px;
         overflow: scroll;
         overflow-x: hidden;
         overflow-y: scroll;
@@ -107,8 +107,8 @@
             padding: 0 35px;
 
             p{
-                font-size: 21px;
-                line-height: 25px;
+                font-size: 28px;
+                line-height: 1;
                 font-family: $headingfont;
                 font-weight: 400;
                 color: #000;
@@ -128,14 +128,32 @@
                         content: '';
                         background-image: url('/wp-content/themes/psibufet/images/icons/check_ico_green.svg');
                         background-repeat: no-repeat;
-                        background-size: 12px;
-                        width: 12px;
-                        height: 11px;
+                        background-size: 15px;
+                        width: 15px;
+                        height: 14px;
                         position: absolute;
-                        left: -20px;
-                        top: 43%;
+                        left: -22px;
+                        top: 45%;
                         transform: translate(0, -50%);
                     }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .dropdownEngine{
+        max-width: 320px;
+
+        &__selected{
+            p{
+                font-size: 26px;
+            }
+        }
+        &__option{
+            .wrap{
+                p{
+                    font-size: 26px;
                 }
             }
         }

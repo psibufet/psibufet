@@ -7,7 +7,11 @@
     for (var i = 0; i < sURLVariables.length; i++){
         var sParameterName = sURLVariables[i].split('=');
         if (sParameterName[0] == sParam){
-            return sParameterName[1];
+            if(sParameterName[1] !== ''){
+                return sParameterName[1];
+            }else{
+                return false;
+            }
         }
     }
 }    
@@ -349,11 +353,11 @@ $(document).ready(function(){
  * FAQ
  */
 $(document).ready(function(){
-    var question = $('.homeFaq__list').find('.question');
+    var question = $('.question[itemscope]');
 
     question.on('click', function(){
-        $('.homeFaq__list').find('.question').not(this).removeClass('question--open').addClass('question--close');
-        $('.homeFaq__list').find('.question').not(this).find('.question__answer').slideUp();
+        $('.question[itemscope]').not(this).removeClass('question--open').addClass('question--close');
+        $('.question[itemscope]').not(this).find('.question__answer').slideUp();
         $(this).toggleClass('question--close question--open');
         $(this).find('.question__answer').slideToggle();
     });
@@ -1675,10 +1679,157 @@ $(document).ready(function(){
         $(this).addClass('dropdownEngine__option--active');
 
         // Add value
+        parent.find('.dropdownEngine__selected').attr('data-selected', value);
         parent.find('.dropdownEngine__selected').find('p').text(value);
 
         // Close dropdown
         parent.find('.dropdownEngine__dropdown').slideUp();
         parent.removeClass('active');
+    });
+
+    // Automatic select by URL parameter
+    $('.dropdownEngine').each(function(){
+        let automatic = $(this).data('get');
+
+        if(typeof automatic !== 'undefined'){
+            let param = GetURLParameter(automatic);
+                option = $(this).find('.dropdownEngine__option[value="' + param + '"]');
+            
+            if(option.length){
+                option.trigger('click');
+            }else{
+                console.error('ERROR: Wybrana w parametrze "' + automatic + '" opcja nie istnieje.');
+            }
+        }
+    });
+});
+
+/**
+ * LP - Elastyczne plany
+ */
+$(document).ready(function(){
+    $('.pos--gift').on('click', function(){
+        let content = $(this).find('.content');
+
+        $(this).toggleClass('pos--active');
+        content.slideToggle('fast');
+    });
+
+    // Popups
+    function openPopup(open, type){
+        if(open == true){
+            $('body').addClass('noscroll');
+            $('.infoPopup').addClass('infoPopup--ready');
+            $('.elasticPopup--' + type).addClass('elasticPopup--active');
+            setTimeout(function(){
+                $('.infoPopup').addClass('infoPopup--active');
+            }, 300);
+        }else if(open == false){
+            $('body').removeClass('noscroll');
+            $('.infoPopup').removeClass('infoPopup--active');
+            $('.elasticPopup--' + type).removeClass('elasticPopup--active');
+            setTimeout(function(){
+                $('.infoPopup').removeClass('infoPopup--ready');
+            }, 300);
+        }
+    }
+
+    // Inner popup close
+    $('#closeInfoPopup').on('click', function(){
+        openPopup(false);
+    });
+
+    // Outer click popup close
+    $(document).mouseup(function(e){
+        var container = $('.infoPopup__wrap');
+        if (!container.is(e.target) && container.has(e.target).length === 0){
+            if($('.infoPopup').hasClass('infoPopup--active')){
+                openPopup(false);
+            }
+        }
+    });
+
+    $('button[data-plan]').on('click', function(){
+        let planid = $(this).attr('data-plan'),
+            plan = $('.planBox[data-plan="' + planid + '"]'),
+            uuid = GetURLParameter('uuid');
+
+        // Plan info
+        let data = {
+            name: plan.data('name'),
+            grammage: $('#portion-select').find('.dropdownEngine__selected').data('selected'),
+            portions: plan.data('portions'),
+            delivery: plan.data('delivery'),
+            dayprice: plan.data('dayprice'),
+            total: plan.data('total'),
+            gift: plan.data('gift'),
+            
+        }
+
+        $.each(data, function( index, value ) {
+            if(index == 'gift'){
+                if(value !== true){
+                    $('#planChanger').find('input[name="data"]').removeAttr('data-gift');
+                }else{
+                    $('#planChanger').find('input[name="data"]').attr('data-gift', value);
+                }
+            }else{
+                $('#planChanger').find('input[name="data"]').attr('data-' + index, value);
+            }
+        });
+
+        if(typeof uuid !== 'undefined'){
+            if(uuid !== false){
+                $('#planChanger').trigger('submit');
+                openPopup(true, 'success');
+            }else{
+                openPopup(true, 'form');
+            }
+        }else{
+            openPopup(true, 'form');
+        }
+    });
+
+    // Form send
+    $('#planChanger').on('submit', function(e){
+        e.preventDefault();
+
+        let hidden = $(this).find('input[name="data"]'),
+            email = $(this).find('input[name="email"]').val(),
+            data = {
+                action: 'elasticPlan',
+                name: hidden.data('name'),
+                grammage: hidden.data('grammage'),
+                portions: hidden.data('portions'),
+                delivery: hidden.data('delivery'),
+                dayprice: hidden.data('dayprice'),
+                total: hidden.data('total'),
+                gift: hidden.data('gift'),
+                email: email,
+                uuid: GetURLParameter('uuid'),
+            };
+
+        $.ajax({
+            type: 'POST',
+            url: PBAjax.ajaxurl,
+            data: data,
+            beforeSend: function(){
+                $('.elasticPopup').addClass('elasticPopup--loading');
+            },
+            success: function(response){
+                $('.elasticPopup').removeClass('elasticPopup--loading');
+                let data = jQuery.parseJSON(response);
+
+                $.each(data, function (key, v) {
+                    if(key == 'status'){
+                        if(v == true){
+                            console.log('[FORM] Zgłoszenie zostało pomyślnie wysłane');
+                        }else{
+                            console.error('[FORM] Wystąpił błąd podczas wysyłki zgłoszenia');
+                        }
+                    }
+                });
+            }
+        });
     });
 });

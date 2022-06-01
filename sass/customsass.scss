@@ -468,6 +468,26 @@ body{
             background-color: $greencolorhover;
         }
     }
+    &--button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        outline: none;
+
+        span{
+            &:after{
+                top: 50%;
+            }
+        }
+    }
+    &--smallfont{
+        span{
+            text-transform: initial;
+        }
+    }
 }
 @media (max-width: 991px){
     .btn{

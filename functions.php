@@ -800,3 +800,43 @@ function homepageTest(){
 
 	wp_die();
 }
+
+/**
+ * Elastic plan form
+ */
+add_action('wp_ajax_elasticPlan', 'elasticPlan');
+add_action('wp_ajax_nopriv_elasticPlan', 'elasticPlan');
+function elasticPlan(){
+	$name = isset( $_POST['name'] ) ? $_POST['name'] : '';
+	$grammage = isset( $_POST['grammage'] ) ? $_POST['grammage'] : 'Nie wybrano';
+	$portions = isset( $_POST['portions'] ) ? $_POST['portions'] : '';
+	$delivery = isset( $_POST['delivery'] ) ? $_POST['delivery'] : '';
+	$dayprice = isset( $_POST['dayprice'] ) ? $_POST['dayprice'] : '';
+	$total = isset( $_POST['total'] ) ? $_POST['total'] : '';
+	$gift = isset( $_POST['gift'] ) ? 'TAK' : 'NIE';
+	$mail = isset( $_POST['email'] ) ? $_POST['email'] : '';
+	$uuid = isset( $_POST['uuid'] ) ? $_POST['uuid'] : '';
+
+	if($mail !== ''){
+		$mail_uuid = $mail;
+	}else{
+		$mail_uuid = $uuid;
+	}
+
+
+	$to = 'piotrdevv@gmail.com';
+	$subject = '[PsiBufet] Nowy request o Elastyczny Plan';
+	$message = "Data: " . date('d/m/Y H:i:s', time()) . "<br/>Wybrany plan: " . $name . "<br/>Gramatura: " . $grammage . "<br/>Liczba saszetek: " . $portions . "<br/>Wysyłka: " . $delivery . "<br/>Prezent: " . $gift . "<br/>Cena dzienna: " . $dayprice . " zł<br/>Cena total: " . $total . " zł<br/>UUID/mail: " . $mail_uuid;
+	$headers = array('Content-Type: text/html; charset=UTF-8');
+	
+	$sent = false;
+	$sent = wp_mail($to, $subject, $message, $headers);
+
+	$response = array(
+		'status' => $sent,
+	);
+
+	echo json_encode($response);
+
+	exit();
+}
