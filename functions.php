@@ -824,7 +824,7 @@ function elasticPlan(){
 	}
 
 
-	$to = 'piotrdevv@gmail.com';
+	$to = 'kontakt@psibufet.pl';
 	$subject = '[PsiBufet] Nowy request o Elastyczny Plan';
 	$message = "Data: " . date('d/m/Y H:i:s', time()) . "<br/>Wybrany plan: " . $name . "<br/>Gramatura: " . $grammage . "<br/>Liczba saszetek: " . $portions . "<br/>Wysyłka: " . $delivery . "<br/>Prezent: " . $gift . "<br/>Cena dzienna: " . $dayprice . " zł<br/>Cena total: " . $total . " zł<br/>UUID/mail: " . $mail_uuid;
 	$headers = array('Content-Type: text/html; charset=UTF-8');
