@@ -27,7 +27,7 @@ get_header(); ?>
                 <div class="icon">
                     <img data-original="<?php echo get_template_directory_uri() . '/images/help/catIco_02.svg'; ?>" class="no-lazyload"/>
                 </div>
-                <p>Nasze karmy</p>
+                <p>Nasze posiłki</p>
             </a>
             <a href="<?php echo the_field('helpCategories_darmowakarma'); ?>" class="helpCategories__cat">
                 <div class="icon">
@@ -68,7 +68,7 @@ get_header(); ?>
                 </div>
                 <div class="helpForm__row">
                     <div class="helpForm__select">
-                        <div class="selectValue"><p name="helpTopic">Jak możemy Ci pomóc?</p></div>
+                        <div class="selectValue"><p name="helpTopic">Wybierz temat rozmowy</p></div>
                         <div class="selectDropdown">
                             <?php while(have_rows('helpForm_qa')): the_row();
                                 $question = get_sub_field('helpForm_qa_question');

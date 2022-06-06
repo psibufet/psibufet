@@ -15411,7 +15411,7 @@ body.page-template-page_ksiazka .siteHeader--promocode {
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
-  padding: 12px 20px 20px;
+  padding: 20px;
   transition: ease 0.5s;
 }
 .helpAction .helpForm--loading {
@@ -15421,6 +15421,7 @@ body.page-template-page_ksiazka .siteHeader--promocode {
 .helpAction .helpForm__heading {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   margin: 0 0 20px;
+  display: none;
 }
 .helpAction .helpForm__heading h2 {
   font-size: 28px;

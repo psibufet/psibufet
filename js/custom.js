@@ -1357,6 +1357,9 @@ $(document).ready(function(){
  * Help page
  */
 $(document).ready(function(){
+    if($('body').hasClass('page-template-page_help')){
+        $(document).scrollTop(1);
+    }
     $('.selectValue').on('click', function(){
         $(this).parent().toggleClass('active');
         $(this).parent().find('.selectDropdown').slideToggle();
