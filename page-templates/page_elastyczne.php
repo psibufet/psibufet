@@ -38,94 +38,152 @@ get_header(); ?>
             <h2 class="getMarker">Dostępne <span class="marker">plany</span></h2>
         </div>
         <div class="elasticPlans__list">
-            <?php while(have_rows('planBox')): the_row();
-                $color = get_sub_field('planBox_color');
-                $name = get_sub_field('planBox_name');
-                $desc = get_sub_field('planBox_desc');
-                $price_day_zl = get_sub_field('planBox_price_day_zl');
-                $price_day_gr = get_sub_field('planBox_price_day_gr');
-                $promotion = get_sub_field('planBox_promotion');
-                $promotion_value = get_sub_field('planBox_promotion_value');
-
-                $dayportion = get_sub_field('planBox_list_dayportion');
-                $gram = get_sub_field('planBox_list_gram');
-                $portioning = get_sub_field('planBox_list_portioning');
-                $count = get_sub_field('planBox_list_count');
-                $delivery = get_sub_field('planBox_list_delivery');
-                $gift = get_sub_field('planBox_gift');
-                $gift_name = get_sub_field('planBox_gift_name');
-                $gift_desc = get_sub_field('planBox_gift_desc');
-
-                $sum_price_zl = get_sub_field('planBox_ordersum_zl');
-                $sum_price_gr = get_sub_field('planBox_ordersum_gr');
-                $sum_days = get_sub_field('planBox_order_days');
-            ?>
-            <article class="planBox" data-plan="<?php echo 'plan_0' . get_row_index(); ?>" data-name="<?php echo $name; ?>" data-portions="<?php echo $count; ?>" data-delivery="<?php echo $delivery; ?>" data-dayprice="<?php echo $price_day_zl . '.' . $price_day_gr; ?>" data-total="<?php echo $sum_price_zl . '.' . $sum_price_gr; ?>"<?php if($gift): ?> data-gift="true"<?php endif; ?>>
-                <div class="planBox__heading" style="background-color: <?php echo $color; ?>">
-                    <h3><?php echo $name; ?></h3>
-                    <p><?php echo $desc; ?></p>
+            <article class="planBox" data-plan="plan_01" data-name="Aktualny plan" data-portions="loading" data-delivery="loading" data-dayprice="loading" data-total="loading">
+                <div class="planBox__heading" style="background-color: #b3b2b1">
+                    <h3>Aktualny plan</h3>
+                    <p>Twoje obecne zamówienie</p>
                 </div>
                 <div class="planBox__price">
                     <p class="price">
-                        <span class="value"><?php echo $price_day_zl; ?><small><?php echo $price_day_gr; ?></small></span>
+                        <span class="value">0</span>
                         <span>ZŁ</span>
                         / dzień
                     </p>
-                    <?php if($promotion !== 'brak'): ?>
-                    <p class="promotion">
-                        <?php if($promotion == 'small'): ?>
-                            Oszczędzisz
-                        <?php else: ?>
-                            Oszczędzisz aż
-                        <?php endif; ?>
-                        <span class="value"><?php echo $promotion_value ?></span>%
-                    </p>
-                    <?php endif; ?>
                 </div>
                 <div class="planBox__info">
-                    <div class="pos">
-                        <p><b>Porcja dzienna:</b> <span><?php echo $dayportion; ?> G</span></p>
+                    <div class="pos" data-name="planBox_list_dayportion">
+                        <p><b>Porcja dzienna:</b> <span>Wczytywanie</span></p>
                     </div>
-                    <div class="pos">
-                        <p><b>Gramatura saszetek:</b> <span><?php echo $gram; ?> G</span></p>
+                    <div class="pos" data-name="planBox_list_gram">
+                        <p><b>Gramatura saszetek:</b> <span>Wczytywanie</span></p>
                     </div>
-                    <div class="pos">
-                        <p><b>Porcjowanie:</b> <span><?php echo $portioning; ?></span></p>
+                    <div class="pos" data-name="planBox_list_portioning">
+                        <p><b>Porcjowanie:</b> <span>Wczytywanie</span></p>
                     </div>
-                    <div class="pos">
-                        <p><b>Liczba saszetek:</b> <span><?php echo $count; ?></span></p>
+                    <div class="pos" data-name="planBox_list_count">
+                        <p><b>Liczba saszetek:</b> <span>Wczytywanie</span></p>
                     </div>
-                    <div class="pos">
-                        <p><b>Wysyłka:</b> <span><?php echo $delivery; ?></span></p>
+                    <div class="pos" data-name="planBox_list_delivery">
+                        <p><b>Wysyłka:</b> <span>Wczytywanie</span></p>
                     </div>
-                    <?php if($gift): ?>
-                    <div class="pos pos--gift">
-                        <p><b>Prezent:</b> <span><?php echo $gift_name; ?></span></p>
-                        <div class="content">
-                            <p><?php echo $gift_desc; ?></p>
-                        </div>
-                    </div>
-                    <?php endif; ?>
                 </div>
                 <div class="planBox__summary">
                     <h4>Wartość zamówienia:</h4>
-                    <p class="price">
-                        <span class="value"><?php echo $sum_price_zl; ?><small><?php echo $sum_price_gr; ?></small></span>
+                    <p class="price price--total">
+                        <span class="value">0</span>
                         <span>zł</span>
                     </p>
                     <div class="calc">
                         <p class="price">
-                            <span class="value"><?php echo $price_day_zl; ?><small><?php echo $price_day_gr; ?></small></span>
+                            <span class="value">0</span>
                             <span>zł</span>
                         </p>
-                        <p class="days">× <?php echo $sum_days; ?> dni</p>
+                        <p class="days">× 0 dni</p>
                     </div>
-                    <?php if($promotion !== 'brak'): ?>
-                        <button type="button" class="btn btn--button btn--green btn--smallfont btn--center" data-plan="<?php echo 'plan_0' . get_row_index(); ?>"><span>Wybierz plan</span></button>
-                    <?php endif; ?>
                 </div>
             </article>
-            <?php endwhile; ?>
+            <article class="planBox" data-plan="plan_02" data-name="Większa oszczędność" data-portions="loading" data-delivery="loading" data-dayprice="loading" data-total="loading" data-gift="true">
+                <div class="planBox__heading" style="background-color: #129d6f">
+                    <h3>Większa oszczędność</h3>
+                    <p>Niższa cena | Rzadsze dostawy | Większe saszetki</p>
+                </div>
+                <div class="planBox__price">
+                    <p class="price">
+                        <span class="value">0</span>
+                        <span>ZŁ</span>
+                        / dzień
+                    </p>
+                    <p class="promotion">Oszczędzisz aż
+                        <span class="value">0</span>%
+                    </p>
+                </div>
+                <div class="planBox__info">
+                    <div class="pos" data-name="planBox_list_dayportion">
+                        <p><b>Porcja dzienna:</b> <span>Wczytywanie</span></p>
+                    </div>
+                    <div class="pos" data-name="planBox_list_gram">
+                        <p><b>Gramatura saszetek:</b> <span>Wczytywanie</span></p>
+                    </div>
+                    <div class="pos" data-name="planBox_list_portioning">
+                        <p><b>Porcjowanie:</b> <span>Wczytywanie</span></p>
+                    </div>
+                    <div class="pos" data-name="planBox_list_count">
+                        <p><b>Liczba saszetek:</b> <span>Wczytywanie</span></p>
+                    </div>
+                    <div class="pos" data-name="planBox_list_delivery">
+                        <p><b>Wysyłka:</b> <span>Wczytywanie</span></p>
+                    </div>
+                    <div class="pos pos--gift">
+                        <p><b>Prezent:</b> <span>pudełko na saszetki</span></p>
+                        <div class="content">
+                            <p>Saszetkę po otwarciu możesz bezpiecznie przechowywać w lodówce przez 48 godzin. Aby Ci to ułatwić, dostaniesz od nas prezent - pudełko wielorazowego użytku, w którym wygodnie przechowasz jedzonko przez dwa dni.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="planBox__summary">
+                    <h4>Wartość zamówienia:</h4>
+                    <p class="price price--total">
+                        <span class="value">0</span>
+                        <span>zł</span>
+                    </p>
+                    <div class="calc">
+                        <p class="price">
+                            <span class="value">0</span>
+                            <span>zł</span>
+                        </p>
+                        <p class="days">× 0 dni</p>
+                    </div>
+                    <button type="button" class="btn btn--button btn--green btn--smallfont btn--center" data-plan="plan_02"><span>Wybierz plan</span></button>
+                </div>
+            </article>
+            <article class="planBox" data-plan="plan_03" data-name="Rzadsze dostawy" data-portions="loading" data-delivery="loading" data-dayprice="loading" data-total="loading">
+                <div class="planBox__heading" style="background-color: #129d6f">
+                    <h3>Rzadsze dostawy</h3>
+                    <p>Więcej porcji | Rzadsze dostawy</p>
+                </div>
+                <div class="planBox__price">
+                    <p class="price">
+                        <span class="value">0</span>
+                        <span>ZŁ</span>
+                        / dzień
+                    </p>
+                    <p class="promotion">Oszczędzisz aż
+                        <span class="value">0</span>%
+                    </p>
+                </div>
+                <div class="planBox__info">
+                    <div class="pos" data-name="planBox_list_dayportion">
+                        <p><b>Porcja dzienna:</b> <span>Wczytywanie</span></p>
+                    </div>
+                    <div class="pos" data-name="planBox_list_gram">
+                        <p><b>Gramatura saszetek:</b> <span>Wczytywanie</span></p>
+                    </div>
+                    <div class="pos" data-name="planBox_list_portioning">
+                        <p><b>Porcjowanie:</b> <span>Wczytywanie</span></p>
+                    </div>
+                    <div class="pos" data-name="planBox_list_count">
+                        <p><b>Liczba saszetek:</b> <span>Wczytywanie</span></p>
+                    </div>
+                    <div class="pos" data-name="planBox_list_delivery">
+                        <p><b>Wysyłka:</b> <span>Wczytywanie</span></p>
+                    </div>
+                </div>
+                <div class="planBox__summary">
+                    <h4>Wartość zamówienia:</h4>
+                    <p class="price price--total">
+                        <span class="value">0</span>
+                        <span>zł</span>
+                    </p>
+                    <div class="calc">
+                        <p class="price">
+                            <span class="value">0</span>
+                            <span>zł</span>
+                        </p>
+                        <p class="days">× 0 dni</p>
+                    </div>
+                    <button type="button" class="btn btn--button btn--green btn--smallfont btn--center" data-plan="plan_03"><span>Wybierz plan</span></button>
+                </div>
+            </article>
         </div>
     </section>
 

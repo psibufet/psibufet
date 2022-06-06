@@ -606,6 +606,11 @@ function psibufet_scripts(){
 	wp_enqueue_script('psibufet-homepagetest');
 	wp_localize_script( 'psibufet-homepagetest', 'PBAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
 
+	// Elastic plans
+	wp_register_script( 'psibufet-elasticplans', get_template_directory_uri() . '/js/_elasticPlans.js', null, null, true );
+	wp_enqueue_script('psibufet-elasticplans');
+	wp_localize_script( 'psibufet-elasticplans', 'PBAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
+
 	// Autocomplete
 	if(!is_front_page()){
 		wp_enqueue_style( 'theme-autocomplete', get_template_directory_uri() . '/plugins/autocomplete/easy-autocomplete.themes.min.css', array());
@@ -834,6 +839,7 @@ function elasticPlan(){
 
 	$response = array(
 		'status' => $sent,
+		'uuid' => $uuid
 	);
 
 	echo json_encode($response);
