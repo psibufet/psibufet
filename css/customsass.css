@@ -959,6 +959,9 @@ body.promocode-blackweek .siteHeader--promocode {
   font-size: 14px;
   color: #000;
   font-weight: 700;
+  margin: 10px 0;
+}
+.siteFooter__menu .info .hours:last-of-type {
   margin: 10px 0 15px;
 }
 .siteFooter__menu .info .social {
@@ -1088,6 +1091,9 @@ body.promocode-blackweek .siteHeader--promocode {
     width: 100%;
   }
   .siteFooter__menu .info .hours {
+    margin: 10px 0;
+  }
+  .siteFooter__menu .info .hours:last-of-type {
     margin: 10px 0 26px;
   }
   .siteFooter__menu .info .social {

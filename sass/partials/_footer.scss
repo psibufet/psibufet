@@ -88,7 +88,11 @@
                 font-size: 14px;
                 color: #000;
                 font-weight: 700;
-                margin: 10px 0 15px;
+                margin: 10px 0;
+
+                &:last-of-type{
+                    margin: 10px 0 15px;
+                }
             }
             .social{
                 display: flex;
@@ -241,7 +245,11 @@
                     }
                 }
                 .hours{
-                    margin: 10px 0 26px;
+                    margin: 10px 0;
+
+                    &:last-of-type{
+                        margin: 10px 0 26px;
+                    }
                 }
                 .social{
                     justify-content: center;
