@@ -124,7 +124,7 @@ get_header(); ?>
                 <div class="gallery">
                     <?php foreach( $images as $image ): ?>
                         <div class="gallery__image">
-                            <img class="no-lazyload" data-original="<?php echo $image; ?>"/>
+                            <img class="no-lazyload" data-original="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
                         </div>
                     <?php endforeach; ?>
                 </div>
