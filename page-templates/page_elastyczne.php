@@ -82,7 +82,7 @@ get_header(); ?>
                     </div>
                 </div>
             </article>
-            <article class="planBox" data-plan="plan_02" data-name="Większa oszczędność" data-portions="loading" data-delivery="loading" data-dayprice="loading" data-total="loading" data-gift="true">
+            <article class="planBox" data-plan="plan_02" data-name="Większa oszczędność" data-portions="loading" data-delivery="loading" data-dayprice="loading" data-total="loading">
                 <div class="planBox__heading" style="background-color: #129d6f">
                     <h3>Większa oszczędność</h3>
                     <p>Niższa cena | Rzadsze dostawy | Większe saszetki</p>
@@ -113,12 +113,12 @@ get_header(); ?>
                     <div class="pos" data-name="planBox_list_delivery">
                         <p><b>Wysyłka:</b> <span>Wczytywanie</span></p>
                     </div>
-                    <div class="pos pos--gift">
+                    <!-- <div class="pos pos--gift">
                         <p><b>Prezent:</b> <span>pudełko na saszetki</span></p>
                         <div class="content">
                             <p>Saszetkę po otwarciu możesz bezpiecznie przechowywać w lodówce przez 48 godzin. Aby Ci to ułatwić, dostaniesz od nas prezent - pudełko wielorazowego użytku, w którym wygodnie przechowasz jedzonko przez dwa dni.</p>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="planBox__summary">
                     <h4>Wartość zamówienia:</h4>

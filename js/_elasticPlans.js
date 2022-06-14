@@ -123,11 +123,19 @@
         $('button[data-plan]').on('click', function(){
             let planid = $(this).attr('data-plan'),
                 plan = $('.planBox[data-plan="' + planid + '"]'),
-                uuid = GetURLParameter('uuid');
+                uuid = GetURLParameter('uuid'),
+                current_grammage = GetURLParameter('portion');
+
+            if(typeof current_grammage !== 'undefined'){
+                current_grammage = GetURLParameter('portion') + ' G';
+            }else{
+                current_grammage = 'undefinded';
+            }
     
             // Plan info
             let data = {
                 name: plan.data('name'),
+                current: current_grammage,
                 grammage: $('#portion-select').find('.dropdownEngine__selected').data('selected'),
                 portions: plan.data('portions'),
                 delivery: plan.data('delivery'),
@@ -170,12 +178,13 @@
                 data = {
                     action: 'elasticPlan',
                     name: hidden.data('name'),
+                    current: hidden.data('current'),
                     grammage: hidden.data('grammage'),
                     portions: hidden.data('portions'),
                     delivery: hidden.data('delivery'),
                     dayprice: hidden.data('dayprice'),
                     total: hidden.data('total'),
-                    gift: hidden.data('gift'),
+                    // gift: hidden.data('gift'),
                     email: email,
                     uuid: GetURLParameter('uuid'),
                 };

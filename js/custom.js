@@ -492,6 +492,19 @@ $(document).ready(function(){
 
         $('.mobileNav').find('li.menu-item').toggleClass('animate');
     });
+
+    let mobileItem = $('#menu-menu-mobile').find('.menu-item');
+
+    $(mobileItem).each(function(){
+        $(this).on('click', function(){
+            $(this).removeClass('active');
+            $('body').removeClass('noscroll');
+            $('.siteHeader').removeClass('mobileNav-active');
+            $('.mobileNav').removeClass('mobileNav--toggle');
+
+            $('.mobileNav').find('li.menu-item').removeClass('animate');
+        });
+    });
 });
 
 /**
@@ -1486,6 +1499,7 @@ $(document).ready(function(){
  $(document).ready(function(){
     var type = GetURLParameter('type');
     var date = GetURLParameter('nextDeliveryDate');
+    var referral = GetURLParameter('referral');
     var courier = '';
     var text = '';
 
@@ -1511,6 +1525,10 @@ $(document).ready(function(){
 
     if($('main').hasClass('psibufet--typ') && courier !== '' && text !== ''){
         $('.courier__wrap').append().html('<p>' + text + '</p>');
+    }
+
+    if(typeof referral !== 'undefined'){
+        $('.referralCode__input').find('.value').text('www.psibufet.pl/' + referral).trigger('change');
     }
 });
 
