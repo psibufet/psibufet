@@ -35,10 +35,11 @@ function bottomBar(code, amount, type){
 	}
 	$('.siteFooter').before('<div class="bottomBar"><a href="https://zamowienie.psibufet.pl/?code=' + code + '&amount=' + amount + '&type=' + type + '" class="btn btn--green"><span>Odbierz zniżkę -' + amount + typ + '</span></a></div>');
 }
-function promobar(dataCode, dataAmount, dataType, dataPurpose){
+function promobar(dataCode, dataAmount, dataAmount2, dataType, dataPurpose){
 	var code = dataCode;
     var type = dataType;
     var amount = dataAmount;
+    var amount2 = dataAmount2;
     var purpose = dataPurpose;
 	var firstletter = code.charAt(0);
 
@@ -46,8 +47,9 @@ function promobar(dataCode, dataAmount, dataType, dataPurpose){
     var promotype = $('#promocode p .type');
 	var promona = $('#promocode p .na');
 
-	
-	if(purpose == 'CLIENT'){
+	console.log(amount + ' | ' + amount2);
+
+	if(amount !== amount2){
 		$('body').addClass('promocode');
 		$('.menu_dir a').addClass('dir');
 		$('#promocode').addClass('active');
@@ -56,7 +58,7 @@ function promobar(dataCode, dataAmount, dataType, dataPurpose){
 
 		let promobar = $('#promocode').find('p');
 
-		promobar.html('<div><span class="amount">-50</span><span class="type">%</span> na pierwszą | <span class="amount">-25</span><span class="type">%</span> na drugą dostawę. <a href="https://zamowienie.psibufet.pl/?code=' + dataCode + '&amount=' + dataAmount + '&type=' + dataType + '" class="promobutton">ODBIERZ</a></div>');
+		promobar.html('<div><span class="amount">-' + amount + '</span><span class="type">%</span> na pierwszą | <span class="amount">-' + amount2 + '</span><span class="type">%</span> na drugą dostawę. <a href="https://zamowienie.psibufet.pl/?code=' + dataCode + '&amount=' + dataAmount + '&type=' + dataType + '" class="promobutton">ODBIERZ</a></div>');
 
 		// Set header clone height
 		headerClone();
@@ -271,6 +273,7 @@ $(document).ready(function(){
 				success: function(){
 					$.getJSON("https://app.psibufet.pl/api/order/couponcode/" + code, function (data) {
 						var amount = data.amount;
+						var amount2 = data.amount2;
 						var type = data.type;
 						var purpose = data.purpose;
 
@@ -278,7 +281,7 @@ $(document).ready(function(){
 							blackweekBar(code, amount, type);
 							$('#promocode').remove();
 						}else{
-							promobar(code, amount, type, purpose);
+							promobar(code, amount, amount2, type, purpose);
 							$('#blackweek').remove();
 						}	
 					});
