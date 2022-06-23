@@ -14,11 +14,11 @@
             return false;
         }
         console.log('homepage test run');
-        preloader = setInterval(function(){
-            $('.preloader').removeClass('disable')
-            $('.preloader').css('opacity', '1');
-            $('.preloader').css('display', 'flex');
-        }, 20);
+        // preloader = setInterval(function(){
+        //     $('.preloader').removeClass('disable')
+        //     $('.preloader').css('opacity', '1');
+        //     $('.preloader').css('display', 'flex');
+        // }, 20);
 
         $.ajax({
             url: PBAjax.ajaxurl,
