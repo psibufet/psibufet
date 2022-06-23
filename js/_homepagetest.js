@@ -87,7 +87,7 @@
                                 discountInfo.find('.discountInfo__two').find('p').find('span').text('-' + data.amount2);
 
                                 // Add top promobar
-                                promobar(code, data.amount, data.type, data.purpose);
+                                promobar(code, data.amount, data.amount2, data.type, data.purpose);
                                 
                                 // Add bottom promobar
                                 bottomBar(code, data.amount, data.type);
