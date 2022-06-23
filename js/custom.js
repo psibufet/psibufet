@@ -1393,6 +1393,9 @@ $(document).ready(function(){
         var id = $(this).attr('value');
 
         $(this).parents('.helpForm__select').find('.selectValue').find('p').text(value);
+        $(this).parents('.helpForm__select').find('.selectValue').find('p').attr('value', value);
+
+        $(this).parents('.helpForm__select').removeClass('input-error');
 
         dataLayer.push({
             'event': 'helpAsked',
@@ -1423,6 +1426,59 @@ $(document).ready(function(){
             $(this).parent().removeClass('focused');
         }
     });
+    $('.helpForm__input').on('keyup paste', function(){
+        if($(this).val() !== ''){
+            $(this).parent().removeClass('input-error');
+        }else{
+            $(this).parent().addClass('input-error');
+        }
+    });
+
+    function helpFormValidate(form){
+        let topic = form.find('p[name="helpTopic"]').attr('value'),
+            message = form.find('textarea').val(),
+            inputs = form.find('input');
+            response = [];
+
+        // Remove errors
+        form.find('.helpForm__select').removeClass('input-error');
+        form.find('textarea').parent().removeClass('input-error');
+        $(inputs).each(function(){
+            $(this).parent().removeClass('input-error');
+        });
+
+        if(topic == 'false'){
+            $(form).find('.helpForm__select').addClass('input-error');
+        }else{
+            $(form).find('.helpForm__select').removeClass('input-error');
+        }
+
+        if(message == ''){
+            let name = form.find('textarea').attr('name');
+            response.push({name});
+        }
+
+        $(inputs).each(function(){
+            let val = $(this).val(),
+                name = $(this).attr('name');
+
+            if(val == ''){
+                response.push({name});
+            }
+        });
+
+        if(response.length == 0){
+            return true;
+        }else{
+            $(response).each(function(key, val){
+                $(form).find('input[name="' + val.name + '"]').parent().addClass('input-error');
+                
+                if(val.name == 'helpMessage'){
+                    $(form).find('textarea[name="helpMessage"]').parent().addClass('input-error');
+                }
+            });
+        }
+    }
 
     $('#helpForm').on('submit', function(e){
         e.preventDefault();
@@ -1434,8 +1490,9 @@ $(document).ready(function(){
         var dogName = form.find('input[name="helpDogName"]').val();
         var mail = form.find('input[name="helpEmail"]').val();
 
+        let validate = helpFormValidate(form);
         
-        if(topic !== '' && message !== '' && name !== '' && dogName !== '' && mail !== ''){
+        if(validate == true){
             var data = {
                 action: 'helpForm',
                 topic: topic,
@@ -1489,6 +1546,8 @@ $(document).ready(function(){
                     });
                 }
             });
+        }else{
+            console.log(validate);
         }
     });
 });

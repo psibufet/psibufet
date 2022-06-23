@@ -15520,6 +15520,50 @@ body.page-template-page_ksiazka .siteHeader--promocode {
   line-height: 20px;
   margin: 0;
 }
+.helpAction .helpForm__select .notice, .helpAction .helpForm__textarea .notice, .helpAction .helpForm__text .notice {
+  display: none;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: -16px;
+}
+.helpAction .helpForm__select .notice p, .helpAction .helpForm__textarea .notice p, .helpAction .helpForm__text .notice p {
+  font-size: 9px;
+  line-height: 10px;
+  color: #f15748;
+  margin: 0;
+  text-align: center;
+  position: relative;
+  max-width: fit-content;
+  max-width: -moz-max-content;
+  max-width: -webkit-fit-content;
+  padding-left: 16px;
+}
+.helpAction .helpForm__select .notice p:before, .helpAction .helpForm__textarea .notice p:before, .helpAction .helpForm__text .notice p:before {
+  content: "";
+  background-image: url("/wp-content/themes/psibufet/images/icons/error_alert_ico.svg");
+  background-repeat: no-repeat;
+  background-size: 12px;
+  width: 12px;
+  height: 10px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.helpAction .helpForm__select.input-error .notice, .helpAction .helpForm__textarea.input-error .notice, .helpAction .helpForm__text.input-error .notice {
+  display: flex;
+}
+.helpAction .helpForm__select.input-error .selectValue,
+.helpAction .helpForm__select.input-error input,
+.helpAction .helpForm__select.input-error textarea, .helpAction .helpForm__textarea.input-error .selectValue,
+.helpAction .helpForm__textarea.input-error input,
+.helpAction .helpForm__textarea.input-error textarea, .helpAction .helpForm__text.input-error .selectValue,
+.helpAction .helpForm__text.input-error input,
+.helpAction .helpForm__text.input-error textarea {
+  border-color: #f15748;
+}
 .helpAction .helpForm__select {
   position: relative;
 }

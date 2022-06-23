@@ -508,6 +508,54 @@
                 }
             }
         }
+        &__select,
+        &__textarea,
+        &__text{
+            .notice{
+                display: none;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                bottom: -16px;
+
+                p{
+                    font-size: 9px;
+                    line-height: 10px;
+                    color: $redcolor;
+                    margin: 0;
+                    text-align: center;
+                    position: relative;
+                    max-width: fit-content;
+                    max-width: -moz-max-content;
+                    max-width: -webkit-fit-content;
+                    padding-left: 16px;
+
+                    &:before{
+                        content: '';
+                        background-image: url('/wp-content/themes/psibufet/images/icons/error_alert_ico.svg');
+                        background-repeat: no-repeat;
+                        background-size: 12px;
+                        width: 12px;
+                        height: 10px;
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        transform: translate(0, -50%);
+                    }
+                }
+            }
+            &.input-error{
+                .notice{
+                    display: flex;
+                }
+                .selectValue,
+                input,
+                textarea{
+                    border-color: $redcolor;
+                }
+            }
+        }
         &__select{
             position: relative;
 
