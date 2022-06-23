@@ -35,9 +35,9 @@
                 $('.pbpage--frontpage').remove();
                 $('#content').html(data);
                 $('.pbpage').removeClass('pbpage--frontpage').addClass('pbpage--home');
-                newHomepage_sliders();
-                newhomepage_underscores();
-                headerClone();
+                // newHomepage_sliders();
+                // newhomepage_underscores();
+                // headerClone();
 
                 // lazyload
                 // Sliders fix
@@ -63,12 +63,12 @@
                 });
 
                 // Preloader
-                clearInterval(preloader);
-                $('.preloader').css('opacity', '0');
-                setTimeout(function(){
-                    $('.preloader').css('display', 'none');
-                    $('.preloader').addClass('disable');
-                }, 500);
+                // clearInterval(preloader);
+                // $('.preloader').css('opacity', '0');
+                // setTimeout(function(){
+                //     $('.preloader').css('display', 'none');
+                //     $('.preloader').addClass('disable');
+                // }, 500);
 
 
                 // If code exist
