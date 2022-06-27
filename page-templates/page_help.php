@@ -76,7 +76,6 @@ get_header(); ?>
                                 <div class="selectDropdown__option" value="<?php echo get_row_index(); ?>"><p><?php echo $question; ?></p></div>
                             <?php endwhile; ?>
                         </div>
-                        <div class="notice"><p>Wybierz temat rozmowy.</p></div>
                     </div>
                 </div>
                 <div class="helpForm__info">
@@ -105,29 +104,26 @@ get_header(); ?>
                 <div class="helpForm__row">
                     <div class="helpForm__textarea">
                         <textarea name="helpMessage" class="helpForm__input" placeholder="Twoja wiadomość"></textarea>
-                        <div class="notice"><p>Wpisz treść wiadomości.</p></div>
                     </div>
                 </div>
                 <div class="helpForm__row">
                     <div class="helpForm__text">
                         <input type="text" class="helpForm__input" name="helpName" placeholder="Imię i nazwisko"/>
-                        <div class="notice"><p>Podaj imię i nazwisko.</p></div>
                     </div>
                 </div>
                 <div class="helpForm__row">
                     <div class="helpForm__text">
                         <input type="text" class="helpForm__input" name="helpDogName" placeholder="Imię Twojego pieska"/>
-                        <div class="notice"><p>Podaj imię Twojego pieska.</p></div>
                     </div>
                 </div>
                 <div class="helpForm__row">
                     <div class="helpForm__text">
                         <input type="email" class="helpForm__input" name="helpEmail" placeholder="Adres e-mail"/>
-                        <div class="notice"><p>Podaj poprawny adres e-mail.</p></div>
                     </div>
                 </div>
                 <div class="helpForm__submit">
                     <button type="submit"><span>Wyślij</span></button>
+                    <div class="notice"><p>Uzupełnij brakujące pola.</p></div>
                 </div>
                 <div class="helpForm__notice"></div>
             </form>

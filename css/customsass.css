@@ -15697,6 +15697,41 @@ body.page-template-page_ksiazka .siteHeader--promocode {
   pointer-events: none;
   transition: ease 0.3s;
 }
+.helpAction .helpForm__submit .notice {
+  display: none;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 10px auto 0;
+}
+.helpAction .helpForm__submit .notice.active {
+  display: flex;
+}
+.helpAction .helpForm__submit .notice p {
+  font-size: 12px;
+  line-height: 14px;
+  color: #f15748;
+  margin: 0;
+  text-align: center;
+  position: relative;
+  max-width: fit-content;
+  max-width: -moz-max-content;
+  max-width: -webkit-fit-content;
+  padding-left: 16px;
+}
+.helpAction .helpForm__submit .notice p:before {
+  content: "";
+  background-image: url("/wp-content/themes/psibufet/images/icons/error_alert_ico.svg");
+  background-repeat: no-repeat;
+  background-size: 12px;
+  width: 12px;
+  height: 10px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
 .helpAction .helpForm__submit button {
   max-width: 280px;
   width: 100%;

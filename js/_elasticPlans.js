@@ -129,7 +129,7 @@
             if(typeof current_grammage !== 'undefined'){
                 current_grammage = GetURLParameter('portion') + ' G';
             }else{
-                current_grammage = 'undefinded';
+                current_grammage = 'Nie wykryto';
             }
     
             // Plan info
@@ -145,6 +145,8 @@
                 
             }
     
+            console.log(data);
+            
             $.each(data, function( index, value ) {
                 if(index == 'gift'){
                     if(value !== true){

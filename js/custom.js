@@ -1449,6 +1449,7 @@ $(document).ready(function(){
 
         if(topic == 'false'){
             $(form).find('.helpForm__select').addClass('input-error');
+            response.push({name: 'helpTopic'});
         }else{
             $(form).find('.helpForm__select').removeClass('input-error');
         }
@@ -1468,9 +1469,11 @@ $(document).ready(function(){
         });
 
         if(response.length == 0){
+            $(form).find('.helpForm__submit').find('.notice').removeClass('active');
             return true;
         }else{
             $(response).each(function(key, val){
+                $(form).find('.helpForm__submit').find('.notice').addClass('active');
                 $(form).find('input[name="' + val.name + '"]').parent().addClass('input-error');
                 
                 if(val.name == 'helpMessage'){
