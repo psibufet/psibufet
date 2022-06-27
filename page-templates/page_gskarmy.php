@@ -69,8 +69,15 @@ get_header(); ?>
             <div class="gsKarmainfo__content">
                 <div class="gsKarmainfo__contentWrap">
                     <h2 class="price" id="flavourPrice" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <div class="discount">
+                            <span>
+                                <span class="value" itemprop="price">4
+                                    <small>90</small>
+                                </span>ZŁ
+                            </span> / dzień
+                        </div>
                         <meta itemprop="priceCurrency" content="PLN"/>
-                        <span>
+                        <span class="current-price" data-price="4.90">
                             <span class="value" itemprop="price">4
                                 <small>90</small>
                             </span>ZŁ

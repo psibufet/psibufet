@@ -1035,6 +1035,38 @@ $(document).ready(function(){
         var slug = $(this).attr('data-slug');
         btn.attr('href', href + slug);
     });
+
+    /**
+     * If coupon code active
+     */
+    let code = GetURLParameter('code');
+
+    if(typeof code !== 'undefined'){
+        $.ajax({
+            url:'https://app.psibufet.pl/api/order/couponcode/' + code,
+            success: function(){
+                $.getJSON("https://app.psibufet.pl/api/order/couponcode/" + code, function (data) {
+                    let amount = data.amount;
+                    let amount2 = data.amount2;
+
+                    if(amount == amount2){
+                        $('#flavourPrice').addClass('discount-active');
+
+                        let currentprice = $('#flavourPrice').find('.current-price').data('price');
+                        let discount = currentprice * amount / 100;
+                    
+                        var price_full = currentprice - discount;
+                        var price = price_full.toFixed(2).split('.');
+                        
+
+
+                        $('#flavourPrice').find('.current-price').attr('data-price', price[0] + '.' + price[1]);
+                        $('#flavourPrice').find('.current-price').html('<span class="value" itemprop="price">' + price[0] + '<small>' + price[1] + '</small></span>ZŁ ');
+                    }
+                });
+            }
+        });
+    }
 });
 
 /* LP Sale

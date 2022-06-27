@@ -161,6 +161,51 @@ body{
             color: $greencolor;
             margin: 0;
 
+            &.discount-active{
+                .discount{
+                    display: block;
+                }
+            }
+
+            .discount{
+                display: none;
+                font-size: 25px;
+                line-height: 1;
+                margin: 0 auto -10px;
+                color: #808080;
+                position: relative;
+                max-width: fit-content;
+                max-width: -moz-max-content;
+                max-width: -webkit-fit-content;
+
+                &:before{
+                    content: '';
+                    width: 110%;
+                    height: 2px;
+                    background-color: $redcolor;
+                    position: absolute;
+                    left: -5%;
+                    margin: 0 auto;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                }
+
+                span{
+                    font-size: 35px;
+                    line-height: 45px;
+
+                    &.value{
+                        padding-right: 17px;
+                        margin-right: 5px;
+
+                        small{
+                            top: 5px;
+                            color: #808080;
+                        }
+                    }
+                }
+            }
+
             span{
                 font-size: 71px;
                 line-height: 85px;
@@ -481,6 +526,25 @@ body{
             .price{
                 font-size: 24px;
                 line-height: 28px;
+
+                .discount{
+                    font-size: 18px;
+                    margin: 0 auto -6px;
+    
+                    span{
+                        font-size: 28px;
+                        line-height: 34px;
+    
+                        &.value{
+                            padding-right: 14px;
+                            margin-right: 3px;
+    
+                            small{
+                                top: 3px;
+                            }
+                        }
+                    }
+                }
 
                 span{
                     font-size: 38px;
