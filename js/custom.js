@@ -915,6 +915,14 @@ $(document).ready(function(){
         select.parent().find('.select__options').slideUp();
     }
 
+
+    // Lazy load fix
+    if($('body').hasClass('page-template-page_gskarmy')){
+        setTimeout(function(){
+            $(window).scrollTop(1);
+        }, 300);
+    }
+
     /* Content gallery */
     $('.gsKarmainfo__gallery .gallery').slick({
         dots: false,
