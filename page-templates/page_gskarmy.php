@@ -71,7 +71,7 @@ get_header(); ?>
                     <h2 class="price" id="flavourPrice" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
                         <div class="discount">
                             <span>
-                                <span class="value" itemprop="price">4
+                                <span class="value">4
                                     <small>90</small>
                                 </span>ZŁ
                             </span> / dzień
