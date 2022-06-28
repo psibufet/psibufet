@@ -921,6 +921,15 @@ $(document).ready(function(){
         setTimeout(function(){
             $(window).scrollTop(1);
         }, 300);
+        
+        let code = GetURLParameter('code');
+
+        if(typeof code !== 'undefined'){
+            $('.dir').each(function(){
+                let href = $(this).attr('href');
+                $(this).attr('href', href + '?code=' + code);
+            });
+        }
     }
 
     /* Content gallery */
