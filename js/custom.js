@@ -925,10 +925,12 @@ $(document).ready(function(){
         let code = GetURLParameter('code');
 
         if(typeof code !== 'undefined'){
-            $('.dir').each(function(){
-                let current = $(this).attr('href');
-                $(this).attr('href', current);
-            });
+            setTimeout(function(){
+                $('.dir').each(function(){
+                    let current = $(this).attr('href');
+                    $(this).attr('href', current + '?code=' + code);
+                });
+            }, 500);
         }
     }
 
