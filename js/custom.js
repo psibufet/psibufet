@@ -926,8 +926,8 @@ $(document).ready(function(){
 
         if(typeof code !== 'undefined'){
             $('.dir').each(function(){
-                let href = $(this).attr('href');
-                $(this).attr('href', href + '?code=' + code);
+                let current = $(this).attr('href');
+                $(this).attr('href', current);
             });
         }
     }
