@@ -1165,7 +1165,7 @@ $(document).ready(function(){
             }	
         }
     };
-    if(!$('body').hasClass('page-template-page_front-page')){
+    if(!$('body').hasClass('page-template-page_home')){
         $('input[name="rasa_psa"]').easyAutocomplete(options);
     }
 
