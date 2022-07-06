@@ -83,8 +83,8 @@
 </div><!-- #page -->
 
 <script type="text/javascript">
-    let event = new CustomEvent('run-homepage-test');
-    document.dispatchEvent(event);
+//     let event = new CustomEvent('run-homepage-test');
+//     document.dispatchEvent(event);
 </script>
 
 <?php wp_footer(); ?>
