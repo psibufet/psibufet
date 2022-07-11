@@ -1945,6 +1945,9 @@ body.promocode-blackweek .siteHeader--promocode {
   height: 100%;
   object-fit: cover;
 }
+.homeFood__image img.mobile {
+  display: none;
+}
 .homeFood__content {
   display: flex;
   flex-direction: column;
@@ -2129,6 +2132,12 @@ body.promocode-blackweek .siteHeader--promocode {
   }
   .homeFood__slider .slick-arrow.slick-next {
     right: -30px;
+  }
+  .homeFood__image img.mobile {
+    display: block;
+  }
+  .homeFood__image img.desktop {
+    display: none;
   }
   .homeFood__food {
     padding-left: 0;
