@@ -2101,13 +2101,15 @@ body.promocode-blackweek .siteHeader--promocode {
   filter: invert(0%) sepia(0%) saturate(7467%) hue-rotate(224deg) brightness(94%) contrast(107%);
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1550px) {
   .homeFood__image img.mobile {
     display: block;
   }
   .homeFood__image img.desktop {
     display: none;
   }
+}
+@media (max-width: 1400px) {
   .homeFood__slider {
     max-width: 550px;
   }

@@ -352,7 +352,7 @@
         }
     }
 }
-@media (max-width: 1400px){
+@media (max-width: 1550px){
     .homeFood{
         &__image{
             img{
@@ -364,6 +364,10 @@
                 }
             }
         }
+    }
+}
+@media (max-width: 1400px){
+    .homeFood{
         &__slider{
             max-width: 550px;
         }
