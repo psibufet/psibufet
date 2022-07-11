@@ -354,6 +354,16 @@
 }
 @media (max-width: 1400px){
     .homeFood{
+        &__image{
+            img{
+                &.mobile{
+                    display: block;
+                }
+                &.desktop{
+                    display: none;
+                }
+            }
+        }
         &__slider{
             max-width: 550px;
         }
@@ -392,16 +402,6 @@
                 }
                 &.slick-next{
                     right: -30px;
-                }
-            }
-        }
-        &__image{
-            img{
-                &.mobile{
-                    display: block;
-                }
-                &.desktop{
-                    display: none;
                 }
             }
         }

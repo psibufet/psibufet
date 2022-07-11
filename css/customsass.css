@@ -2102,6 +2102,12 @@ body.promocode-blackweek .siteHeader--promocode {
 }
 
 @media (max-width: 1400px) {
+  .homeFood__image img.mobile {
+    display: block;
+  }
+  .homeFood__image img.desktop {
+    display: none;
+  }
   .homeFood__slider {
     max-width: 550px;
   }
@@ -2132,12 +2138,6 @@ body.promocode-blackweek .siteHeader--promocode {
   }
   .homeFood__slider .slick-arrow.slick-next {
     right: -30px;
-  }
-  .homeFood__image img.mobile {
-    display: block;
-  }
-  .homeFood__image img.desktop {
-    display: none;
   }
   .homeFood__food {
     padding-left: 0;
