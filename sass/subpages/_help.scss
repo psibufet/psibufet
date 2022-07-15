@@ -401,6 +401,10 @@
             opacity: .5;
         }
 
+        .switchContent{
+            display: none;
+        }
+
         &__heading{
             border-bottom: 1px solid rgba(0, 0, 0, 0.2);
             margin: 0 0 20px;

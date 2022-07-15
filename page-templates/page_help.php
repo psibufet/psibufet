@@ -66,7 +66,7 @@ get_header(); ?>
                 <div class="helpForm__heading">
                     <h2>Wybierz temat rozmowy</h2>
                 </div>
-                <div class="helpForm__row">
+                <div class="helpForm__row" style="margin: 0 auto;">
                     <div class="helpForm__select">
                         <div class="selectValue"><p name="helpTopic" value="false">Wybierz temat rozmowy</p></div>
                         <div class="selectDropdown">
@@ -101,31 +101,33 @@ get_header(); ?>
                     </div>
                     <?php endwhile; ?>
                 </div>
-                <div class="helpForm__row">
-                    <div class="helpForm__textarea">
-                        <textarea name="helpMessage" class="helpForm__input" placeholder="Twoja wiadomość"></textarea>
+                <div class="switchContent">
+                    <div class="helpForm__row">
+                        <div class="helpForm__textarea">
+                            <textarea name="helpMessage" class="helpForm__input" placeholder="Twoja wiadomość"></textarea>
+                        </div>
                     </div>
-                </div>
-                <div class="helpForm__row">
-                    <div class="helpForm__text">
-                        <input type="text" class="helpForm__input" name="helpName" placeholder="Imię i nazwisko"/>
+                    <div class="helpForm__row">
+                        <div class="helpForm__text">
+                            <input type="text" class="helpForm__input" name="helpName" placeholder="Imię i nazwisko"/>
+                        </div>
                     </div>
-                </div>
-                <div class="helpForm__row">
-                    <div class="helpForm__text">
-                        <input type="text" class="helpForm__input" name="helpDogName" placeholder="Imię Twojego pieska"/>
+                    <div class="helpForm__row">
+                        <div class="helpForm__text">
+                            <input type="text" class="helpForm__input" name="helpDogName" placeholder="Imię Twojego pieska"/>
+                        </div>
                     </div>
-                </div>
-                <div class="helpForm__row">
-                    <div class="helpForm__text">
-                        <input type="email" class="helpForm__input" name="helpEmail" placeholder="Adres e-mail"/>
+                    <div class="helpForm__row">
+                        <div class="helpForm__text">
+                            <input type="email" class="helpForm__input" name="helpEmail" placeholder="Adres e-mail"/>
+                        </div>
                     </div>
+                    <div class="helpForm__submit">
+                        <button type="submit"><span>Wyślij</span></button>
+                        <div class="notice"><p>Uzupełnij brakujące pola.</p></div>
+                    </div>
+                    <div class="helpForm__notice"></div>
                 </div>
-                <div class="helpForm__submit">
-                    <button type="submit"><span>Wyślij</span></button>
-                    <div class="notice"><p>Uzupełnij brakujące pola.</p></div>
-                </div>
-                <div class="helpForm__notice"></div>
             </form>
         </div>
     </section>

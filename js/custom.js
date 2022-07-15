@@ -1462,6 +1462,10 @@ $(document).ready(function(){
 
         $('.helpForm__select').find('.selectDropdown').slideUp();
         $('.helpForm__select').removeClass('active');
+
+        // Show form
+        $('.switchContent').slideDown();
+        $('.helpForm__select').parents('.helpForm__row').css('margin', '0 auto 20px');
     });
     $('.helpForm__input').each(function(){
         var name = $(this).attr('placeholder');
