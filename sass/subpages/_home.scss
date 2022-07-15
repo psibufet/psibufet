@@ -852,7 +852,7 @@
 }
 
 .homeStartnew{
-    background-image: url('/wp-content/themes/psibufet/images/home/homeStart_bg.png');
+    background-image: url('/wp-content/themes/psibufet/images/home/homeStart_bg_new.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -933,6 +933,8 @@
 }
 @media (max-width: 991px){
     .homeStartnew{
+        background-position: -600px center;
+
         &__wrap{
             .clearfix{
                 width: 40%;
@@ -950,7 +952,7 @@
 }
 @media (max-width: 767px){
     .homeStartnew{
-        background-image: url('/wp-content/themes/psibufet/images/home/homeStart_mobile_bg.png');
+        background-image: url('/wp-content/themes/psibufet/images/home/homeStart_mobile_bg_new.png');
         background-position: bottom center;
         min-height: 645px;
 
@@ -965,10 +967,12 @@
         }
         &__content{
             width: 100%;
+            padding: 0;
 
             h2{
                 font-size: 36px;
                 line-height: 43px;
+                margin: 0 0 10px;
             }
             p{
                 font-size: 14px;
@@ -981,6 +985,7 @@
                     max-width: 260px;
                     height: 44px;
                     font-size: 16px;
+                    margin: 0 auto 20px;
                 }
             }
         }

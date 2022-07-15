@@ -2507,7 +2507,7 @@ body.promocode-blackweek .siteHeader--promocode {
   }
 }
 .homeStartnew {
-  background-image: url("/wp-content/themes/psibufet/images/home/homeStart_bg.png");
+  background-image: url("/wp-content/themes/psibufet/images/home/homeStart_bg_new.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -2579,6 +2579,9 @@ body.promocode-blackweek .siteHeader--promocode {
 }
 
 @media (max-width: 991px) {
+  .homeStartnew {
+    background-position: -600px center;
+  }
   .homeStartnew__wrap .clearfix {
     width: 40%;
   }
@@ -2592,7 +2595,7 @@ body.promocode-blackweek .siteHeader--promocode {
 }
 @media (max-width: 767px) {
   .homeStartnew {
-    background-image: url("/wp-content/themes/psibufet/images/home/homeStart_mobile_bg.png");
+    background-image: url("/wp-content/themes/psibufet/images/home/homeStart_mobile_bg_new.png");
     background-position: bottom center;
     min-height: 645px;
   }
@@ -2606,10 +2609,12 @@ body.promocode-blackweek .siteHeader--promocode {
   }
   .homeStartnew__content {
     width: 100%;
+    padding: 0;
   }
   .homeStartnew__content h2 {
     font-size: 36px;
     line-height: 43px;
+    margin: 0 0 10px;
   }
   .homeStartnew__content p {
     font-size: 14px;
@@ -2621,6 +2626,7 @@ body.promocode-blackweek .siteHeader--promocode {
     max-width: 260px;
     height: 44px;
     font-size: 16px;
+    margin: 0 auto 20px;
   }
 }
 .homeReturn {
