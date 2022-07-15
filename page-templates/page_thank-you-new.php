@@ -31,8 +31,35 @@
                     <div class="courier__wrap"></div>
                 </div>
                 <p class="courierText">Porcje na pierwsze 7 dni umieść w lodówce, a resztę jedzenia włóż do zamrażalnika. Następnie stopniowo przekładaj do lodówki porcje, które podasz pupilowi w kolejnych dniach.</p>
-                <p class="infoGroup">Tymczasem dołącz do naszej grupy PsiBufetGang na Facebooku i przedstaw swojego pupila!</p>
-                <a href="https://www.facebook.com/groups/271702244086017" target="_blank" class="btn btn--blue btn--center"><span>Dołącz do grupy</span></a>
+                <div class="referralInfo">
+                    <div class="referralInfo__wrap">
+                        <div class="referralInfo__heading">
+                            <h2>Poleć nas znajomym</h2>
+                            <p><b>Super, że jesteś w naszym PsiBufetGang!</b> Znasz kogoś, kto też kocha pieski? Ekstra - niech będzie nas jeszcze więcej! <b>Zaproś znajomych</b> i zyskajcie razem.</p>
+                        </div>
+                        <div class="info">
+                            <div class="info__box">
+                                <h3 class="amount">50 zł</h3>
+                                <p>dla Ciebie</p>
+                                <img src="<?php echo get_template_directory_uri() . '/images/thank-you/referral_01.svg'; ?>"/>
+                                <h4>na następne zamówienie</h4>
+                            </div>
+                            <div class="info__box">
+                                <h3 class="amount">50%</h3>
+                                <p>dla Twoich znajomych</p>
+                                <img src="<?php echo get_template_directory_uri() . '/images/thank-you/referral_02.svg'; ?>"/>
+                                <h4>na pierwsze zamówienie</h4>
+                            </div>
+                        </div>
+                        <div class="referralCode">
+                            <h2>Skopiuj swój kod i przekaż go dalej</h2>
+                            <div class="referralCode__input">
+                                <span class="value">www.psibufet.pl/uuid</span>
+                                <button type="button" id="copybtn"><span>Kopiuj</span></button>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="typContent__que">
                 <div class="heading openQue">
