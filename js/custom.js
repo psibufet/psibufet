@@ -1464,6 +1464,7 @@ $(document).ready(function(){
         $('.helpForm__select').removeClass('active');
 
         // Show form
+        $('.helpAction').addClass('active');
         $('.switchContent').slideDown();
         $('.helpForm__select').parents('.helpForm__row').css('margin', '0 auto 20px');
     });

@@ -335,6 +335,16 @@
 .helpAction{
     background-color: rgba(71, 105, 178, 0.1);
     padding: 32px 0 40px;
+    position: relative;
+    z-index: 3;
+
+    &.active{
+        .helpAction__wrap{
+            &:after{
+                opacity: 1;
+            }
+        }
+    }
 
     &__heading{
         margin: 0 0 28px;
@@ -385,6 +395,9 @@
             position: absolute;
             right: 0;
             bottom: 40px;
+            pointer-events: none;
+            opacity: 0;
+            transition: ease .3s;
         }
     }
     .helpForm{

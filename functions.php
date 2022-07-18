@@ -602,9 +602,9 @@ function psibufet_scripts(){
 	wp_enqueue_script('jQuery');
 
 	// Homepage test
-// 	wp_register_script( 'psibufet-homepagetest', get_template_directory_uri() . '/js/_homepagetest.js', null, null, false );
-// 	wp_enqueue_script('psibufet-homepagetest');
-// 	wp_localize_script( 'psibufet-homepagetest', 'PBAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
+	// 	wp_register_script( 'psibufet-homepagetest', get_template_directory_uri() . '/js/_homepagetest.js', null, null, false );
+	// 	wp_enqueue_script('psibufet-homepagetest');
+	// 	wp_localize_script( 'psibufet-homepagetest', 'PBAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
 
 	// Elastic plans
 	wp_register_script( 'psibufet-elasticplans', get_template_directory_uri() . '/js/_elasticPlans.js', null, null, true );

@@ -75,6 +75,7 @@ get_header(); ?>
                             ?>
                                 <div class="selectDropdown__option" value="<?php echo get_row_index(); ?>"><p><?php echo $question; ?></p></div>
                             <?php endwhile; ?>
+                            <div class="selectDropdown__option" value="none"><p>Mam inne pytanie.</p></div>
                         </div>
                     </div>
                 </div>
