@@ -42,6 +42,14 @@ function promobar(dataCode, dataAmount, dataAmount2, dataType, dataPurpose){
     var amount2 = dataAmount2;
     var purpose = dataPurpose;
 	var firstletter = code.charAt(0);
+    var influ = [
+        'ulaniec',
+        'simba',
+        'dropsik',
+        'figa',
+        'karmelek',
+        'kaziulek35',
+    ];
 
     var promoamount = $('#promocode p .amount');
     var promotype = $('#promocode p .type');
@@ -78,7 +86,7 @@ function promobar(dataCode, dataAmount, dataAmount2, dataType, dataPurpose){
 				promotype.html('PLN');
 			}
 	
-			if(firstletter == 2){
+			if(firstletter == 2 || influ.indexOf(code) !== -1){
 				promona.html('na dwie pierwsze dostawy');
 			}
 	
