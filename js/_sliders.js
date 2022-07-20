@@ -275,7 +275,7 @@ $(document).ready(function(){
     if($(window).width() < 992){
         $('.elasticPlans__list').slick({
             slidesToScroll: 1,
-            infinite: true,
+            infinite: false,
             variableWidth: true,
             centerMode: true,
             arrows: false,

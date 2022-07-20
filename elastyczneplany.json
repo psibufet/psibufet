@@ -121,5 +121,128 @@
                     "planBox_ordersum": "331.80"
                 }
             ]
+    },
+    {
+        "portion": "400",
+        "plans":
+            [
+                { 
+                    "id": "1",
+                    "planBox_price_day": "9.90",
+                    "planBox_list_dayportion": "400",
+                    "planBox_list_gram": "400",
+                    "planBox_list_portioning": "1 saszetka dziennie",
+                    "planBox_list_count": "21",
+                    "planBox_list_days": "21",
+                    "planBox_list_delivery": "co 3 tygodnie (21 dni)",
+                    "planBox_ordersum": "207.90"
+                },
+                { 
+                    "id": "2",
+                    "planBox_price_day": "6.45",
+                    "planBox_promotion_value": 24,
+                    "planBox_list_dayportion": "300",
+                    "planBox_list_gram": "600",
+                    "planBox_list_portioning": "½ saszetki dziennie",
+                    "planBox_list_count": "21",
+                    "planBox_list_days": "42",
+                    "planBox_list_delivery": "co 6 tygodni (42 dni)",
+                    "planBox_ordersum": "270.90"
+                },
+                { 
+                    "id": "3",
+                    "planBox_price_day": "7.95",
+                    "planBox_promotion_value": 7,
+                    "planBox_list_dayportion": "400",
+                    "planBox_list_gram": "400",
+                    "planBox_list_portioning": "1 saszetka dziennie",
+                    "planBox_list_count": "28",
+                    "planBox_list_days": "28",
+                    "planBox_list_delivery": "co 4 tygodnie (28 dni)",
+                    "planBox_ordersum": "222.60"
+                }
+            ]
+    },
+    {
+        "portion": "500",
+        "plans":
+            [
+                { 
+                    "id": "1",
+                    "planBox_price_day": "11.90",
+                    "planBox_list_dayportion": "500",
+                    "planBox_list_gram": "500",
+                    "planBox_list_portioning": "1 saszetka dziennie",
+                    "planBox_list_count": "21",
+                    "planBox_list_days": "21",
+                    "planBox_list_delivery": "co 3 tygodnie (21 dni)",
+                    "planBox_ordersum": "249.90"
+                },
+                { 
+                    "id": "2",
+                    "planBox_price_day": "6.45",
+                    "planBox_promotion_value": 24,
+                    "planBox_list_dayportion": "300",
+                    "planBox_list_gram": "600",
+                    "planBox_list_portioning": "½ saszetki dziennie",
+                    "planBox_list_count": "21",
+                    "planBox_list_days": "42",
+                    "planBox_list_delivery": "co 6 tygodni (42 dni)",
+                    "planBox_ordersum": "270.90"
+                },
+                { 
+                    "id": "3",
+                    "planBox_price_day": "9.25",
+                    "planBox_promotion_value": 7,
+                    "planBox_list_dayportion": "500",
+                    "planBox_list_gram": "500",
+                    "planBox_list_portioning": "1 saszetka dziennie",
+                    "planBox_list_count": "28",
+                    "planBox_list_days": "28",
+                    "planBox_list_delivery": "co 4 tygodnie (28 dni)",
+                    "planBox_ordersum": "259.00"
+                }
+            ]
+    },
+    {
+        "portion": "600",
+        "plans":
+            [
+                { 
+                    "id": "1",
+                    "planBox_price_day": "12.90",
+                    "planBox_list_dayportion": "600",
+                    "planBox_list_gram": "600",
+                    "planBox_list_portioning": "1 saszetka dziennie",
+                    "planBox_list_count": "21",
+                    "planBox_list_days": "21",
+                    "planBox_list_delivery": "co 3 tygodnie (21 dni)",
+                    "planBox_ordersum": "270.90"
+                },
+                { 
+                    "id": "2",
+                    "planBox_price_day": "6.45",
+                    "planBox_promotion_value": 24,
+                    "planBox_list_dayportion": "300",
+                    "planBox_list_gram": "600",
+                    "planBox_list_portioning": "½ saszetki dziennie",
+                    "planBox_list_count": "21",
+                    "planBox_list_days": "42",
+                    "planBox_list_delivery": "co 6 tygodni (42 dni)",
+                    "planBox_ordersum": "270.90"
+                },
+                { 
+                    "id": "3",
+                    "planBox_price_day": "9.95",
+                    "planBox_promotion_value": 7,
+                    "planBox_list_dayportion": "600",
+                    "planBox_list_gram": "600",
+                    "planBox_list_portioning": "1 saszetka dziennie",
+                    "planBox_list_count": "28",
+                    "planBox_list_days": "28",
+                    "planBox_list_delivery": "co 4 tygodnie (28 dni)",
+                    "planBox_ordersum": "278.60"
+                }
+            ]
     }
 ]

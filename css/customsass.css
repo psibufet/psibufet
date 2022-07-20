@@ -19760,7 +19760,7 @@ body.page-template-page_senior .calcMiska .btn {
 .elasticPlans__list {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: center;
   max-width: 1260px;
   margin: 0 auto;
 }
@@ -19770,6 +19770,13 @@ body.page-template-page_senior .calcMiska .btn {
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  margin: 0 20px;
+}
+.elasticPlans__list .planBox:first-of-type {
+  margin-left: 0;
+}
+.elasticPlans__list .planBox:last-of-type {
+  margin-right: 0;
 }
 .elasticPlans__list .planBox__heading {
   background-color: #B3B2B1;

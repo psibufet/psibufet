@@ -73,6 +73,12 @@
     
                 insertPlansData(selected);
 
+                if(selected_value == '400' || selected_value == '500' || selected_value == '600'){
+                    $('.planBox[data-plan="plan_02"]').hide();
+                }else{
+                    $('.planBox[data-plan="plan_02"]').show();
+                }
+
                 return false;
                 // $.each(data, function(){
                 //     if(typeof selected == 'undefined'){
