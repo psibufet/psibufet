@@ -195,6 +195,7 @@ $(document).ready(function(){
 		'szczeniaki',
 		'senior',
 		'elastyczne-plany',
+		'przerwa-techniczna',
 	];
 	var blackweek = [
 		'gwiazdka40',
