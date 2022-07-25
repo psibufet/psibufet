@@ -2507,7 +2507,7 @@ body.promocode-blackweek .siteHeader--promocode {
   }
 }
 .homeStartnew {
-  background-image: url("/wp-content/themes/psibufet/images/home/homeStart_bg_new.png");
+  background-image: url("/wp-content/themes/psibufet/images/home/homeStart_bg_new.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -2595,7 +2595,7 @@ body.promocode-blackweek .siteHeader--promocode {
 }
 @media (max-width: 767px) {
   .homeStartnew {
-    background-image: url("/wp-content/themes/psibufet/images/home/homeStart_mobile_bg_new.png");
+    background-image: url("/wp-content/themes/psibufet/images/home/homeStart_mobile_bg_new.webp");
     background-position: bottom center;
     min-height: 645px;
   }
@@ -3925,7 +3925,7 @@ body.promocode-blackweek .siteHeader--promocode {
   width: 80px;
 }
 .homeMiska--new {
-  background-image: url("/wp-content/themes/psibufet/images/home/miska_bg.png");
+  background-image: url("/wp-content/themes/psibufet/images/home/miska_bg.webp");
   background-repeat: no-repeat;
   background-position: center right;
 }
@@ -4086,7 +4086,7 @@ body.promocode-blackweek .siteHeader--promocode {
     box-shadow: none;
   }
   .homeMiska--new .homeMiska__right {
-    background-image: url("/wp-content/themes/psibufet/images/home/miska_bg.png");
+    background-image: url("/wp-content/themes/psibufet/images/home/miska_bg.webp");
     background-repeat: no-repeat;
     background-position: center right;
     background-size: auto 100%;
@@ -6774,23 +6774,11 @@ body.admin-bar .foodModal__wrap {
   max-width: 582px;
   display: flex;
 }
-.homeAbout__gif .image {
+.homeAbout__gif .video {
   display: flex;
   position: relative;
 }
-.homeAbout__gif .image:after {
-  content: "";
-  background-image: url("/wp-content/themes/psibufet/images/frontpage/about_signature.svg");
-  background-repeat: no-repeat;
-  background-size: 270px;
-  width: 270px;
-  height: 129px;
-  position: absolute;
-  left: 30px;
-  top: 90px;
-  z-index: 2;
-}
-.homeAbout__gif .image img {
+.homeAbout__gif .video img {
   width: 100%;
 }
 .homeAbout__gif .btn {
