@@ -266,7 +266,7 @@ get_header(); ?>
             </div>
             <div class="homeAbout__gif">
                 <div class="video">
-                    <video preload="auto" autoplay="autoplay" loop="loop" width="100%" height="100%" muted="true">
+                    <video preload="auto" autoplay="autoplay" loop="loop" width="100%" height="100%" muted="true" playsinline>
                         <source src="<?php echo get_template_directory_uri() . '/images/home/piotrek_psibufet_video.mp4'; ?>"/>
                     </video>
                 </div>

@@ -4896,22 +4896,22 @@ body.admin-bar{
         max-width: 582px;
         display: flex;
 
-        .image{
+        .video{
             display: flex;
             position: relative;
 
-            &:after{
-                content: '';
-                background-image: url('/wp-content/themes/psibufet/images/frontpage/about_signature.svg');
-                background-repeat: no-repeat;
-                background-size: 270px;
-                width: 270px;
-                height: 129px;
-                position: absolute;
-                left: 30px;
-                top: 90px;
-                z-index: 2;
-            }
+            // &:after{
+            //     content: '';
+            //     background-image: url('/wp-content/themes/psibufet/images/frontpage/about_signature.svg');
+            //     background-repeat: no-repeat;
+            //     background-size: 270px;
+            //     width: 270px;
+            //     height: 129px;
+            //     position: absolute;
+            //     left: 30px;
+            //     top: 90px;
+            //     z-index: 2;
+            // }
 
             img{
                 width: 100%;
