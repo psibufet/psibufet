@@ -80,8 +80,8 @@ get_header(); ?>
     <section class="homeFood">
         <div class="homeFood__wrap">
             <div class="homeFood__image">
-                <img class="mobile" src="<?php echo get_template_directory_uri() . '/images/home/homeFood.png'; ?>"/>
-                <img class="desktop" src="<?php echo get_template_directory_uri() . '/images/home/homeFood_new.png'; ?>"/>
+                <img class="mobile" src="<?php echo get_template_directory_uri() . '/images/home/homeFood.webp'; ?>"/>
+                <img class="desktop" src="<?php echo get_template_directory_uri() . '/images/home/homeFood_new.webp'; ?>"/>
             </div>
             <div class="homeFood__content">
                 <h2 class="getMarker">Poznaj nasze <span class="marker">smaki</span></h2>
