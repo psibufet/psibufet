@@ -666,13 +666,13 @@ function psibufet_scripts(){
 
         
 	// Referral code
-    if (!startsWith($_SERVER['REQUEST_URI'], '/lp')){
+    // if (!startsWith($_SERVER['REQUEST_URI'], '/lp')){
 		wp_register_script( 'psibufet-referralCode', get_template_directory_uri() . '/js/referralCode.js?ver=' . $theme_version . $random_number, null, null, true );
 		wp_enqueue_script('psibufet-referralCode');
-	}else{
-		wp_register_script( 'psibufet-referralCode-lp', get_template_directory_uri() . '/js/referralCode_lp.js?ver=' . $theme_version . $random_number, null, null, true );
-		wp_enqueue_script('psibufet-referralCode-lp');
-	}
+	// }else{
+	// 	wp_register_script( 'psibufet-referralCode-lp', get_template_directory_uri() . '/js/referralCode_lp.js?ver=' . $theme_version . $random_number, null, null, true );
+	// 	wp_enqueue_script('psibufet-referralCode-lp');
+	// }
 
 	// Slick
 	// wp_enqueue_style( 'slick-theme', get_template_directory_uri() . '/plugins/slick/slick-theme.css', array());
