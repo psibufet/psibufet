@@ -54,6 +54,51 @@
     }
 }
 
+.rascatBanner{
+    &__wrap{
+        max-width: 1170px;
+        margin: 40px auto 0;
+        padding: 0 20px;
+
+        a{
+            display: block;
+            transition: ease .3s;
+
+            &:hover{
+                opacity: .75;
+            }
+
+            img{
+                display: block;
+                width: 100%;
+    
+                &.mobile{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .rascatBanner{
+        &__wrap{
+            max-width: 360px;
+            margin: 32px auto 0;
+
+            a{
+                img{
+                    &.desktop{
+                        display: none;
+                    }
+                    &.mobile{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .rascatList{
     padding: 40px 0;
 
@@ -113,7 +158,7 @@
 }
 @media (max-width: 767px){
     .rascatList{
-        padding: 32px 0;
+        padding: 20px 0 32px;
 
         &__wrap{
             max-width: 360px;

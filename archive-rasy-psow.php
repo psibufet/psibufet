@@ -11,6 +11,14 @@ get_header(); ?>
             <h1>Rasy psów</h1>
         </div>
     </header>
+    <section class="rascatBanner">
+        <div class="rascatBanner__wrap">
+            <a href="<?php echo get_field('rasaArchive_banner_url', 'cpt_rasy-psow_ustawienia'); ?>">
+                <img class="desktop" src="<?php echo get_field('rasaArchive_banner', 'cpt_rasy-psow_ustawienia')['url']; ?>" alt="<?php echo get_field('rasaArchive_banner', 'cpt_rasy-psow_ustawienia')['alt']; ?>"/>
+                <img class="mobile" src="<?php echo get_field('rasaArchive_banner_mobile', 'cpt_rasy-psow_ustawienia')['url']; ?>" alt="<?php echo get_field('rasaArchive_banner_mobile', 'cpt_rasy-psow_ustawienia')['alt']; ?>"/>
+            </a>
+        </div>
+    </section>
     <section class="rascatList">
         <div class="rascatList__wrap">
             <?php while ( have_posts() ) : the_post(); ?>

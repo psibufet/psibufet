@@ -18255,6 +18255,38 @@ body.admin-bar .pagePDF {
     margin-top: 15px;
   }
 }
+.rascatBanner__wrap {
+  max-width: 1170px;
+  margin: 40px auto 0;
+  padding: 0 20px;
+}
+.rascatBanner__wrap a {
+  display: block;
+  transition: ease 0.3s;
+}
+.rascatBanner__wrap a:hover {
+  opacity: 0.75;
+}
+.rascatBanner__wrap a img {
+  display: block;
+  width: 100%;
+}
+.rascatBanner__wrap a img.mobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .rascatBanner__wrap {
+    max-width: 360px;
+    margin: 32px auto 0;
+  }
+  .rascatBanner__wrap a img.desktop {
+    display: none;
+  }
+  .rascatBanner__wrap a img.mobile {
+    display: block;
+  }
+}
 .rascatList {
   padding: 40px 0;
 }
@@ -18308,7 +18340,7 @@ body.admin-bar .pagePDF {
 }
 @media (max-width: 767px) {
   .rascatList {
-    padding: 32px 0;
+    padding: 20px 0 32px;
   }
   .rascatList__wrap {
     max-width: 360px;
