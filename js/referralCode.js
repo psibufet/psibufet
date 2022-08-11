@@ -55,9 +55,8 @@ function promobar(dataCode, dataAmount, dataAmount2, dataType, dataPurpose){
     var promotype = $('#promocode p .type');
 	var promona = $('#promocode p .na');
 
-	console.log(amount + ' | ' + amount2);
-
-	if(amount !== amount2){
+	if(typeof amount2 !== undefined || amount2 !== ''){
+        console.log(amount + ' | ' + amount2);
 		$('body').addClass('promocode');
 		$('.menu_dir a').addClass('dir');
 		$('#promocode').addClass('active');
