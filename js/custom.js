@@ -1842,3 +1842,15 @@ $(document).ready(function(){
         }
     });
 });
+
+
+/**
+ * User.com popup
+ */
+$(document).ready(function(){
+    let codetype = GetURLParameter('utm_medium');
+
+    if(codetype == 'referral_link'){
+        console.log('[user.com] Wyświetlanie popupu');
+    }
+});
