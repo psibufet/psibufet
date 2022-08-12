@@ -791,6 +791,18 @@ function my_acf_init_block_types() {
     }
 }
 
+/**
+ * Rasy psów - thumbnail
+ */
+add_action('init', 'rasy_psow_thumbnail');
+function rasy_psow_thumbnail() {
+	add_theme_support( 'post-thumbnails' );
+	add_post_type_support( 'rasy-psow', 'thumbnail' );
+	add_theme_support('post-thumbnails', array(
+		'rasy-psow',
+	)); 
+}
+
 
 /**
  * Google optimize new homepage test

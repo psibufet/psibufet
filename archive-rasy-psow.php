@@ -22,7 +22,15 @@ get_header(); ?>
     <section class="rascatList">
         <div class="rascatList__wrap">
             <?php while ( have_posts() ) : the_post(); ?>
-                <a class="rasaPost" href="<?php the_permalink(); ?>" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');">
+                <?php
+                    $featured = '';
+                    if(get_field('raspost_featured')){
+                        $featured = get_field('raspost_featured')['url'];
+                    }else{
+                        $featured = get_the_post_thumbnail_url();
+                    }
+                ?>
+                <a class="rasaPost" href="<?php the_permalink(); ?>" style="background-image: url('<?php echo $featured; ?>');">
                     <h2><?php the_title(); ?></h2>
                 </a>
             <?php endwhile; ?>
