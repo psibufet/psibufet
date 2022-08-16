@@ -113,12 +113,12 @@ get_header(); ?>
                     <div class="pos" data-name="planBox_list_delivery">
                         <p><b>Wysyłka:</b> <span>Wczytywanie</span></p>
                     </div>
-                    <!-- <div class="pos pos--gift">
+                    <div class="pos pos--gift">
                         <p><b>Prezent:</b> <span>pudełko na saszetki</span></p>
                         <div class="content">
                             <p>Saszetkę po otwarciu możesz bezpiecznie przechowywać w lodówce przez 48 godzin. Aby Ci to ułatwić, dostaniesz od nas prezent - pudełko wielorazowego użytku, w którym wygodnie przechowasz jedzonko przez dwa dni.</p>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
                 <div class="planBox__summary">
                     <h4>Wartość zamówienia:</h4>

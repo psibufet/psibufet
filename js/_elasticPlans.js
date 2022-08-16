@@ -56,7 +56,6 @@
                 if(typeof selected == 'undefined'){
                     selected = data.find(({portion}) => portion == '125');
                 }
-
                 insertPlansData(selected);
                 
                 return false;
@@ -74,9 +73,9 @@
                 insertPlansData(selected);
 
                 if(selected_value == '400' || selected_value == '500' || selected_value == '600'){
-                    $('.planBox[data-plan="plan_02"]').hide();
+                    $('.planBox[data-plan="plan_02"]').find('.pos--gift').hide();
                 }else{
-                    $('.planBox[data-plan="plan_02"]').show();
+                    $('.planBox[data-plan="plan_02"]').find('.pos--gift').show();
                 }
 
                 return false;
