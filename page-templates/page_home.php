@@ -6,7 +6,6 @@ Template Name: Homepage
 get_header(); ?>
 
 <main class="pbpage pbpage--home">
-
     <section class="homeHeaderV3" style="background-image: url('/wp-content/themes/psibufet/images/frontpage/homeHeaderV3_bg.webp');">
         <div class="homeHeaderV3__wrap">
             <div class="homeHeaderV3__content">

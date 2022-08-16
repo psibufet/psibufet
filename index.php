@@ -8,43 +8,48 @@
  * E.g., it puts together the home page when no home.php file exists.
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Sydney
+ * @package PsiBufet
  */
 
 get_header(); ?>
 
-	<?php do_action('sydney_before_content'); ?>
 
-	<div id="primary" class="content-area col-md-9">
-		<main id="main" class="post-wrap" role="main">
+<main id="primary" class="site-main">
 
-		<?php if ( have_posts() ) : ?>
+	<?php
+		if ( have_posts() ) :
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
+			if ( is_home() && ! is_front_page() ) :
 				?>
+				<header>
+					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+				</header>
+				<?php
+			endif;
 
-			<?php endwhile; ?>
+			/* Start the Loop */
+			while ( have_posts() ) :
+				the_post();
 
-			<?php the_posts_navigation(); ?>
+				/*
+				* Include the Post-Type-specific template for the content.
+				* If you want to override this in a child theme, then include a file
+				* called content-___.php (where ___ is the Post Type name) and that will be used instead.
+				*/
+				get_template_part( 'template-parts/content', get_post_type() );
 
-		<?php else : ?>
+			endwhile;
 
-			<?php get_template_part( 'content', 'none' ); ?>
+			the_posts_navigation();
 
-		<?php endif; ?>
+		else :
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+			get_template_part( 'template-parts/content', 'none' );
 
-	<?php do_action('sydney_after_content'); ?>
+		endif;
+	?>
+
+</main><!-- #main -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

@@ -2,6 +2,7 @@
     /**
      * Template name: LP - Elastyczne plany 
      */
+    
 get_header(); ?>
 
 <main class="psibufet psibufet--elastic">
