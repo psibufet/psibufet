@@ -1166,7 +1166,9 @@ $(document).ready(function(){
         }
     };
     if(!$('body').hasClass('page-template-page_home')){
-        $('input[name="rasa_psa"]').easyAutocomplete(options);
+        if($('input[name="rasa_psa"]').length){
+            $('input[name="rasa_psa"]').easyAutocomplete(options);
+        }
     }
 
     /* Videos */
