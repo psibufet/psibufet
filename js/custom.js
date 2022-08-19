@@ -1849,8 +1849,40 @@ $(document).ready(function(){
  */
 $(document).ready(function(){
     let codetype = GetURLParameter('utm_medium');
+        popup = GetURLParameter('popuptest');
 
     if(codetype == 'referral_link'){
-        console.log('[user.com] Wyświetlanie popupu');
+        $('body').addClass('no-scroll');
+        $('.psibufetPopup[data-name="discount"]').addClass('psibufetPopup--ready');
+        setTimeout(function(){
+            $('.psibufetPopup[data-name="discount"]').addClass('psibufetPopup--active');
+        }, 300);
     }
+
+    if(popup !== undefined){
+        $('body').addClass('no-scroll');
+        $('.psibufetPopup[data-name="' + popup + '"]').addClass('psibufetPopup--ready');
+        setTimeout(function(){
+            $('.psibufetPopup[data-name="' + popup + '"]').addClass('psibufetPopup--active');
+        }, 300);
+    }
+
+    // Close btn
+    $('.psibufetPopup .closebtn').on('click', function(){
+        $(this).parents('.psibufetPopup').removeClass('psibufetPopup--active');
+        setTimeout(function(){
+            $(this).parents('.psibufetPopup').removeClass('psibufetPopup--ready');
+        }, 300);
+    });
+
+    // Click over popup close
+    $(document).mouseup(function(e){
+        var container = $('.psibufetPopup .wrap');
+        if (!container.is(e.target) && container.has(e.target).length === 0){
+            container.parent().removeClass('psibufetPopup--active');
+            setTimeout(function(){
+                container.parent().removeClass('psibufetPopup--ready');
+            }, 300);
+        }
+    });
 });

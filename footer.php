@@ -81,6 +81,11 @@
 
 	<?php do_action('sydney_after_footer'); ?>
 
+    <!-- user.com popups -->
+    <?php include get_template_directory() . '/template-parts/popups/newsletter.php'; ?>
+    <?php include get_template_directory() . '/template-parts/popups/newsletter_confirm.php'; ?>
+    <?php include get_template_directory() . '/template-parts/popups/discount.php'; ?>
+
 </div><!-- #page -->
 
 <script type="text/javascript">
