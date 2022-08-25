@@ -33,6 +33,14 @@
 // });
 
 /**
+ * Cookies registered user
+ */
+// $(window).load(function(){
+//     let register_status = window.Cookies.get();
+//     console.log(register_status);
+// });
+
+/**
  * Preloader
  */
 $(document).on('ready', function(){

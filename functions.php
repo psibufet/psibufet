@@ -627,6 +627,10 @@ function psibufet_scripts(){
 	wp_register_script('psibufet-confetti', get_template_directory_uri() . '/plugins/confetti/confetti.min.js', null, null, true);
 	wp_enqueue_script('psibufet-confetti');
 
+	// jQuery Cookies
+	wp_register_script('psibufet-cookies', get_template_directory_uri() . '/plugins/js-cookie/js.cookie.min.js', null, null, true);
+	wp_enqueue_script('psibufet-cookies');
+
 	// Restaurants map
 	wp_register_script( 'psibufet-restmap', get_template_directory_uri() . '/js/_restMap.js?ver=' . $theme_version . $random_number, null, null, true );
 	wp_enqueue_script('psibufet-restmap');

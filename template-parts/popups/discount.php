@@ -7,7 +7,7 @@
         </div>
         <div class="popupDiscount__right">
             <div class="content">
-                <h2>Łap <span class="marker">zniżkę</span> od znajomych!</h2>
+                <h2>Łap <span class="marker">zniżkę</span> <br/>od znajomych!</h2>
                 <p>Masz <span class="color"><span class="value">50</span>%</span> rabatu na pierwsze <br/>i <span class="color"><span class="value">25</span>%</span> rabatu na drugie zamówienie.</p>
                 <a href="https://zamowienie.psibufet.pl" class="btn btn--center dir"><span>Odbieram rabat</span></a>
             </div>

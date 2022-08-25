@@ -1792,7 +1792,7 @@ body.promocode-blackweek .siteHeader--promocode {
   left: 0;
   top: 0;
   background-color: rgba(0, 0, 0, 0.2);
-  z-index: 99;
+  z-index: 999;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2070,16 +2070,16 @@ body.promocode-blackweek .siteHeader--promocode {
   margin: 0 auto;
 }
 .popupDiscount__right .content h2 {
-  font-size: 48px;
+  font-size: 65px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   color: #000;
-  line-height: 50px;
+  line-height: 70px;
   text-align: center;
   margin: 0 0 20px;
 }
 .popupDiscount__right .content h2 .value {
-  font-size: 60px;
+  font-size: 75px;
 }
 .popupDiscount__right .content h2 .marker {
   position: relative;
@@ -2096,8 +2096,8 @@ body.promocode-blackweek .siteHeader--promocode {
   z-index: -1;
 }
 .popupDiscount__right .content p {
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 22px;
+  line-height: 32px;
   font-weight: bold;
   color: #000;
   text-align: center;
