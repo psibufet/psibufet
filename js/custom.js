@@ -1661,6 +1661,16 @@ $(document).ready(function(){
 });
 
 /**
+ * Failed payment
+ */
+$(document).ready(function(){
+    if($('main').hasClass('psibufet--failedpayment')){
+        $('#masthead').remove();
+        $('.header-clone').remove();
+    }
+})
+
+/**
  * TYP page accordion
  */
  $(document).ready(function(){

@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Failed Payment
+ * Template Name: Failed Payment - old
  */
 get_header(); ?>
 
