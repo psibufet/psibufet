@@ -1894,9 +1894,9 @@ $(document).ready(function(){
 
     // Close btn
     $('.psibufetPopup .closebtn').on('click', function(){
-        $(this).parents('.psibufetPopup').removeClass('psibufetPopup--active');
+        $('.psibufetPopup').removeClass('psibufetPopup--active');
         setTimeout(function(){
-            $(this).parents('.psibufetPopup').removeClass('psibufetPopup--ready');
+            $('.psibufetPopup').removeClass('psibufetPopup--ready');
         }, 300);
     });
 
@@ -1904,9 +1904,9 @@ $(document).ready(function(){
     $(document).mouseup(function(e){
         var container = $('.psibufetPopup .wrap');
         if (!container.is(e.target) && container.has(e.target).length === 0){
-            container.parent().removeClass('psibufetPopup--active');
+            $('.psibufetPopup').removeClass('psibufetPopup--active');
             setTimeout(function(){
-                container.parent().removeClass('psibufetPopup--ready');
+                $('.psibufetPopup').removeClass('psibufetPopup--ready');
             }, 300);
         }
     });
