@@ -1870,6 +1870,7 @@ $(document).ready(function(){
  */
 $(document).ready(function(){
     let codetype = GetURLParameter('utm_medium');
+        code = GetURLParameter('code');
         popup = GetURLParameter('popuptest');
 
     $(document).on('preload-off', function(){
@@ -1877,6 +1878,7 @@ $(document).ready(function(){
             setTimeout(function(){
                 $('body').addClass('no-scroll');
                 $('.psibufetPopup[data-name="discount"]').addClass('psibufetPopup--ready');
+                $('.dir-discount-popup').attr('href', 'https://zamowienie.psibufet.pl/?code=' + code + '&utm_source=MGM&utm_medium=referral_link&utm_campaign=' + code + '&utm_term=popup');
                 setTimeout(function(){
                     $('.psibufetPopup[data-name="discount"]').addClass('psibufetPopup--active');
                 }, 300);
