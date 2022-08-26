@@ -48,6 +48,7 @@ $(document).on('ready', function(){
         $('.preloader').css('opacity', 0);
         setTimeout(function(){
             $('.preloader').addClass('disable');
+            $(document).trigger('preload-off');
         }, 600);
     }, 1000);
 });
@@ -1871,15 +1872,19 @@ $(document).ready(function(){
     let codetype = GetURLParameter('utm_medium');
         popup = GetURLParameter('popuptest');
 
-    if(codetype == 'referral_link'){
-        $('body').addClass('no-scroll');
-        $('.psibufetPopup[data-name="discount"]').addClass('psibufetPopup--ready');
-        setTimeout(function(){
-            $('.psibufetPopup[data-name="discount"]').addClass('psibufetPopup--active');
-        }, 300);
-    }
+    $(document).on('preload-off', function(){
+        if(codetype == 'referral_link'){
+            setTimeout(function(){
+                $('body').addClass('no-scroll');
+                $('.psibufetPopup[data-name="discount"]').addClass('psibufetPopup--ready');
+                setTimeout(function(){
+                    $('.psibufetPopup[data-name="discount"]').addClass('psibufetPopup--active');
+                }, 300);
+            }, 2000);
+        }
+    });
 
-    if(popup !== undefined){
+    if(popup !== undefined && popup !== 'discount'){
         $('body').addClass('no-scroll');
         $('.psibufetPopup[data-name="' + popup + '"]').addClass('psibufetPopup--ready');
         setTimeout(function(){
