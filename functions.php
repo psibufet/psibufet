@@ -863,3 +863,11 @@ function elasticPlan(){
 
 	exit();
 }
+
+add_action('wp_ajax_check_user_cookie', 'check_user_cookie');
+add_action('wp_ajax_nopriv_check_user_cookie', 'check_user_cookie');
+function check_user_cookie(){
+	print_r($_COOKIE);
+
+	wp_die();
+}

@@ -35,10 +35,19 @@
 /**
  * Cookies registered user
  */
-// $(window).load(function(){
-//     let register_status = window.Cookies.get();
-//     console.log(register_status);
-// });
+$(document).ready(function(){
+    let data = {
+        action: 'check_user_cookie',
+    }
+    $.ajax({
+        type: 'POST',
+        url: PBAjax.ajaxurl,
+        data: data,
+        success: function(response){
+            console.log(response);
+        }
+    })
+});
 
 /**
  * Preloader

@@ -1,4 +1,27 @@
 <style>
+@font-face {
+  font-family: "Bebas Neue";
+  font-display: swap;
+  src: url("https://psibufet.pl/wp-content/themes/psibufet/fonts/BebasNeue/BebasNeue-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  font-display: swap;
+  font-weight: 400;
+  src: url("https://psibufet.pl/wp-content/themes/psibufet/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  font-display: swap;
+  font-weight: 500;
+  src: url("https://psibufet.pl/wp-content/themes/psibufet/fonts/Roboto/Roboto-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  font-display: swap;
+  font-weight: 700;
+  src: url("https://psibufet.pl/wp-content/themes/psibufet/fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+}
 .psibufetPopup {
   position: fixed;
   width: 100%;
@@ -100,6 +123,7 @@
 .newsletterConfirm__content p {
   font-size: 18px;
   line-height: 24px;
+  font-family: 'Roboto', sans-serif;
   text-align: center;
   margin: 0 0 20px;
 }
@@ -128,6 +152,28 @@
   }
 }
 </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+
+    // Close btn
+    $('.psibufetPopup .closebtn').on('click', function(){
+        $('.psibufetPopup').removeClass('psibufetPopup--active');
+        setTimeout(function(){
+            $('.psibufetPopup').removeClass('psibufetPopup--ready');
+        }, 300);
+    });
+
+    // Click over popup close
+    $(document).mouseup(function(e){
+        var container = $('.psibufetPopup .wrap');
+        if (!container.is(e.target) && container.has(e.target).length === 0){
+            $('.psibufetPopup').removeClass('psibufetPopup--active');
+            setTimeout(function(){
+                $('.psibufetPopup').removeClass('psibufetPopup--ready');
+            }, 300);
+        }
+    });
+</script>
 <div class="newsletterConfirm psibufetPopup" data-name="confirm">
     <div class="newsletterConfirm__wrap wrap">
         <div class="closebtn"></div>

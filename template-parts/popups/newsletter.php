@@ -1,4 +1,27 @@
 <style>
+@font-face {
+  font-family: "Bebas Neue";
+  font-display: swap;
+  src: url("https://psibufet.pl/wp-content/themes/psibufet/fonts/BebasNeue/BebasNeue-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  font-display: swap;
+  font-weight: 400;
+  src: url("https://psibufet.pl/wp-content/themes/psibufet/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  font-display: swap;
+  font-weight: 500;
+  src: url("https://psibufet.pl/wp-content/themes/psibufet/fonts/Roboto/Roboto-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  font-display: swap;
+  font-weight: 700;
+  src: url("https://psibufet.pl/wp-content/themes/psibufet/fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+}
 .psibufetPopup {
   position: fixed;
   width: 100%;
@@ -128,6 +151,7 @@
 .popupNewsletter__right .content p {
   font-size: 18px;
   line-height: 24px;
+  font-family: 'Roboto', sans-serif;
   color: #000;
   text-align: center;
   margin: 0 0 34px;
@@ -141,6 +165,8 @@
   height: 50px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  padding: 4px 20px;
+  border-radius: 0;
   font-family: "Roboto", sans-serif;
   background-color: #fff;
   text-align: center;
@@ -157,10 +183,28 @@
   color: rgba(0, 0, 0, 0.5);
 }
 .popupNewsletter__right .content form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
   width: 100%;
+  min-width: 225px;
+    height: 52px;
+    line-height: 52px;
+    background-color: #f15748;
+    text-align: center;
+    box-shadow: 3px 3px #0000001a;
+    user-select: none;
+    cursor: pointer;
+    transition: ease 0.3s;
 }
 .popupNewsletter__right .content form button span {
   text-transform: none;
+  font-family: 'Roboto', sans-serif;
   font-size: 20px;
 }
 
@@ -254,6 +298,24 @@
   }
 }
 </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+    // Close btn
+    document.querySelector('.closebtn').addEventListener('click', function(){
+        document.querySelector('.psibufetPopup').classList.add('psibufetPopup--hide');
+    });
+
+    // Click over popup close
+    // document.querySelector(document).mouseup(function(e){
+    //     var container = document.querySelector('.psibufetPopup .wrap');
+    //     if (!container.is(e.target) && container.has(e.target).length === 0){
+    //         document.querySelector('.psibufetPopup').classList.remove('psibufetPopup--active');
+    //         setTimeout(function(){
+    //             document.querySelector('.psibufetPopup').classList.remove('psibufetPopup--ready');
+    //         }, 300);
+    //     }
+    // });
+</script>
 <div class="popupNewsletter psibufetPopup" data-name="newsletter">
     <div class="popupNewsletter__wrap wrap">
         <div class="closebtn"></div>
