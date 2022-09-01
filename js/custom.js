@@ -1878,12 +1878,12 @@ $(document).ready(function(){
  * User.com popup
  */
 $(document).ready(function(){
-    let codetype = GetURLParameter('utm_medium');
+    let codesource = GetURLParameter('utm_source');
         code = GetURLParameter('code');
         popup = GetURLParameter('popuptest');
 
     $(document).on('preload-off', function(){
-        if(codetype == 'referral_link'){
+        if(codesource == 'MGM'){
             setTimeout(function(){
                 $('body').addClass('no-scroll');
                 $('.psibufetPopup[data-name="discount"]').addClass('psibufetPopup--ready');
