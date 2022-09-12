@@ -98,6 +98,9 @@ get_header(); ?>
                         <span class="value">0</span>%
                     </p>
                 </div>
+                <div class="planBox__apetyt">
+                    <p>Dla psiaków z większym apetytem!</p>
+                </div>
                 <div class="planBox__info">
                     <div class="pos" data-name="planBox_list_dayportion">
                         <p><b>Porcja dzienna:</b> <span>Wczytywanie</span></p>

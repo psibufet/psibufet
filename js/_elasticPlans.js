@@ -72,6 +72,13 @@
     
                 insertPlansData(selected);
 
+                // Dla psiaków z większym apetytem badge
+                if(selected_value == '300'){
+                    $('.planBox[data-plan="plan_02"]').find('.planBox__apetyt').addClass('planBox__apetyt--active');
+                }else{
+                    $('.planBox[data-plan="plan_02"]').find('.planBox__apetyt').removeClass('planBox__apetyt--active');
+                }
+
                 if(selected_value == '400' || selected_value == '500' || selected_value == '600'){
                     // $('.planBox[data-plan="plan_02"]').find('.pos--gift').hide();
                     $('.planBox[data-plan="plan_02"]').hide();

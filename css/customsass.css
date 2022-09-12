@@ -20543,6 +20543,27 @@ body.page-template-page_senior .calcMiska .btn {
 .elasticPlans__list .planBox__price .promotion .value {
   font-size: 40px;
 }
+.elasticPlans__list .planBox__apetyt {
+  background-color: #4769B2;
+  width: 100%;
+  max-width: 320px;
+  padding: 4px 10px;
+  margin: 0 auto;
+  position: relative;
+  top: -1px;
+  display: none;
+}
+.elasticPlans__list .planBox__apetyt--active {
+  display: block;
+}
+.elasticPlans__list .planBox__apetyt p {
+  font-size: 16px;
+  line-height: 1.3;
+  color: #fff;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+}
 .elasticPlans__list .planBox__info {
   max-width: 320px;
   margin: 0 auto;
@@ -20731,6 +20752,12 @@ body.page-template-page_senior .calcMiska .btn {
   }
   .elasticPlans__list .planBox__price .promotion .value {
     font-size: 32px;
+  }
+  .elasticPlans__list .planBox__apetyt {
+    max-width: 256px;
+  }
+  .elasticPlans__list .planBox__apetyt p {
+    font-size: 14px;
   }
   .elasticPlans__list .planBox__info {
     max-width: 256px;
