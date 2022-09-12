@@ -38,7 +38,7 @@ get_header(); ?>
                         <li>dysponuje odpowiednią ilością środków</li>
                     </ul>
                 </p>
-                <p>Aby spróbować ponownie, kliknij w link poniżej, który przeniesie Cię na Twoje konto. W zakładce 'Dane i płatności' wprowadź ponownie dane swojej karty płatniczej. Następnie wystąpi przekierowanie na stronę Twojego banku w celu autoryzacji.</p>
+                <p>Aby spróbować ponownie, kliknij w przycisk poniżej, który przeniesie Cię na Twoje konto. W zakładce <b>'Dane i płatności'</b> wprowadź ponownie dane swojej karty płatniczej. Następnie wystąpi przekierowanie na stronę Twojego banku w celu autoryzacji.</p>
                 <p>(Uwaga! Autoryzacja może być na kwotę 0 PLN). Najczęstszymi metodami autoryzacji są: kod sms, potwierdzenie w aplikacji mobilnej lub pin karty.</p>
             </div>
             <div class="failedContent__cta">
