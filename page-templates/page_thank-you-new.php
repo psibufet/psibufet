@@ -63,34 +63,42 @@
             </div>
             <div class="typContent__que">
                 <div class="heading openQue">
-                    <h3>Ile karmy podawać?</h3>
+                    <h3>Jak mogę zarządzać moją subskrypcją PsiBufet?</h3>
                 </div>
                 <div class="content">
-                    <p>Jedna porcja naszej karmy odpowiada dziennemu zapotrzebowaniu energetycznemu Twojego psa. Wyliczamy ją na podstawie informacji podanych przez Ciebie w formularzu pierwszego zamówienia. Jeśli zauważysz, że karmy jest za mało lub zbyt dużo, możesz zmienić wielkość porcji. Zachęcamy do podawania dziennej porcji w minimum dwóch posiłkach. Częstsze karmienie mniejszą porcją jest lepsze dla trawienia i chroni psa przed zagrożeniem jak choćby skręt żołądka.</p>
+                    <p>Dieta PsiBufet działa w modelu subskrypcyjnym. Oznacza to regularne dostawy jedzenia w wybranej przez Ciebie częstotliwości. Nie musisz o niczym pamiętać - to my pilnujemy terminów. Na dwa dni przed planowaną dostawą pobieramy pieniądze z Twojego konta (dzięki podpiętej karcie) i przypominamy o zbliżającej się dostawie. <b>Co ważne, wszystkim możesz samodzielnie zarządzać w Panelu Klienta, a zmian dokonasz na dwa dni przed planowanym terminem do godziny 15:00.</b> Wystarczy, że zalogujesz się na panel.psibufet.pl - w razie potrzeby zmienisz tam adres lub termin dostawy albo zmodyfikujesz zawartość paczki (wybierając inne smaki lub inne gramatury saszetek).</p>
                 </div>
             </div>
             <div class="typContent__que">
                 <div class="heading openQue">
-                    <h3>jak najlepiej podawać karmy psibufet?</h3>
+                    <h3>Ile jedzenia mam podawać?</h3>
                 </div>
                 <div class="content">
-                    <p>Nasze jedzonko serwuj w temperaturze pokojowej lub lekko podgrzane w kuchence mikrofalowej. Między posiłkami zadbaj, aby karma nie wyschła np. przez pozostawienie jej w otwartej saszetce. Po otwarciu, cała zawartość saszetki ma ważność do 48 godzin. Ze względów behawiorystycznych nie zalecamy dłuższego pozostawiania karmy w misce – psy powinny mieć dostęp do pożywienia tylko w porach karmienia.</p>
+                    <p>Jedna saszetka naszego jedzenia odpowiada dziennemu zapotrzebowaniu energetycznemu Twojego psa. Wyliczamy je na podstawie informacji podanych przez Ciebie w formularzu przy pierwszym zamówieniu. Jeśli uważasz, że jedzenia jest za mało lub zbyt dużo, zawsze możesz zmienić wielkość porcji w Panelu Klienta. Zachęcamy do podzielenia dziennej dawki na minimum dwa posiłki. Karmienie dwa, a nawet trzy razy dziennie jest lepsze dla trawienia i samopoczucia pieska.</p>
                 </div>
             </div>
             <div class="typContent__que">
                 <div class="heading openQue">
-                    <h3>czy mogę zmodyfikować mój plan?</h3>
+                    <h3>W jaki sposób najlepiej podawać PsiBufet?</h3>
                 </div>
                 <div class="content">
-                    <p>Jasne! Subskrypcją możesz zarządzać z poziomu panelu klienta.</p>
+                    <p>Jedzenie PsiBufet serwuj w temperaturze pokojowej lub lekko podgrzane (np. w kuchence mikrofalowej). Otwartą saszetkę z posiłkiem trzymaj szczelnie zamkniętą w lodówce (możesz ją włożyć np. do lunchboxu) i przechowuj ją maksymalnie 48 godzin. Ze względów behawioralnych i z uwagi na bezpieczeństwo żywienia nie zalecamy zostawiania jedzenia psu w misce na dłużej niż 15-20 minut. Po tym czasie miskę powinniśmy zabierać, a jedzenie podawać dopiero w kolejnej, zaplanowanej porze posiłku. Warto też myć miskę przed każdym karmieniem, a także stosować miski spowalniające lub maty do lizania.</p>
                 </div>
             </div>
             <div class="typContent__que">
                 <div class="heading openQue">
-                    <h3>kiedy otrzymam kolejną dostawę?</h3>
+                    <h3>Czy mogę zmodyfikować mój plan żywienia?</h3>
                 </div>
                 <div class="content">
-                    <p>Twoja druga dostawa karmy PsiBufet jest zaplanowana na <span id="deliveryDate"></span>. Możesz dostosować tą datę do siebie z poziomu panelu klienta.</p>
+                    <p>Oczywiście - subskrypcją możesz zarządzać samodzielnie z poziomu Panelu Klienta. Wystarczy, że zalogujesz się na <a href="https://panel.psibufet.pl/" target="_blank">panel.psibufet.pl</a>. Znajdziesz tam wiele opcji - m.in. zmienisz termin lub adres dostawy albo zmodyfikujesz zawartość paczki. Wszystkich zmian możesz dokonywać na dwa dni przed planowanym terminem dostawy, do godziny 15:00.</p>
+                </div>
+            </div>
+            <div class="typContent__que">
+                <div class="heading openQue">
+                    <h3>Kiedy otrzymam kolejną dostawę?</h3>
+                </div>
+                <div class="content">
+                    <p>Twoja druga dostawa jest zaplanowana na <span id="deliveryDate"></span>. Dostaniesz przypomnienie o niej na 4 dni przed tym terminem. Jeśli chcesz zmienić datę dostawy, możesz to zrobić, logując się do Panelu Klienta. Pamiętaj, że wszelkich zmian możesz dokonać na dwa dni przed planowanym terminem dostawy, do godziny 15:00.</p>
                 </div>
             </div>
         </div>
