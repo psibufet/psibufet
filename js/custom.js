@@ -986,6 +986,7 @@ $(document).ready(function(){
             var price_gr = $(this).attr('data-price-gr');
 
             var contentPrice_zl = $('#flavourPrice').find('span.value');
+            
             contentPrice_zl.html(price_zl + '<small>' + price_gr + '</small>');
 
             var contentValue = $('#flavourValue').find('span');
@@ -993,18 +994,73 @@ $(document).ready(function(){
         }
     });
 
+     /**
+     * If coupon code active
+     */
+    let discountamount = 0,
+        code = GetURLParameter('code');
+
+    if(typeof code !== 'undefined'){
+        $.ajax({
+            url:'https://app.psibufet.pl/api/order/couponcode/' + code,
+            success: function(){
+                $.getJSON("https://app.psibufet.pl/api/order/couponcode/" + code, function (data) {
+                    let amount = data.amount;
+                    let amount2 = data.amount2;
+
+                    if(amount == amount2){
+                        discountamount = amount;
+                        $('#flavourPrice').addClass('discount-active');
+
+                        let currentprice = $('#flavourPrice').find('.current-price').data('price');
+                        let discount = currentprice * amount / 100;
+                    
+                        let price_full = currentprice - discount;
+                        let price = price_full.toFixed(2).split('.');
+
+                        // Insert discount info
+                        $('#flavourPrice').prepend('<div class="discount"><span class="regular-price" data-price="' + price[0] + '.' + price[1] + '"><span class="value" itemprop="price">5<small>90</small></span>ZŁ</span> / dzień</div>')
+
+                        // $('#flavourPrice').find('.current-price').attr('data-price', price[0] + '.' + price[1]);
+                        $('#flavourPrice').find('.current-price').html('<span class="value" itemprop="sale-price">' + price[0] + '<small>' + price[1] + '</small></span>ZŁ ');
+
+                        // Add data
+                        $('.microdata').find('span[itemprop="offers"]').append('<meta itemprop="sale-price" content="' + price[0] + '.' + price[1] + '">');
+                    }
+                });
+            }
+        });
+    }
+
     /* Select insert values */
     $('.select__option').on('click', function(){
         var value = $(this).attr('data-value');
         var price_zl = $(this).attr('data-price-zl');
         var price_gr = $(this).attr('data-price-gr');
 
-        var contentPrice_zl = $('#flavourPrice').find('span.value');
-        contentPrice_zl.html(price_zl + '<small>' + price_gr + '</small>');
+        // Set new price
+        let code = GetURLParameter('code');
 
+        if(typeof code !== 'undefined'){
+            let price = parseInt(price_zl + '.' + price_gr),
+                discount = price * discountamount / 100,
+                price_full = price - discount,
+                price_discount = price_full.toFixed(2).split('.'),
+                contentPrice_regular = $('#flavourPrice').find('.regular-price span.value');
+                contentPrice_discount = $('#flavourPrice').find('.current-price span.value');
+
+            contentPrice_regular.html(price_zl + '<small>' + price_gr + '</small>');
+            contentPrice_discount.html(price_discount[0] + '<small>' + price_discount[1] + '</small>');
+        }else{
+            var contentPrice_zl = $('#flavourPrice').find('span.value');
+            contentPrice_zl.html(price_zl + '<small>' + price_gr + '</small>');
+        }
+
+        // Add class to dropdown item
         $('.select__option').removeClass('select__option--selected');
         $(this).addClass('select__option--selected');
 
+        // Set new gramm
         var contentValue = $('#flavourValue').find('span');
         contentValue.text(value);
 
@@ -1072,38 +1128,6 @@ $(document).ready(function(){
         var slug = $(this).attr('data-slug');
         btn.attr('href', href + slug);
     });
-
-    /**
-     * If coupon code active
-     */
-//     let code = GetURLParameter('code');
-
-//     if(typeof code !== 'undefined'){
-//         $.ajax({
-//             url:'https://app.psibufet.pl/api/order/couponcode/' + code,
-//             success: function(){
-//                 $.getJSON("https://app.psibufet.pl/api/order/couponcode/" + code, function (data) {
-//                     let amount = data.amount;
-//                     let amount2 = data.amount2;
-
-//                     if(amount == amount2){
-//                         $('#flavourPrice').addClass('discount-active');
-
-//                         let currentprice = $('#flavourPrice').find('.current-price').data('price');
-//                         let discount = currentprice * amount / 100;
-                    
-//                         var price_full = currentprice - discount;
-//                         var price = price_full.toFixed(2).split('.');
-                        
-
-
-//                         $('#flavourPrice').find('.current-price').attr('data-price', price[0] + '.' + price[1]);
-//                         $('#flavourPrice').find('.current-price').html('<span class="value" itemprop="price">' + price[0] + '<small>' + price[1] + '</small></span>ZŁ ');
-//                     }
-//                 });
-//             }
-//         });
-//     }
 });
 
 /* LP Sale
