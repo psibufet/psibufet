@@ -1042,12 +1042,19 @@ $(document).ready(function(){
         let code = GetURLParameter('code');
 
         if(typeof code !== 'undefined'){
-            let price = parseInt(price_zl + '.' + price_gr),
+            let price_zl_fixed = parseFloat(price_zl),
+                price_gr_fixed = parseFloat('0.' + price_gr),
+                price = price_zl_fixed + price_gr_fixed,
                 discount = price * discountamount / 100,
                 price_full = price - discount,
                 price_discount = price_full.toFixed(2).split('.'),
                 contentPrice_regular = $('#flavourPrice').find('.regular-price span.value');
                 contentPrice_discount = $('#flavourPrice').find('.current-price span.value');
+
+            console.log(discountamount);
+            console.log(price);
+            console.log(discount);
+            console.log(price_full);
 
             contentPrice_regular.html(price_zl + '<small>' + price_gr + '</small>');
             contentPrice_discount.html(price_discount[0] + '<small>' + price_discount[1] + '</small>');
