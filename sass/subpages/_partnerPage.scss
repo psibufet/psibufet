@@ -329,7 +329,23 @@
 
 .partnerJoin{
     background-color: #E8E8E8;
-    padding: 50px 0;
+    padding: 78px 0 50px;
+    position: relative;
+
+    &:before{
+        content: '';
+        background-image: url('/wp-content/themes/psibufet/images/vectors/paws.svg');
+        background-size: 110px;
+        width: 110px;
+        height: 102px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        user-select: none;
+        z-index: 3;
+    }
 
     &__form{
         max-width: 740px;
@@ -420,6 +436,11 @@
                     transition: ease .3s;
                 }
 
+                &--textarea{
+                    label{
+                        top: 25px;
+                    }
+                }
                 &--focused{
                     label{
                         top: -25px;
@@ -472,6 +493,11 @@
                         left: 10px;
                         text-align: center;
                     }
+                    &.form__row--textarea{
+                        &:after{
+                            bottom: 15px;
+                        }
+                    }
                 }
                 &--validated{
                     .form__input{
@@ -492,16 +518,16 @@
                 border-right: 1px solid;
 
                 p{
-                    font-family: $headingfont;
-                    font-weight: 300;
                     font-size: 16px;
+                    font-weight: 400;
                     color: #000;
                     margin: 0;
-                    padding: 5px 20px;
+                    padding: 8px 20px;
+                    text-align: center;
 
                     &:hover,
                     &.active{
-                        background-color: $redcolor;
+                        background-color: $greencolor;
                         color: #fff;
                     }
                 }
@@ -535,6 +561,10 @@
                         border-color: rgba(0, 0, 0, 0.2) !important;
                     }
                 }
+                &--textarea{
+                    min-height: 156px;
+                    resize: none;
+                }
             }
             &__submit{
                 .btn{
@@ -551,6 +581,13 @@
 @media (max-width: 767px){
     .partnerJoin{
         padding: 32px 0;
+
+        &:before{
+            background-size: 68px;
+            width: 68px;
+            height: 62px;
+            top: -10px;
+        }
 
         &__form{
             max-width: 465px;
@@ -626,7 +663,7 @@
     .partnerJoin{
         &__form{
             max-width: calc(100% - 40px);
-            padding: 20px;
+            padding: 30px 20px;
         }
     }
 }

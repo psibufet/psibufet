@@ -715,10 +715,11 @@ function availableForm(){
 	$company = isset( $_POST['company'] ) ? $_POST['company'] : '';
 	$mail = isset( $_POST['mail'] ) ? $_POST['mail'] : '';
 	$phone = isset( $_POST['phone'] ) ? $_POST['phone'] : '';
+	$about = isset( $_POST['about'] ) ? $_POST['about'] : '';
 	
 	$to = 'tomek@psibufet.pl';
 	$subject = '[PsiBufet] Zgłoszenie ambasadora';
-	$message = "Typ: " . $type . "\r\nFirma: " . $company . "\r\nMail: " . $mail . "\r\nPhone: " . $phone;
+	$message = "Typ: " . $type . "\r\nFirma: " . $company . "\r\nMail: " . $mail . "\r\nTelefon: " . $phone . "\r\nKilka słów o sobie: " . $about;
 
 	$user = $mail;
 	$subject_user = 'Czas na garść informacji!';

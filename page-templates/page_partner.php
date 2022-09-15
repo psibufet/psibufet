@@ -60,6 +60,7 @@ get_header(); ?>
                         <label>Rodzaj działalności</label>
                         <input type="text" class="form__input form__input--noaction" name="partnerType" autocomplete="off"/>
                         <div class="form__dropdown">
+                            <p value="restauracja">Restauracja</p>
                             <p value="sklep-z-akcesoriami-dla-psow">Sklep z akcesoriami dla psów</p>
                             <p value="groomer">Groomer</p>
                             <p value="trener">Trener</p>
@@ -81,6 +82,10 @@ get_header(); ?>
                     <div class="form__row">
                         <label>Numer telefonu</label>
                         <input type="number" class="form__input" name="partnerPhone" autocomplete="nope"/>
+                    </div>
+                    <div class="form__row form__row--textarea">
+                        <label>Kilka słów o Tobie</label>
+                        <textarea class="form__input form__input--textarea" name="partnerAbout" autocomplete="nope"></textarea>
                     </div>
                     <div class="form__submit">
                         <button type="submit" class="btn btn--button btn--center"><span>Dołącz teraz</span></button>

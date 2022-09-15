@@ -12607,7 +12607,22 @@ body.page-template-page_rmkt .homeFoodinfo__right h2 .marker {
 }
 .partnerJoin {
   background-color: #E8E8E8;
-  padding: 50px 0;
+  padding: 78px 0 50px;
+  position: relative;
+}
+.partnerJoin:before {
+  content: "";
+  background-image: url("/wp-content/themes/psibufet/images/vectors/paws.svg");
+  background-size: 110px;
+  width: 110px;
+  height: 102px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  user-select: none;
+  z-index: 3;
 }
 .partnerJoin__form {
   max-width: 740px;
@@ -12692,6 +12707,9 @@ body.page-template-page_rmkt .homeFoodinfo__right h2 .marker {
   pointer-events: none;
   transition: ease 0.3s;
 }
+.partnerJoin__form .form__row--textarea label {
+  top: 25px;
+}
 .partnerJoin__form .form__row--focused label {
   top: -25px;
   transform: scale(0.8);
@@ -12736,6 +12754,9 @@ body.page-template-page_rmkt .homeFoodinfo__right h2 .marker {
   left: 10px;
   text-align: center;
 }
+.partnerJoin__form .form__row--error.form__row--textarea:after {
+  bottom: 15px;
+}
 .partnerJoin__form .form__row--validated .form__input {
   border-color: #129D6F !important;
 }
@@ -12752,15 +12773,15 @@ body.page-template-page_rmkt .homeFoodinfo__right h2 .marker {
   border-right: 1px solid;
 }
 .partnerJoin__form .form__dropdown p {
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 300;
   font-size: 16px;
+  font-weight: 400;
   color: #000;
   margin: 0;
-  padding: 5px 20px;
+  padding: 8px 20px;
+  text-align: center;
 }
 .partnerJoin__form .form__dropdown p:hover, .partnerJoin__form .form__dropdown p.active {
-  background-color: #f15748;
+  background-color: #129D6F;
   color: #fff;
 }
 .partnerJoin__form .form__input {
@@ -12788,6 +12809,10 @@ body.page-template-page_rmkt .homeFoodinfo__right h2 .marker {
 .partnerJoin__form .form__input--noaction:focus {
   border-color: rgba(0, 0, 0, 0.2) !important;
 }
+.partnerJoin__form .form__input--textarea {
+  min-height: 156px;
+  resize: none;
+}
 .partnerJoin__form .form__submit .btn {
   padding: 0;
   text-transform: none;
@@ -12799,6 +12824,12 @@ body.page-template-page_rmkt .homeFoodinfo__right h2 .marker {
 @media (max-width: 767px) {
   .partnerJoin {
     padding: 32px 0;
+  }
+  .partnerJoin:before {
+    background-size: 68px;
+    width: 68px;
+    height: 62px;
+    top: -10px;
   }
   .partnerJoin__form {
     max-width: 465px;
@@ -12858,7 +12889,7 @@ body.page-template-page_rmkt .homeFoodinfo__right h2 .marker {
 @media (max-width: 500px) {
   .partnerJoin__form {
     max-width: calc(100% - 40px);
-    padding: 20px;
+    padding: 30px 20px;
   }
 }
 .calcHeader {

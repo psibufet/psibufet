@@ -47,6 +47,7 @@ $(document).ready(function(){
         var partnerForm_company = partnerForm.find('input[name="partnerCompany"]');
         var partnerForm_mail = partnerForm.find('input[name="partnerEmail"]');
         var partnerForm_phone = partnerForm.find('input[name="partnerPhone"]');
+        var partnerForm_about = partnerForm.find('textarea');
 
         if(!partnerForm_type.val()){
             partnerForm_type.parent().removeClass('form__row--validated');
@@ -75,6 +76,12 @@ $(document).ready(function(){
         if(partnerForm_phone.val().length < 9 && partnerForm_phone.val().length > 0){
             partnerForm_phone.parent().removeClass('form__row--validated');
             partnerForm_phone.parent().addClass('form__row--error').attr('data-error', 'Numer telefonu nie jest prawidłowy');
+
+            counter++;
+        }
+        if(!partnerForm_about.val()){
+            partnerForm_about.parent().removeClass('form__row--validated');
+            partnerForm_about.parent().addClass('form__row--error').attr('data-error', 'To pole jest wymagane');
 
             counter++;
         }
@@ -120,6 +127,7 @@ $(document).ready(function(){
                 company = partnerForm.find('input[name="partnerCompany"]').val(),
                 mail = partnerForm.find('input[name="partnerEmail"]').val(),
                 phone = partnerForm.find('input[name="partnerPhone"]').val();
+                about = partnerForm.find('textarea').val();
 
             $.ajax({ 
                 url: PBAjax.ajaxurl,
@@ -130,6 +138,7 @@ $(document).ready(function(){
                     company: company,
                     mail: mail,
                     phone: phone,
+                    about: about,
                 },
 
                 success: function(response) {
