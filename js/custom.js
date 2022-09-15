@@ -942,7 +942,7 @@ $(document).ready(function(){
         
         let code = GetURLParameter('code');
 
-        if(typeof code !== 'undefined'){
+        if(typeof code !== 'undefined' && !$('body').hasClass('page-template-page_gskarmy')){
             setTimeout(function(){
                 $('.dir').each(function(){
                     let current = $(this).attr('href');
