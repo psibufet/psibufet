@@ -48,7 +48,7 @@ get_header(); ?>
     </span>
     <!-- Google Shopping - meta -->
 
-    <section class="gsKarmainfo" itemscope itemtype="http://schema.org/Product">
+    <section class="gsKarmainfo">
         <img data-original="<?php echo $image; ?>" class="no-lazyload" itemprop="image" style="display: none !important;"/>
         <div class="gsKarmainfo__wrap">
             <div class="gsKarmainfo__gallery">
