@@ -1022,12 +1022,13 @@ $(document).ready(function(){
                         $('#flavourPrice').prepend('<div class="discount"><span class="regular-price" data-price="' + price[0] + '.' + price[1] + '"><span class="value" itemprop="price">5<small>90</small></span>ZŁ</span> / dzień</div>')
 
                         // $('#flavourPrice').find('.current-price').attr('data-price', price[0] + '.' + price[1]);
-                        $('#flavourPrice').find('.current-price').html('<span class="value" itemprop="sale-price">' + price[0] + '<small>' + price[1] + '</small></span>ZŁ ');
+                        $('#flavourPrice').find('.current-price').html('<span class="value">' + price[0] + '<small>' + price[1] + '</small></span>ZŁ ');
 
                         // Add data
-                        $('.microdata').find('span[itemprop="offers"]').append('<meta itemprop="sale-price" content="' + price[0] + '.' + price[1] + '">');
+                        // $('.microdata').find('span[itemprop="offers"]').append('<meta itemprop="sale-price" content="' + price[0] + '.' + price[1] + '">');
+                        $('.microdata').find('span[itemprop="price"]').attr('content', price[0] + '.' + price[1]);
                     }
-                });
+                 });
             }
         });
     }
