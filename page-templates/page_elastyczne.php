@@ -98,7 +98,7 @@ get_header(); ?>
                         <span class="value">0</span>%
                     </p>
                 </div>
-                <div class="planBox__apetyt">
+                <div class="planBox__apetyt planBox__apetyt--active">
                     <p>Dla psiaków z większym apetytem!</p>
                 </div>
                 <div class="planBox__info">
