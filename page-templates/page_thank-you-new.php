@@ -2,7 +2,7 @@
 /*
  * Template Name: NEW Thank you page
  */
- get_header(); ?>
+get_header(); ?>
 
 <main class="psibufet psibufet--typ">
     <div id="tsparticles"></div>
