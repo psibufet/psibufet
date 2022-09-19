@@ -73,7 +73,7 @@
                 insertPlansData(selected);
 
                 // Dla psiaków z większym apetytem badge
-                if(selected_value == '300'){
+                if(selected_value == '125'){
                     $('.planBox[data-plan="plan_02"]').find('.planBox__apetyt').addClass('planBox__apetyt--active');
                 }else{
                     $('.planBox[data-plan="plan_02"]').find('.planBox__apetyt').removeClass('planBox__apetyt--active');
