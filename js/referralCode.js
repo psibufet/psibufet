@@ -69,6 +69,9 @@ function promobar(dataCode, dataAmount, dataAmount2, dataType, dataPurpose){
 
 		// Set header clone height
 		headerClone();
+		if($(window).width() < 768){
+			bottomBar(dataCode, dataAmount, dataType);
+		}
 	}else{
 		if(typeof code !== 'psiazka'){
 			$('body').addClass('promocode');
