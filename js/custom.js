@@ -1022,7 +1022,7 @@ $(document).ready(function(){
                         let price = price_full.toFixed(2).split('.');
 
                         // Insert discount info
-                        $('#flavourPrice').prepend('<div class="discount"><span class="regular-price" data-price="' + price[0] + '.' + price[1] + '"><span class="value">5<small>90</small></span>ZŁ</span> / dzień</div>')
+                        $('#flavourPrice').prepend('<div class="discount"><span class="regular-price" data-z="' + price[0] + '.' + price[1] + '"><span class="value">5<small>90</small></span>ZŁ</span> / dzień</div>')
 
                         // $('#flavourPrice').find('.cp-x').attr('data-price', price[0] + '.' + price[1]);
                         $('#flavourPrice').find('.cp-x').html('<span class="value">' + price[0] + '<small>' + price[1] + '</small></span>ZŁ ');
