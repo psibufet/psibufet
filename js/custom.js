@@ -1008,6 +1008,9 @@ $(document).ready(function(){
                     let amount = data.amount;
                     let amount2 = data.amount2;
 
+                    /**
+                     * OLD
+                     */
                     if(amount == amount2){
                         discountamount = amount;
                         $('#flavourPrice').addClass('discount-active');
@@ -1019,7 +1022,7 @@ $(document).ready(function(){
                         let price = price_full.toFixed(2).split('.');
 
                         // Insert discount info
-                        $('#flavourPrice').prepend('<div class="discount"><span class="regular-price" data-price="' + price[0] + '.' + price[1] + '"><span class="value" itemprop="price">5<small>90</small></span>ZŁ</span> / dzień</div>')
+                        $('#flavourPrice').prepend('<div class="discount"><span class="regular-price" data-price="' + price[0] + '.' + price[1] + '"><span class="value">5<small>90</small></span>ZŁ</span> / dzień</div>')
 
                         // $('#flavourPrice').find('.cp-x').attr('data-price', price[0] + '.' + price[1]);
                         $('#flavourPrice').find('.cp-x').html('<span class="value">' + price[0] + '<small>' + price[1] + '</small></span>ZŁ ');
@@ -1028,6 +1031,15 @@ $(document).ready(function(){
                         // $('.microdata').find('span[itemprop="offers"]').append('<meta itemprop="sale-price" content="' + price[0] + '.' + price[1] + '">');
                         $('.microdata').find('span[itemprop="price"]').attr('content', price[0] + '.' + price[1]);
                     }
+
+                    /**
+                     * NEW
+                     */
+                    // if(amount == amount2){
+                    //     discountamount = amount;
+                    //     $('#flavourPrice').addClass('discount-active');
+                    //     $('#flavourPrice').prepend('<div class="discount"><span class="regular-price"><span class="value" itemprop="price">5<small>90</small></span>ZŁ</span> / dzień</div>');
+                    // }
                  });
             }
         });
@@ -1043,6 +1055,10 @@ $(document).ready(function(){
         let code = GetURLParameter('code');
 
         if(typeof code !== 'undefined'){
+            
+            /**
+             * OLD
+             */
             let price_zl_fixed = parseFloat(price_zl),
                 price_gr_fixed = parseFloat('0.' + price_gr),
                 price = parseFloat(price_zl) + parseFloat('0.' + price_gr),
@@ -1056,6 +1072,21 @@ $(document).ready(function(){
             contentPrice_discount.html(price_discount[0] + '<small>' + price_discount[1] + '</small>');
          
             $('.microdata').find('span[itemprop="price"]').attr('content', price_discount[0] + '.' + price_discount[1]);
+
+            /**
+             * NEW
+             */
+            // let price_zl_fixed = parseFloat(price_zl),
+            //     price_gr_fixed = parseFloat('0.' + price_gr),
+            //     price = parseFloat(price_zl) + parseFloat('0.' + price_gr),
+            //     discount = price * discountamount / 100,
+            //     price_full = price + discount,
+            //     price_discount = price_full.toFixed(2).split('.');
+
+            console.log(discountamount);
+            console.log(price);
+            console.log(discount);
+            console.log(price_discount);
         }else{
             var contentPrice_zl = $('#flavourPrice').find('span.value');
             contentPrice_zl.html(price_zl + '<small>' + price_gr + '</small>');
