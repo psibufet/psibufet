@@ -71,9 +71,9 @@ get_header(); ?>
                     <h2 class="price" id="flavourPrice" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
                         <meta itemprop="priceCurrency" content="PLN"/>
                         
-                        <span class="cp-x" data-x="5.90">
-                            <span class="value" itemprop="price">5
-                                <small>90</small>
+                        <span class="cp-x" data-x="4.72">
+                            <span class="value" itemprop="price">4
+                                <small>72</small>
                             </span>ZŁ
                         </span> / dzień
                     </h2>
