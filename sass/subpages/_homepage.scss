@@ -5486,9 +5486,9 @@ body.admin-bar{
                         content: '';
                         background-image: url('/wp-content/themes/psibufet/images/chevron_down.svg');
                         background-repeat: no-repeat;
-                        background-size: 14px;
-                        width: 14px;
-                        height: 10px;
+                        background-size: 20px;
+                        width: 20px;
+                        height: 15px;
                         position: absolute;
                         top: 50%;
                         transform: translate(0, -50%);
@@ -5531,6 +5531,12 @@ body.admin-bar{
                     p{
                         font-size: 18px;
                         line-height: 21px;
+
+                        &:after{
+                            background-size: 14px;
+                            width: 14px;
+                            height: 10px;
+                        }
                     }
                 }
                 &__answer{
