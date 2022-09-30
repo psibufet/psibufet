@@ -17,42 +17,18 @@ get_header(); ?>
             <h2><?php the_field('helpCategories_heading'); ?></h2>
         </div>
         <div class="helpCategories__wrap">
-            <a href="<?php echo the_field('helpCategories_dostawy'); ?>" class="helpCategories__cat">
+            <?php while(have_rows('helpCategories')): the_row();
+                $icon = get_sub_field('helpCategories_icon');
+                $title = get_sub_field('helpCategories_title');
+                $url = get_sub_field('helpCategories_url');
+            ?>
+            <a href="<?php echo $url; ?>" class="helpCategories__cat">
                 <div class="icon">
-                    <img data-original="<?php echo get_template_directory_uri() . '/images/help/catIco_01.svg'; ?>" class="no-lazyload"/>
+                    <img data-original="<?php echo $icon['url'] ?>" alt="<?php echo $icon['alt'] ?>" class="no-lazyload"/>
                 </div>
-                <p>Dostawy</p>
+                <p><?php echo $title; ?></p>
             </a>
-            <a href="<?php echo the_field('helpCategories_naszekarmy'); ?>" class="helpCategories__cat">
-                <div class="icon">
-                    <img data-original="<?php echo get_template_directory_uri() . '/images/help/catIco_02.svg'; ?>" class="no-lazyload"/>
-                </div>
-                <p>Nasze posiłki</p>
-            </a>
-            <a href="<?php echo the_field('helpCategories_darmowakarma'); ?>" class="helpCategories__cat">
-                <div class="icon">
-                    <img data-original="<?php echo get_template_directory_uri() . '/images/help/catIco_03.svg'; ?>" class="no-lazyload"/>
-                </div>
-                <p>Polecaj i zarabiaj</p>
-            </a>
-            <a href="<?php echo the_field('helpCategories_przechowywanie'); ?>" class="helpCategories__cat">
-                <div class="icon">
-                    <img data-original="<?php echo get_template_directory_uri() . '/images/help/catIco_04.svg'; ?>" class="no-lazyload"/>
-                </div>
-                <p>Przechowywanie i karmienie</p>
-            </a>
-            <a href="<?php echo the_field('helpCategories_platnosci'); ?>" class="helpCategories__cat">
-                <div class="icon">
-                    <img data-original="<?php echo get_template_directory_uri() . '/images/help/catIco_05.svg'; ?>" class="no-lazyload"/>
-                </div>
-                <p>Płatności</p>
-            </a>
-            <a href="<?php echo the_field('helpCategories_plan'); ?>" class="helpCategories__cat">
-                <div class="icon">
-                    <img data-original="<?php echo get_template_directory_uri() . '/images/help/catIco_06.svg'; ?>" class="no-lazyload"/>
-                </div>
-                <p>Zarządzanie planem żywienia</p>
-            </a>
+            <?php endwhile; ?>
         </div>
     </section>
 

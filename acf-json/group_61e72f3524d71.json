@@ -92,100 +92,84 @@
             "maxlength": ""
         },
         {
-            "key": "field_622f790b696a5",
-            "label": "Dostawy",
-            "name": "helpCategories_dostawy",
-            "type": "url",
+            "key": "field_6336fdcc0bfeb",
+            "label": "Kafelki",
+            "name": "helpCategories",
+            "type": "repeater",
             "instructions": "",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "33",
+                "width": "",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
-            "key": "field_622f793d696a6",
-            "label": "Nasze karmy",
-            "name": "helpCategories_naszekarmy",
-            "type": "url",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
-            "key": "field_622f7947696a7",
-            "label": "Program darmowa karma",
-            "name": "helpCategories_darmowakarma",
-            "type": "url",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
-            "key": "field_622f7955696a8",
-            "label": "Przechowywanie i karmienie",
-            "name": "helpCategories_przechowywanie",
-            "type": "url",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
-            "key": "field_622f795d696a9",
-            "label": "Płatności",
-            "name": "helpCategories_platnosci",
-            "type": "url",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
-            "key": "field_622f796a696ab",
-            "label": "Zarządzanie planem żywienia",
-            "name": "helpCategories_plan",
-            "type": "url",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
+            "collapsed": "",
+            "min": 6,
+            "max": 6,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_6336fe070bfee",
+                    "label": "Ikona",
+                    "name": "helpCategories_icon",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_6336fde90bfec",
+                    "label": "Tytuł",
+                    "name": "helpCategories_title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_6336fdfb0bfed",
+                    "label": "URL",
+                    "name": "helpCategories_url",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                }
+            ]
         },
         {
             "key": "field_61e7324326af0",
@@ -340,7 +324,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1647278457
+    "modified": 1664548579
 }
