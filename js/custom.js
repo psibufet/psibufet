@@ -1011,35 +1011,35 @@ $(document).ready(function(){
                     /**
                      * OLD
                      */
-                    if(amount == amount2){
-                        discountamount = amount;
-                        $('#flavourPrice').addClass('discount-active');
+                    // if(amount == amount2){
+                    //     discountamount = amount;
+                    //     $('#flavourPrice').addClass('discount-active');
 
-                        let currentprice = $('#flavourPrice').find('.cp-x').data('x');
-                        let discount = currentprice * amount / 100;
+                    //     let currentprice = $('#flavourPrice').find('.cp-x').data('x');
+                    //     let discount = currentprice * amount / 100;
                     
-                        let price_full = currentprice - discount;
-                        let price = price_full.toFixed(2).split('.');
+                    //     let price_full = currentprice - discount;
+                    //     let price = price_full.toFixed(2).split('.');
 
-                        // Insert discount info
-                        $('#flavourPrice').prepend('<div class="discount"><span class="regular-price" data-z="' + price[0] + '.' + price[1] + '"><span class="value">5<small>90</small></span>ZŁ</span> / dzień</div>')
+                    //     // Insert discount info
+                    //     $('#flavourPrice').prepend('<div class="discount"><span class="regular-price" data-z="' + price[0] + '.' + price[1] + '"><span class="value">5<small>90</small></span>ZŁ</span> / dzień</div>')
 
-                        // $('#flavourPrice').find('.cp-x').attr('data-price', price[0] + '.' + price[1]);
-                        $('#flavourPrice').find('.cp-x').html('<span class="value">' + price[0] + '<small>' + price[1] + '</small></span>ZŁ ');
+                    //     // $('#flavourPrice').find('.cp-x').attr('data-price', price[0] + '.' + price[1]);
+                    //     $('#flavourPrice').find('.cp-x').html('<span class="value">' + price[0] + '<small>' + price[1] + '</small></span>ZŁ ');
 
-                        // Add data
-                        // $('.microdata').find('span[itemprop="offers"]').append('<meta itemprop="sale-price" content="' + price[0] + '.' + price[1] + '">');
-                        $('.microdata').find('span[itemprop="price"]').attr('content', price[0] + '.' + price[1]);
-                    }
+                    //     // Add data
+                    //     // $('.microdata').find('span[itemprop="offers"]').append('<meta itemprop="sale-price" content="' + price[0] + '.' + price[1] + '">');
+                    //     $('.microdata').find('span[itemprop="price"]').attr('content', price[0] + '.' + price[1]);
+                    // }
 
                     /**
                      * NEW
                      */
-                    // if(amount == amount2){
-                    //     discountamount = amount;
-                    //     $('#flavourPrice').addClass('discount-active');
-                    //     $('#flavourPrice').prepend('<div class="discount"><span class="regular-price"><span class="value" itemprop="price">5<small>90</small></span>ZŁ</span> / dzień</div>');
-                    // }
+                    if(amount == amount2){
+                        discountamount = amount;
+                        $('#flavourPrice').addClass('discount-active');
+                        $('#flavourPrice').prepend('<div class="discount"><span class="regular-price"><span class="value" itemprop="price">5<small>90</small></span>ZŁ</span> / dzień</div>');
+                    }
                  });
             }
         });
@@ -1047,7 +1047,7 @@ $(document).ready(function(){
 
     /* Select insert values */
     $('.select__option').on('click', function(){
-        var value = $(this).attr('data-value');
+        var gram = $(this).attr('data-value');
         var price_zl = $(this).attr('data-price-zl');
         var price_gr = $(this).attr('data-price-gr');
 
@@ -1059,34 +1059,54 @@ $(document).ready(function(){
             /**
              * OLD
              */
-            let price_zl_fixed = parseFloat(price_zl),
-                price_gr_fixed = parseFloat('0.' + price_gr),
-                price = parseFloat(price_zl) + parseFloat('0.' + price_gr),
-                discount = price * discountamount / 100,
-                price_full = price - discount,
-                price_discount = price_full.toFixed(2).split('.'),
-                contentPrice_regular = $('#flavourPrice').find('.regular-price span.value');
-                contentPrice_discount = $('#flavourPrice').find('.cp-x span.value');
-
-            contentPrice_regular.html(price_zl + '<small>' + price_gr + '</small>');
-            contentPrice_discount.html(price_discount[0] + '<small>' + price_discount[1] + '</small>');
-         
-            $('.microdata').find('span[itemprop="price"]').attr('content', price_discount[0] + '.' + price_discount[1]);
-
-            /**
-             * NEW
-             */
             // let price_zl_fixed = parseFloat(price_zl),
             //     price_gr_fixed = parseFloat('0.' + price_gr),
             //     price = parseFloat(price_zl) + parseFloat('0.' + price_gr),
             //     discount = price * discountamount / 100,
-            //     price_full = price + discount,
-            //     price_discount = price_full.toFixed(2).split('.');
+            //     price_full = price - discount,
+            //     price_discount = price_full.toFixed(2).split('.'),
+            //     contentPrice_regular = $('#flavourPrice').find('.regular-price span.value');
+            //     contentPrice_discount = $('#flavourPrice').find('.cp-x span.value');
+
+            // contentPrice_regular.html(price_zl + '<small>' + price_gr + '</small>');
+            // contentPrice_discount.html(price_discount[0] + '<small>' + price_discount[1] + '</small>');
+         
+            // $('.microdata').find('span[itemprop="price"]').attr('content', price_discount[0] + '.' + price_discount[1]);
+
+            /**
+             * NEW
+             */
+            let price_zl_fixed = parseFloat(price_zl),
+                price_gr_fixed = parseFloat('0.' + price_gr),
+                price = parseFloat(price_zl) + parseFloat('0.' + price_gr),
+                discount = price * discountamount / 100,
+                price_full = price + discount,
+                normalprices = {
+                    '125': 5.90,
+                    '200': 7.50,
+                    '300': 9.50,
+                    '400': 10.90,
+                    '500': 12.90,
+                    '600': 13.90,
+                    '800': 17.90,
+                    '1000': 20.50,
+                    '1200': 21.90,
+                },
+                contentPrice_regular = $('#flavourPrice').find('.regular-price span.value');
+                contentPrice_discount = $('#flavourPrice').find('.cp-x span.value');
+            
+            $.each(normalprices, function(key, value){
+                if(gram == key){
+                    var price_discount = value.toFixed(2).split('.');
+                    contentPrice_regular.html(price_discount[0] + '<small>' + price_discount[1] + '</small>');
+                }
+            });
 
             console.log(discountamount);
             console.log(price);
             console.log(discount);
-            console.log(price_discount);
+
+            contentPrice_discount.html(price_zl + '<small>' + price_gr + '</small>');
         }else{
             var contentPrice_zl = $('#flavourPrice').find('span.value');
             contentPrice_zl.html(price_zl + '<small>' + price_gr + '</small>');
@@ -1098,7 +1118,7 @@ $(document).ready(function(){
 
         // Set new gramm
         var contentValue = $('#flavourValue').find('span');
-        contentValue.text(value);
+        contentValue.text(gram);
 
         closeSelectDropdown();
     });
