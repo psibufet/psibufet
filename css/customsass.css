@@ -21922,6 +21922,9 @@ body a:hover {
   height: 100%;
   object-fit: contain;
 }
+.pbQuestions__images--mobile {
+  display: none;
+}
 .pbQuestions--help {
   padding: 0 !important;
   background-color: #fff;
@@ -21948,13 +21951,14 @@ body a:hover {
     margin: 0 auto;
   }
   .pbQuestions__images {
+    display: none;
     flex-wrap: wrap;
   }
   .pbQuestions__images .image {
     width: 33.3333333333%;
   }
-  .pbQuestions__images .image:nth-child(3n+2) {
-    display: none;
+  .pbQuestions__images--mobile {
+    display: flex;
   }
 }
 /**

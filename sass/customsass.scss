@@ -717,6 +717,10 @@ body{
                 object-fit: contain;
             }
         }
+
+        &--mobile{
+            display: none;
+        }
     }
 
     &--help{
@@ -746,14 +750,15 @@ body{
             }
         }
         &__images{
+            display: none;
             flex-wrap: wrap;
 
             .image{
                 width: calc(100% / 3);
+            }
 
-                &:nth-child(3n+2){
-                    display: none;
-                }
+            &--mobile{
+                display: flex;
             }
         }
     }

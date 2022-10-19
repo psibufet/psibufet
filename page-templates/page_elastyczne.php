@@ -271,6 +271,26 @@ get_header(); ?>
                     <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_09.png'; ?>"/>
                 </div>
             </div>
+            <div class="pbQuestions__images pbQuestions__images--mobile">
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_08.png'; ?>"/>
+                </div>
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_05.png'; ?>"/>
+                </div>
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_06.png'; ?>"/>
+                </div>
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_07.png'; ?>"/>
+                </div>
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_09.png'; ?>"/>
+                </div>
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri() . '/images/questionSection/quesec_04.png'; ?>"/>
+                </div>
+            </div>
         </div>
     </section>
     
