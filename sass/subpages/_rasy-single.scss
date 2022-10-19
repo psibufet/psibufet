@@ -47,6 +47,7 @@
             font-weight: 400;
             font-family: 'Bebas Neue', sans-serif;
             color: #fff;
+            max-width: 400px;
             margin: 0;
             text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
         }
@@ -64,7 +65,8 @@
             h1{
                 font-size: 42px;
                 line-height: 50px;
-                margin: 0;
+                margin: 0 auto;
+                max-width: 100%;
                 text-align: center;
             }
         }
