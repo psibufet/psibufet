@@ -192,6 +192,17 @@
         }
         &__menu{
             width: calc(100% - 230px);
+
+            .payment{
+                &__list{
+                    p{
+                        margin: 0 0 10px;
+                    }
+                    &>div{
+                        margin-bottom: 10px;
+                    }
+                }
+            }
         }
         .siteInfo{
             &__wrap{
@@ -260,10 +271,15 @@
 
                 p{
                     text-align: center;
+                    margin: 0 0 10px;
                 }
                 
                 &__list{
                     justify-content: center;
+
+                    &>div{
+                        margin-bottom: 0;
+                    }
                 }
             }
         }
