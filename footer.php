@@ -58,7 +58,7 @@
                     <div class="payment__list">
                         <div><img src="<?php echo get_template_directory_uri() . '/images/footer/mastercard.svg'; ?>"/></div>
                         <div><img src="<?php echo get_template_directory_uri() . '/images/footer/visa.svg'; ?>"/></div>
-			<div><img src="<?php echo get_template_directory_uri() . '/images/footer/applepay.svg'; ?>"/></div>
+			            <div><img src="<?php echo get_template_directory_uri() . '/images/footer/applepay.svg'; ?>"/></div>
                     </div>
                 </div>
             </div>
