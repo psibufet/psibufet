@@ -98,7 +98,7 @@ get_header(); ?>
                     <h3>Kiedy otrzymam kolejną dostawę?</h3>
                 </div>
                 <div class="content">
-                    <p>Twoja druga dostawa jest zaplanowana na <span id="deliveryDate"></span>. Dostaniesz przypomnienie o niej na 4 dni przed tym terminem. Jeśli chcesz zmienić datę dostawy, możesz to zrobić, logując się do Panelu Klienta. Pamiętaj, że wszelkich zmian możesz dokonać na dwa dni przed planowanym terminem dostawy, do godziny 15:00.</p>
+                    <p>Twoja druga paczka dotrze do Was po 14 dniach . Dostaniesz przypomnienie o niej na 4 dni przed tym terminem. Jeśli chcesz zmienić datę dostawy, możesz to zrobić, logując się do Panelu Klienta. Pamiętaj, że wszelkich zmian możesz dokonać na dwa dni przed planowanym terminem dostawy, do godziny 15:00.</p>
                 </div>
             </div>
         </div>
