@@ -42,7 +42,7 @@ get_header(); ?>
                 <p>(Uwaga! Autoryzacja może być na kwotę 0 PLN). Najczęstszymi metodami autoryzacji są: kod sms, potwierdzenie w aplikacji mobilnej lub pin karty.</p>
             </div>
             <div class="failedContent__cta">
-                <a href="https://panel.psibufet.pl/platnosci" class="btn"><span>Spróbuj ponownie</span></a>
+                <a href="https://panel.psibufet.pl/platnosci?open-card" class="btn"><span>Podepnij kartę</span></a>
             </div>
         </div>
     </section>
