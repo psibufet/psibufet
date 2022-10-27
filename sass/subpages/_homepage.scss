@@ -4825,9 +4825,7 @@ body.admin-bar{
  *  Home about
  */
 .homeAbout{
-    background-image: url('/wp-content/themes/psibufet/images/frontpage/homeabout_bg.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #fff;
     padding: 40px 0;
 
     &__wrap{
@@ -4859,7 +4857,7 @@ body.admin-bar{
         p{
             font-size: 20px;
             line-height: 26px;
-            font-weight: bold;
+            font-weight: normal;
             color: #000;
             text-align: center;
             margin: 0;
