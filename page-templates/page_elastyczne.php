@@ -191,7 +191,7 @@ get_header(); ?>
         </div>
     </section>
 
-    <?php if(!current_user_can('administrator')): ?>
+    <?php if(current_user_can('administrator')): ?>
     <div class="trigger">
         <p data-name="changeerror">Błąd zmiany planu</p>
         <p data-name="changesuccess">Sukces zmiany planu</p>
