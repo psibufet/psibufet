@@ -109,19 +109,26 @@
                 setTimeout(function(){
                     $('.infoPopup').addClass('infoPopup--active');
                 }, 300);
-            }else if(open == false){
+            }else if(open == false && type !== 'all'){
                 $('body').removeClass('noscroll');
                 $('.infoPopup').removeClass('infoPopup--active');
                 $('.elasticPopup--' + type).removeClass('elasticPopup--active');
                 setTimeout(function(){
                     $('.infoPopup').removeClass('infoPopup--ready');
                 }, 300);
+            }else if(open == false && type == 'all'){
+                $('body').removeClass('noscroll');
+                $('.infoPopup').removeClass('infoPopup--active');
+                setTimeout(function(){
+                    $('.elasticPopup').removeClass('elasticPopup--active');
+                    $('.infoPopup').removeClass('infoPopup--ready');
+                }, 300);
             }
         }
     
         // Inner popup close
-        $('#closeInfoPopup').on('click', function(){
-            openPopup(false);
+        $('.closeInfoPopup').on('click', function(){
+            openPopup(false, 'all');
         });
     
         // Outer click popup close
@@ -129,7 +136,7 @@
             var container = $('.infoPopup__wrap');
             if (!container.is(e.target) && container.has(e.target).length === 0){
                 if($('.infoPopup').hasClass('infoPopup--active')){
-                    openPopup(false);
+                    openPopup(false, 'all');
                 }
             }
         });
@@ -236,6 +243,56 @@
                     });
                 }
             });
+        });
+    });
+
+
+    /**
+     * Plan popups
+     */
+    $(document).ready(function(){
+        $('.trigger p').on('click', function(){
+            var name = $(this).data('name');
+
+            if(name == 'popupplan'){
+                $('body').addClass('noscroll');
+                $('.planPopup').addClass('planPopup--ready');
+                setTimeout(function(){
+                    $('.planPopup').addClass('planPopup--active');
+                }, 300);
+            }else{
+                console.log(name);
+                $('body').addClass('noscroll');
+                $('.infoPopup').addClass('infoPopup--ready');
+                $('.elasticPopup--' + name).addClass('elasticPopup--active');
+                setTimeout(function(){
+                    $('.infoPopup').addClass('infoPopup--active');
+                }, 300);
+            }
+        });
+
+
+        // Close modal
+        $('.planPopup__close').on('click', function(){
+            $('body').removeClass('noscroll');
+            $('.planPopup').removeClass('planPopup--active');
+            setTimeout(function(){
+                $('.planPopup').removeClass('planPopup--ready');
+            }, 300);
+        });
+
+        // Outer click popup close
+        $(document).mouseup(function(e){
+            var container = $('.planPopup__wrap');
+            if (!container.is(e.target) && container.has(e.target).length === 0){
+                if($('.planPopup').hasClass('planPopup--active')){
+                    $('body').removeClass('noscroll');
+                    $('.planPopup').removeClass('planPopup--active');
+                    setTimeout(function(){
+                        $('.planPopup').removeClass('planPopup--ready');
+                    }, 300);
+                }
+            }
         });
     });
 }(jQuery));

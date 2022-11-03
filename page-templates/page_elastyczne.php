@@ -191,6 +191,14 @@ get_header(); ?>
         </div>
     </section>
 
+    <?php if(!current_user_can('administrator')): ?>
+    <div class="trigger">
+        <p data-name="changeerror">Błąd zmiany planu</p>
+        <p data-name="changesuccess">Sukces zmiany planu</p>
+        <p data-name="popupplan">Popup - mój plan</p>
+    </div>
+    <?php endif; ?>
+
     <section class="elasticFaq">
         <div class="elasticFaq__wrap container">
             <h2>Najczęściej zadawane pytania</h2>
@@ -309,8 +317,79 @@ get_header(); ?>
                 <h2>Super, udało się!</h2>
                 <p>Dziękujemy za wybranie nowego planu. Nasz zespół Customer Care zmieni Twój plan tak szybko, jak to możliwe. Potwierdzenie zmiany otrzymasz w wiadomości mailowej.</p>
                 <img src="<?php echo get_template_directory_uri() . '/images/icons/email_vec_ico.svg'; ?>"/>
-                <p id="closeInfoPopup" class="btn btn--center btn--clear"><span>Zamknij</span></p>
+                <p class="closeInfoPopup btn btn--center btn--clear"><span>Zamknij</span></p>
             </div>
+            <div class="elasticPopup elasticPopup--changeerror">
+                <div class="closeInfoPopup infoPopup__close"></div>
+                <h2>Coś poszło nie tak!</h2>
+                <img src="<?php echo get_template_directory_uri() . '/images/elastyczne_plany/error_dog.svg'; ?>"/>
+                <p>Napisz do nas wiadomość na adres<br/>
+                <b>kontakt@psibufet.pl</b>, aby włączyć nowy plan.</p>
+                <a href="mailto:kontakt@psibufet.pl" class="btn btn--center"><span>Wyślij wiadomość</span></a>
+                <p class="closeInfoPopup btn btn--center btn--clear btn--back"><span>Wróć</span></p>
+            </div>
+            <div class="elasticPopup elasticPopup--changesuccess">
+                <div class="closeInfoPopup infoPopup__close"></div>
+                <h2>Włączyliśmy nowy plan 400g!</h2>
+                <img src="<?php echo get_template_directory_uri() . '/images/elastyczne_plany/change_success.svg'; ?>"/>
+                <p>Data dostawy PsiBufet w nowym planie:</p>
+                <h3>DD.MM.RRRR</h3>
+                <a href="mailto:kontakt@psibufet.pl" class="btn btn--center"><span>Zobacz plan</span></a>
+                <p class="closeInfoPopup btn btn--center btn--clear btn--back"><span>Wróć</span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="planPopup">
+        <div class="planPopup__wrap">
+            <div class="planPopup__close"></div>
+            <article class="planBox" data-plan="plan_02" data-name="Większa oszczędność" data-portions="loading" data-delivery="loading" data-dayprice="loading" data-total="loading">
+                <div class="planBox__heading" style="background-color: #129d6f">
+                    <h3>Większa oszczędność</h3>
+                    <p>Niższa cena | Rzadsze dostawy | Większe saszetki</p>
+                </div>
+                <div class="planBox__price">
+                    <p class="price price--discount">
+                        <span class="value">0</span>
+                        <span>ZŁ</span>
+                        / dzień
+                    </p>
+                    <p class="price">
+                        <span class="value">0</span>
+                        <span>ZŁ</span>
+                        / dzień
+                    </p>
+                    <p class="promotion">Oszczędzisz aż
+                        <span class="value">0</span>%
+                    </p>
+                </div>
+                <div class="planBox__info">
+                    <div class="pos" data-name="planBox_list_dayportion">
+                        <p><b>Porcja dzienna:</b> <span>Wczytywanie</span></p>
+                    </div>
+                    <div class="pos" data-name="planBox_list_gram">
+                        <p><b>Gramatura saszetek:</b> <span>Wczytywanie</span></p>
+                    </div>
+                    <div class="pos" data-name="planBox_list_portioning">
+                        <p><b>Porcjowanie:</b> <span>Wczytywanie</span></p>
+                    </div>
+                    <div class="pos" data-name="planBox_list_count">
+                        <p><b>Liczba saszetek:</b> <span>Wczytywanie</span></p>
+                    </div>
+                    <div class="pos" data-name="planBox_list_delivery">
+                        <p><b>Wysyłka:</b> <span>Wczytywanie</span></p>
+                    </div>
+                </div>
+                <div class="planBox__summary">
+                    <h4>Wartość zamówienia:</h4>
+                    <p class="price price--total">
+                        <span class="value">0</span>
+                        <span>zł</span>
+                    </p>
+                    <button type="button" class="btn btn--button btn--green btn--center" data-plan="plan_02"><span>Potwierdź plan</span></button>
+                    <p class="closeInfoPopup btn btn--center btn--clear btn--back"><span>Anuluj</span></p>
+                </div>
+            </article>
         </div>
     </div>
 </main>

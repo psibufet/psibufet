@@ -1027,7 +1027,7 @@
     }
 
     &__wrap{
-        width: 100%;
+        // width: 100%;
         max-width: 560px;
         background-color: #fff;
         border: 1px solid rgba(0, 0, 0, .2);
@@ -1035,11 +1035,39 @@
         opacity: 0;
         transition: ease .3s;
     }
+    &__close{
+        width: 20px;
+        height: 17px;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        cursor: pointer;
+        transition: ease .3s;
+        z-index: 3;
+
+        &:hover{
+            &:after{
+                transform: rotate(-15deg);
+            }
+        }
+
+        &:after{
+            content: '';
+            background-image: url('/wp-content/themes/psibufet/images/icons/close_ico.svg');
+            background-size: 20px;
+            width: 20px;
+            height: 17px;
+            display: block;
+            transition: ease .3s;
+        }
+    }
 
     .elasticPopup{
+        width: 100%;
         display: none;
         padding: 34px 40px 40px;
         transition: ease .3s;
+        position: relative;
 
         &--loading{
             pointer-events: none;
@@ -1103,6 +1131,604 @@
                 align-items: center;
                 justify-content: center;
             }
+        }
+
+        &--changeerror,
+        &--changesuccess{
+            padding: 50px 40px 40px;
+
+            &>p{
+                font-size: 14px;
+                line-height: 16px;
+                text-align: center;
+            }
+            h3{
+                font-size: 35px;
+                line-height: 42px;
+                font-weight: 400;
+                font-family: 'Bebas Neue', sans-serif;
+                color: #000;
+                text-align: center;
+                margin: 0 0 20px;
+            }
+            .btn{
+                height: 40px;
+                line-height: 40px;
+                min-width: 320px;
+
+                &:not(.btn--clear){
+                    margin: 0 auto 20px !important;
+
+                    span{
+                        font-size: 14px;
+
+                        &:after{
+                            background-size: 7px;
+                            width: 7px;
+                            height: 10px;
+                        }
+                    }
+                }
+                &--back{
+                    span{
+                        &:after{
+                            transform: translate(0, -50%) rotate(-180deg) !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 575px){
+    .infoPopup{
+        &__wrap{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .elasticPopup{
+            padding: 34px 20px 40px;
+
+            &--changeerror,
+            &--changesuccess{
+                padding: 50px 20px 40px;
+
+                h2{
+                    font-size: 28px;
+                    line-height: 34px;
+                }
+                h3{
+                    font-size: 28px;
+                    line-height: 34px;
+                }
+                .btn{
+                    min-width: 0;
+                    max-width: 320px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.planPopup{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .3);
+    z-index: 9999;
+    transition: ease .3s;
+
+    &--ready{
+        display: flex;
+    }
+    &--active{
+        .planPopup__wrap{
+            opacity: 1;
+        }
+    }
+
+    &__wrap{
+        width: 100%;
+        max-width: 460px;
+        background-color: #fff;
+        // border: 1px solid rgba(0, 0, 0, .2);
+        box-shadow: 4px 4px 0px rgba(0, 0, 0, .1);
+        max-height: calc(100vh - 100px);
+        overflow: scroll;
+        opacity: 0;
+        position: relative;
+        transition: ease .3s;
+    }
+    &__close{
+        width: 20px;
+        height: 17px;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        cursor: pointer;
+        filter: invert(1);
+        transition: ease .3s;
+        z-index: 3;
+
+        &:hover{
+            &:after{
+                transform: rotate(-15deg);
+            }
+        }
+
+        &:after{
+            content: '';
+            background-image: url('/wp-content/themes/psibufet/images/icons/close_ico.svg');
+            background-size: 20px;
+            width: 20px;
+            height: 17px;
+            display: block;
+            transition: ease .3s;
+        }
+    }
+    .planBox{
+        width: 100%;
+        max-width: 460px;
+        background-color: #fff;
+        margin: 0 20px;
+
+        &:first-of-type{
+            margin-left: 0;
+        }
+        &:last-of-type{
+            margin-right: 0;
+        }
+
+        &__heading{
+            background-color: #B3B2B1;
+            padding: 24px 4px 20px;
+
+            h3{
+                font-size: 36px;
+                line-height: 43px;
+                font-weight: 400;
+                font-family: 'Bebas Neue', sans-serif;
+                color: #fff;
+                margin: 0 0 5px;
+                text-align: center;
+            }
+            p{
+                font-size: 16px;
+                line-height: 19px;
+                color: #fff;
+                text-align: center;
+                margin: 0;
+            }
+        }
+        &__price{
+            max-width: 380px;
+            margin: 0 auto;
+            border-bottom: 1px solid rgba(0, 0, 0, .2);
+            padding: 28px 0 20px;
+
+            .price{
+                font-size: 28px;
+                line-height: 36px;
+                font-weight: 400;
+                color: #000;
+                font-family: 'Bebas Neue', sans-serif;
+                text-align: center;
+                margin: 0;
+
+                span{
+                    font-size: 48px;
+                    line-height: inherit;
+                    position: relative;
+
+                    &.value{
+                        padding-right: 27px;
+                    }
+
+                    small{
+                        font-size: 28px;
+                        line-height: inherit;
+                        position: absolute;
+                        top: 3px;
+                        right: 3px;
+                    }
+                }
+                &--discount{
+                    font-size: 16px;
+                    line-height: 19px;
+                    margin: 0 auto 15px;
+                    color: #808080;
+                    position: relative;
+                    max-width: fit-content;
+                    max-width: -moz-max-content;
+                    max-width: -webkit-fit-content;
+                    padding: 0 10px;
+
+                    &:after{
+                        content: '';
+                        width: 100%;
+                        height: 2px;
+                        background-color: #808080;
+                        position: absolute;
+                        top: 50%;
+                        transform: translate(0, -50%);
+                        left: 0;
+                    }
+
+                    span{
+                        font-size: 24px;
+
+                        &.value{
+                            padding-right: 17px;
+                        }
+                        small{
+                            font-size: 16px;
+                            top: 2px;
+                        }
+                    }
+                }
+            }
+            .promotion{
+                font-size: 32px;
+                line-height: 36px;
+                font-weight: 400;
+                letter-spacing: .2px;
+                font-family: 'Bebas Neue', sans-serif;
+                text-transform: uppercase;
+                color: $greencolor;
+                text-align: center;
+                margin: 10px 0 0;
+
+                .value{
+                    font-size: 40px;
+                }
+            }
+        }
+        &__apetyt{
+            background-color: #4769B2;
+            width: 100%;
+            max-width: 320px;
+            padding: 4px 10px;
+            margin: 0 auto;
+            position: relative;
+            top: -1px;
+            display: none;
+
+            &--active{
+                display: block;
+            }
+
+            p{
+                font-size: 16px;
+                line-height: 1.3;
+                color: #fff;
+                font-weight: 600;
+                margin: 0;
+                text-align: center;
+            }
+        }
+        &__info{
+            max-width: 380px;
+            margin: 0 auto;
+            padding: 21px 30px;
+            border-bottom: 1px solid rgba(0, 0, 0, .2);
+
+            .pos{
+                width: 100%;
+                margin: 0 0 11px;
+
+                &:last-of-type{
+                    margin: 0;
+                }
+
+                p{
+                    font-size: 28px;
+                    line-height: 37px;
+                    font-weight: 700;
+                    font-family: 'Bebas Neue Pro', sans-serif;
+                    color: #000;
+                    margin: 0;
+                    letter-spacing: .2px;
+
+                    b{
+                        font-weight: 400;
+                        font-family: 'Bebas Neue', sans-serif;
+                    }
+                }
+                &--gift{
+                    cursor: pointer;
+                    transition: ease .3s;
+
+                    &:hover{
+                        &>p{
+                            opacity: .7;
+                        }
+                    }
+
+                    p{
+                        color: $greencolor;
+                        transition: ease .3s;
+
+                        span{
+                            position: relative;
+
+                            &:after{
+                                content: '';
+                                background-image: url('/wp-content/themes/psibufet/images/icons/dropdown_arrow_black.svg');
+                                background-repeat: no-repeat;
+                                background-size: 24px;
+                                width: 24px;
+                                height: 24px;
+                                position: relative;
+                                display: inline-block;
+                                margin-left: 7px;
+                                top: 2px;
+                                transition: ease .3s;
+                            }
+                        }
+                    }
+
+                    .content{
+                        display: none;
+
+                        p{
+                            font-size: 14px;
+                            line-height: 20px;
+                            font-weight: normal;
+                            font-family: 'Roboto', sans-serif;
+                            color: #000;
+                            text-align: justify;
+                            margin: 0;
+                        }
+                    }
+                }
+                &--active{
+                    p{
+                        span{
+                            &:after{
+                                transform: rotate(-180deg);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__summary{
+            width: 100%;
+            max-width: 320px;
+            margin: 0 auto;
+            padding: 24px 0 30px;
+
+            h4{
+                font-size: 32px;
+                line-height: 38px;
+                font-weight: 400;
+                font-family: 'Bebas Neue', sans-serif;
+                color: #000;
+                margin: 0 0 15px;
+                text-align: center;
+            }
+
+            &>.price{
+                font-size: 36px;
+                line-height: 1;
+                font-weight: 400;
+                color: #000;
+                font-family: 'Bebas Neue', sans-serif;
+                text-align: center;
+                margin: 0 0 25px;
+
+                span{
+                    font-size: inherit;
+                    line-height: inherit;
+                    position: relative;
+
+                    &.value{
+                        padding-right: 21px;
+                    }
+
+                    small{
+                        font-size: 24px;
+                        line-height: inherit;
+                        position: absolute;
+                        top: 5px;
+                        right: 0;
+                    }
+                }
+            }
+            .calc{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 0 20px;
+
+                p{
+                    font-size: 28px;
+                    line-height: 36px;
+                    font-weight: 700;
+                    font-family: 'Bebas Neue Pro', sans-serif;
+                    color: #000;
+                    text-align: center;
+                    margin: 0;
+
+                    &.price{
+
+                        .value{
+                            font-size: inherit;
+                            line-height: 1;
+                            padding-right: 15px;
+                            position: relative;
+
+                            small{
+                                font-size: 18px;
+                                line-height: inherit;
+                                position: absolute;
+                                top: 1px;
+                                right: 0;
+                            }
+                        }
+                    }
+                    &.days{
+                        padding-left: 6px;
+                    }
+                }
+            }
+            button{
+                height: 40px;
+                line-height: 40px;
+                min-width: unset;
+                max-width: 320px;
+                width: 100%;
+                margin: 0 auto 20px !important;
+
+                span{
+                    font-size: 14px;
+                    text-transform: none;
+
+                    &:after{
+                        background-size: 7px;
+                        width: 6px;
+                        height: 9px;
+                    }
+                }
+            }
+            .btn{
+                &--back{
+                    min-width: unset;
+                    max-width: 320px;
+                    width: 100%;
+                    height: 40px;
+                    line-height: 40px;
+
+                    span{
+                        &:after{
+                            transform: translate(0, -50%) rotate(-180deg) !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 575px){
+    .planPopup{
+        &__wrap{
+            max-height: calc(100vh - 50px);
+            max-width: 360px;
+
+            .planBox{
+                max-width: 360px;
+
+                &__heading{
+                    h2{
+                        font-size: 38px;
+                        line-height: 46px;
+                    }
+                    p{
+                        font-size: 14px;
+                        line-height: 16px;
+                    }
+                }
+                &__price{
+                    padding: 20px 0 17px;
+                    max-width: calc(100% - 40px);
+
+                    .price{
+                        font-size: 32px;
+
+                        span{
+                            &.value{
+                                font-size: 52px;
+                            }
+                            small{
+                                font-size: 28px;
+                            }
+                        }
+
+                        &--discount{
+                            font-size: 16px;
+                            margin: 0 auto 10px;
+
+                            span{
+                                &.value{
+                                    font-size: 24px;
+                                }
+                                small{
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+                    .promotion{
+                        font-size: 26px;
+                        line-height: 31px;
+                        
+                        .value{
+                            font-size: inherit;
+                        }
+                    }
+                }
+                &__info{
+                    padding: 13px 0;
+                    max-width: 250px;
+                    border-bottom: 0;
+
+                    .pos{
+                        margin: 0 0 8px;
+
+                        p{
+                            font-size: 22px;
+                            line-height: 26px;
+                        }
+                    }
+                }
+                &__summary{
+                    border-top: 1px solid rgba(0, 0, 0, 0.2);
+                    padding: 12px 20px 32px;
+
+                    h4{
+                        font-size: 26px;
+                        line-height: 32px;
+                        margin: 0 0 8px;
+                    }
+                    .price{
+                        font-size: 26px;
+                        line-height: 32px;
+                        margin: 0 0 12px;
+
+                        span{
+                            &.value{
+                                padding-right: 16px;
+
+                                small{
+                                    font-size: 18px;
+                                    line-height: 1;
+                                    top: 3px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.trigger{
+    p{
+        text-align: center;
+        cursor: pointer;
+
+        &:hover{
+            opacity: .7;
         }
     }
 }
