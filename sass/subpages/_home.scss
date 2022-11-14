@@ -107,6 +107,14 @@
         }
         &__wrap{
             max-width: 520px;
+
+            .usp{
+                max-width: 170px;
+    
+                p{
+                    font-size: 16px;
+                    line-height: 21px;
+                }
         }
     }
 }
@@ -131,10 +139,10 @@
             }
         }
         &__wrap{
-            max-width: 340px;
+            max-width: 380px;
 
             .usp{
-                max-width: 120px;
+                max-width: 140px;
 
                 &__icon{
                     max-width: 92px;
