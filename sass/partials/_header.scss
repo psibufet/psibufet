@@ -257,6 +257,7 @@ body.promocode-blackweek{
         }
     }
 }
+
 .siteHeader{
     background-color: #fff;
     width: 100%;
@@ -557,6 +558,13 @@ body.promocode-blackweek{
         .siteHeader{
             .mobileNav{
                 top: 32px;
+            }
+        }
+    }
+    body.promocode-agricole{
+        .siteHeader{
+            &--scrolled{
+                top: -60px !important;
             }
         }
     }

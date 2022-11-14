@@ -115,8 +115,11 @@ function promobar(dataCode, dataAmount, dataAmount2, dataType, dataPurpose){
 	}, 50);
 };
 
+/**
+ * Blackweek promobar 
+ */
 function blackweekBar(dataCode, dataAmount, dataType){
-	console.log('blackweek');
+	console.log('[Promobar] Blackweek promobar active');
 	var code = dataCode;
     var type = dataType;
     var amount = dataAmount;
@@ -141,6 +144,37 @@ function blackweekBar(dataCode, dataAmount, dataType){
 	// Set header clone height
 	headerClone();
 }
+
+/**
+ * Blackweek promobar 
+ */
+function agricoleBar(dataCode, dataAmount, dataType){
+	console.log('[Promobar] Credit Agricole promobar active');
+	var code = dataCode;
+    var type = dataType;
+    var amount = dataAmount;
+
+	$('body').addClass('promocode-agricole');
+	$('.menu_dir a').addClass('dir');
+	$('.menu-item a').addClass('dir');
+	$('#agricole').addClass('agricole--active');
+
+	setTimeout(function(){
+		$('.dir').each(function () {
+			var $this = $(this);
+			var _href = $this.attr("href");
+			if(typeof type !== 'undefined' && typeof amount !== 'undefined'){
+				$this.attr("href", _href + '?code=' + code + '&amount=' + amount + '&type=' + type);
+			}else{
+				$this.attr("href", _href + '?code=' + code);
+			}
+		});
+	}, 50);
+
+	// Set header clone height
+	headerClone();
+}
+
 
 $(document).ready(function(){
 	// Set header clone height
@@ -172,6 +206,7 @@ $(document).ready(function(){
                 $('.menu_dir a').removeClass('dir');
                 $('#promocode').removeClass('active').remove();
                 $('#blackweek').removeClass('blackweek--active').remove();
+                $('#agricole').removeClass('agricole--active').remove();
                 console.log('Error while code loading :(');
             },
             success: function(){
@@ -179,16 +214,21 @@ $(document).ready(function(){
                     let amount = data.amount,
                         amount2 = data.amount2,
                         type = data.type,
-                        purpose = data.purpose,
-                        test = data.purpose;
+                        purpose = data.purpose;
 
-                    if(test == 'blackweek'){
+                    if(purpose == 'blackweek'){
                         blackweekBar(code, amount, type);
                         $('#promocode').remove();
-                    }else{
-                        promobar(code, amount, amount2, type, purpose);
+						$('#agricole').remove();
+                    }else if(code == 'korzysci30'){
+						agricoleBar(code, amount, type);
+						$('#promocode').remove();
                         $('#blackweek').remove();
-                    }	
+                    }else{
+						promobar(code, amount, amount2, type, purpose);
+                        $('#blackweek').remove();
+                        $('#agricole').remove();
+					}
                 });
             }
         });

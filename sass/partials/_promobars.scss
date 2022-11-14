@@ -1,0 +1,306 @@
+/**
+ *  Promobar Credit Agricole
+ */
+.agricole{
+    width: 100%;
+    height: 62px;
+    display: none;
+    position: relative;
+    z-index: -1;
+    background-color: #fff;
+
+    &:hover{
+        .agricole__wrap{
+            opacity: .9;
+        }
+    }
+
+    &--active{
+        display: block !important;
+    }
+
+    &__wrap{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: inherit;
+        transition: ease .3s;
+    }
+
+    &__blue{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        max-width: calc(100% - 135px);
+        width: 100%;
+        background-color: #4EACB6;
+        height: inherit;
+        padding-right: 5px;
+        position: relative;
+
+        &:before{
+            content: '';
+            width: 17px;
+            height: inherit;
+            background-color: inherit;
+            transform: skew(-15deg, 0deg);
+            position: absolute;
+            right: -9px;
+            top: 0;
+        }
+
+        h3{
+            font-size: 32px;
+            line-height: 38px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: 300;
+            color: #fff;
+            text-align: right;
+            margin: 0;
+            position: relative;
+            white-space: nowrap;
+
+            .value{
+                font-size: 42px;
+            }
+        }
+    }
+    &__logo{
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: inherit;
+        width: 100%;
+        max-width: 270px;
+
+        img{
+            margin-top: -4px;
+        }
+    }
+    &__red{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        max-width: calc(100% - 135px);
+        width: 100%;
+        background-color: #E4032E;
+        height: inherit;
+        padding-left: 12px;
+        position: relative;
+
+        &:before{
+            content: '';
+            width: 10px;
+            height: inherit;
+            background-color: inherit;
+            transform: skew(-7deg, 0deg);
+            position: absolute;
+            left: -6px;
+            top: 0;
+        }
+
+        h3{
+            font-size: 32px;
+            line-height: 38px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: 300;
+            color: #fff;
+            text-align: left;
+            margin: 0;
+            text-decoration: underline;
+            position: relative;
+        }
+    }
+}
+@media (max-width: 1199px){
+    .agricole{
+        &__blue{
+            h3{
+                font-size: 28px;
+                line-height: 34px;
+
+                .value{
+                    font-size: 36px;
+                }
+            }
+        }
+        &__logo{
+            img{
+                max-width: 200px;
+            }
+        }
+        &__red{
+            h3{
+                font-size: 28px;
+                line-height: 34px;
+            }
+        }
+    }
+}
+@media (max-width: 991px){
+    .agricole{
+        height: 92px;
+
+        &__wrap{
+            flex-wrap: wrap;
+        }
+        &__blue{
+            max-width: 100%;
+            justify-content: center;
+            height: 46px;
+            padding-right: 0;
+
+            &:after{
+                display: none;
+            }
+        }
+        &__logo{
+            max-width: 55%;
+            height: 46px;
+            justify-content: flex-end;
+            padding-right: 20px;
+
+            img{
+                max-width: 160px;
+                margin-top: -3px;
+            }
+        }
+        &__red{
+            max-width: 45%;
+            height: 46px;
+            padding-left: 20px;
+        }
+    }
+}
+@media (max-width: 575px){
+    .agricole{
+        &__blue{
+            h3{
+                font-size: 25px;
+                line-height: 30px;
+                
+                .value{
+                    font-size: 34px;
+                    line-height: 40px;
+                }
+            }
+        }
+        &__logo{
+            img{
+                max-width: 150px;
+            }
+        }
+    }
+}
+
+/**
+ *  Promobar BLACK WEEK
+ */
+.blackweek{
+    width: 100%;
+    height: 120px;
+    display: none;
+    background-image: url('/wp-content/themes/psibufet/images/xmas/xmasbar_bg.svg');
+    background-repeat: repeat-x;
+    background-position: center 5px;
+    position: relative;
+    z-index: -1;
+    background-color: #119e6e;
+
+    &--active{
+        display: block !important;
+    }
+
+    &__wrap{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: inherit;
+    }
+    &__text{
+        h3{
+            font-size: 80px;
+            line-height: 1;
+            padding: 8px 0 0;
+            color: #fff;
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: 400;
+            margin: 0;
+        }
+        .btn{
+            display: none;
+        }
+    }
+    &__amount{
+        margin: 0 26px;
+
+        img{
+            width: 143px;
+            height: 143px;
+            position: relative;
+            top: 21px;
+        }
+    }
+    .btn{
+        margin: 0;
+        box-shadow: 4px 4px 0px #CA3729;
+    }
+}
+@media (max-width: 991px){
+    .blackweek{
+        height: 120px;
+
+        &__text{
+            h3{
+                font-size: 60px;
+            }
+        }
+        &__amount{
+            img{
+                width: 120px;
+                height: 120px;
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .blackweek{
+        height: 120px;
+        background-position: center -3px;
+
+        &__wrap{
+            justify-content: space-between;
+            padding: 0 10px;
+            max-width: 340px;
+        }
+        &__text{
+            width: calc(100% - 120px);
+            padding-bottom: 0;
+            text-align: center;
+
+            h3{
+                font-size: 38px;
+                padding: 0;
+                white-space: nowrap;
+                margin: 0 0 2px;
+            }
+            .btn{
+                display: inline-block;
+                min-width: 160px;
+            }
+        }
+        &__amount{
+            width: 120px;
+            text-align: right;
+            margin: 0;
+
+            img{
+                top: 10px;
+            }
+        }
+        .desktopbtn{
+            display: none;
+        }
+    }
+}

@@ -99,6 +99,7 @@
                 </div>
             </div>
             <?php include get_template_directory() . '/template-parts/_blackWeek.php'; ?>
+            <?php include get_template_directory() . '/template-parts/promobars/_agricole.php'; ?>
         </header><!-- #masthead -->
 
         <div id="content" class="page-wrap">
