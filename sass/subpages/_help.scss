@@ -508,6 +508,8 @@
                     }
                 }
                 &__content{
+                    max-width: calc(100% - 110px);
+                    
                     h3{
                         font-size: 21px;
                         line-height: 25px;
