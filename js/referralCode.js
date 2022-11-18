@@ -169,6 +169,9 @@ function agricoleBar(dataCode, dataAmount, dataType){
 				$this.attr("href", _href + '?code=' + code);
 			}
 		});
+		if(code == 'korzysci40'){
+			$('.agricole__blue').find('h3').html('<span class="value">-' + amount + '</span>% na pierwszą dostawę od');
+		}
 	}, 50);
 
 	// Set header clone height
@@ -220,7 +223,7 @@ $(document).ready(function(){
                         blackweekBar(code, amount, type);
                         $('#promocode').remove();
 						$('#agricole').remove();
-                    }else if(code == 'korzysci30'){
+                    }else if(code == 'korzysci30' || code == 'korzysci40'){
 						agricoleBar(code, amount, type);
 						$('#promocode').remove();
                         $('#blackweek').remove();
