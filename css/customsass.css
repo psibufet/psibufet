@@ -4030,6 +4030,9 @@ body.promocode-blackweek .siteHeader--promocode {
   text-align: center;
   margin: 0 0 40px;
 }
+.homeHeaderV3__content p br {
+  display: none;
+}
 .homeHeaderV3__content .tags {
   display: flex;
   align-items: center;
@@ -4135,8 +4138,11 @@ body.promocode-blackweek .siteHeader--promocode {
   .homeHeaderV3__content p {
     font-size: 20px;
     line-height: 24px;
-    max-width: 220px;
+    max-width: 250px;
     margin: 0 auto 30px;
+  }
+  .homeHeaderV3__content p br {
+    display: block;
   }
   .homeHeaderV3__content .tags {
     margin: 0;

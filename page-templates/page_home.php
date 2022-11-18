@@ -10,7 +10,7 @@ get_header(); ?>
         <div class="homeHeaderV3__wrap">
             <div class="homeHeaderV3__content">
                 <h2>Świeże spojrzenie na psie jedzenie</h2>
-                <p>Zdrowe i pyszne posiłki w cyklicznych dostawach</p>
+                <p>Zdrowe i pyszne posiłki <br/>w cyklicznych dostawach</p>
                 <a href="https://zamowienie.psibufet.pl/" class="btn btn--big btn--center dir"><span><?php the_field('front_header_cta') ?></span></a>
             </div>
         </div>

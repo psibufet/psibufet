@@ -643,6 +643,10 @@
             color: #000;
             text-align: center;
             margin: 0 0 40px;
+            
+            br{
+                display: none;
+            }
         }
         .tags{
             display: flex;
@@ -765,8 +769,12 @@
             p{
                 font-size: 20px;
                 line-height: 24px;
-                max-width: 220px;
+                max-width: 250px;
                 margin: 0 auto 30px;
+
+                br{
+                    display: block;
+                }
             }
             .tags{
                 margin: 0;
