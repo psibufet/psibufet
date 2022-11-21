@@ -1081,18 +1081,29 @@ $(document).ready(function(){
                 price = parseFloat(price_zl) + parseFloat('0.' + price_gr),
                 discount = price * discountamount / 100,
                 price_full = price + discount,
+                // normalprices = {
+                //     '125': 5.90,
+                //     '200': 7.50,
+                //     '300': 9.50,
+                //     '400': 10.90,
+                //     '500': 12.90,
+                //     '600': 13.90,
+                //     '800': 17.90,
+                //     '1000': 20.50,
+                //     '1200': 21.90,
+                // },
                 normalprices = {
-                    '125': 5.90,
-                    '200': 7.50,
-                    '300': 9.50,
-                    '400': 10.90,
-                    '500': 12.90,
-                    '600': 13.90,
-                    '800': 17.90,
-                    '1000': 20.50,
-                    '1200': 21.90,
+                    '125': 4.13,
+                    '200': 5.25,
+                    '300': 6.65,
+                    '400': 7.63,
+                    '500': 9.03,
+                    '600': 9.73,
+                    '800': 12.53,
+                    '1000': 14.35,
+                    '1200': 15.33,
                 },
-                contentPrice_regular = $('#flavourPrice').find('.regular-price span.value');
+                contentPrice_regular = $('#flavourPrice').find('.regular-price span.value'),
                 contentPrice_discount = $('#flavourPrice').find('.cp-x span.value');
             
             $.each(normalprices, function(key, value){
@@ -1101,6 +1112,7 @@ $(document).ready(function(){
                     contentPrice_regular.html(price_discount[0] + '<small>' + price_discount[1] + '</small>');
                 }
             });
+            
 
             console.log(discountamount);
             console.log(price);
