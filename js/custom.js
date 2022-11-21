@@ -1040,6 +1040,13 @@ $(document).ready(function(){
                         $('#flavourPrice').addClass('discount-active');
                         $('#flavourPrice').prepend('<div class="discount"><span class="regular-price"><span class="value" itemprop="price">5<small>90</small></span>ZŁ</span> / dzień</div>');
                     }
+                    
+                    // Only for blackweek pormotion
+                    if(code == 'blackweek30'){
+                        discountamount = amount;
+                        $('#flavourPrice').addClass('discount-active');
+                        $('#flavourPrice').prepend('<div class="discount"><span class="regular-price"><span class="value" itemprop="price">5<small>90</small></span>ZŁ</span> / dzień</div>');
+                    }
                  });
             }
         });
