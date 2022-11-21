@@ -1088,18 +1088,18 @@ $(document).ready(function(){
                 price = parseFloat(price_zl) + parseFloat('0.' + price_gr),
                 discount = price * discountamount / 100,
                 price_full = price + discount,
-                // normalprices = {
-                //     '125': 5.90,
-                //     '200': 7.50,
-                //     '300': 9.50,
-                //     '400': 10.90,
-                //     '500': 12.90,
-                //     '600': 13.90,
-                //     '800': 17.90,
-                //     '1000': 20.50,
-                //     '1200': 21.90,
-                // },
                 normalprices = {
+                    '125': 5.90,
+                    '200': 7.50,
+                    '300': 9.50,
+                    '400': 10.90,
+                    '500': 12.90,
+                    '600': 13.90,
+                    '800': 17.90,
+                    '1000': 20.50,
+                    '1200': 21.90,
+                },
+                discountprices = {
                     '125': 4.13,
                     '200': 5.25,
                     '300': 6.65,
@@ -1117,6 +1117,12 @@ $(document).ready(function(){
                 if(gram == key){
                     var price_discount = value.toFixed(2).split('.');
                     contentPrice_regular.html(price_discount[0] + '<small>' + price_discount[1] + '</small>');
+                }
+            });
+            $.each(discountprices, function(key, value){
+                if(gram == key){
+                    var price_discount = value.toFixed(2).split('.');
+                    contentPrice_discount.html(price_discount[0] + '<small>' + price_discount[1] + '</small>');
                 }
             });
             
