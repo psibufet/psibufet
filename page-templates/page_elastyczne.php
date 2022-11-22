@@ -294,6 +294,26 @@ get_header(); ?>
         </div>
     </section>
     
+    <div class="infoPopup">
+        <div class="infoPopup__wrap">
+            <div class="elasticPopup elasticPopup--form">
+                <h2>Pomóż nam Cię znaleźć</h2>
+                <p>Podaj adres e-mail, na który masz założone konto PsiBufet.</p>
+                <form id="planChanger" class="elasticPopup__form" type="POST">
+                    <input type="hidden" name="data" value=""/>
+                    <input type="email" name="email" placeholder="Adres e-mail" />
+                    <button type="submit" class="btn btn--button btn--center btn--smallfont"><span>Wyślij</span></button>
+                </form>
+            </div>
+            <div class="elasticPopup elasticPopup--success">
+                <h2>Super, udało się!</h2>
+                <p>Dziękujemy za wybranie nowego planu. Nasz zespół Customer Care zmieni Twój plan tak szybko, jak to możliwe. Potwierdzenie zmiany otrzymasz w wiadomości mailowej.</p>
+                <img src="<?php echo get_template_directory_uri() . '/images/icons/email_vec_ico.svg'; ?>"/>
+                <p id="closeInfoPopup" class="btn btn--center btn--clear"><span>Zamknij</span></p>
+            </div>
+        </div>
+    </div>
+    
 </main>
 
 <?php get_footer(); ?>
