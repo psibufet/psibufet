@@ -732,12 +732,12 @@ function availableForm(){
 	$sent = false;
 	$sent = wp_mail( $to, $subject, $message, $headers);
 
-	$sentUser = false;
-	$sentUser = wp_mail($user, $subject_user, $message_user, $headers);
+	// $sentUser = false;
+	// $sentUser = wp_mail($user, $subject_user, $message_user, $headers);
 
 	$response = array(
 		'admin' => $sent,
-		'user' => $sentUser,
+		// 'user' => $sentUser,
 	);
 
 	echo json_encode($response);
