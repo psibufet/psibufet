@@ -745,6 +745,28 @@ function availableForm(){
 	exit();
 }
 
+/* LP Zwrot kartonów */
+
+add_action('wp_ajax_kartonyForm', 'kartonyForm');
+add_action('wp_ajax_nopriv_kartonyForm', 'kartonyForm');
+
+function kartonyForm(){
+	$name = isset( $_POST['name'] ) ? $_POST['name'] : '';
+	$email = isset( $_POST['email'] ) ? $_POST['email'] : '';
+	
+	$to = 'filip@psibufet.pl';
+	$subject = '[PsiBufet] Zwrot kartonów';
+	$message = "Imię i nazwisko: " . $name . " <br/>\r\nAdres e-mail: " . $email;
+	$headers = array('Content-Type: text/html; charset=UTF-8');
+	
+	$sent = false;
+	$sent = wp_mail( $to, $subject, $message, $headers);
+
+	echo json_encode($sent);
+
+	exit();
+}
+
 /* Help ajax form send engine */
 
 add_action('wp_ajax_helpForm', 'helpForm');

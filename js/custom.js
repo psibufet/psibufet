@@ -2027,3 +2027,43 @@ $(document).ready(function(){
         }
     });
 });
+
+
+/**
+ * LP - Zwrot kartonów form
+ */
+ $(document).ready(function(){
+    $('.kartonyForm').on('submit', function(e){
+        e.preventDefault();
+
+        var name = $(this).find('input[name="kartonyName"]').val();
+        var email = $(this).find('input[name="kartonyEmail"]').val();
+        var data = {
+            action: 'kartonyForm',
+            name: name,
+            email: email,
+        }
+
+        $.ajax({
+            type: 'POST',
+            url: PBAjax.ajaxurl,
+            data: data,
+            beforeSend: function(){
+                $('.kartonyForm').addClass('loading');  
+            },
+            success: function(response){
+                $('.kartonyForm').removeClass('loading');
+                
+                if(response == 'true'){
+                    $('.kartonyForm').find('.alert').append('<div class="alert__notice alert__notice--success"><p>Zgłoszenie zostało pomyślnie wysłane!</p></div>');
+                }else{
+                    $('.kartonyForm').find('.alert').append('<div class="alert__notice alert__notice--error"><p>Wystąpił błąd podczas wysyłania formularza. Spróbuj ponownie później.</p></div>');
+                }
+
+                setTimeout(function(){
+                    $('.kartonyForm').find('.alert__notice').remove();
+                }, 4000);
+            }
+        })
+    });
+});

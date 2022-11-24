@@ -1,0 +1,548 @@
+.kartonyHeader{
+    width: 100%;
+    min-height: 570px;
+    background-image: url('/wp-content/themes/psibufet/images/kartony/kartonyHeader.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+
+    &__wrap{
+        padding-top: 62px;
+
+        h1{
+            font-size: 72px;
+            line-height: 86px;
+            font-weight: 300;
+            color: #000;
+            font-family: 'Bebas Neue', sans-serif;
+            margin: 0;
+            text-align: center;
+        }
+        .badge{
+            position: absolute;
+            left: 0;
+            right: -370px;
+            top: 50%;
+            transform: translate(0, -20%);
+            margin: 0 auto;
+            width: 166px;
+            height: 166px;
+        }
+    }
+}
+@media (max-width: 767px){
+    .kartonyHeader{
+        background-image: url('/wp-content/themes/psibufet/images/kartony/kartonyHeader_mobile.jpg');
+        min-height: 470px;
+
+        &__wrap{
+            padding-top: 30px;
+
+            h1{
+                font-size: 48px;
+                line-height: 58px;
+            }
+            .badge{
+                width: 140px;
+                height: 140px;
+                right: 0;
+                transform: translate(0, -50%);
+            }
+        }
+    }
+}
+@media (max-width: 360px){
+    .kartonyHeader{
+        background-image: url('/wp-content/themes/psibufet/images/kartony/kartonyHeader_mobile_small.jpg');
+        overflow: hidden;
+
+        &__wrap{
+            .badge{
+                width: 140px;
+                height: 140px;
+                right: -200px;
+            }
+        }
+    }
+}
+
+.kartonyInfo{
+    padding: 32px 0 36px;
+
+    &__wrap{
+        max-width: 1100px;
+        margin: 0 auto;
+
+        h2{
+            font-size: 48px;
+            line-height: 58px;
+            font-weight: 300;
+            color: #000;
+            font-family: 'Bebas Neue', sans-serif;
+            margin: 0 0 20px;
+            text-align: center;
+        }
+        p{
+            font-size: 20px;
+            line-height: 26px;
+            color: #000;
+            text-align: center;
+            margin: 0;
+        }
+    }
+}
+@media (max-width: 767px){
+    .kartonyInfo{
+        padding: 26px 0 30px;
+
+        &__wrap{
+            h2{
+                font-size: 36px;
+                line-height: 43px;
+                margin: 0 0 10px;
+            }
+            p{
+                font-size: 14px;
+                line-height: 18px;
+            }
+        }
+    }
+}
+
+.kartonyTable{
+    background-color: rgba(71, 105, 178, 0.1);
+    padding: 32px 0 40px;
+    overflow: hidden;
+
+    &__heading{
+        margin: 0 0 32px;
+
+        h2{
+            font-size: 48px;
+            line-height: 58px;
+            font-weight: 300;
+            color: #000;
+            font-family: 'Bebas Neue', sans-serif;
+            margin: 0;
+            text-align: center;
+        }
+    }
+    &__table{
+        width: 100%;
+        max-width: 580px;
+        margin: 0 auto;
+        position: relative;
+
+        &:before{
+            content: '';
+            background-image: url('/wp-content/themes/psibufet/images/kartony/table_before.svg');
+            background-repeat: no-repeat;
+            background-size: 171px;
+            width: 171px;
+            height: 202px;
+            position: absolute;
+            top: 0;
+            left: -220px;
+        }
+        &:after{
+            content: '';
+            background-image: url('/wp-content/themes/psibufet/images/kartony/table_after.svg');
+            background-repeat: no-repeat;
+            background-size: 181px;
+            width: 181px;
+            height: 262px;
+            position: absolute;
+            bottom: 0;
+            right: -210px;
+        }
+
+        .pos{
+            width: 100%;
+            height: 126px;
+            margin: 0 0 10px;
+            background-color: #fff;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+            display: flex;
+
+            &:last-of-type{
+                margin: 0;
+            }
+
+            &__name{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 12px;
+                width: 100%;
+                max-width: calc(100% - 140px);
+
+                h3{
+                    font-size: 30px;
+                    line-height: 34px;
+                    font-weight: 300;
+                    color: #000;
+                    font-family: 'Bebas Neue', sans-serif;
+                    text-align: center;
+                    margin: 0;
+                }
+            }
+            &__status{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                max-width: 140px;
+
+                &--false{
+                    background-color: $redcolor;
+                }
+                &--true{
+                    background-color: $greencolor;
+                }
+
+                h3{
+                    font-size: 30px;
+                    line-height: 34px;
+                    font-weight: 300;
+                    color: #fff;
+                    font-family: 'Bebas Neue', sans-serif;
+                    text-align: center;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .kartonyTable{
+        padding: 26px 0 32px;
+
+        &__heading{
+            max-width: 350px;
+            margin: 0 auto 20px;
+            padding: 0 15px;
+
+            h2{
+                font-size: 36px;
+                line-height: 43px;
+            }
+        }
+        &__table{
+            max-width: 320px;
+
+            &:before,
+            &:after{
+                display: none;
+            }
+
+            .pos{
+                height: 70px;
+
+                &__name{
+                    max-width: calc(100% - 70px);
+
+                    h3{
+                        font-size: 18px;
+                        line-height: 22px;
+
+                        br{
+                            display: none;
+                        }
+                    }
+                }
+                &__status{
+                    max-width: 70px;
+
+                    h3{
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 340px){
+    .kartonyTable{
+        &__table{
+            max-width: calc(100% - 40px);
+        }
+    }
+}
+
+.kartonyGif{
+    padding: 32px 0 40px;
+
+    &__heading{
+        margin: 0 0 32px;
+
+        h2{
+            font-size: 48px;
+            line-height: 58px;
+            font-weight: 300;
+            color: #000;
+            font-family: 'Bebas Neue', sans-serif;
+            margin: 0;
+            text-align: center;
+        }
+    }
+    &__wrap{
+        display: flex;
+        width: 100%;
+        max-width: 580px;
+        height: 330px;
+        position: relative;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+        margin: 0 auto;
+
+        &:before{
+            content: '';
+            background-image: url('/wp-content/themes/psibufet/images/kartony/gif_before.svg');
+            background-repeat: no-repeat;
+            background-size: 137px;
+            width: 137px;
+            height: 153px;
+            position: absolute;
+            left: -137px;
+            bottom: 0;
+        }
+        &:after{
+            content: '';
+            background-image: url('/wp-content/themes/psibufet/images/kartony/gif_after.svg');
+            background-repeat: no-repeat;
+            background-size: 113px;
+            width: 113px;
+            height: 146px;
+            position: absolute;
+            right: -113px;
+            bottom: 0;
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+@media (max-width: 991px){
+    .kartonyGif{
+        &__wrap{
+            &:before,
+            &:after{
+                display: none;
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .kartonyGif{
+        padding: 26px 0 34px;
+
+        &__heading{
+            margin: 0 auto 20px;
+            max-width: 280px;
+            padding: 0 15px;
+
+            h2{
+                font-size: 36px;
+                line-height: 43px;
+            }
+        }
+        &__wrap{
+            max-width: 560px;
+            height: 320px;
+        }
+    }
+}
+@media (max-width: 575px){
+    .kartonyGif{
+        &__wrap{
+            max-width: calc(100% - 30px);
+            width: 100%;
+            height: 0;
+            padding-bottom: 50%;
+            position: relative;
+
+            img{
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+}
+
+.kartonyContact{
+    background-image: url('/wp-content/themes/psibufet/images/kartony/kartonyForm.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 450px;
+
+    &__wrap{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        min-height: inherit;
+        max-width: 1100px;
+
+        .kartonyForm{
+            width: 100%;
+            max-width: 430px;
+            opacity: 1;
+            transition: ease .3s;
+
+            &.loading{
+                opacity: .4;
+            }
+
+            &__heading{
+                margin: 0 0 22px;
+
+                h2{
+                    font-size: 48px;
+                    line-height: 58px;
+                    font-weight: 300;
+                    color: #000;
+                    font-family: 'Bebas Neue', sans-serif;
+                    margin: 0 0 20px;
+                    text-align: center;
+                }
+                p{
+                    font-size: 20px;
+                    line-height: 26px;
+                    font-weight: 600;
+                    color: #000;
+                    text-align: center;
+                    margin: 0;
+                }
+            }
+            input{
+                display: block;
+                width: 100%;
+                height: 52px;
+                border: 1px solid rgba(0, 0, 0, .2);
+                box-shadow: 4px 4px 0px rgba(0, 0, 0, .1);
+                padding: 0 10px;
+                margin: 0 0 20px;
+                font-size: 18px;
+                line-height: 1;
+                color: #000;
+                font-family: 'Roboto', sans-serif;
+                text-align: center;
+                outline: none;
+                transition: ease .3s;
+
+                &:focus{
+                    border-color: #000;
+                }
+
+                &::placeholder{
+                    color: rgba(0, 0, 0, .5);
+                }
+            }
+            button{
+                width: 100%;
+                height: 52px;
+                margin: 40px 0 0;
+
+                span{
+                    font-size: 18px;
+                    font-weight: 600;
+                    text-transform: none;
+                    text-align: center;
+                }
+            }
+            .alert{
+                width: 100%;
+                position: relative;
+
+                &__notice{
+                    width: 100%;
+                    position: absolute;
+                    padding: 6px 12px;
+                    margin: 10px 0 0;
+
+                    p{
+                        font-size: 14px;
+                        line-height: 16px;
+                        margin: 0;
+                    }
+                    
+                    &--success{
+                        background-color: #d4edda;
+                        border: 1px solid #c3e6cb;
+                        
+                        p{
+                            color: #155724;
+                        }
+                    }
+                    &--error{
+                        background-color: #f8d7da;
+                        border: 1px solid #f5c6cb;
+
+                        p{
+                            color: #721c24;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 991px){
+    .kartonyContact{
+        min-height: 320px;
+
+        &__wrap{
+            .kartonyForm{
+                max-width: 320px;
+
+                &__heading{
+                    margin: 0 0 20px;
+
+                    h2{
+                        font-size: 36px;
+                        line-height: 43px;
+                        margin: 0 0 15px;
+                    }
+                    p{
+                        font-size: 14px;
+                        line-height: 18px;
+                    }
+                }
+                input{
+                    height: 46px;
+                    font-size: 14px;
+                    margin: 0 0 10px;
+                }
+                button{
+                    margin: 20px 0 0;
+                    height: 46px;
+                    
+                    span{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .kartonyContact{
+        background-image: url('/wp-content/themes/psibufet/images/kartony/kartonyForm_mobile.jpg');
+        min-height: 645px;
+        padding: 26px 0 0;
+
+        &__wrap{
+            justify-content: center;
+            align-items: flex-start;
+        }
+    }
+}

@@ -793,6 +793,58 @@ $(document).ready(function() {
     });
 });
 
+/********** LP - Zwrot kartonów **********/
+
+$(document).ready(function() {
+    var kartonyHeader = $('.kartonyHeader').find('.getMarker');
+    var kartonyTable = $('.kartonyTable').find('.getMarker');
+    var kartonyGif = $('.kartonyGif').find('.getMarker');
+    var kartonyContact = $('.kartonyContact').find('.getMarker');
+
+    if($(kartonyHeader).visible(true)){
+        setTimeout(function(){
+            kartonyHeader.addClass('init');
+        }, 500)
+    }
+    if($(kartonyTable).visible(true)){
+        setTimeout(function(){
+            kartonyTable.addClass('init');
+        }, 500)
+    }
+    if($(kartonyGif).visible(true)){
+        setTimeout(function(){
+            kartonyGif.addClass('init');
+        }, 500)
+    }
+    if($(kartonyContact).visible(true)){
+        setTimeout(function(){
+            kartonyContact.addClass('init');
+        }, 500)
+    }
+    $(window).on('scroll', function(){
+        if($(kartonyHeader).visible(true)){
+            setTimeout(function(){
+                kartonyHeader.addClass('init');
+            }, 500)
+        }
+        if($(kartonyTable).visible(true)){
+            setTimeout(function(){
+                kartonyTable.addClass('init');
+            }, 500)
+        }
+        if($(kartonyGif).visible(true)){
+            setTimeout(function(){
+                kartonyGif.addClass('init');
+            }, 500)
+        }
+        if($(kartonyContact).visible(true)){
+            setTimeout(function(){
+                kartonyContact.addClass('init');
+            }, 500)
+        }
+    });
+});
+
 /********** PODKREŚLENIA NASZE PRZEPISY **********/
 
 // $(window).on('scroll', function () {
