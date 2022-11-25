@@ -22189,6 +22189,12 @@ body.page-template-page_maintenance .siteFooter {
   margin: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .kartonyHeader__wrap h1 .marker:after {
+    height: 14px;
+    bottom: 15px;
+  }
+}
 .kartonyHeader__wrap .badge {
   position: absolute;
   left: 0;
@@ -22212,6 +22218,10 @@ body.page-template-page_maintenance .siteFooter {
     font-size: 48px;
     line-height: 58px;
   }
+  .kartonyHeader__wrap h1 .marker:after {
+    height: 10px;
+    bottom: 10px;
+  }
   .kartonyHeader__wrap .badge {
     width: 140px;
     height: 140px;
@@ -22219,14 +22229,29 @@ body.page-template-page_maintenance .siteFooter {
     transform: translate(0, -50%);
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 575px) {
   .kartonyHeader {
     background-image: url("/wp-content/themes/psibufet/images/kartony/kartonyHeader_mobile_small.jpg");
     overflow: hidden;
   }
   .kartonyHeader__wrap .badge {
+    width: 120px;
+    height: 120px;
+    top: 40%;
+    left: auto;
+    right: 15px;
+  }
+}
+@media (max-width: 360px) {
+  .kartonyHeader {
+    background-image: url("/wp-content/themes/psibufet/images/kartony/kartonyHeader_mobile_smaller.jpg");
+    overflow: hidden;
+  }
+  .kartonyHeader__wrap .badge {
     width: 140px;
     height: 140px;
+    top: 50%;
+    left: 0;
     right: -200px;
   }
 }
