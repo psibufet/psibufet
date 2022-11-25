@@ -2067,3 +2067,13 @@ $(document).ready(function(){
         })
     });
 });
+
+/**
+ * Video mejs - safari fix
+ */
+$(document).ready(function(){
+    $('video.wp-video-shortcode').each(function(){
+        var source = $(this).find('source').attr('src');
+        $(this).find('source').attr('src', source + '#t=0.001');
+    });
+});
