@@ -1062,76 +1062,68 @@ $(document).ready(function(){
         let code = GetURLParameter('code');
 
         if(typeof code !== 'undefined'){
-            
-            /**
-             * OLD
-             */
-            // let price_zl_fixed = parseFloat(price_zl),
-            //     price_gr_fixed = parseFloat('0.' + price_gr),
-            //     price = parseFloat(price_zl) + parseFloat('0.' + price_gr),
-            //     discount = price * discountamount / 100,
-            //     price_full = price - discount,
-            //     price_discount = price_full.toFixed(2).split('.'),
-            //     contentPrice_regular = $('#flavourPrice').find('.regular-price span.value');
-            //     contentPrice_discount = $('#flavourPrice').find('.cp-x span.value');
-
-            // contentPrice_regular.html(price_zl + '<small>' + price_gr + '</small>');
-            // contentPrice_discount.html(price_discount[0] + '<small>' + price_discount[1] + '</small>');
-         
-            // $('.microdata').find('span[itemprop="price"]').attr('content', price_discount[0] + '.' + price_discount[1]);
-
-            /**
-             * NEW
-             */
-            let price_zl_fixed = parseFloat(price_zl),
-                price_gr_fixed = parseFloat('0.' + price_gr),
-                price = parseFloat(price_zl) + parseFloat('0.' + price_gr),
-                discount = price * discountamount / 100,
-                price_full = price + discount,
-                normalprices = {
-                    '125': 5.90,
-                    '200': 7.50,
-                    '300': 9.50,
-                    '400': 10.90,
-                    '500': 12.90,
-                    '600': 13.90,
-                    '800': 17.90,
-                    '1000': 20.50,
-                    '1200': 21.90,
+            $.ajax({
+                url:'https://app.psibufet.pl/api/order/couponcode/' + code,
+                error: function(){
+                    $('body').removeClass('promocode');
+                    $('.menu_dir a').removeClass('dir');
+                    $('#promocode').removeClass('active').remove();
+                    $('#blackweek').removeClass('blackweek--active').remove();
+                    $('#agricole').removeClass('agricole--active').remove();
+                    console.log('Error while code loading :(');
                 },
-                discountprices = {
-                    '125': 4.13,
-                    '200': 5.25,
-                    '300': 6.65,
-                    '400': 7.63,
-                    '500': 9.03,
-                    '600': 9.73,
-                    '800': 12.53,
-                    '1000': 14.35,
-                    '1200': 15.33,
-                },
-                contentPrice_regular = $('#flavourPrice').find('.regular-price span.value'),
-                contentPrice_discount = $('#flavourPrice').find('.cp-x span.value');
-            
-            $.each(normalprices, function(key, value){
-                if(gram == key){
-                    var price_discount = value.toFixed(2).split('.');
-                    contentPrice_regular.html(price_discount[0] + '<small>' + price_discount[1] + '</small>');
+                success: function(){
+                    let price_zl_fixed = parseFloat(price_zl),
+                    price_gr_fixed = parseFloat('0.' + price_gr),
+                    price = parseFloat(price_zl) + parseFloat('0.' + price_gr),
+                    discount = price * discountamount / 100,
+                    price_full = price + discount,
+                    normalprices = {
+                        '125': 5.90,
+                        '200': 7.50,
+                        '300': 9.50,
+                        '400': 10.90,
+                        '500': 12.90,
+                        '600': 13.90,
+                        '800': 17.90,
+                        '1000': 20.50,
+                        '1200': 21.90,
+                    },
+                    discountprices = {
+                        '125': 4.13,
+                        '200': 5.25,
+                        '300': 6.65,
+                        '400': 7.63,
+                        '500': 9.03,
+                        '600': 9.73,
+                        '800': 12.53,
+                        '1000': 14.35,
+                        '1200': 15.33,
+                    },
+                    contentPrice_regular = $('#flavourPrice').find('.regular-price span.value'),
+                    contentPrice_discount = $('#flavourPrice').find('.cp-x span.value');
+                
+                    $.each(normalprices, function(key, value){
+                        if(gram == key){
+                            var price_discount = value.toFixed(2).split('.');
+                            contentPrice_regular.html(price_discount[0] + '<small>' + price_discount[1] + '</small>');
+                        }
+                    });
+                    $.each(discountprices, function(key, value){
+                        if(gram == key){
+                            var price_discount = value.toFixed(2).split('.');
+                            contentPrice_discount.html(price_discount[0] + '<small>' + price_discount[1] + '</small>');
+                        }
+                    });
+                    
+
+                    console.log(discountamount);
+                    console.log(price);
+                    console.log(discount);
+
+                    contentPrice_discount.html(price_zl + '<small>' + price_gr + '</small>');
                 }
             });
-            $.each(discountprices, function(key, value){
-                if(gram == key){
-                    var price_discount = value.toFixed(2).split('.');
-                    contentPrice_discount.html(price_discount[0] + '<small>' + price_discount[1] + '</small>');
-                }
-            });
-            
-
-            console.log(discountamount);
-            console.log(price);
-            console.log(discount);
-
-            contentPrice_discount.html(price_zl + '<small>' + price_gr + '</small>');
         }else{
             var contentPrice_zl = $('#flavourPrice').find('span.value');
             contentPrice_zl.html(price_zl + '<small>' + price_gr + '</small>');
