@@ -794,6 +794,35 @@ function helpForm(){
 	// echo json_encode($response);
 
 	// exit();
+
+	$topic = isset( $_POST['topic'] ) ? $_POST['topic'] : '';
+	$message = isset( $_POST['message'] ) ? $_POST['message'] : '';
+	$name = isset( $_POST['name'] ) ? $_POST['name'] : '';
+	$dogName = isset( $_POST['dogname'] ) ? $_POST['dogname'] : '';
+	$mail = isset( $_POST['mail'] ) ? $_POST['mail'] : '';
+
+	$handle = curl_init();
+
+	$post = array(
+		"email" => $mail,
+		"message" => $message,
+		"subject" => $topic,
+		"name"	=> $name,
+		"dogname" => $dogName,
+	);
+
+	// Set the url
+	curl_setopt($handle, CURLOPT_URL, 'https://forms.dixa.io/v2/forms/1tUhjofLCFFP2e0lhshdEF/1N1PwgmalnAePLgOP0uaIu');
+
+	// Set the result output to be a string.
+	curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
+	curl_setopt($handle, CURLOPT_POSTFIELDS, $post);
+	$output = curl_exec($handle);
+	curl_close($handle);
+
+	echo $output;
+
+	exit();
 }
 
 /**
