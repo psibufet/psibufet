@@ -142,28 +142,12 @@ $(document).ready(function(){
                 },
 
                 success: function(response) {
-                    console.log(response);
-                    var data = jQuery.parseJSON(response);
-
-                    $.each(data, function (key, value) {
-                        if(key == 'user'){
-                            if(value == true){
-                                partnerForm.removeClass('form--loading');
-                                $('.feedback').addClass('feedback--done');
-                                $('.feedback p').html('Formularz zgłoszeniowy został wysłany pomyślnie.');
-                                $('.form__submit').find('button').attr('disabled', true);
-                            }else{
-                                console.error('ERROR: User mail error');
-                                partnerForm.removeClass('form--loading');
-                                $('.feedback').addClass('feedback--error');
-                                $('.feedback p').html('Wystąpił błąd podczas wysyłania formularza.<br/>Spróbuj ponownie później.');
-                            }
-                        }else{
-                            if(value !== true){
-                                console.error('ERROR: Admin mail does not sent');
-                            }
-                        }
-                    });
+                    if(response == 'done'){
+                        partnerForm.removeClass('form--loading');
+                        $('.feedback').addClass('feedback--done');
+                        $('.feedback p').html('Formularz zgłoszeniowy został wysłany pomyślnie.');
+                        $('.form__submit').find('button').attr('disabled', true);
+                    }
                 }
             });
             return false;
