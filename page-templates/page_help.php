@@ -174,7 +174,7 @@ get_header(); ?>
             <h2>Skontaktuj się z nami</h2>
             <div class="helpContact__chat">
                 <h3>Napisz na czacie</h3>
-                <p>czynny w godzinach: 9:00 - 18:00</p>
+                <p>czynny w godzinach: 10:00 - 17:00</p>
             </div>
             <div class="helpContact__mail">
                 <h3>Wyślij maila</h3>
@@ -184,7 +184,7 @@ get_header(); ?>
                 <span>lub</span>
                 <h3>Zadzwoń</h3>
                 <h4><a href="tel:+48221046259">+48 22 104 62 59</a></h4>
-                <p>infolinia czynna w godzinach: 10:00 - 16:00</p>
+                <p>infolinia czynna w godzinach: 10:00 - 17:00</p>
             </div>
         </div>
     </section>
