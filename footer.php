@@ -42,7 +42,7 @@
                     <a href="mailto:kontakt@psibufet.pl">kontakt@psibufet.pl</a>
                     <p class="hours">
                         Godziny otwarcia:<br/>
-                        pon.-pt. (9:00-17:00)
+                        pon.-pt. (10:00-17:00)
                     </p>
                     <div class="social">
                         <a class="social__ig" href="https://www.instagram.com/psibufet/" target="_blank"><img src="<?php echo get_template_directory_uri() . '/images/footer/ig_ico.svg'; ?>"/></a>
