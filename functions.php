@@ -773,27 +773,27 @@ add_action('wp_ajax_helpForm', 'helpForm');
 add_action('wp_ajax_nopriv_helpForm', 'helpForm');
 
 function helpForm(){
-	$topic = isset( $_POST['topic'] ) ? $_POST['topic'] : '';
-	$message = isset( $_POST['message'] ) ? $_POST['message'] : '';
-	$name = isset( $_POST['name'] ) ? $_POST['name'] : '';
-	$dogName = isset( $_POST['dogname'] ) ? $_POST['dogname'] : '';
-	$mail = isset( $_POST['mail'] ) ? $_POST['mail'] : '';
+	// $topic = isset( $_POST['topic'] ) ? $_POST['topic'] : '';
+	// $message = isset( $_POST['message'] ) ? $_POST['message'] : '';
+	// $name = isset( $_POST['name'] ) ? $_POST['name'] : '';
+	// $dogName = isset( $_POST['dogname'] ) ? $_POST['dogname'] : '';
+	// $mail = isset( $_POST['mail'] ) ? $_POST['mail'] : '';
 	
-	$to = 'kontakt@psibufet.pl';
-	$subject = '[PsiBufet] Formularz "POMOC"';
-	$message_user = "Temat: " . $topic . "<br/>Wiadomość: " . $message . "<br/>Imię: " . $name . "<br/>Imię psa: " . $dogName . "<br/>Adres e-mail: " . $mail;
-	$headers = array('Content-Type: text/html; charset=UTF-8');
+	// $to = 'kontakt@psibufet.pl';
+	// $subject = '[PsiBufet] Formularz "POMOC"';
+	// $message_user = "Temat: " . $topic . "<br/>Wiadomość: " . $message . "<br/>Imię: " . $name . "<br/>Imię psa: " . $dogName . "<br/>Adres e-mail: " . $mail;
+	// $headers = array('Content-Type: text/html; charset=UTF-8');
 	
-	$sent = false;
-	$sent = wp_mail($to, $subject, $message_user, $headers);
+	// $sent = false;
+	// $sent = wp_mail($to, $subject, $message_user, $headers);
 
-	$response = array(
-		'status' => $sent,
-	);
+	// $response = array(
+	// 	'status' => $sent,
+	// );
 
-	echo json_encode($response);
+	// echo json_encode($response);
 
-	exit();
+	// exit();
 }
 
 /**

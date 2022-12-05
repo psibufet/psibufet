@@ -1669,59 +1669,71 @@ $(document).ready(function(){
         let validate = helpFormValidate(form);
         
         if(validate == true){
-            var data = {
-                action: 'helpForm',
-                topic: topic,
-                message: message,
-                name: name,
-                dogname: dogName,
-                mail: mail,
-            }
+            // var data = {
+            //     action: 'helpForm',
+            //     topic: topic,
+            //     message: message,
+            //     name: name,
+            //     dogname: dogName,
+            //     mail: mail,
+            // }
 
-            $.ajax({
-                type: 'POST',
-                url: PBAjax.ajaxurl,
-                data: data,
-                beforeSend: function(){
-                    form.addClass('helpForm--loading');
-                },
-                success: function(response){
-                    console.log(response);
-                    form.removeClass('helpForm--loading');
-                    let data = jQuery.parseJSON(response);
+            const formData = new FormData()
+            formData.append('name', name)
+            formData.append('subject', topic)
+            formData.append('email', mail)
+            formData.append('message', message)
+            formData.append('dogname', dogName)
 
-                    $.each(data, function (key, v) {
-                        if(key == 'status'){
-                            if(v == true){
-                                // GTM
-                                var value = form.find('p[name="helpTopic"]').text();
-                                dataLayer.push({
-                                    'event': 'helpSent',
-                                    'label': value,
-                                });
+            fetch('https://forms.dixa.io/v2/forms/1tUhjofLCFFP2e0lhshdEF/1N1PwgmalnAePLgOP0uaIu', {method: 'POST', body: formData})
+            .then(r => r.json())
+            .then(v => console.log('Received data:', v))
+            .catch(e => console.error('An error has occurred :(', e));
 
-                                form.find('p[name="helpTopic"]').text('Jak możemy Ci pomóc?');
-                                form.find('textarea').val('');
-                                form.find('input').val('');
+            // $.ajax({
+            //     type: 'POST',
+            //     url: PBAjax.ajaxurl,
+            //     data: data,
+            //     beforeSend: function(){
+            //         form.addClass('helpForm--loading');
+            //     },
+            //     success: function(response){
+            //         console.log(response);
+            //         form.removeClass('helpForm--loading');
+            //         let data = jQuery.parseJSON(response);
 
-                                form.find('.helpForm__notice').append('<p>Formularz został pomyślnie wysłany</p>');
-                                form.find('.helpForm__notice').addClass('helpForm__notice--active helpForm__notice--success');
-                                setTimeout(function(){
-                                    form.find('.helpForm__notice').removeClass('helpForm__notice--success helpForm__notice--error helpForm__notice--active');
-                                    form.find('.helpForm__notice').find('p').remove();
-                                }, 4000);
-                            }else{
-                                form.find('.helpForm__notice').append('<p>Wystąpił błąd podczas wysyłki formularza. Spróbuj ponownie później.</p>');
-                                form.find('.helpForm__notice').addClass('helpForm__notice--active helpForm__notice--error');
-                                setTimeout(function(){
-                                    form.find('.helpForm__notice').removeClass('helpForm__notice--success helpForm__notice--error helpForm__notice--active');
-                                    form.find('.helpForm__notice').find('p').remove();
-                                }, 4000);
-                            }
-                        }
-                    });
-                }
-            });
+            //         $.each(data, function (key, v) {
+            //             if(key == 'status'){
+            //                 if(v == true){
+            //                     // GTM
+            //                     var value = form.find('p[name="helpTopic"]').text();
+            //                     dataLayer.push({
+            //                         'event': 'helpSent',
+            //                         'label': value,
+            //                     });
+
+            //                     form.find('p[name="helpTopic"]').text('Jak możemy Ci pomóc?');
+            //                     form.find('textarea').val('');
+            //                     form.find('input').val('');
+
+            //                     form.find('.helpForm__notice').append('<p>Formularz został pomyślnie wysłany</p>');
+            //                     form.find('.helpForm__notice').addClass('helpForm__notice--active helpForm__notice--success');
+            //                     setTimeout(function(){
+            //                         form.find('.helpForm__notice').removeClass('helpForm__notice--success helpForm__notice--error helpForm__notice--active');
+            //                         form.find('.helpForm__notice').find('p').remove();
+            //                     }, 4000);
+            //                 }else{
+            //                     form.find('.helpForm__notice').append('<p>Wystąpił błąd podczas wysyłki formularza. Spróbuj ponownie później.</p>');
+            //                     form.find('.helpForm__notice').addClass('helpForm__notice--active helpForm__notice--error');
+            //                     setTimeout(function(){
+            //                         form.find('.helpForm__notice').removeClass('helpForm__notice--success helpForm__notice--error helpForm__notice--active');
+            //                         form.find('.helpForm__notice').find('p').remove();
+            //                     }, 4000);
+            //                 }
+            //             }
+            //         });
+            //     }
+            // });
         }else{
             console.log(validate);
         }
