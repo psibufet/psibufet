@@ -44,7 +44,7 @@ $(document).ready(function(){
         url: PBAjax.ajaxurl,
         data: data,
         success: function(response){
-            console.log(response);
+            // console.log(response);
         }
     })
 });
@@ -135,13 +135,12 @@ $(document).ready(function () {
     })
 
     /* Food Modal */
-    
-    var modal = $('.foodModal');
-    var closeBtn = $('.foodModal').find('.closeFoodModal');
-    var openstatus;
 
-    $('.infoButtons__button, .openFoodModal').on('click', function(){
-        var dataid = $(this).attr('data');
+    function openFoodModal(data){
+        var modal = $('.foodModal');
+        var closeBtn = $('.foodModal').find('.closeFoodModal');
+        var openstatus;
+        var dataid = data;
         $('body').addClass('noscroll');
 
         // Lazy load fix
@@ -149,7 +148,7 @@ $(document).ready(function () {
             var images = $(this).find('img[data-original]');
             
             $(images).each(function(){
-
+                $(this).attr('src', $(this).attr('data-original'));
             });
         });
 
@@ -194,7 +193,36 @@ $(document).ready(function () {
                 openstatus = false;
             }, 300);
         });
+    }
+
+    $('.infoButtons__button, .openFoodModal').on('click', function(){
+        var dataid = $(this).attr('data');
+
+        openFoodModal(dataid);
     });
+
+
+    var modalParam = GetURLParameter('foodmodal');
+
+    if(modalParam !== undefined){
+        if(modalParam == 'wolowe-love'){
+            $(document).on('preload-off', function(){
+                openFoodModal('1963');
+            });
+        }else if(modalParam == 'indyczy-kasek'){
+            $(document).on('preload-off', function(){
+                openFoodModal('1968');
+            });
+        }else if(modalParam == 'jagnie-wcina'){
+            $(document).on('preload-off', function(){
+                openFoodModal('1970');
+            });
+        }else if(modalParam == 'kurcze-pieczone'){
+            $(document).on('preload-off', function(){
+                openFoodModal('1969');
+            });
+        }
+    }
 
     var accordionpos = $('.foodModal__content').find('.accordion__element');
     accordionpos.on('click', function(){

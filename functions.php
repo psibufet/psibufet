@@ -584,6 +584,23 @@ function my_acf_init() {
 add_action('acf/init', 'my_acf_init');
 
 /**
+ * Ger current page URL
+ */
+function get_current_url(){
+    $pageURL = 'http';
+    if (isset($_SERVER["HTTPS"]) && $_SERVER["HTTPS"] == "on") {
+        $pageURL .= "s";
+    }
+    $pageURL .= "://";
+    if ($_SERVER["SERVER_PORT"] != "۸۰") {
+        $pageURL .= $_SERVER["SERVER_NAME"] . ":" . $_SERVER["SERVER_PORT"] . $_SERVER["REQUEST_URI"];
+    } else {
+        $pageURL .= $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"];
+    }
+    return $pageURL;
+}
+
+/**
  * Starts with function
  */
 function startsWith( $haystack, $needle ) {
@@ -922,4 +939,23 @@ function check_user_cookie(){
 	print_r($_COOKIE);
 
 	wp_die();
+}
+
+add_action('init', 'karmy_redirect');
+function karmy_redirect(){
+	$url = get_current_url();
+
+	if (strpos($url, '/wolowina_gr') !== false) {
+		wp_redirect( home_url() . '/nasze-przepisy?foodmodal=wolowe-love');
+		exit();
+	}else if(strpos($url, '/indyk_gr') !== false){
+		wp_redirect( home_url() . '/nasze-przepisy?foodmodal=indyczy-kasek');
+		exit();
+	}else if(strpos($url, '/kurczak_gr') !== false){
+		wp_redirect( home_url() . '/nasze-przepisy?foodmodal=kurcze-pieczone');
+		exit();
+	}else if(strpos($url, '/jagniecina_gr') !== false){
+		wp_redirect( home_url() . '/nasze-przepisy?foodmodal=jagnie-wcina');
+		exit();
+	}
 }
