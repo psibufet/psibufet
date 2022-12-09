@@ -945,16 +945,16 @@ add_action('init', 'karmy_redirect');
 function karmy_redirect(){
 	$url = get_current_url();
 
-	if (strpos($url, '/wolowina_gr') !== false) {
+	if (strpos($url, '/wolowina_qr') !== false) {
 		wp_redirect( home_url() . '/nasze-przepisy?foodmodal=wolowe-love');
 		exit();
-	}else if(strpos($url, '/indyk_gr') !== false){
+	}else if(strpos($url, '/indyk_qr') !== false){
 		wp_redirect( home_url() . '/nasze-przepisy?foodmodal=indyczy-kasek');
 		exit();
-	}else if(strpos($url, '/kurczak_gr') !== false){
+	}else if(strpos($url, '/kurczak_qr') !== false){
 		wp_redirect( home_url() . '/nasze-przepisy?foodmodal=kurcze-pieczone');
 		exit();
-	}else if(strpos($url, '/jagniecina_gr') !== false){
+	}else if(strpos($url, '/jagniecina_qr') !== false){
 		wp_redirect( home_url() . '/nasze-przepisy?foodmodal=jagnie-wcina');
 		exit();
 	}
