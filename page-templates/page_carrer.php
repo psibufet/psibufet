@@ -12,7 +12,7 @@ Template Name: Pracuj w PsiBufet
     <section class="carrerHeader">
         <div class="carrerHeader__wrap">
             <h1><?php the_field('page_carrer_heading_title'); ?></h1>
-            <p class="lead"><?php the_field('page_carrer_heading_content'); ?></p>
+            <!-- <p class="lead"><?php the_field('page_carrer_heading_content'); ?></p> -->
         </div>
         <a class="carrerHeader__arrow" href="#offers">
             <span>Sprawdź oferty pracy</span>

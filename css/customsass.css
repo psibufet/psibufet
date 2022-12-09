@@ -17596,23 +17596,26 @@ body.admin-bar .pagePDF {
   }
 }
 .carrerHeader {
-  background-image: url("/wp-content/themes/psibufet/images/carrer/header_bg.jpg");
+  background-image: url("/wp-content/themes/psibufet/images/carrer/header_bg_new.webp");
   background-size: cover;
   background-position: center;
-  min-height: 500px;
+  min-height: 564px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   position: relative;
-  box-shadow: inset -100vw 0 #00000087;
+}
+.carrerHeader__wrap {
+  max-width: 300px;
+  margin: 42px auto 0;
 }
 .carrerHeader__wrap h1 {
   font-size: 60px;
-  line-height: 72px;
+  line-height: 68px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   text-align: center;
-  color: #fff;
+  color: #000;
   margin: 0 0 20px;
 }
 .carrerHeader__wrap p {
@@ -17673,7 +17676,11 @@ body.admin-bar .pagePDF {
 
 @media (max-width: 767px) {
   .carrerHeader {
-    min-height: 400px;
+    background-image: url("/wp-content/themes/psibufet/images/carrer/header_bg_mobile.webp");
+  }
+  .carrerHeader__wrap {
+    margin: 29px auto 0;
+    max-width: 100%;
   }
   .carrerHeader__wrap h1 {
     font-size: 52px;
