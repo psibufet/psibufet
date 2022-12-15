@@ -13,8 +13,8 @@ get_header(); ?>
     </section>
     <section class="kartonyInfo">
         <div class="kartonyInfo__wrap container">
-            <h2>Czy wiesz, że...</h2>
-            <p>... możesz zwrócić nam kartony, w których przyszedł do Ciebie PsiBufet? My wykorzystamy je ponownie, a Ty <b>otrzymasz rabat 10 zł na kolejną dostawę!</b> Wystarczy, że zbierzesz <b>5 kartonów wraz z przekładkami</b> (folia termiczna też mile widziana!), spakujesz je i wypełnisz znajdujący się poniżej formularz. Wtedy <b>my zamówimy kuriera</b>, który je od Ciebie odbierze <b>w najbliższą środę</b> od zgłoszenia, a w podziękowaniu <b>damy Ci zniżkę.</b></p>
+            <h2><?php echo get_field('kartonyInfo_title'); ?></h2>
+            <p><?php echo get_field('kartonyInfo_content'); ?></p>
         </div>
     </section>
     <section class="kartonyTable">
@@ -22,46 +22,19 @@ get_header(); ?>
             <h2 class="getMarker">Jakie kartony <span class="marker">nadają</span> się do zwrotu?</h2>
         </div>
         <div class="kartonyTable__table">
+            <?php while(have_rows('kartonyTable')): the_row();
+                $name = get_sub_field('kartonyTable_name');
+                $value = get_sub_field('kartonyTable_value');
+            ?>
             <div class="pos">
                 <div class="pos__name">
-                    <h3>Kartony ze zgniecionymi rogami</h3>
+                    <h3><?php echo $name; ?></h3>
                 </div>
-                <div class="pos__status pos__status--false">
-                    <h3>Nie</h3>
-                </div>
-            </div>
-            <div class="pos">
-                <div class="pos__name">
-                    <h3>Kartony różnych wielkości</h3>
-                </div>
-                <div class="pos__status pos__status--true">
-                    <h3>Tak</h3>
+                <div class="pos__status pos__status--<?php echo $value['value']; ?>">
+                    <h3><?php echo $value['label']; ?></h3>
                 </div>
             </div>
-            <div class="pos">
-                <div class="pos__name">
-                    <h3>Same kartony, bez przekładek</h3>
-                </div>
-                <div class="pos__status pos__status--false">
-                    <h3>Nie</h3>
-                </div>
-            </div>
-            <div class="pos">
-                <div class="pos__name">
-                    <h3>Inna ilość kartonów niż 5</h3>
-                </div>
-                <div class="pos__status pos__status--false">
-                    <h3>Nie</h3>
-                </div>
-            </div>
-            <div class="pos">
-                <div class="pos__name">
-                    <h3>Brudne kartony lub takie, <br/>które uległy uszkodzeniu w transporcie</h3>
-                </div>
-                <div class="pos__status pos__status--false">
-                    <h3>Nie</h3>
-                </div>
-            </div>
+            <?php endwhile; ?>
         </div>
     </section>
     <section class="kartonyGif">
