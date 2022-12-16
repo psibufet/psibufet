@@ -3,7 +3,9 @@
      * Template name: LP - Elastyczne plany 
      */
     
-get_header(); ?>
+get_header();
+$off = true;
+?>
 
 <main class="psibufet psibufet--elastic">
     <section class="elasticHeader">
@@ -137,7 +139,9 @@ get_header(); ?>
                         </p>
                         <p class="days">× 0 dni</p>
                     </div>
+                    <?php if($off == false): ?>
                     <button type="button" class="btn btn--button btn--green btn--smallfont btn--center" data-plan="plan_02"><span>Wybierz plan</span></button>
+                    <?php endif; ?>
                 </div>
             </article>
             <article class="planBox" data-plan="plan_03" data-name="Rzadsze dostawy" data-portions="loading" data-delivery="loading" data-dayprice="loading" data-total="loading">
@@ -185,7 +189,9 @@ get_header(); ?>
                         </p>
                         <p class="days">× 0 dni</p>
                     </div>
+                    <?php if($off == false): ?>
                     <button type="button" class="btn btn--button btn--green btn--smallfont btn--center" data-plan="plan_03"><span>Wybierz plan</span></button>
+                    <?php endif; ?>
                 </div>
             </article>
         </div>
