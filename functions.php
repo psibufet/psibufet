@@ -766,23 +766,29 @@ function availableForm(){
 
 add_action('wp_ajax_kartonyForm', 'kartonyForm');
 add_action('wp_ajax_nopriv_kartonyForm', 'kartonyForm');
-
 function kartonyForm(){
 	$name = isset( $_POST['name'] ) ? $_POST['name'] : '';
 	$email = isset( $_POST['email'] ) ? $_POST['email'] : '';
-	
-	$to = 'filip@psibufet.pl';
-	$subject = '[PsiBufet] Zwrot kartonów';
-	$message = "Imię i nazwisko: " . $name . " <br/>\r\nAdres e-mail: " . $email;
-	$headers = array('Content-Type: text/html; charset=UTF-8');
-	
-	$sent = false;
-	$sent = wp_mail( $to, $subject, $message, $headers);
 
-	echo json_encode($sent);
+	$handle = curl_init();
+	$post = array(
+		"name" => $name,
+		"email" => $email,
+		"message" => "mustnotbeempty"
+	);
+
+	curl_setopt($handle, CURLOPT_URL, 'https://forms.dixa.io/v2/forms/1tUhjofLCFFP2e0lhshdEF/1N1PwgmalnAePLgOP0uaIu');
+
+	curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
+	curl_setopt($handle, CURLOPT_POSTFIELDS, $post);
+	$output = curl_exec($handle);
+	curl_close($handle);
+
+	echo $output;
 
 	exit();
 }
+
 
 /* Help ajax form send engine */
 
@@ -790,28 +796,6 @@ add_action('wp_ajax_helpForm', 'helpForm');
 add_action('wp_ajax_nopriv_helpForm', 'helpForm');
 
 function helpForm(){
-	// $topic = isset( $_POST['topic'] ) ? $_POST['topic'] : '';
-	// $message = isset( $_POST['message'] ) ? $_POST['message'] : '';
-	// $name = isset( $_POST['name'] ) ? $_POST['name'] : '';
-	// $dogName = isset( $_POST['dogname'] ) ? $_POST['dogname'] : '';
-	// $mail = isset( $_POST['mail'] ) ? $_POST['mail'] : '';
-	
-	// $to = 'kontakt@psibufet.pl';
-	// $subject = '[PsiBufet] Formularz "POMOC"';
-	// $message_user = "Temat: " . $topic . "<br/>Wiadomość: " . $message . "<br/>Imię: " . $name . "<br/>Imię psa: " . $dogName . "<br/>Adres e-mail: " . $mail;
-	// $headers = array('Content-Type: text/html; charset=UTF-8');
-	
-	// $sent = false;
-	// $sent = wp_mail($to, $subject, $message_user, $headers);
-
-	// $response = array(
-	// 	'status' => $sent,
-	// );
-
-	// echo json_encode($response);
-
-	// exit();
-
 	$topic = isset( $_POST['topic'] ) ? $_POST['topic'] : '';
 	$message = isset( $_POST['message'] ) ? $_POST['message'] : '';
 	$name = isset( $_POST['name'] ) ? $_POST['name'] : '';

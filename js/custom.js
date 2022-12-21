@@ -2081,34 +2081,37 @@ $(document).ready(function(){
 
         var name = $(this).find('input[name="kartonyName"]').val();
         var email = $(this).find('input[name="kartonyEmail"]').val();
+
         var data = {
             action: 'kartonyForm',
             name: name,
             email: email,
         }
 
-        $.ajax({
-            type: 'POST',
-            url: PBAjax.ajaxurl,
-            data: data,
-            beforeSend: function(){
-                $('.kartonyForm').addClass('loading');  
-            },
-            success: function(response){
-                $('.kartonyForm').removeClass('loading');
-                
-                if(response == 'true'){
-                    $('.kartonyForm').find('.alert').append('<div class="alert__notice alert__notice--success"><p>Zgłoszenie zostało pomyślnie wysłane!</p></div>');
-                }else{
-                    $('.kartonyForm').find('.alert').append('<div class="alert__notice alert__notice--error"><p>Wystąpił błąd podczas wysyłania formularza. Spróbuj ponownie później.</p></div>');
-                }
+        console.log(data);
 
-                setTimeout(function(){
-                    $('.kartonyForm').find('.alert__notice').remove();
-                }, 4000);
-            }
-        })
-    });
+        if(name !== '' && email !== ''){
+            $.ajax({
+                type: 'POST',
+                url: PBAjax.ajaxurl,
+                data: data,
+                beforeSend: function(){
+                    $('.kartonyForm').addClass('loading');  
+                },
+                success: function(response){
+                    console.log(response);
+                    $('.kartonyForm').removeClass('loading');
+                    $('.kartonyForm').find('.alert').append('<div class="alert__notice alert__notice--success"><p>Zgłoszenie zostało pomyślnie wysłane!</p></div>');
+                    
+                    setTimeout(function(){
+                        $('.kartonyForm').find('.alert__notice').remove();
+                    }, 4000);
+                }
+            });
+        }else{
+            $('.kartonyForm').find('.alert').append('<div class="alert__notice alert__notice--error"><p>Wystąpił błąd podczas wysyłania formularza. Uzupełnij brakujące pola.</p></div>');
+        }
+    }); 
 });
 
 /**
@@ -2119,4 +2122,53 @@ $(document).ready(function(){
         var source = $(this).find('source').attr('src');
         $(this).find('source').attr('src', source + '#t=0.001');
     });
+});
+
+/**
+ * Kartony form
+ */
+ $('#helpForm').on('submit', function(e){
+    e.preventDefault();
+    var form = $(this);
+
+    var mail = form.find('input[name="helpEmail"]').val();
+    
+    if(mail !== ''){
+        var data = {
+            action: 'kartonyForm',
+            mail: mail,
+        }
+
+        $.ajax({
+            type: 'POST',
+            url: PBAjax.ajaxurl,
+            data: data,
+            beforeSend: function(){
+                form.addClass('helpForm--loading');
+            },
+            success: function(response){
+                form.removeClass('helpForm--loading');
+
+                // GTM
+                var value = form.find('p[name="helpTopic"]').text();
+                dataLayer.push({
+                    'event': 'helpSent',
+                    'label': value,
+                });
+
+                form.find('p[name="helpTopic"]').text('Jak możemy Ci pomóc?');
+                form.find('textarea').val('');
+                form.find('input').val('');
+
+                form.find('.helpForm__notice').append('<p>Formularz został pomyślnie wysłany</p>');
+                form.find('.helpForm__notice').addClass('helpForm__notice--active helpForm__notice--success');
+                setTimeout(function(){
+                    form.find('.helpForm__notice').removeClass('helpForm__notice--success helpForm__notice--error helpForm__notice--active');
+                    form.find('.helpForm__notice').find('p').remove();
+                }, 4000);
+            }
+        });
+    }else{
+
+    }
 });
