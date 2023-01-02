@@ -8754,11 +8754,6 @@ body.admin-bar .foodModal__wrap {
     margin: 0 0 20px !important;
   }
 }
-@media (max-width: 991px) {
-  .recipesPricing__list {
-    display: block !important;
-  }
-}
 @media (max-width: 767px) {
   .recipesPricing {
     padding: 25px 0 32px;
@@ -8781,8 +8776,9 @@ body.admin-bar .foodModal__wrap {
     line-height: 20px;
   }
   .recipesPricing__list {
+    display: block !important;
     max-width: none;
-    margin: 0 0 58px;
+    margin: 0 0 28px;
     padding-bottom: 10px;
   }
   .recipesPricing__list .slick-list {
@@ -8790,6 +8786,41 @@ body.admin-bar .foodModal__wrap {
     overflow: visible;
     margin: 0 -20px;
     padding-bottom: 10px !important;
+  }
+  .recipesPricing__list .slick-arrow {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 38px;
+    height: 38px;
+    font-size: 0;
+    border: 0;
+    padding: 0;
+    border-radius: 0;
+    background: unset;
+    z-index: 2;
+    margin: 0 auto;
+  }
+  .recipesPricing__list .slick-arrow:before {
+    content: "";
+    display: block;
+    background-size: 100%;
+    width: inherit;
+    height: inherit;
+  }
+  .recipesPricing__list .slick-arrow.slick-next {
+    right: -300px;
+  }
+  .recipesPricing__list .slick-arrow.slick-next:before {
+    background-image: url("/wp-content/themes/psibufet/images/icons/slider_arrow_right_red.svg");
+  }
+  .recipesPricing__list .slick-arrow.slick-prev {
+    left: -300px;
+  }
+  .recipesPricing__list .slick-arrow.slick-prev:before {
+    background-image: url("/wp-content/themes/psibufet/images/icons/slider_arrow_left_red.svg");
   }
   .recipesPricing__list .slick-dots {
     display: flex;
@@ -8799,7 +8830,7 @@ body.admin-bar .foodModal__wrap {
     margin: 0;
     list-style: none;
     position: absolute;
-    bottom: -30px;
+    bottom: -10px;
     left: 0;
     right: 0;
   }

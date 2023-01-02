@@ -203,25 +203,32 @@ $(document).ready(function () {
 
 
     var modalParam = GetURLParameter('foodmodal');
+    var name = '';
 
     if(modalParam !== undefined){
         if(modalParam == 'wolowe-love'){
+            name = 'wolowina_qr';
             $(document).on('preload-off', function(){
                 openFoodModal('1963');
             });
         }else if(modalParam == 'indyczy-kasek'){
+            name = 'indyk_qr';
             $(document).on('preload-off', function(){
                 openFoodModal('1968');
             });
         }else if(modalParam == 'jagnie-wcina'){
+            name = 'jagniecina_qr';
             $(document).on('preload-off', function(){
                 openFoodModal('1970');
             });
         }else if(modalParam == 'kurcze-pieczone'){
+            name = 'kurczak_qr';
             $(document).on('preload-off', function(){
                 openFoodModal('1969');
             });
         }
+        var refresh = window.location.protocol + "//" + window.location.host + '/' + name;    
+        window.history.pushState({ path: refresh }, '', refresh);
     }
 
     var accordionpos = $('.foodModal__content').find('.accordion__element');

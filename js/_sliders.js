@@ -262,7 +262,7 @@ $(document).ready(function(){
             variableWidth: true,
             adaptiveHeight: true,
             dots: true,
-            arrows: false,
+            arrows: true,
             centerMode: true,
         });
     }
