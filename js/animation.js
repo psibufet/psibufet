@@ -1099,7 +1099,7 @@ $(document).ready(function() {
     var aboutHistory = $('.aboutHistory__heading').find('.getMarker');
     var aboutStep = $('.aboutSteps__step').find('.getMarker');
     var aboutTeam = $('.aboutTeam__content').find('.getMarker');
-    var aboutInfo = $('.aboutInfo__content').find('.getMarker');
+    var aboutInfo = $('.aboutInfo__heading').find('.getMarker');
 
     if($(aboutHistory).visible(true)){
         setTimeout(function(){

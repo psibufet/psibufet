@@ -774,6 +774,7 @@ function kartonyForm(){
 	$post = array(
 		"name" => $name,
 		"email" => $email,
+		"subject" => "Formularz zwrotu kartonów",
 		"message" => "mustnotbeempty"
 	);
 
@@ -943,3 +944,11 @@ function karmy_redirect(){
 		exit();
 	}
 }
+
+add_action( 'pre_get_posts', 'my_change_sort_order'); 
+function my_change_sort_order($query){
+	if(is_archive()):
+		$query->set( 'order', 'ASC' );
+		$query->set( 'orderby', 'title' );
+	endif;    
+};

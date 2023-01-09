@@ -91,29 +91,29 @@ get_header(); ?>
     <?php endif; ?>
 
     <section class="aboutInfo">
-        <div class="aboutInfo__wrap">
-            <div class="aboutInfo__content">
-                <h2 class="getMarker getMarker--lower"><?php the_field('aboutInfo_title'); ?></h2>
-                <p><?php the_field('aboutInfo_content'); ?></p>
-            </div>
-            <?php if(get_field('aboutInfo_images')): ?>
-            <div class="aboutInfo__images">
-                <?php while(have_rows('aboutInfo_images')): the_row(); 
-                    $image = get_sub_field('aboutInfo_images_image');
-                    $text = get_sub_field('aboutInfo_images_text');
-                ?>
-                <div class="image">
-                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
-                    <div class="image__caption">
-                        <h4><?php echo $text; ?></h4>
-                    </div>
+        <div class="aboutInfo__heading">
+            <h2 class="getMarker"><span class="marker">Dajemy</span> coś w zamian</h2>
+        </div>
+        <div class="aboutInfo__wrap container">
+            <?php while(have_rows('aboutInfo')): the_row();
+                $title = get_sub_field('aboutInfo_title');
+                $content = get_sub_field('aboutInfo_content');
+                $content_mobile = get_sub_field('aboutInfo_content_mobile');
+                $image01 = get_sub_field('aboutInfo_image1');
+                $image02 = get_sub_field('aboutInfo_image2');
+            ?>
+            <div class="aboutInfo__slide">
+                <div class="images">
+                    <img src="<?php echo $image01['url']; ?>" alt="<?php echo $image01['alt']; ?>" />
+                    <img src="<?php echo $image02['url']; ?>" alt="<?php echo $image02['alt']; ?>"/>
                 </div>
-                <?php endwhile; ?>
+                <div class="content">
+                    <h3 class="getMarker"><?php echo $title; ?></h3>
+                    <p class="desktop"><?php echo $content; ?></p>
+                    <p class="mobile"><?php echo $content_mobile; ?></p>
+                </div>
             </div>
-            <?php endif; ?>
-            <div class="aboutInfo__contentMobile">
-                <p><?php the_field('aboutInfo_content'); ?></p>
-            </div>
+            <?php endwhile; ?>
         </div>
     </section>
 

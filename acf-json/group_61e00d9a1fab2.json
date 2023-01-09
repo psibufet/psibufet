@@ -401,47 +401,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_61e72ccf9d2a0",
-            "label": "Tytuł",
-            "name": "aboutInfo_title",
-            "type": "text",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_61e72cdc9d2a1",
-            "label": "Treść",
-            "name": "aboutInfo_content",
-            "type": "textarea",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": 4,
-            "new_lines": "br"
-        },
-        {
-            "key": "field_61e72ce69d2a2",
-            "label": "Zdjęcia",
-            "name": "aboutInfo_images",
+            "key": "field_63b6caf1b06f9",
+            "label": "Coś w zamian",
+            "name": "aboutInfo",
             "type": "repeater",
             "instructions": "",
             "required": 1,
@@ -452,15 +414,72 @@
                 "id": ""
             },
             "collapsed": "",
-            "min": 0,
+            "min": 2,
             "max": 0,
-            "layout": "table",
+            "layout": "row",
             "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_61e72cfc9d2a3",
-                    "label": "Zdjęcie",
-                    "name": "aboutInfo_images_image",
+                    "key": "field_63b6cb0bb06fa",
+                    "label": "Tytuł",
+                    "name": "aboutInfo_title",
+                    "type": "text",
+                    "instructions": "Dodaj znacznik <span ><\/ span> do wyrazu, który chcesz podkreślić",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_63b6cb3db06fb",
+                    "label": "Treść (desktop)",
+                    "name": "aboutInfo_content",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 5,
+                    "new_lines": "br"
+                },
+                {
+                    "key": "field_63b6fef7c5b21",
+                    "label": "Treść (mobile)",
+                    "name": "aboutInfo_content_mobile",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 5,
+                    "new_lines": "br"
+                },
+                {
+                    "key": "field_63b6cb4db06fc",
+                    "label": "Zdjęcie pierwsze",
+                    "name": "aboutInfo_image1",
                     "type": "image",
                     "instructions": "",
                     "required": 1,
@@ -482,11 +501,11 @@
                     "mime_types": ""
                 },
                 {
-                    "key": "field_61e72d169d2a4",
-                    "label": "Tekst",
-                    "name": "aboutInfo_images_text",
-                    "type": "text",
-                    "instructions": "",
+                    "key": "field_63b6cb60b06fd",
+                    "label": "Zdjęcie drugie",
+                    "name": "aboutInfo_image2",
+                    "type": "image",
+                    "instructions": "To zdjęcie pojawi się tylko w wersji desktopowej strony i zniknie na wersjach mobilnych.",
                     "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -494,11 +513,16 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
                 }
             ]
         }
@@ -518,7 +542,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1647263198
+    "modified": 1672937223
 }

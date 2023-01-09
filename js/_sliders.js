@@ -239,30 +239,13 @@ $(document).ready(newHomepage_sliders);
  */
 $(document).ready(function(){
     if($(window).width() < 768){
-        $('.recipesPricing__list').on('init', function(event, slick){
-            let current = $(this).find('.exampleBox.slick-current'),
-                details = current.find('.exampleBox__details');
-
-            current.addClass('active');
-            details.find('.content').slideDown('fast');
-        });
-        $('.recipesPricing__list').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-            let content_current = $('.exampleBox[data-slick-index="' + currentSlide + '"]').find('.exampleBox__details'),
-                content_next = $('.exampleBox[data-slick-index="' + nextSlide + '"]').find('.exampleBox__details');
-
-            content_next.addClass('active');
-            content_next.find('.content').slideDown('fast');
-
-            content_current.removeClass('active');
-            content_current.find('.content').slideUp('fast');
-        });
         $('.recipesPricing__list').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
             variableWidth: true,
             adaptiveHeight: true,
             dots: true,
-            arrows: true,
+            arrows: false,
             centerMode: true,
         });
     }
@@ -283,4 +266,38 @@ $(document).ready(function(){
             initialSlide: 1,
         });
     }
+});
+
+/**
+ * About us
+ */
+$(document).ready(function(){
+    $('.aboutInfo__wrap').on('init', function(event, slick){
+        let current = $(this).find('.aboutInfo__slide.slick-current').find('.getMarker');
+        current.addClass('init');
+    });
+    $('.aboutInfo__wrap').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        let content_current = $('.aboutInfo__slide[data-slick-index="' + currentSlide + '"]').find('.getMarker'),
+            content_next = $('.aboutInfo__slide[data-slick-index="' + nextSlide + '"]').find('.getMarker');
+
+        content_next.addClass('init');
+        content_current.removeClass('init');
+    });
+    $('.aboutInfo__wrap').slick({
+        slidesToScroll: 1,
+        infinite: true,
+        variableWidth: false,
+        arrows: true,
+        dots: true,
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 1,
+                    centerMode: true,
+                    variableWidth: true,
+                }
+            }
+        ]
+    });
 });

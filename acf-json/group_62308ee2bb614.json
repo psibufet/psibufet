@@ -19,6 +19,25 @@
             "endpoint": 0
         },
         {
+            "key": "field_63b70290a634d",
+            "label": "Krótki opis rasy",
+            "name": "raspost_excerpt",
+            "type": "textarea",
+            "instructions": "Krótki opis rasy wyświetlany na liście wszystkich ras (\/rasy-psow)",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": "br"
+        },
+        {
             "key": "field_62f636e31013e",
             "label": "Zdjęcie wyróżniające (lista ras)",
             "name": "raspost_featured",
@@ -249,7 +268,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1660303104
+    "modified": 1672941723
 }

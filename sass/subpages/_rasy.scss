@@ -110,12 +110,6 @@
         margin: 0 auto;
     }
     .rasaPost{
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
         width: calc(100% / 3 - 10px);
         min-height: 362px;
         margin: 0 15px 20px 0;
@@ -132,15 +126,41 @@
             opacity: .8;
         }
 
-        h2{
-            font-size: 48px;
-            line-height: 58px;
-            font-weight: 400;
-            font-family: 'Bebas Neue', sans-serif;
-            color: #fff;
-            margin: 0 0 26px;
-            text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
-            text-align: center;
+        &__image{
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 0;
+            padding-bottom: 100%;
+            position: relative;
+
+            h2{
+                font-size: 48px;
+                line-height: 58px;
+                font-weight: 400;
+                font-family: 'Bebas Neue', sans-serif;
+                color: #fff;
+                margin: 0;
+                text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+                text-align: center;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 20px;
+                padding: 0 10px;
+            }
+        }
+        &__content{
+            padding: 15px;
+            border: 1px solid rgba(0, 0, 0, .1);
+
+            p{
+                font-size: 16px;
+                line-height: 1.4;
+                text-align: justify;
+                color: #000;
+            }
         }
     }
 }
@@ -176,7 +196,15 @@
             h2{
                 font-size: 28px;
                 line-height: 34px;
-                margin: 0 0 12px;
+                bottom: 10px;
+            }
+
+            &__content{
+                padding: 10px 15px;
+
+                p{
+                    font-size: 14px;
+                }
             }
         }
     }
