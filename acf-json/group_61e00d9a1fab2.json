@@ -414,7 +414,7 @@
                 "id": ""
             },
             "collapsed": "",
-            "min": 2,
+            "min": 0,
             "max": 0,
             "layout": "row",
             "button_label": "",
@@ -544,5 +544,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1672937223
+    "modified": 1673301792
 }
