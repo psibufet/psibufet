@@ -49,7 +49,7 @@ get_header(); ?>
         <div class="kartonyContact__wrap container">
             <form class="kartonyForm">
                 <div class="kartonyForm__heading">
-                    <h2 class="getMarker">Masz już <span class="marker">5 kartonów</span>?</h2>
+                    <h2 class="getMarker">Masz już zestaw z <span class="marker">5 dostaw</span>?</h2>
                     <p>Wypełnij formularz zwrotu opakowań!</p>
                 </div>
                 <input type="text" name="kartonyName" placeholder="Imię i nazwisko" required/>
