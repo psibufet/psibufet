@@ -19409,6 +19409,17 @@ body.admin-bar .pagePDF {
   padding: 0 20px;
   margin: 0 auto;
 }
+.rascatList__desc {
+  margin: 20px auto 0;
+  max-width: 1160px;
+}
+.rascatList__desc p {
+  font-size: 14px;
+  line-height: 18px;
+  color: #000;
+  text-align: center;
+  margin: 0;
+}
 .rascatList .rasaPost {
   width: calc(33.3333333333% - 10px);
   min-height: 362px;

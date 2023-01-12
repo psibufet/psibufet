@@ -109,6 +109,18 @@
         padding: 0 20px;
         margin: 0 auto;
     }
+    &__desc{
+        margin: 20px auto 0;
+        max-width: 1160px;
+
+        p{
+            font-size: 14px;
+            line-height: 18px;
+            color: #000;
+            text-align: center;
+            margin: 0;
+        }
+    }
     .rasaPost{
         width: calc(100% / 3 - 10px);
         min-height: 362px;

@@ -34,14 +34,14 @@ get_header(); ?>
                     <div class="rasaPost__image" style="background-image: url('<?php echo $featured; ?>');">
                         <h2><?php the_title(); ?></h2>
                     </div>
-                    <?php if(get_field('raspost_excerpt')): ?>
-                    <div class="rasaPost__content">
-                        <p><?php echo get_field('raspost_excerpt'); ?></p>
-                    </div>
-                    <?php endif; ?>
                 </a>
             <?php endwhile; ?>
         </div>
+        <?php if(get_field('seo_desc', 'cpt_rasy-psow_ustawienia')): ?>
+        <div class="rascatList__desc container">
+            <?php echo get_field('seo_desc', 'cpt_rasy-psow_ustawienia'); ?>
+        </div>
+        <?php endif; ?>
     </section>
     <section class="pbQuestions">
         <h2 class="pbQuestions__title getMarker getMarker--lower">Masz <span class="marker">pytanie</span>?</h2>
