@@ -69,8 +69,8 @@
                 <div class="siteInfo__right">
                     <a target="_blank" href="https://wizytowka.rzetelnafirma.pl/FKSA1C9O" rel="nofollow" class="rzetelna"><img src="<?php echo get_template_directory_uri() . '/images/icons/rzetelnafirma_ico.svg'; ?>"/></a>
                     <a class="ue"><img src="<?php echo get_template_directory_uri() . '/images/icons/ue_ico.svg'; ?>" /></a>
-                    <a href="https://psibufet.pl/regulamin.pdf" target="_blank" class="dir">Regulamin</a>
-                    <a href="https://psibufet.pl/polityka-prywatnosci.pdf" target="_blank" class="dir">Polityka prywatności</a>
+                    <a href="https://psibufet.pl/regulamin" target="_blank" class="dir">Regulamin</a>
+                    <a href="https://psibufet.pl/polityka-prywatnosci" target="_blank" class="dir">Polityka prywatności</a>
                 </div>
             </div>
         </div>
