@@ -1,0 +1,111 @@
+.psibufet{
+    &--terms{
+        border-bottom: 2px solid rgba(0, 0, 0, .1);
+    }
+}
+
+.termsHeading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    box-shadow: 0px 4px 0px rgba(0, 0, 0, .1);
+    padding: 10px 0;
+
+    &__wrap{
+        h1{
+            font-size: 35px;
+            line-height: 42px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: 400;
+            color: #fff;
+            margin: 0;
+            text-align: center;
+        }
+    }
+}
+.termsContent{
+    max-width: 920px;
+    margin: 30px auto;
+
+    &__wrap{
+        padding: 0 15px;
+    }
+    &__row{
+        h2{
+            font-size: 21px;
+            line-height: 28px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: 400;
+            color: #000;
+            margin: 0 0 12px;
+        }
+        &>ul,
+        &>ol{
+            margin: 0 0 15px;
+
+            &>li{
+                padding-bottom: 10px;
+            }
+        }
+        ul,
+        ol{
+            padding: 0 0 0 13px;
+
+            li{
+                font-size: 12px;
+                line-height: 18px;
+                color: #000;
+                text-align: justify;
+
+                a{
+                    color: #000;
+                    text-decoration: underline !important;
+                    transition: ease .3s;
+
+                    &:hover{
+                        opacity: .75;
+                    }
+                }
+
+                ul,
+                ol{
+                    padding: 10px 0 0 35px;
+                    list-style: lower-roman;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 991px){
+    .termsHeading{
+        &__wrap{
+            h1{
+                font-size: 28px;
+                line-height: 34px;
+            }
+        }
+    }
+    .termsContent{
+        max-width: 740px;
+    }
+}
+@media (max-width: 767px){
+    .termsContent{
+        max-width: 100%;
+
+        &__row{
+            h2{
+                font-size: 18px;
+                line-height: 21px;
+            }
+            ul,
+            ol{
+                li{
+                    font-size: 10px;
+                    line-height: 16px;
+                }
+            }
+        }
+    }
+}

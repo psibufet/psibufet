@@ -22793,6 +22793,102 @@ body.page-template-page_maintenance .siteFooter {
     align-items: flex-start;
   }
 }
+.psibufet--terms {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.termsHeading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+  box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+}
+.termsHeading__wrap h1 {
+  font-size: 35px;
+  line-height: 42px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+}
+
+.termsContent {
+  max-width: 920px;
+  margin: 30px auto;
+}
+.termsContent__wrap {
+  padding: 0 15px;
+}
+.termsContent__row h2 {
+  font-size: 21px;
+  line-height: 28px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  color: #000;
+  margin: 0 0 12px;
+}
+.termsContent__row > ul, .termsContent__row > ol {
+  margin: 0 0 15px;
+}
+.termsContent__row > ul > li, .termsContent__row > ol > li {
+  padding-bottom: 10px;
+}
+.termsContent__row ul,
+.termsContent__row ol {
+  padding: 0 0 0 13px;
+}
+.termsContent__row ul li,
+.termsContent__row ol li {
+  font-size: 12px;
+  line-height: 18px;
+  color: #000;
+  text-align: justify;
+}
+.termsContent__row ul li a,
+.termsContent__row ol li a {
+  color: #000;
+  text-decoration: underline !important;
+  transition: ease 0.3s;
+}
+.termsContent__row ul li a:hover,
+.termsContent__row ol li a:hover {
+  opacity: 0.75;
+}
+.termsContent__row ul li ul,
+.termsContent__row ul li ol,
+.termsContent__row ol li ul,
+.termsContent__row ol li ol {
+  padding: 10px 0 0 35px;
+  list-style: lower-roman;
+}
+
+@media (max-width: 991px) {
+  .termsHeading__wrap h1 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .termsContent {
+    max-width: 740px;
+  }
+}
+@media (max-width: 767px) {
+  .termsContent {
+    max-width: 100%;
+  }
+  .termsContent__row h2 {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .termsContent__row ul li,
+.termsContent__row ol li {
+    font-size: 10px;
+    line-height: 16px;
+  }
+}
 body {
   margin: 0;
 }
