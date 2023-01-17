@@ -295,7 +295,7 @@ get_header(); ?>
             </div>
             <div class="homeReturn__content">
                 <h2 class="getMarker">Wylizana miska lub <span class="marker">zwrot</span> pieniędzy</h2>
-                <p>Jesteśmy pewni, że Twój pies pokocha PsiBufet, dlatego na nasze jedzenie dajemy <a href="https://psibufet.pl/regulamin.pdf" target="_blank">Gwarancję Czystej Miski</a>.</p>
+                <p>Jesteśmy pewni, że Twój pies pokocha PsiBufet, dlatego na nasze jedzenie dajemy <a href="https://psibufet.pl/regulamin" target="_blank">Gwarancję Czystej Miski</a>.</p>
             </div>
         </div>
     </section>
