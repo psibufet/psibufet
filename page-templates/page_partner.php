@@ -90,6 +90,9 @@ get_header(); ?>
                     <div class="form__submit">
                         <button type="submit" class="btn btn--button btn--center"><span>Dołącz teraz</span></button>
                     </div>
+                    <div class="form__info">
+                        <p>Klikając “Dołącz teraz” wyrażasz zgodę na przetwarzanie danych osobowych przez Feedwell zgodnie z <a href="https://psibufet.pl/polityka-prywatnosci" target="_blank">Polityką prywatności</a> w celu obsługi Twojego zgłoszenia oraz zaprezentowania oferty programu partnerskiego Feedwell.</p>
+                    </div>
                 </form>
             </div>
         </div>

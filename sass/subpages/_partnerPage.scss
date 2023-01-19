@@ -575,6 +575,26 @@
                     box-shadow: none;
                 }
             }
+            &__info{
+                margin: 20px 0 0;
+
+                p{
+                    font-size: 12px;
+                    line-height: 16px;
+                    color: $primarycolorlight;
+                    margin: 0;
+                    text-align: justify;
+
+                    a{
+                        color: inherit !important;
+                        text-decoration: underline !important;
+
+                        &:hover{
+                            opacity: .7;
+                        }
+                    }
+                }
+            }
         }
     }
 }

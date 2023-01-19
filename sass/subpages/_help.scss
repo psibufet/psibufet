@@ -823,6 +823,27 @@
                 }
             }
         }
+        &__info{
+            margin: 20px auto 0;
+            max-width: 420px;
+
+            p{
+                font-size: 12px;
+                line-height: 16px;
+                color: $primarycolorlight;
+                margin: 0;
+                text-align: justify;
+
+                a{
+                    color: inherit !important;
+                    text-decoration: underline !important;
+
+                    &:hover{
+                        opacity: .7;
+                    }
+                }
+            }
+        }
         &__notice{
             display: none;
             max-width: 420px;

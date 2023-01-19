@@ -13153,6 +13153,23 @@ body.page-template-page_rmkt .homeFoodinfo__right h2 .marker {
   border-radius: 0;
   box-shadow: none;
 }
+.partnerJoin__form .form__info {
+  margin: 20px 0 0;
+}
+.partnerJoin__form .form__info p {
+  font-size: 12px;
+  line-height: 16px;
+  color: #7f7f7f;
+  margin: 0;
+  text-align: justify;
+}
+.partnerJoin__form .form__info p a {
+  color: inherit !important;
+  text-decoration: underline !important;
+}
+.partnerJoin__form .form__info p a:hover {
+  opacity: 0.7;
+}
 
 @media (max-width: 767px) {
   .partnerJoin {
@@ -16691,6 +16708,24 @@ body.page-template-page_ksiazka .siteHeader--promocode {
   transform: translate(0, -50%);
   right: 0;
   transition: ease 0.3s;
+}
+.helpAction .helpForm__info {
+  margin: 20px auto 0;
+  max-width: 420px;
+}
+.helpAction .helpForm__info p {
+  font-size: 12px;
+  line-height: 16px;
+  color: #7f7f7f;
+  margin: 0;
+  text-align: justify;
+}
+.helpAction .helpForm__info p a {
+  color: inherit !important;
+  text-decoration: underline !important;
+}
+.helpAction .helpForm__info p a:hover {
+  opacity: 0.7;
 }
 .helpAction .helpForm__notice {
   display: none;

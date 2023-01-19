@@ -103,6 +103,9 @@ get_header(); ?>
                         <button type="submit"><span>Wyślij</span></button>
                         <div class="notice"><p>Uzupełnij brakujące pola.</p></div>
                     </div>
+                    <div class="helpForm__info">
+                        <p>Klikając “WYŚLIJ” wyrażasz zgodę na przetwarzanie danych osobowych przez Feedwell zgodnie z <a href="https://psibufet.pl/polityka-prywatnosci" target="_blank">Polityką prywatności*</a> w celu obsługi Twojego zgłoszenia oraz zaprezentowania oferty Feedwell.</p>
+                    </div>
                     <div class="helpForm__notice"></div>
                 </div>
             </form>
