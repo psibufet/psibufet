@@ -846,6 +846,17 @@ function my_acf_init_block_types() {
             'icon'              => 'admin-comments',
             'keywords'          => array('rasa_desc', 'quote'),
         ));
+
+		// Product block
+        acf_register_block(array(
+            'name'              => 'products',
+            'title'             => __('Produkty'),
+            'description'       => __('Blok produktowy na stronie wpisu'),
+			'render_template'   => 'template-parts/blocks/products.php',
+            'category'          => 'formatting',
+            'icon'              => 'admin-comments',
+            'keywords'          => array( 'products', 'produkty' ),
+        ));
     }
 }
 
