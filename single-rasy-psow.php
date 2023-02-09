@@ -77,12 +77,12 @@ get_header(); ?>
 
         <!-- Content END -->
 
-        <!-- <aside class="postSidebar">
+        <aside class="postSidebar">
             <a href="<?php echo get_field('rasa_banner_url', 'cpt_rasy-psow_ustawienia'); ?>" target="_blank">
                 <img src="<?php echo get_field('rasa_banner', 'cpt_rasy-psow_ustawienia')['url']; ?>" alt="<?php echo get_field('rasa_banner', 'cpt_rasy-psow_ustawienia')['alt']; ?>" class="desktop"/>
-                <img src="<?php echo get_field('rasa_banner_mobile', 'cpt_rasy-psow_ustawienia')['url']; ?>" alt="<?php echo get_field('rasa_banner_mobile', 'cpt_rasy-psow_ustawienia')['alt']; ?>" class="mobile"/>
+                <!-- <img src="<?php echo get_field('rasa_banner_mobile', 'cpt_rasy-psow_ustawienia')['url']; ?>" alt="<?php echo get_field('rasa_banner_mobile', 'cpt_rasy-psow_ustawienia')['alt']; ?>" class="mobile"/> -->
             </a>
-        </aside> -->
+        </aside>
     </section>
 
     <section class="postAuthor">
