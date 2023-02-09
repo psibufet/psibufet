@@ -54,7 +54,7 @@
                         <?php echo get_sub_field('rasa_sections_content'); ?>
                     </div>
                     <?php else: ?>
-                    <div class="breedInfo__banner">
+                    <a href="<?php the_field('ad_link', 'cpt_rasy-psow_ustawienia'); ?>" class="breedInfo__banner" style="display: block;">
                         <img src="<?php echo get_template_directory_uri() . '/images/lpsale/psibufet_logo_lp.svg'; ?>"/>
                         <h3><?php the_field('ad_title', 'cpt_rasy-psow_ustawienia'); ?></h3>
                         <div class="usp">
@@ -66,9 +66,9 @@
                             <?php endwhile; ?>
                         </div>
                         <div class="cta">
-                            <a href="<?php the_field('ad_link', 'cpt_rasy-psow_ustawienia'); ?>" class="btn btn--center"><span>Dowiedz się więcej</span></a>
+                            <p class="btn btn--center"><span>Dowiedz się więcej</span></p>
                         </div>
-                    </div>
+                    </a>
                     <?php endif; ?>
                 <?php endwhile; ?>
             <?php endif; ?>
