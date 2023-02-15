@@ -953,6 +953,12 @@ function karmy_redirect(){
 	}else if(strpos($url, '/jagniecina_qr') !== false){
 		wp_redirect( home_url() . '/nasze-przepisy?foodmodal=jagnie-wcina');
 		exit();
+	}else if(strpos($url, '/wieprzowina_qr') !== false){
+		wp_redirect( home_url() . '/nasze-przepisy?foodmodal=wieprzowina');
+		exit();
+	}else if(strpos($url, '/ryba_qr') !== false){
+		wp_redirect( home_url() . '/nasze-przepisy?foodmodal=ryba');
+		exit();
 	}
 }
 

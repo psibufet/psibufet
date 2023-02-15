@@ -216,15 +216,25 @@ $(document).ready(function () {
             $(document).on('preload-off', function(){
                 openFoodModal('1968');
             });
+        }else if(modalParam == 'kurcze-pieczone'){
+            name = 'kurczak_qr';
+            $(document).on('preload-off', function(){
+                openFoodModal('1969');
+            });
         }else if(modalParam == 'jagnie-wcina'){
             name = 'jagniecina_qr';
             $(document).on('preload-off', function(){
                 openFoodModal('1970');
             });
-        }else if(modalParam == 'kurcze-pieczone'){
-            name = 'kurczak_qr';
+        }else if(modalParam == 'wieprzowina'){
+            name = 'wieprzowina_qr';
             $(document).on('preload-off', function(){
-                openFoodModal('1969');
+                openFoodModal('1970');
+            });
+        }else if(modalParam == 'ryba'){
+            name = 'ryba_qr';
+            $(document).on('preload-off', function(){
+                openFoodModal('1970');
             });
         }
         var refresh = window.location.protocol + "//" + window.location.host + '/' + name;    
