@@ -1262,14 +1262,14 @@ body.promocode-blackweek .siteHeader--promocode {
 }
 .foodTile {
   width: 100%;
-  max-width: 458px;
+  max-width: 370px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
   position: relative;
 }
 .foodTile__gallery {
   display: block;
-  height: 285px;
+  height: 270px;
   margin-bottom: 0 !important;
 }
 .foodTile__gallery .galleryImage {
@@ -1281,6 +1281,10 @@ body.promocode-blackweek .siteHeader--promocode {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.foodTile__gallery .slick-list,
+.foodTile__gallery .slick-track {
+  height: inherit;
 }
 .foodTile__gallery .slick-arrow {
   height: 28px;
@@ -1367,13 +1371,13 @@ body.promocode-blackweek .siteHeader--promocode {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 56px;
+  height: 45px;
   position: relative;
 }
 .foodTile__name h3 {
   font-family: "Bebas Neue";
   font-size: 42px;
-  line-height: inherit;
+  line-height: 1;
   font-weight: 400;
   color: #fff;
   margin: 0;
@@ -1382,9 +1386,9 @@ body.promocode-blackweek .siteHeader--promocode {
 }
 .foodTile__name img {
   position: absolute;
-  right: 20px;
+  right: 8px;
   top: -10px;
-  max-width: 100px;
+  max-width: 70px;
 }
 .foodTile__content {
   display: flex;

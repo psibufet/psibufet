@@ -6,7 +6,7 @@ get_header();
 
 if($_SERVER['SERVER_NAME'] == 'psibufet.local'){
     $howitworks = 1996;
-    $recipesPage = 1956;
+    $recipesPage = 2271;
 }else if($_SERVER['SERVER_NAME'] == 'psibufet.codestick.pl'){
     $howitworks = 1985;
     $recipesPage = 1955;
@@ -169,6 +169,7 @@ if($_SERVER['SERVER_NAME'] == 'psibufet.local'){
             </div>
             <div class="recipesList">
                 <?php
+                $tileType = 'small';
                 $flavours = get_field('recipesMenu_flavours', $recipesPage);
                 foreach( $flavours as $post ){
                     setup_postdata($post);
