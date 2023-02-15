@@ -218,7 +218,7 @@
                     "name": "aboutSteps_image_title",
                     "type": "text",
                     "instructions": "",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -269,7 +269,7 @@
                     "name": "aboutSteps_image_two_title",
                     "type": "text",
                     "instructions": "",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": [
                         [
                             {
@@ -328,25 +328,6 @@
             "endpoint": 0
         },
         {
-            "key": "field_61e01c3ca1f7d",
-            "label": "GIF",
-            "name": "aboutTeam_gif",
-            "type": "file",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "library": "all",
-            "min_size": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
             "key": "field_61e01c59a1f7f",
             "label": "Tytuł",
             "name": "aboutTeam_title",
@@ -383,6 +364,51 @@
             "maxlength": "",
             "rows": 4,
             "new_lines": "br"
+        },
+        {
+            "key": "field_63ed06a970f71",
+            "label": "Zdjęcia",
+            "name": "aboutTeam_images",
+            "type": "repeater",
+            "instructions": "Pierwsze dwa zdjęcia wyświetlą się zarówno w wersji desktop jak i mobile. Ostatnie zostanie ukryte w wersji mobilnej.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 3,
+            "max": 3,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_63ed06be70f72",
+                    "label": "Zdjęcie",
+                    "name": "aboutTeam_images_image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                }
+            ]
         },
         {
             "key": "field_61e72cc19d29f",
@@ -544,5 +570,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1673301792
+    "modified": 1676478183
 }

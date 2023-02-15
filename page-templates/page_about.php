@@ -51,18 +51,22 @@ get_header(); ?>
                     <div class="image__image">
                         <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
 
+                        <?php if($imageTitle): ?>
                         <div class="image__caption<?php if($imageIcon): ?> image__caption--icon<?php endif; ?>">
                             <h4><?php echo $imageTitle; ?></h4>
                         </div>
+                        <?php endif; ?>
                     </div>
 
                     <?php if($imageType == 'two'): ?>
                         <div class="image__image">
                             <img src="<?php echo $imageTwo['url']; ?>" alt="<?php echo $imageTwo['alt']; ?>"/>
 
+                            <?php if($imageTwoTitle): ?>
                             <div class="image__caption<?php if($imageIcon): ?> image__caption--icon<?php endif; ?>">
                                 <h4><?php echo $imageTwoTitle; ?></h4>
                             </div>
+                            <?php endif; ?>
                         </div>
                     <?php endif; ?>
                 </div>
@@ -74,21 +78,23 @@ get_header(); ?>
         </div>
     </section>
 
-    <?php if(get_field('aboutTeam_gif')): ?>
     <section class="aboutTeam">
         <div class="aboutTeam__wrap">
             <div class="aboutTeam__content">
-                <div class="video video--desktop">
-                    <img src="<?php echo get_field('aboutTeam_gif')['url']; ?>" alt="<?php echo get_field('aboutTeam_gif')['alt']; ?>"/>
-                </div>
                 <div class="content">
                     <h3 class="getMarker getMarker--small"><?php the_field('aboutTeam_title'); ?></h3>
                     <p><?php the_field('aboutTeam_content'); ?></p>
                 </div>
+                <div class="images">
+                    <?php while(have_rows('aboutTeam_images')): the_row(); ?>
+                    <div class="images__image">
+                        <img src="<?php echo get_sub_field('aboutTeam_images_image')['url'] ?>" alt="<?php echo get_sub_field('aboutTeam_images_image')['alt'] ?>"/>
+                    </div>
+                    <?php endwhile; ?>
+                </div>
             </div>
         </div>
     </section>
-    <?php endif; ?>
 
     <section class="aboutInfo">
         <div class="aboutInfo__heading">

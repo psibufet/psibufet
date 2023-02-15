@@ -17518,113 +17518,108 @@ body.page-template-page_ksiazka .siteHeader--promocode {
   }
 }
 .aboutTeam {
-  padding: 32px 0 40px;
-  background-color: #F7BE45;
+  padding: 40px 0;
+  background-color: #ECF0F7;
 }
 .aboutTeam__wrap {
-  max-width: 1200px;
-  padding: 0 15px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 .aboutTeam__content {
   display: flex;
-  justify-content: space-between;
-  height: auto;
+  align-items: center;
 }
-.aboutTeam__content .video {
-  width: calc(100% - 400px);
-  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+.aboutTeam__content .content {
+  width: 100%;
+  max-width: 50%;
 }
-.aboutTeam__content .video img {
+.aboutTeam__content .content h3 {
+  font-size: 41px;
+  line-height: 1.2;
+  font-family: "Bebas Neue", sans-serif;
+  color: #000;
+  font-weight: 300;
+  margin: 0 0 16px;
+  text-align: center;
+}
+.aboutTeam__content .content p {
+  font-size: 16px;
+  line-height: 1.3;
+  color: #000;
+  text-align: justify;
+  margin: 0 auto;
+  max-width: 500px;
+}
+.aboutTeam__content .images {
+  width: 100%;
+  max-width: 50%;
+  display: flex;
+  align-items: center;
+}
+.aboutTeam__content .images__image {
+  display: flex;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+  margin-right: 30px;
+}
+.aboutTeam__content .images__image:last-of-type {
+  margin-right: 0;
+}
+.aboutTeam__content .images__image img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
-.aboutTeam__content .content {
-  width: 360px;
-  height: inherit;
-  margin-left: 40px;
-  background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
-  position: relative;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.aboutTeam__content .content:before {
-  content: "";
-  width: 20px;
-  height: 20px;
-  background-color: #fff;
-  border-left: 1px solid rgba(0, 0, 0, 0.2);
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
-  transform: rotate(-45deg) translate(0, -50%);
-  position: absolute;
-  left: -4px;
-  top: 50%;
-  z-index: 2;
-}
-.aboutTeam__content .content h3 {
-  font-size: 30px;
-  line-height: 42px;
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
-  color: #000;
-  text-align: center;
-  margin: 0 0 8px;
-}
-.aboutTeam__content .content p {
-  font-size: 16px;
-  line-height: 20px;
-  color: #4c4c4c;
-  text-align: center;
-  max-width: 300px;
-  margin: 0 auto;
-}
 
-@media (max-width: 991px) {
-  .aboutTeam__content {
-    height: auto;
-    flex-direction: column;
-    max-width: 450px;
-    margin: 0 auto;
-  }
-  .aboutTeam__content .video {
-    width: 100%;
-    height: auto;
-    margin-bottom: 30px;
-  }
-  .aboutTeam__content .video .wp-video {
-    display: block;
-    height: auto;
-    width: 100% !important;
-  }
-  .aboutTeam__content .video .wp-video .mejs-video {
-    display: block;
-    width: 100% !important;
-  }
-  .aboutTeam__content .content {
-    width: 100%;
-    margin-left: 0;
-  }
-  .aboutTeam__content .content:before {
-    transform: rotate(45deg);
-    top: -10px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+@media (max-width: 1440px) {
+  .aboutTeam__wrap {
+    max-width: 1150px;
   }
 }
-@media (max-width: 767px) {
-  .aboutTeam {
-    padding: 24px 0;
+@media (max-width: 1199px) {
+  .aboutTeam__wrap {
+    max-width: 960px;
   }
   .aboutTeam__content .content p {
     font-size: 14px;
-    line-height: 18px;
+    max-width: 390px;
+  }
+  .aboutTeam__content .images__image {
+    margin-right: 15px;
+  }
+}
+@media (max-width: 991px) {
+  .aboutTeam {
+    padding: 28px 0 24px;
+  }
+  .aboutTeam__wrap {
+    max-width: 530px;
+    padding: 0 15px;
+  }
+  .aboutTeam__content {
+    flex-direction: column;
+  }
+  .aboutTeam__content .content {
+    max-width: 100%;
+    margin-bottom: 24px;
+  }
+  .aboutTeam__content .images {
+    max-width: 100%;
+    justify-content: center;
+  }
+  .aboutTeam__content .images__image:last-of-type {
+    display: none;
+  }
+  .aboutTeam__content .images__image:nth-child(2) {
+    margin-right: 0;
+  }
+}
+@media (max-width: 575px) {
+  .aboutTeam {
+    padding: 18px 0 24px;
+  }
+  .aboutTeam__content .content h3 {
+    font-size: 32px;
+    margin: 0 0 10px;
   }
 }
 .aboutInfo {
