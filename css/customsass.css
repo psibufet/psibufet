@@ -15128,6 +15128,28 @@ body.page-template-page_ksiazka .siteHeader--promocode {
 .rasaHeader--pekinczyk .dog:after {
   background-image: url("/wp-content/themes/psibufet/images/lprasy/desktop/pekinczyk.png");
 }
+.rasaHeader--golden .dog:before {
+  background-image: unset;
+}
+.rasaHeader--golden .dog:after {
+  background-image: url("/wp-content/themes/psibufet/images/lprasy/desktop/golden.png");
+}
+@media (min-width: 1400px) {
+  .rasaHeader--golden .dog:after {
+    background-size: 560px !important;
+  }
+}
+.rasaHeader--shiba .dog:before {
+  background-image: unset;
+}
+.rasaHeader--shiba .dog:after {
+  background-image: url("/wp-content/themes/psibufet/images/lprasy/desktop/shiba.png");
+}
+@media (min-width: 1400px) {
+  .rasaHeader--shiba .dog:after {
+    background-size: 555px !important;
+  }
+}
 .rasaHeader .dog {
   display: block;
   position: absolute;
@@ -15165,10 +15187,10 @@ body.page-template-page_ksiazka .siteHeader--promocode {
 }
 .rasaHeader .hand:after {
   content: "";
-  background-image: url("/wp-content/themes/psibufet/images/lprasy/paczka_karmy.png");
+  background-image: url("/wp-content/themes/psibufet/images/lprasy/paczka_karmy_new.png");
   background-repeat: no-repeat;
-  background-size: 375px;
-  width: 375px;
+  background-size: 430px;
+  width: 430px;
   height: 600px;
   position: relative;
   display: block;
@@ -15317,6 +15339,24 @@ body.page-template-page_ksiazka .siteHeader--promocode {
     width: 383px !important;
     height: 620px !important;
   }
+  .rasaHeader--golden .dog:before {
+    display: none;
+  }
+  .rasaHeader--golden .dog:after {
+    background-image: url("/wp-content/themes/psibufet/images/lprasy/mobile/golden.png");
+    background-size: 216px !important;
+    width: 216px !important;
+    height: 620px !important;
+  }
+  .rasaHeader--shiba .dog:before {
+    display: none;
+  }
+  .rasaHeader--shiba .dog:after {
+    background-image: url("/wp-content/themes/psibufet/images/lprasy/mobile/shiba.png");
+    background-size: 216px !important;
+    width: 216px !important;
+    height: 620px !important;
+  }
   .rasaHeader .dog:before {
     background-size: 180px;
     width: 180px;
@@ -15328,12 +15368,12 @@ body.page-template-page_ksiazka .siteHeader--promocode {
     height: 620px;
   }
   .rasaHeader .hand {
-    top: -50px;
+    top: -10px;
   }
   .rasaHeader .hand:after {
-    background-size: 220px;
-    width: 220px;
-    height: 280px;
+    background-size: 250px;
+    width: 250px;
+    height: 300px;
   }
   .rasaHeader__wrap h3 {
     font-size: 20px;
@@ -15356,13 +15396,13 @@ body.page-template-page_ksiazka .siteHeader--promocode {
     align-items: flex-end;
   }
   .rasaHeader .hand {
-    top: -30px;
-    right: -20px;
+    top: -10px;
+    right: 0;
   }
   .rasaHeader .hand:after {
-    background-size: 180px;
-    width: 180px;
-    height: 230px;
+    background-size: 220px;
+    width: 220px;
+    height: 265px;
   }
   .rasaHeader__wrap {
     padding-bottom: 20px;

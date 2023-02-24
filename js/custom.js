@@ -1505,6 +1505,8 @@ $(document).ready(function(){
             'amstaff',
             'buldog',
             'pekinczyk',
+            'golden',
+            'shiba',
         ]
         var rasaList = [
             'Labradora',
@@ -1517,6 +1519,8 @@ $(document).ready(function(){
             'Amstaffa',
             'Buldoga francuskiego',
             'Pekińczyka',
+            'Golden Retrievera',
+            'Shiby',
         ];
         if(rasaURL.indexOf(getRasa) !== -1){
             var rasy = new Map();
