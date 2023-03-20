@@ -19193,6 +19193,36 @@ body.admin-bar .pagePDF {
   top: 50%;
   transform: translate(0, -50%);
 }
+.typContent .giftInfo {
+  padding: 15px 0 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+.typContent .giftInfo__heading {
+  margin: 0 0 15px;
+}
+.typContent .giftInfo__heading h2 {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 400;
+  color: #000;
+  font-family: "Bebas Neue", sans-serif;
+  margin: 0 0 12px;
+  text-align: center;
+}
+.typContent .giftInfo__heading p {
+  font-size: 14px;
+  line-height: 17px;
+  color: #000;
+  text-align: justify;
+  margin: 0;
+}
+.typContent .giftInfo__wrap .image {
+  max-width: 360px;
+  margin: 0 auto;
+}
+.typContent .giftInfo__wrap .image img {
+  width: 100%;
+}
 .typContent__que {
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.2);
