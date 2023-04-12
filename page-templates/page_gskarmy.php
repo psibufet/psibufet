@@ -120,6 +120,11 @@ get_header(); ?>
                 $sklad = get_field('flavourPopup_sklad');
                 $analityczny = get_field('flavourPopup_skladanalityczny');
                 $dodatki = get_field('flavourPopup_dodatki');
+
+                // New
+                $sklad_new = get_field('flavourPopup_new_sklad');
+                $analityczny_new = get_field('flavourPopup_new_skladanalityczny');
+                $dodatki_new = get_field('flavourPopup_new_dodatki');
             ?>
             <div class="foodModal__content">
                 <div class="gallery">
@@ -173,30 +178,71 @@ get_header(); ?>
                 </div>
                 <div class="accordion">
                     <div class="accordion__element accordion__element--close">
-                        <div class="heading">
-                            <p>Skład</p>
+                        <div class="heading" data-info="main-accordion">
+                            <p>Nowy skład</p>
                             <img class="no-lazyload" data-original="<?php echo get_template_directory_uri() . '/images/icons/arrow_down_red_ico.svg'; ?>"/>
                         </div>
                         <div class="content">
-                            <p><?php echo $sklad; ?></p>
+                            <div class="innerAccordion">
+                                <div class="innerAccordion__element innerAccordion__element--close">
+                                    <div class="heading" data-info="child-accordion">
+                                        <p>Skład</p>
+                                    </div>
+                                    <div class="content_inner">
+                                        <p><?php echo $sklad_new; ?></p>
+                                    </div>
+                                </div>
+                                <div class="innerAccordion__element innerAccordion__element--close">
+                                    <div class="heading" data-info="child-accordion">
+                                        <p>Skład analityczny</p>
+                                    </div>
+                                    <div class="content_inner">
+                                        <p><?php echo $analityczny_new; ?></p>
+                                    </div>
+                                </div>
+                                <div class="innerAccordion__element innerAccordion__element--close">
+                                    <div class="heading" data-info="child-accordion">
+                                        <p>Dodatki</p>
+                                    </div>
+                                    <div class="content_inner">
+                                        <p><?php echo $dodatki_new; ?></p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="accordion__element accordion__element--close">
-                        <div class="heading">
-                            <p>Skład analityczny</p>
+                        <div class="heading" data-info="main-accordion">
+                            <p>Dotychczasowy skład</p>
                             <img src="<?php echo get_template_directory_uri() . '/images/icons/arrow_down_red_ico.svg'; ?>"/>
                         </div>
                         <div class="content">
-                            <p><?php echo $analityczny; ?></p>
-                        </div>
-                    </div>
-                    <div class="accordion__element accordion__element--close">
-                        <div class="heading">
-                            <p>Dodatki</p>
-                            <img src="<?php echo get_template_directory_uri() . '/images/icons/arrow_down_red_ico.svg'; ?>"/>
-                        </div>
-                        <div class="content">
-                            <p><?php echo $dodatki; ?></p>
+                            <div class="innerAccordion">
+                                <div class="innerAccordion__element innerAccordion__element--close">
+                                    <div class="heading" data-info="child-accordion">
+                                        <p>Skład</p>
+                                    </div>
+                                    <div class="content_inner">
+                                        <p><?php echo $sklad; ?></p>
+                                    </div>
+                                </div>
+                                <div class="innerAccordion__element innerAccordion__element--close">
+                                    <div class="heading" data-info="child-accordion">
+                                        <p>Skład analityczny</p>
+                                    </div>
+                                    <div class="content_inner">
+                                        <p><?php echo $analityczny; ?></p>
+                                    </div>
+                                </div>
+                                <div class="innerAccordion__element innerAccordion__element--close">
+                                    <div class="heading" data-info="child-accordion">
+                                        <p>Dodatki</p>
+                                    </div>
+                                    <div class="content_inner">
+                                        <p><?php echo $dodatki; ?></p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
