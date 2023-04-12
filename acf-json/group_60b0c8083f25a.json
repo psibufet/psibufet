@@ -460,7 +460,98 @@
             "new_lines": "br"
         },
         {
-            "key": "field_60b388c93d5e1",
+            "key": "field_6436e30ef1add",
+            "label": "Nowy skład",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_60b388db3d5e2",
+            "label": "Skład",
+            "name": "flavourPopup_new_sklad",
+            "type": "textarea",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": ""
+        },
+        {
+            "key": "field_60b388e83d5e3",
+            "label": "Skład analityczny",
+            "name": "flavourPopup_new_skladanalityczny",
+            "type": "textarea",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": ""
+        },
+        {
+            "key": "field_6436e350f1ade",
+            "label": "Dodatki",
+            "name": "flavourPopup_new_dodatki",
+            "type": "textarea",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": ""
+        },
+        {
+            "key": "field_6436e37445684",
+            "label": "Dotychczasowy skład",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_6436e37d45685",
             "label": "Skład",
             "name": "flavourPopup_sklad",
             "type": "textarea",
@@ -479,7 +570,7 @@
             "new_lines": ""
         },
         {
-            "key": "field_60b388db3d5e2",
+            "key": "field_6436e38645686",
             "label": "Skład analityczny",
             "name": "flavourPopup_skladanalityczny",
             "type": "textarea",
@@ -498,7 +589,7 @@
             "new_lines": ""
         },
         {
-            "key": "field_60b388e83d5e3",
+            "key": "field_6436e38945687",
             "label": "Dodatki",
             "name": "flavourPopup_dodatki",
             "type": "textarea",
@@ -645,5 +736,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1675954845
+    "modified": 1681318815
 }

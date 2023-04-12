@@ -5958,14 +5958,17 @@ body.admin-bar .foodModal__wrap {
   margin: 0;
 }
 .foodModal__content .accordion {
-  border-top: 1px dashed #4c4c4c;
   max-width: calc(100% - 84px);
   margin: 0 auto 32px;
 }
 .foodModal__content .accordion__element {
   border-bottom: 1px dashed #4c4c4c;
+  margin: 0 0 25px;
 }
-.foodModal__content .accordion__element--open .heading img {
+.foodModal__content .accordion__element:last-of-type {
+  margin: 0;
+}
+.foodModal__content .accordion__element--open > .heading img {
   transform: rotate(180deg);
 }
 .foodModal__content .accordion__element .heading {
@@ -5974,11 +5977,13 @@ body.admin-bar .foodModal__wrap {
   justify-content: space-between;
   height: 40px;
   cursor: pointer;
+  padding: 0 8px;
 }
 .foodModal__content .accordion__element .heading p {
   font-size: 18px;
   line-height: 21px;
   color: #4c4c4c;
+  font-weight: 600;
   margin: 0;
 }
 .foodModal__content .accordion__element .heading img {
@@ -5988,11 +5993,49 @@ body.admin-bar .foodModal__wrap {
 .foodModal__content .accordion__element .content {
   display: none;
 }
-.foodModal__content .accordion__element .content p {
-  font-size: 16px;
-  line-height: 19px;
+.foodModal__content .accordion__element .content .innerAccordion {
+  border-top: 1px dashed #4c4c4c;
+}
+.foodModal__content .accordion__element .content .innerAccordion__element {
+  border-bottom: 1px dashed #4c4c4c;
+}
+.foodModal__content .accordion__element .content .innerAccordion__element:last-of-type {
+  border-bottom: 0;
+}
+.foodModal__content .accordion__element .content .innerAccordion__element--open > .heading:after {
+  content: "-" !important;
+}
+.foodModal__content .accordion__element .content .innerAccordion__element .heading {
+  position: relative;
+  padding: 0 8px;
+}
+.foodModal__content .accordion__element .content .innerAccordion__element .heading:after {
+  content: "+";
+  font-size: 20px;
   color: #4c4c4c;
-  margin: 0 0 15px;
+  font-weight: 400;
+  display: block;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.foodModal__content .accordion__element .content .innerAccordion__element .heading p {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #4c4c4c;
+  margin: 0;
+}
+.foodModal__content .accordion__element .content .innerAccordion__element .content_inner {
+  display: none;
+  padding: 0 8px;
+}
+.foodModal__content .accordion__element .content .innerAccordion__element .content_inner p {
+  font-size: 14px;
+  line-height: 17px;
+  color: #4c4c4c;
+  margin: 0 0 10px;
 }
 .foodModal__content .btn {
   margin-bottom: 32px;
@@ -6137,7 +6180,11 @@ body.admin-bar .foodModal__wrap {
     font-size: 16px;
     line-height: 19px;
   }
-  .foodModal__content .accordion__element .content p {
+  .foodModal__content .accordion__element .content .innerAccordion__element .heading p {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .foodModal__content .accordion__element .content .innerAccordion__element .content_inner p {
     font-size: 14px;
     line-height: 18px;
   }
