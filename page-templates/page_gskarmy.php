@@ -273,7 +273,7 @@ get_header(); ?>
     </section>
     <?php endif; ?>
 
-    <section class="gsExpert">
+    <section class="gsExpert d-none">
         <div class="gsExpert__heading">
             <h2 class="getMarker">Składy karm opracowane przez <span class="marker">eksperta</span></h2>
         </div>

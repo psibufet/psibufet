@@ -67,7 +67,7 @@ get_header(); ?>
         <div class="recipesMenu__wrap container">
             <div class="recipesMenu__heading">
                 <h2 class="getMarker">PsiBufet <span class="marker">menu</span></h2>
-                <p><b>55% mięsa oraz 45% warzyw i owoców, pełna suplementacja mineralno-witaminowa.</b>Całość delikatnie gotowana na parze i pakowana próżniowo.</p>
+                <p><?php echo get_field('recipesMenu_desc'); ?></p>
             </div>
             <div class="recipesList">
                 <?php
@@ -86,7 +86,7 @@ get_header(); ?>
         </div>
     </section>
 
-    <section class="recipesExpert">
+    <section class="recipesExpert d-none">
         <div class="recipesExpert__wrap">
             <div class="recipesExpert__content">
                 <div class="recipesExpert__expert">
