@@ -247,8 +247,8 @@ $(document).ready(function () {
     accordionheading.on('click', function(){
         var parent = $(this).parent();
 
-        $('.foodModal__content').find('.accordion__element').not(parent).removeClass('accordion__element--open').addClass('accordion__element--close');
-        $('.foodModal__content').find('.accordion__element').not(parent).find('.content').eq(0).slideUp();
+        $('.accordion__element').not(parent).removeClass('accordion__element--open').addClass('accordion__element--close');
+        $('.accordion__element').not(parent).find('.content').slideUp();
         parent.toggleClass('accordion__element--close accordion__element--open');
         parent.find('.content').slideToggle();
     });
@@ -257,7 +257,7 @@ $(document).ready(function () {
         var parent = $(this).parent();
 
         $('.innerAccordion__element').not(parent).removeClass('innerAccordion__element--open').addClass('innerAccordion__element--close');
-        $('.innerAccordion__element').not(parent).find('.content_inner').eq(0).slideUp();
+        $('.innerAccordion__element').not(parent).find('.content_inner').slideUp();
         
         parent.toggleClass('innerAccordion__element--close innerAccordion__element--open');
         parent.find('.content_inner').slideToggle();
