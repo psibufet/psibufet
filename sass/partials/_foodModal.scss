@@ -534,6 +534,10 @@ body.admin-bar{
                         }
                     }
                     .content{
+                        &>p{
+                            font-size: 14px;
+                            line-height: 18px;
+                        }
                         .innerAccordion{
                             &__element{
                                 .heading{
