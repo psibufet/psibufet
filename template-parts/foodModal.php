@@ -67,32 +67,25 @@
                 <img class="no-lazyload" data-original="<?php echo get_template_directory_uri() . '/images/icons/arrow_down_red_ico.svg'; ?>"/>
             </div>
             <div class="content">
-                <div class="innerAccordion">
-                    <div class="innerAccordion__element innerAccordion__element--close">
-                        <div class="heading" data-info="child-accordion">
-                            <p>Skład</p>
-                        </div>
-                        <div class="content_inner">
-                            <p><?php echo $sklad_new; ?></p>
-                        </div>
-                    </div>
-                    <div class="innerAccordion__element innerAccordion__element--close">
-                        <div class="heading" data-info="child-accordion">
-                            <p>Skład analityczny</p>
-                        </div>
-                        <div class="content_inner">
-                            <p><?php echo $analityczny_new; ?></p>
-                        </div>
-                    </div>
-                    <div class="innerAccordion__element innerAccordion__element--close">
-                        <div class="heading" data-info="child-accordion">
-                            <p>Dodatki</p>
-                        </div>
-                        <div class="content_inner">
-                            <p><?php echo $dodatki_new; ?></p>
-                        </div>
-                    </div>
-                </div>
+                <p><?php echo $sklad_new; ?></p>
+            </div>
+        </div>
+        <div class="accordion__element accordion__element--close">
+            <div class="heading" data-info="main-accordion">
+                <p>Skład analityczny</p>
+                <img class="no-lazyload" data-original="<?php echo get_template_directory_uri() . '/images/icons/arrow_down_red_ico.svg'; ?>"/>
+            </div>
+            <div class="content">
+                <p><?php echo $analityczny_new; ?></p>
+            </div>
+        </div>
+        <div class="accordion__element accordion__element--close">
+            <div class="heading" data-info="main-accordion">
+                <p>Dodatki</p>
+                <img class="no-lazyload" data-original="<?php echo get_template_directory_uri() . '/images/icons/arrow_down_red_ico.svg'; ?>"/>
+            </div>
+            <div class="content">
+                <p><?php echo $dodatki_new; ?></p>
             </div>
         </div>
     </div>
