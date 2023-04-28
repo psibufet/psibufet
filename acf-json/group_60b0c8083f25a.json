@@ -534,80 +534,6 @@
             "new_lines": ""
         },
         {
-            "key": "field_6436e37445684",
-            "label": "Dotychczasowy skład",
-            "name": "",
-            "type": "message",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "new_lines": "wpautop",
-            "esc_html": 0
-        },
-        {
-            "key": "field_6436e37d45685",
-            "label": "Skład",
-            "name": "flavourPopup_sklad",
-            "type": "textarea",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": 3,
-            "new_lines": ""
-        },
-        {
-            "key": "field_6436e38645686",
-            "label": "Skład analityczny",
-            "name": "flavourPopup_skladanalityczny",
-            "type": "textarea",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": 3,
-            "new_lines": ""
-        },
-        {
-            "key": "field_6436e38945687",
-            "label": "Dodatki",
-            "name": "flavourPopup_dodatki",
-            "type": "textarea",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": 3,
-            "new_lines": ""
-        },
-        {
             "key": "field_63e509fff6812",
             "label": "Rasy psów: Blok produktowy",
             "name": "",
@@ -736,5 +662,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1681318815
+    "modified": 1682684302
 }
